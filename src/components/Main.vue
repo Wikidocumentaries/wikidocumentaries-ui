@@ -1,12 +1,14 @@
 <template>
   <div class="page">
-    <button
-        v-for="tab in tabs"
-        v-bind:key="tab.componentName"
-        v-bind:class="['tab-button', { active:
-        currentTabComponentName === tab.componentName }]"
-        v-on:click="currentTabComponentName = tab.componentName"
-        >{{ tab.name }}</button>
+    <div class="main-toolbar">
+      <button
+          v-for="tab in tabs"
+          v-bind:key="tab.componentName"
+          v-bind:class="['tab-button', { active:
+          currentTabComponentName === tab.componentName }]"
+          v-on:click="currentTabComponentName = tab.componentName"
+          >{{ tab.name }}</button>
+    </div>
     <component
       v-bind:is="currentTabComponentName"
       class="tab" :wikidocumentaries="wikidocumentaries">
@@ -40,7 +42,55 @@ export default {
             wikipediaURL: 'https://fi.wikipedia.org/wiki/Vapaamuurarin_hauta'
           },
           wikidata: {
-            id: 'Q5501061'
+            id: 'Q5501061',
+            instance_of: {
+                value: 'muistomerkki',
+                url: 'https://www.wikidata.org/wiki/Q5003624'
+            },
+            statements: [
+              {
+                id: 'P361',
+                label: 'osa kohdetta',
+                value: 'Kaisaniemen puisto ja kasvitieteellinen puutarha',
+                url: 'https://www.wikidata.org/wiki/Q30506322'
+              },
+              {
+                id: 'P18',
+                label: 'kuva',
+                value: "Kaisaniemi Freemason's-Grave.JPG",
+                url: 'https://commons.wikimedia.org/wiki/File:Kaisaniemi_Freemason%27s-Grave.JPG'
+              },
+              {
+                id: 'P17',
+                label: 'maa',
+                value: "Suomi",
+                url: "https://www.wikidata.org/wiki/Q33"
+              },
+              {
+                id: 'P131',
+                label: 'sijaitsee hallinnollisessa yksikössä',
+                value: "Kluuvi",
+                url: "https://www.wikidata.org/wiki/Q1393571"
+              },
+              {
+                id: 'P276',
+                label: 'sijainti',
+                value: 'Kaisaniemen puisto',
+                url: 'https://www.wikidata.org/wiki/Q3062877'
+              },
+              {
+                id: 'P625',
+                label: 'koordinaatit',
+                value: '60.175556, 24.944028',
+                url: 'https://tools.wmflabs.org/geohack/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
+              },
+              {
+                id: 'P373',
+                label: 'Commons-luokka',
+                value: "Freemason's Tomb (Helsinki)",
+                url: "https://commons.wikimedia.org/wiki/Category:Freemason's%20Tomb%20(Helsinki)"
+              },
+            ]
           },
           images: [
             {
@@ -67,17 +117,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .tab-button {
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-  border: 1px solid #ccc;
+
   cursor: pointer;
-  background: #f0f0f0;
+	font-family: 'Barlow Condensed', sans-serif;
+  background-color: #8e8e8e;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4em;
   margin-bottom: -1px;
   margin-right: -1px;
 }
 .tab-button:hover {
-  background: #e0e0e0;
+  background: #a7a7a7a6;
 }
 .tab-button.active {
   background: #be3030;
@@ -85,5 +139,10 @@ export default {
 .tab {
   /*border: 1px solid #ccc;*/
   padding: 0px;
+}
+.main-toolbar {
+  border-bottom: 10px solid grey;
+	background-color: initial;
+  color: #8e8e8e;
 }
 </style>

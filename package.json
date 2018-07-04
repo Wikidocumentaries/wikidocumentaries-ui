@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
