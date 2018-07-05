@@ -24,7 +24,5 @@ export default {
     padding-right: 10px;
     padding-top: 5px;
 }
-i.wikiglyph {
-    font-size: 22px;
-}
+
 </style>

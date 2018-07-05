@@ -47,12 +47,5 @@ export default {
   flex-grow: 10;
   text-align: right;
 }
-i.wikiglyph {
-    font-size: 22px;
-}
-
-.text {
-	padding:0 12px;
-}
 
 </style>

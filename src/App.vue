@@ -54,5 +54,14 @@ a:hover {
     /*border: 1px solid #8e8e8e;*/
 }
 
+.text {
+	padding:0 12px;
+}
 
+.text p {
+	margin: 12px 0;
+}
+i.wikiglyph {
+    font-size: 24px;
+}
 </style>

@@ -6,16 +6,17 @@
       <div class="divider"></div>
       <WikidataItem class="column two" :wikidocumentaries="wikidocumentaries"></WikidataItem>
     </div>
-    <TopicImages></TopicImages>
+    <TopicImages :wikidocumentaries="wikidocumentaries"></TopicImages>
+    <TopicMap :wikidocumentaries="wikidocumentaries"></TopicMap>
   </div>
 </template>
 
 <script>
-import Map from '@/components/Map'
 import TopicPageHeader from '@/components/TopicPageHeader'
 import WikipediaArticle from '@/components/Wikipedia'
 import WikidataItem from '@/components/Wikidata'
 import TopicImages from '@/components/TopicImages'
+import TopicMap from '@/components/TopicMap'
 export default {
   name: 'Home',
   props: {
@@ -30,7 +31,8 @@ export default {
     TopicPageHeader,
     WikipediaArticle,
     WikidataItem,
-    TopicImages
+    TopicImages,
+    TopicMap
   },
   computed: {
     testaus: function() {

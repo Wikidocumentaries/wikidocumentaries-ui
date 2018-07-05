@@ -3,11 +3,16 @@ import Router from 'vue-router'
 import {VueMasonryPlugin} from 'vue-masonry';
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
+import VueLayers from 'vuelayers'
+import 'vuelayers/lib/style.css'
 import page from '@/components/Main'
 
 Vue.use(Router)
 Vue.use(VueMasonryPlugin)
 Vue.use(Viewer)
+Vue.use(VueLayers, {
+  dataProjection: 'EPSG:4326',
+})
 
 export default new Router({
   routes: [
