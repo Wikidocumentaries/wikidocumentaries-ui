@@ -1,13 +1,14 @@
 <template>
   <div class="images">
       <div id="topic_images_toolbar" class="toolbar">{{ header.title }}</div>
-      <div v-masonry transition-duration="0.3s" item-selector=".grid-item">
+      <div v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="images">
           <div v-masonry-tile class="grid-item" v-for="image in images" v-bind:key="image.imageURL">
-              <img v-bind:src="image.imageURL" class="thumbimage"/>
+              <img v-bind:src="image.imageURL" class="thumbimage" v-bind:alt="image.title"/>
               <!--<div class="thumbtitle">{{ image.title }}</div>
               <div class="thumbcredit">{{ image.credit }}</div>-->
           </div>
       </div>
+      <!--<button type="button" @click="show">Show</button>-->
   </div>
 </template>
 
@@ -43,7 +44,13 @@ export default {
           },
       ]
     }
-  }
+  },
+  methods: {
+      show () {
+        const viewer = this.$el.querySelector('.images').$viewer
+        viewer.show()
+      }
+    }
 }
 </script>
 
@@ -65,6 +72,7 @@ export default {
 
 .thumbimage {
     width: 100%;
+    cursor: zoom-in;
 }
 
 </style>
