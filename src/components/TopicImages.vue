@@ -1,6 +1,9 @@
 <template>
     <div class="images">
-        <div class="toolbar">{{ header.title }}</div>
+        <div class="toolbar">
+            <div class="header-title">{{ header.title }}</div>
+            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems"></ToolbarMenu>
+        </div>
         <div v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="images">
             <div v-masonry-tile class="grid-item" v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL">
                 <img v-bind:src="image.imageURL" class="thumb-image" v-bind:alt="image.title"/>
@@ -18,6 +21,8 @@
 </template>
 
 <script>
+import ToolbarMenu from '@/components/ToolbarMenu'
+
 export default {
     name: 'TopicImages',
     props: {
@@ -28,7 +33,17 @@ export default {
             msg: '',
             header: {
                 title: 'Arkistojen kuvia'
-            }
+            },
+            toolbarActionMenuItems: [
+                {
+                    id: 0,
+                    text: "Näytä valitut kuvat kartalla",
+                },
+                {
+                    id: 1,
+                    text: "Näytä valitut kuvat aikajanalla",
+                }
+            ]
         }
     },
     methods: {
@@ -39,6 +54,9 @@ export default {
         showImageOnMap(image) {
             console.log("showImageOnMap", image);
         }
+    },
+    components: {
+        ToolbarMenu
     }
 }
 </script>

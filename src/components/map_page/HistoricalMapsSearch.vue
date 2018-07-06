@@ -2,7 +2,7 @@
     <div class="maps">
         <div class="toolbar">
             <div class="header-title">{{ header.title }}</div>
-            <ToolbarMenu icon="wikiglyph-gear" :items="toolbarItems"></ToolbarMenu>
+            <ToolbarMenu icon="wikiglyph-gear" :items="toolbarSettingsMenuItems"></ToolbarMenu>
             <!--<ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarItems"></ToolbarMenu>-->
         </div>
         <div v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="historical-maps">
@@ -29,7 +29,7 @@ export default {
                 title: 'Etsi historiallisia karttoja'
             },
             historicalMaps: [],
-            toolbarItems: [
+            toolbarSettingsMenuItems: [
                 {
                     id: 0,
                     text: "Rajaa hakualue kartalta",
