@@ -18,7 +18,7 @@
 
 <script>
 import Home from '@/components/HomePage'
-import Map from '@/components/MapPage'
+import Map from '@/components/map_page/MapPage'
 export default {
   name: 'page',
   data () {

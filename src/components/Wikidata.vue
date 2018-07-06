@@ -48,18 +48,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header {
-  display: flex;
-}
-
-.header-title {
-  flex-grow: 90;
-
-}
-.header-link {
-  flex-grow: 10;
-  text-align: right;
-}
 
 .item-instance-title {
     padding: 6px 12px;

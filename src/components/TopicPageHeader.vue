@@ -43,7 +43,7 @@ export default {
     height: 400px; /* Remove for production? */
     object-fit: cover; /* Remove for production? not supported in IE 11 */
     -webkit-filter: grayscale(100%);
-    filter: gray;
+    filter: grayscale(100%);
 }
 .title {
     position:absolute;

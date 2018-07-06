@@ -11,11 +11,10 @@ export default {
 </script>
 
 <style>
-/*#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}*/
+
+html, body {
+  margin: 0px;
+}
 
 body {
 	font-family: 'Helvetica Neue', sans-serif;
@@ -23,6 +22,10 @@ body {
 	line-height: 1.5;
 	color:#333;
 	font-weight: 400;
+}
+
+h1, h2 {
+  font-weight: normal;
 }
 
 a {
@@ -39,6 +42,7 @@ a:hover {
 }
 
 .toolbar {
+  display: flex;
 	font-family: 'Barlow Condensed', sans-serif;
     background-color: #8e8e8e;
     color: white;
@@ -46,6 +50,47 @@ a:hover {
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: bold;
+}
+
+.toolbar-title {
+  flex-grow: 90;
+
+}
+
+.toolbar-item {
+  
+}
+
+.toolbar-item-a {
+    color: white;
+}
+
+.toolbar-item-a:hover {
+    box-shadow: none;
+    outline: none;
+}
+
+.toolbar-link {
+  flex-grow: 10;
+  text-align: right;
+}
+
+.header {
+  display: flex;
+}
+
+.header-title {
+  flex-grow: 90;
+
+}
+.header-link {
+  flex-grow: 10;
+  text-align: right;
+}
+
+.greenbar {
+  height: 10px;
+  background-color: #79c184;
 }
 
 .neg {
