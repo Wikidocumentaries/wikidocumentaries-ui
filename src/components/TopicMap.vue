@@ -17,10 +17,11 @@
                     </div>
                 </div>
             </vl-overlay>
-            <vl-feature v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL">
-                <vl-geom-point v-if="getFirstGeoLocationGeomType(image) =='point'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
+            <vl-feature v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL" v-if="image.geoLocations.length > 0">
+                <vl-geom-point :coordinates="getFirstGeoLocationAsPoint(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
+                <!--<vl-geom-point v-if="getFirstGeoLocationGeomType(image) =='point'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
                 <vl-geom-linestring v-if="getFirstGeoLocationGeomType(image) =='linestring'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-linestring>
-                <vl-geom-polygon v-if="getFirstGeoLocationGeomType(image) =='polygon'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-polygon>
+                <vl-geom-polygon v-if="getFirstGeoLocationGeomType(image) =='polygon'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-polygon>-->
             </vl-feature>
             <vl-interaction-select :features.sync="selectedFeatures">
             </vl-interaction-select>
@@ -160,13 +161,13 @@ export default {
                     // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
                     geoLocation = [];
                     var parenthesisPart = wkt.substring(wkt.indexOf('('));
-                    console.log(parenthesisPart);
+                    //console.log(parenthesisPart);
                     var parenthesisPartInner = parenthesisPart.substr(1, parenthesisPart.length - 2);
-                    console.log(parenthesisPartInner);
+                    //console.log(parenthesisPartInner);
                     var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
-                    console.log(polygonPartCount);
+                    //console.log(polygonPartCount);
                     var parts = parenthesisPartInner.split('(').slice(1);
-                    console.log(parts);
+                    //console.log(parts);
                     var partsWithoutParenthesis = [];
                     for (var i = 0; i < parts.length; i++) {
                         var part = null;
@@ -178,7 +179,7 @@ export default {
                         }
                         partsWithoutParenthesis.push(part.slice(0, -1));
                     }
-                    console.log(partsWithoutParenthesis);
+                    //console.log(partsWithoutParenthesis);
 
                     for (var i = 0; i < partsWithoutParenthesis.length; i++) {
                         var pointParts = partsWithoutParenthesis[i].split(',');
@@ -188,7 +189,7 @@ export default {
                         }
                         geoLocation.push(polygonPart);
                     }
-                    console.log(geoLocation);
+                    //console.log(geoLocation);
                 }
                 else if (wkt.indexOf("ENVELOPE") != -1) {
                     // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
@@ -201,6 +202,43 @@ export default {
                 }
             }
             return geoLocation;
+        },
+        getFirstGeoLocationAsPoint(image) {
+            var geoLocation = this.getFirstGeoLocation(image)
+            if (image.geoLocations.length > 0) {
+                var wkt = image.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) { 
+                    // "POINT(24.9600002 60.1796223)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    //console.log(coordPart);
+                    geoLocation = coordPart.split(' ').map(Number);
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    geoLocation = this.getCentroid(geoLocation);
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    geoLocation = this.getCentroid(geoLocation[0]); // We do not care of the possible holes in the polygon
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',').map(Number);
+                    //console.log(pointParts);
+                    var lng = (pointParts[0] + pointParts[1]) / 2;
+                    var lat = (pointParts[2] + pointParts[3]) / 2;
+                    //var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+                    //console.log(envelopePolygon);
+                    geoLocation = [lng, lat];
+                }
+            }
+
+            return geoLocation;
+        },
+        getCentroid(coords) {
+            var center = coords.reduce(function (x,y) {
+                return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length]; 
+            }, [0,0])
+            return center;
         }
     }
 }
