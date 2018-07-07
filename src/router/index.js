@@ -5,6 +5,7 @@ import 'viewerjs/dist/viewer.css'
 import Viewer from 'v-viewer'
 import VueLayers from 'vuelayers'
 import 'vuelayers/lib/style.css'
+import VueScrollTo from 'vue-scrollto'
 import page from '@/components/Main'
 
 Vue.use(Router)
@@ -13,6 +14,7 @@ Vue.use(Viewer)
 Vue.use(VueLayers, {
   dataProjection: 'EPSG:4326',
 })
+Vue.use(VueScrollTo)
 
 export default new Router({
   routes: [

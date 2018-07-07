@@ -6,8 +6,8 @@
       <div class="divider"></div>
       <WikidataItem class="column two" :wikidocumentaries="wikidocumentaries"></WikidataItem>
     </div>
-    <TopicImages :wikidocumentaries="wikidocumentaries"></TopicImages>
-    <TopicMap :wikidocumentaries="wikidocumentaries"></TopicMap>
+    <TopicImages :wikidocumentaries="wikidocumentaries" @showImageOnMap="onShowImageOnMap"></TopicImages>
+    <TopicMap id="topicMap" :wikidocumentaries="wikidocumentaries"></TopicMap>
   </div>
 </template>
 
@@ -38,6 +38,15 @@ export default {
     testaus: function() {
         //console.log(this.wikidocumentaries);
         return "testaus";
+    }
+  },
+  methods: {
+    onShowImageOnMap(image) {
+      //console.log("HomePage.onShowImageOnMap", image);
+
+      
+
+      this.$scrollTo("#topicMap");
     }
   }
 }

@@ -17,6 +17,11 @@
                     </div>
                 </div>
             </vl-overlay>
+            <vl-feature v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL">
+                <vl-geom-point v-if="getFirstGeoLocationGeomType(image) =='point'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
+                <vl-geom-linestring v-if="getFirstGeoLocationGeomType(image) =='linestring'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-linestring>
+                <vl-geom-polygon v-if="getFirstGeoLocationGeomType(image) =='polygon'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-polygon>
+            </vl-feature>
             <vl-interaction-select :features.sync="selectedFeatures">
             </vl-interaction-select>
             <vl-layer-tile id="osm">
@@ -111,6 +116,91 @@ export default {
             if (topicMapPopup.offsetWidth != 0 && topicMapPopup.offsetHeight != 0) {
                 this
             }
+        },
+        getFirstGeoLocationGeomType (image) {
+            var type = null;
+
+            if (image.geoLocations.length > 0) {
+                var wkt = image.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) {
+                    type = "point";
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    type = "linestring";
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    type = "polygon";
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    type = "polygon";
+                }
+            }
+            return type;
+        },
+        getFirstGeoLocation(image) {
+            var geoLocation = null;
+            if (image.geoLocations.length > 0) {
+                var wkt = image.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) { 
+                    // "POINT(24.9600002 60.1796223)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    //console.log(coordPart);
+                    geoLocation = coordPart.split(' ').map(Number);
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    // "LINESTRING(24.9697848 60.1877939,24.9695072 60.1876021)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',');
+                    geoLocation = [];
+                    for (var i = 0; i < pointParts.length; i++) {
+                        geoLocation.push(pointParts[i].split(' ').map(Number));
+                    }
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
+                    geoLocation = [];
+                    var parenthesisPart = wkt.substring(wkt.indexOf('('));
+                    console.log(parenthesisPart);
+                    var parenthesisPartInner = parenthesisPart.substr(1, parenthesisPart.length - 2);
+                    console.log(parenthesisPartInner);
+                    var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
+                    console.log(polygonPartCount);
+                    var parts = parenthesisPartInner.split('(').slice(1);
+                    console.log(parts);
+                    var partsWithoutParenthesis = [];
+                    for (var i = 0; i < parts.length; i++) {
+                        var part = null;
+                        if (parts[i].substr(parts[i].length -1, 1) == ',') {
+                            part = parts[i].substr(0, parts[i].length - 1);
+                        }
+                        else {
+                            part = parts[i];
+                        }
+                        partsWithoutParenthesis.push(part.slice(0, -1));
+                    }
+                    console.log(partsWithoutParenthesis);
+
+                    for (var i = 0; i < partsWithoutParenthesis.length; i++) {
+                        var pointParts = partsWithoutParenthesis[i].split(',');
+                        var polygonPart = [];
+                        for (var j = 0; j < pointParts.length; j++) {
+                            polygonPart.push(pointParts[j].trim().split(' ').map(Number));
+                        }
+                        geoLocation.push(polygonPart);
+                    }
+                    console.log(geoLocation);
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',').map(Number);
+                    //console.log(pointParts);
+                    var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+                    //console.log(envelopePolygon);
+                    geoLocation = [envelopePolygon];
+                }
+            }
+            return geoLocation;
         }
     }
 }

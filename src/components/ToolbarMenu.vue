@@ -49,7 +49,7 @@ export default {
     display:block;
     position: absolute;
     background-color: #f1f1f1;
-    width: 900%;
+    min-width: 900%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     right: 0
@@ -61,13 +61,15 @@ export default {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    padding: 6px 12px;
     text-decoration: none;
     display: block;
     text-transform: none;
-    font-size: 1em;
-    font-weight: normal;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 400;
 }
 
 /* Links inside the dropdown */

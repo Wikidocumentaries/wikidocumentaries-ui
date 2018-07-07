@@ -42,7 +42,7 @@ export default {
                 {
                     id: 1,
                     text: "Näytä valitut kuvat aikajanalla",
-                }
+                },
             ]
         }
     },
@@ -52,7 +52,8 @@ export default {
             viewer.show()
         },
         showImageOnMap(image) {
-            console.log("showImageOnMap", image);
+            //console.log("showImageOnMap", image);
+            this.$emit('showImageOnMap', image);
         }
     },
     components: {

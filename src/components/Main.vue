@@ -102,7 +102,7 @@ export default {
                   institution: "Museovirasto",
                   infoURL: "https://www.finna.fi/Record/musketti.M012:HK19670603:7117",
                   location: "Helsinki,",
-                  geoLocations: ["POLYGON ((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"],
+                  geoLocations: ["POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"],
                   year: "1932",
                   license: "CC BY 4.0"
               },
@@ -117,7 +117,7 @@ export default {
                   location: "Helsinki",
                   geoLocations: ["ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"],
                   year: "1908",
-                  license: "CC BY 4.0"
+                  license: "CC-BY 4.0"
               },
               {
                   sourceID: "File:Kaisaniemi Freemason's-Grave.JPG",
@@ -143,8 +143,34 @@ export default {
                   location: "",
                   geoLocations: [],
                   year: "2012",
-                  license: "cc0"
+                  license: "CC0"
               },
+              {
+                  sourceID: "4893739034",
+                  source: 'flickr',
+                  imageURL: "https://farm5.staticflickr.com/4119/4893739034_a33f1deaae.jpg",
+                  title: "Masonic memorial",
+                  author: "Bushman.K",
+                  institution: "",
+                  infoURL: "https://www.flickr.com/photos/bushman_k/4893739034/",
+                  location: "Helsinki",
+                  geoLocations: ["POINT(24.944050 60.175875)"],
+                  year: "2010",
+                  license: "CC-BY-NC-ND 2.0"
+              },
+              /*{
+                  sourceID: "7441069854",
+                  source: 'flickr',
+                  imageURL: "https://farm6.staticflickr.com/5076/7441069854_a94cd9a72c.jpg",
+                  title: "Helsinki's oldest monument",
+                  author: "JohntheFinn",
+                  institution: "",
+                  infoURL: "https://www.flickr.com/photos/johnthefinn/7441069854/",
+                  location: "",
+                  geoLocations: [],
+                  year: "2012",
+                  license: "All Rights Reserved" // Ei voida käyttää
+              },*/
           ],
           geo: {
             location: "POINT(24.943752 60.176013)"
