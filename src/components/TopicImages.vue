@@ -53,7 +53,7 @@ export default {
         },
         showImageOnMap(image) {
             //console.log("showImageOnMap", image);
-            this.$emit('showImageOnMap', image);
+            this.$emit('showImagesOnMap', [image]);
         }
     },
     components: {

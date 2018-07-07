@@ -6,8 +6,8 @@
       <div class="divider"></div>
       <WikidataItem class="column two" :wikidocumentaries="wikidocumentaries"></WikidataItem>
     </div>
-    <TopicImages :wikidocumentaries="wikidocumentaries" @showImageOnMap="onShowImageOnMap"></TopicImages>
-    <TopicMap id="topicMap" :wikidocumentaries="wikidocumentaries"></TopicMap>
+    <TopicImages :wikidocumentaries="wikidocumentaries" @showImagesOnMap="onShowImagesOnMap"></TopicImages>
+    <TopicMap id="topicMap" :wikidocumentaries="wikidocumentaries" :shownImages="shownImages"></TopicMap>
   </div>
 </template>
 
@@ -24,7 +24,8 @@ export default {
   },
   data () {
     return {
-      msg: ''
+      msg: '',
+      shownImages: []
     }
   },
   components: {
@@ -41,10 +42,10 @@ export default {
     }
   },
   methods: {
-    onShowImageOnMap(image) {
-      //console.log("HomePage.onShowImageOnMap", image);
+    onShowImagesOnMap(images) {
+      console.log("HomePage.onShowImagesOnMap", images);
 
-      
+      this.shownImages = images;
 
       this.$scrollTo("#topicMap");
     }

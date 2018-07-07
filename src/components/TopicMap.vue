@@ -25,6 +25,13 @@
             </vl-feature>
             <vl-interaction-select :features.sync="selectedFeatures">
             </vl-interaction-select>
+            <vl-overlay v-for="(image, index) in shownImages" v-bind:key="image.infoURL" :position="getFirstGeoLocationAsPoint(image)" :auto-pan="true" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )">
+                <div class="map-popup-container">
+                    <div class="map-popup">
+                        <img :src="image.imageURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
+                    </div>
+                </div>
+            </vl-overlay>
             <vl-layer-tile id="osm">
                 <vl-source-osm></vl-source-osm>
             </vl-layer-tile>
@@ -36,7 +43,8 @@
 export default {
     name: 'TopicMap',
     props: {
-        wikidocumentaries: Object
+        wikidocumentaries: Object,
+        shownImages: Array
     },
     data () {
         return {
@@ -50,7 +58,8 @@ export default {
             },
             selectedFeatures: [],
             initialMap: true,
-            topicOverLayOffset: [0, 0]
+            topicOverLayOffset: [0, 0],
+            shownImagesPopupOffsets: {}
         }
     },
     computed: {
@@ -92,19 +101,23 @@ export default {
             return result;
         }
     },
-    // watch: {
-    //     selectedFeatures: function(features) {
-    //         if (features.length > 0) {
-    //             //console.log(features[0].id);
-    //             if (features[0].id == "topicPosition") {
-
-    //             }
-    //         }
-    //     }
-    // },
+    watch: {
+        // shownImagesPopupOffsets: function(offsets, oldOffsets) {
+        //     console.log("shownImagesPopupOffsets", offsets);
+        // }
+    },
     methods: {
-        showImageOnMap(image) {
-            console.log("showImageOnMap", image);
+        onShownImageLoad(event, index) {
+            console.log(event, index);
+            console.log( event.target.naturalWidth +' '+ event.target.naturalHeight );
+            var width = - 100 / 2 - 6;
+
+            var heightRatio = event.target.naturalHeight / event.target.naturalWidth;
+            var height = - 100 * heightRatio - 40;
+
+            this.$set(this.shownImagesPopupOffsets, 'i' + index, [width, height]);
+
+            console.log(this.shownImagesPopupOffsets);
         },
         onMapPostCompose () {
             //console.log("onMapPostCompose");
@@ -112,10 +125,9 @@ export default {
             //console.dir(topicMapPopup);
             //console.log(topicMapPopup.offsetWidth);
             //console.log(topicMapPopup.offsetHeight);
-            this.topicOverLayOffset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
 
             if (topicMapPopup.offsetWidth != 0 && topicMapPopup.offsetHeight != 0) {
-                this
+                this.topicOverLayOffset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
             }
         },
         getFirstGeoLocationGeomType (image) {
@@ -280,5 +292,8 @@ export default {
 	margin-left: -9px;
 }
 
+.popup-image {
+    width: 100px;
+}
 
 </style>
