@@ -1,45 +1,26 @@
 <template>
     <div class="map-component">
         <div class="toolbar">{{ header.title }}</div>
-        <vl-map class="map" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
-             data-projection="EPSG:4326" style="height: 400px" v-on=" ( topicOverLayOffset[0] == 0 || topicOverLayOffset[1] == 0 ) ? { postcompose: onMapPostCompose } : {}">
-            <vl-view :zoom.sync="map.zoom" :center="topicPointCoordinates" :rotation.sync="map.rotation"></vl-view>
-            <vl-feature v-if="wikidocumentaries.geo.location != ''" id="topicPosition">
-                <vl-geom-point :coordinates="topicPointCoordinates"></vl-geom-point>
-                <vl-style-box>
-                    <vl-style-icon class="topic-icon" src="/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg" :scale="1.4" :anchor="[0.5, 1]"></vl-style-icon>
-                </vl-style-box>
-            </vl-feature>
-            <vl-overlay v-if="isTopicPointSelected" :position="topicPointCoordinates" :offset="topicOverLayOffset">
-                <div ref="topicMapPopup" class="map-popup-container">
-                    <div class="map-popup">
-                    {{ wikidocumentaries.title }}
-                    </div>
+        <div id="map" class="map">
+            <div ref="topicMapPopup" class="map-popup-container" :class="{ 'topic-popup-hidden': !shouldShowTopicPopup }">
+                <div class="map-popup">
+                {{ wikidocumentaries.title }}
                 </div>
-            </vl-overlay>
-            <vl-feature v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL" v-if="image.geoLocations.length > 0">
-                <vl-geom-point :coordinates="getFirstGeoLocationAsPoint(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
-                <!--<vl-geom-point v-if="getFirstGeoLocationGeomType(image) =='point'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-point>
-                <vl-geom-linestring v-if="getFirstGeoLocationGeomType(image) =='linestring'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-linestring>
-                <vl-geom-polygon v-if="getFirstGeoLocationGeomType(image) =='polygon'" :coordinates="getFirstGeoLocation(image)" :properties="{imageURL: image.imageURL, title: image.title}"></vl-geom-polygon>-->
-            </vl-feature>
-            <vl-interaction-select :features.sync="selectedFeatures">
-            </vl-interaction-select>
-            <vl-overlay v-for="(image, index) in shownImages" v-bind:key="image.infoURL" :position="getFirstGeoLocationAsPoint(image)" :auto-pan="true" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )">
+            </div>
+            <MapOverlay v-for="(image, index) in shownImages" v-bind:key="image.infoURL" :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan="true" :autoPanMargin="200">
                 <div class="map-popup-container">
                     <div class="map-popup">
                         <img :src="image.imageURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
                     </div>
                 </div>
-            </vl-overlay>
-            <vl-layer-tile id="osm">
-                <vl-source-osm></vl-source-osm>
-            </vl-layer-tile>
-        </vl-map>
+            </MapOverlay>
+        </div>
     </div>
 </template>
 
 <script>
+import MapOverlay from '../openlayersplugin/MapOverlay'
+
 export default {
     name: 'TopicMap',
     props: {
@@ -48,87 +29,143 @@ export default {
     },
     data () {
         return {
-            map: {
-                zoom: 17,
-                center: [27.1, 65.2],
-                rotation: 0
-            },
+            map: null,
+            topicFeature: null,
             header: {
                 title: 'Sijainti kartalla'
             },
+            shouldShowTopicPopup: true,
             selectedFeatures: [],
-            initialMap: true,
-            topicOverLayOffset: [0, 0],
             shownImagesPopupOffsets: {}
         }
     },
+    components: {
+        MapOverlay
+    },
+    mounted: function () {
+       this.createMap();
+    },
     computed: {
-        topicPointCoordinates: function () {
-            var coords = this.map.center;
+    },
+    watch: {
+        shownImages: function(images, oldImages) {
+            console.log("shownImages");
+            this.shouldShowTopicPopup = false;
+        }
+    },
+    methods: {
+        createMap() {
+            var ol = this.$ol;
+
+            this.map = new ol.Map({
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: new this.$ol.source.OSM()
+                    })
+                ],
+                view: new ol.View({
+                    center: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    zoom: 17
+                })
+            });
+
+            if (this.wikidocumentaries.geo.location != "") {
+                this.topicFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(ol.proj.fromLonLat(this.topicPointCoordinates())),
+                    
+                });
+                var iconStyle = new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
+                        scale: 1.4
+                    })
+                });
+                this.topicFeature.setStyle(iconStyle);
+
+                var vectorSource = new ol.source.Vector({
+                    features: [this.topicFeature]
+                });
+                var vectorLayer = new ol.layer.Vector({
+                    source: vectorSource
+                });
+
+                this.map.addLayer(vectorLayer);
+
+                var topicMapPopup = this.$refs.topicMapPopup;
+                //console.dir( topicMapPopup );
+                //console.log( topicMapPopup.offsetWidth +' '+ topicMapPopup.offsetHeight );
+                var offset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
+                var overlay = new ol.Overlay({
+                    element: topicMapPopup,
+                    stopEvent: false,
+                    position: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    offset: offset
+                });
+                this.map.addOverlay(overlay);
+                
+                this.map.on('click', this.handleMapClick);
+
+                this.createImageFeatures();
+            }
+        },
+        createImageFeatures () {
+            var ol = this.$ol;
+
+            var features = [];
+            for (var i = 0; i < this.wikidocumentaries.images.length; i++) {
+                var image = this.wikidocumentaries.images[i];
+                if (image.geoLocations.length > 0) {
+                    var feature = new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(image))),
+                    });
+                    features.push(feature);
+                }
+            }
+            var vectorSource = new ol.source.Vector({
+                features: features
+            });
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource
+            });
+            this.map.addLayer(vectorLayer);
+        },
+        handleMapClick (event) {
+            var me = this;
+            this.map.forEachFeatureAtPixel(event.pixel,
+                function(feature) {
+                    if (feature == me.topicFeature) {
+                        me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
+                    }
+                }
+            );
+        },
+        topicPointCoordinates () {
+            var coords = [];
             if (this.wikidocumentaries.geo.location != "") {
                 //console.log(this.wikidocumentaries.geo.location)
                 var coordPart = this.wikidocumentaries.geo.location.split('(')[1].split(')')[0];
                 //console.log(coordPart);
                 coords = coordPart.split(' ').map(Number);
                 //console.log(coords);
-                this.map.center = coords;
             }
 
             return coords;
         },
-        isTopicPointSelected: function () {
-            var result = false;
-            var found = false;
-            for (var i = 0; i < this.selectedFeatures.length; i++) {
-                //console.log(this.selectedFeatures[i]);
-                if (this.selectedFeatures[i].id == "topicPosition") {
-                    if (this.initialMap) {
-                        this.selectedFeatures = []
-                        this.initialMap = false;
-                        result = false;
-                    }
-                    else {
-                        result = true;
-
-                    }
-                    found = true;
-                    break;
-                }
-            }
-            if (this.initialMap && !found) {
-                result = true;
-            }
-            return result;
-        }
-    },
-    watch: {
-        // shownImagesPopupOffsets: function(offsets, oldOffsets) {
-        //     console.log("shownImagesPopupOffsets", offsets);
-        // }
-    },
-    methods: {
         onShownImageLoad(event, index) {
-            console.log(event, index);
-            console.log( event.target.naturalWidth +' '+ event.target.naturalHeight );
-            var width = - 100 / 2 - 6;
+            //console.log(event, index);
+            //console.log( event.target.naturalWidth +' '+ event.target.naturalHeight );
+            var width = - 100 / 2 - 7;
 
             var heightRatio = event.target.naturalHeight / event.target.naturalWidth;
             var height = - 100 * heightRatio - 40;
 
             this.$set(this.shownImagesPopupOffsets, 'i' + index, [width, height]);
 
-            console.log(this.shownImagesPopupOffsets);
-        },
-        onMapPostCompose () {
-            //console.log("onMapPostCompose");
-            var topicMapPopup = this.$refs.topicMapPopup;
-            //console.dir(topicMapPopup);
-            //console.log(topicMapPopup.offsetWidth);
-            //console.log(topicMapPopup.offsetHeight);
-
-            if (topicMapPopup.offsetWidth != 0 && topicMapPopup.offsetHeight != 0) {
-                this.topicOverLayOffset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
-            }
+            //console.log(this.shownImagesPopupOffsets);
         },
         getFirstGeoLocationGeomType (image) {
             var type = null;
@@ -258,6 +295,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.map {
+    width: 100%;
+    height: 400px;
+}
+
 .map-popup-container {
     white-space: nowrap;
     position: absolute;
@@ -294,6 +337,10 @@ export default {
 
 .popup-image {
     width: 100px;
+}
+
+.topic-popup-hidden {
+    display: none;
 }
 
 </style>

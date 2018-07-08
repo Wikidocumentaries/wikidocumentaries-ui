@@ -13,6 +13,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ol": "^5.0.2",
     "v-viewer": "^1.0.1",
     "vue": "^2.5.2",
     "vue-masonry": "^0.11.4",

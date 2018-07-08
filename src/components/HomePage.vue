@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     onShowImagesOnMap(images) {
-      console.log("HomePage.onShowImagesOnMap", images);
+      //console.log("HomePage.onShowImagesOnMap", images);
 
       this.shownImages = images;
 

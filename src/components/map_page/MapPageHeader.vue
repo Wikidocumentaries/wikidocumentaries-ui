@@ -1,6 +1,7 @@
 <template>
     <div class="header">
-        <vl-map class="map" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
+        <div id="map" class="map">
+        <!--<vl-map class="map" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
              data-projection="EPSG:4326" style="height: 400px">
             <vl-view :zoom.sync="map.zoom" :center="topicPointCoordinates" :rotation.sync="map.rotation"></vl-view>
             <vl-feature v-if="wikidocumentaries.geo.location != ''" id="topicPosition">
@@ -12,7 +13,8 @@
             <vl-layer-tile id="osm">
                 <vl-source-osm></vl-source-osm>
             </vl-layer-tile>
-        </vl-map>
+        </vl-map>-->
+        </div>
         <div class="header-contents">
             <div class="title">
                 <h1><span>{{ wikidocumentaries.title }}</span></h1>
@@ -29,15 +31,61 @@ export default {
   },
   data () {
     return {
+            map: null,
             map: {
                 zoom: 17,
                 center: [27.1, 65.2],
                 rotation: 0
             },
         }
-  },
-      computed: {
-        topicPointCoordinates: function () {
+    },
+    mounted: function () {
+       this.createMap();
+    },
+    methods: {
+        createMap() {
+            var ol = this.$ol;
+
+            this.map = new ol.Map({
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: new this.$ol.source.OSM()
+                    })
+                ],
+                view: new ol.View({
+                    center: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    zoom: 17
+                })
+            });
+
+            if (this.wikidocumentaries.geo.location != "") {
+                this.topicFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(ol.proj.fromLonLat(this.topicPointCoordinates())),
+                    
+                });
+                var iconStyle = new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
+                        scale: 1.4
+                    })
+                });
+                this.topicFeature.setStyle(iconStyle);
+
+                var vectorSource = new ol.source.Vector({
+                    features: [this.topicFeature]
+                });
+                var vectorLayer = new ol.layer.Vector({
+                    source: vectorSource
+                });
+
+                this.map.addLayer(vectorLayer);
+            }
+        },
+        topicPointCoordinates () {
             var coords = this.map.center;
             if (this.wikidocumentaries.geo.location != "") {
                 //console.log(this.wikidocumentaries.geo.location)
