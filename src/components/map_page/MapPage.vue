@@ -1,8 +1,8 @@
 <template>
   <div class="map">
-    <MapPageHeader :wikidocumentaries="wikidocumentaries"></MapPageHeader>
+    <MapPageHeader></MapPageHeader>
     <div class="greenbar"></div>
-    <HistoricalMapsSearch :wikidocumentaries="wikidocumentaries"></HistoricalMapsSearch>
+    <HistoricalMapsSearch></HistoricalMapsSearch>
   </div>
 </template>
 
@@ -13,23 +13,20 @@ import HistoricalMapsSearch from '@/components/map_page/HistoricalMapsSearch'
 export default {
   name: 'Map',
   props: {
-      wikidocumentaries: Object
+  },
+  computed: {
+    wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
   },
   data () {
     return {
-      msg: ''
     }
   },
   components: {
     MapPageHeader,
     HistoricalMapsSearch
   },
-  computed: {
-    testaus: function() {
-        //console.log(this.wikidocumentaries);
-        return "testaus";
-    }
-  }
 }
 </script>
 

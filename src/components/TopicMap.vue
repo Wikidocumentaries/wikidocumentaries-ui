@@ -1,6 +1,9 @@
 <template>
     <div class="map-component">
-        <div class="toolbar">{{ header.title }}</div>
+        <div class="toolbar">
+            <div class="header-title">{{ header.title }}</div>
+            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
+        </div>
         <div id="map" class="map">
             <div ref="topicMapPopup" class="map-popup-container" :class="{ 'topic-popup-hidden': !shouldShowTopicPopup }">
                 <div class="map-popup">
@@ -19,13 +22,12 @@
 </template>
 
 <script>
+import ToolbarMenu from '@/components/ToolbarMenu'
 import MapOverlay from '../openlayersplugin/MapOverlay'
 
 export default {
     name: 'TopicMap',
     props: {
-        wikidocumentaries: Object,
-        shownImages: Array
     },
     data () {
         return {
@@ -37,15 +39,32 @@ export default {
             shouldShowTopicPopup: true,
             selectedFeatures: [],
             shownImagesPopupOffsets: {},
+            toolbarActionMenuItems: [
+                {
+                    id: 0,
+                    text: "Piilota kuvat",
+                },
+                {
+                    id: 1,
+                    text: "Valitse taustakartta",
+                },
+            ]
         }
     },
     components: {
+        ToolbarMenu,
         MapOverlay
     },
     mounted: function () {
        this.createMap();
     },
     computed: {
+        wikidocumentaries () {
+            return this.$store.state.wikidocumentaries;
+        },
+        shownImages () {
+            return this.$store.state.shownImages;
+        }
     },
     watch: {
         shownImages: function(images, oldImages) {
@@ -186,6 +205,11 @@ export default {
             this.$set(this.shownImagesPopupOffsets, 'i' + index, [width, height]);
 
             //console.log(this.shownImagesPopupOffsets);
+        },
+        onDoMenuItemAction (menuItem) {
+            if (menuItem.id == 0) {
+                this.$store.commit('setShownImages', []);
+            }
         },
         getFirstGeoLocationGeomType (image) {
             var type = null;

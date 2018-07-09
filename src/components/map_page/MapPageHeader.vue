@@ -27,16 +27,15 @@
 export default {
   name: 'MapPageHeader',
   props: {
-      wikidocumentaries: Object
+  },
+  computed: {
+      wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
   },
   data () {
     return {
             map: null,
-            map: {
-                zoom: 17,
-                center: [27.1, 65.2],
-                rotation: 0
-            },
         }
     },
     mounted: function () {
@@ -86,14 +85,13 @@ export default {
             }
         },
         topicPointCoordinates () {
-            var coords = this.map.center;
+            var coords = [];
             if (this.wikidocumentaries.geo.location != "") {
                 //console.log(this.wikidocumentaries.geo.location)
                 var coordPart = this.wikidocumentaries.geo.location.split('(')[1].split(')')[0];
                 //console.log(coordPart);
                 coords = coordPart.split(' ').map(Number);
                 //console.log(coords);
-                this.map.center = coords;
             }
 
             return coords;

@@ -17,11 +17,14 @@ import HeaderLink from '@/components/HeaderLink'
 export default {
   name: 'WikipediaArticle',
   props: {
-      wikidocumentaries: Object
+  },
+  computed: {
+      wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
   },
   data () {
     return {
-      msg: 'article',
       header: {
         title: 'Artikkeli Wikipediassa'
       }

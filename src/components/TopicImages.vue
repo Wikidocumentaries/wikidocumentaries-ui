@@ -26,11 +26,14 @@ import ToolbarMenu from '@/components/ToolbarMenu'
 export default {
     name: 'TopicImages',
     props: {
-        wikidocumentaries: Object
+    },
+    computed: {
+        wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
     },
     data () {
         return {
-            msg: '',
             header: {
                 title: 'Arkistojen kuvia'
             },
@@ -53,11 +56,13 @@ export default {
         },
         showImageOnMap(image) {
             //console.log("showImageOnMap", image);
-            this.$emit('showImagesOnMap', [image]);
+            this.$store.commit('setShownImages', [image]);
+            this.$emit('showImagesOnMap');
         },
         onDoMenuItemAction(menuItem) {
             if (menuItem.id == 0) {
-                this.$emit('showImagesOnMap', this.wikidocumentaries.images);
+                this.$store.commit('setShownImages', this.wikidocumentaries.images);
+                this.$emit('showImagesOnMap');
             }
         }
     },

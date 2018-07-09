@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <TopicPageHeader :wikidocumentaries="wikidocumentaries"></TopicPageHeader>
+    <TopicPageHeader></TopicPageHeader>
     <div class="row"> 
-      <WikipediaArticle class="column one" :wikidocumentaries="wikidocumentaries"></WikipediaArticle>
+      <WikipediaArticle class="column one"></WikipediaArticle>
       <div class="divider"></div>
-      <WikidataItem class="column two" :wikidocumentaries="wikidocumentaries"></WikidataItem>
+      <WikidataItem class="column two"></WikidataItem>
     </div>
-    <TopicImages :wikidocumentaries="wikidocumentaries" @showImagesOnMap="onShowImagesOnMap"></TopicImages>
-    <TopicMap id="topicMap" :wikidocumentaries="wikidocumentaries" :shownImages="shownImages"></TopicMap>
+    <TopicImages @showImagesOnMap="onShowImagesOnMap"></TopicImages>
+    <TopicMap id="topicMap"></TopicMap>
   </div>
 </template>
 
@@ -20,12 +20,9 @@ import TopicMap from '@/components/TopicMap'
 export default {
   name: 'Home',
   props: {
-      wikidocumentaries: Object
   },
   data () {
     return {
-      msg: '',
-      shownImages: []
     }
   },
   components: {
@@ -42,10 +39,8 @@ export default {
     }
   },
   methods: {
-    onShowImagesOnMap(images) {
+    onShowImagesOnMap() {
       //console.log("HomePage.onShowImagesOnMap", images);
-
-      this.shownImages = images;
 
       this.$scrollTo("#topicMap");
     }

@@ -19,7 +19,8 @@
     "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0",
-    "vuelayers": "^0.10.12"
+    "vuelayers": "^0.10.12",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

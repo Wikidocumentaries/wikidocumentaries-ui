@@ -21,8 +21,12 @@ import ToolbarMenu from '@/components/ToolbarMenu'
 export default {
     name: 'HistoricalMapsSearch',
     props: {
-        wikidocumentaries: Object
     },
+    computed: {
+      wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
+  },
     data () {
         return {
             header: {

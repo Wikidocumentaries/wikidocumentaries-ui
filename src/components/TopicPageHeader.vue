@@ -14,15 +14,16 @@
 export default {
   name: 'TopicPageHeader',
   props: {
-      wikidocumentaries: Object
   },
   data () {
     return {
-      msg: 'testaus'
     }
   },
   computed: {
-      style: function() {
+      wikidocumentaries () {
+          return this.$store.state.wikidocumentaries;
+      },
+      style () {
           //console.log(this.wikidocumentaries);
           return ''
           //return "background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG')"; 

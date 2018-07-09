@@ -21,11 +21,9 @@ import HeaderLink from '@/components/HeaderLink'
 export default {
   name: 'WikidataItem',
   props: {
-      wikidocumentaries: Object
   },
   data () {
     return {
-      msg: 'article',
       header: {
         title: 'Tiedot Wikidatassa'
       }
@@ -35,6 +33,9 @@ export default {
     HeaderLink
   },
   computed: {
+    wikidocumentaries () {
+        return this.$store.state.wikidocumentaries;
+    },
     wikidataURL: function() {
         //console.log(this.wikidocumentaries);
         return "https://www.wikidata.org/wiki/" + this.wikidocumentaries.wikidata.id;
