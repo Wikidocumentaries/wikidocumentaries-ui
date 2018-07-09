@@ -35,7 +35,6 @@ export default {
   },
   data () {
     return {
-            map: null,
         }
     },
     mounted: function () {
@@ -45,7 +44,7 @@ export default {
         createMap() {
             var ol = this.$ol;
 
-            this.map = new ol.Map({
+            var map = new ol.Map({
                 target: 'map',
                 layers: [
                     new ol.layer.Tile({
@@ -57,6 +56,8 @@ export default {
                     zoom: 17
                 })
             });
+
+            this.$store.commit('setHistoricalMapSearchPageMap', map);
 
             if (this.wikidocumentaries.geo.location != "") {
                 this.topicFeature = new ol.Feature({
@@ -81,7 +82,7 @@ export default {
                     source: vectorSource
                 });
 
-                this.map.addLayer(vectorLayer);
+                map.addLayer(vectorLayer);
             }
         },
         topicPointCoordinates () {
@@ -107,6 +108,7 @@ export default {
 }
 .map {
     width: 100%;
+    height: 400px;
     -webkit-filter: grayscale(90%);
     filter: grayscale(90%);
 }

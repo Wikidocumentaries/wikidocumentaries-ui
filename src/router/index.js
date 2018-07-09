@@ -6,6 +6,9 @@ import Viewer from 'v-viewer'
 //import VueLayers from 'vuelayers'
 //import 'vuelayers/lib/style.css'
 import VueScrollTo from 'vue-scrollto'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import olmap from '../openlayersplugin/olplugin.js'
 import 'ol/ol.css'
 
@@ -18,6 +21,8 @@ Vue.use(Viewer)
 //  dataProjection: 'EPSG:4326',
 //})
 Vue.use(VueScrollTo)
+Vue.use(VueAxios, axios)
+
 Vue.use(olmap)
 
 export default new Router({

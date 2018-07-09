@@ -208,7 +208,7 @@ export default {
         },
         onDoMenuItemAction (menuItem) {
             if (menuItem.id == 0) {
-                this.$store.commit('setShownImages', []);
+                this.$store.commit('setImagesShownOnMap', []);
             }
         },
         getFirstGeoLocationGeomType (image) {

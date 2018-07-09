@@ -56,12 +56,12 @@ export default {
         },
         showImageOnMap(image) {
             //console.log("showImageOnMap", image);
-            this.$store.commit('setShownImages', [image]);
+            this.$store.commit('setImagesShownOnMap', [image]);
             this.$emit('showImagesOnMap');
         },
         onDoMenuItemAction(menuItem) {
             if (menuItem.id == 0) {
-                this.$store.commit('setShownImages', this.wikidocumentaries.images);
+                this.$store.commit('setImagesShownOnMap', this.wikidocumentaries.images);
                 this.$emit('showImagesOnMap');
             }
         }

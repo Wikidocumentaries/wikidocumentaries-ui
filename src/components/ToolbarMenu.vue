@@ -1,6 +1,6 @@
 <template>
     <div class="toolbar-item">
-        <a href="#" @click.prevent="showMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
+        <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
         <div id="menuDropdown" :class="[shouldShowMenu ? showClass : hideClass]">
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{ item.text }}</a>
         </div>

@@ -13,9 +13,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@turf/distance": "^6.0.1",
+    "axios": "^0.18.0",
     "ol": "^5.0.2",
     "v-viewer": "^1.0.1",
     "vue": "^2.5.2",
+    "vue-axios": "^2.1.2",
     "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0",
