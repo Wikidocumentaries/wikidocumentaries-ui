@@ -5,8 +5,8 @@
             <ToolbarMenu icon="wikiglyph-gear" :items="toolbarSettingsMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
             <!--<ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarItems"></ToolbarMenu>-->
         </div>
-        <div v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="historical-maps">
-            <div v-masonry-tile class="grid-item" v-for="historicalMap in historicalMaps" v-bind:key="historicalMap.id">
+        <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="historical-maps">
+            <div v-masonry-tile class="grid-item" v-for="historicalMap in historicalMaps" v-bind:key="historicalMap.id" :style="{ width: itemWidth + 'px'}">
                 <img v-bind:src="historicalMap.images[0]" class="thumb-image" v-bind:alt="historicalMap.title"/>
                 <!--<div class="thumb-title">{{ image.title }}</div>
                 <div class="thumb-credit">{{ image.credit }}</div>-->
@@ -33,7 +33,7 @@ export default {
         },
         historicalMaps () {
             return this.$store.state.historicalMaps;
-        }
+        },
     },
     data () {
         return {
@@ -49,11 +49,14 @@ export default {
                     id: 1,
                     text: "Rajaa ajankohdan perusteella",
                 }
-            ]
+            ],
+            itemWidth: 200,
         }
     },
     mounted: function () {
-       this.findMaps();
+        this.itemWidth = this.$refs.gridItems.clientWidth / 5;
+        this.findMaps();
+        //console.log(this.$refs.gridImages.clientWidth);
     },
     methods: {
         onDoMenuItemAction (menuItem) {
@@ -113,7 +116,6 @@ export default {
 }
 
 .grid-item {
-    width: 200px;
     margin-bottom: -5px;
 }
 
