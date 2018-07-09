@@ -7,7 +7,7 @@
                 {{ wikidocumentaries.title }}
                 </div>
             </div>
-            <MapOverlay v-for="(image, index) in shownImages" v-bind:key="image.infoURL" :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan="true" :autoPanMargin="200">
+            <MapOverlay v-for="(image, index) in shownImages" v-if="image.geoLocations.length > 0" v-bind:key="image.infoURL" :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan=" ( shownImages.length > 1 ) ? false  : true " :autoPanMargin="200" :overlayGroupItemCount="shownImages.length">
                 <div class="map-popup-container">
                     <div class="map-popup">
                         <img :src="image.imageURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
@@ -36,7 +36,7 @@ export default {
             },
             shouldShowTopicPopup: true,
             selectedFeatures: [],
-            shownImagesPopupOffsets: {}
+            shownImagesPopupOffsets: {},
         }
     },
     components: {
@@ -49,8 +49,28 @@ export default {
     },
     watch: {
         shownImages: function(images, oldImages) {
+            var ol = this.$ol;
+
             console.log("shownImages");
             this.shouldShowTopicPopup = false;
+
+            if (images.length > 1) {
+                var coordinates = [];
+                for (var i = 0; i < images.length; i++) {
+                    if (images[i].geoLocations.length > 0) {
+                        coordinates.push(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(images[i])));
+                    }
+                }
+                var extent = ol.extent.boundingExtent(coordinates);
+
+                var view = this.map.getView();
+                view.fit(extent, {
+                    padding: [150, 50, 50, 50]
+                });
+            }
+            else {
+                
+            }
         }
     },
     methods: {
@@ -299,6 +319,7 @@ export default {
 .map {
     width: 100%;
     height: 400px;
+    position: relative;
 }
 
 .map-popup-container {

@@ -22,13 +22,20 @@ export default {
         }
     },
     methods: {
-        showMenu () {
+        switchShowMenu () {
             this.shouldShowMenu = !(this.shouldShowMenu);
             //console.log(this.shouldShow);
         },
+        showMenu() {
+            this.shouldShowMenu = true;
+        },
+        hideMenu() {
+            this.shouldShowMenu = false;
+        },
         doMenuItemAction (item) {
             console.log("doMenuItemAction:", item);
-            // TODO
+            this.hideMenu();
+            this.$emit('doMenuItemAction', item);
         }
     }
 }

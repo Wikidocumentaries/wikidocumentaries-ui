@@ -2,7 +2,7 @@
     <div class="images">
         <div class="toolbar">
             <div class="header-title">{{ header.title }}</div>
-            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems"></ToolbarMenu>
+            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
         </div>
         <div v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="images">
             <div v-masonry-tile class="grid-item" v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL">
@@ -37,7 +37,7 @@ export default {
             toolbarActionMenuItems: [
                 {
                     id: 0,
-                    text: "Näytä valitut kuvat kartalla",
+                    text: "Näytä kaikki kuvat kartalla",
                 },
                 {
                     id: 1,
@@ -54,6 +54,11 @@ export default {
         showImageOnMap(image) {
             //console.log("showImageOnMap", image);
             this.$emit('showImagesOnMap', [image]);
+        },
+        onDoMenuItemAction(menuItem) {
+            if (menuItem.id == 0) {
+                this.$emit('showImagesOnMap', this.wikidocumentaries.images);
+            }
         }
     },
     components: {

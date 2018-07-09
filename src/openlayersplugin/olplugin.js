@@ -11,14 +11,16 @@ import Overlay from 'ol/Overlay';
 import VectorSource from 'ol/source/Vector';
 import * as style from 'ol/style';
 import * as geom from 'ol/geom';
+import * as extent from 'ol/extent';
 
 export default {
-    install: (Vue) => {
+    install: function (Vue) {
         Vue.prototype.$ol = {
             Feature: Feature,
             Map: olMap,
             Overlay: Overlay,
             View: View,
+            extent: extent,
             geom: geom,
             layer: layer,
             proj: proj,

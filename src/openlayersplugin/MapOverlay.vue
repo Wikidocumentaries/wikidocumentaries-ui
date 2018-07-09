@@ -1,6 +1,8 @@
 <template>
     <div ref="mapOverlay" class="map-overlay">
-        <slot></slot>
+        <div>
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -13,11 +15,11 @@ export default {
         position: Array,
         offset: Array,
         autoPan: Boolean,
-        autoPanMargin: Number
+        autoPanMargin: Number,
+        overlayGroupItemCount: Number
     },
     data () {
         return {
-            msg: '',
             overlay: null
         }
     },
@@ -26,7 +28,7 @@ export default {
         //console.log(map);
         var mapOverlay = this.$refs.mapOverlay;
         this.overlay = new ol.Overlay({
-            element: mapOverlay,
+            element: this.$el.children[0],
             stopEvent: false,
             position: ol.proj.fromLonLat(this.position),
             offset: this.offset,
@@ -38,9 +40,21 @@ export default {
             this.overlay.setPosition(ol.proj.fromLonLat(this.position));
         }
     },
+    beforeDestroy: function () {
+        this.overlay.setElement(undefined)
+    },
     watch: {
         offset: function(newOffset, oldOffset) {
             this.overlay.setOffset(newOffset);
+        },
+        overlayGroupItemCount: function(count, oldCount) {
+            var ol = this.$ol;
+            console.log(count);
+            if (count == 1) {
+                this.map.getView().animate({
+                    center: ol.proj.fromLonLat(this.position)
+                });
+            }
         }
     }
 
@@ -51,7 +65,8 @@ export default {
 <style scoped>
 .map-overlay {
     position: absolute;
-
+    /* top: 0;
+    left: 0; */
 }
 
 </style>
