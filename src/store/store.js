@@ -195,6 +195,8 @@ export default new Vuex.Store({
                     "field[8]": 'events',
                     "field[9]": 'imageRights',
                     "field[10]": 'summary',
+                    "field[11]": 'onlineUrls',
+                    "field[12]": 'nonPresenterAuthors',
                 }
             };
             axios.request(requestConfig).
@@ -223,10 +225,36 @@ export default new Vuex.Store({
                                     institutions: record.institutions,
                                     events: record.events,
                                     imageRights: record.imageRights,
-                                    summary: record.summary
+                                    summary: record.summary,
+                                    source: "finna",
+                                    url: "https://www.finna.fi/Record/" + record.id
                                 }
 
                                 maps.push(map);
+                            }
+                            else { // Handle Doria Fennica maps differently
+                                if (record.onlineUrls != undefined &&
+                                    record.onlineUrls[0].source != undefined && 
+                                    record.onlineUrls[0].source.value != undefined &&
+                                    record.onlineUrls[0].source.value == "fennica" &&
+                                    record.onlineUrls[0].url != undefined
+                                ) {
+                                    var images = [];
+                                    images.push("/static/pngs/map_placeholder.png");
+                                    //images.push("/static/wikifont/svgs/uniE032 - map.svg");
+
+                                    var map = {
+                                        id: record.id,
+                                        title: record.title,
+                                        year: record.year,
+                                        institutions: record.institutions,
+                                        url: record.onlineUrls[0].url,
+                                        images: images,
+                                        source: "finna_fennica"
+                                    }
+    
+                                    maps.push(map);
+                                }
                             }
                         }
                     }

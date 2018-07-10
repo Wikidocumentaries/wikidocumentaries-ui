@@ -10,6 +10,11 @@
                 <img v-bind:src="historicalMap.images[0]" class="thumb-image" v-bind:alt="historicalMap.title"/>
                 <!--<div class="thumb-title">{{ image.title }}</div>
                 <div class="thumb-credit">{{ image.credit }}</div>-->
+                <div class="thumb-image-header">
+                    <div v-if="historicalMap.url != undefined">
+                        <a v-bind:href="historicalMap.url" target="_blank"><span class="external-link-span"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></span></a>
+                    </div>
+                </div>
             </div>
         </div>
         <!--<button type="button" @click="show">Show</button>-->
@@ -138,4 +143,12 @@ export default {
 .thumb-image-glyph {
     color: white;
 }
+
+.external-link-span {
+   /*letter-spacing: -1px;  */
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.2);
+   padding-top: 8px; 
+}
+
 </style>
