@@ -5,25 +5,15 @@
             <ToolbarMenu icon="wikiglyph-gear" :items="toolbarSettingsMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
             <!--<ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarItems"></ToolbarMenu>-->
         </div>
-        <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="historical-maps">
-            <div v-masonry-tile class="grid-item" v-for="historicalMap in historicalMaps" v-bind:key="historicalMap.id" :style="{ width: itemWidth + 'px'}">
-                <img v-bind:src="historicalMap.images[0]" class="thumb-image" v-bind:alt="historicalMap.title"/>
-                <!--<div class="thumb-title">{{ image.title }}</div>
-                <div class="thumb-credit">{{ image.credit }}</div>-->
-                <div class="thumb-image-header">
-                    <div v-if="historicalMap.url != undefined">
-                        <a v-bind:href="historicalMap.url" target="_blank"><span class="external-link-span"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--<button type="button" @click="show">Show</button>-->
+        <MasonryGrid :items="historicalMaps">
+        </MasonryGrid>
     </div>
 </template>
 
 <script>
 import turf_distance from '@turf/distance/index'
 import ToolbarMenu from '@/components/ToolbarMenu'
+import MasonryGrid from '@/components/MasonryGrid'
 
 export default {
     name: 'HistoricalMapsSearch',
@@ -55,11 +45,9 @@ export default {
                     text: "Rajaa ajankohdan perusteella",
                 }
             ],
-            itemWidth: 200,
         }
     },
     mounted: function () {
-        this.itemWidth = this.$refs.gridItems.clientWidth / 5;
         this.findMaps();
         //console.log(this.$refs.gridImages.clientWidth);
     },
@@ -68,10 +56,6 @@ export default {
             if (menuItem.id == 0) {
                 // TODO
             }
-        },
-        show () {
-            const viewer = this.$el.querySelector('.historical-maps').$viewer
-            viewer.show()
         },
         findMaps() {
             var ol = this.$ol;
@@ -104,7 +88,8 @@ export default {
         }
     },
     components: {
-        ToolbarMenu
+        ToolbarMenu,
+        MasonryGrid
     }
 }
 </script>
@@ -114,41 +99,6 @@ export default {
 
 .maps {
 
-}
-
-.grid {
-
-}
-
-.grid-item {
-    margin-bottom: -5px;
-}
-
-.grid-item--width2 { 
-    width: 400px;
-}
-
-.thumb-image {
-    width: 100%;
-    cursor: zoom-in;
-}
-
-.thumb-image-header {
-    position:absolute;
-    top: 0px;
-    left: 10px;
-    width: 100%; 
-}
-
-.thumb-image-glyph {
-    color: white;
-}
-
-.external-link-span {
-   /*letter-spacing: -1px;  */
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.2);
-   padding-top: 8px; 
 }
 
 </style>

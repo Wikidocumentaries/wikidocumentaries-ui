@@ -4,24 +4,15 @@
             <div class="header-title">{{ header.title }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
         </div>
-        <div ref="gridImages" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}">
-            <div v-masonry-tile class="grid-item" v-for="image in wikidocumentaries.images" v-bind:key="image.imageURL" :style="{ width: itemWidth + 'px'}">
-                <img v-bind:src="image.imageURL" class="thumb-image" v-bind:alt="image.title"/>
-                <!--<div class="thumb-title">{{ image.title }}</div>
-                <div class="thumb-credit">{{ image.credit }}</div>-->
-                <div class="thumb-image-header">
-                    <div v-if="image.geoLocations.length > 0" class="geo">
-                        <a href="#" @click.prevent="showImageOnMap(image)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--<button type="button" @click="show">Show</button>-->
+        
+        <MasonryGrid :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
+        </MasonryGrid>
     </div>
 </template>
 
 <script>
 import ToolbarMenu from '@/components/ToolbarMenu'
+import MasonryGrid from '@/components/MasonryGrid'
 
 export default {
     name: 'TopicImages',
@@ -33,8 +24,6 @@ export default {
       },
     },
     mounted: function () {
-        //console.log(this.$refs.gridImages.clientWidth);
-        this.itemWidth = this.$refs.gridImages.clientWidth / 5;
     },
     data () {
         return {
@@ -51,14 +40,9 @@ export default {
                     text: "Näytä valitut kuvat aikajanalla",
                 },
             ],
-            itemWidth: 200
         }
     },
     methods: {
-        show () {
-            const viewer = this.$el.querySelector('.images').$viewer
-            viewer.show()
-        },
         showImageOnMap(image) {
             //console.log("showImageOnMap", image);
             this.$store.commit('setImagesShownOnMap', [image]);
@@ -72,7 +56,8 @@ export default {
         }
     },
     components: {
-        ToolbarMenu
+        ToolbarMenu,
+        MasonryGrid
     }
 }
 </script>
