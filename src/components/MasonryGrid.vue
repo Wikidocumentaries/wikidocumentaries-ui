@@ -33,6 +33,9 @@ export default {
             itemWidth: 200,
             maxItemsPerRow: 4,
             maxTitleLengthInChars: 53,
+            maxAuthorsLengthInChars: 20,
+            maxInstitutionsLengthInChars: 30,
+            maxLicenseLengthInChars: 20,
         }
     },
     mounted: function () {
@@ -44,7 +47,10 @@ export default {
     },
     watch: {
         items: function(items, oldItems) {
-            this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
+            //console.log(items);
+            this.$nextTick(function () {
+                this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
+            });
         }
     },
     methods: {
@@ -59,7 +65,20 @@ export default {
             return newTitle;
         },
         getCredits (item) {
-            return (item.authors != "" ? (item.authors + ', ') : '') + (item.institutions != "" ? (item.institutions + ', ') : '') + item.license;
+            var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
+            if (newAuthors.length > this.maxAuthorsLengthInChars) {
+                newAuthors = newAuthors.substr(0, this.maxAuthorsLengthInChars - 3) + "..."  + ', ';
+            }
+            var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
+            if (newInstitutions.length > this.maxInstitutionsLengthInChars) {
+                newInstitutions = newInstitutions.substr(0, this.maxInstitutionsLengthInChars - 3) + "..."  + ', ';
+            }
+            var newLicense = (item.license != "" ? (item.license + ', ') : '');
+            if (newLicense.length > this.maxLicenseLengthInChars) {
+                newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "..."  + ', ';
+            }
+
+            return newAuthors + newInstitutions + item.license;
         },
         show () {
             const viewer = this.$el.querySelector('.grid-items').$viewer
@@ -82,7 +101,7 @@ export default {
 .header-item {
     /*letter-spacing: -1px;  */
     background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     padding: 5px 5px;
     line-height: 1;
 }
@@ -117,7 +136,7 @@ export default {
     bottom: 5px;
     left: 1px;
     background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     color: white;
     padding: 10px;
 }

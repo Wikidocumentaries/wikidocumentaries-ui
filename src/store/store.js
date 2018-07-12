@@ -3,6 +3,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import jsonp from 'jsonp'
 
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
@@ -158,106 +159,186 @@ export default new Vuex.Store({
         }
     },
     actions: {
-        getHistoricalMaps({commit}, locationParams) {
-            var requestConfig = {
-                baseURL: "https://api.finna.fi/",
-                url: "/v1/search",
-                methog: "get",
-                params: {
-                    limit: 50,
-                    type: "AllFields",
-                    "filter[0]": '~format:"0/Map/"',
-                    "filter[1]": 'online_boolean:"1"',
-                    "filter[2]": '{!bbox sfield=location_geo pt=' +
-                    locationParams.lon + ',' + locationParams.lat + ' d=' + locationParams.distance + '}',
-                    "filter[2]": '~geographic_facet:"' + locationParams.geographic_facet + '"',
-                    "field[0]": 'id',
-                    "field[1]": 'title',
-                    "field[2]": 'geoLocations',
-                    "field[3]": 'images',
-                    "field[4]": 'year',
-                    "field[5]": 'publisher',
-                    "field[6]": 'authors',
-                    "field[7]": 'institutions',
-                    "field[8]": 'events',
-                    "field[9]": 'imageRights',
-                    "field[10]": 'summary',
-                    "field[11]": 'onlineUrls',
-                    "field[12]": 'nonPresenterAuthors',
+        async getHistoricalMaps({dispatch, commit}, locationParams) {
+            //commit('setHistoricalMaps', maps);
+            commit('setHistoricalMaps',
+                await dispatch('getHistoricalMapsFromFinna', {
+                    locationParams: locationParams,
+                    maps: []
+                })
+                .then((maps) => dispatch('getHistoricalMapsFromCommons', {
+                    locationParams: locationParams,
+                    maps: maps
+                })));
+        },
+        async getHistoricalMapsFromCommons(context, params) {
+            return new Promise((resolve, reject) => {
+
+                console.log(params);
+
+                //resolve(params.maps);
+
+                var category = "";
+                switch (params.locationParams.municipality) {
+                    case "Helsinki":
+                        category = "Old_maps_of_Helsinki";
+                        break;
+                    case "Forssa":
+                        category = "Old_maps_of_Forssa";
+                        break;
+                    case "Hämeenlinna":
+                        category = "Old_maps_of_Hämeenlinna";
+                        break;
+                    case "Kemi":
+                        category = "Old_maps_of_Kemi";
+                        break;
+                    case "Loimaa":
+                        category = "Old_maps_of_Loimaa";
+                        break;
+                    case "Lohja":
+                        category = "Old_maps_of_Lohja";
+                        break;
+                    case "Salo":
+                        category = "Old_maps_of_Salo";
+                        break;
+                    case "Oulu":
+                        category = "Old_maps_of_Oulu";
+                        break;
+                    case "Somero":
+                        category = "Old_maps_of_Somero";
+                        break;
+                    case "Turku":
+                        category = "Old_maps_of_Turku";
+                        break;
+                    default:
+                        category = "Old_maps_of_cities_in_Finland";
                 }
-            };
-            axios.request(requestConfig).
-                then(function (response) {
-                    console.log(response);
 
-                    var maps = [];
+                var url = "https://commons.wikimedia.org/w/api.php?action=query" +
+                    "&list=categorymembers&cmtype=file&cmtitle=Category:" + category +
+                    "&format=json" +
+                    "&callback=callback";
 
-                    if (response.data.resultCount > 0) {
-                        for (var i = 0; i < response.data.records.length; i++) {
-                            var record = response.data.records[i];
-                            if (record.images != undefined && record.images.length > 0) {
-                                var images = [];
-                                for (var j = 0; j < record.images.length; j++) {
-                                    images.push("https://api.finna.fi" + record.images[j]);
+                jsonp(url, null, (error, data) => {
+                    if (error) {
+                        console.log(error);
+                        reject(error);
+                    } else {
+                        console.log(data);
+
+                        var tasks = [];
+
+                        for (var i = 0; i < data.query.categorymembers.length; i++) {
+                            var fileName = data.query.categorymembers[i].title;
+
+                            var task = createGetCommonsMapInfoTask(fileName);
+                            tasks.push(task);
+                        }
+
+                        Promise.all(tasks).then(allInfo => {
+                            console.log(allInfo);
+
+                            var maps = params.maps;
+
+                            for (var i = 0; i < allInfo.length; i++) {
+                                var info = Object.values(allInfo[i].query.pages)[0];
+                                console.log(info);
+
+                                var imageURL = info.imageinfo[0].url;
+                                var parts = imageURL.split('.');
+                                var imageExtension = parts[parts.length - 1].toLowerCase();
+                                if (imageExtension == 'bmp' || imageExtension == 'jpg' || imageExtension == 'jpeg' || imageExtension == 'png' || imageExtension == 'gif') {
+                                    // nothing to do
                                 }
-
-                                var authors = "";
-                                if (record.authors != undefined) {
-                                    for (var author in record.authors) {
-                                        if (record.hasOwnProperty(author)) {
-                                            for (var key in author) {
-                                                if (author.hasOwnProperty(key)) {
-                                                    authors += key + ", ";
-                                                }
-                                            }
-                                        }
-                                    }
-                                    authors = authors.slice(0, -2);
-                                }
-
-                                var institutions = "";
-                                if (record.institutions != undefined) {
-                                    for (var j = 0; j < record.institutions.length; j++) {
-                                        institutions += record.institutions[j].translated + ', ';
-                                    }
-
-                                    institutions = institutions.slice(0, -2);
+                                else {
+                                    imageURL = "/static/pngs/map_placeholder.png";
                                 }
 
                                 var map = {
-                                    id: record.id,
-                                    title: record.title,
-                                    geoLocations: record.geoLocations,
-                                    images: images,
-                                    imageURL: images[0],
-                                    year: record.year,
-                                    publisher: record.publisher,
-                                    authors: authors,
-                                    institutions: institutions,
-                                    events: record.events,
-                                    imageRights: record.imageRights,
-                                    license: record.imageRights.copyright,
-                                    summary: record.summary,
-                                    source: "finna",
-                                    infoURL: "https://www.finna.fi/Record/" + record.id
+                                    id: info.pageid,
+                                    title: info.title,
+                                    geoLocations: [],
+                                    images: [info.imageinfo[0].url],
+                                    imageURL: imageURL,
+                                    year: (info.imageinfo[0].extmetadata.DateTimeOriginal != undefined ? info.imageinfo[0].extmetadata.DateTimeOriginal.value : undefined),
+                                    publisher: (info.imageinfo[0].extmetadata.Credit != undefined ? info.imageinfo[0].extmetadata.Credit.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
+                                    authors: (info.imageinfo[0].extmetadata.Artist != undefined ? info.imageinfo[0].extmetadata.Artist.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
+                                    institutions: (info.imageinfo[0].extmetadata.Credit != undefined ? info.imageinfo[0].extmetadata.Credit.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
+                                    license: (info.imageinfo[0].extmetadata.LicenseShortName != undefined ? info.imageinfo[0].extmetadata.LicenseShortName.value : undefined),
+                                    summary: (info.imageinfo[0].extmetadata.ImageDescription != undefined ? info.imageinfo[0].extmetadata.ImageDescription.value : undefined),
+                                    source: "commons",
+                                    infoURL: info.imageinfo[0].descriptionurl
                                 }
-
                                 maps.push(map);
                             }
-                            else { // Handle Doria Fennica maps differently
-                                if (record.onlineUrls != undefined &&
-                                    record.onlineUrls[0].source != undefined && 
-                                    record.onlineUrls[0].source.value != undefined &&
-                                    record.onlineUrls[0].source.value == "fennica" &&
-                                    record.onlineUrls[0].url != undefined
-                                ) {
+                        
+                            context.commit('setHistoricalMaps', maps);
+                            resolve(maps);
+                        });
+                    }
+                });
+            });
+        },
+        async getHistoricalMapsFromFinna(context, params) {
+            return new Promise((resolve, reject) => {
+
+                //resolve(params.maps);
+                //return;
+
+                var requestConfig = {
+                    baseURL: "https://api.finna.fi/",
+                    url: "/v1/search",
+                    method: "get",
+                    params: {
+                        limit: 50,
+                        type: "AllFields",
+                        "filter[0]": '~format:"0/Map/"',
+                        "filter[1]": 'online_boolean:"1"',
+                        "filter[2]": '{!bbox sfield=location_geo pt=' +
+                        params.locationParams.centerLon + ',' + params.locationParams.centerLat + ' d=' + params.locationParams.distance + '}',
+                        "filter[2]": '~geographic_facet:"' + params.locationParams.municipality + '"',
+                        "field[0]": 'id',
+                        "field[1]": 'title',
+                        "field[2]": 'geoLocations',
+                        "field[3]": 'images',
+                        "field[4]": 'year',
+                        "field[5]": 'publisher',
+                        "field[6]": 'authors',
+                        "field[7]": 'institutions',
+                        "field[8]": 'events',
+                        "field[9]": 'imageRights',
+                        "field[10]": 'summary',
+                        "field[11]": 'onlineUrls',
+                        "field[12]": 'nonPresenterAuthors',
+                    }
+                };
+                axios.request(requestConfig).
+                    then(function (response) {
+                        console.log(response);
+
+                        var maps = params.maps;
+
+                        if (response.data.resultCount > 0) {
+                            for (var i = 0; i < response.data.records.length; i++) {
+                                var record = response.data.records[i];
+                                if (record.images != undefined && record.images.length > 0) {
                                     var images = [];
-                                    images.push("/static/pngs/map_placeholder.png");
-                                    //images.push("/static/wikifont/svgs/uniE032 - map.svg");
+                                    for (var j = 0; j < record.images.length; j++) {
+                                        images.push("https://api.finna.fi" + record.images[j]);
+                                    }
 
                                     var authors = "";
-                                    if (record.nonPresenterAuthors != undefined && record.nonPresenterAuthors[0].name != undefined) {
-                                        authors = record.nonPresenterAuthors[0].name
+                                    if (record.authors != undefined) {
+                                        for (var author in record.authors) {
+                                            if (record.hasOwnProperty(author)) {
+                                                for (var key in author) {
+                                                    if (author.hasOwnProperty(key)) {
+                                                        authors += key + ", ";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        authors = authors.slice(0, -2);
                                     }
 
                                     var institutions = "";
@@ -272,27 +353,131 @@ export default new Vuex.Store({
                                     var map = {
                                         id: record.id,
                                         title: record.title,
-                                        year: record.year,
-                                        authors: authors,
-                                        institutions: institutions,
-                                        infoURL: record.onlineUrls[0].url,
+                                        //geoLocations: record.geoLocations,
                                         images: images,
                                         imageURL: images[0],
-                                        source: "finna_fennica",
-                                        license: "Ks. lähde"
+                                        year: record.year,
+                                        publisher: record.publisher,
+                                        authors: authors,
+                                        institutions: institutions,
+                                        events: record.events,
+                                        imageRights: record.imageRights,
+                                        license: record.imageRights.copyright,
+                                        summary: record.summary,
+                                        source: "finna",
+                                        infoURL: "https://www.finna.fi/Record/" + record.id
                                     }
-    
+
                                     maps.push(map);
+                                }
+                                else { // Handle Doria Fennica maps differently
+                                    if (record.onlineUrls != undefined &&
+                                        record.onlineUrls[0].source != undefined && 
+                                        record.onlineUrls[0].source.value != undefined &&
+                                        record.onlineUrls[0].source.value == "fennica" &&
+                                        record.onlineUrls[0].url != undefined
+                                    ) {
+                                        var images = [];
+                                        images.push("/static/pngs/map_placeholder.png");
+                                        //images.push("/static/wikifont/svgs/uniE032 - map.svg");
+
+                                        var authors = "";
+                                        if (record.nonPresenterAuthors != undefined && record.nonPresenterAuthors[0].name != undefined) {
+                                            authors = record.nonPresenterAuthors[0].name
+                                        }
+
+                                        var institutions = "";
+                                        if (record.institutions != undefined) {
+                                            for (var j = 0; j < record.institutions.length; j++) {
+                                                institutions += record.institutions[j].translated + ', ';
+                                            }
+
+                                            institutions = institutions.slice(0, -2);
+                                        }
+
+                                        var map = {
+                                            id: record.id,
+                                            title: record.title,
+                                            year: record.year,
+                                            authors: authors,
+                                            institutions: institutions,
+                                            infoURL: record.onlineUrls[0].url,
+                                            images: images,
+                                            imageURL: images[0],
+                                            source: "finna_fennica",
+                                            license: "Ks. lähde"
+                                        }
+        
+                                        maps.push(map);
+                                    }
                                 }
                             }
                         }
-                    }
 
-                    commit('setHistoricalMaps', maps);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                });
+                        context.commit('setHistoricalMaps', maps);
+                        resolve(maps);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+
+                        reject(error);
+
+                    });
+            });
         }
     }
-})
+});
+
+function createGetCommonsMapInfoTask(fileName) {
+    return new Promise((resolve, reject) => {
+                                
+        var url = "https://commons.wikimedia.org/w/api.php?action=query" +
+            "&titles=" + fileName +
+            "&prop=imageinfo&iiprop=user|url|extmetadata" +
+            "&format=json" +
+            "&callback=callback";
+
+        jsonp(url, null, (error, data) => {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                console.log(data);
+                resolve(data);
+            }
+        });
+    });
+}
+
+
+/*
+        async getPhotosFromCommons(context, params) {
+            return new Promise((resolve, reject) => {
+
+                console.log(params);
+
+                //resolve(params.maps);
+
+                var url = "https://commons.wikimedia.org/w/api.php?action=query";
+                url += "&list=geosearch";
+                url += "&gsnamespace=6";
+                url += "&gsbbox=" +
+                    params.locationParams.topRightLat + "|" +
+                    params.locationParams.bottomLeftLon + "|" +
+                    params.locationParams.bottomLeftLat + "|" +
+                    params.locationParams.topRightLon;
+                url += "&gslimit=" + 10;
+                url += "&format=json";
+                url += "&callback=callback";
+
+                jsonp(url, null, (error, data) => {
+                    if (error) {
+                        reject(error);
+                    } else {
+                        console.log(data);
+                        resolve(params.maps);
+                    }
+                });
+            });
+        },
+        */

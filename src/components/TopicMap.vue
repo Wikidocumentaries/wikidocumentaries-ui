@@ -46,7 +46,7 @@ export default {
                 },
                 {
                     id: 1,
-                    text: "Valitse taustakartta",
+                    text: "Valitse aikajanan kartat",
                 },
             ]
         }

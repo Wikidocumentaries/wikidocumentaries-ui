@@ -38,12 +38,16 @@ export default {
             toolbarSettingsMenuItems: [
                 {
                     id: 0,
-                    text: "Rajaa hakualue kartalta",
+                    text: "Rajaa lähteen mukaan...",
                 },
                 {
                     id: 1,
-                    text: "Rajaa ajankohdan perusteella",
-                }
+                    text: "Rajaa ajankohdan perusteella...",
+                },
+                {
+                    id: 2,
+                    text: "Rajaa hakualue kartalta...",
+                },
             ],
         }
     },
@@ -60,28 +64,36 @@ export default {
         findMaps() {
             var ol = this.$ol;
             var extent = this.map.getView().calculateExtent();
-            console.log(extent);
+            //console.log(extent);
             var bottomLeftLonLat3857 = [extent[0], extent[1]];
             var topLeftLonLat3857 = [extent[0], extent[3]];
             var bottomRightLonLat3857 = [extent[2], extent[1]];
+            var topRightLonLat3857 = [extent[2], extent[3]];
             var bottomLeftLonLat = ol.proj.transform(bottomLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
             var topLeftLonLat = ol.proj.transform(topLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
             var bottomRightLonLat = ol.proj.transform(bottomRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
-            console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
+            var topRightLonLat = ol.proj.transform(topRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            //console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
             var heightLength = turf_distance(bottomLeftLonLat, topLeftLonLat);
             var widthLength = turf_distance(bottomLeftLonLat, bottomRightLonLat);
-            console.log("height: ", heightLength);
-            console.log("width: ", widthLength);
+            //console.log("height: ", heightLength);
+            //console.log("width: ", widthLength);
 
-            var lon = bottomRightLonLat[1] + (bottomRightLonLat[1] - bottomLeftLonLat[1]) / 2;
-            var lat = bottomLeftLonLat[0] + (topLeftLonLat[0] - bottomLeftLonLat[0]) / 2;
+            var lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
+            var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
+            //console.log("lon: ", lon);
+            //console.log("lat: ", lat);
             var distance = heightLength > widthLength ? heightLength : widthLength;
 
             var params = {
-                geographic_facet: this.wikidocumentaries.geo.admin,
-                lon: lon, 
-                lat: lat,
-                distance: distance
+                municipality: this.wikidocumentaries.geo.admin,
+                centerLon: lon, 
+                centerLat: lat,
+                distance: distance,
+                bottomLeftLon: bottomLeftLonLat[0],
+                bottomLeftLat: bottomLeftLonLat[1],
+                topRightLon: topRightLonLat[0],
+                topRightLat: topRightLonLat[1],
             }
 
             this.$store.dispatch('getHistoricalMaps', params);
