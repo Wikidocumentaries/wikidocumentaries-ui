@@ -18,12 +18,23 @@
                 </div>
             </MapOverlay>
         </div>
+        <BaseMapDialog :show="showBaseMapDialog" @close="showBaseMapDialog = false">
+            <h3 slot="header" class="modal-header">Valitse taustakartta</h3>
+        </BaseMapDialog>
     </div>
 </template>
 
 <script>
+
 import ToolbarMenu from '@/components/ToolbarMenu'
 import MapOverlay from '../openlayersplugin/MapOverlay'
+import BaseMapDialog from '@/components/BaseMapDialog'
+
+const MENU_ACTIONS = {
+    CHOOSE_BACKGROUND_MAP: 0,
+    HIDE_PHOTOS: 1,
+    CHOOSE_TIMELINE_MAPS: 2,
+}
 
 export default {
     name: 'TopicMap',
@@ -41,19 +52,25 @@ export default {
             shownImagesPopupOffsets: {},
             toolbarActionMenuItems: [
                 {
-                    id: 0,
+                    id: MENU_ACTIONS.CHOOSE_BACKGROUND_MAP,
+                    text: "Valitse taustakartta...",
+                },
+                {
+                    id: MENU_ACTIONS.HIDE_PHOTOS,
                     text: "Piilota kuvat",
                 },
                 {
-                    id: 1,
-                    text: "Valitse aikajanan kartat",
+                    id: MENU_ACTIONS.CHOOSE_TIMELINE_MAPS,
+                    text: "Valitse aikajanan kartat...",
                 },
-            ]
+            ],
+            showBaseMapDialog: false
         }
     },
     components: {
         ToolbarMenu,
-        MapOverlay
+        MapOverlay,
+        BaseMapDialog
     },
     mounted: function () {
        this.createMap();
@@ -207,8 +224,16 @@ export default {
             //console.log(this.shownImagesPopupOffsets);
         },
         onDoMenuItemAction (menuItem) {
-            if (menuItem.id == 0) {
+            switch (menuItem.id) {
+            case MENU_ACTIONS.HIDE_PHOTOS:
                 this.$store.commit('setImagesShownOnMap', []);
+                break;
+            case MENU_ACTIONS.CHOOSE_BACKGROUND_MAP:
+                this.showBaseMapDialog = true;
+                break;
+            case MENU_ACTIONS.CHOOSE_TIMELINE_MAPS:
+                // TODO
+                break;
             }
         },
         getFirstGeoLocationGeomType (image) {
