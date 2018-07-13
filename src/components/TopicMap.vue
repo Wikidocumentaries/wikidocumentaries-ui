@@ -21,6 +21,8 @@
         </div>
         <BaseMapDialog :shouldShow="showBaseMapDialog" @close="showBaseMapDialog = false">
         </BaseMapDialog>
+        <TransparencyDialog :shouldShow="showBasemapTransparencyDialog" @close="showBasemapTransparencyDialog = false">
+        </TransparencyDialog>
     </div>
 </template>
 
@@ -29,12 +31,14 @@
 import ToolbarMenu from '@/components/ToolbarMenu'
 import MapOverlay from '../openlayersplugin/MapOverlay'
 import BaseMapDialog from '@/components/BaseMapDialog'
+import TransparencyDialog from '@/components/TransparencyDialog'
 import WikimapsWarperLayer from '../openlayersplugin/WikimapsWarperLayer'
 
 const MENU_ACTIONS = {
     CHOOSE_BACKGROUND_MAP: 0,
-    HIDE_PHOTOS: 1,
-    CHOOSE_TIMELINE_MAPS: 2,
+    SET_BACKGROUND_MAP_TRANSPARENCY: 1,
+    HIDE_PHOTOS: 2,
+    CHOOSE_TIMELINE_MAPS: 3,
 }
 
 export default {
@@ -57,6 +61,10 @@ export default {
                     text: "Valitse historiallinen taustakartta...",
                 },
                 {
+                    id: MENU_ACTIONS.SET_BACKGROUND_MAP_TRANSPARENCY,
+                    text: "Aseta taustakartan läpinäkyvyys..."
+                },
+                {
                     id: MENU_ACTIONS.HIDE_PHOTOS,
                     text: "Piilota kuvat",
                 },
@@ -65,13 +73,15 @@ export default {
                     text: "Valitse aikajanan kartat...",
                 },
             ],
-            showBaseMapDialog: false
+            showBaseMapDialog: false,
+            showBasemapTransparencyDialog: false
         }
     },
     components: {
         ToolbarMenu,
         MapOverlay,
         BaseMapDialog,
+        TransparencyDialog,
         WikimapsWarperLayer
     },
     mounted: function () {
@@ -233,6 +243,9 @@ export default {
             switch (menuItem.id) {
             case MENU_ACTIONS.HIDE_PHOTOS:
                 this.$store.commit('setImagesShownOnMap', []);
+                break;
+            case MENU_ACTIONS.SET_BACKGROUND_MAP_TRANSPARENCY:
+                this.showBasemapTransparencyDialog = true;
                 break;
             case MENU_ACTIONS.CHOOSE_BACKGROUND_MAP:
                 this.showBaseMapDialog = true;
