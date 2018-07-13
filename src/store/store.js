@@ -171,7 +171,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         id: "File:Brändö_villastad.jpg",
         title: "Map of AB Brändö Villastad",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Br%C3%A4nd%C3%B6_villastad.jpg/631px-Br%C3%A4nd%C3%B6_villastad.jpg",
-        year: undefined,
+        year: 1910,
         warperID: 1160,
         municipality: "Helsinki",
         country: "Finland"
@@ -504,7 +504,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         id: "File:Opaskartta_Helsingin_kaupungista_vuodelta_1859.tif",
         title: "Opaskartta Helsingin kaupungista",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Opaskartta_Helsingin_kaupungista_vuodelta_1859.tif/lossy-page1-796px-Opaskartta_Helsingin_kaupungista_vuodelta_1859.tif.jpg",
-        year: 2015,
+        year: 1859,
         warperID: 1205,
         municipality: "Helsinki",
         country: "Finland"

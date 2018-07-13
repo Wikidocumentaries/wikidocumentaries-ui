@@ -8,21 +8,21 @@
                     </div>
 
                     <div class="modal-body">
-                        <div ref="gridItems" v-masonry transition-duration="0.3s" class="grid-items">
-                            <div v-masonry-tile class="grid-item" v-for="item in basemaps" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">
-                                <img v-bind:src="item.imageURL" class="thumb-image" :class="[(item.id == newMapID ? 'thumb-image-selected' : '' )]" v-bind:alt="item.title" :mapID="item.id" @click="mapClicked" />
+                        <div ref="gridItems" transition-duration="0.3s" class="grid-items" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}">
+                            <div v-masonry-tile class="grid-item" v-for="item in basemapsSortedByYear" v-bind:key="item.id" @click="mapClicked" :mapID="item.id">
+                                <img v-bind:src="item.imageURL" class="thumb-image" :class="[(item.id == newMapID ? 'thumb-image-selected' : '' )]" v-bind:alt="item.title"/>
                                 <div class="thumb-image-header">
-                                    <div class="header-item">
+                                    <div class="thumb-header-item">
                                         <a v-bind:href="infoURL(item)" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                                     </div>
-                                    <div class="header-item">
+                                    <div class="thumb-header-item">
                                         <div class="thumb-year">{{ (item.year != undefined ? "v." + item.year : "") }}</div>
                                     </div>
                                 </div>
-                                <!-- <div class="thumb-image-info">
+                                <div class="thumb-image-info">
                                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
-                                    <div class="thumb-credit">{{ getCredits(item) }}</div>
-                                </div> -->
+                                    <!-- <div class="thumb-credit">{{ getCredits(item) }}</div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -51,49 +51,40 @@ export default {
     },
     data () {
         return {
-            itemWidth: 50,
-            maxItemsPerRow: 8,
             previousBasemapID: "",
             newMapID: "",
+            maxTitleLengthInChars: 40
         }
     },
     computed: {
         basemaps () {
             return this.$store.state.basemaps;
         },
+        basemapsSortedByYear () {
+            var temp = this.$store.state.basemaps.concat([]);
+            var temp = temp.sort(function(a, b) {
+                return (a.year - b.year);
+            });
+            //console.log(temp);
+            return temp;
+        },
         selectedBasemapID() {
             return this.$store.state.selectedBasemapID;
         }
     },
     mounted: function () {
-        this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
-        window.addEventListener('resize', this.handleWindowsResize);
         this.newMapID = this.selectedBasemapID;
     },
     beforeDestroy: function() {
-        window.removeEventListener('resize', this.handleWindowsResize);
     },
     watch: {
-        basemaps: function(items, oldItems) {
-            //console.log(items);
-            this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
-        },
         shouldShow: function(value, oldValue) {
             if (value == true) {
                 this.previousBasemapID = this.$store.state.selectedBasemapID;
-                this.$nextTick(function () {
-                    this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
-                    this.$nextTick(function () {
-                        this.$redrawVueMasonry();
-                    });
-                });
             }
         }
     },
     methods: {
-        handleWindowsResize (event) {
-            this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
-        },
         infoURL(item) {
             return "https://commons.wikimedia.org/wiki/" + item.id;
         },
@@ -122,7 +113,11 @@ export default {
         },
         mapClicked: function(event) {
             this.newMapID = event.currentTarget.getAttribute('mapID');
-            console.log();
+            //console.log();
+        },
+        show () {
+            const viewer = this.$el.querySelector('.grid-items').$viewer
+            viewer.show()
         },
         handleCancel: function () {
             //this.$store.commit('setSelectedBasemap', this.previousBasemapID);
@@ -147,7 +142,7 @@ export default {
 
 .modal-mask {
   position: fixed;
-  z-index: 9998;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
@@ -233,30 +228,23 @@ export default {
 
 .grid-items {
     width: 100%;
-    height: 200px;
-    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* height: 200px;
+    box-sizing: border-box; */
 }
 
 .grid-item {
-    margin-bottom: -5px;
-}
-
-.grid-item--width2 { 
-    width: 100px;
-}
-
-.header-item {
-    /*letter-spacing: -1px;  */
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.2);
-    padding: 5px 5px;
-    line-height: 1;
+    flex: 1 1 20%;
+    position: relative;
+    margin-right: 20px;
 }
 
 
 .thumb-image {
     width: 100%;
-    cursor: pointer;
+    cursor: zoom-in;
     border: 6px solid #353535;
 }
 
@@ -267,10 +255,19 @@ export default {
 
 .thumb-image-header {
     position:absolute;
-    display: flex;
     top: 1px;
     left: 1px;
-    width: 100%; 
+    width: 100%;
+    display: flex; 
+}
+
+.thumb-header-item {
+    /*letter-spacing: -1px;  */
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 5px 5px 5px;
+    line-height: 1;
+    flex: 1 1 auto;
 }
 
 .thumb-image-glyph {

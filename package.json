@@ -23,6 +23,7 @@
     "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0",
+    "vueisotope": "^3.1.2",
     "vuelayers": "^0.10.12",
     "vuex": "^3.0.1"
   },
