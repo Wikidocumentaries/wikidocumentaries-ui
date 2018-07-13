@@ -1,4 +1,4 @@
-<template>
+<template> <!-- to use with a data, each item has to have id, imageURL and title. If the item has infoURL, geoLocations, authors, institutions, license they are used. -->
     <div class="masonry-grid">
         <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="grid-items">
             <div v-masonry-tile class="grid-item" v-for="item in items" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">

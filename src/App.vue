@@ -41,6 +41,27 @@ a:hover {
 	outline: 0;
 }
 
+.button-ok, .button-cancel {
+    border: none;
+    cursor: pointer;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-ok {
+    background-color: #79c184;
+    color: black;
+}
+  
+.button-cancel {
+    color: #8e8e8e;
+    background-color: white;
+    border: 1px solid #8e8e8e;
+}
+
 .toolbar {
   display: flex;
 	font-family: 'Barlow Condensed', sans-serif;

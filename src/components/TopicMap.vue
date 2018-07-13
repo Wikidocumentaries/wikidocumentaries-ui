@@ -17,9 +17,9 @@
                     </div>
                 </div>
             </MapOverlay>
+            <WikimapsWarperLayer v-if="selectedBasemapID != ''" :map="map"></WikimapsWarperLayer>
         </div>
-        <BaseMapDialog :show="showBaseMapDialog" @close="showBaseMapDialog = false">
-            <h3 slot="header" class="modal-header">Valitse taustakartta</h3>
+        <BaseMapDialog :shouldShow="showBaseMapDialog" @close="showBaseMapDialog = false">
         </BaseMapDialog>
     </div>
 </template>
@@ -29,6 +29,7 @@
 import ToolbarMenu from '@/components/ToolbarMenu'
 import MapOverlay from '../openlayersplugin/MapOverlay'
 import BaseMapDialog from '@/components/BaseMapDialog'
+import WikimapsWarperLayer from '../openlayersplugin/WikimapsWarperLayer'
 
 const MENU_ACTIONS = {
     CHOOSE_BACKGROUND_MAP: 0,
@@ -53,7 +54,7 @@ export default {
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.CHOOSE_BACKGROUND_MAP,
-                    text: "Valitse taustakartta...",
+                    text: "Valitse historiallinen taustakartta...",
                 },
                 {
                     id: MENU_ACTIONS.HIDE_PHOTOS,
@@ -70,7 +71,8 @@ export default {
     components: {
         ToolbarMenu,
         MapOverlay,
-        BaseMapDialog
+        BaseMapDialog,
+        WikimapsWarperLayer
     },
     mounted: function () {
        this.createMap();
@@ -81,6 +83,9 @@ export default {
         },
         shownImages () {
             return this.$store.state.shownImages;
+        },
+        selectedBasemapID() {
+            return this.$store.state.selectedBasemapID;
         }
     },
     watch: {
@@ -146,7 +151,8 @@ export default {
                     features: [this.topicFeature]
                 });
                 var vectorLayer = new ol.layer.Vector({
-                    source: vectorSource
+                    source: vectorSource,
+                    zIndex: 1000,
                 });
 
                 this.map.addLayer(vectorLayer);
