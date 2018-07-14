@@ -52,7 +52,7 @@ export default {
     methods: {
         valueChanged: function(event) {
             var value = (100 - this.$refs.slider.value) / 100; 
-            console.log(value);
+            //console.log(value);
             this.$store.commit('setSelectedBasemapOpacity', value);
         },
         handleCancel: function () {

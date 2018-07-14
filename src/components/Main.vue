@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Home from '@/components/HomePage'
+import Home from '@/components/topic_page/HomePage'
 import Map from '@/components/map_page/MapPage'
 export default {
   name: 'page',

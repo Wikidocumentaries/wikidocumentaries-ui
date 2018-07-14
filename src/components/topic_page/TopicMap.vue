@@ -33,10 +33,10 @@
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import TransparencySliderMenuItem from '@/components/menu/TransparencySliderMenuItem'
-import MapOverlay from '../openlayersplugin/MapOverlay'
-import BaseMapDialog from '@/components/BaseMapDialog'
-import TransparencyDialog from '@/components/TransparencyDialog'
-import WikimapsWarperLayer from '../openlayersplugin/WikimapsWarperLayer'
+import MapOverlay from '@/openlayersplugin/MapOverlay'
+import BaseMapDialog from '@/components/topic_page/BaseMapDialog'
+import TransparencyDialog from '@/components/topic_page/TransparencyDialog'
+import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 
 const MENU_ACTIONS = {
     CHOOSE_BACKGROUND_MAP: 0,

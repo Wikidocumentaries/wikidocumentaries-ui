@@ -71,7 +71,7 @@ export default {
 
             var url = "http://warper.wmflabs.org/maps/tile/" + warperID + "/{z}/{x}/{y}.png";
 
-            console.log(url);
+            //console.log(url);
 
             var source = new ol.source.XYZ({
                  url: url,

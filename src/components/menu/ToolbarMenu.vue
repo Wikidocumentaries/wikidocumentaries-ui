@@ -37,7 +37,7 @@ export default {
             this.shouldShowMenu = false;
         },
         doMenuItemAction (item) {
-            console.log("doMenuItemAction:", item);
+            //console.log("doMenuItemAction:", item);
             this.hideMenu();
             this.$emit('doMenuItemAction', item);
         }

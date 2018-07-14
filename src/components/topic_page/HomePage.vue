@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import TopicPageHeader from '@/components/TopicPageHeader'
-import WikipediaArticle from '@/components/Wikipedia'
-import WikidataItem from '@/components/Wikidata'
-import TopicImages from '@/components/TopicImages'
-import TopicMap from '@/components/TopicMap'
+import TopicPageHeader from '@/components/topic_page/TopicPageHeader'
+import WikipediaArticle from '@/components/topic_page/Wikipedia'
+import WikidataItem from '@/components/topic_page/Wikidata'
+import TopicImages from '@/components/topic_page/TopicImages'
+import TopicMap from '@/components/topic_page/TopicMap'
 export default {
   name: 'Home',
   props: {
