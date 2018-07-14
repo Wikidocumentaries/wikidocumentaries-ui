@@ -16,6 +16,11 @@
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import MasonryGrid from '@/components/MasonryGrid'
 
+const MENU_ACTIONS = {
+    SHOW_IMAGES_ON_MAP: 1,
+    SHOW_IMAGES_ON_TIMELINE: 2,
+}
+
 export default {
     name: 'TopicImages',
     props: {
@@ -34,12 +39,12 @@ export default {
             },
             toolbarActionMenuItems: [
                 {
-                    id: 0,
+                    id: MENU_ACTIONS.SHOW_IMAGES_ON_MAP,
                     text: "Näytä kaikki kuvat kartalla",
                 },
                 {
-                    id: 1,
-                    text: "Näytä valitut kuvat aikajanalla",
+                    id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
+                    text: "Näytä kaikki kuvat aikajanalla",
                 },
             ],
         }
@@ -51,9 +56,14 @@ export default {
             this.$emit('showImagesOnMap');
         },
         onDoMenuItemAction(menuItem) {
-            if (menuItem.id == 0) {
+            switch (menuItem.id) {
+            case MENU_ACTIONS.SHOW_IMAGES_ON_MAP:
                 this.$store.commit('setImagesShownOnMap', this.wikidocumentaries.images);
                 this.$emit('showImagesOnMap');
+                break;
+            case MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE:
+                this.$store.commit('setImagesShownOnTimeline', this.wikidocumentaries.images);
+                this.$emit('showImagesOnTimeline');
             }
         }
     },

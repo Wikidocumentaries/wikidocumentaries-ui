@@ -6,45 +6,54 @@
       <div class="divider"></div>
       <WikidataItem class="column two"></WikidataItem>
     </div>
-    <TopicImages @showImagesOnMap="onShowImagesOnMap"></TopicImages>
+    <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <TopicMap id="topicMap"></TopicMap>
+    <TopicTimeline id="topicTimeline"></TopicTimeline>
+    <TopicNewspapers id="topicNewspapers"></TopicNewspapers>
   </div>
 </template>
 
 <script>
+
 import TopicPageHeader from '@/components/topic_page/TopicPageHeader'
 import WikipediaArticle from '@/components/topic_page/Wikipedia'
 import WikidataItem from '@/components/topic_page/Wikidata'
 import TopicImages from '@/components/topic_page/TopicImages'
 import TopicMap from '@/components/topic_page/TopicMap'
-export default {
-  name: 'Home',
-  props: {
-  },
-  data () {
-    return {
-    }
-  },
-  components: {
-    TopicPageHeader,
-    WikipediaArticle,
-    WikidataItem,
-    TopicImages,
-    TopicMap
-  },
-  computed: {
-    testaus: function() {
-        //console.log(this.wikidocumentaries);
-        return "testaus";
-    }
-  },
-  methods: {
-    onShowImagesOnMap() {
-      //console.log("HomePage.onShowImagesOnMap", images);
+import TopicTimeline from '@/components/topic_page/TopicTimeline'
+import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
-      this.$scrollTo("#topicMap");
+export default {
+    name: 'Home',
+    props: {
+    },
+    data () {
+        return {
+        }
+    },
+    components: {
+        TopicPageHeader,
+        WikipediaArticle,
+        WikidataItem,
+        TopicImages,
+        TopicMap,
+        TopicTimeline,
+        TopicNewspapers
+    },
+    computed: {
+    },
+    methods: {
+        onShowImagesOnMap() {
+            //console.log("HomePage.onShowImagesOnMap");
+
+            this.$scrollTo("#topicMap");
+        },
+        onShowImagesOnTimeline() {
+            //console.log("HomePage.onShowImagesOnTimeline");
+
+            this.$scrollTo("#topicTimeline");
+        }
     }
-  }
 }
 </script>
 
