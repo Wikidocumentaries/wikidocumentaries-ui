@@ -716,7 +716,8 @@ export default new Vuex.Store({
         historicalMapSearchPageMap: null,
         historicalMaps: [],
         basemaps: basemaps,
-        selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //""
+        selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
+        selectedBasemapOpacity: 0.7,
     },
     mutations: {
         setImagesShownOnMap(state, images) {
@@ -728,8 +729,11 @@ export default new Vuex.Store({
         setHistoricalMaps(state, maps) {
             state.historicalMaps = maps;
         },
-        setSelectedBasemap(state, id) {
+        setSelectedBasemap(state, id) { // Wikimedia Commons name
             state.selectedBasemapID = id;
+        },
+        setSelectedBasemapOpacity(state, opacity) { // 0 - 1
+            state.selectedBasemapOpacity = opacity;
         }
     },
     actions: {

@@ -19,6 +19,9 @@ export default {
         },
         selectedBasemapID() {
             return this.$store.state.selectedBasemapID;
+        },
+        selectedBasemapOpacity() {
+            return this.$store.state.selectedBasemapOpacity;
         }
     },
     watch: {
@@ -30,6 +33,11 @@ export default {
             if (oldMap == null && newMap != null) {
                 this.removeLayer();
                 this.createAndAddLayer();
+            }
+        },
+        selectedBasemapOpacity: function(newOpacity, oldOpacity) {
+            if (this.layer != null) {
+                this.layer.setOpacity(newOpacity);
             }
         }
     },
@@ -74,7 +82,8 @@ export default {
             });
 
             this.layer = new ol.layer.Tile({
-                source: source
+                source: source,
+                opacity: 0.7
             });
 
             this.map.addLayer(this.layer);
