@@ -725,6 +725,7 @@ export default new Vuex.Store({
             state.shownImages = images;
         },
         setImagesShownOnTimeline(state, images) {
+            //console.log("setImagesShownOnTimeline");
             state.timelineImages = images;
         },
         setHistoricalMapSearchPageMap(state, map) {

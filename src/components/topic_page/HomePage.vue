@@ -51,7 +51,7 @@ export default {
         onShowImagesOnTimeline() {
             //console.log("HomePage.onShowImagesOnTimeline");
 
-            this.$scrollTo("#topicTimeline");
+            //this.$scrollTo("#topicTimeline");
         }
     }
 }
