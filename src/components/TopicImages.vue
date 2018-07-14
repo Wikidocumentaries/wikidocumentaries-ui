@@ -2,7 +2,9 @@
     <div class="images">
         <div class="toolbar">
             <div class="header-title">{{ header.title }}</div>
-            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
+            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                <div slot="menu-title">Toiminnot</div>
+            </ToolbarMenu>
         </div>
         
         <MasonryGrid :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
@@ -11,7 +13,7 @@
 </template>
 
 <script>
-import ToolbarMenu from '@/components/ToolbarMenu'
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import MasonryGrid from '@/components/MasonryGrid'
 
 export default {

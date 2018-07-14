@@ -1,8 +1,12 @@
 <template>
     <div class="toolbar-item">
         <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
-        <div id="menuDropdown" :class="[shouldShowMenu ? showClass : hideClass]">
+        <div :class="[shouldShowMenu ? showClass : hideClass]">
+            <div class="menu-title">
+                <slot name="menu-title"></slot>
+            </div>
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{ item.text }}</a>
+            <slot name="custom-menu-item"></slot>
         </div>
     </div>
 </template>
@@ -44,6 +48,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.menu-title {
+    color: black;
+    padding: 6px 12px;
+    font-size: 0.8em;
+}
+
 .toolbar-item {
     padding-right: 5px;
     margin-bottom: -5px;
@@ -59,7 +69,8 @@ export default {
     min-width: 900%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    right: 0
+    right: 0;
+    border: 1px solid black;
 }
 
 .dropdown-content-hide {
@@ -68,7 +79,7 @@ export default {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 6px 12px;
+    padding: 0px 12px 6px 12px;
     text-decoration: none;
     display: block;
     text-transform: none;

@@ -78,10 +78,6 @@ a:hover {
 
 }
 
-.toolbar-item {
-  
-}
-
 .toolbar-item-a {
     color: white;
 }

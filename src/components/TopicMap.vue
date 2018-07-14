@@ -2,7 +2,10 @@
     <div class="map-component">
         <div class="toolbar">
             <div class="header-title">{{ header.title }}</div>
-            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
+            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                <div slot="menu-title">Toiminnot</div>
+                <TransparencySliderMenuItem slot="custom-menu-item"></TransparencySliderMenuItem>
+            </ToolbarMenu>
         </div>
         <div id="map" class="map">
             <div ref="topicMapPopup" class="map-popup-container" :class="{ 'topic-popup-hidden': !shouldShowTopicPopup }">
@@ -28,7 +31,8 @@
 
 <script>
 
-import ToolbarMenu from '@/components/ToolbarMenu'
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import TransparencySliderMenuItem from '@/components/menu/TransparencySliderMenuItem'
 import MapOverlay from '../openlayersplugin/MapOverlay'
 import BaseMapDialog from '@/components/BaseMapDialog'
 import TransparencyDialog from '@/components/TransparencyDialog'
@@ -60,10 +64,10 @@ export default {
                     id: MENU_ACTIONS.CHOOSE_BACKGROUND_MAP,
                     text: "Valitse historiallinen taustakartta...",
                 },
-                {
-                    id: MENU_ACTIONS.SET_BACKGROUND_MAP_TRANSPARENCY,
-                    text: "Aseta taustakartan läpinäkyvyys..."
-                },
+                // {
+                //     id: MENU_ACTIONS.SET_BACKGROUND_MAP_TRANSPARENCY,
+                //     text: "Aseta taustakartan läpinäkyvyys..."
+                // },
                 {
                     id: MENU_ACTIONS.HIDE_PHOTOS,
                     text: "Piilota kuvat",
@@ -79,6 +83,7 @@ export default {
     },
     components: {
         ToolbarMenu,
+        TransparencySliderMenuItem,
         MapOverlay,
         BaseMapDialog,
         TransparencyDialog,

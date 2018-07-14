@@ -12,7 +12,7 @@
 
 <script>
 import turf_distance from '@turf/distance/index'
-import ToolbarMenu from '@/components/ToolbarMenu'
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import MasonryGrid from '@/components/MasonryGrid'
 
 export default {
