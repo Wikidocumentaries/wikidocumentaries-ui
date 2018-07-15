@@ -137,6 +137,7 @@ const wikidocumentaries = {
         location: "POINT(24.943752 60.176013)",
         admin: "Helsinki"
     },
+    //topicStartYear: 1784
 }
 
 var basemaps = [ // historical / old ones; source always warper.wmflabs.org
@@ -719,6 +720,25 @@ export default new Vuex.Store({
         basemaps: basemaps,
         selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
         selectedBasemapOpacity: 0.7,
+    },
+    getters: {
+        topicStartYear: state => {
+            
+            var startYear = (new Date()).getFullYear();
+
+            if (state.wikidocumentaries.topicStartYear != undefined) {
+                startYear = state.wikidocumentaries.topicStartYear;
+            }
+            else if (state.wikidocumentaries.images.length > 0) {
+                for (var i = 0; i < state.wikidocumentaries.images.length; i++) {
+                    startYear = startYear > state.wikidocumentaries.images[i].year ? state.wikidocumentaries.images[i].year : startYear;
+                }
+            }
+
+            //console.log(startYear);
+
+            return startYear;
+        }
     },
     mutations: {
         setImagesShownOnMap(state, images) {

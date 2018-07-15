@@ -14,7 +14,7 @@ export default {
 
 html, body {
   margin: 0px;
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
 }
 
 body {

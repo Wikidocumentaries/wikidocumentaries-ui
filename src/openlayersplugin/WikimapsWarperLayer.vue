@@ -83,7 +83,7 @@ export default {
 
             this.layer = new ol.layer.Tile({
                 source: source,
-                opacity: 0.7
+                opacity: this.selectedBasemapOpacity
             });
 
             this.map.addLayer(this.layer);
