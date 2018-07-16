@@ -18,28 +18,34 @@
 
 <script>
 import Home from '@/components/topic_page/HomePage'
+import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 export default {
-  name: 'page',
-  data () {
-    return {
-        currentTabComponentName: 'Home',
-        tabs: [
-          {
-              name: 'Koti',
-              componentName: 'Home'
-           },
-           { 
-              name: 'Etsi karttoja',
-              componentName: 'MapSearchPage'
-            }
-        ],
+    name: 'page',
+    data () {
+        return {
+            currentTabComponentName: 'Home',
+            tabs: [
+                {
+                    name: 'Koti',
+                    componentName: 'Home'
+                },
+                {
+                    name: 'Yhdistä paikannimitietoja',
+                    componentName: 'MapPlaceMatchPage'
+                },
+                { 
+                    name: 'Etsi karttoja',
+                    componentName: 'MapSearchPage'
+                }
+            ],
+        }
+    },
+    components: {
+        Home,
+        MapPlaceMatchPage,
+        MapSearchPage
     }
-  },
-  components: {
-    Home,
-    MapSearchPage
-  }
 }
 </script>
 
