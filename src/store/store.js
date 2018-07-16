@@ -137,7 +137,7 @@ const wikidocumentaries = {
         location: "POINT(24.943752 60.176013)",
         admin: "Helsinki"
     },
-    //topicStartYear: 1784
+    topicStartYear: 1784
 }
 
 var basemaps = [ // historical / old ones; source always warper.wmflabs.org

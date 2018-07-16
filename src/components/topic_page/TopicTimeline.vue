@@ -282,6 +282,7 @@ function getTextWidth(text, font) {
     /* height: 100%; */
     padding: 9px 10px 9px 10px;
     background: black;
+    color: #8e8e8e;
     z-index: 5;
 }
 

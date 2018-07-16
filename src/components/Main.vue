@@ -18,7 +18,7 @@
 
 <script>
 import Home from '@/components/topic_page/HomePage'
-import Map from '@/components/map_page/MapPage'
+import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 export default {
   name: 'page',
   data () {
@@ -31,14 +31,14 @@ export default {
            },
            { 
               name: 'Etsi karttoja',
-              componentName: 'Map'
+              componentName: 'MapSearchPage'
             }
         ],
     }
   },
   components: {
     Home,
-    Map
+    MapSearchPage
   }
 }
 </script>

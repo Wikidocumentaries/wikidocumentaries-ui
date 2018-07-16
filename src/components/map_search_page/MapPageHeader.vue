@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <div id="map" class="map">
+        <div id="mapSearch" class="map">
         <!--<vl-map class="map" :load-tiles-while-animating="true" :load-tiles-while-interacting="true"
              data-projection="EPSG:4326" style="height: 400px">
             <vl-view :zoom.sync="map.zoom" :center="topicPointCoordinates" :rotation.sync="map.rotation"></vl-view>
@@ -45,7 +45,7 @@ export default {
             var ol = this.$ol;
 
             var map = new ol.Map({
-                target: 'map',
+                target: 'mapSearch',
                 layers: [
                     new ol.layer.Tile({
                         source: new this.$ol.source.OSM()

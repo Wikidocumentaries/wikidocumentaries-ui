@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import MapPageHeader from '@/components/map_page/MapPageHeader'
-import HistoricalMapsSearch from '@/components/map_page/HistoricalMapsSearch'
+import MapPageHeader from '@/components/map_search_page/MapPageHeader'
+import HistoricalMapsSearch from '@/components/map_search_page/HistoricalMapsSearch'
 
 export default {
-  name: 'Map',
+  name: 'MapSearchPage',
   props: {
   },
   computed: {
