@@ -13,6 +13,7 @@ import olmap from '../openlayersplugin/olplugin.js'
 import 'ol/ol.css'
 
 import page from '@/components/Main'
+import LandingPage from '@/components/landing_page/LandingPage'
 import devpage from '@/components/landing_page/Developer'
 
 Vue.use(Router)
@@ -29,14 +30,19 @@ Vue.use(olmap)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'TopicPage',
-      component: page
-    },
-    {
       path: '/dev',
       name: 'DevPage',
       component: devpage
+    },
+    {
+      path: '/',
+      name: 'LandingPage',
+      component: LandingPage
+    },
+    {
+      path: '/:topic',
+      name: 'TopicPage',
+      component: page
     },
   ]
 })

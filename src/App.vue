@@ -107,10 +107,21 @@ a:hover {
   text-align: right;
 }
 
+.turquoisebar {
+  height: 10px;
+  background-color: #0096a5;
+}
+
+.redbar {
+  height: 10px;
+  background-color: #cf412d;
+}
+
 .greenbar {
   height: 10px;
   background-color: #79c184;
 }
+
 
 .neg {
     background-color: #FFF;

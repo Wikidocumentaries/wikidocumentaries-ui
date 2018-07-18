@@ -22,6 +22,7 @@ import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPa
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 export default {
     name: 'page',
+    props: ['topic'],
     data () {
         return {
             currentTabComponentName: 'Home',
@@ -45,6 +46,10 @@ export default {
         Home,
         MapPlaceMatchPage,
         MapSearchPage
+    },
+    beforeRouteEnter (to, from, next) {
+        console.log(to);
+        next();
     }
 }
 </script>
