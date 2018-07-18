@@ -13,6 +13,7 @@ import olmap from '../openlayersplugin/olplugin.js'
 import 'ol/ol.css'
 
 import page from '@/components/Main'
+import devpage from '@/components/landing_page/Developer'
 
 Vue.use(Router)
 Vue.use(VueMasonryPlugin)
@@ -29,8 +30,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Page',
+      name: 'TopicPage',
       component: page
-    }
+    },
+    {
+      path: '/dev',
+      name: 'DevPage',
+      component: devpage
+    },
   ]
 })
