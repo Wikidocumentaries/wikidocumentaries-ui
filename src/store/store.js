@@ -8,6 +8,8 @@ import jsonp from 'jsonp'
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 
+const BASE_URL = "http://localhost:3000/"
+
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
     headerImageURL: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png',
@@ -759,9 +761,83 @@ export default new Vuex.Store({
         },
         setSelectedBasemapOpacity(state, opacity) { // 0 - 1
             state.selectedBasemapOpacity = opacity;
+        },
+        resetState(state) {
+            state.wikidocumentaries = {
+                title: null,
+                headerImageURL: null,
+                wikipedia: {
+                    html: "",
+                    wikipediaURL: null,
+                },
+                wikidata: {
+                    id: null,
+                    instance_of: {
+                        value: null,
+                        url: null
+                    },
+                    statements: []
+                },
+                images: [],
+                geo: {
+                    location: null,
+                    admin: null
+                },
+                topicStartYear: null
+            };
+            state.shownImages = [];
+            state.timelineImages = [];
+            state.historicalMapSearchPageMap = null;
+            state.historicalMaps = [];
+            state.basemaps = basemaps;
+            state.selectedBasemapID = "File:Kaisaniemen_puisto_1918.tif"; //"";
+            state.selectedBasemapOpacity = 0.7;
+        },
+        setWikidocumentariesTopicTitle(state, title) {
+            state.wikidocumentaries.title = title;
         }
     },
     actions: {
+        updateWikidocumentaries({dispatch, commit}, params) {
+            console.log('actions.updateWikidocumentaries');
+            commit('resetState');
+            commit('setWikidocumentariesTopicTitle', params.topic);
+            var promiseWiki = dispatch('getWikiDocumentariesData', params);
+            var promiseImages = dispatch('getTopicImages', params)
+            Promise.all([promiseWiki, promiseImages]).then(() => dispatch('setTopicStartYear', params));
+        },
+        async getWikiDocumentariesData({dispatch, commit}, params) {
+            console.log('getWikiDocumentariesData');
+            return new Promise((resolve, reject) => {
+
+                var requestConfig = {
+                    baseURL: BASE_URL,
+                    url: "/wiki",
+                    method: "get",
+                    params: {
+                        topic: params.topic,
+                        lang: "fi"
+                    }
+                };
+
+                axios.request(requestConfig).
+                    then(function (response) {
+                        console.log(response.data);
+                        resolve(response.data);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+
+                        reject(error);
+                    });
+            });
+        },
+        async getTopicImages({dispatch, commit}, params) {
+            console.log('getTopicImages');
+        },
+        async setTopicStartYear({dispatch, commit}, params) {
+            console.log('setTopicStartYear');
+        },
         async getHistoricalMaps({dispatch, commit}, locationParams) {
             //commit('setHistoricalMaps', maps);
             commit('setHistoricalMaps',

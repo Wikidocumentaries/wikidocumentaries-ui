@@ -2,24 +2,27 @@
   <div class="page">
     <div class="main-toolbar">
       <button
-          v-for="tab in tabs"
-          v-bind:key="tab.componentName"
-          v-bind:class="['tab-button', { active:
-          currentTabComponentName === tab.componentName }]"
-          v-on:click="currentTabComponentName = tab.componentName"
-          >{{ tab.name }}</button>
+            v-for="tab in tabs"
+            v-bind:key="tab.componentName"
+            v-bind:class="['tab-button', { active:
+            currentTabComponentName === tab.componentName }]"
+            v-on:click="currentTabComponentName = tab.componentName"
+            >{{ tab.name }}</button>
     </div>
     <component
-      v-bind:is="currentTabComponentName"
-      class="tab">
+        v-bind:is="currentTabComponentName"
+        class="tab">
     </component>
   </div>
 </template>
 
 <script>
+import store from '@/store/store'
+
 import Home from '@/components/topic_page/HomePage'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
+
 export default {
     name: 'page',
     props: ['topic'],
@@ -49,7 +52,13 @@ export default {
     },
     beforeRouteEnter (to, from, next) {
         console.log(to);
-        next();
+        // TODO
+
+        var params = {
+          topic: to.params.topic
+        }
+
+        store.dispatch('updateWikidocumentaries', params).then(res => next());
     }
 }
 </script>

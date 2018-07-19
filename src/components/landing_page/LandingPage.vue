@@ -107,7 +107,7 @@ export default {
             }
         },
         findTopics: function () {
-            console.log("findTopics");
+            //console.log("findTopics");
             if (this.topicInputValue.length >= 3) {
                 this.searchFromWikipedia(this.topicInputValue);
             }
@@ -117,13 +117,13 @@ export default {
             //this.$router.push('/Vapaamuurarin_hauta');
         },
         showTopic: function (topic) {
-            console.log("showTopic");
+            //console.log("showTopic");
             this.$router.push({
                 path: `/${topic.wikipage}`
             });
         },
         searchFromWikipedia: function(topicInputValue) {
-            console.log("searchFromWikipedia");
+            //console.log("searchFromWikipedia");
 
             var url = "https://fi.wikipedia.org/w/api.php?action=opensearch&search=" +
                 topicInputValue +
@@ -139,7 +139,7 @@ export default {
                         console.log(error);
                         reject(error);
                     } else {
-                        console.log(data);
+                        //console.log(data);
 
                         if (data.length > 0) {
                             
@@ -165,34 +165,34 @@ export default {
                                 }
 
                                 _this.topics = topics;
-                                wikidataQueryURL = wikidataQueryURL.slice(0, -1);
+                                // wikidataQueryURL = wikidataQueryURL.slice(0, -1);
 
-                                wikidataQueryURL +=
-                                    "&format=json" +
-                                    "&callback=callback2";
+                                // wikidataQueryURL +=
+                                //     "&format=json" +
+                                //     "&callback=callback2";
 
-                                jsonp(wikidataQueryURL, null, (error, data) => {
-                                    if (error) {
-                                        console.log(error);
-                                        reject(error);
-                                    } else {
-                                        //console.log(data);
-                                        if (data.query != undefined) {
-                                            var pages = Object.values(data.query.pages);
-                                            console.log(pages);
-                                            for (var i = 0; i < pages.length; i++) {
-                                                for (var j = 0; j < topics.length; j++) {
-                                                    if (topics[j].wikipage == pages[i].title && pages[i].pageprops != undefined) {
-                                                        topics[j].wikidata = pages[i].pageprops.wikibase_item;
-                                                        topics[j].wikidatalink = "https://www.wikidata.org/wiki/" + 
-                                                    pages[i].pageprops.wikibase_item;
-                                                    break;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                });
+                                // jsonp(wikidataQueryURL, null, (error, data) => {
+                                //     if (error) {
+                                //         console.log(error);
+                                //         reject(error);
+                                //     } else {
+                                //         //console.log(data);
+                                //         if (data.query != undefined) {
+                                //             var pages = Object.values(data.query.pages);
+                                //             //console.log(pages);
+                                //             for (var i = 0; i < pages.length; i++) {
+                                //                 for (var j = 0; j < topics.length; j++) {
+                                //                     if (topics[j].wikipage == pages[i].title && pages[i].pageprops != undefined) {
+                                //                         topics[j].wikidata = pages[i].pageprops.wikibase_item;
+                                //                         topics[j].wikidatalink = "https://www.wikidata.org/wiki/" + 
+                                //                     pages[i].pageprops.wikibase_item;
+                                //                     break;
+                                //                     }
+                                //                 }
+                                //             }
+                                //         }
+                                //     }
+                                // });
                             }
                         }
                         else {
