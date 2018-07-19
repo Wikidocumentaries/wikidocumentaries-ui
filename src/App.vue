@@ -107,6 +107,37 @@ a:hover {
   text-align: right;
 }
 
+
+.yellow {
+    background: #ffd76e;
+    flex: 1 1 16.67%;
+}
+
+.orange {
+    background: #ea8e43;
+    flex: 1 1 16.67%;
+}
+
+.red {
+    background: #cf412d;
+    flex: 1 1 16.67%;
+}
+
+.purple {
+    background: #a74e77;
+    flex: 1 1 16.67%;
+}
+
+.turquoise {
+    background: #0096a5;
+    flex: 1 1 16.67%;
+}
+
+.green {
+    background: #69a656;
+    flex: 1 1 16.67%;
+}
+
 .turquoisebar {
   height: 10px;
   background-color: #0096a5;
