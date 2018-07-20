@@ -118,8 +118,12 @@ export default {
         },
         showTopic: function (topic) {
             //console.log("showTopic");
+            var page = topic.wikipage.split(' ').join('_');
             this.$router.push({
-                path: `/${topic.wikipage}`
+                path: `/wiki/${page}`,
+                query: {
+                    language: 'fi'
+                }
             });
         },
         searchFromWikipedia: function(topicInputValue) {

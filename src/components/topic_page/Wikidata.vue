@@ -4,13 +4,20 @@
       <div class="header-title toolbar neg">
         {{ header.title }}
       </div>
-      <HeaderLink class="header-link" :link="wikidataURL"></HeaderLink>
+      <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
     </div>
     <div class="item-instance-title">{{ title }}</div>
-    <ul class="statements">
+    <ul class="statements" v-if="wikidocumentaries.wikidata != undefined">
         <li class="statement" v-for="statement in wikidocumentaries.wikidata.statements" v-bind:key="statement.id">
             <div class="statement-label">{{ statement.label }}</div>
-            <div class="statement-value"><a v-bind:href="statement.url" target="_blank">{{ statement.value }}</a></div>
+            <div class="statement-value">
+                <div v-if="statement.url != null">
+                    <a v-bind:href="statement.url" target="_blank">{{ statement.value }}</a>
+                </div>
+                <div v-else>
+                    {{ statement.value }}
+                </div>
+            </div>
         </li>
     </ul>
   </div>
@@ -25,7 +32,7 @@ export default {
   data () {
     return {
       header: {
-        title: 'Tiedot Wikidatassa'
+        title: 'Tietoja Wikidatassa'
       }
     }
   },
@@ -38,10 +45,20 @@ export default {
     },
     wikidataURL: function() {
         //console.log(this.wikidocumentaries);
-        return "https://www.wikidata.org/wiki/" + this.wikidocumentaries.wikidata.id;
+        if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+            return "https://www.wikidata.org/wiki/" + this.wikidocumentaries.wikidata.id;
+        }
+        else {
+            return null;
+        }
     },
     title: function () {
-        return this.wikidocumentaries.wikidata.instance_of.value;
+        if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.instance_of != undefined) {
+            return this.wikidocumentaries.wikidata.instance_of.value;
+        }
+        else {
+            return "Aihetta ei löytynyt";
+        }
     },
   }
 }

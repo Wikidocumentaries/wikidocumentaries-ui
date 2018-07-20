@@ -714,6 +714,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
 
 export default new Vuex.Store({
     state: {
+        updatingWikiDocumentariesData: false,
         wikidocumentaries: wikidocumentaries,
         shownImages: [],
         timelineImages: [],
@@ -763,6 +764,9 @@ export default new Vuex.Store({
             state.selectedBasemapOpacity = opacity;
         },
         resetState(state) {
+
+            state.updatingWikiDocumentariesData = true;
+
             state.wikidocumentaries = {
                 title: null,
                 headerImageURL: null,
@@ -795,16 +799,42 @@ export default new Vuex.Store({
         },
         setWikidocumentariesTopicTitle(state, title) {
             state.wikidocumentaries.title = title;
+        },
+        setWikidata(state, wikidata) {
+            state.wikidocumentaries.wikidata = wikidata;
+        },
+        setHeaderImageURL(state, URL) {
+            state.wikidocumentaries.headerImageURL = URL;
+        },
+        setWikipediaHTML(state, html) {
+            state.wikidocumentaries.wikipedia.html = html;
+        },
+        setWikipediaURL(state, URL) {
+            state.wikidocumentaries.wikipedia.wikipediaURL = URL;
+        },
+        setTopicGeoLocation(state, coordinates) {
+            state.wikidocumentaries.geo.location = "POINT(" + coordinates.lon + " " + coordinates.lat + ")"
+        },
+        setUpdatingWikiDocumentariesData(state, value) {
+            state.updatingWikiDocumentariesData = value;
         }
     },
     actions: {
         updateWikidocumentaries({dispatch, commit}, params) {
             console.log('actions.updateWikidocumentaries');
             commit('resetState');
-            commit('setWikidocumentariesTopicTitle', params.topic);
+            commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
             var promiseImages = dispatch('getTopicImages', params)
-            Promise.all([promiseWiki, promiseImages]).then(() => dispatch('setTopicStartYear', params));
+            Promise.all([promiseWiki, promiseImages]).then(() => {
+
+                // TODO handle images
+                // commit('setHeaderImageURL', response.data.wikipedia.originalimage.source);
+
+                dispatch('setTopicStartYear', params).then(() => {
+                    commit('setUpdatingWikiDocumentariesData', false);
+                })
+            });
         },
         async getWikiDocumentariesData({dispatch, commit}, params) {
             console.log('getWikiDocumentariesData');
@@ -816,13 +846,33 @@ export default new Vuex.Store({
                     method: "get",
                     params: {
                         topic: params.topic,
-                        lang: "fi"
+                        language: params.language
                     }
                 };
 
                 axios.request(requestConfig).
                     then(function (response) {
                         console.log(response.data);
+
+                        commit('setWikidata', response.data.wikidata);
+                        
+                        commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
+                        commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
+
+                        if (response.data.wikipedia.coordinates != undefined) {
+                            commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
+                        }
+                        else if (response.data.wikidata != undefined && response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
+                            commit('setTopicGeoLocation', response.data.wikidata.geo);
+                        }
+                        else {
+                            // TODO
+                            commit('setTopicGeoLocation', {
+                                lat: 0,
+                                lon: 0
+                            });
+                        }
+
                         resolve(response.data);
                     })
                     .catch(function (error) {

@@ -12,7 +12,7 @@ import VueAxios from 'vue-axios'
 import olmap from '../openlayersplugin/olplugin.js'
 import 'ol/ol.css'
 
-import page from '@/components/Main'
+import MainPage from '@/components/Main'
 import LandingPage from '@/components/landing_page/LandingPage'
 import devpage from '@/components/landing_page/Developer'
 
@@ -28,6 +28,7 @@ Vue.use(VueAxios, axios)
 Vue.use(olmap)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/dev',
@@ -40,9 +41,9 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/:topic',
+      path: '/wiki/:topic',
       name: 'TopicPage',
-      component: page
+      component: MainPage
     },
   ]
 })

@@ -7,7 +7,7 @@
       <HeaderLink class="header-link" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
     <div class="text">
-      <span v-html="wikidocumentaries.wikipedia.html"></span>
+      <span v-html="wikidocumentaries.wikipedia.html" @click="handleHTMLClick"></span>
     </div>
   </div>
 </template>
@@ -26,13 +26,36 @@ export default {
   data () {
     return {
       header: {
-        title: 'Artikkeli Wikipediassa'
+        title: 'Artikkelin ote Wikipediasta'
       }
     }
   },
   components: {
     HeaderLink
   },
+  methods: {
+    handleHTMLClick(event) {
+        console.log("handleHTMLClick");
+        //window.location.reload(true);
+        console.log(window.location);
+
+        var startIndex = 7
+        var endIndex = window.location.hash.indexOf('?');
+        var language = window.location.hash.substr(-2, 2);
+        
+        var topic = window.location.hash.substring(7, endIndex);
+        //console.log(topic);
+
+        this.$router.go();
+        // this.$router.go(window.location.pathname);
+        // this.$router.push({
+        //     path: `/wiki/${topic}`,
+        //     query: {
+        //         language: 'fi'
+        //     }
+        // });
+    }
+  }
 }
 </script>
 

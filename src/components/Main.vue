@@ -1,38 +1,43 @@
 <template>
   <div class="page">
-    <div class="main-toolbar">
-      <button
-            v-for="tab in tabs"
-            v-bind:key="tab.componentName"
-            v-bind:class="['tab-button', { active:
-            currentTabComponentName === tab.componentName }]"
-            v-on:click="currentTabComponentName = tab.componentName"
-            >{{ tab.name }}</button>
+    <div v-if="updatingWikiDocumentariesData == false" class="main-content">
+      <div class="main-toolbar">
+        <button
+              v-for="tab in tabs"
+              v-bind:key="tab.componentName"
+              v-bind:class="['tab-button', { active:
+              currentTabComponentName === tab.componentName }]"
+              v-on:click="currentTabComponentName = tab.componentName"
+              >{{ tab.name }}</button>
+      </div>
+      <component
+          v-bind:is="currentTabComponentName"
+          class="tab">
+      </component>
     </div>
-    <component
-        v-bind:is="currentTabComponentName"
-        class="tab">
-    </component>
+    <div v-else class="user-notify">
+      Hetki...
+    </div>
   </div>
 </template>
 
 <script>
 import store from '@/store/store'
 
-import Home from '@/components/topic_page/HomePage'
+import TopicPage from '@/components/topic_page/HomePage'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 
 export default {
-    name: 'page',
+    name: 'MainPage',
     props: ['topic'],
     data () {
         return {
-            currentTabComponentName: 'Home',
+            currentTabComponentName: 'TopicPage',
             tabs: [
                 {
                     name: 'Koti',
-                    componentName: 'Home'
+                    componentName: 'TopicPage'
                 },
                 {
                     name: 'Yhdistä paikannimitietoja',
@@ -45,8 +50,13 @@ export default {
             ],
         }
     },
+    computed: {
+        updatingWikiDocumentariesData () {
+            return this.$store.state.updatingWikiDocumentariesData;
+        },
+    },
     components: {
-        Home,
+        TopicPage,
         MapPlaceMatchPage,
         MapSearchPage
     },
@@ -55,7 +65,8 @@ export default {
         // TODO
 
         var params = {
-          topic: to.params.topic
+          topic: to.params.topic,
+          language: to.query.language
         }
 
         store.dispatch('updateWikidocumentaries', params).then(res => next());

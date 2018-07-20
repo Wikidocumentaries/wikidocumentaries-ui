@@ -24,7 +24,7 @@ import TopicTimeline from '@/components/topic_page/TopicTimeline'
 import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
-    name: 'Home',
+    name: 'TopicPage',
     props: {
     },
     data () {
