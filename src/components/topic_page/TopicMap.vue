@@ -16,7 +16,7 @@
             <MapOverlay v-for="(image, index) in shownImages" v-if="image.geoLocations.length > 0" v-bind:key="image.infoURL" :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan=" ( shownImages.length > 1 ) ? false  : true " :autoPanMargin="200" :overlayGroupItemCount="shownImages.length">
                 <div class="map-popup-container">
                     <div class="map-popup">
-                        <img :src="image.imageURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
+                        <img :src="image.thumbURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
                     </div>
                 </div>
             </MapOverlay>

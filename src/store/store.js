@@ -723,6 +723,9 @@ export default new Vuex.Store({
         basemaps: basemaps,
         selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
         selectedBasemapOpacity: 0.7,
+        photoOfTheDay: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg",
+        mapOfTheDay: "File:1900_Plan_af_Helsingfors_stad.tif",
+        mapOfTheDayCoordinates: [24.9351, 60.1658],
     },
     getters: {
         topicStartYear: state => {
@@ -794,7 +797,7 @@ export default new Vuex.Store({
             state.historicalMapSearchPageMap = null;
             state.historicalMaps = [];
             state.basemaps = basemaps;
-            state.selectedBasemapID = "File:Kaisaniemen_puisto_1918.tif"; //"";
+            state.selectedBasemapID = state.mapOfTheDay,//"File:Kaisaniemen_puisto_1918.tif"; //"";
             state.selectedBasemapOpacity = 0.7;
         },
         setWikidocumentariesTopicTitle(state, title) {
@@ -817,6 +820,9 @@ export default new Vuex.Store({
         },
         setUpdatingWikiDocumentariesData(state, value) {
             state.updatingWikiDocumentariesData = value;
+        },
+        setWikidocumentariesImages(state, images) {
+            state.wikidocumentaries.images = images;
         }
     },
     actions: {
@@ -825,15 +831,25 @@ export default new Vuex.Store({
             commit('resetState');
             commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
-            var promiseImages = dispatch('getTopicImages', params)
-            Promise.all([promiseWiki, promiseImages]).then(() => {
+            //var promiseImages = dispatch('getTopicImages', params)
+            promiseWiki.then((data) => {
+
+                params.wiki = data;
 
                 // TODO handle images
-                // commit('setHeaderImageURL', response.data.wikipedia.originalimage.source);
+                if ( data.wikipedia.originalimage != undefined) {
+                    commit('setHeaderImageURL', data.wikipedia.originalimage.source);
+                }
 
-                dispatch('setTopicStartYear', params).then(() => {
-                    commit('setUpdatingWikiDocumentariesData', false);
-                })
+                dispatch('getTopicImages', params).then((result) => {
+                    console.log(result);
+                    // TODO handle images
+                    // commit('setHeaderImageURL', response.data.wikipedia.originalimage.source);
+
+                    dispatch('setTopicStartYear', params).then(() => {
+                        commit('setUpdatingWikiDocumentariesData', false);
+                    });
+                });
             });
         },
         async getWikiDocumentariesData({dispatch, commit}, params) {
@@ -883,7 +899,44 @@ export default new Vuex.Store({
             });
         },
         async getTopicImages({dispatch, commit}, params) {
-            console.log('getTopicImages');
+
+            console.log('getTopicImages', params);
+            
+            return new Promise((resolve, reject) => {
+
+                var requestConfig = {
+                    baseURL: BASE_URL,
+                    url: "/images",
+                    method: "get",
+                    params: {
+                        topic: params.topic,
+                        language: params.language
+                    }
+                };
+
+                if (params.wiki.wikipedia.coordinates != undefined) {
+                    requestConfig.params.lat = params.wiki.wikipedia.coordinates.lat;
+                    requestConfig.params.lon = params.wiki.wikipedia.coordinates.lon;
+                }
+                else if (params.wiki.wikidata != undefined && params.wiki.wikidata.geo.lat != null && params.wiki.wikidata.geo.lon != null) {
+                    requestConfig.params.lat = params.wiki.wikidata.geo.lat;
+                    requestConfig.params.lon = params.wiki.wikidata.geo.lon;
+                }
+
+                axios.request(requestConfig).
+                    then(function (response) {
+                        console.log(response.data);
+
+                        commit('setWikidocumentariesImages', response.data);
+
+                        resolve(response.data);
+
+                    }).catch(function (error) {
+                        console.log(error);
+
+                        reject(error);
+                    });
+            });
         },
         async setTopicStartYear({dispatch, commit}, params) {
             console.log('setTopicStartYear');
@@ -1059,9 +1112,11 @@ export default new Vuex.Store({
                                     var authors = "";
                                     if (record.authors != undefined) {
                                         for (var author in record.authors) {
-                                            if (record.hasOwnProperty(author)) {
-                                                for (var key in author) {
-                                                    if (author.hasOwnProperty(key)) {
+                                            if (record.authors.hasOwnProperty(author)) {
+                                                //console.log(author);
+                                                for (var key in record.authors[author]) {
+                                                    //console.log(key);
+                                                    if (record.authors[author].hasOwnProperty(key)) {
                                                         authors += key + ", ";
                                                     }
                                                 }
@@ -1090,11 +1145,11 @@ export default new Vuex.Store({
                                         authors: authors,
                                         institutions: institutions,
                                         events: record.events,
-                                        imageRights: record.imageRights,
+                                        imageRights: (record.imageRights != undefined ? record.imageRights.copyright : undefined),
                                         license: record.imageRights.copyright,
                                         summary: record.summary,
                                         source: "finna",
-                                        infoURL: "https://www.finna.fi/Record/" + record.id
+                                        infoURL: "https://www.finna.fi/Record/" + encodeURIComponent(record.id)
                                     }
 
                                     maps.push(map);
@@ -1153,7 +1208,7 @@ export default new Vuex.Store({
 
                     });
             });
-        }
+        },
     }
 });
 
@@ -1177,7 +1232,6 @@ function createGetCommonsMapInfoTask(fileName) {
         });
     });
 }
-
 
 /*
         async getPhotosFromCommons(context, params) {
@@ -1210,3 +1264,4 @@ function createGetCommonsMapInfoTask(fileName) {
             });
         },
         */
+       

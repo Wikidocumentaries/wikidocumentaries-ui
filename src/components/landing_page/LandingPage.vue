@@ -9,7 +9,7 @@
             <div class="green"></div>
         </div>
         <div class="header">
-            <img v-bind:src="PhotoOfTheDay" class="header-image"/>
+            <img v-bind:src="photoOfTheDay" class="header-image"/>
             <div class="header-contents">
                 <div class="title">
                     <h1><span>Wikidocumentaries</span></h1>
@@ -41,18 +41,10 @@ import debounce from 'debounce'
 
 
 export default {
-  name: 'LandingPage',
-  props: {
-  },
-  computed: {
-        wikidocumentaries () {
-            return this.$store.state.wikidocumentaries;
-        },
-        selectedBasemapID() {
-            return this.$store.state.selectedBasemapID;
-        }
-  },
-  data: function () {
+    name: 'LandingPage',
+    props: {
+    },
+    data: function () {
         return {
             topicInputValue: "",
             shouldShowMenu: false,
@@ -61,24 +53,38 @@ export default {
             //topicInputValue: "Vapaamu",
             topics: [],
             maxSummaryLengthInChars: 50,
-            PhotoOfTheDay: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg",
             map: null,
-            mapOfTheDay: "File:1900_Plan_af_Helsingfors_stad.tif",
-            mapOfTheDayCoordinates: [24.9351, 60.1658]
         }
-  },
-  components: {
-      WikimapsWarperLayer
-  },
-  created: function () {
-      this.debounceFindTopics = debounce(this.findTopics, 500);
-  },
-  mounted: function () {
-      this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
+    },
+    computed: {
+        wikidocumentaries () {
+            return this.$store.state.wikidocumentaries;
+        },
+        selectedBasemapID() {
+            return this.$store.state.selectedBasemapID;
+        },
+        photoOfTheDay () {
+            return this.$store.state.photoOfTheDay;
+        },
+        mapOfTheDay () {
+            return this.$store.state.mapOfTheDay;
+        },
+        mapOfTheDayCoordinates () {
+            return this.$store.state.mapOfTheDayCoordinates;
+        }
+    },
+    components: {
+        WikimapsWarperLayer
+    },
+    created: function () {
+        this.debounceFindTopics = debounce(this.findTopics, 500);
+    },
+    mounted: function () {
+        this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
 
-      this.createMap();
-  },
-  methods: {
+        this.createMap();
+    },
+    methods: {
         showMenu() {
             this.shouldShowMenu = true;
         },

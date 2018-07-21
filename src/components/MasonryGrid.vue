@@ -2,7 +2,7 @@
     <div class="masonry-grid">
         <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="grid-items">
             <div v-masonry-tile class="grid-item" v-for="item in items" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">
-                <img v-bind:src="item.imageURL" class="thumb-image" v-bind:alt="item.title"/>
+                <img v-bind:src="item.thumbURL" class="thumb-image" v-bind:alt="item.title"/>
                 <div class="thumb-image-header">
                     <div v-if="item.infoURL != undefined" class="header-item">
                         <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
@@ -31,8 +31,8 @@ export default {
     data () {
         return {
             itemWidth: 200,
-            maxItemsPerRow: 4,
-            maxTitleLengthInChars: 53,
+            maxItemsPerRow: 3,
+            maxTitleLengthInChars: 43,
             maxAuthorsLengthInChars: 20,
             maxInstitutionsLengthInChars: 30,
             maxLicenseLengthInChars: 20,
@@ -75,10 +75,16 @@ export default {
             }
             var newLicense = (item.license != "" ? (item.license + ', ') : '');
             if (newLicense.length > this.maxLicenseLengthInChars) {
-                newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "..."  + ', ';
+                newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "...";
             }
 
-            return newAuthors + newInstitutions + item.license;
+            var credits = newAuthors + newInstitutions + newLicense;
+
+            if (credits.length > 0 && credits.slice(-2) == ", ") {
+                credits = credits.substr(0, credits.length - 2);
+            }
+
+            return credits;
         },
         show () {
             const viewer = this.$el.querySelector('.grid-items').$viewer
@@ -102,7 +108,7 @@ export default {
     /*letter-spacing: -1px;  */
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.3);
-    padding: 5px 5px;
+    padding: 2px 2px;
     line-height: 1;
 }
 
@@ -138,7 +144,7 @@ export default {
     background: rgb(0, 0, 0); /* fallback color */
     background: rgba(0, 0, 0, 0.3);
     color: white;
-    padding: 10px;
+    padding: 2px 10px 2px 10px;
 }
 
 
