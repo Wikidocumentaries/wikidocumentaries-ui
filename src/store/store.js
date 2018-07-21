@@ -917,10 +917,12 @@ export default new Vuex.Store({
                 if (params.wiki.wikipedia.coordinates != undefined) {
                     requestConfig.params.lat = params.wiki.wikipedia.coordinates.lat;
                     requestConfig.params.lon = params.wiki.wikipedia.coordinates.lon;
+                    requestConfig.params.maxradius = 2000; // meters
                 }
                 else if (params.wiki.wikidata != undefined && params.wiki.wikidata.geo.lat != null && params.wiki.wikidata.geo.lon != null) {
                     requestConfig.params.lat = params.wiki.wikidata.geo.lat;
                     requestConfig.params.lon = params.wiki.wikidata.geo.lon;
+                    requestConfig.params.maxradius = 2000;
                 }
 
                 axios.request(requestConfig).
