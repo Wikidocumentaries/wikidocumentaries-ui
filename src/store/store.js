@@ -9,7 +9,10 @@ import turf_distance from '@turf/distance/index'
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 
+import WIKI from './constants'
+
 const BASE_URL = "http://localhost:3000/"
+
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
@@ -713,9 +716,11 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
     // },
 ];
 
+
+
 export default new Vuex.Store({
     state: {
-        updatingWikiDocumentariesData: false,
+        wikidocumentariesDataState: WIKI.STATES.UNINITIALIZED,
         wikidocumentaries: wikidocumentaries,
         shownImages: [],
         timelineImages: [],
@@ -769,7 +774,7 @@ export default new Vuex.Store({
         },
         resetState(state) {
 
-            state.updatingWikiDocumentariesData = true;
+            state.wikidocumentariesDataState = WIKI.STATES.UNINITIALIZED;
 
             state.wikidocumentaries = {
                 title: null,
@@ -820,8 +825,8 @@ export default new Vuex.Store({
             console.log("setTopicGeoLocation", coordinates);
             state.wikidocumentaries.geo.location = "POINT(" + coordinates.lon + " " + coordinates.lat + ")"
         },
-        setUpdatingWikiDocumentariesData(state, value) {
-            state.updatingWikiDocumentariesData = value;
+        setWikidocumentariesDataState(state, value) {
+            state.wikidocumentariesDataState = value;
         },
         setWikidocumentariesImages(state, images) {
             state.wikidocumentaries.images = images;
@@ -831,42 +836,52 @@ export default new Vuex.Store({
         updateWikidocumentaries({dispatch, commit}, params) {
             //console.log('actions.updateWikidocumentaries');
             commit('resetState');
+            commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_WIKI_EXTERNAL);
             commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
             //var promiseImages = dispatch('getTopicImages', params)
             promiseWiki.then((data) => {
 
-                params.wiki = data;
-                commit('setUpdatingWikiDocumentariesData', false);
+                console.log(data);
 
-                dispatch('getTopicImages', params).then((result) => {
-                    //console.log(result);
-                    //console.log(data.wikipedia.originalimage);
+                if (data.wikipedia  == null) {
+                    commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
+                }
+                else {
+                    params.wiki = data;
+                    commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_IMAGES_EXTERNAL);
 
-                    if ( data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
-                        commit('setHeaderImageURL', data.wikipedia.originalimage.source);
-                    }
-                    else if (result.length > 0) { // Set the first image in the results as header image 
-                        commit('setHeaderImageURL', result[0].imageURL);
-                    }
+                    dispatch('getTopicImages', params).then((result) => {
 
-                    //console.log(this.state.wikidocumentaries.geo);
-                    // If the geo location could not be set from Wikipedia or Wikidata then
-                    // try to calculate it from the image locations 
-                    if (this.state.wikidocumentaries.geo.location == null) {
-                        var location = calculateLocationFromImages(result);
-                        if (location != null) {
-                            commit('setTopicGeoLocation', location);
+                        commit('setWikidocumentariesDataState', WIKI.STATES.READY);
+                        //console.log(result);
+                        //console.log(data.wikipedia.originalimage);
+
+                        if ( data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
+                            commit('setHeaderImageURL', data.wikipedia.originalimage.source);
                         }
-                        else {
-                            // TODO
+                        else if (result.length > 0) { // Set the first image in the results as header image 
+                            commit('setHeaderImageURL', result[0].imageURL);
                         }
-                    }
 
-                    dispatch('setTopicStartYear', params).then(() => {
-                        //commit('setUpdatingWikiDocumentariesData', false);
+                        //console.log(this.state.wikidocumentaries.geo);
+                        // If the geo location could not be set from Wikipedia or Wikidata then
+                        // try to calculate it from the image locations 
+                        if (this.state.wikidocumentaries.geo.location == null) {
+                            var location = calculateLocationFromImages(result);
+                            if (location != null) {
+                                commit('setTopicGeoLocation', location);
+                            }
+                            else {
+                                // TODO
+                            }
+                        }
+
+                        dispatch('setTopicStartYear', params).then(() => {
+                            //commit('setUpdatingWikiDocumentariesData', false);
+                        });
                     });
-                });
+                }
             });
         },
         async getWikiDocumentariesData({dispatch, commit}, params) {
@@ -885,25 +900,32 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        //console.log(response.data);
+                        console.log(response.data);
 
-                        commit('setWikidata', response.data.wikidata);
-                        
-                        commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
-                        commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
-
-                        if (response.data.wikipedia.coordinates != undefined) {
-                            commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
-                        }
-                        else if (response.data.wikidata != undefined && response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
-                            commit('setTopicGeoLocation', response.data.wikidata.geo);
+                        if (response.data.wikipedia == null) {
+                            console.log("response.data.wikipedia == null");
+                            commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                         }
                         else {
-                            // // TODO
-                            // commit('setTopicGeoLocation', {
-                            //     lat: 0,
-                            //     lon: 0
-                            // });
+                            console.log(response.data);
+                            commit('setWikidata', response.data.wikidata);
+                            
+                            commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
+                            commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
+
+                            if (response.data.wikipedia.coordinates != undefined) {
+                                commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
+                            }
+                            else if (response.data.wikidata != undefined && response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
+                                commit('setTopicGeoLocation', response.data.wikidata.geo);
+                            }
+                            else {
+                                // // TODO
+                                // commit('setTopicGeoLocation', {
+                                //     lat: 0,
+                                //     lon: 0
+                                // });
+                            }
                         }
 
                         resolve(response.data);

@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div v-if="updatingWikiDocumentariesData == false" class="main-content">
+    <div v-if="wikidocumentariesDataState == WIKI.STATES.READY" class="main-content">
       <div class="main-toolbar">
         <button
               v-for="tab in tabs"
@@ -15,14 +15,19 @@
           class="tab">
       </component>
     </div>
+    <div v-else-if="wikidocumentariesDataState == WIKI.STATES.FAIL_WIKI_EXTERNAL" class="user-notify">
+      {{ wikiTopicErrorMessage }}
+      <a href="/">{{ returnToHomeMessage }}</a>.
+    </div>
     <div v-else class="user-notify">
-      Hetki...
+      {{ waitMessage }}
     </div>
   </div>
 </template>
 
 <script>
 import store from '@/store/store'
+import WIKI from '../store/constants'
 
 import TopicPage from '@/components/topic_page/HomePage'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
@@ -48,11 +53,15 @@ export default {
                     componentName: 'MapSearchPage'
                 }
             ],
+            WIKI: WIKI,
+            waitMessage: "Hetki...",
+            wikiTopicErrorMessage: "Aiheesta ei löytynyt Wikipedia-sivua valitulla kielellä tai tapahtui muu odottamaton virhe.",
+            returnToHomeMessage: "Palaa etusivulle",
         }
     },
     computed: {
-        updatingWikiDocumentariesData () {
-            return this.$store.state.updatingWikiDocumentariesData;
+        wikidocumentariesDataState () {
+            return this.$store.state.wikidocumentariesDataState;
         },
     },
     components: {
