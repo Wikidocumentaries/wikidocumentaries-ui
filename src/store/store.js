@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import jsonp from 'jsonp'
+import turf_distance from '@turf/distance/index'
 
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)
@@ -816,6 +817,7 @@ export default new Vuex.Store({
             state.wikidocumentaries.wikipedia.wikipediaURL = URL;
         },
         setTopicGeoLocation(state, coordinates) {
+            console.log("setTopicGeoLocation", coordinates);
             state.wikidocumentaries.geo.location = "POINT(" + coordinates.lon + " " + coordinates.lat + ")"
         },
         setUpdatingWikiDocumentariesData(state, value) {
@@ -827,7 +829,7 @@ export default new Vuex.Store({
     },
     actions: {
         updateWikidocumentaries({dispatch, commit}, params) {
-            console.log('actions.updateWikidocumentaries');
+            //console.log('actions.updateWikidocumentaries');
             commit('resetState');
             commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
@@ -835,25 +837,40 @@ export default new Vuex.Store({
             promiseWiki.then((data) => {
 
                 params.wiki = data;
-
-                // TODO handle images
-                if ( data.wikipedia.originalimage != undefined) {
-                    commit('setHeaderImageURL', data.wikipedia.originalimage.source);
-                }
+                commit('setUpdatingWikiDocumentariesData', false);
 
                 dispatch('getTopicImages', params).then((result) => {
-                    console.log(result);
-                    // TODO handle images
-                    // commit('setHeaderImageURL', response.data.wikipedia.originalimage.source);
+                    //console.log(result);
+                    //console.log(data.wikipedia.originalimage);
+
+                    if ( data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
+                        commit('setHeaderImageURL', data.wikipedia.originalimage.source);
+                    }
+                    else if (result.length > 0) { // Set the first image in the results as header image 
+                        commit('setHeaderImageURL', result[0].imageURL);
+                    }
+
+                    //console.log(this.state.wikidocumentaries.geo);
+                    // If the geo location could not be set from Wikipedia or Wikidata then
+                    // try to calculate it from the image locations 
+                    if (this.state.wikidocumentaries.geo.location == null) {
+                        var location = calculateLocationFromImages(result);
+                        if (location != null) {
+                            commit('setTopicGeoLocation', location);
+                        }
+                        else {
+                            // TODO
+                        }
+                    }
 
                     dispatch('setTopicStartYear', params).then(() => {
-                        commit('setUpdatingWikiDocumentariesData', false);
+                        //commit('setUpdatingWikiDocumentariesData', false);
                     });
                 });
             });
         },
         async getWikiDocumentariesData({dispatch, commit}, params) {
-            console.log('getWikiDocumentariesData');
+            //console.log('getWikiDocumentariesData');
             return new Promise((resolve, reject) => {
 
                 var requestConfig = {
@@ -868,7 +885,7 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response.data);
+                        //console.log(response.data);
 
                         commit('setWikidata', response.data.wikidata);
                         
@@ -882,11 +899,11 @@ export default new Vuex.Store({
                             commit('setTopicGeoLocation', response.data.wikidata.geo);
                         }
                         else {
-                            // TODO
-                            commit('setTopicGeoLocation', {
-                                lat: 0,
-                                lon: 0
-                            });
+                            // // TODO
+                            // commit('setTopicGeoLocation', {
+                            //     lat: 0,
+                            //     lon: 0
+                            // });
                         }
 
                         resolve(response.data);
@@ -900,7 +917,7 @@ export default new Vuex.Store({
         },
         async getTopicImages({dispatch, commit}, params) {
 
-            console.log('getTopicImages', params);
+            //console.log('getTopicImages', params);
             
             return new Promise((resolve, reject) => {
 
@@ -927,7 +944,7 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response.data);
+                        //console.log(response.data);
 
                         commit('setWikidocumentariesImages', response.data);
 
@@ -941,7 +958,7 @@ export default new Vuex.Store({
             });
         },
         async setTopicStartYear({dispatch, commit}, params) {
-            console.log('setTopicStartYear');
+            console.log('TODO setTopicStartYear');
         },
         async getHistoricalMaps({dispatch, commit}, locationParams) {
             //commit('setHistoricalMaps', maps);
@@ -1233,6 +1250,174 @@ function createGetCommonsMapInfoTask(fileName) {
             }
         });
     });
+}
+
+function calculateLocationFromImages(images) {
+    
+    
+    var centerCoordinates = null;
+
+    // if (images.length > 0) {
+
+    //     var imageLocations = [];
+
+    //     // var lonSum = 0;
+    //     // var latSum = 0;
+    //     // var count = 0;
+
+    //     images.forEach(image => {
+    //         var imageLocation = getFirstGeoLocationAsPoint(image);
+    //         if (imageLocation != null) {
+    //             imageLocations.push(imageLocation);
+    //             // lonSum += imageLocation[0];
+    //             // latSum += imageLocation[1];
+    //             // count++;
+    //         }
+    //     });
+
+    //     var noDeletions = false;
+
+    //     while (noDeletions == false) {
+
+    //         var center = getCentroid(imageLocations);
+
+    //         var maxDistanceToCentroid = 0;
+    //         var maxDistanceIndex = -1;
+
+    //         imageLocations.forEach((location, index) => {
+    //             var distance = turf_distance(location, center);
+    //             if (distance > maxDistanceToCentroid) {
+    //                 maxDistanceToCentroid = distance;
+    //                 maxDistanceIndex = index;
+    //             }
+    //         });
+
+    //         var maxAllowedDistance = 5; // km
+
+    //         if (maxDistanceToCentroid > maxAllowedDistance) {
+    //             //console.log("maxDistanceToCentroid", maxDistanceToCentroid);
+    //             imageLocations.splice(maxDistanceIndex, 1);
+    //         }
+    //         else {
+    //             //console.log("noDeletions");
+    //             noDeletions = true;
+    //         }
+    //     }
+
+    //     if (imageLocations.length > 3) { // Considered to be too unreliable if less than 4 images
+    //         centerCoordinates = {
+    //             lat: center[1],
+    //             lon: center[0]
+    //         }
+    //     }
+    // }
+
+    return centerCoordinates;
+}
+
+function getFirstGeoLocation(image) {
+    var geoLocation = null;
+    if (image.geoLocations.length > 0) {
+        var wkt = image.geoLocations[0];
+        if (wkt.indexOf("POINT") != -1) { 
+            // "POINT(24.9600002 60.1796223)"
+            var coordPart = wkt.split('(')[1].split(')')[0];
+            //console.log(coordPart);
+            geoLocation = coordPart.split(' ').map(Number);
+        }
+        else if (wkt.indexOf("LINESTRING") != -1) {
+            // "LINESTRING(24.9697848 60.1877939,24.9695072 60.1876021)"
+            var coordPart = wkt.split('(')[1].split(')')[0];
+            var pointParts = coordPart.split(',');
+            geoLocation = [];
+            for (var i = 0; i < pointParts.length; i++) {
+                geoLocation.push(pointParts[i].split(' ').map(Number));
+            }
+        }
+        else if (wkt.indexOf("POLYGON") != -1) {
+            // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
+            geoLocation = [];
+            var parenthesisPart = wkt.substring(wkt.indexOf('('));
+            //console.log(parenthesisPart);
+            var parenthesisPartInner = parenthesisPart.substr(1, parenthesisPart.length - 2);
+            //console.log(parenthesisPartInner);
+            var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
+            //console.log(polygonPartCount);
+            var parts = parenthesisPartInner.split('(').slice(1);
+            //console.log(parts);
+            var partsWithoutParenthesis = [];
+            for (var i = 0; i < parts.length; i++) {
+                var part = null;
+                if (parts[i].substr(parts[i].length -1, 1) == ',') {
+                    part = parts[i].substr(0, parts[i].length - 1);
+                }
+                else {
+                    part = parts[i];
+                }
+                partsWithoutParenthesis.push(part.slice(0, -1));
+            }
+            //console.log(partsWithoutParenthesis);
+
+            for (var i = 0; i < partsWithoutParenthesis.length; i++) {
+                var pointParts = partsWithoutParenthesis[i].split(',');
+                var polygonPart = [];
+                for (var j = 0; j < pointParts.length; j++) {
+                    polygonPart.push(pointParts[j].trim().split(' ').map(Number));
+                }
+                geoLocation.push(polygonPart);
+            }
+            //console.log(geoLocation);
+        }
+        else if (wkt.indexOf("ENVELOPE") != -1) {
+            // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+            var coordPart = wkt.split('(')[1].split(')')[0];
+            var pointParts = coordPart.split(',').map(Number);
+            //console.log(pointParts);
+            var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+            //console.log(envelopePolygon);
+            geoLocation = [envelopePolygon];
+        }
+    }
+    return geoLocation;
+}
+
+function getFirstGeoLocationAsPoint(image) {
+    var geoLocation = getFirstGeoLocation(image)
+    if (image.geoLocations.length > 0) {
+        var wkt = image.geoLocations[0];
+        if (wkt.indexOf("POINT") != -1) { 
+            // "POINT(24.9600002 60.1796223)"
+            var coordPart = wkt.split('(')[1].split(')')[0];
+            //console.log(coordPart);
+            geoLocation = coordPart.split(' ').map(Number);
+        }
+        else if (wkt.indexOf("LINESTRING") != -1) {
+            geoLocation = getCentroid(geoLocation);
+        }
+        else if (wkt.indexOf("POLYGON") != -1) {
+            geoLocation = getCentroid(geoLocation[0]); // We do not care of the possible holes in the polygon
+        }
+        else if (wkt.indexOf("ENVELOPE") != -1) {
+            // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+            var coordPart = wkt.split('(')[1].split(')')[0];
+            var pointParts = coordPart.split(',').map(Number);
+            //console.log(pointParts);
+            var lng = (pointParts[0] + pointParts[1]) / 2;
+            var lat = (pointParts[2] + pointParts[3]) / 2;
+            //var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+            //console.log(envelopePolygon);
+            geoLocation = [lng, lat];
+        }
+    }
+
+    return geoLocation;
+}
+
+function getCentroid(coords) {
+    var center = coords.reduce(function (x,y) {
+        return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length]; 
+    }, [0,0])
+    return center;
 }
 
 /*

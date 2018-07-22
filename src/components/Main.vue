@@ -61,7 +61,7 @@ export default {
         MapSearchPage
     },
     beforeRouteEnter (to, from, next) {
-        console.log(to);
+        //console.log(to);
         // TODO
 
         var params = {
