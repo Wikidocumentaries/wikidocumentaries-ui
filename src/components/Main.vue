@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <div v-if="wikidocumentariesDataState == WIKI.STATES.READY" class="main-content">
+    <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
       <div class="main-toolbar">
         <button
               v-for="tab in tabs"

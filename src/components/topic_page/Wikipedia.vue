@@ -35,18 +35,23 @@ export default {
   },
   methods: {
     handleHTMLClick(event) {
-        console.log("handleHTMLClick");
+        //console.log("handleHTMLClick");
         //window.location.reload(true);
-        console.log(window.location);
+        //console.log(window.location);
+        //console.log(window.location.pathname);
 
-        var startIndex = 7
-        var endIndex = window.location.hash.indexOf('?');
-        var language = window.location.hash.substr(-2, 2);
+        var startIndex = window.location.href.indexOf('/wiki/') + 6;
+        var endIndex = window.location.href.indexOf('?');
+        var language = window.location.href.substr(-2, 2);
         
-        var topic = window.location.hash.substring(7, endIndex);
+        var topic = window.location.href.substring(startIndex, endIndex);
         //console.log(topic);
+        //console.log(this.wikidocumentaries.title);
+        if (topic != this.wikidocumentaries.title.split(' ').join('_')) {
+            this.$router.go();
+        }
 
-        this.$router.go();
+        //this.$router.go();
         // this.$router.go(window.location.pathname);
         // this.$router.push({
         //     path: `/wiki/${topic}`,

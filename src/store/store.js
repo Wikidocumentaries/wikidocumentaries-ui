@@ -724,7 +724,6 @@ export default new Vuex.Store({
         wikidocumentaries: wikidocumentaries,
         shownImages: [],
         timelineImages: [],
-        historicalMapSearchPageMap: null,
         historicalMaps: [],
         basemaps: basemaps,
         selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
@@ -759,9 +758,6 @@ export default new Vuex.Store({
         setImagesShownOnTimeline(state, images) {
             //console.log("setImagesShownOnTimeline");
             state.timelineImages = images;
-        },
-        setHistoricalMapSearchPageMap(state, map) {
-            state.historicalMapSearchPageMap = map;
         },
         setHistoricalMaps(state, maps) {
             state.historicalMaps = maps;
@@ -800,7 +796,6 @@ export default new Vuex.Store({
             };
             state.shownImages = [];
             state.timelineImages = [];
-            state.historicalMapSearchPageMap = null;
             state.historicalMaps = [];
             state.basemaps = basemaps;
             state.selectedBasemapID = state.mapOfTheDay,//"File:Kaisaniemen_puisto_1918.tif"; //"";
@@ -822,7 +817,7 @@ export default new Vuex.Store({
             state.wikidocumentaries.wikipedia.wikipediaURL = URL;
         },
         setTopicGeoLocation(state, coordinates) {
-            console.log("setTopicGeoLocation", coordinates);
+            //console.log("setTopicGeoLocation", coordinates);
             state.wikidocumentaries.geo.location = "POINT(" + coordinates.lon + " " + coordinates.lat + ")"
         },
         setWikidocumentariesDataState(state, value) {
@@ -842,7 +837,7 @@ export default new Vuex.Store({
             //var promiseImages = dispatch('getTopicImages', params)
             promiseWiki.then((data) => {
 
-                console.log(data);
+                //console.log(data);
 
                 if (data.wikipedia  == null) {
                     commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
@@ -900,14 +895,14 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response.data);
+                        //console.log(response.data);
 
                         if (response.data.wikipedia == null) {
-                            console.log("response.data.wikipedia == null");
+                            //console.log("response.data.wikipedia == null");
                             commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                         }
                         else {
-                            console.log(response.data);
+                            //console.log(response.data);
                             commit('setWikidata', response.data.wikidata);
                             
                             commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
@@ -1068,6 +1063,7 @@ export default new Vuex.Store({
                                 console.log(info);
 
                                 var imageURL = info.imageinfo[0].url;
+                                var thumbURL = info.imageinfo[0].thumburl;
                                 var parts = imageURL.split('.');
                                 var imageExtension = parts[parts.length - 1].toLowerCase();
                                 if (imageExtension == 'bmp' || imageExtension == 'jpg' || imageExtension == 'jpeg' || imageExtension == 'png' || imageExtension == 'gif') {
@@ -1083,13 +1079,14 @@ export default new Vuex.Store({
                                     geoLocations: [],
                                     images: [info.imageinfo[0].url],
                                     imageURL: imageURL,
+                                    thumbURL: thumbURL,
                                     year: (info.imageinfo[0].extmetadata.DateTimeOriginal != undefined ? info.imageinfo[0].extmetadata.DateTimeOriginal.value : undefined),
                                     publisher: (info.imageinfo[0].extmetadata.Credit != undefined ? info.imageinfo[0].extmetadata.Credit.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
                                     authors: (info.imageinfo[0].extmetadata.Artist != undefined ? info.imageinfo[0].extmetadata.Artist.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
                                     institutions: (info.imageinfo[0].extmetadata.Credit != undefined ? info.imageinfo[0].extmetadata.Credit.value.replace(/<\/?[^>]+(>|$)/g, "") : undefined),
                                     license: (info.imageinfo[0].extmetadata.LicenseShortName != undefined ? info.imageinfo[0].extmetadata.LicenseShortName.value : undefined),
                                     summary: (info.imageinfo[0].extmetadata.ImageDescription != undefined ? info.imageinfo[0].extmetadata.ImageDescription.value : undefined),
-                                    source: "commons",
+                                    source: "Wikimedia Commons",
                                     infoURL: info.imageinfo[0].descriptionurl
                                 }
                                 maps.push(map);
@@ -1189,7 +1186,7 @@ export default new Vuex.Store({
                                         imageRights: (record.imageRights != undefined ? record.imageRights.copyright : undefined),
                                         license: record.imageRights.copyright,
                                         summary: record.summary,
-                                        source: "finna",
+                                        source: "Finna",
                                         infoURL: "https://www.finna.fi/Record/" + encodeURIComponent(record.id)
                                     }
 
@@ -1256,9 +1253,14 @@ export default new Vuex.Store({
 function createGetCommonsMapInfoTask(fileName) {
     return new Promise((resolve, reject) => {
                                 
-        var url = "https://commons.wikimedia.org/w/api.php?action=query" +
+        var url = "https://commons.wikimedia.org/w/api.php?" +
+            "action=query" +
             "&titles=" + fileName +
-            "&prop=imageinfo&iiprop=user|url|extmetadata" +
+            "&prop=imageinfo" +
+            "&iiprop=user|url|extmetadata" +
+            "&iiurlwidth=400" +
+            "&iiurlheight=400" +
+            "&redirects=resolve" +
             "&format=json" +
             "&callback=callback";
 
@@ -1267,7 +1269,7 @@ function createGetCommonsMapInfoTask(fileName) {
                 console.log(error);
                 reject(error);
             } else {
-                console.log(data);
+                //console.log(data);
                 resolve(data);
             }
         });

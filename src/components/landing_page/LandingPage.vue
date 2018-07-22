@@ -370,7 +370,8 @@ export default {
 .dropdown-content a:hover {
     box-shadow: none;
     outline: none;
-    background-color: #ddd;
+    background-color: #cf412d;
+    color: white;
 }
 
 .topic-title {

@@ -1,5 +1,5 @@
 <template>
-  <div class="header" v-bind:style="style">
+  <div class="header">
       <img v-bind:src="wikidocumentaries.headerImageURL" class="header-image"/>
       <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
       <div class="header-contents">
@@ -12,25 +12,18 @@
 
 <script>
 export default {
-  name: 'TopicPageHeader',
-  props: {
-  },
-  data () {
-    return {
+    name: 'TopicPageHeader',
+    props: {
+    },
+    data () {
+        return {
+        }
+    },
+    computed: {
+        wikidocumentaries () {
+            return this.$store.state.wikidocumentaries;
+        },
     }
-  },
-  computed: {
-      wikidocumentaries () {
-          return this.$store.state.wikidocumentaries;
-      },
-      style () {
-          //console.log(this.wikidocumentaries);
-          return ''
-          //return "background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG')"; 
-          //return "background-image: url('https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png')";
-          //return "background-image: url('" + this.wikidocumentaries.headerImageURL + "')";
-      }
-  }
 }
 </script>
 
