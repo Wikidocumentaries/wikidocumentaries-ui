@@ -156,14 +156,14 @@ export default {
                 });
             }
 
-            console.log("this.timelineCenturies", this.timelineCenturies);
+            //console.log("this.timelineCenturies", this.timelineCenturies);
             if (this.timelineCenturies.length % 2 != 0) {
                 this.oddCenturies = true;
             }
             else {
                 this.oddCenturies = false;
             }
-            console.log("this.oddCenturies", this.oddCenturies);
+            //console.log("this.oddCenturies", this.oddCenturies);
 
             //console.log(this.timelineCenturies);
         },

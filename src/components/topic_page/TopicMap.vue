@@ -53,6 +53,8 @@ export default {
         return {
             map: null,
             topicFeature: null,
+            topicVectorLayer: null,
+            topicOverlay: null,
             header: {
                 title: 'Sijainti kartalla'
             },
@@ -101,9 +103,16 @@ export default {
         },
         selectedBasemapID() {
             return this.$store.state.selectedBasemapID;
+        },
+        topicLocation() {
+            return this.wikidocumentaries.geo.location;
         }
     },
     watch: {
+        topicLocation: function(newLocation, oldLocation) {
+            //console.log("topicLocation", oldLocation, newLocation);
+            this.setTopicOnMap();
+        },
         shownImages: function(images, oldImages) {
             var ol = this.$ol;
 
@@ -141,7 +150,7 @@ export default {
             if (this.topicPointCoordinates() != null) {
                 view = new ol.View({
                     center: ol.proj.fromLonLat(this.topicPointCoordinates()),
-                    zoom: 17
+                    zoom: 14
                 })
             }
             else {
@@ -160,6 +169,16 @@ export default {
                 ],
                 view: view
             });
+
+            this.setTopicOnMap();
+            
+            this.map.on('click', this.handleMapClick);
+
+            this.createImageFeatures();
+
+        },
+        setTopicOnMap() {
+            var ol = this.$ol;
 
             if (this.topicPointCoordinates() != null) {
                 this.topicFeature = new ol.Feature({
@@ -180,28 +199,35 @@ export default {
                 var vectorSource = new ol.source.Vector({
                     features: [this.topicFeature]
                 });
-                var vectorLayer = new ol.layer.Vector({
+
+                if (this.topicVectorLayer != null) {
+                    this.map.removeLayer(this.topicVectorLayer);
+                    this.topicVectorLayer = null;
+                }
+
+                this.topicVectorLayer = new ol.layer.Vector({
                     source: vectorSource,
                     zIndex: 1000,
                 });
 
-                this.map.addLayer(vectorLayer);
+                this.map.addLayer(this.topicVectorLayer);
 
                 var topicMapPopup = this.$refs.topicMapPopup;
                 //console.dir( topicMapPopup );
                 //console.log( topicMapPopup.offsetWidth +' '+ topicMapPopup.offsetHeight );
                 var offset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
-                var overlay = new ol.Overlay({
+
+                if (this.topicOverlay != null) {
+                    this.map.removeOverlay(this.topicOverlay);
+                    this.topicVectorLayer = null;
+                }
+                this.topicOverlay = new ol.Overlay({
                     element: topicMapPopup,
                     stopEvent: false,
                     position: ol.proj.fromLonLat(this.topicPointCoordinates()),
                     offset: offset
                 });
-                this.map.addOverlay(overlay);
-                
-                this.map.on('click', this.handleMapClick);
-
-                this.createImageFeatures();
+                this.map.addOverlay(this.topicOverlay);
             }
         },
         createImageFeatures () {

@@ -24,6 +24,7 @@ const wikidocumentaries = {
     wikidata: {
         id: 'Q5501061',
         instance_of: {
+            id: 'Q5003624',
             value: 'muistomerkki',
             url: 'https://www.wikidata.org/wiki/Q5003624'
         },
@@ -786,6 +787,7 @@ export default new Vuex.Store({
                 wikidata: {
                     id: null,
                     instance_of: {
+                        id: null,
                         value: null,
                         url: null
                     },
@@ -794,6 +796,7 @@ export default new Vuex.Store({
                 images: [],
                 geo: {
                     location: null,
+                    scale: null,
                     admin: null
                 },
                 topicStartYear: null
@@ -916,8 +919,24 @@ export default new Vuex.Store({
                             if (response.data.wikipedia.coordinates != undefined) {
                                 commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
                             }
-                            else if (response.data.wikidata != undefined && response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
-                                commit('setTopicGeoLocation', response.data.wikidata.geo);
+                            else if (response.data.wikidata != undefined) {
+                                if (response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
+                                    commit('setTopicGeoLocation', response.data.wikidata.geo);
+                                }
+                                else {
+                                    guessTopicGeoLocationFromWikidata(params.topic, response.data.wikidata).then(data => {
+                                        //console.log(data);
+                                        if (data != null && data.result != null && data.result.point != null && data.result.point.coordinates != null) {
+                                            commit('setTopicGeoLocation', {
+                                                lon: data.result.point.coordinates[1],
+                                                lat: data.result.point.coordinates[0]
+                                            });
+                                        }
+                                        // if (location != null) {
+                                        //     commit('setTopicGeoLocation', location);
+                                        // }
+                                    });
+                                }
                             }
                             else {
                                 // // TODO
@@ -1278,6 +1297,134 @@ function createGetCommonsMapInfoTask(fileName) {
                 resolve(data);
             }
         });
+    });
+}
+
+const locationRelatedItems = [
+    'Q515', // city
+    'Q15715406', // neighbourhood of Helsinki
+    //'Q17468533', // former municipality of Finland
+    'Q856076', // municipality of Finland
+    'Q217691', // province of Finland
+    'Q193512', // region of Finland
+    'Q5119', // capital city
+    'Q1549591', // big city
+    'Q123705', // neighborhood
+    'Q3624078', // sovereign state
+    'Q6256', // country
+    'Q179164', // unitary state
+    'Q165', // sea
+    'Q23397', // lake
+    'Q22698', // park
+    'Q4022', // river
+];
+
+const locationRelatedProperties = [
+    'P131',// located in the administrative territorial entity, e.g. Helsinki
+    'P17',// country
+    'P276',     //P276 location, e.g. Kaisaniemen puisto
+    'P36',    //P36 capital city
+    'P706',    //P706 located on terrain feature
+    'P4552',   //a mountain range (P4552)
+    'P5130', // an island (P5130).
+    'P47',    //P47 countries shares border with
+    'P30',     //P30 continent of which the subject is a part
+    'P150',     //P150 (list of) direct subdivisions of an administrative territorial entity
+    'P206',    //P206 located in or next to body of water
+
+    'P551',     //P551 residence (asuinpaikka)
+    'P27',    //P27 country of citizenship, e.g. Suomi
+    'P19',    //P19 place of birth, e.g. Tukholma (https://www.wikidata.org/wiki/Q52930)
+    'P20',//P20 place of death, e.g. Tukholma
+    'P2632',    //P2632 place of detention
+
+    'P119',    //P119 place of burial
+    //'P103',    //P103 native language --> indigenous to P2341
+];
+
+function guessTopicGeoLocationFromWikidata(topic, wikidata) {
+    
+    //console.log(wikidata);
+
+    return new Promise((resolve, reject) => {
+
+        var place = "";
+        //console.log(wikidata.instance_of.id);
+        if (locationRelatedItems.indexOf(wikidata.instance_of.id) != -1) {
+            //console.log("wikidata.instance_of.id in locationRelatedItems");
+            place += topic;
+            geocode(place).then(data => {
+
+                if (data == null) {
+                    var result = guessTopicGeoLocationFromProperties(topic, wikidata).then(data => {
+                        resolve(data);
+                    });
+                    if (result == null) {
+                        resolve(null);
+                    }
+                }
+                else {
+                    resolve(data);
+                }
+                //
+            });
+        }
+        else {
+            var result = guessTopicGeoLocationFromProperties(topic, wikidata);
+            if (result == null) {
+                resolve(null);
+            }
+            else {
+                result.then(data => {
+                    resolve(data);
+                });
+            }
+        }
+    });
+}
+
+function guessTopicGeoLocationFromProperties(topic, wikidata) {
+ 
+    for (var i = 0; i < wikidata.statements.length; i++) {
+        var statement = wikidata.statements[i];
+        for (var j = 0; j < locationRelatedProperties.length; j++) {
+
+            if (statement.id == locationRelatedProperties[j]) {
+
+                var place = "";
+                if (locationRelatedItems.indexOf(wikidata.instance_of.id) != -1) {
+                    place += topic + ",";
+                }
+                place += statement.value;
+
+                return geocode(place);
+            }
+        }
+    }
+
+    return null;
+}
+
+function geocode(place) {
+    var requestConfig = {
+        baseURL: BASE_URL,
+        url: "/geocode",
+        method: "get",
+        responseType: 'json',
+        params: {
+            place: place
+        }
+    }
+
+    return axios.request(requestConfig).then((response) => {
+        //console.log(response.data);
+        return response.data;
+        
+    }).catch(error => {
+        console.log("error in geocode");
+        return null;
+        //reject(error);
+        //console.log(error);
     });
 }
 
