@@ -12,7 +12,7 @@
                 <div v-for="(century, index) in timelineCenturies" :key="century.year" class="timeline-century" :style="centuryStyle(index)">{{ getCenturyText(index) }}</div>
             </div>
             <div class="timeline-image" v-for="(item, index) in timelineImageItems" :key="item.image.id" :style="timelineImageStyle(index)"></div>
-            <div class="timeline-end" :class="{ 'year-included': endYearIncluded }">{{ endYear }}</div>
+            <div class="timeline-end" :class="{ 'year-included': endYearIncluded, 'year-background-odd': oddCenturies, 'year-background-even': !oddCenturies }">{{ endYear }}</div>
         </div>
         <div ref="timelineExplanations" class="timeline-explanations">
             <div class="timeline-explanation" v-for="(item, index) in sortedTimelineImageItems" :key="item.image.id" :style="timelineItemExplanationStyle(index, item)">
@@ -50,7 +50,8 @@ export default {
             endYearIncluded: false,
             timelineImageItems: [],
             timelineCenturies: [],
-            maxTitleLengthInChars: 55
+            maxTitleLengthInChars: 55,
+            oddCenturies: false
         }
     },
     components: {
@@ -154,6 +155,15 @@ export default {
                     year: i * 100
                 });
             }
+
+            console.log("this.timelineCenturies", this.timelineCenturies);
+            if (this.timelineCenturies.length % 2 != 0) {
+                this.oddCenturies = true;
+            }
+            else {
+                this.oddCenturies = false;
+            }
+            console.log("this.oddCenturies", this.oddCenturies);
 
             //console.log(this.timelineCenturies);
         },
@@ -290,11 +300,19 @@ function getTextWidth(text, font) {
     color: #e9544c;
 }
 
+.year-background-odd {
+    background: black;
+}
+
+.year-background-even {
+    background: #363636;
+}
+
+
 .timeline-end {
     flex: 1 0 0%;
     text-align: right;
     /* height: 100%; */
-    background: #363636;
     padding: 9px 10px 9px 10px;
     color: #8e8e8e;
     z-index: 5;

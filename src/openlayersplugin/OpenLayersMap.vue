@@ -1,6 +1,6 @@
 <template>
     <div ref="map" class="ol-map">
-        <slot></slot>
+        <slot :map="map"></slot>
     </div>
 </template>
 
@@ -8,22 +8,187 @@
 export default {
     name: 'OpenLayersMap',
     props: {
-        link: String
+        link: String,
+        target: String,
+        shouldShowTopicPopup: Boolean,
+
     },
     data () {
         return {
-            msg: '',
+            map: null,
+            topicFeature: null,
         }
     },
-    mounted: function () {
-       //this.createMap();
+    computed: {
+        wikidocumentaries () {
+            return this.$store.state.wikidocumentaries;
+        },
     },
+    mounted: function () {
+       this.createMap();
+    },
+    methods: {
+        createMap() {
+            var ol = this.$ol;
 
+            var view = null;
+
+            if (this.topicPointCoordinates() != null) {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    zoom: 17
+                })
+            }
+            else {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat([0, 0]),
+                    zoom: 1
+                })
+            }
+
+            this.map = new ol.Map({
+                target: target,
+                layers: [
+                    new ol.layer.Tile({
+                        source: new this.$ol.source.OSM()
+                    })
+                ],
+                view: view
+            });
+
+            if (this.topicPointCoordinates() != null) {
+                this.topicFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(ol.proj.fromLonLat(this.topicPointCoordinates())),
+                    
+                });
+                var iconStyle = new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
+                        scale: 1.4
+                    })
+                });
+                this.topicFeature.setStyle(iconStyle);
+
+                var vectorSource = new ol.source.Vector({
+                    features: [this.topicFeature]
+                });
+                var vectorLayer = new ol.layer.Vector({
+                    source: vectorSource,
+                    zIndex: 1000,
+                });
+
+                this.map.addLayer(vectorLayer);
+
+                var topicMapPopup = this.$refs.topicMapPopup;
+                //console.dir( topicMapPopup );
+                //console.log( topicMapPopup.offsetWidth +' '+ topicMapPopup.offsetHeight );
+                var offset = [-topicMapPopup.offsetWidth / 2, -topicMapPopup.offsetHeight * 2];
+                var overlay = new ol.Overlay({
+                    element: topicMapPopup,
+                    stopEvent: false,
+                    position: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    offset: offset
+                });
+                this.map.addOverlay(overlay);
+                
+                this.map.on('click', this.handleMapClick);
+
+                //this.createImageFeatures();
+            }
+        },
+        handleMapClick (event) {
+            var me = this;
+            this.map.forEachFeatureAtPixel(event.pixel,
+                function(feature) {
+                    if (feature == me.topicFeature) {
+                        me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
+                    }
+                }
+            );
+        },
+        topicPointCoordinates () {
+            var coords = null;
+            if (this.wikidocumentaries.geo.location != null) {
+                //console.log(this.wikidocumentaries.geo.location)
+                var coordPart = this.wikidocumentaries.geo.location.split('(')[1].split(')')[0];
+                //console.log(coordPart);
+                coords = coordPart.split(' ').map(Number);
+                //console.log(coords);
+            }
+            return coords;
+        },
+        // createImageFeatures () {
+        //     var ol = this.$ol;
+
+        //     var features = [];
+        //     for (var i = 0; i < this.wikidocumentaries.images.length; i++) {
+        //         var image = this.wikidocumentaries.images[i];
+        //         if (image.geoLocations.length > 0) {
+        //             var feature = new ol.Feature({
+        //                 geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(image))),
+        //             });
+        //             features.push(feature);
+        //         }
+        //     }
+        //     var vectorSource = new ol.source.Vector({
+        //         features: features
+        //     });
+        //     var vectorLayer = new ol.layer.Vector({
+        //         source: vectorSource
+        //     });
+        //     this.map.addLayer(vectorLayer);
+        // },
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.map-popup-container {
+    white-space: nowrap;
+    position: absolute;
+}
+.map-popup {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #000000;
+    padding: 12px 6px;
+}
+.map-popup:after, .map-popup:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.map-popup:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.map-popup:before {
+	border-color: rgba(0, 0, 0, 0);
+	border-top-color: #000000;
+	border-width: 9px;
+	margin-left: -9px;
+}
+
+.popup-image {
+    width: 100px;
+}
+
+.topic-popup-hidden {
+    display: none;
+}
 
 </style>
         

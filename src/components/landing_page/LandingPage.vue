@@ -204,12 +204,13 @@ export default {
                                 //     }
                                 // });
                             }
+
+                            this.showMenu();
                         }
                         else {
                             // TODO let user know
                         }
 
-                        this.showMenu();
                     }
             });
 
@@ -254,6 +255,7 @@ export default {
 
 .header {
     position:relative;
+    width: 100%;
 }
 .header-image {
     width: 100%;

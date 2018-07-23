@@ -57,6 +57,8 @@ export default {
                 })
             });
 
+            this.$store.commit('setHistoricalMapSearchPageMap', map);
+
             if (this.wikidocumentaries.geo.location != "") {
                 this.topicFeature = new ol.Feature({
                     geometry: new ol.geom.Point(ol.proj.fromLonLat(this.topicPointCoordinates())),

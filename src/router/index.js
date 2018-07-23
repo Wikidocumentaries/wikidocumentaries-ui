@@ -45,5 +45,9 @@ export default new Router({
       name: 'TopicPage',
       component: MainPage
     },
+    {
+      path: '/wiki/',
+      redirect: { name: 'LandingPage' }
+    },
   ]
 })

@@ -47,7 +47,7 @@ export default {
         var topic = window.location.href.substring(startIndex, endIndex);
         //console.log(topic);
         //console.log(this.wikidocumentaries.title);
-        if (topic != this.wikidocumentaries.title.split(' ').join('_')) {
+        if (topic != encodeURIComponent(this.wikidocumentaries.title.split(' ').join('_'))) {
             this.$router.go();
         }
 

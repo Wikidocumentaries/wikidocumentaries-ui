@@ -58,6 +58,7 @@ export default {
             },
             shouldShowTopicPopup: true,
             shownImagesPopupOffsets: {},
+            imageFeaturesLayer: null,
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.CHOOSE_BACKGROUND_MAP,
@@ -126,7 +127,10 @@ export default {
             else {
                 
             }
-        }
+        },
+        // wikidocumentaries: function (oldWikidocumentaries, newWikidocumentaries) {
+        //     this.createImageFeatures();
+        // }
     },
     methods: {
         createMap() {
@@ -197,30 +201,35 @@ export default {
                 
                 this.map.on('click', this.handleMapClick);
 
-                //this.createImageFeatures();
+                this.createImageFeatures();
             }
         },
-        // createImageFeatures () {
-        //     var ol = this.$ol;
+        createImageFeatures () {
+            var ol = this.$ol;
 
-        //     var features = [];
-        //     for (var i = 0; i < this.wikidocumentaries.images.length; i++) {
-        //         var image = this.wikidocumentaries.images[i];
-        //         if (image.geoLocations.length > 0) {
-        //             var feature = new ol.Feature({
-        //                 geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(image))),
-        //             });
-        //             features.push(feature);
-        //         }
-        //     }
-        //     var vectorSource = new ol.source.Vector({
-        //         features: features
-        //     });
-        //     var vectorLayer = new ol.layer.Vector({
-        //         source: vectorSource
-        //     });
-        //     this.map.addLayer(vectorLayer);
-        // },
+            if (this.imageFeaturesLayer != null) {
+                this.map.removeLayer(this.imageFeaturesLayer);
+                this.imageFeaturesLayer = null;
+            }
+
+            var features = [];
+            for (var i = 0; i < this.wikidocumentaries.images.length; i++) {
+                var image = this.wikidocumentaries.images[i];
+                if (image.geoLocations.length > 0) {
+                    var feature = new ol.Feature({
+                        geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(image))),
+                    });
+                    features.push(feature);
+                }
+            }
+            var vectorSource = new ol.source.Vector({
+                features: features
+            });
+            this.imageFeaturesLayer = new ol.layer.Vector({
+                source: vectorSource
+            });
+            this.map.addLayer(this.imageFeaturesLayer);
+        },
         handleMapClick (event) {
             var me = this;
             this.map.forEachFeatureAtPixel(event.pixel,

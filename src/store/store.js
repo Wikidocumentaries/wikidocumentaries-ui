@@ -724,6 +724,7 @@ export default new Vuex.Store({
         wikidocumentaries: wikidocumentaries,
         shownImages: [],
         timelineImages: [],
+        historicalMapSearchPageMap: null,
         historicalMaps: [],
         basemaps: basemaps,
         selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
@@ -758,6 +759,9 @@ export default new Vuex.Store({
         setImagesShownOnTimeline(state, images) {
             //console.log("setImagesShownOnTimeline");
             state.timelineImages = images;
+        },
+        setHistoricalMapSearchPageMap(state, map) {
+            state.historicalMapSearchPageMap = map;
         },
         setHistoricalMaps(state, maps) {
             state.historicalMaps = maps;
@@ -796,6 +800,7 @@ export default new Vuex.Store({
             };
             state.shownImages = [];
             state.timelineImages = [];
+            state.historicalMapSearchPageMap = null;
             state.historicalMaps = [];
             state.basemaps = basemaps;
             state.selectedBasemapID = state.mapOfTheDay,//"File:Kaisaniemen_puisto_1918.tif"; //"";
