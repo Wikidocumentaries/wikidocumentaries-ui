@@ -7,7 +7,7 @@
             </ToolbarMenu>
         </div>
         <div ref="timelineBar" class="timeline">
-            <div class="timeline-start" :class="{ 'year-included': startYearIncluded }">{{ startYear }}</div>
+            <div class="timeline-start" :class="{ 'year-included': startYearIncluded }">{{ (startYear < 0 ? 0 : startYear) }}</div>
             <div ref="timelineCenturies" class="timeline-centuries">
                 <div v-for="(century, index) in timelineCenturies" :key="century.year" class="timeline-century" :style="centuryStyle(index)">{{ getCenturyText(index) }}</div>
             </div>
@@ -116,21 +116,27 @@ export default {
 
             // Calculate position for each image on the timeline
 
-            var timeSpan = this.endYear - this.startYear;    
+            var startYear = (this.startYear < 0 ? 0 : this.startYear);
+
+            var timeSpan = this.endYear - startYear;    
 
             for (var i = 0; i < images.length; i++) {
                 var image = images[i];
-                var pos = -1;
-                if (this.endYear != this.startYear) {
-                    pos = (image.year - this.startYear) / timeSpan;
+
+                if (image.year != null) {
+
+                    var pos = -1;
+                    if (this.endYear != startYear) {
+                        pos = (image.year - startYear) / timeSpan;
+                    }
+                    else {
+                        pos = 0;
+                    }
+                    this.timelineImageItems.push({
+                        pos: pos,
+                        image: images[i]
+                    });
                 }
-                else {
-                    pos = 0;
-                }
-                this.timelineImageItems.push({
-                    pos: pos,
-                    image: images[i]
-                });
             }
 
             //console.log(this.timelineImageItems);
@@ -143,6 +149,12 @@ export default {
         },
         calculateCenturies(startYear) {
             this.timelineCenturies = [];
+            console.log("startYear", startYear);
+            console.log("endYear", this.endYear);
+
+            if (startYear < 0) {
+                startYear = 0;
+            }
 
             var timeSpan = this.endYear - startYear;   
 
@@ -156,7 +168,7 @@ export default {
                 });
             }
 
-            //console.log("this.timelineCenturies", this.timelineCenturies);
+            console.log("this.timelineCenturies", this.timelineCenturies);
             if (this.timelineCenturies.length % 2 != 0) {
                 this.oddCenturies = true;
             }

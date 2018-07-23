@@ -742,13 +742,17 @@ export default new Vuex.Store({
             if (state.wikidocumentaries.topicStartYear != undefined) {
                 startYear = state.wikidocumentaries.topicStartYear;
             }
-            else if (state.wikidocumentaries.images.length > 0) {
+            if (state.wikidocumentaries.images.length > 0) {
                 for (var i = 0; i < state.wikidocumentaries.images.length; i++) {
-                    startYear = startYear > state.wikidocumentaries.images[i].year ? state.wikidocumentaries.images[i].year : startYear;
+                    //console.log("state.wikidocumentaries.images[i]", state.wikidocumentaries.images[i]);
+                    //console.log("state.wikidocumentaries.images[i].year", state.wikidocumentaries.images[i].year);
+                    if (state.wikidocumentaries.images[i].year != null) {
+                        startYear = startYear > state.wikidocumentaries.images[i].year ? state.wikidocumentaries.images[i].year : startYear;
+                    }
                 }
             }
 
-            //console.log(startYear);
+            console.log(startYear);
 
             return startYear;
         }
@@ -833,7 +837,11 @@ export default new Vuex.Store({
         },
         setWikidocumentariesImages(state, images) {
             state.wikidocumentaries.images = images;
-        }
+        },
+        setTopicStartYear(state, year) {
+            //console.log('setTopicStartYear');
+            state.wikidocumentaries.topicStartYear = year;
+        },
     },
     actions: {
         updateWikidocumentaries({dispatch, commit}, params) {
@@ -879,15 +887,11 @@ export default new Vuex.Store({
                                 // TODO
                             }
                         }
-
-                        dispatch('setTopicStartYear', params).then(() => {
-                            //commit('setUpdatingWikiDocumentariesData', false);
-                        });
                     });
                 }
             });
         },
-        async getWikiDocumentariesData({dispatch, commit}, params) {
+        async getWikiDocumentariesData(context, params) {
             //console.log('getWikiDocumentariesData');
             return new Promise((resolve, reject) => {
 
@@ -907,35 +911,38 @@ export default new Vuex.Store({
 
                         if (response.data.wikipedia == null) {
                             //console.log("response.data.wikipedia == null");
-                            commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
+                            context.commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                         }
                         else {
                             //console.log(response.data);
-                            commit('setWikidata', response.data.wikidata);
-                            
-                            commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
-                            commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
+                            context.commit('setWikidata', response.data.wikidata);
+
+                            var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
+                            context.commit('setTopicStartYear', startYear);
+
+                            context.commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
+                            context.commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
 
                             if (response.data.wikipedia.coordinates != undefined) {
-                                commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
+                                context.commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
                             }
                             else if (response.data.wikidata != undefined) {
                                 if (response.data.wikidata.geo.lat != null && response.data.wikidata.geo.lon != null) {
-                                    commit('setTopicGeoLocation', response.data.wikidata.geo);
+                                    context.commit('setTopicGeoLocation', response.data.wikidata.geo);
                                 }
                                 else {
-                                    guessTopicGeoLocationFromWikidata(params.topic, response.data.wikidata).then(data => {
-                                        //console.log(data);
-                                        if (data != null && data.result != null && data.result.point != null && data.result.point.coordinates != null) {
-                                            commit('setTopicGeoLocation', {
-                                                lon: data.result.point.coordinates[1],
-                                                lat: data.result.point.coordinates[0]
-                                            });
-                                        }
-                                        // if (location != null) {
-                                        //     commit('setTopicGeoLocation', location);
-                                        // }
-                                    });
+                                    // guessTopicGeoLocationFromWikidata(params.topic, response.data.wikidata).then(data => {
+                                    //     //console.log(data);
+                                    //     if (data != null && data.result != null && data.result.point != null && data.result.point.coordinates != null) {
+                                    //         commit('setTopicGeoLocation', {
+                                    //             lon: data.result.point.coordinates[1],
+                                    //             lat: data.result.point.coordinates[0]
+                                    //         });
+                                    //     }
+                                    //     // if (location != null) {
+                                    //     //     commit('setTopicGeoLocation', location);
+                                    //     // }
+                                    // });
                                 }
                             }
                             else {
@@ -997,9 +1004,6 @@ export default new Vuex.Store({
                         reject(error);
                     });
             });
-        },
-        async setTopicStartYear({dispatch, commit}, params) {
-            console.log('TODO setTopicStartYear');
         },
         async getHistoricalMaps({dispatch, commit}, locationParams) {
             //commit('setHistoricalMaps', maps);
@@ -1274,6 +1278,38 @@ export default new Vuex.Store({
     }
 });
 
+function calculateTopicStartYearFromWikidata(wikidata, currentStartYear) {
+    // See also https://www.wikidata.org/wiki/Help:Dates and
+    // https://www.wikidata.org/w/index.php?title=Special:ListProperties/time&limit=50&offset=0
+
+    var minYear = (currentStartYear != null ? currentStartYear : (new Date()).getFullYear());
+
+    wikidata.dates.forEach(dateItem => {
+
+        console.log(dateItem);
+
+        var timeString = dateItem.value.time;
+
+        var year = parseInt((timeString.indexOf('-') != 0 ? timeString.substring(1, timeString.indexOf('-')) : timeString.substring(0, timeString.indexOf('-', 1))), 10);
+
+        if (year < minYear) {
+            minYear = year;
+        }
+
+        // if (mainsnak.property == 'P569') {
+        //     dateItem.type = "date_of_birth";
+        // }
+        // else if (mainsnak.property == 'P570') {
+        //     dateItem.type = "date_of_death";
+        // }
+        // else if (mainsnak.property == 'P571') {
+        //     dateItem.type = "inception"; // date founded
+        // }
+    });
+
+    return minYear;
+}
+
 function createGetCommonsMapInfoTask(fileName) {
     return new Promise((resolve, reject) => {
                                 
@@ -1337,7 +1373,6 @@ const locationRelatedProperties = [
     'P19',    //P19 place of birth, e.g. Tukholma (https://www.wikidata.org/wiki/Q52930)
     'P20',//P20 place of death, e.g. Tukholma
     'P2632',    //P2632 place of detention
-
     'P119',    //P119 place of burial
     //'P103',    //P103 native language --> indigenous to P2341
 ];
