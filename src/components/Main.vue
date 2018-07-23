@@ -3,6 +3,9 @@
     <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
       <div class="main-toolbar">
         <button
+              class='tab-button' v-on:click="goToLandingPage"
+              >{{ landingPageName }}</button>
+        <button
               v-for="tab in tabs"
               v-bind:key="tab.componentName"
               v-bind:class="['tab-button', { active:
@@ -41,7 +44,7 @@ export default {
             currentTabComponentName: 'TopicPage',
             tabs: [
                 {
-                    name: 'Koti',
+                    name: 'Aiheen yhteenveto',
                     componentName: 'TopicPage'
                 },
                 {
@@ -57,6 +60,7 @@ export default {
             waitMessage: "Hetki...",
             wikiTopicErrorMessage: "Aiheesta ei löytynyt Wikipedia-sivua valitulla kielellä tai tapahtui muu odottamaton virhe.",
             returnToHomeMessage: "Palaa etusivulle",
+            landingPageName: "Wikidocumentaries"
         }
     },
     computed: {
@@ -79,6 +83,11 @@ export default {
         }
 
         store.dispatch('updateWikidocumentaries', params).then(res => next());
+    },
+    methods: {
+      goToLandingPage(event) {
+        this.$router.push('/');
+      }
     }
 }
 </script>
