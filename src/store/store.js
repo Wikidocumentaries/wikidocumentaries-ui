@@ -746,8 +746,11 @@ export default new Vuex.Store({
                 for (var i = 0; i < state.wikidocumentaries.images.length; i++) {
                     //console.log("state.wikidocumentaries.images[i]", state.wikidocumentaries.images[i]);
                     //console.log("state.wikidocumentaries.images[i].year", state.wikidocumentaries.images[i].year);
-                    if (state.wikidocumentaries.images[i].year != null) {
-                        startYear = startYear > state.wikidocumentaries.images[i].year ? state.wikidocumentaries.images[i].year : startYear;
+                    if (state.wikidocumentaries.images[i].year != null &&
+                        startYear > state.wikidocumentaries.images[i].year) {
+                        if (!isWikidataBasedUnchangableStartYear(state.wikidocumentaries)) {
+                            startYear = state.wikidocumentaries.images[i].year;
+                        }
                     }
                 }
             }
@@ -871,8 +874,13 @@ export default new Vuex.Store({
                         if ( data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
                             commit('setHeaderImageURL', data.wikipedia.originalimage.source);
                         }
-                        else if (result.length > 0) { // Set the first image in the results as header image 
-                            commit('setHeaderImageURL', result[0].imageURL);
+                        else if (result.length > 0) { // Set the first image (not pdf) in the results as header image 
+                            for (var i = 0; i < result.length; i++) {
+                                if (result[i].imageURL.indexOf('.pdf') == -1) {
+                                    commit('setHeaderImageURL', result[i].imageURL);
+                                    break;
+                                }
+                            }
                         }
 
                         //console.log(this.state.wikidocumentaries.geo);
@@ -917,8 +925,10 @@ export default new Vuex.Store({
                             //console.log(response.data);
                             context.commit('setWikidata', response.data.wikidata);
 
-                            var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
-                            context.commit('setTopicStartYear', startYear);
+                            if (response.data.wikidata != undefined) {
+                                var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
+                                context.commit('setTopicStartYear', startYear);
+                            }
 
                             context.commit('setWikipediaHTML', response.data.wikipediaExcerptHTML);
                             context.commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
@@ -1277,6 +1287,29 @@ export default new Vuex.Store({
         },
     }
 });
+
+function isWikidataBasedUnchangableStartYear(wikidocumentaries) {
+
+    var isUnchangable = false;
+
+    // See also https://www.wikidata.org/w/index.php?title=Special:ListProperties/time
+    var unchangableStartYearProperties = [
+        'P569', // date of birth
+        'P580', // start time
+    ];
+
+    if (wikidocumentaries.wikidata != undefined) {
+        var wikidataDates = wikidocumentaries.wikidata.dates;
+        for (var i = 0; i < wikidataDates.length; i++) {
+            if (unchangableStartYearProperties.indexOf(wikidataDates[i].wikidata_property) != -1) {
+                isUnchangable = true;
+                break;
+            }
+        }
+    }
+
+    return isUnchangable;
+}
 
 function calculateTopicStartYearFromWikidata(wikidata, currentStartYear) {
     // See also https://www.wikidata.org/wiki/Help:Dates and

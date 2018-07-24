@@ -2,9 +2,9 @@
     <div class="map-component">
         <div class="toolbar">
             <div class="header-title">{{ header.title }}</div>
-            <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <!--<ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">Toiminnot</div>
-            </ToolbarMenu>
+            </ToolbarMenu>-->
         </div>
         <div class="newspapers">
 

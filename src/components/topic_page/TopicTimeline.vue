@@ -7,12 +7,14 @@
             </ToolbarMenu>
         </div>
         <div ref="timelineBar" class="timeline">
-            <div class="timeline-start" :class="{ 'year-included': startYearIncluded }">{{ (startYear < 0 ? 0 : startYear) }}</div>
+            <div class="timeline-start"></div>
+            <div class="timeline-start-year" :class="{ 'year-included': startYearIncluded }">{{ startYear }} -</div>
             <div ref="timelineCenturies" class="timeline-centuries">
                 <div v-for="(century, index) in timelineCenturies" :key="century.year" class="timeline-century" :style="centuryStyle(index)">{{ getCenturyText(index) }}</div>
             </div>
             <div class="timeline-image" v-for="(item, index) in timelineImageItems" :key="item.image.id" :style="timelineImageStyle(index)"></div>
-            <div class="timeline-end" :class="{ 'year-included': endYearIncluded, 'year-background-odd': oddCenturies, 'year-background-even': !oddCenturies }">{{ endYear }}</div>
+            <div class="timeline-end-year" :class="{ 'year-included': endYearIncluded, 'year-background-odd': oddCenturies, 'year-background-even': !oddCenturies }">- {{ endYear }}</div>
+            <div class="timeline-end"></div>
         </div>
         <div ref="timelineExplanations" class="timeline-explanations">
             <div class="timeline-explanation" v-for="(item, index) in sortedTimelineImageItems" :key="item.image.id" :style="timelineItemExplanationStyle(index, item)">
@@ -72,7 +74,7 @@ export default {
             return this.timelineCenturies.length > 0;
         },
         startYear () {
-            return this.$store.getters.topicStartYear;
+            return (this.$store.getters.topicStartYear < 0 ? 0 : this.$store.getters.topicStartYear);
         },
         sortedTimelineImageItems () {
             var temp = this.timelineImageItems;
@@ -305,7 +307,19 @@ function getTextWidth(text, font) {
     padding: 9px 10px 9px 10px;
     background: black;
     color: #8e8e8e;
+    opacity: 0;
     z-index: 5;
+}
+
+.timeline-start-year {
+    position: absolute;
+    left: 0;
+    text-align: left;
+    /* height: 100%; */
+    padding: 9px 10px 9px 2px;
+    background: transparent;
+    color: #8e8e8e;
+    z-index: 6;
 }
 
 .year-included {
@@ -327,14 +341,27 @@ function getTextWidth(text, font) {
     /* height: 100%; */
     padding: 9px 10px 9px 10px;
     color: #8e8e8e;
+    opacity: 0;
     z-index: 5;
 }
 
+.timeline-end-year {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    /* height: 100%; */
+    padding: 9px 2px 9px 10px;
+    background: transparent;
+    color: #8e8e8e;
+    z-index: 6;
+}
+
 .timeline-centuries {
-    flex: 8 2 80%;
+    position: absolute;
+    width: 100%;
     height: 100%;
     text-align: center;
-    position: relative;
+    
     color: #8e8e8e;
 }
 

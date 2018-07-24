@@ -79,7 +79,7 @@ export default {
 
         var params = {
           topic: to.params.topic,
-          language: to.query.language
+          language: (to.query.language != undefined ? to.query.language : 'fi')
         }
 
         store.dispatch('updateWikidocumentaries', params).then(res => next());
