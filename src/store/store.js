@@ -755,7 +755,7 @@ export default new Vuex.Store({
                 }
             }
 
-            console.log(startYear);
+            //console.log(startYear);
 
             return startYear;
         }
@@ -1319,7 +1319,7 @@ function calculateTopicStartYearFromWikidata(wikidata, currentStartYear) {
 
     wikidata.dates.forEach(dateItem => {
 
-        console.log(dateItem);
+        //console.log(dateItem);
 
         var timeString = dateItem.value.time;
 
