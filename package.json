@@ -21,6 +21,7 @@
     "v-viewer": "^1.0.1",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.2",
+    "vue-i18n": "^8.0.0",
     "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0",

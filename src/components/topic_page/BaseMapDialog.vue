@@ -4,7 +4,7 @@
             <div class="modal-wrapper">
                 <div class="modal-container" @click.stop>
                     <div class="modal-header">
-                        <h3 class="modal-header-h3">Valitse historiallinen taustakartta</h3>
+                        <h3 class="modal-header-h3">{{ $t('topic_page.BaseMapDialog.chooseMapTitle') }}</h3>
                     </div>
 
                     <div class="modal-body">
@@ -16,7 +16,7 @@
                                         <a v-bind:href="infoURL(item)" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                                     </div>
                                     <div class="thumb-header-item">
-                                        <div class="thumb-year">{{ (item.year != undefined ? "v." + item.year : "") }}</div>
+                                        <div class="thumb-year">{{ (item.year != undefined ? $t('topic_page.BaseMapDialog.yearAbbreviation') + item.year : "") }}</div>
                                     </div>
                                 </div>
                                 <div class="thumb-image-info">
@@ -30,10 +30,10 @@
                     <div class="modal-footer">
                         <slot name="footer">
                         <button class="modal-default-button button-ok" @click="handleOK">
-                            OK
+                            {{ $t('general.ok') }}
                         </button>
                         <button class="modal-default-button button-cancel" @click="handleCancel">
-                            Peruuta
+                            {{ $t('general.cancel') }}
                         </button>
                         </slot>
                     </div>

@@ -11,6 +11,7 @@
         <div class="header">
             <img v-bind:src="photoOfTheDay" class="header-image"/>
             <div class="header-contents">
+                <LanguageBar class="header-language-bar"></LanguageBar>
                 <div class="title">
                     <h1><span>Wikidocumentaries</span></h1>
                 </div>
@@ -19,8 +20,8 @@
         <div class="redbar horizonal-divider"></div>
         <div class="search-area">
             <div class="search-items">
-                <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" placeholder="Vapaamuurarin hauta...">
-                <button @click="findTopics" class="button-find"><i class="wikiglyph wikiglyph-magnifying-glass"></i><span>Etsi</span></button>
+                <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
+                <button @click="findTopics" class="button-find"><i class="wikiglyph wikiglyph-magnifying-glass"></i><span>{{ $t('LandingPage.search') }}</span></button>
             </div>
             <div :class="[shouldShowMenu ? showClass : hideClass]">
                 <a v-for="topic in topics" :key="topic.wikipage" href="#" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
@@ -34,10 +35,11 @@
 </template>
 
 <script>
-
-import jsonp from 'jsonp'
-import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 import debounce from 'debounce'
+import jsonp from 'jsonp'
+
+import LanguageBar from '@/components/landing_page/LanguageBar'
+import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 
 
 export default {
@@ -74,6 +76,7 @@ export default {
         }
     },
     components: {
+        LanguageBar,
         WikimapsWarperLayer
     },
     created: function () {
@@ -128,14 +131,14 @@ export default {
             this.$router.push({
                 path: `/wiki/${page}`,
                 query: {
-                    language: 'fi'
+                    language: this.$i18n.locale
                 }
             });
         },
         searchFromWikipedia: function(topicInputValue) {
             //console.log("searchFromWikipedia");
 
-            var url = "https://fi.wikipedia.org/w/api.php?action=opensearch&search=" +
+            var url = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=opensearch&search=" +
                 topicInputValue +
                 "&limit=20&namespace=0&redirects=resolve"
                 "&format=json" +
@@ -153,7 +156,7 @@ export default {
 
                         if (data.length > 0) {
                             
-                            var wikidataQueryURL = "https://fi.wikipedia.org/w/api.php?" + 
+                            var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?" + 
                                     "action=query&prop=pageprops&ppprop=wikibase_item&redirects=resolve&titles=";
                                     
                             if ( data[1].length > 0) {
@@ -264,6 +267,13 @@ export default {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+
+.header-language-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
 .title {
     position:absolute;
     bottom: 0px;

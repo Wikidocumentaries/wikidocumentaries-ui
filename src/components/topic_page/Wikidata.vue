@@ -2,7 +2,7 @@
   <div class="Wikidata">
     <div class="header">
       <div class="header-title toolbar neg">
-        {{ header.title }}
+        {{ $t('topic_page.Wikidata.headerTitle') }}
       </div>
       <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
     </div>
@@ -31,9 +31,6 @@ export default {
   },
   data () {
     return {
-      header: {
-        title: 'Tietoja Wikidatassa'
-      }
     }
   },
   components: {
@@ -57,7 +54,7 @@ export default {
             return this.wikidocumentaries.wikidata.instance_of.value;
         }
         else {
-            return "Aihetta ei löytynyt";
+            return this.$t('topic_page.Wikidata.noTopicFoundText');
         }
     },
   }

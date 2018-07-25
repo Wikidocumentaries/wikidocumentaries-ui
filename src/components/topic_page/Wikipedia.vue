@@ -2,7 +2,7 @@
   <div class="wikipedia">
     <div class="header">
       <div class="header-title toolbar neg">
-        {{ header.title }}
+        {{ $t('topic_page.Wikipedia.headerTitle') }}
       </div>
       <HeaderLink class="header-link" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
@@ -25,9 +25,6 @@ export default {
   },
   data () {
     return {
-      header: {
-        title: 'Artikkelin ote Wikipediasta'
-      }
     }
   },
   components: {

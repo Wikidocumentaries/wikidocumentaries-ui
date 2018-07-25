@@ -5,7 +5,7 @@
             <div class="menu-title">
                 <slot name="menu-title"></slot>
             </div>
-            <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{ item.text }}</a>
+            <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
             <slot name="custom-menu-item"></slot>
         </div>
     </div>

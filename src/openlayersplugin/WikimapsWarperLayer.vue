@@ -76,8 +76,8 @@ export default {
             var source = new ol.source.XYZ({
                  url: url,
                  attributions: [
-                     'For the historical basemap, see credits and copyright from <a href="https://commons.wikimedia.org/wiki/' + basemapInfo.id + '" target="_blank">Wikimedia Commons</a>.',
-                     'Rectified map from <a href="http://warper.wmflabs.org/maps/' + warperID + '" target="_blank">Wikimaps Warper</a>.'
+                     this.$t('openlayersplugin.WikimapsWarperLayer.attribution1PrefixText') + ' <a href="https://commons.wikimedia.org/wiki/' + basemapInfo.id + '" target="_blank">Wikimedia Commons</a>.',
+                     this.$t('openlayersplugin.WikimapsWarperLayer.attribution2PrefixText') + ' <a href="http://warper.wmflabs.org/maps/' + warperID + '" target="_blank">Wikimaps Warper</a>.'
                  ]
             });
 

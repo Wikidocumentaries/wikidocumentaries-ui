@@ -1,9 +1,9 @@
 <template>
     <div class="map-component">
         <div class="toolbar">
-            <div class="header-title">{{ header.title }}</div>
+            <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">Toiminnot</div>
+                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                 <TransparencySliderMenuItem slot="custom-menu-item"></TransparencySliderMenuItem>
             </ToolbarMenu>
         </div>
@@ -55,16 +55,13 @@ export default {
             topicFeature: null,
             topicVectorLayer: null,
             topicOverlay: null,
-            header: {
-                title: 'Sijainti kartalla'
-            },
             shouldShowTopicPopup: true,
             shownImagesPopupOffsets: {},
             imageFeaturesLayer: null,
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.CHOOSE_BACKGROUND_MAP,
-                    text: "Valitse historiallinen taustakartta...",
+                    text: 'topic_page.TopicMap.chooseHistoricalBasemapMenuText'
                 },
                 // {
                 //     id: MENU_ACTIONS.SET_BACKGROUND_MAP_TRANSPARENCY,
@@ -72,11 +69,11 @@ export default {
                 // },
                 {
                     id: MENU_ACTIONS.HIDE_PHOTOS,
-                    text: "Piilota kuvat",
+                    text: 'topic_page.TopicMap.hideImagesMenuText'
                 },
                 {
                     id: MENU_ACTIONS.CHOOSE_TIMELINE_MAPS,
-                    text: "Valitse aikajanan kartat...",
+                    text: 'topic_page.TopicMap.chooseTimelineMapsMenuText'
                 },
             ],
             showBaseMapDialog: false,

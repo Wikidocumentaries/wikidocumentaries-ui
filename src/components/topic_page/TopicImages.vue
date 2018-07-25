@@ -1,9 +1,9 @@
 <template>
     <div class="images">
         <div class="toolbar">
-            <div class="header-title">{{ header.title }}</div>
+            <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">Toiminnot</div>
+                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
         
@@ -34,17 +34,14 @@ export default {
     },
     data () {
         return {
-            header: {
-                title: 'Arkistojen kuvia'
-            },
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.SHOW_IMAGES_ON_MAP,
-                    text: "Näytä kaikki kuvat kartalla",
+                    text: 'topic_page.TopicImages.showImagesOnMapMenuText'
                 },
                 {
                     id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
-                    text: "Näytä kaikki kuvat aikajanalla",
+                    text: 'topic_page.TopicImages.showImagesOnTimelineMenuText'
                 },
             ],
         }

@@ -1,7 +1,7 @@
 <template>
     <div class="maps">
         <div class="toolbar">
-            <div class="header-title">{{ header.title }}</div>
+            <div class="header-title">{{ $t('map_search_page.HistoricalMapsSearch.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-gear" :items="toolbarSettingsMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
             <!--<ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarItems"></ToolbarMenu>-->
         </div>
@@ -32,21 +32,18 @@ export default {
     },
     data () {
         return {
-            header: {
-                title: 'Etsi historiallisia karttoja'
-            },
             toolbarSettingsMenuItems: [
                 {
                     id: 0,
-                    text: "Rajaa lähteen mukaan...",
+                    text: 'map_search_page.HistoricalMapsSearch.filterBySourceMenuText'
                 },
                 {
                     id: 1,
-                    text: "Rajaa ajankohdan perusteella...",
+                    text: 'map_search_page.HistoricalMapsSearch.filterByTimeMenuText'
                 },
                 {
                     id: 2,
-                    text: "Rajaa hakualue kartalta...",
+                    text: 'map_search_page.HistoricalMapsSearch.filterByMapMenuText'
                 },
             ],
         }

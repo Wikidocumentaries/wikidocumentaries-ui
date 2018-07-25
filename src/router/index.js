@@ -12,7 +12,7 @@ import VueAxios from 'vue-axios'
 import olmap from '../openlayersplugin/olplugin.js'
 import 'ol/ol.css'
 
-import MainPage from '@/components/Main'
+import MainPage from '@/components/MainPage'
 import LandingPage from '@/components/landing_page/LandingPage'
 import devpage from '@/components/landing_page/Developer'
 

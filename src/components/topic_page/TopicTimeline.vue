@@ -1,9 +1,9 @@
 <template>
     <div class="timeline-component">
         <div class="toolbar">
-            <div class="header-title">{{ header.title }}</div>
+            <div class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">Toiminnot</div>
+                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
         <div ref="timelineBar" class="timeline">
@@ -44,13 +44,10 @@ export default {
     },
     data () {
         return {
-            header: {
-                title: 'Aikajana'
-            },
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.SHOW_EVENTS_ON_THE_TIMELINE,
-                    text: "Näytä tapahtumat aikajanalla",
+                    text: 'topic_page.TopicTimeline.showEventsOnTimelineMenuText'
                 },
             ],
             endYear: (new Date()).getFullYear(),
@@ -304,7 +301,7 @@ export default {
         getCenturyText(index) {
             var text = "";
             if (index > 0 && index < this.timelineCenturies.length - 1) {
-                return this.timelineCenturies[index].year + "-luku";
+                return this.timelineCenturies[index].year + this.$t('topic_page.TopicTimeline.centuryText');
             }
             return text;
         },
@@ -411,15 +408,6 @@ function getTextWidth(text, font) {
     context.font = font;
     var metrics = context.measureText(text);
     return metrics.width;
-}
-
-function getTextHeight(text, font) {
-    // re-use canvas object for better performance
-    var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
-    var context = canvas.getContext("2d");
-    context.font = font;
-    var metrics = context.measureText(text);
-    return metrics.height;
 }
 
 </script>

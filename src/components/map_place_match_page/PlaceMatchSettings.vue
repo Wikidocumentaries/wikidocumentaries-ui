@@ -1,9 +1,9 @@
 <template>
     <div class="map-place-match-settings">
       <div class="toolbar">
-            <div class="header-title">{{ header.title }}</div>
+            <div class="header-title">{{ $t('map_place_match_page.PlaceMatchSettings.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-rocket" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">Toiminnot</div>
+                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
     </div>
@@ -28,9 +28,6 @@ export default {
   },
   data () {
     return {
-      header: {
-                title: 'Yhdistä paikannimien tietoja'
-      },
       toolbarActionMenuItems: [
         {
             id: MENU_ACTIONS.NONE,

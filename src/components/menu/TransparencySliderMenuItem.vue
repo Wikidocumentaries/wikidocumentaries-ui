@@ -1,6 +1,6 @@
 <template>
     <div class="opacity-slider-menu-item">
-        <div class="slider-label">Historiallisen taustakartan läpinäkyvyys:</div>
+        <div class="slider-label">{{ $t('menu.TransparencySliderMenuItem.transparencyLabel') }}</div>
         <div class="slidecontainer">
             <div class="range-start-label">0</div>
             <input ref="slider" type="range" min="0" max="100" :value="selectedBasemapTransparency" class="slider" id="myRange" @input="valueChanged">
