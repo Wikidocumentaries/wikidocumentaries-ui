@@ -170,7 +170,9 @@ export default {
             });
 
             this.setTopicOnMap();
-            this.$store.commit('setShouldFitMapToBasemap', true);
+            if (this.topicLocation != null) {
+                this.$store.commit('setShouldFitMapToBasemap', true);
+            }
             this.getHistoricalBasemapsforTheArea();
             
             this.map.on('click', this.handleMapClick);
