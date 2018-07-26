@@ -153,6 +153,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Opaskartta Helsingin kaupungista vuodelta 1900",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/1900_Plan_af_Helsingfors_stad.tif/lossy-page1-773px-1900_Plan_af_Helsingfors_stad.tif.jpg",
         year: 1900,
+        server: "http://warper.wmflabs.org/",
         warperID: 148,
         municipality: "Helsinki",
         country: "Finland"
@@ -162,6 +163,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Belägenheten af Helsingfors och Sveaborg",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Bel%C3%A4genheten_af_Helsingfors_och_Sveaborg_1808.jpeg/730px-Bel%C3%A4genheten_af_Helsingfors_och_Sveaborg_1808.jpeg",
         year: 1808,
+        server: "http://warper.wmflabs.org/",
         warperID: 1159,
         municipality: "Helsinki",
         country: "Finland"
@@ -171,6 +173,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Illustration from Brockhaus and Efron Encyclopedic Dictionary (1890—1907)",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Brockhaus_and_Efron_Encyclopedic_Dictionary_b84_525-0.jpg/508px-Brockhaus_and_Efron_Encyclopedic_Dictionary_b84_525-0.jpg",
         year: 1899,
+        server: "http://warper.wmflabs.org/",
         warperID: 163,
         municipality: "Helsinki",
         country: "Finland"
@@ -180,6 +183,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of AB Brändö Villastad",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Br%C3%A4nd%C3%B6_villastad.jpg/631px-Br%C3%A4nd%C3%B6_villastad.jpg",
         year: 1910,
+        server: "http://warper.wmflabs.org/",
         warperID: 1160,
         municipality: "Helsinki",
         country: "Finland"
@@ -189,6 +193,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Kartta siitä osasta Kluuvinrannan hakaa josta puutarhamestari Enbom haluaa aidata yrttitarhan",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Charta_%C3%85_Then_Dehl_Af_Hagan_Vid_Glo-stran_Som_Tr%C3%A4g%C3%A5rdsm%C3%A4staren_Enbom_%C3%85stundar_Til_%C3%96rteg%C3%A5rden_Inh%C3%A4gna.tif/lossy-page1-333px-Charta_%C3%85_Then_Dehl_Af_Hagan_Vid_Glo-stran_Som_Tr%C3%A4g%C3%A5rdsm%C3%A4staren_Enbom_%C3%85stundar_Til_%C3%96rteg%C3%A5rden_Inh%C3%A4gna.tif.jpg",
         year: 1792,
+        server: "http://warper.wmflabs.org/",
         warperID: 2378,
         municipality: "Helsinki",
         country: "Finland"
@@ -198,6 +203,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan Af Den Så Kallade Edbomska Trädgården Och Borgare-hagen Uti Helsingfors Stad Sådan Den För Närvarande Befinnes",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Edbomska_Tr%C3%A4dg%C3%A5rden_och_Borgarehagen.tif/lossy-page1-433px-Edbomska_Tr%C3%A4dg%C3%A5rden_och_Borgarehagen.tif.jpg",
         year: 1833,
+        server: "http://warper.wmflabs.org/",
         warperID: 2379,
         municipality: "Helsinki",
         country: "Finland"
@@ -207,6 +213,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsinki city plan designed by Johan Albrecht Ehrenström",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Ehrenstr%C3%B6min_asemakaava.jpg/800px-Ehrenstr%C3%B6min_asemakaava.jpg",
         year: 1815,
+        server: "http://warper.wmflabs.org/",
         warperID: 43,
         municipality: "Helsinki",
         country: "Finland"
@@ -216,6 +223,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Final form of Helsinki city plan designed by Johan Albrecht Ehrenström.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Ehrenstr%C3%B6min_lopullinen_asemakaava.jpg/800px-Ehrenstr%C3%B6min_lopullinen_asemakaava.jpg",
         year: 1817,
+        server: "http://warper.wmflabs.org/",
         warperID: 1161,
         municipality: "Helsinki",
         country: "Finland"
@@ -225,6 +233,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Gamble Helsingefors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Gamble_Helsingefors_1900.jpeg/779px-Gamble_Helsingefors_1900.jpeg",
         year: 1900,
+        server: "http://warper.wmflabs.org/",
         warperID: 1162,
         municipality: "Helsinki",
         country: "Finland"
@@ -234,6 +243,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Geographisk charta öfver Helsingfors stad med dess närmäste belägenhet efter högvälborne Herr generalen och commend: Ehrnsvärlds befallning år 1763",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Geographisk_charta_%C3%B6fver_Helsingfors_stad_med_dess_n%C3%A4rm%C3%A4ste_bel%C3%A4genhet_efter_h%C3%B6gv%C3%A4lborne_Herr_generalen_och_commend-_Ehrnsv%C3%A4rlds_befallning_%C3%A5r_1763.jpeg/792px-Geographisk_charta_%C3%B6fver_Helsingfors_stad_med_dess_n%C3%A4rm%C3%A4ste_bel%C3%A4genhet_efter_h%C3%B6gv%C3%A4lborne_Herr_generalen_och_commend-_Ehrnsv%C3%A4rlds_befallning_%C3%A5r_1763.jpeg",
         year: 1900,
+        server: "http://warper.wmflabs.org/",
         warperID: 1163,
         municipality: "Helsinki",
         country: "Finland"
@@ -243,6 +253,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingfors med omgifningar",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Helsingfors_med_omgifningar_1845.jpeg/771px-Helsingfors_med_omgifningar_1845.jpeg",
         year: 1845,
+        server: "http://warper.wmflabs.org/",
         warperID: 1164,
         municipality: "Helsinki",
         country: "Finland"
@@ -252,6 +263,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of central Helsinki, Finland, in 1930.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Helsingfors_svatlas.jpg/596px-Helsingfors_svatlas.jpg",
         year: 1930,
+        server: "http://warper.wmflabs.org/",
         warperID: 1165,
         municipality: "Helsinki",
         country: "Finland"
@@ -261,6 +273,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin asemakaava 1909",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Helsingin_asemakaava_1909.jpeg/513px-Helsingin_asemakaava_1909.jpeg",
         year: 1909,
+        server: "http://warper.wmflabs.org/",
         warperID: 147,
         municipality: "Helsinki",
         country: "Finland"
@@ -270,6 +283,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin kaupungin rakennustoimistossa laadittu kartta Helsingin kaupungista ja sen alueista vuodelta 1909.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Helsingin_kartta_1909.TIF/lossy-page1-432px-Helsingin_kartta_1909.TIF.jpg",
         year: 1909,
+        server: "http://warper.wmflabs.org/",
         warperID: 1166,
         municipality: "Helsinki",
         country: "Finland"
@@ -279,6 +293,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin kartta 1932",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Helsingin_kartta_1932_2.jpeg/465px-Helsingin_kartta_1932_2.jpeg",
         year: 1932,
+        server: "http://warper.wmflabs.org/",
         warperID: 1167,
         municipality: "Helsinki",
         country: "Finland"
@@ -288,6 +303,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsinki ympäristöineen, 1932",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Helsingin_kartta_1932.jpeg/764px-Helsingin_kartta_1932.jpeg",
         year: 1932,
+        server: "http://warper.wmflabs.org/",
         warperID: 1168,
         municipality: "Helsinki",
         country: "Finland"
@@ -297,6 +313,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin osoite- ja matkailukartta vuodelta 1876",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Helsingin_kartta_Nummelin_1876.png/800px-Helsingin_kartta_Nummelin_1876.png",
         year: 1876,
+        server: "http://warper.wmflabs.org/",
         warperID: 178,
         municipality: "Helsinki",
         country: "Finland"
@@ -306,6 +323,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin matkailijakartta 1940",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Helsingin_matkailijakartta_1940_2.jpg/573px-Helsingin_matkailijakartta_1940_2.jpg",
         year: 1940,
+        server: "http://warper.wmflabs.org/",
         warperID: 1169,
         municipality: "Helsinki",
         country: "Finland"
@@ -315,6 +333,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin matkailijakartta",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Helsingin_matkailijakartta_1940.jpg/800px-Helsingin_matkailijakartta_1940.jpg",
         year: 1949,
+        server: "http://warper.wmflabs.org/",
         warperID: 1170,
         municipality: "Helsinki",
         country: "Finland"
@@ -324,6 +343,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin matkailijakartta",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Helsingin_matkailijakartta_1949.jpg/800px-Helsingin_matkailijakartta_1949.jpg",
         year: 1949,
+        server: "http://warper.wmflabs.org/",
         warperID: 1171,
         municipality: "Helsinki",
         country: "Finland"
@@ -333,6 +353,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingfors spårvägskarta",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Helsingin_raitiotiekartta_1_1932.jpeg/529px-Helsingin_raitiotiekartta_1_1932.jpeg",
         year: 1932,
+        server: "http://warper.wmflabs.org/",
         warperID: 1143,
         municipality: "Helsinki",
         country: "Finland"
@@ -342,6 +363,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin ja Vironniemen kartta (Helsingin asemakaava) vuodelta 1815.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Helsinki_1815.jpg/486px-Helsinki_1815.jpg",
         year: 1815,
+        server: "http://warper.wmflabs.org/",
         warperID: 1172,
         municipality: "Helsinki",
         country: "Finland"
@@ -351,6 +373,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsinki kartta 1696",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Helsinki_kartta_1696.jpeg/792px-Helsinki_kartta_1696.jpeg",
         year: 1696,
+        server: "http://warper.wmflabs.org/",
         warperID: 1173,
         municipality: "Helsinki",
         country: "Finland"
@@ -360,6 +383,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsinki kartta ja luettelo kaduista ja nähtävyyksistä",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Helsinki_kartta_ja_luettelo_kaduista_ja_n%C3%A4ht%C3%A4vyyksist%C3%A4_1924.jpeg/356px-Helsinki_kartta_ja_luettelo_kaduista_ja_n%C3%A4ht%C3%A4vyyksist%C3%A4_1924.jpeg",
         year: 1924,
+        server: "http://warper.wmflabs.org/",
         warperID: 1174,
         municipality: "Helsinki",
         country: "Finland"
@@ -369,6 +393,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Fortress of Helsinki. Islands Vallisaari, Kuninkaansaari, Santahamina.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Helsinki_linnoitussaaret_kartta_end_of_19th_%28text%29.jpg/786px-Helsinki_linnoitussaaret_kartta_end_of_19th_%28text%29.jpg",
         year: 1895,
+        server: "http://warper.wmflabs.org/",
         warperID: 1175,
         municipality: "Helsinki",
         country: "Finland"
@@ -378,6 +403,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin kartta vuodelta 1645.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Helsinki_map_1645.jpg",
         year: 1645,
+        server: "http://warper.wmflabs.org/",
         warperID: 1179,
         municipality: "Helsinki",
         country: "Finland"
@@ -387,6 +413,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsingin kartta vuodelta 1645.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Helsinki_Map_1645.png/442px-Helsinki_Map_1645.png",
         year: 1645,
+        server: "http://warper.wmflabs.org/",
         warperID: 1180,
         municipality: "Helsinki",
         country: "Finland"
@@ -396,6 +423,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Kaupunkikartta Helsingistä vuodelta 1837.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Helsinki_map_1837_by_Claes_Wilhelm_Gyld%C3%A9n.jpg/769px-Helsinki_map_1837_by_Claes_Wilhelm_Gyld%C3%A9n.jpg",
         year: 1837,
+        server: "http://warper.wmflabs.org/",
         warperID: 45,
         municipality: "Helsinki",
         country: "Finland"
@@ -405,6 +433,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Kartta Helsingistä ja Etelä-Espoosta.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Helsinki_map_1932.jpg/800px-Helsinki_map_1932.jpg",
         year: 1932,
+        server: "http://warper.wmflabs.org/",
         warperID: 1181,
         municipality: "Helsinki",
         country: "Finland"
@@ -414,6 +443,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Helsinki ympäristöineen",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Helsinki_ymp%C3%A4rist%C3%B6ineen_1929.jpeg/800px-Helsinki_ymp%C3%A4rist%C3%B6ineen_1929.jpeg",
         year: 1929,
+        server: "http://warper.wmflabs.org/",
         warperID: 1183,
         municipality: "Helsinki",
         country: "Finland"
@@ -423,6 +453,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Itä-Helsinki Kalmbergin kartaston kartassa vuodelta 1856.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/d/de/Herttoniemi1856.jpg",
         year: 1856,
+        server: "http://warper.wmflabs.org/",
         warperID: 1196,
         municipality: "Helsinki",
         country: "Finland"
@@ -432,6 +463,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Kaisaniemen puistosuunnitelma 1918",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Kaisaniemen_puisto_1918.tif/lossy-page1-573px-Kaisaniemen_puisto_1918.tif.jpg",
         year: 1918,
+        server: "http://warper.wmflabs.org/",
         warperID: 2380,
         municipality: "Helsinki",
         country: "Finland"
@@ -441,6 +473,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Karta öfver Helsingfors 1860",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Karta_%C3%B6fver_Helsingfors_1860.jpeg/626px-Karta_%C3%B6fver_Helsingfors_1860.jpeg",
         year: 1860,
+        server: "http://warper.wmflabs.org/",
         warperID: 1197,
         municipality: "Helsinki",
         country: "Finland"
@@ -450,6 +483,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Karta öfver Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Karta_%C3%B6fver_Helsingfors_1866.jpeg/800px-Karta_%C3%B6fver_Helsingfors_1866.jpeg",
         year: 1866,
+        server: "http://warper.wmflabs.org/",
         warperID: 1198,
         municipality: "Helsinki",
         country: "Finland"
@@ -459,6 +493,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Karta öfver Helsingfors underlydande ägor belägna Helsinge socken och härad af Nylands län af C Reuter",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Karta_%C3%B6fver_Helsingfors_underlydande_%C3%A4gor_bel%C3%A4gna_Helsinge_socken_och_h%C3%A4rad_af_Nylands_l%C3%A4n_af_C_Reuter_1869.jpeg/430px-Karta_%C3%B6fver_Helsingfors_underlydande_%C3%A4gor_bel%C3%A4gna_Helsinge_socken_och_h%C3%A4rad_af_Nylands_l%C3%A4n_af_C_Reuter_1869.jpeg",
         year: 1869,
+        server: "http://warper.wmflabs.org/",
         warperID: 1199,
         municipality: "Helsinki",
         country: "Finland"
@@ -468,6 +503,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of Helsinki at the beginning of the 1900s",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Karta_%C3%B6ver_Helsingfors_vid_1900-talets_b%C3%B6rjan_%28ur_Nordisk_familjebok%29.jpg/439px-Karta_%C3%B6ver_Helsingfors_vid_1900-talets_b%C3%B6rjan_%28ur_Nordisk_familjebok%29.jpg",
         year: 1900,
+        server: "http://warper.wmflabs.org/",
         warperID: 1200,
         municipality: "Helsinki",
         country: "Finland"
@@ -477,6 +513,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Engineer Claës Kjerrström's map of Helsinki from the late 1870s.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Kjerrstr%C3%B6ms_helsingforskarta.jpg/660px-Kjerrstr%C3%B6ms_helsingforskarta.jpg",
         year: 1878,
+        server: "http://warper.wmflabs.org/",
         warperID: 35,
         municipality: "Helsinki",
         country: "Finland"
@@ -486,6 +523,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Anders Kocken suunnitelma Helsingin asemakaavaksi.",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Kocken_asemakaava.jpg/584px-Kocken_asemakaava.jpg",
         year: 1810,
+        server: "http://warper.wmflabs.org/",
         warperID: 1201,
         municipality: "Helsinki",
         country: "Finland"
@@ -495,6 +533,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of Helsinki-Helsingfors 1935",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Map_of_Helsinki-Helsingfors_1935.jpeg/661px-Map_of_Helsinki-Helsingfors_1935.jpeg",
         year: 1935,
+        server: "http://warper.wmflabs.org/",
         warperID: 1203,
         municipality: "Helsinki",
         country: "Finland"
@@ -504,6 +543,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of Sveaborg in 1808 (on russian_language)",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Map_of_Sveaborg_in_1808_%28russian_language%29.jpg/394px-Map_of_Sveaborg_in_1808_%28russian_language%29.jpg",
         year: 1841,
+        server: "http://warper.wmflabs.org/",
         warperID: 1204,
         municipality: "Helsinki",
         country: "Finland"
@@ -513,6 +553,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Opaskartta Helsingin kaupungista",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Opaskartta_Helsingin_kaupungista_vuodelta_1859.tif/lossy-page1-796px-Opaskartta_Helsingin_kaupungista_vuodelta_1859.tif.jpg",
         year: 1859,
+        server: "http://warper.wmflabs.org/",
         warperID: 1205,
         municipality: "Helsinki",
         country: "Finland"
@@ -522,6 +563,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Peruskartta 1:20 000 vuodelta 1961, karttalehti 2034 06",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Peruskartta_1961_No_2034_06.jpg/475px-Peruskartta_1961_No_2034_06.jpg",
         year: 1961,
+        server: "http://warper.wmflabs.org/",
         warperID: 2381,
         municipality: "Helsinki",
         country: "Finland"
@@ -531,6 +573,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Pharus-asemakaava Helsinki",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pharus-asemakaava_Helsinki.jpg/451px-Pharus-asemakaava_Helsinki.jpg",
         year: 1920,
+        server: "http://warper.wmflabs.org/",
         warperID: 1206,
         municipality: "Helsinki",
         country: "Finland"
@@ -540,6 +583,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Plan_af_Helsingfors_1863.jpeg/797px-Plan_af_Helsingfors_1863.jpeg",
         year: 1863,
+        server: "http://warper.wmflabs.org/",
         warperID: 1207,
         municipality: "Helsinki",
         country: "Finland"
@@ -549,6 +593,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Plan_af_Helsingfors_1876.jpeg/753px-Plan_af_Helsingfors_1876.jpeg",
         year: 1876,
+        server: "http://warper.wmflabs.org/",
         warperID: 1208,
         municipality: "Helsinki",
         country: "Finland"
@@ -558,6 +603,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Plan_af_Helsingfors_1893.jpeg/725px-Plan_af_Helsingfors_1893.jpeg",
         year: 1893,
+        server: "http://warper.wmflabs.org/",
         warperID: 1209,
         municipality: "Helsinki",
         country: "Finland"
@@ -567,6 +613,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Plan_af_Helsingfors_1899.jpeg/733px-Plan_af_Helsingfors_1899.jpeg",
         year: 1899,
+        server: "http://warper.wmflabs.org/",
         warperID: 1210,
         municipality: "Helsinki",
         country: "Finland"
@@ -576,6 +623,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Plan_af_Helsingfors_jemte_kartor_%C3%B6fver_Finland%2C_hufvudstadens_omgifningar%2C_Saima_kanal_och_Helsingfors-Tavastehus_jernv%C3%A4g_samt_tjugyfyra_vyer_1860.jpeg/750px-Plan_af_Helsingfors_jemte_kartor_%C3%B6fver_Finland%2C_hufvudstadens_omgifningar%2C_Saima_kanal_och_Helsingfors-Tavastehus_jernv%C3%A4g_samt_tjugyfyra_vyer_1860.jpeg",
         year: 1860,
+        server: "http://warper.wmflabs.org/",
         warperID: 1212,
         municipality: "Helsinki",
         country: "Finland"
@@ -585,6 +633,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors jemte omgifning",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Plan_af_Helsingfors_jemte_omgifning_1880.jpeg/800px-Plan_af_Helsingfors_jemte_omgifning_1880.jpeg",
         year: 1880,
+        server: "http://warper.wmflabs.org/",
         warperID: 1213,
         municipality: "Helsinki",
         country: "Finland"
@@ -594,6 +643,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan af Helsingfors år 1859",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Plan_af_Helsingfors_%C3%A5r_1859.jpeg/698px-Plan_af_Helsingfors_%C3%A5r_1859.jpeg",
         year: 1859,
+        server: "http://warper.wmflabs.org/",
         warperID: 1214,
         municipality: "Helsinki",
         country: "Finland"
@@ -603,6 +653,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of Helsinki showing the remaining old quarters as well as new streets in an approved regulation by His Imperial Majesty in Grace",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Plan_Charta_%C3%B6fver_Helsingfors_Stad_Utvisande_s%C3%A5_v%C3%A4l_dess_%C3%A4nnu_varande_gamla_Qvarter_och_Gator_som_%C3%A4fven_den_nya_af_Hans_Kejserliga_Majest%C3%A4t_i_N%C3%A5der_approberade_Reglering_1.jpg/800px-thumbnail.jpg",
         year: 1823,
+        server: "http://warper.wmflabs.org/",
         warperID: 2382,
         municipality: "Helsinki",
         country: "Finland"
@@ -612,6 +663,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Map of Helsinki showing the remaining old quarters as well as new streets in an approved regulation by His Imperial Majesty in Grace, No 2",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Plan_Charta_%C3%B6fver_Helsingfors_Stad_Utvisande_s%C3%A5_v%C3%A4l_dess_%C3%A4nnu_varande_gamla_Qvarter_och_Gator_som_%C3%A4fven_den_nya_af_Hans_Kejserliga_Majest%C3%A4t_i_N%C3%A5der_approberade_Reglering_2.jpg/800px-thumbnail.jpg",
         year: 1823,
+        server: "http://warper.wmflabs.org/",
         warperID: 2383,
         municipality: "Helsinki",
         country: "Finland"
@@ -621,6 +673,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Plan de la Ville de Helsingfors tel qu'il a été approuvé par sa Majesté Impériale",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Plan_de_la_Ville_de_Helsingforss_tel_qu%C2%A1l_a_-t-_approuv-_par_la_Majeste_Imperiale_1.jpg/800px-Plan_de_la_Ville_de_Helsingforss_tel_qu%C2%A1l_a_-t-_approuv-_par_la_Majeste_Imperiale_1.jpg",
         year: 1817,
+        server: "http://warper.wmflabs.org/",
         warperID: 2384,
         municipality: "Helsinki",
         country: "Finland"
@@ -630,6 +683,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Russia, with Teheran, Port Arthur, and Peking; handbook for travellers",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Russia%2C_with_Teheran%2C_Port_Arthur%2C_and_Peking%3B_handbook_for_travellers_%281914%29_%2814578556159%29.jpg/800px-Russia%2C_with_Teheran%2C_Port_Arthur%2C_and_Peking%3B_handbook_for_travellers_%281914%29_%2814578556159%29.jpg",
         year: 1914,
+        server: "http://warper.wmflabs.org/",
         warperID: 2385,
         municipality: "Helsinki",
         country: "Finland"
@@ -639,6 +693,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Senaatinkartta Helsingistä 1870-luvulla",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Senaatinkartta_Helsingist%C3%A4_1870-luvulla.jpg/600px-Senaatinkartta_Helsingist%C3%A4_1870-luvulla.jpg",
         year: 1875,
+        server: "http://warper.wmflabs.org/",
         warperID: 2386,
         municipality: "Helsinki",
         country: "Finland"
@@ -648,6 +703,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Свеаборг карта из \"Атласа крепостей Российской империи\".",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Sveaborg_fort.jpg/518px-Sveaborg_fort.jpg",
         year: 1830,
+        server: "http://warper.wmflabs.org/",
         warperID: 2387,
         municipality: "Helsinki",
         country: "Finland"
@@ -657,6 +713,7 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Tietosanakirja",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tietosanakirja_%281909%29_%2814762482961%29.jpg/474px-Tietosanakirja_%281909%29_%2814762482961%29.jpg",
         year: 1909,
+        server: "http://warper.wmflabs.org/",
         warperID: 2388,
         municipality: "Helsinki",
         country: "Finland"
@@ -666,55 +723,11 @@ var basemaps = [ // historical / old ones; source always warper.wmflabs.org
         title: "Georeferoitu ortokuva Helsingistä vuodelta 1969 Ruutu 676495 Länsi-Pasila",
         imageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Orto_676495_10cm.tif/lossy-page1-600px-Orto_676495_10cm.tif.jpg",
         year: 1969,
+        server: "http://warper.wmflabs.org/",
         warperID: 1284,
         municipality: "Helsinki",
         country: "Finland"
     },
-    // {
-    //     fileName: "",
-    //     title: "",
-    //     imageURL: "",
-    //     year: ,
-    //     warperID: ,
-    //     municipality: "",
-    //     country: "Finland"
-    // },
-    // {
-    //     fileName: "",
-    //     title: "",
-    //     imageURL: "",
-    //     year: ,
-    //     warperID: ,
-    //     municipality: "",
-    //     country: "Finland"
-    // },
-    // {
-    //     fileName: "",
-    //     title: "",
-    //     imageURL: "",
-    //     year: ,
-    //     warperID: ,
-    //     municipality: "",
-    //     country: "Finland"
-    // },
-    // {
-    //     fileName: "",
-    //     title: "",
-    //     imageURL: "",
-    //     year: ,
-    //     warperID: ,
-    //     municipality: "",
-    //     country: "Finland"
-    // },
-    // {
-    //     fileName: "",
-    //     title: "",
-    //     imageURL: "",
-    //     year: ,
-    //     warperID: ,
-    //     municipality: "",
-    //     country: "Finland"
-    // },
 ];
 
 
@@ -728,11 +741,16 @@ export default new Vuex.Store({
         historicalMapSearchPageMap: null,
         historicalMaps: [],
         basemaps: basemaps,
-        selectedBasemapID: "File:Kaisaniemen_puisto_1918.tif", //"",
+        selectedBasemap: null,
         selectedBasemapOpacity: 0.7,
+        shouldFitMapToBasemap: false,
         photoOfTheDay: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg",
-        mapOfTheDay: "File:1900_Plan_af_Helsingfors_stad.tif",
-        mapOfTheDayCoordinates: [24.9351, 60.1658],
+        mapOfTheDay: {
+            id: "File:1900_Plan_af_Helsingfors_stad.tif",
+            warperID: 148,
+            server: "http://warper.wmflabs.org/",
+            coordinates: [24.9351, 60.1658],
+        }
     },
     getters: {
         topicStartYear: state => {
@@ -761,25 +779,6 @@ export default new Vuex.Store({
         }
     },
     mutations: {
-        setImagesShownOnMap(state, images) {
-            state.shownImages = images;
-        },
-        setImagesShownOnTimeline(state, images) {
-            //console.log("setImagesShownOnTimeline");
-            state.timelineImages = images;
-        },
-        setHistoricalMapSearchPageMap(state, map) {
-            state.historicalMapSearchPageMap = map;
-        },
-        setHistoricalMaps(state, maps) {
-            state.historicalMaps = maps;
-        },
-        setSelectedBasemap(state, id) { // Wikimedia Commons name
-            state.selectedBasemapID = id;
-        },
-        setSelectedBasemapOpacity(state, opacity) { // 0 - 1
-            state.selectedBasemapOpacity = opacity;
-        },
         resetState(state) {
 
             state.wikidocumentariesDataState = WIKI.STATES.UNINITIALIZED;
@@ -813,8 +812,31 @@ export default new Vuex.Store({
             state.historicalMapSearchPageMap = null;
             state.historicalMaps = [];
             state.basemaps = basemaps;
-            state.selectedBasemapID = state.mapOfTheDay,//"File:Kaisaniemen_puisto_1918.tif"; //"";
+            state.selectedBasemap = null;
             state.selectedBasemapOpacity = 0.7;
+            state.shouldFitMapToBasemap = false;
+        },
+        setImagesShownOnMap(state, images) {
+            state.shownImages = images;
+        },
+        setImagesShownOnTimeline(state, images) {
+            //console.log("setImagesShownOnTimeline");
+            state.timelineImages = images;
+        },
+        setHistoricalMapSearchPageMap(state, map) {
+            state.historicalMapSearchPageMap = map;
+        },
+        setHistoricalMaps(state, maps) {
+            state.historicalMaps = maps;
+        },
+        setSelectedBasemap(state, mapInfo) {
+            state.selectedBasemap = mapInfo;
+        },
+        setSelectedBasemapOpacity(state, opacity) { // 0 - 1
+            state.selectedBasemapOpacity = opacity;
+        },
+        setShouldFitMapToBasemap(state, value) {
+            state.shouldFitMapToBasemap = value;
         },
         setWikidocumentariesTopicTitle(state, title) {
             state.wikidocumentaries.title = title;
@@ -845,6 +867,13 @@ export default new Vuex.Store({
             //console.log('setTopicStartYear');
             state.wikidocumentaries.topicStartYear = year;
         },
+        setHistoricalBasemaps(state, basemaps) {
+            state.basemaps = basemaps;
+            if (basemaps.length > 0) {
+                state.selectedBasemap = basemaps[0];
+            }
+        },
+
     },
     actions: {
         updateWikidocumentaries({dispatch, commit}, params) {
@@ -1015,6 +1044,25 @@ export default new Vuex.Store({
                     });
             });
         },
+        async getHistoricalBasemaps({dispatch, commit}, params) {
+
+            var requestConfig = {
+                baseURL: BASE_URL,
+                url: "/basemaps",
+                method: "get",
+                params: params
+            };
+
+            axios.request(requestConfig).
+                then(function (response) {
+                    console.log(response.data);
+
+                    commit('setHistoricalBasemaps', response.data);
+
+                }).catch(function (error) {
+                    console.log(error);
+                });
+        },
         async getHistoricalMaps({dispatch, commit}, locationParams) {
             //commit('setHistoricalMaps', maps);
             commit('setHistoricalMaps',
@@ -1172,7 +1220,7 @@ export default new Vuex.Store({
                 };
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response);
+                        //console.log(response);
 
                         var maps = params.maps;
 

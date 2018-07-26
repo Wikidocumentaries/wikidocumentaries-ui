@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </MapOverlay>
-            <WikimapsWarperLayer v-if="selectedBasemapID != ''" :map="map"></WikimapsWarperLayer>
+            <WikimapsWarperLayer ref="warperLayer" v-if="selectedBasemap != null" :map="map"></WikimapsWarperLayer>
         </div>
         <BaseMapDialog :shouldShow="showBaseMapDialog" @close="showBaseMapDialog = false">
         </BaseMapDialog>
@@ -77,7 +77,7 @@ export default {
                 },
             ],
             showBaseMapDialog: false,
-            showBasemapTransparencyDialog: false
+            showBasemapTransparencyDialog: false,
         }
     },
     components: {
@@ -89,7 +89,7 @@ export default {
         WikimapsWarperLayer
     },
     mounted: function () {
-       this.createMap();
+        this.createMap();
     },
     computed: {
         wikidocumentaries () {
@@ -98,8 +98,8 @@ export default {
         shownImages () {
             return this.$store.state.shownImages;
         },
-        selectedBasemapID() {
-            return this.$store.state.selectedBasemapID;
+        selectedBasemap() {
+            return this.$store.state.selectedBasemap;
         },
         topicLocation() {
             return this.wikidocumentaries.geo.location;
@@ -107,13 +107,15 @@ export default {
     },
     watch: {
         topicLocation: function(newLocation, oldLocation) {
-            //console.log("topicLocation", oldLocation, newLocation);
+            console.log("topicLocation", oldLocation, newLocation);
             this.setTopicOnMap();
+            this.$store.commit('setShouldFitMapToBasemap', true);
+            this.getHistoricalBasemapsforTheArea();
         },
         shownImages: function(images, oldImages) {
             var ol = this.$ol;
 
-            console.log("shownImages");
+            //console.log("shownImages");
             this.shouldShowTopicPopup = false;
 
             if (images.length > 1) {
@@ -168,6 +170,8 @@ export default {
             });
 
             this.setTopicOnMap();
+            this.$store.commit('setShouldFitMapToBasemap', true);
+            this.getHistoricalBasemapsforTheArea();
             
             this.map.on('click', this.handleMapClick);
 
@@ -226,6 +230,31 @@ export default {
                 });
                 this.map.addOverlay(this.topicOverlay);
             }
+        },
+        getHistoricalBasemapsforTheArea() {
+            console.log("getHistoricalBasemapsforTheArea");
+
+            var ol = this.$ol;
+
+            var extent = this.map.getView().calculateExtent();
+            //console.log(extent);
+            var bottomLeftLonLat3857 = [extent[0], extent[1]];
+            var topLeftLonLat3857 = [extent[0], extent[3]];
+            var bottomRightLonLat3857 = [extent[2], extent[1]];
+            var topRightLonLat3857 = [extent[2], extent[3]];
+            var bottomLeftLonLat = ol.proj.transform(bottomLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var topLeftLonLat = ol.proj.transform(topLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var bottomRightLonLat = ol.proj.transform(bottomRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var topRightLonLat = ol.proj.transform(topRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
+
+            var params = {
+                leftLon: bottomLeftLonLat[0],
+                bottomLat: bottomLeftLonLat[1],
+                rightLon: topRightLonLat[0],
+                topLat: topRightLonLat[1],
+            }
+
+            this.$store.dispatch('getHistoricalBasemaps', params);
         },
         createImageFeatures () {
             var ol = this.$ol;

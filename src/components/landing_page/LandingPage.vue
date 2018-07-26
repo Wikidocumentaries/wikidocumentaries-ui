@@ -29,7 +29,7 @@
         </div>
         <div class="redbar horizonal-divider"></div>
         <div class="map-area" id="map">
-            <WikimapsWarperLayer v-if="selectedBasemapID != ''" :map="map"></WikimapsWarperLayer>
+            <WikimapsWarperLayer v-if="selectedBasemap != null" :map="map"></WikimapsWarperLayer>
         </div>
     </div>
 </template>
@@ -62,8 +62,8 @@ export default {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
         },
-        selectedBasemapID() {
-            return this.$store.state.selectedBasemapID;
+        selectedBasemap() {
+            return this.$store.state.selectedBasemap;
         },
         photoOfTheDay () {
             return this.$store.state.photoOfTheDay;
@@ -71,9 +71,6 @@ export default {
         mapOfTheDay () {
             return this.$store.state.mapOfTheDay;
         },
-        mapOfTheDayCoordinates () {
-            return this.$store.state.mapOfTheDayCoordinates;
-        }
     },
     components: {
         LanguageBar,
@@ -83,6 +80,7 @@ export default {
         this.debounceFindTopics = debounce(this.findTopics, 500);
     },
     mounted: function () {
+        this.$store.commit('resetState');
         this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
 
         this.createMap();
@@ -229,7 +227,7 @@ export default {
                     })
                 ],
                 view: new ol.View({
-                    center: ol.proj.fromLonLat(this.mapOfTheDayCoordinates),
+                    center: ol.proj.fromLonLat(this.mapOfTheDay.coordinates),
                     zoom: 15
                 })
             });

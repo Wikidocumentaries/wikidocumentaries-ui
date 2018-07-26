@@ -10,7 +10,7 @@
                     <div class="modal-body">
                         <div ref="gridItems" transition-duration="0.3s" class="grid-items" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}">
                             <div v-masonry-tile class="grid-item" v-for="item in basemapsSortedByYear" v-bind:key="item.id" @click="mapClicked" :mapID="item.id">
-                                <img v-bind:src="item.imageURL" class="thumb-image" :class="[(item.id == newMapID ? 'thumb-image-selected' : '' )]" v-bind:alt="item.title"/>
+                                <img v-bind:src="item.thumbURL" class="thumb-image" :class="[(itemSelected(item) ? 'thumb-image-selected' : '' )]" v-bind:alt="item.title"/>
                                 <div class="thumb-image-header">
                                     <div class="thumb-header-item">
                                         <a v-bind:href="infoURL(item)" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
@@ -51,8 +51,8 @@ export default {
     },
     data () {
         return {
-            previousBasemapID: "",
-            newMapID: "",
+            previousBasemap: null,
+            newMap: null,
             maxTitleLengthInChars: 40
         }
     },
@@ -68,25 +68,31 @@ export default {
             //console.log(temp);
             return temp;
         },
-        selectedBasemapID() {
-            return this.$store.state.selectedBasemapID;
+        selectedBasemap() {
+            return this.$store.state.selectedBasemap;
         }
     },
     mounted: function () {
-        this.newMapID = this.selectedBasemapID;
+        this.newMap = this.selectedBasemap;
     },
     beforeDestroy: function() {
     },
     watch: {
         shouldShow: function(value, oldValue) {
             if (value == true) {
-                this.previousBasemapID = this.$store.state.selectedBasemapID;
+                this.previousBasemap = this.$store.state.selectedBasemap;
             }
         }
     },
     methods: {
         infoURL(item) {
             return "https://commons.wikimedia.org/wiki/" + item.id;
+        },
+        itemSelected (item) {
+            if (this.newMap == null || item.id != this.newMap.id) {
+                return false;
+            }
+            return true;
         },
         fitTitle (title) {
             var newTitle = title;
@@ -112,7 +118,13 @@ export default {
             return newAuthors + newInstitutions + item.license;
         },
         mapClicked: function(event) {
-            this.newMapID = event.currentTarget.getAttribute('mapID');
+            var id = event.currentTarget.getAttribute('mapID');
+            for (var i = 0; i < this.basemaps.length; i++) {
+                if (this.basemaps[i].id == id) {
+                    this.newMap = this.basemaps[i];
+                    break;
+                }
+            }
             //console.log();
         },
         show () {
@@ -125,8 +137,9 @@ export default {
         },
         handleOK: function () {
 
-            if (this.newMapID != this.$store.state.selectedBasemapID) {
-                this.$store.commit('setSelectedBasemap', this.newMapID);
+            if (this.newMap != null && this.newMap.id != this.$store.state.selectedBasemap.id) {
+                this.$store.commit('setShouldFitMapToBasemap', true);
+                this.$store.commit('setSelectedBasemap', this.newMap);
             }
             // else {
             //     this.$store.commit('setSelectedBasemap', this.previousBasemapID);
@@ -236,7 +249,7 @@ export default {
 }
 
 .grid-item {
-    flex: 1 1 20%;
+    flex: 0 1 22%;
     position: relative;
     margin-right: 20px;
 }
