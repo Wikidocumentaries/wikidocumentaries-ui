@@ -33,7 +33,9 @@ export default {
                 chooseTimelineMapsMenuText: "Choose timeline maps..."
             },
             TopicNewspapers: {
-                headerTitle: 'Newspaper clippings'
+                headerTitle: 'Newspaper clippings',
+                searhTopicFromArchivesMenuText: 'Search from the newspapers in the National Library of Finland',
+                addClipFromArchivesMenuText: 'Add clipping...',
             },
             TopicTimeline: {
                 headerTitle: 'Timeline',
@@ -75,6 +77,7 @@ export default {
         general: {
             ok: "OK",
             cancel: "Cancel",
+            helpText: "Help",
             menus: {
                 actionMenuTitle: 'Actions',
             }
@@ -114,7 +117,9 @@ export default {
                 chooseTimelineMapsMenuText: "Valitse aikajanan kartat..."
             },
             TopicNewspapers: {
-                headerTitle: 'Lehtileikkeitä'
+                headerTitle: 'Lehtileikkeitä',
+                searhTopicFromArchivesMenuText: 'Hae aihetta Kansalliskirjaston kokoelmista',
+                addClipFromArchivesMenuText: 'Lisää lehtileike...',
             },
             TopicTimeline: {
                 headerTitle: 'Aikajana',
@@ -156,6 +161,7 @@ export default {
         general: {
             ok: "OK",
             cancel: "Peruuta",
+            helpText: "Ohje",
             menus: {
                 actionMenuTitle: 'Toiminnot',
             }
