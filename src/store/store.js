@@ -741,7 +741,7 @@ export default new Vuex.Store({
         historicalMapSearchPageMap: null,
         historicalMaps: [],
         basemaps: basemaps,
-        selectedBasemap: null,
+        selectedBasemaps: [],
         selectedBasemapOpacity: 0.7,
         shouldFitMapToBasemap: false,
         photoOfTheDay: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg",
@@ -812,7 +812,7 @@ export default new Vuex.Store({
             state.historicalMapSearchPageMap = null;
             state.historicalMaps = [];
             state.basemaps = basemaps;
-            state.selectedBasemap = null;
+            state.selectedBasemaps = [];
             state.selectedBasemapOpacity = 0.7;
             state.shouldFitMapToBasemap = false;
         },
@@ -830,7 +830,11 @@ export default new Vuex.Store({
             state.historicalMaps = maps;
         },
         setSelectedBasemap(state, mapInfo) {
-            state.selectedBasemap = mapInfo;
+            state.selectedBasemaps = [mapInfo];
+        },
+        setSelectedBasemaps(state, mapInfos) {
+            //console.log("setSelectedBasemaps");
+            state.selectedBasemaps = mapInfos;
         },
         setSelectedBasemapOpacity(state, opacity) { // 0 - 1
             state.selectedBasemapOpacity = opacity;
@@ -870,7 +874,7 @@ export default new Vuex.Store({
         setHistoricalBasemaps(state, basemaps) {
             state.basemaps = basemaps;
             if (basemaps.length > 0) {
-                state.selectedBasemap = basemaps[0];
+                state.selectedBasemaps = [basemaps[0]];
             }
         },
 

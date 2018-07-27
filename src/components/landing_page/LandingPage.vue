@@ -29,7 +29,7 @@
         </div>
         <div class="redbar horizonal-divider"></div>
         <div class="map-area" id="map">
-            <WikimapsWarperLayer v-if="selectedBasemap != null" :map="map"></WikimapsWarperLayer>
+            <WikimapsWarperLayer v-for="basemapInfo in selectedBasemaps" :key="basemapInfo.server + basemapInfo.warperID" ref="warperLayer" :map="map" :basemapInfo="basemapInfo"></WikimapsWarperLayer>
         </div>
     </div>
 </template>
@@ -62,8 +62,8 @@ export default {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
         },
-        selectedBasemap() {
-            return this.$store.state.selectedBasemap;
+        selectedBasemaps() {
+            return this.$store.state.selectedBasemaps;
         },
         photoOfTheDay () {
             return this.$store.state.photoOfTheDay;

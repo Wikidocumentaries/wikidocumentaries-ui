@@ -20,9 +20,9 @@
                     </div>
                 </div>
             </MapOverlay>
-            <WikimapsWarperLayer ref="warperLayer" v-if="selectedBasemap != null" :map="map"></WikimapsWarperLayer>
+            <WikimapsWarperLayer v-for="basemapInfo in selectedBasemaps" :key="basemapInfo.server + basemapInfo.warperID" ref="warperLayer" :map="map" :basemapInfo="basemapInfo"></WikimapsWarperLayer>
         </div>
-        <BaseMapDialog :shouldShow="showBaseMapDialog" @close="showBaseMapDialog = false">
+        <BaseMapDialog :shouldShowDialog="showBaseMapDialog" @close="showBaseMapDialog = false">
         </BaseMapDialog>
         <TransparencyDialog :shouldShow="showBasemapTransparencyDialog" @close="showBasemapTransparencyDialog = false">
         </TransparencyDialog>
@@ -98,8 +98,9 @@ export default {
         shownImages () {
             return this.$store.state.shownImages;
         },
-        selectedBasemap() {
-            return this.$store.state.selectedBasemap;
+        selectedBasemaps() {
+            //console.log("selectedBasemaps changed");
+            return this.$store.state.selectedBasemaps;
         },
         topicLocation() {
             return this.wikidocumentaries.geo.location;
@@ -107,7 +108,7 @@ export default {
     },
     watch: {
         topicLocation: function(newLocation, oldLocation) {
-            console.log("topicLocation", oldLocation, newLocation);
+            //console.log("topicLocation", oldLocation, newLocation);
             this.setTopicOnMap();
             this.$store.commit('setShouldFitMapToBasemap', true);
             this.getHistoricalBasemapsforTheArea();

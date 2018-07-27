@@ -54,9 +54,6 @@ export default {
             //console.log(temp);
             return temp;
         },
-        selectedBasemapID() {
-            return this.$store.state.selectedBasemapID;
-        },
         selectedBasemapTransparency() {
             return (1 - this.$store.state.selectedBasemapOpacity) * 100;
         }

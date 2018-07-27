@@ -1,6 +1,6 @@
 <template>
     <transition name="modal">
-        <div class="modal-mask" @click="handleCancel" v-show="shouldShow">
+        <div class="modal-mask" @click="handleCancel" v-show="shouldShowDialog">
             <div class="modal-wrapper">
                 <div class="modal-container" @click.stop>
                     <div class="modal-header">
@@ -8,8 +8,8 @@
                     </div>
 
                     <div class="modal-body">
-                        <div ref="gridItems" transition-duration="0.3s" class="grid-items" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}">
-                            <div v-masonry-tile class="grid-item" v-for="item in basemapsSortedByYear" v-bind:key="item.id" @click="mapClicked" :mapID="item.id">
+                        <div ref="gridItems" transition-duration="0.3s" class="grid-items" item-selector=".grid-item" >
+                            <div v-masonry-tile class="grid-item" v-for="item in basemapsSortedByYear" v-bind:key="item.id" @click.exact="mapClicked" @click.ctrl.exact="mapCtrlClicked" :mapID="item.id">
                                 <img v-bind:src="item.thumbURL" class="thumb-image" :class="[(itemSelected(item) ? 'thumb-image-selected' : '' )]" v-bind:alt="item.title"/>
                                 <div class="thumb-image-header">
                                     <div class="thumb-header-item">
@@ -47,12 +47,11 @@
 export default {
     name: 'BaseMapDialog',
     props: {
-        shouldShow: Boolean
+        shouldShowDialog: Boolean
     },
     data () {
         return {
-            previousBasemap: null,
-            newMap: null,
+            newMaps: [],
             maxTitleLengthInChars: 40
         }
     },
@@ -68,19 +67,27 @@ export default {
             //console.log(temp);
             return temp;
         },
-        selectedBasemap() {
-            return this.$store.state.selectedBasemap;
+        selectedBasemaps() {
+            return this.$store.state.selectedBasemaps;
         }
     },
     mounted: function () {
-        this.newMap = this.selectedBasemap;
+        if (this.selectedBasemaps != undefined && this.selectedBasemaps != null) {
+            this.newMaps = this.selectedBasemaps;
+        }
+        else {
+            this.newMaps = [];
+        }
     },
     beforeDestroy: function() {
     },
     watch: {
-        shouldShow: function(value, oldValue) {
-            if (value == true) {
-                this.previousBasemap = this.$store.state.selectedBasemap;
+        selectedBasemaps: function(newSelectedMaps, oldSelectedMaps) {
+            if (this.newSelectedMaps != undefined && this.newSelectedMaps != null) {
+                this.newMaps = this.newSelectedMaps;
+            }
+            else {
+                this.newMaps = [];
             }
         }
     },
@@ -89,10 +96,12 @@ export default {
             return "https://commons.wikimedia.org/wiki/" + item.id;
         },
         itemSelected (item) {
-            if (this.newMap == null || item.id != this.newMap.id) {
-                return false;
+            for (var i = 0; i < this.newMaps.length; i++) {
+                if (item.id == this.newMaps[i].id) {
+                    return true;
+                }
             }
-            return true;
+            return false;
         },
         fitTitle (title) {
             var newTitle = title;
@@ -121,29 +130,32 @@ export default {
             var id = event.currentTarget.getAttribute('mapID');
             for (var i = 0; i < this.basemaps.length; i++) {
                 if (this.basemaps[i].id == id) {
-                    this.newMap = this.basemaps[i];
+                    this.newMaps = [this.basemaps[i]];
                     break;
                 }
             }
             //console.log();
+        },
+        mapCtrlClicked: function(event) {
+            var id = event.currentTarget.getAttribute('mapID');
+            for (var i = 0; i < this.basemaps.length; i++) {
+                if (this.basemaps[i].id == id) {
+                    this.newMaps.push(this.basemaps[i]);
+                    break;
+                }
+            }
         },
         show () {
             const viewer = this.$el.querySelector('.grid-items').$viewer
             viewer.show()
         },
         handleCancel: function () {
-            //this.$store.commit('setSelectedBasemap', this.previousBasemapID);
             this.$emit('close');
         },
         handleOK: function () {
 
-            if (this.newMap != null && this.newMap.id != this.$store.state.selectedBasemap.id) {
-                this.$store.commit('setShouldFitMapToBasemap', true);
-                this.$store.commit('setSelectedBasemap', this.newMap);
-            }
-            // else {
-            //     this.$store.commit('setSelectedBasemap', this.previousBasemapID);
-            // }
+            this.$store.commit('setShouldFitMapToBasemap', true);
+            this.$store.commit('setSelectedBasemaps', this.newMaps);
             this.$emit('close');
         }
     }
@@ -155,7 +167,7 @@ export default {
 
 .modal-mask {
   position: fixed;
-  z-index: 100;
+  z-index: 50;
   top: 0;
   left: 0;
   width: 100%;
@@ -257,7 +269,7 @@ export default {
 
 .thumb-image {
     width: 100%;
-    cursor: zoom-in;
+    cursor: pointer;
     border: 6px solid #353535;
 }
 
