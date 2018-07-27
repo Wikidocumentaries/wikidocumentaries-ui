@@ -166,5 +166,89 @@ export default {
                 actionMenuTitle: 'Toiminnot',
             }
         }
-    } 
+    },
+    sv: {
+        LandingPage: {
+            search: "Sök",
+            searchInputPlaceHolder: "Frimurarens grav..."
+        },
+        MainPage: {
+            topicPageName: 'Ämne',
+            mapPlaceMatchPageName: 'Koppla platsnamn',
+            mapSearchPageName: 'Sök kartor',
+            wikiTopicErrorMessage: "Det fanns ingen Wikipedia artikel on ämnet i valt språk eller en annan oförutsett fel.",
+            returnToHomeMessage: "Tillbaka till hemsidan",
+        },
+        WaitPage: {
+            waitMessage: "Ett ögonblick... Söker information i Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr...",
+        },
+        topic_page: {
+            BaseMapDialog: {
+                chooseMapTitle: "Välj historisk baskarta",
+                yearAbbreviation: "år",
+            },
+            HomePage: {
+            },
+            TopicImages: {
+                headerTitle: 'Bilder från arkiver',
+                showImagesOnMapMenuText: "Visa alla bilder på kartan",
+                showImagesOnTimelineMenuText: "Visa alla bilder i tidslinjen"
+            },
+            TopicMap: {
+                headerTitle: 'Plats på kartan',
+                chooseHistoricalBasemapMenuText: "Välj historisk baskarta...",
+                hideImagesMenuText: "Göm bilder",
+                chooseTimelineMapsMenuText: "Välj kartor till tidslinjen..."
+            },
+            TopicNewspapers: {
+                headerTitle: 'Pressklipp',
+                searhTopicFromArchivesMenuText: 'Sök ämnen i Nationalbibliotekets digitala samlingar',
+                addClipFromArchivesMenuText: 'Lägg till en klippning...',
+            },
+            TopicTimeline: {
+                headerTitle: 'Tidslinje',
+                showEventsOnTimelineMenuText: "Visa händelser i tidslinjen",
+                centuryText: "s"
+            },
+            Wikidata: {
+                headerTitle: 'Fakta i Wikidata',
+                noTopicFoundText: "Ämnet hittades inte"
+            },
+            Wikipedia: {
+                headerTitle: 'Artikel i Wikipedia'
+            }
+        },
+        map_place_match_page: {
+            PlaceMatchSettings: {
+                headerTitle: 'Koppla platsnamn'
+            }
+        },
+        map_search_page: {
+            HistoricalMapsSearch: {
+                headerTitle: 'Sök historiska kartor',
+                filterBySourceMenuText: "Gränsa per källa...",
+                filterByTimeMenuText: "Gränsa per tidspunkt...",
+                filterByMapMenuText: "Gränsa sökningsareal på kartan..."
+            }
+        },
+        openlayersplugin: {
+            WikimapsWarperLayer: {
+                attribution1PrefixText: 'Källa och licensiering för historiska kartan: ',
+                attribution2PrefixText: 'Rektifieringen: '
+            }
+        },
+        menu: {
+            TransparencySliderMenuItem: {
+                transparencyLabel: "Transparens av historiska kartan:"
+            }
+        },
+        general: {
+            ok: "OK",
+            cancel: "Avbryt",
+            helpText: "Hjälp",
+            menus: {
+                actionMenuTitle: 'Funtioner',
+            }
+        }
+    }
 }
