@@ -12,7 +12,7 @@
             <div class="statement-label">{{ statement.label }}</div>
             <div class="statement-value">
                 <div v-if="statement.url != null">
-                    <a v-bind:href="statement.url" target="_blank">{{ statement.value }}</a>
+                    <a v-bind:href="getStatementURL(statement)" :target="getTarget(statement)" :style="getStyle(statement)">{{ statement.value }}</a>
                 </div>
                 <div v-else>
                     {{ statement.value }}
@@ -57,12 +57,68 @@ export default {
             return this.$t('topic_page.Wikidata.noTopicFoundText');
         }
     },
+  },
+  methods: {
+      getStatementURL(statement) {
+            if (statement.sitelinks != undefined) {
+                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+                    return "/wiki/" + statement.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_');
+                }
+                else if (statement.sitelinks.enwiki != undefined) {
+                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_');
+                }
+                else {
+                    return statement.url;
+                }
+            }
+            else {
+                return statement.url;
+            }  
+      },
+      getTarget(statement) {
+          if (statement.sitelinks != undefined) {
+                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+                    return "_self";
+                }
+                else if (statement.sitelinks.enwiki != undefined) {
+                    return "_self";
+                }
+                else {
+                    return "_blank";
+                }
+            }
+            else {
+                return "_blank";
+            }  
+      },
+      getStyle(statement) {
+          if (statement.sitelinks != undefined) {
+                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+                    return "";
+                }
+                else if (statement.sitelinks.enwiki != undefined) {
+                    return "";
+                }
+                else {
+                    var style = "color: #52758b;";
+                    return style;
+                }
+            }
+            else {
+                var style = "color: #52758b;";
+                return style;
+            }
+      }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.dev-color {
+    color: #52758b;
+}
 
 .item-instance-title {
     padding: 6px 12px;
