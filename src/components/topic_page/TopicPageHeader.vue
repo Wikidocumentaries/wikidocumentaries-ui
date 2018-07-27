@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-      <img v-bind:src="wikidocumentaries.headerImageURL" class="header-image"/>
+      <img v-bind:src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
       <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
       <div class="header-contents">
           <div class="title">
@@ -23,6 +23,14 @@ export default {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
         },
+        isHumanTopic () {
+            if (this.$store.state.wikidocumentaries.wikidata != undefined && this.$store.state.wikidocumentaries.wikidata.instance_of.id == 'Q5') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
     }
 }
 </script>
@@ -35,10 +43,19 @@ export default {
 .header-image {
     width: 100%;
     height: 400px; /* Remove for production? */
-    object-fit: cover; /* Remove for production? not supported in IE 11 */
+    /* Remove for production? not supported in IE 11 */
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
 }
+
+.header-nonhuman {
+    object-fit: cover;
+}
+
+.header-human {
+    object-fit: contain;
+}
+
 .title {
     position:absolute;
     bottom: 0px;

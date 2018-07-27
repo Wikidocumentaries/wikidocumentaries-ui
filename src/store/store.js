@@ -944,7 +944,7 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response.data);
+                        //console.log(response.data);
 
                         if (response.data.wikipedia == null) {
                             //console.log("response.data.wikipedia == null");

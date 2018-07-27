@@ -65,7 +65,7 @@ export default {
                     return "/wiki/" + statement.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
                 }
                 else if (statement.sitelinks.enwiki != undefined) {
-                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_') + "?language=" + this.$i18n.locale;
+                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_') + "?language=" + "en";
                 }
                 else {
                     return statement.url;
