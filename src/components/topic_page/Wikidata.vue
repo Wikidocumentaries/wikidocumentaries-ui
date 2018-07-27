@@ -62,10 +62,10 @@ export default {
       getStatementURL(statement) {
             if (statement.sitelinks != undefined) {
                 if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
-                    return "/wiki/" + statement.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_');
+                    return "/wiki/" + statement.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
                 }
                 else if (statement.sitelinks.enwiki != undefined) {
-                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_');
+                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_') + "?language=" + this.$i18n.locale;
                 }
                 else {
                     return statement.url;
