@@ -6,7 +6,7 @@
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu> -->
         </div>
-        <div ref="timelineBar" class="timeline"">
+        <div ref="timelineBar" class="timeline">
             <div class="timeline-start"></div>
             <div class="timeline-start-year" :class="{ 'year-included': startYearIncluded }">{{ startYear }} -</div>
             <div ref="timelineCenturies" class="timeline-centuries">
@@ -104,13 +104,14 @@ export default {
 
             for (var i = 0; i < this.timeLineBasemapItems.length; i++) {
                 var basemapItem = this.timeLineBasemapItems[i];
+                //console.log(basemapItem);
 
                 var title = "";
                 if (basemapItem.basemap.title != null && basemapItem.basemap.title.length > 0) {
                     title = basemapItem.basemap.title;
                 }
                 else {
-                    title = basemapItem.basemap.id;
+                    title = "ID: " + basemapItem.basemap.id;
                 }
 
                 var timeLineItem = {
@@ -125,13 +126,14 @@ export default {
 
             for (var i = 0; i < this.timelineImageItems.length; i++) {
                 var imageItem = this.timelineImageItems[i];
+                //console.log(imageItem);
                 
                 var title = "";
                 if (imageItem.image.title != null && imageItem.image.title.length > 0) {
                     title = imageItem.image.title;
                 }
                 else {
-                    title = imageItem.image.id;
+                    title = "ID: " + imageItem.image.id;
                 }
 
                 var timeLineItem = {

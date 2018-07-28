@@ -1014,6 +1014,8 @@ export default new Vuex.Store({
             
             return new Promise((resolve, reject) => {
 
+                console.log(params);
+
                 var requestConfig = {
                     baseURL: BASE_URL,
                     url: "/images",
@@ -1023,6 +1025,16 @@ export default new Vuex.Store({
                         language: params.language
                     }
                 };
+
+                if (params.wiki.wikidata != null) {
+                    var statements = params.wiki.wikidata.statements;
+                    for (var i = 0; i < statements.length; i++) {
+                        if (statements[i].id == "P373") {
+                            requestConfig.params.commons_category = statements[i].value;
+                            break;
+                        }
+                    }
+                }
 
                 if (params.wiki.wikipedia.coordinates != undefined) {
                     requestConfig.params.lat = params.wiki.wikipedia.coordinates.lat;
@@ -1072,11 +1084,11 @@ export default new Vuex.Store({
         async getHistoricalMaps({dispatch, commit}, locationParams) {
             //commit('setHistoricalMaps', maps);
             commit('setHistoricalMaps',
-                await dispatch('getHistoricalMapsFromFinna', {
+                await dispatch('getHistoricalMapsFromCommons', {
                     locationParams: locationParams,
                     maps: []
                 })
-                .then((maps) => dispatch('getHistoricalMapsFromCommons', {
+                .then((maps) => dispatch('getHistoricalMapsFromFinna', {
                     locationParams: locationParams,
                     maps: maps
                 })));
@@ -1226,7 +1238,7 @@ export default new Vuex.Store({
                 };
                 axios.request(requestConfig).
                     then(function (response) {
-                        console.log(response);
+                        //console.log(response);
 
                         var maps = params.maps;
 

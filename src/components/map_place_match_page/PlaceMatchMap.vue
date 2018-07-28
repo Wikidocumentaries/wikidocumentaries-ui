@@ -27,6 +27,21 @@ export default {
         createMap() {
             var ol = this.$ol;
 
+            var view = null;
+
+            if (this.topicPointCoordinates() != null) {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat(this.topicPointCoordinates()),
+                    zoom: 14
+                })
+            }
+            else {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat([0, 0]),
+                    zoom: 1
+                })
+            }
+
             var map = new ol.Map({
                 target: 'placeMatchMap',
                 layers: [
@@ -34,15 +49,12 @@ export default {
                         source: new this.$ol.source.OSM()
                     })
                 ],
-                view: new ol.View({
-                    center: ol.proj.fromLonLat(this.topicPointCoordinates()),
-                    zoom: 17
-                })
+                view: view
             });
         },
         topicPointCoordinates () {
-            var coords = [];
-            if (this.wikidocumentaries.geo.location != "") {
+            var coords = null;
+            if (this.wikidocumentaries.geo.location != null) {
                 //console.log(this.wikidocumentaries.geo.location)
                 var coordPart = this.wikidocumentaries.geo.location.split('(')[1].split(')')[0];
                 //console.log(coordPart);
