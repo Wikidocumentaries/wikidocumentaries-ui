@@ -235,7 +235,7 @@ export default {
             }
         },
         getHistoricalBasemapsforTheArea() {
-            console.log("getHistoricalBasemapsforTheArea");
+            //console.log("getHistoricalBasemapsforTheArea");
 
             var ol = this.$ol;
 

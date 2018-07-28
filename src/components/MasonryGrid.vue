@@ -40,7 +40,7 @@ export default {
     },
     mounted: function () {
         this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
-        console.log(this.itemWidth);
+        //console.log(this.itemWidth);
         window.addEventListener('resize', this.handleWindowsResize);
     },
     beforeDestroy: function() {

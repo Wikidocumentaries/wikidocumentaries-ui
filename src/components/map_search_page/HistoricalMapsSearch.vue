@@ -80,7 +80,7 @@ export default {
             var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
             //console.log("lon: ", lon);
             //console.log("lat: ", lat);
-            var distance = heightLength > widthLength ? heightLength : widthLength;
+            var distance = 1000; //heightLength > widthLength ? heightLength : widthLength;
 
             var params = {
                 municipality: this.wikidocumentaries.geo.admin,

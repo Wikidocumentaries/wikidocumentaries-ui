@@ -2,11 +2,11 @@
     <div class="timeline-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</div>
-            <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <!-- <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-            </ToolbarMenu>
+            </ToolbarMenu> -->
         </div>
-        <div ref="timelineBar" class="timeline">
+        <div ref="timelineBar" class="timeline"">
             <div class="timeline-start"></div>
             <div class="timeline-start-year" :class="{ 'year-included': startYearIncluded }">{{ startYear }} -</div>
             <div ref="timelineCenturies" class="timeline-centuries">
@@ -20,7 +20,7 @@
             <div class="timeline-explanation" v-for="(item, index) in sortedTimelineItems" :key="item.id + item.title" :style="timelineItemExplanationStyle(index, item)">
                 <div class="timeline-explanation-box" :style="timelineExplanationBoxStyle(index)">{{ getItemExplanation(index) }}</div>
             </div>
-            <div :ref="'timelineExplanations' + index" v-for="(item, index) in sortedTimelineItems" :key="item.id" class="timeline-explanation-connector"></div>
+            <div :ref="'timelineExplanations' + index" v-for="(item, index) in sortedTimelineItems" :key="item.id + index" class="timeline-explanation-connector"></div>
         </div>
     </div>
 </template>
@@ -68,6 +68,7 @@ export default {
     mounted: function () {
         window.addEventListener('resize', this.handleWindowsResize);
         this.calculateCenturies(this.startYear);
+        this.createTimelineEventItems();
     },
     computed: {
         wikidocumentaries () {
@@ -103,10 +104,19 @@ export default {
 
             for (var i = 0; i < this.timeLineBasemapItems.length; i++) {
                 var basemapItem = this.timeLineBasemapItems[i];
+
+                var title = "";
+                if (basemapItem.basemap.title != null && basemapItem.basemap.title.length > 0) {
+                    title = basemapItem.basemap.title;
+                }
+                else {
+                    title = basemapItem.basemap.id;
+                }
+
                 var timeLineItem = {
                     id: basemapItem.basemap.server + basemapItem.basemap.warperID,
                     year: basemapItem.basemap.year,
-                    title: basemapItem.basemap.title,
+                    title: title,
                     pos: basemapItem.pos,
                     type: ITEM_TYPES.BASEMAP
                 }
@@ -115,10 +125,19 @@ export default {
 
             for (var i = 0; i < this.timelineImageItems.length; i++) {
                 var imageItem = this.timelineImageItems[i];
+                
+                var title = "";
+                if (imageItem.image.title != null && imageItem.image.title.length > 0) {
+                    title = imageItem.image.title;
+                }
+                else {
+                    title = imageItem.image.id;
+                }
+
                 var timeLineItem = {
                     id: imageItem.image.id,
                     year: imageItem.image.year,
-                    title: imageItem.image.title,
+                    title: title,
                     pos: imageItem.pos,
                     type: ITEM_TYPES.IMAGE
                 }
@@ -129,45 +148,13 @@ export default {
                 return (a.year - b.year);
             });
 
+            //console.log(timeLineItems);
             return timeLineItems;
         }
     },
     watch: {
         startYear: function(year, oldStartYear) {
             this.calculateCenturies(year);
-        },
-        wikidocumentaries: function(wikidocumentaries, oldWikidocumentaries) {
-            console.log("wikidocumentaries watch");
-            if (wikidocumentaries.wikidata != undefined) {
-                var eventDates = this.wikidocumentaries.wikidata.dates;
-                if (eventDates != undefined) {
-                    this.timelineEventItems = [];
-
-                    // Calculate position for event on the timeline
-
-                    var startYear = (this.startYear < 0 ? 0 : this.startYear);
-                    var timeSpan = this.endYear - startYear;    
-
-                    for (var i = 0; i < eventDates.length; i++) {
-                        var eventDate = eventDates[i];
-                        var year = this.createEventYearFromWikidata(eventDate);
-                        if (year != null) {
-                            var pos = -1;
-                            if (this.endYear != startYear) {
-                                pos = (year - startYear) / timeSpan;
-                            }
-                            else {
-                                pos = 0;
-                            }
-                            this.timelineEventItems.push({
-                                pos: pos,
-                                year: year,
-                                dateItem: eventDate
-                            });
-                        }
-                    }
-                }
-            }
         },
         selectedBasemaps: function(basemaps, oldBasemaps) {
             var oldest = 3000;
@@ -297,7 +284,7 @@ export default {
             }
         },
         createTimelineEventItems () {
-            if (this.wikidocumentaries.wikidata != undefined) {
+            if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata != null) {
                 var eventDates = this.wikidocumentaries.wikidata.dates;
 
                 this.timelineEventItems = [];
@@ -422,10 +409,10 @@ export default {
                 style += "background: #0079a1;z-index: 10;"
                 break;
             case ITEM_TYPES.EVENT:
-                style += "background: #cf412d;z-index: 11;"
+                style += "background: #cf412d;z-index: 12;"
                 break;
             case ITEM_TYPES.BASEMAP:
-                style += "background: #ffd76e;z-index: 10;"
+                style += "background: #ffd76e;z-index: 11;"
                 break;
             }
             return style;
@@ -490,14 +477,16 @@ export default {
 
             var containerHeight = this.$refs.timelineExplanations.clientHeight;
             //console.log(containerHeight);
-
+            //console.log(this.sortedTimelineItems.length);
+            //console.log(index);
+            //console.log(this.sortedTimelineItems[index].id);
             var height = containerHeight / this.sortedTimelineItems.length * (index + 1) - 11;
             //console.log(height);
             style += "height: " + height + "px;";
 
             switch (item.type) {
             case ITEM_TYPES.IMAGE:
-                style += "background: #c2dce4;z-index: 8;"
+                style += "background: #c2dce4;z-index: 7;"
                 break;
             case ITEM_TYPES.EVENT:
                 style += "background: #dbc1be;z-index: 9;"
@@ -525,14 +514,20 @@ function getTextWidth(text, font) {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.toolbar {
+    /* 3px <-> take into account the timeline-item width */
+    /* margin-right: -3px;  */
+}
+
 .dev-color {
     color: #d8c697;
     background: #dbc1be;
 }
 
-/* .timeline-component {
-    width: calc(100% - 5px);
-} */
+.timeline-component {
+    /* 3px <-> take into account the timeline-item width */
+    /*width: calc(100% - 3px);*/
+}
 
 .timeline {
     height: 40px;
@@ -647,6 +642,10 @@ function getTextWidth(text, font) {
     top: 0;
     position: absolute;
 } */
+
+.div-width-minus3 {
+    width: calc(100% - 3px);
+}
 
 .timeline-explanation-connector {
     position: absolute;

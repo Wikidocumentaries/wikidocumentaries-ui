@@ -1040,7 +1040,7 @@ export default new Vuex.Store({
                         //console.log(response.data);
 
                         commit('setWikidocumentariesImages', response.data);
-
+                        commit('setImagesShownOnTimeline', response.data);
                         resolve(response.data);
 
                     }).catch(function (error) {
@@ -1061,7 +1061,7 @@ export default new Vuex.Store({
 
             axios.request(requestConfig).
                 then(function (response) {
-                    console.log(response.data);
+                    //console.log(response.data);
 
                     commit('setHistoricalBasemaps', response.data);
 
@@ -1084,7 +1084,7 @@ export default new Vuex.Store({
         async getHistoricalMapsFromCommons(context, params) {
             return new Promise((resolve, reject) => {
 
-                console.log(params);
+                //console.log(params);
 
                 //resolve(params.maps);
 
@@ -1134,7 +1134,7 @@ export default new Vuex.Store({
                         console.log(error);
                         reject(error);
                     } else {
-                        console.log(data);
+                        //console.log(data);
 
                         var tasks = [];
 
@@ -1146,13 +1146,13 @@ export default new Vuex.Store({
                         }
 
                         Promise.all(tasks).then(allInfo => {
-                            console.log(allInfo);
+                            //console.log(allInfo);
 
                             var maps = params.maps;
 
                             for (var i = 0; i < allInfo.length; i++) {
                                 var info = Object.values(allInfo[i].query.pages)[0];
-                                console.log(info);
+                                //console.log(info);
 
                                 var imageURL = info.imageinfo[0].url;
                                 var thumbURL = info.imageinfo[0].thumburl;
@@ -1206,9 +1206,9 @@ export default new Vuex.Store({
                         type: "AllFields",
                         "filter[0]": '~format:"0/Map/"',
                         "filter[1]": 'online_boolean:"1"',
-                        "filter[2]": '{!bbox sfield=location_geo pt=' +
-                        params.locationParams.centerLon + ',' + params.locationParams.centerLat + ' d=' + params.locationParams.distance + '}',
-                        "filter[2]": '~geographic_facet:"' + params.locationParams.municipality + '"',
+                        // "filter[2]": '{!bbox sfield=location_geo pt=' +
+                        // params.locationParams.centerLon + ',' + params.locationParams.centerLat + ' d=' + params.locationParams.distance + '}',
+                        // "filter[2]": '~geographic_facet:"' + params.locationParams.municipality + '"',
                         "field[0]": 'id',
                         "field[1]": 'title',
                         "field[2]": 'geoLocations',
@@ -1226,7 +1226,7 @@ export default new Vuex.Store({
                 };
                 axios.request(requestConfig).
                     then(function (response) {
-                        //console.log(response);
+                        console.log(response);
 
                         var maps = params.maps;
 
@@ -1264,11 +1264,13 @@ export default new Vuex.Store({
                                         institutions = institutions.slice(0, -2);
                                     }
 
+                                    //console.log(images);
                                     var map = {
                                         id: record.id,
                                         title: record.title,
                                         //geoLocations: record.geoLocations,
                                         images: images,
+                                        thumbURL: images[0],
                                         imageURL: images[0],
                                         year: record.year,
                                         publisher: record.publisher,
@@ -1317,6 +1319,7 @@ export default new Vuex.Store({
                                             institutions: institutions,
                                             infoURL: record.onlineUrls[0].url,
                                             images: images,
+                                            thumbURL: images[0],
                                             imageURL: images[0],
                                             source: "finna_fennica",
                                             license: "Ks. lähde"

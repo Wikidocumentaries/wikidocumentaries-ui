@@ -39,10 +39,10 @@ export default {
                     id: MENU_ACTIONS.SHOW_IMAGES_ON_MAP,
                     text: 'topic_page.TopicImages.showImagesOnMapMenuText'
                 },
-                {
-                    id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
-                    text: 'topic_page.TopicImages.showImagesOnTimelineMenuText'
-                },
+                // {
+                //     id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
+                //     text: 'topic_page.TopicImages.showImagesOnTimelineMenuText'
+                // },
             ],
         }
     },
