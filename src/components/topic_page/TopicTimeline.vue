@@ -36,6 +36,7 @@ const MENU_ACTIONS = {
 const ITEM_TYPES = {
     EVENT: 0,
     IMAGE: 1,
+    BASEMAP: 2,
 }
 
 export default {
@@ -55,6 +56,7 @@ export default {
             endYearIncluded: false,
             timelineImageItems: [],
             timelineEventItems: [],
+            timeLineBasemapItems: [],
             timelineCenturies: [],
             maxTitleLengthInChars: 55,
             oddCenturies: false
@@ -74,6 +76,9 @@ export default {
         timelineImages () {
             return this.$store.state.timelineImages;
         },
+        selectedBasemaps () {
+            return this.$store.state.selectedBasemaps;
+        },
         shouldShowStartYear () {
             return this.timelineCenturies.length > 0;
         },
@@ -92,6 +97,18 @@ export default {
                     title: eventItem.dateItem.label,
                     pos: eventItem.pos,
                     type: ITEM_TYPES.EVENT
+                }
+                timeLineItems.push(timeLineItem);
+            }
+
+            for (var i = 0; i < this.timeLineBasemapItems.length; i++) {
+                var basemapItem = this.timeLineBasemapItems[i];
+                var timeLineItem = {
+                    id: basemapItem.basemap.server + basemapItem.basemap.warperID,
+                    year: basemapItem.basemap.year,
+                    title: basemapItem.basemap.title,
+                    pos: basemapItem.pos,
+                    type: ITEM_TYPES.BASEMAP
                 }
                 timeLineItems.push(timeLineItem);
             }
@@ -119,6 +136,86 @@ export default {
         startYear: function(year, oldStartYear) {
             this.calculateCenturies(year);
         },
+        wikidocumentaries: function(wikidocumentaries, oldWikidocumentaries) {
+            console.log("wikidocumentaries watch");
+            if (wikidocumentaries.wikidata != undefined) {
+                var eventDates = this.wikidocumentaries.wikidata.dates;
+                if (eventDates != undefined) {
+                    this.timelineEventItems = [];
+
+                    // Calculate position for event on the timeline
+
+                    var startYear = (this.startYear < 0 ? 0 : this.startYear);
+                    var timeSpan = this.endYear - startYear;    
+
+                    for (var i = 0; i < eventDates.length; i++) {
+                        var eventDate = eventDates[i];
+                        var year = this.createEventYearFromWikidata(eventDate);
+                        if (year != null) {
+                            var pos = -1;
+                            if (this.endYear != startYear) {
+                                pos = (year - startYear) / timeSpan;
+                            }
+                            else {
+                                pos = 0;
+                            }
+                            this.timelineEventItems.push({
+                                pos: pos,
+                                year: year,
+                                dateItem: eventDate
+                            });
+                        }
+                    }
+                }
+            }
+        },
+        selectedBasemaps: function(basemaps, oldBasemaps) {
+            var oldest = 3000;
+            var newest = 0;
+
+            for (var i = 0; i < basemaps.length; i++) {
+                if (basemaps[i].year != null) {
+                    oldest = oldest < basemaps[i].year ? oldest : basemaps[i].year;
+                    newest = newest > basemaps[i].year ? newest : basemaps[i].year;
+                }
+            }
+
+            //console.log(oldest, newest);
+
+            if (newest == this.endYear) {
+                this.endYearIncluded = true;
+            }
+            else {
+                this.endYearIncluded = false;
+            }
+
+            this.timeLineBasemapItems = [];
+
+            // Calculate position for each image on the timeline
+
+            var startYear = (this.startYear < 0 ? 0 : this.startYear);
+            var timeSpan = this.endYear - startYear;    
+
+            for (var i = 0; i < basemaps.length; i++) {
+                var basemap = basemaps[i];
+
+                if (basemap.year != null) {
+                    var pos = -1;
+                    if (this.endYear != startYear) {
+                        pos = (basemap.year - startYear) / timeSpan;
+                    }
+                    else {
+                        pos = 0;
+                    }
+                    if (pos >= 0) {
+                        this.timeLineBasemapItems.push({
+                            pos: pos,
+                            basemap: basemaps[i]
+                        });
+                    }
+                }
+            }
+        },
         timelineImages: function(images, oldImages) {
 
             // if (this.timelineImages.length > 0) {
@@ -131,8 +228,10 @@ export default {
             var newest = 0;
 
             for (var i = 0; i < images.length; i++) {
-                oldest = oldest < images[i].year ? oldest : images[i].year;
-                newest = newest > images[i].year ? newest : images[i].year;
+                if (images[i].year != null) {
+                    oldest = oldest < images[i].year ? oldest : images[i].year;
+                    newest = newest > images[i].year ? newest : images[i].year;
+                }
             }
 
             //console.log(oldest, newest);
@@ -180,9 +279,11 @@ export default {
                 for (var i = 0; i < this.sortedTimelineItems.length; i++) {
                     var element = this.$refs["timelineExplanations" + i][0];
                     //console.log(element);
-                    var style = this.timelineExplanationConnectorStyle(i);
-                    //console.log(style);
-                    element.style.cssText = style;
+                    if (element != undefined) {
+                        var style = this.timelineExplanationConnectorStyle(i);
+                        //console.log(style);
+                        element.style.cssText = style;
+                    }
                 }
             });
         }
@@ -323,6 +424,9 @@ export default {
             case ITEM_TYPES.EVENT:
                 style += "background: #cf412d;z-index: 11;"
                 break;
+            case ITEM_TYPES.BASEMAP:
+                style += "background: #ffd76e;z-index: 10;"
+                break;
             }
             return style;
         },
@@ -330,13 +434,16 @@ export default {
             var tempTimelineCenturies = this.timelineCenturies;
             var tempTimeLineImageItems = this.timelineImageItems;
             var tempTimelineEventItems = this.timelineEventItems;
+            var tempTimeLineBasemapItems = this.timeLineBasemapItems;
             this.timelineImageItems = [];
             this.timelineEventItems = [];
+            this.timeLineBasemapItems = [];
             this.timelineCenturies = [];
             this.$nextTick(function () {
                 this.timelineCenturies = tempTimelineCenturies;
                 this.timelineImageItems = tempTimeLineImageItems;
                 this.timelineEventItems = tempTimelineEventItems;
+                this.timeLineBasemapItems = tempTimeLineBasemapItems;
             });
         },
         timelineItemExplanationStyle(index, item) {
@@ -395,6 +502,9 @@ export default {
             case ITEM_TYPES.EVENT:
                 style += "background: #dbc1be;z-index: 9;"
                 break;
+            case ITEM_TYPES.BASEMAP:
+                style += "background: #d8c697;z-index: 8;"
+                break;
             }
             return style;
         }
@@ -416,9 +526,13 @@ function getTextWidth(text, font) {
 <style scoped>
 
 .dev-color {
-    color: #c2dce4;
+    color: #d8c697;
     background: #dbc1be;
 }
+
+/* .timeline-component {
+    width: calc(100% - 5px);
+} */
 
 .timeline {
     height: 40px;

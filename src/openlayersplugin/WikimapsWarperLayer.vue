@@ -123,7 +123,12 @@ export default {
 
             if (this.basemapInfo.bbox != undefined) {
                 var layerExtent = this.basemapInfo.bbox.split(',').map(Number);
-                //console.log(layerExtent);
+                console.log(layerExtent);
+                layerExtent[0] = layerExtent[0] < -180 ? -180 : layerExtent[0];
+                layerExtent[1] = layerExtent[1] < -90 ? -90 : layerExtent[1];
+                layerExtent[2] = layerExtent[2] > 180 ? 180 : layerExtent[2];
+                layerExtent[3] = layerExtent[3] > 90 ? 90 : layerExtent[3];
+                console.log(layerExtent);
                 var bottomLeft = ol.proj.fromLonLat([layerExtent[0], layerExtent[1]]);
                 var topRight = ol.proj.fromLonLat([layerExtent[2], layerExtent[3]]);
                 var projectedExtent = bottomLeft.concat(topRight);

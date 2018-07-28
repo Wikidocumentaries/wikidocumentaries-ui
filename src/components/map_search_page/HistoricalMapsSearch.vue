@@ -1,11 +1,11 @@
 <template>
-    <div class="maps">
+    <div class="maps-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('map_search_page.HistoricalMapsSearch.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-gear" :items="toolbarSettingsMenuItems" @doMenuItemAction="onDoMenuItemAction"></ToolbarMenu>
             <!--<ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarItems"></ToolbarMenu>-->
         </div>
-        <MasonryGrid :items="historicalMaps">
+        <MasonryGrid class="masonry-grid" :items="historicalMaps">
         </MasonryGrid>
     </div>
 </template>
@@ -106,8 +106,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.maps {
+.maps-component {
 
+}
+
+.masonry-grid {
+    width: calc(100% - 1px);
 }
 
 </style>

@@ -16,7 +16,8 @@ export default {
         },
         topic_page: {
             BaseMapDialog: {
-                chooseMapTitle: "Choose historical base map",
+                chooseMapTitle: "Choose historical base map(s)",
+                chooseMapHelpNote: "Tip: ctrl+click allows to select many maps",
                 yearAbbreviation: "y.",
             },
             HomePage: {
@@ -28,7 +29,7 @@ export default {
             },
             TopicMap: {
                 headerTitle: 'Topic on the map',
-                chooseHistoricalBasemapMenuText: "Choose historical base map...",
+                chooseHistoricalBasemapMenuText: "Choose historical base map(s)...",
                 hideImagesMenuText: "Hide images",
                 chooseTimelineMapsMenuText: "Choose timeline maps..."
             },
@@ -100,7 +101,8 @@ export default {
         },
         topic_page: {
             BaseMapDialog: {
-                chooseMapTitle: "Valitse historiallinen taustakartta",
+                chooseMapTitle: "Valitse historiallinen taustakartta tai kartat",
+                chooseMapHelpNote: "Vinkki: useita karttoja voi valita ctrl+napautus-yhdistelmällä",
                 yearAbbreviation: "v.",
             },
             HomePage: {
@@ -112,7 +114,7 @@ export default {
             },
             TopicMap: {
                 headerTitle: 'Sijainti kartalla',
-                chooseHistoricalBasemapMenuText: "Valitse historiallinen taustakartta...",
+                chooseHistoricalBasemapMenuText: "Valitse historiallinen taustakartta tai kartat...",
                 hideImagesMenuText: "Piilota kuvat",
                 chooseTimelineMapsMenuText: "Valitse aikajanan kartat..."
             },
@@ -184,7 +186,8 @@ export default {
         },
         topic_page: {
             BaseMapDialog: {
-                chooseMapTitle: "Välj historisk baskarta",
+                chooseMapTitle: "Välj historisk baskarta eller baskartor",
+                chooseMapHelpNote: "Tips: ctrl + klicka tillåter att du väljer många kartor",
                 yearAbbreviation: "år",
             },
             HomePage: {
@@ -196,7 +199,7 @@ export default {
             },
             TopicMap: {
                 headerTitle: 'Plats på kartan',
-                chooseHistoricalBasemapMenuText: "Välj historisk baskarta...",
+                chooseHistoricalBasemapMenuText: "Välj historisk baskarta eller baskartor...",
                 hideImagesMenuText: "Göm bilder",
                 chooseTimelineMapsMenuText: "Välj kartor till tidslinjen..."
             },

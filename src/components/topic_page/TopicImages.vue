@@ -1,5 +1,5 @@
 <template>
-    <div class="images">
+    <div class="images-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
@@ -7,7 +7,7 @@
             </ToolbarMenu>
         </div>
         
-        <MasonryGrid :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
+        <MasonryGrid class="masonry-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
         </MasonryGrid>
     </div>
 </template>
@@ -73,6 +73,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.images-component {
+    /* width: calc(100% - 1px); */
+}
+
+.masonry-grid {
+    width: calc(100% - 1px);
+}
 
 .grid {
 

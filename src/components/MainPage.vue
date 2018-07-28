@@ -105,6 +105,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* .main-content {
+    width: calc(100% - 10px);
+} */
+
 .tab-button {
     padding: 6px 12px;
     border-top-left-radius: 3px;

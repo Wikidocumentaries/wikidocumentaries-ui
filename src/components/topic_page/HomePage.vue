@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
     <div class="row"> 
       <WikipediaArticle class="column one"></WikipediaArticle>
@@ -60,9 +60,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+/* .home-page {
+    width: calc(100% - 5px);
+} */
+
 .row {
 	display: flex;
 	flex-direction: row;
+    /* width: calc(100% - 10px); */
 }
 
 .column {

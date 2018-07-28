@@ -1,5 +1,5 @@
 <template>
-    <div class="map-component">
+    <div class="newspapers-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicNewspapers.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
@@ -75,6 +75,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* .newspapers-component {
+    width: calc(100% - 10px);
+} */
 
 .newspapers {
     height: 200px;

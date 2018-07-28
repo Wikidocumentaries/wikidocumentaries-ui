@@ -37,9 +37,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .header {
     position:relative;
+    /* width: calc(100% - 10px); */
 }
+
 .header-image {
     width: 100%;
     height: 400px; /* Remove for production? */
@@ -60,7 +63,7 @@ export default {
     position:absolute;
     bottom: 0px;
     left: 10px;
-    width: 100%; 
+    width: calc(100% - 10px); 
 }
 h1 {
     font-weight: bold;

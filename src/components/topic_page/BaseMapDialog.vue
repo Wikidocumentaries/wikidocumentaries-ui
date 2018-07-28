@@ -5,8 +5,8 @@
                 <div class="modal-container" @click.stop>
                     <div class="modal-header">
                         <h3 class="modal-header-h3">{{ $t('topic_page.BaseMapDialog.chooseMapTitle') }}</h3>
+                        <p>{{ $t('topic_page.BaseMapDialog.chooseMapHelpNote') }}</p>
                     </div>
-
                     <div class="modal-body">
                         <div ref="gridItems" transition-duration="0.3s" class="grid-items" item-selector=".grid-item" >
                             <div v-masonry-tile class="grid-item" v-for="item in basemapsSortedByYear" v-bind:key="item.id" @click.exact="mapClicked" @click.ctrl.exact="mapCtrlClicked" :mapID="item.id">
@@ -93,7 +93,8 @@ export default {
     },
     methods: {
         infoURL(item) {
-            return "https://commons.wikimedia.org/wiki/" + item.id;
+            return item.server + "maps/" + item.warperID;
+            //return "https://commons.wikimedia.org/wiki/" + item.id;
         },
         itemSelected (item) {
             for (var i = 0; i < this.newMaps.length; i++) {
@@ -140,7 +141,18 @@ export default {
             var id = event.currentTarget.getAttribute('mapID');
             for (var i = 0; i < this.basemaps.length; i++) {
                 if (this.basemaps[i].id == id) {
-                    this.newMaps.push(this.basemaps[i]);
+                    var alreadySelected = false;
+                    for (var j = 0; j < this.newMaps.length; j++) {
+                        if (this.newMaps[j].id == id) {
+                            alreadySelected = true;
+                            this.newMaps.splice(j, 1);
+                            break;
+                        }
+                    }
+                    if (!alreadySelected) {
+                        this.newMaps.push(this.basemaps[i]);
+                    }
+
                     break;
                 }
             }
@@ -198,17 +210,16 @@ export default {
 }
 
 .modal-header {
-  	font-family: 'Barlow Condensed', sans-serif;
-    color: #8e8e8e;
     padding: 6px 12px;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    font-weight: bold;
     flex-wrap: wrap;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #8e8e8e;
 }
 
 .modal-header-h3 {
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 .modal-body {

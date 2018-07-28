@@ -71,10 +71,10 @@ export default {
                     id: MENU_ACTIONS.HIDE_PHOTOS,
                     text: 'topic_page.TopicMap.hideImagesMenuText'
                 },
-                {
-                    id: MENU_ACTIONS.CHOOSE_TIMELINE_MAPS,
-                    text: 'topic_page.TopicMap.chooseTimelineMapsMenuText'
-                },
+                // {
+                //     id: MENU_ACTIONS.CHOOSE_TIMELINE_MAPS,
+                //     text: 'topic_page.TopicMap.chooseTimelineMapsMenuText'
+                // },
             ],
             showBaseMapDialog: false,
             showBasemapTransparencyDialog: false,
@@ -463,6 +463,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+/* .map-component {
+    width: calc(100% - 10px);
+} */
 
 .map {
     width: 100%;

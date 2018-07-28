@@ -71,7 +71,8 @@ const wikidocumentaries = {
                 value: "Freemason's Tomb (Helsinki)",
                 url: "https://commons.wikimedia.org/wiki/Category:Freemason's%20Tomb%20(Helsinki)"
             },
-        ]
+        ],
+        dates: [],
     },
     images: [
         {
@@ -797,7 +798,8 @@ export default new Vuex.Store({
                         value: null,
                         url: null
                     },
-                    statements: []
+                    statements: [],
+                    dates: [],
                 },
                 images: [],
                 geo: {

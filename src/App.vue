@@ -18,6 +18,10 @@ html, body {
   /*overflow-x: hidden;*/
 }
 
+#app {
+  /* width: calc(100% - 5px); */
+}
+
 body {
 	font-family: 'Helvetica Neue', sans-serif;
 	font-size: 11pt;

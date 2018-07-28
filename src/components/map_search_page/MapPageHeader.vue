@@ -116,7 +116,7 @@ export default {
     position:absolute;
     bottom: 0px;
     left: 10px;
-    width: 100%; 
+    width: calc(100% - 10px); 
 }
 h1 {
     font-weight: bold;
