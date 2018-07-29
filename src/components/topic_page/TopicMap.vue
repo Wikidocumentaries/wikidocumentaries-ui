@@ -388,8 +388,9 @@ export default {
                     var partsWithoutParenthesis = [];
                     for (var i = 0; i < parts.length; i++) {
                         var part = null;
-                        if (parts[i].substr(parts[i].length -1, 1) == ',') {
-                            part = parts[i].substr(0, parts[i].length - 1);
+                        var trimmed = parts[i].trim();
+                        if (trimmed.substr(trimmed.length - 1, 1) == ',') {
+                            part = trimmed.substr(0, trimmed.length - 1);
                         }
                         else {
                             part = parts[i];
