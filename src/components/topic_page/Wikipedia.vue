@@ -6,9 +6,16 @@
       </div>
       <HeaderLink class="header-link" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
-    <div class="text">
-      <span v-html="wikidocumentaries.wikipedia.html" @click="handleHTMLClick"></span>
+    <div class="text wiki-html">
+      <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>
     </div>
+    <div class="text wiki-html" v-if="expanded">
+      <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
+    </div>
+    <button class="expander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
+      <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
+      <i v-else class="wikiglyph wikiglyph-caret-down"></i>
+    </button>
   </div>
 </template>
 
@@ -25,37 +32,15 @@ export default {
   },
   data () {
     return {
+      expanded: false
     }
   },
   components: {
     HeaderLink
   },
   methods: {
-    handleHTMLClick(event) {
-        //console.log("handleHTMLClick");
-        //window.location.reload(true);
-        //console.log(window.location);
-        //console.log(window.location.pathname);
-
-        var startIndex = window.location.href.indexOf('/wiki/') + 6;
-        var endIndex = window.location.href.indexOf('?');
-        var language = window.location.href.substr(-2, 2);
-        
-        var topic = window.location.href.substring(startIndex, endIndex);
-        //console.log(topic);
-        //console.log(this.wikidocumentaries.title);
-        if (topic != encodeURIComponent(this.wikidocumentaries.title.split(' ').join('_'))) {
-            this.$router.go();
-        }
-
-        //this.$router.go();
-        // this.$router.go(window.location.pathname);
-        // this.$router.push({
-        //     path: `/wiki/${topic}`,
-        //     query: {
-        //         language: 'fi'
-        //     }
-        // });
+    switchExpand(event) {
+      this.expanded = !this.expanded;
     }
   }
 }
@@ -63,5 +48,42 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.expander {
+  text-align: right;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.expander:hover {
+  outline: 0;
+}
+
+.expander:focus {
+  outline: 0;
+}
+
+
+.wiki-html >>> .h2 {
+  font-size: 14pt;
+}
+
+.wiki-html >>> .h3 {
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+.wiki-html >>> .h4 {
+  font-size: 11pt;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.wiki-html >>> .h5 {
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: italic;
+}
 
 </style>
