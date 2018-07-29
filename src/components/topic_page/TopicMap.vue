@@ -43,6 +43,7 @@ const MENU_ACTIONS = {
     SET_BACKGROUND_MAP_TRANSPARENCY: 1,
     HIDE_PHOTOS: 2,
     CHOOSE_TIMELINE_MAPS: 3,
+    SHOW_NEARBY_TOPICS: 4,
 }
 
 export default {
@@ -75,6 +76,10 @@ export default {
                 //     id: MENU_ACTIONS.CHOOSE_TIMELINE_MAPS,
                 //     text: 'topic_page.TopicMap.chooseTimelineMapsMenuText'
                 // },
+                {
+                    id: MENU_ACTIONS.SHOW_NEARBY_TOPICS,
+                    text: 'topic_page.TopicMap.showNearbyPlacesMenuText'
+                },
             ],
             showBaseMapDialog: false,
             showBasemapTransparencyDialog: false,
@@ -333,7 +338,38 @@ export default {
             case MENU_ACTIONS.CHOOSE_TIMELINE_MAPS:
                 // TODO
                 break;
+            case MENU_ACTIONS.SHOW_NEARBY_TOPICS:
+                this.getNearbyPlaces();
             }
+        },
+        getNearbyPlaces() {
+            var ol = this.$ol;
+            var extent = this.map.getView().calculateExtent();
+            //console.log(extent);
+            var bottomLeftLonLat3857 = [extent[0], extent[1]];
+            var topLeftLonLat3857 = [extent[0], extent[3]];
+            var bottomRightLonLat3857 = [extent[2], extent[1]];
+            var topRightLonLat3857 = [extent[2], extent[3]];
+            var bottomLeftLonLat = ol.proj.transform(bottomLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var topLeftLonLat = ol.proj.transform(topLeftLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var bottomRightLonLat = ol.proj.transform(bottomRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            var topRightLonLat = ol.proj.transform(topRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
+            //console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
+
+            var lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
+            var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
+            //console.log("lon: ", lon);
+            //console.log("lat: ", lat);
+            var distance = 10000; //heightLength > widthLength ? heightLength : widthLength;
+
+            var params = {
+                language: this.$i18n.locale,
+                lon: lon, 
+                lat: lat,
+                radius: distance,
+            }
+
+            this.$store.dispatch('getNearbyPlaces', params);
         },
         getFirstGeoLocationGeomType (image) {
             var type = null;

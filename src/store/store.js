@@ -146,7 +146,7 @@ const wikidocumentaries = {
         location: "POINT(24.943752 60.176013)",
         admin: "Helsinki"
     },
-    topicStartYear: 1784
+    topicStartYear: 1784,
 }
 
 var basemaps = [ // historical / old ones; source always warper.wmflabs.org
@@ -752,7 +752,8 @@ export default new Vuex.Store({
             warperID: 148,
             server: "http://warper.wmflabs.org/",
             coordinates: [24.9351, 60.1658],
-        }
+        },
+        nearbyWikiItems: [],
     },
     getters: {
         topicStartYear: state => {
@@ -819,6 +820,7 @@ export default new Vuex.Store({
             state.selectedBasemaps = [];
             state.selectedBasemapOpacity = 0.7;
             state.shouldFitMapToBasemap = false;
+            state.nearbyWikiItems = [];
         },
         setImagesShownOnMap(state, images) {
             state.shownImages = images;
@@ -884,6 +886,9 @@ export default new Vuex.Store({
                 state.selectedBasemaps = [basemaps[0]];
             }
         },
+        setNearbyWikiItems(state, items) {
+            state.nearbyWikiItems = items;
+        }
 
     },
     actions: {
@@ -966,6 +971,7 @@ export default new Vuex.Store({
                             context.commit('setWikidata', response.data.wikidata);
 
                             if (response.data.wikidata != undefined) {
+                                //console.log(response.data.wikidata.statements);
                                 var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
                                 context.commit('setTopicStartYear', startYear);
                             }
@@ -1360,6 +1366,24 @@ export default new Vuex.Store({
                     });
             });
         },
+        async getNearbyPlaces(context, params) {
+            var requestConfig = {
+                baseURL: BASE_URL,
+                url: "/wiki/items/by/latlon",
+                method: "get",
+                params: params
+            };
+
+            axios.request(requestConfig).
+                then(function (response) {
+                    console.log(response.data);
+
+                    commit('setNearbyWikiItems', response.data);
+
+                }).catch(function (error) {
+                    console.log(error);
+                });
+        }
     }
 });
 
