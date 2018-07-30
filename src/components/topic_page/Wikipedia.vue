@@ -9,7 +9,11 @@
     <div class="text wiki-html">
       <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>
     </div>
-    <div class="text wiki-html" v-if="expanded">
+    <div class="text wiki-html expanded-html" v-if="expanded">
+      <button class="expander top-exander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
+        <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
+        <i v-else class="wikiglyph wikiglyph-caret-down"></i>
+      </button>
       <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
     </div>
     <button class="expander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
@@ -50,6 +54,10 @@ export default {
 <style scoped>
 
 .expander {
+  width: 100%;
+  padding-top: 0; 
+  padding-right: 12px;
+  margin-top: -10px;
   text-align: right;
   border: none;
   cursor: pointer;
@@ -64,6 +72,14 @@ export default {
   outline: 0;
 }
 
+.top-exander {
+  margin-bottom: -10px;
+  padding-right: 0px;
+}
+
+.expanded-html >>> .h2:first-of-type {
+  margin-top: -10px;
+}
 
 .wiki-html >>> .h2 {
   font-size: 14pt;

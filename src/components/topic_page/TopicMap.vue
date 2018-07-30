@@ -164,7 +164,7 @@ export default {
             }
         },
         nearbyWikiItems: function(items, oldItems) {
-            console.log("watch nearbyWikiItems", items);
+            //console.log("watch nearbyWikiItems", items);
         }
         // wikidocumentaries: function (oldWikidocumentaries, newWikidocumentaries) {
         //     this.createImageFeatures();

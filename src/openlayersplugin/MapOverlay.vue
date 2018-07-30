@@ -49,7 +49,7 @@ export default {
         },
         overlayGroupItemCount: function(count, oldCount) {
             var ol = this.$ol;
-            console.log(count);
+            //console.log(count);
             if (count == 1) {
                 this.map.getView().animate({
                     center: ol.proj.fromLonLat(this.position)
