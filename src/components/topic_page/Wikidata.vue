@@ -8,16 +8,20 @@
     </div>
     <div class="item-instance-title">{{ title }}</div>
     <ul class="statements" v-if="wikidocumentaries.wikidata != undefined">
-        <li class="statement" v-for="statement in wikidocumentaries.wikidata.statements" v-bind:key="statement.id">
+        <li class="statement-list-item" v-for="statement in shownStatements" v-bind:key="statement.id">
             <div class="statement-label">{{ statement.label }}</div>
-            <div class="statement-value">
-                <div v-if="statement.url != null">
-                    <a v-bind:href="getStatementURL(statement)" :target="getTarget(statement)" :style="getStyle(statement)">{{ statement.value }}</a>
-                </div>
-                <div v-else>
-                    {{ statement.value }}
-                </div>
-            </div>
+            <ul class="statement-values">
+                <li class="statment-value-list-item" v-for="value in statement.values" :key="value.value">
+                    <div class="statement-value">
+                        <div v-if="value.url != null">
+                            <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ value.value }}</a>
+                        </div>
+                        <div v-else>
+                            {{ value.value }}
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </li>
     </ul>
   </div>
@@ -40,6 +44,53 @@ export default {
     wikidocumentaries () {
         return this.$store.state.wikidocumentaries;
     },
+    shownStatements () {
+
+        var statements = this.wikidocumentaries.wikidata.statements;
+        var shownStatements = [];
+
+        const removableProperties = ['P1472', 'P94', 'P242', 'P18', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896'];
+
+        for (var i = 0; i < statements.length; i++) {
+            var statement = statements[i];
+            if (statement.id == 'P31') {
+                if (statement.values.length == 1) {
+                    continue;
+                }
+            }
+            else if (statement.id == 'P998') { // Value may be very long
+
+                var modifiedStatement = Object.assign({}, statement);
+
+                for (var j = 0; j < modifiedStatement.values.length; j++) {
+                    //console.log(modifiedStatement.values[j]);
+                    var parts = modifiedStatement.values[j].value.split('/');
+                    //console.log(parts);
+                    var newValue = "";
+                    var count = 0;
+                    for (var k = 0; k < parts.length; k++) {
+                        if (count > 15) {
+                            newValue += " ";
+                            count = 0;
+                        }
+                        newValue += parts[k] + '/';
+                        count += parts[k].length;
+                    }
+
+                    newValue = newValue.substring(0, newValue.length - 1);
+
+                    modifiedStatement.values[j].value = newValue;
+                }
+                shownStatements.push(modifiedStatement);
+            }
+            else if (removableProperties.indexOf(statement.id) == -1) {
+                
+                shownStatements.push(statement);
+            }
+        }
+
+        return shownStatements;
+    },
     wikidataURL: function() {
         //console.log(this.wikidocumentaries);
         if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
@@ -59,28 +110,28 @@ export default {
     },
   },
   methods: {
-      getStatementURL(statement) {
-            if (statement.sitelinks != undefined) {
-                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
-                    return "/wiki/" + statement.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
+      getStatementURL(value) {
+            if (value.sitelinks != undefined) {
+                if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+                    return "/wiki/" + value.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
                 }
-                else if (statement.sitelinks.enwiki != undefined) {
-                    return "/wiki/" + statement.sitelinks.enwiki.split(' ').join('_') + "?language=" + "en";
+                else if (value.sitelinks.enwiki != undefined) {
+                    return "/wiki/" + value.sitelinks.enwiki.split(' ').join('_') + "?language=" + "en";
                 }
                 else {
-                    return statement.url;
+                    return value.url;
                 }
             }
             else {
-                return statement.url;
+                return value.url;
             }  
       },
-      getTarget(statement) {
-          if (statement.sitelinks != undefined) {
-                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+      getTarget(value) {
+          if (value.sitelinks != undefined) {
+                if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "_self";
                 }
-                else if (statement.sitelinks.enwiki != undefined) {
+                else if (value.sitelinks.enwiki != undefined) {
                     return "_self";
                 }
                 else {
@@ -91,12 +142,12 @@ export default {
                 return "_blank";
             }  
       },
-      getStyle(statement) {
-          if (statement.sitelinks != undefined) {
-                if (statement.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
+      getStyle(value) {
+          if (value.sitelinks != undefined) {
+                if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "";
                 }
-                else if (statement.sitelinks.enwiki != undefined) {
+                else if (value.sitelinks.enwiki != undefined) {
                     return "";
                 }
                 else {
@@ -132,17 +183,28 @@ export default {
     padding: 6px 12px;
 }
 
-.statement {
+.statement-list-item {
     padding-bottom: 12px;
     display: flex;
 }
 
 .statement-label {
-    flex: 1 1 34%;
+    flex: 0 0 34%;
 }
 
 .statement-label::first-letter {
     text-transform: uppercase;
+}
+
+.statements-values {
+    list-style-type: none;
+    margin: 0;
+    padding: 6px 12px;
+}
+
+.statment-value-list-item {
+    padding-bottom: 12px;
+    display: flex;
 }
 
 .statement-value {
