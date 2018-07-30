@@ -13,13 +13,24 @@
                 {{ wikidocumentaries.title }}
                 </div>
             </div>
-            <MapOverlay v-for="(image, index) in shownImages" v-if="image.geoLocations.length > 0" v-bind:key="image.infoURL" :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan=" ( shownImages.length > 1 ) ? false  : true " :autoPanMargin="200" :overlayGroupItemCount="shownImages.length">
-                <div class="map-popup-container">
-                    <div class="map-popup">
-                        <img :src="image.thumbURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
+            <div v-for="(image, index) in shownImages" :key="image.infoURL">
+                <MapOverlay v-if="image.geoLocations.length > 0"  :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan=" ( shownImages.length > 1 ) ? false  : true " :autoPanMargin="200" :overlayGroupItemCount="shownImages.length">
+                    <div class="map-popup-container">
+                        <div class="map-popup">
+                            <img :src="image.thumbURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
+                        </div>
                     </div>
+                </MapOverlay>
+            </div>
+            <div v-if="showNearbyPlaces">
+                <div v-for="item in nearbyWikiItems" :key="item.wikidata.id">
+                    <MapOverlay v-if="item.wikidata.sitelinks[language + 'wiki'] != undefined" :map="map" :position="item.position" :offset="[0,0]" :autoPan="false" :autoPanMargin="200" :overlayGroupItemCount="nearbyWikiItems.length">
+                        <div class="map-popup-nearby-place-container">
+                            <a :href="getSiteLink(item.wikidata.sitelinks[language + 'wiki'])">{{ item.wikidata.sitelinks[language + 'wiki'].title }}</a>
+                        </div>
+                    </MapOverlay>
                 </div>
-            </MapOverlay>
+            </div>
             <WikimapsWarperLayer v-for="basemapInfo in selectedBasemaps" :key="basemapInfo.server + basemapInfo.warperID" ref="warperLayer" :map="map" :basemapInfo="basemapInfo"></WikimapsWarperLayer>
         </div>
         <BaseMapDialog :shouldShowDialog="showBaseMapDialog" @close="showBaseMapDialog = false">
@@ -38,12 +49,15 @@ import BaseMapDialog from '@/components/topic_page/BaseMapDialog'
 import TransparencyDialog from '@/components/topic_page/TransparencyDialog'
 import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 
+import turf_distance from '@turf/distance/index'
+
 const MENU_ACTIONS = {
     CHOOSE_BACKGROUND_MAP: 0,
     SET_BACKGROUND_MAP_TRANSPARENCY: 1,
     HIDE_PHOTOS: 2,
     CHOOSE_TIMELINE_MAPS: 3,
     SHOW_NEARBY_TOPICS: 4,
+    HIDE_NEARBY_TOPICS: 5,
 }
 
 export default {
@@ -83,6 +97,7 @@ export default {
             ],
             showBaseMapDialog: false,
             showBasemapTransparencyDialog: false,
+            showNearbyPlaces: false
         }
     },
     components: {
@@ -109,6 +124,12 @@ export default {
         },
         topicLocation() {
             return this.wikidocumentaries.geo.location;
+        },
+        nearbyWikiItems() {
+            return this.$store.state.nearbyWikiItems;
+        },
+        language() {
+            return this.$i18n.locale;
         }
     },
     watch: {
@@ -142,6 +163,9 @@ export default {
                 
             }
         },
+        nearbyWikiItems: function(items, oldItems) {
+            console.log("watch nearbyWikiItems", items);
+        }
         // wikidocumentaries: function (oldWikidocumentaries, newWikidocumentaries) {
         //     this.createImageFeatures();
         // }
@@ -264,6 +288,11 @@ export default {
 
             this.$store.dispatch('getHistoricalBasemaps', params);
         },
+        getSiteLink(sitelink) {
+            var link = '/wiki/';
+            link += encodeURIComponent(sitelink.title);
+            return link;
+        },
         createImageFeatures () {
             var ol = this.$ol;
 
@@ -340,7 +369,32 @@ export default {
                 break;
             case MENU_ACTIONS.SHOW_NEARBY_TOPICS:
                 this.getNearbyPlaces();
+                this.showNearbyPlaces = true;
+                this.removeMenuItem(MENU_ACTIONS.SHOW_NEARBY_TOPICS);
+                this.addMenuItem({
+                    id: MENU_ACTIONS.HIDE_NEARBY_TOPICS,
+                    text: 'topic_page.TopicMap.hideNearbyPlacesMenuText'
+                });
+                break;
+            case MENU_ACTIONS.HIDE_NEARBY_TOPICS:
+                this.showNearbyPlaces = false;
+                this.removeMenuItem(MENU_ACTIONS.HIDE_NEARBY_TOPICS);
+                this.addMenuItem({
+                    id: MENU_ACTIONS.SHOW_NEARBY_TOPICS,
+                    text: 'topic_page.TopicMap.showNearbyPlacesMenuText'
+                });
             }
+        },
+        removeMenuItem(id) {
+            for (var i = 0; i < this.toolbarActionMenuItems.length; i++) {
+                if (this.toolbarActionMenuItems[i].id == id) {
+                    this.toolbarActionMenuItems.splice(i, 1);
+                    break;
+                } 
+            }
+        },
+        addMenuItem(item) {
+            this.toolbarActionMenuItems.push(item);
         },
         getNearbyPlaces() {
             var ol = this.$ol;
@@ -355,14 +409,17 @@ export default {
             var bottomRightLonLat = ol.proj.transform(bottomRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
             var topRightLonLat = ol.proj.transform(topRightLonLat3857, 'EPSG:3857', 'EPSG:4326');
             //console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
-
+            var heightLength = turf_distance(bottomLeftLonLat, topLeftLonLat);
+            var widthLength = turf_distance(bottomLeftLonLat, bottomRightLonLat);
             var lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
             var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
             //console.log("lon: ", lon);
             //console.log("lat: ", lat);
-            var distance = 10000; //heightLength > widthLength ? heightLength : widthLength;
-
+            var distance = heightLength > widthLength ? heightLength : widthLength * 1000 / 2;
+            //console.log(distance);
+            distance = distance < 10000 ? distance: 10000;
             var params = {
+                topic: this.wikidocumentaries.title,
                 language: this.$i18n.locale,
                 lon: lon, 
                 lat: lat,
@@ -551,6 +608,13 @@ export default {
 
 .topic-popup-hidden {
     display: none;
+}
+
+.map-popup-nearby-place-container {
+    position: relative;
+	background: #ffffff;
+	border: 1px solid #000000;
+    padding: 12px 6px;
 }
 
 </style>

@@ -32,7 +32,8 @@ export default {
                 chooseHistoricalBasemapMenuText: "Choose historical base map(s)...",
                 hideImagesMenuText: "Hide images",
                 chooseTimelineMapsMenuText: "Choose timeline maps...",
-                showNearbyPlacesMenuText: "Show nearby places"
+                showNearbyPlacesMenuText: "Show nearby places",
+                hideNearbyPlacesMenuText: "Hide nearby places"
             },
             TopicNewspapers: {
                 headerTitle: 'Newspaper clippings',
@@ -118,7 +119,8 @@ export default {
                 chooseHistoricalBasemapMenuText: "Valitse historiallinen taustakartta tai kartat...",
                 hideImagesMenuText: "Piilota kuvat",
                 chooseTimelineMapsMenuText: "Valitse aikajanan kartat...",
-                showNearbyPlacesMenuText: "Näytä lähellä sijaitsevat kohteet"
+                showNearbyPlacesMenuText: "Näytä lähellä sijaitsevia kohteita",
+                hideNearbyPlacesMenuText: "Piilota lähellä sijaitsevat kohteet"
             },
             TopicNewspapers: {
                 headerTitle: 'Lehtileikkeitä',
@@ -204,7 +206,8 @@ export default {
                 chooseHistoricalBasemapMenuText: "Välj historisk baskarta eller baskartor...",
                 hideImagesMenuText: "Göm bilder",
                 chooseTimelineMapsMenuText: "Välj kartor till tidslinjen...",
-                showNearbyPlacesMenuText: "Visa närliggande platser"
+                showNearbyPlacesMenuText: "Visa närliggande platser",
+                hideNearbyPlacesMenuText: "Göm närliggande platser"
             },
             TopicNewspapers: {
                 headerTitle: 'Pressklipp',

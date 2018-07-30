@@ -1376,9 +1376,9 @@ export default new Vuex.Store({
 
             axios.request(requestConfig).
                 then(function (response) {
-                    console.log(response.data);
+                    //console.log(response.data);
 
-                    commit('setNearbyWikiItems', response.data);
+                    context.commit('setNearbyWikiItems', response.data);
 
                 }).catch(function (error) {
                     console.log(error);
