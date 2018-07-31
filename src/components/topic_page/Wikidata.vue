@@ -11,13 +11,17 @@
         <li class="statement-list-item" v-for="statement in shownStatements" v-bind:key="statement.id">
             <div class="statement-label">{{ statement.label }}</div>
             <ul class="statement-values">
-                <li class="statment-value-list-item" v-for="value in statement.values" :key="value.value">
+                <li class="statment-value-list-item" v-for="value in statement.values" :key="getID(value)">
                     <div class="statement-value">
                         <div v-if="value.url != null">
-                            <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ value.value }}</a>
+                            <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                            <br v-if="value.qualifiers != undefined">
+                            <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                         </div>
                         <div v-else>
-                            {{ value.value }}
+                            {{ getValue(value) }}
+                            <br v-if="value.qualifiers != undefined">
+                            <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                         </div>
                     </div>
                 </li>
@@ -30,87 +34,87 @@
 <script>
 import HeaderLink from '@/components/HeaderLink'
 export default {
-  name: 'WikidataItem',
-  props: {
-  },
-  data () {
-    return {
-    }
-  },
-  components: {
-    HeaderLink
-  },
-  computed: {
-    wikidocumentaries () {
-        return this.$store.state.wikidocumentaries;
+    name: 'WikidataItem',
+    props: {
     },
-    shownStatements () {
+    data () {
+        return {
+        }
+    },
+    components: {
+        HeaderLink
+    },
+    computed: {
+        wikidocumentaries () {
+            return this.$store.state.wikidocumentaries;
+        },
+        shownStatements () {
 
-        var statements = this.wikidocumentaries.wikidata.statements;
-        var shownStatements = [];
+            var statements = this.wikidocumentaries.wikidata.statements;
+            var shownStatements = [];
 
-        const removableProperties = ['P1472', 'P94', 'P242', 'P18', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896'];
+            const removableProperties = ['P1472', 'P94', 'P242', 'P18', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896'];
 
-        for (var i = 0; i < statements.length; i++) {
-            var statement = statements[i];
-            if (statement.id == 'P31') {
-                if (statement.values.length == 1) {
-                    continue;
-                }
-            }
-            else if (statement.id == 'P998') { // Value may be very long
-
-                var modifiedStatement = Object.assign({}, statement);
-
-                for (var j = 0; j < modifiedStatement.values.length; j++) {
-                    //console.log(modifiedStatement.values[j]);
-                    var parts = modifiedStatement.values[j].value.split('/');
-                    //console.log(parts);
-                    var newValue = "";
-                    var count = 0;
-                    for (var k = 0; k < parts.length; k++) {
-                        if (count > 15) {
-                            newValue += " ";
-                            count = 0;
-                        }
-                        newValue += parts[k] + '/';
-                        count += parts[k].length;
+            for (var i = 0; i < statements.length; i++) {
+                var statement = statements[i];
+                if (statement.id == 'P31') {
+                    if (statement.values.length == 1) {
+                        continue;
                     }
-
-                    newValue = newValue.substring(0, newValue.length - 1);
-
-                    modifiedStatement.values[j].value = newValue;
                 }
-                shownStatements.push(modifiedStatement);
-            }
-            else if (removableProperties.indexOf(statement.id) == -1) {
-                
-                shownStatements.push(statement);
-            }
-        }
+                else if (statement.id == 'P998') { // Value may be very long
 
-        return shownStatements;
+                    var modifiedStatement = Object.assign({}, statement);
+
+                    for (var j = 0; j < modifiedStatement.values.length; j++) {
+                        //console.log(modifiedStatement.values[j]);
+                        var parts = modifiedStatement.values[j].value.split('/');
+                        //console.log(parts);
+                        var newValue = "";
+                        var count = 0;
+                        for (var k = 0; k < parts.length; k++) {
+                            if (count > 15) {
+                                newValue += " ";
+                                count = 0;
+                            }
+                            newValue += parts[k] + '/';
+                            count += parts[k].length;
+                        }
+
+                        newValue = newValue.substring(0, newValue.length - 1);
+
+                        modifiedStatement.values[j].value = newValue;
+                    }
+                    shownStatements.push(modifiedStatement);
+                }
+                else if (removableProperties.indexOf(statement.id) == -1) {
+                    
+                    shownStatements.push(statement);
+                }
+            }
+
+            return shownStatements;
+        },
+        wikidataURL: function() {
+            //console.log(this.wikidocumentaries);
+            if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+                return "https://www.wikidata.org/wiki/" + this.wikidocumentaries.wikidata.id;
+            }
+            else {
+                return null;
+            }
+        },
+        title: function () {
+            if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.instance_of != undefined) {
+                return this.wikidocumentaries.wikidata.instance_of.value;
+            }
+            else {
+                return this.$t('topic_page.Wikidata.noTopicFoundText');
+            }
+        },
     },
-    wikidataURL: function() {
-        //console.log(this.wikidocumentaries);
-        if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
-            return "https://www.wikidata.org/wiki/" + this.wikidocumentaries.wikidata.id;
-        }
-        else {
-            return null;
-        }
-    },
-    title: function () {
-        if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.instance_of != undefined) {
-            return this.wikidocumentaries.wikidata.instance_of.value;
-        }
-        else {
-            return this.$t('topic_page.Wikidata.noTopicFoundText');
-        }
-    },
-  },
-  methods: {
-      getStatementURL(value) {
+    methods: {
+        getStatementURL(value) {
             if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "/wiki/" + value.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
@@ -125,9 +129,9 @@ export default {
             else {
                 return value.url;
             }  
-      },
-      getTarget(value) {
-          if (value.sitelinks != undefined) {
+        },
+        getTarget(value) {
+            if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "_self";
                 }
@@ -141,9 +145,9 @@ export default {
             else {
                 return "_blank";
             }  
-      },
-      getStyle(value) {
-          if (value.sitelinks != undefined) {
+        },
+        getStyle(value) {
+            if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "";
                 }
@@ -159,8 +163,65 @@ export default {
                 var style = "color: #52758b;";
                 return style;
             }
-      }
-  }
+        },
+        getID(value) {
+            var id = value.value;
+            if (value.qualifiers != undefined) {
+                value.qualifiers.forEach(qualifier => {
+                    id += qualifier.value;
+                });
+            }
+            return id;
+        },
+        getValue(value) {
+            var text = value.value;
+            // console.log(value.value);
+            // console.log(value.unit);
+            if (value.unit != undefined) {
+                text += " " + value.unit;
+
+                if (this.$i18n.locale == 'fi') {
+                    if ((value.unit == 'metri' ||
+                        value.unit == 'kilometri' ||
+                        value.unit == 'neliömetri' ||
+                        value.unit == 'neliökilometri' ||
+                        value.unit == 'kuutiometri' ||
+                        value.unit == 'kuutiokilometri' ||
+                        value.unit == 'kuutiometri') 
+                        && value.value != 1) {
+                        text += "ä";
+                    }
+                    else if (value.unit == 'aste'
+                        && value.value != 1) {
+                        text += "tta";
+                    }
+                    else if (value.unit.indexOf("gram", value.unit.length - "gram".length) != -1
+                        && value.value != 1) {
+                        text += "maa";
+                    }
+                    else if (value.unit == "astronominen yksikkö" && value.value != 1) {
+                        text = text.substring(0, text.length - "astronominen yksikkö".length) + "astronomista yksikköä";
+                    }
+                }
+                //console.log("value.unit != undefined");
+            }
+
+            return text;
+        },
+        getQualifiers(value) {
+            var text = "";
+            if (value.qualifiers != undefined && value.qualifiers.length > 0) {
+                //console.log("value.qualifiers != undefined");
+                text += " (";
+                value.qualifiers.forEach(qualifier => {
+                    text += qualifier.label + ": " + qualifier.value + ", ";
+                });
+                text = text.substring(0, text.length - 2);
+                text += ")";
+            }
+            return text;
+        }
+    }
 }
 </script>
 
@@ -210,6 +271,10 @@ export default {
 .statement-value {
     flex: 1 1 66%;
     padding-left: 6px;
+}
+
+.qualifier {
+    font-size: 10pt;
 }
 
 </style>
