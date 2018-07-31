@@ -1,34 +1,67 @@
 <template>
   <div class="Wikidata">
-    <div class="header">
-      <div class="header-title toolbar neg">
-        {{ $t('topic_page.Wikidata.headerTitle') }}
-      </div>
-      <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
-    </div>
-    <div class="item-instance-title">{{ title }}</div>
-    <ul class="statements" v-if="wikidocumentaries.wikidata != undefined">
-        <li class="statement-list-item" v-for="statement in shownStatements" v-bind:key="statement.id">
-            <div class="statement-label">{{ statement.label }}</div>
-            <ul class="statement-values">
-                <li class="statment-value-list-item" v-for="value in statement.values" :key="getID(value)">
-                    <div class="statement-value">
-                        <div v-if="value.url != null">
-                            <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
-                            <br v-if="value.qualifiers != undefined">
-                            <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
-                        </div>
-                        <div v-else>
-                            {{ getValue(value) }}
-                            <br v-if="value.qualifiers != undefined">
-                            <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
-                        </div>
-                    </div>
+        <div class="header">
+            <div class="header-title toolbar neg">
+                {{ $t('topic_page.Wikidata.headerTitle') }}
+            </div>
+            <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
+        </div>
+        <div class="item-instance-title">{{ title }}</div>
+        <div v-if="wikidocumentaries.wikidata != undefined"> 
+            <ul class="statements">
+                <li class="statement-list-item" v-for="statement in shownLeadingStatements" v-bind:key="statement.id">
+                    <div class="statement-label">{{ statement.label }}</div>
+                    <ul class="statement-values">
+                        <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
+                            <div class="statement-value">
+                                <div v-if="value.url != null">
+                                    <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <br v-if="value.qualifiers != undefined">
+                                    <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
+                                </div>
+                                <div v-else>
+                                    {{ getValue(value) }}
+                                    <br v-if="value.qualifiers != undefined">
+                                    <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
-        </li>
-    </ul>
-  </div>
+            <div v-if="expanded">
+                <button class="expander" v-if="shownRemainingStaments.length > 0" @click="switchExpand()">
+                    <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
+                    <i v-else class="wikiglyph wikiglyph-caret-down"></i>
+                </button>
+                <ul class="statements">
+                    <li class="statement-list-item" v-for="statement in shownRemainingStaments" v-bind:key="statement.id">
+                        <div class="statement-label">{{ statement.label }}</div>
+                        <ul class="statement-values">
+                            <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
+                                <div class="statement-value">
+                                    <div v-if="value.url != null">
+                                        <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <br v-if="value.qualifiers != undefined">
+                                        <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
+                                    </div>
+                                    <div v-else>
+                                        {{ getValue(value) }}
+                                        <br v-if="value.qualifiers != undefined">
+                                        <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button class="expander" v-if="shownRemainingStaments.length > 0" @click="switchExpand()">
+                <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
+                <i v-else class="wikiglyph wikiglyph-caret-down"></i>
+            </button>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -39,6 +72,8 @@ export default {
     },
     data () {
         return {
+            expanded: false,
+            shownRemainingStaments: []
         }
     },
     components: {
@@ -48,19 +83,23 @@ export default {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
         },
-        shownStatements () {
+        shownLeadingStatements () {
+            this.shownRemainingStaments = [];
 
             var statements = this.wikidocumentaries.wikidata.statements;
-            var shownStatements = [];
+            var shownLeadingStatements = [];
 
             const removableProperties = ['P1472', 'P94', 'P242', 'P18', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896'];
 
+            var totalValuesCount = 0;
+            const maxLeadingStatementsCount = 6;
+
             for (var i = 0; i < statements.length; i++) {
                 var statement = statements[i];
-                if (statement.id == 'P31') {
-                    if (statement.values.length == 1) {
-                        continue;
-                    }
+
+                //console.log(statement);
+                if (statement.id == 'P31' && statement.values.length == 1 && (statement.values[0].qualifiers == undefined || statement.values[0].qualifiers.length == 0)) {
+                    continue;
                 }
                 else if (statement.id == 'P998') { // Value may be very long
 
@@ -85,15 +124,30 @@ export default {
 
                         modifiedStatement.values[j].value = newValue;
                     }
-                    shownStatements.push(modifiedStatement);
+
+                    if (totalValuesCount < maxLeadingStatementsCount) {
+                        shownLeadingStatements.push(modifiedStatement);
+                    }
+                    else {
+                        this.shownRemainingStaments.push(modifiedStatement);
+                    }
+
+                    totalValuesCount += statement.values.length;
                 }
                 else if (removableProperties.indexOf(statement.id) == -1) {
-                    
-                    shownStatements.push(statement);
+                    if (totalValuesCount < maxLeadingStatementsCount) {
+                        shownLeadingStatements.push(statement);
+                    }
+                    else {
+                        this.shownRemainingStaments.push(statement);
+                    }
+
+                    totalValuesCount += statement.values.length;
                 }
             }
 
-            return shownStatements;
+            return shownLeadingStatements;
+
         },
         wikidataURL: function() {
             //console.log(this.wikidocumentaries);
@@ -114,6 +168,9 @@ export default {
         },
     },
     methods: {
+        switchExpand(event) {
+            this.expanded = !this.expanded;
+        },
         getStatementURL(value) {
             if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
@@ -275,6 +332,30 @@ export default {
 
 .qualifier {
     font-size: 10pt;
+}
+
+.expander {
+  width: 100%;
+  padding-top: 0; 
+  padding-right: 12px;
+  margin-top: -10px;
+  text-align: right;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.expander:hover {
+  outline: 0;
+}
+
+.expander:focus {
+  outline: 0;
+}
+
+.top-exander {
+  margin-bottom: -10px;
+  padding-right: 0px;
 }
 
 </style>
