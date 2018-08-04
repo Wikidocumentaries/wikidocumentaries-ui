@@ -6,14 +6,14 @@
 
 <script>
 export default {
-  name: 'HeaderLink',
-  props: {
-      link: String
-  },
-  data () {
-    return {
-    }
-  },
+    name: 'HeaderLink',
+    props: {
+        link: String
+    },
+    data () {
+        return {
+        }
+    },
 }
 </script>
 

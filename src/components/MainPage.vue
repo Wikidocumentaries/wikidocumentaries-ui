@@ -1,18 +1,22 @@
 <template>
     <div class="main-page">
         <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
-          <div class="main-toolbar">
-            <button
-                  class='tab-button' v-on:click="goToLandingPage"
-                  >{{ landingPageName }}</button>
-            <button
-                  v-for="tab in tabs"
-                  v-bind:key="tab.componentName"
-                  v-bind:class="['tab-button', { active:
-                  currentTabComponentName === tab.componentName }]"
-                  v-on:click="currentTabComponentName = tab.componentName"
-                  >{{ $t(tab.name) }}</button>
-          </div>
+            <div class="main-toolbar">
+                <div class="main-toolbar-buttons">
+                    <button
+                        class='tab-button' v-on:click="goToLandingPage"
+                        >{{ landingPageName }}</button>
+                    <button
+                        v-for="tab in tabs"
+                        v-bind:key="tab.componentName"
+                        v-bind:class="['tab-button', { active:
+                        currentTabComponentName === tab.componentName }]"
+                        v-on:click="currentTabComponentName = tab.componentName"
+                        >{{ $t(tab.name) }}</button>
+                </div>
+                <TopicSearchBox class="topic-search-box"></TopicSearchBox>
+                <LanguageBar class="language-bar"></LanguageBar>
+            </div>
           <component
               v-bind:is="currentTabComponentName"
               class="tab">
@@ -36,6 +40,8 @@ import TopicPage from '@/components/topic_page/HomePage'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
+import LanguageBar from '@/components/LanguageBar'
+import TopicSearchBox from '@/components/TopicSearchBox'
 
 export default {
     name: 'MainPage',
@@ -48,14 +54,14 @@ export default {
                     name: 'MainPage.topicPageName',
                     componentName: 'TopicPage'
                 },
-                {
-                    name: 'MainPage.mapPlaceMatchPageName',
-                    componentName: 'MapPlaceMatchPage'
-                },
-                { 
-                    name: 'MainPage.mapSearchPageName',
-                    componentName: 'MapSearchPage'
-                }
+                // {
+                //     name: 'MainPage.mapPlaceMatchPageName',
+                //     componentName: 'MapPlaceMatchPage'
+                // },
+                // { 
+                //     name: 'MainPage.mapSearchPageName',
+                //     componentName: 'MapSearchPage'
+                // }
             ],
             WIKI: WIKI,
             landingPageName: "Wikidocumentaries"
@@ -70,7 +76,9 @@ export default {
         TopicPage,
         MapPlaceMatchPage,
         MapSearchPage,
-        WaitPage
+        WaitPage,
+        LanguageBar,
+        TopicSearchBox
     },
     beforeRouteEnter (to, from, next) {
         //console.log(to);
@@ -138,6 +146,27 @@ export default {
     border-bottom: 10px solid grey;
     background-color: initial;
     color: #8e8e8e;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.main-toolbar-buttons {
+    flex: 1 1 60%;
+    align-self: flex-end;
+}
+
+.topic-search-box {
+    flex: 1 1 25%;
+    align-self: flex-end;
+    margin: 3px 0 3px 0;
+}
+
+.language-bar {
+    flex: 1 1 180px;
+    margin-left: 40px;
+    align-self: flex-end;
+    background-color: gray;
 }
 
 </style>

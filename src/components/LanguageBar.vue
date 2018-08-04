@@ -43,8 +43,6 @@ export default {
     width: 50px;
     text-align: center;
     font-size: 20pt;
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.3);
 }
 
 </style>
