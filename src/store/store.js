@@ -1042,7 +1042,7 @@ export default new Vuex.Store({
                     var statements = params.wiki.wikidata.statements;
                     for (var i = 0; i < statements.length; i++) {
                         if (statements[i].id == "P373") {
-                            requestConfig.params.commons_category = statements[i].value;
+                            requestConfig.params.commons_category = statements[i].values[0].value;
                             break;
                         }
                     }
