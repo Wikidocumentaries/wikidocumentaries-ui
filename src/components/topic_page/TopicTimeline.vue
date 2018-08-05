@@ -20,7 +20,7 @@
             <div class="timeline-explanation" v-for="(item, index) in sortedTimelineItems" :key="item.id + item.title" :style="timelineItemExplanationStyle(index, item)">
                 <div class="timeline-explanation-box" :style="timelineExplanationBoxStyle(index)">{{ getItemExplanation(index) }}</div>
             </div>
-            <div :ref="'timelineExplanations' + index" v-for="(item, index) in sortedTimelineItems" :key="item.id + index" class="timeline-explanation-connector"></div>
+            <div :ref="'timelineExplanations' + index" v-for="(item, index) in sortedTimelineItems" :key="item.id + item.title + item.pos" class="timeline-explanation-connector"></div>
         </div>
     </div>
 </template>
@@ -150,7 +150,8 @@ export default {
                 return (a.year - b.year);
             });
 
-            //console.log(timeLineItems);
+            console.log(timeLineItems);
+            //console.log(timeLineItems.length);
             return timeLineItems;
         }
     },
@@ -241,7 +242,7 @@ export default {
 
             for (var i = 0; i < images.length; i++) {
                 var image = images[i];
-
+                //console.log(image.year);
                 if (image.year != null) {
                     var pos = -1;
                     if (this.endYear != startYear) {
@@ -250,7 +251,7 @@ export default {
                     else {
                         pos = 0;
                     }
-                    if (pos >= 0) {
+                    if (pos >= 0 && pos <= 1) {
                         this.timelineImageItems.push({
                             pos: pos,
                             image: images[i]
@@ -267,7 +268,7 @@ export default {
                 //console.log(height);
                 for (var i = 0; i < this.sortedTimelineItems.length; i++) {
                     var element = this.$refs["timelineExplanations" + i][0];
-                    //console.log(element);
+                    console.log(element);
                     if (element != undefined) {
                         var style = this.timelineExplanationConnectorStyle(i);
                         //console.log(style);
