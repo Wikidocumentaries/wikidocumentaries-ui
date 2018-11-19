@@ -13,7 +13,6 @@ import WIKI from './constants'
 
 const BASE_URL = "http://localhost:3000/"
 
-
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
     headerImageURL: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png',
@@ -854,6 +853,9 @@ export default new Vuex.Store({
         setWikidata(state, wikidata) {
             state.wikidocumentaries.wikidata = wikidata;
         },
+        setWikidataId(state, wikidataId) {
+            state.wikidocumentaries.wikidataId = wikidataId;
+        },
         setHeaderImageURL(state, URL) {
             state.wikidocumentaries.headerImageURL = URL;
         },
@@ -897,13 +899,14 @@ export default new Vuex.Store({
             commit('resetState');
             commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_WIKI_EXTERNAL);
             commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
+            commit('setWikidataId', params.wikidata);
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
             //var promiseImages = dispatch('getTopicImages', params)
             promiseWiki.then((data) => {
 
                 //console.log(data);
 
-                if (data.wikipedia  == null) {
+                if (data.wikidata  == null ) {
                     commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                 }
                 else {
@@ -954,6 +957,7 @@ export default new Vuex.Store({
                     method: "get",
                     params: {
                         topic: params.topic,
+                        wikidata: params.wikidata,
                         language: params.language
                     }
                 };
@@ -962,25 +966,30 @@ export default new Vuex.Store({
                     then(function (response) {
                         //console.log(response.data);
 
-                        if (response.data.wikipedia == null) {
-                            //console.log("response.data.wikipedia == null");
+                        if (response.data.wikidata == null ) {
+                            console.log("response.data.wikipedia == null");
                             context.commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                         }
                         else {
                             //console.log(response.data);
                             context.commit('setWikidata', response.data.wikidata);
+                            context.commit('setWikidocumentariesTopicTitle', response.data.wikidata.title);
 
-                            if (response.data.wikidata != undefined) {
-                                //console.log(response.data.wikidata.statements);
-                                var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
-                                context.commit('setTopicStartYear', startYear);
-                            }
-
+                            //console.log(response.data.wikidata.statements);
+                            var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
+                            context.commit('setTopicStartYear', startYear);
+                            
                             context.commit('setWikipediaExcerptHTML', response.data.wikipediaExcerptHTML);
                             context.commit('setWikipediaRemainingHTML', response.data.wikipediaRemainingHTML);
-                            context.commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
+                            if (response.data.wikipedia != undefined ) {
+                                context.commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
+                            }
+                            else
+                            {
+                                context.commit('setWikipediaURL', "");
+                            }
 
-                            if (response.data.wikipedia.coordinates != undefined) {
+                            if (response.data.wikipedia != undefined && response.data.wikipedia.coordinates != undefined ) {
                                 context.commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
                             }
                             else if (response.data.wikidata != undefined) {
@@ -1048,7 +1057,7 @@ export default new Vuex.Store({
                     }
                 }
 
-                if (params.wiki.wikipedia.coordinates != undefined) {
+                if (params.wiki.wikipedia != undefined && params.wiki.wikipedia.coordinates != undefined) {
                     requestConfig.params.lat = params.wiki.wikipedia.coordinates.lat;
                     requestConfig.params.lon = params.wiki.wikipedia.coordinates.lon;
                     requestConfig.params.maxradius = 2000; // meters

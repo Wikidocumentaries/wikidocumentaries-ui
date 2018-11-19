@@ -1,7 +1,9 @@
 <template>
   <div class="header">
-      <img v-bind:src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
-      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
+      <img v-bind:src="(wikidocumentaries.headerImageURL ? wikidocumentaries.headerImageURL  : 'https://upload.wikimedia.org/wikipedia/commons/2/21/Transparent_bar.gif')" 
+          class="header-image"
+          :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')" 
+      />
       <div class="header-contents">
           <div class="title">
             <h1><span>{{ wikidocumentaries.title }}</span></h1>

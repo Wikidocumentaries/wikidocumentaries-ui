@@ -1,6 +1,6 @@
 <template>
     <div class="link">
-        <a v-bind:href="link" target="_blank"><i class="wikiglyph wikiglyph-new-window"></i></a>
+        <a v-if="link" v-bind:href="link" target="_blank"><i class="wikiglyph wikiglyph-new-window"></i></a>
     </div>
 </template>
 

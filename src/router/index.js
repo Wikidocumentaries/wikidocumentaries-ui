@@ -41,6 +41,11 @@ export default new Router({
       component: LandingPage
     },
     {
+      path: '/wd/:wikidata/:topic?',
+      name: 'WDTopicPage',
+      component: MainPage
+    },
+    {
       path: '/wiki/:topic',
       name: 'TopicPage',
       component: MainPage

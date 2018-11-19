@@ -86,6 +86,7 @@ export default {
 
         var params = {
             topic: to.params.topic,
+            wikidata: to.params.wikidata,
             language: (to.query.language != undefined ? to.query.language : 'fi')
         }
 
