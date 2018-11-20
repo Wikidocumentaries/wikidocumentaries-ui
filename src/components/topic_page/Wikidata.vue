@@ -290,15 +290,15 @@ export default {
 }
 
 .item-instance-title {
-    padding: 0 12px;
+    padding-left: 20px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .statements {
     list-style-type: none;
-    margin: 0;
-    padding: 6px 12px;
+    margin: 5px 20px;
+    padding: 0;
 }
 
 .statement-list-item {

@@ -87,6 +87,10 @@ export default {
     line-height: 1em;
 }
 
+.title::first-letter {
+  text-transform: capitalize;
+}
+
 .subtitle {
     font-size: 24px;
     line-height: 1.5em;

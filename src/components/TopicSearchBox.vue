@@ -192,11 +192,17 @@ export default {
     padding: 10px;
     font-size: 11pt;
     border: none;
+    text-align: right;
 }
 
 .input-find:focus {
     font-weight:bold;
     color:#333;
+    outline: none;
+}
+
+.input-find:focus::placeholder {
+    visibility:hidden;
 }
 
 .button-find {
@@ -222,16 +228,12 @@ export default {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display:block;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #fff;
     width: 325px;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 50;
-    right: 0;
-    left: 0px;
-    border: 1px solid black;
-    margin: auto;
 }
 
 .dropdown-content-hide {
@@ -240,7 +242,7 @@ export default {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 0px 12px 6px 12px;
+    padding: 5px 10px;
     text-decoration: none;
     display: block;
     text-transform: none;
@@ -248,7 +250,7 @@ export default {
     font-size: 10pt;
     line-height: 1.5;
     color: #333;
-    border: 1px solid rgb(173, 173, 173);
+    transition: none;
 }
 
 /* Links inside the dropdown */

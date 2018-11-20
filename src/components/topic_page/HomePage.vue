@@ -3,7 +3,7 @@
     <TopicPageHeader></TopicPageHeader>
     <div class="row"> 
       <WikipediaArticle class="column one"></WikipediaArticle>
-      <div class="divider"></div>
+      <!--div class="divider"></div-->
       <WikidataItem class="column two"></WikidataItem>
     </div>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>

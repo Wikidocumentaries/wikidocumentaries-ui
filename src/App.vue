@@ -161,8 +161,7 @@ a:hover {
 
 .neg {
     background-color: #FFF;
-    color: #8e8e8e;
-    /*border: 1px solid #8e8e8e;*/
+    color: #333;
 }
 
 .text {
@@ -172,6 +171,7 @@ a:hover {
 .text p {
 	margin: 12px 0;
 }
+
 i.wikiglyph {
     font-size: 24px;
 }
