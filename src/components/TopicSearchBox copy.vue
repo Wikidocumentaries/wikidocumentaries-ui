@@ -6,7 +6,7 @@
         </div>
         <div class="search-results">
             <div :class="[shouldShowMenu ? showClass : hideClass]">
-                <a v-for="topic in topics" :key="topic.wikidata" href="#" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
+                <a v-for="topic in topics" :key="topic.wikipage" href="#" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
             </div>
         </div>
     </div>
@@ -76,9 +76,14 @@ export default {
         },
         showTopic: function (topic) {
             //console.log("showTopic");
-            var wikidata = topic.wikidata;
             var page = topic.wikipage.split(' ').join('_');
-            window.location.assign("/wd/" + wikidata + "/" + page + "?language=" + this.$i18n.locale);
+            // this.$router.push({
+            //     path: `/wiki/${page}`,
+            //     query: {
+            //         language: this.$i18n.locale
+            //     }
+            // });
+            window.location.assign("/wiki/" + page + '?language=' + this.$i18n.locale);
             //window.location.reload(true);
         },
         searchFromWikipedia: function(topicInputValue) {
@@ -88,15 +93,6 @@ export default {
                 topicInputValue +
                 "&limit=20&namespace=0&redirects=resolve"
                 "&format=json" +
-                "&callback=callback";
-
-            var url = "https://www.wikidata.org/w/api.php?" +
-                "action=wbsearchentities" +
-                "&search=" + encodeURIComponent(topicInputValue) +
-                "&language=" + this.$i18n.locale + 
-                "&uselang=" + this.$i18n.locale + 
-                "&format=json" + 
-                "&type=item";
                 "&callback=callback";
 
             var _this = this;
@@ -109,24 +105,28 @@ export default {
                     } else {
                         //console.log(data);
 
-                        if (data.search.length > 0) {
+                        if (data.length > 0) {
                             
                             var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?" + 
                                     "action=query&prop=pageprops&ppprop=wikibase_item&redirects=resolve&titles=";
                                     
-                            for (var i = 0; i < data.search.length; i++) {
-                                var item=data.search[i];
-                                var topic = {
-                                    wikipage: item["label"],
-                                    wikilink: item["id"],
-                                    wikidocumentarieslink: "/" +
-                                        item["id"] + "/" + item["label"].split(' ').join('_'),
-                                    summary: item["description"],
-                                    wikidata:item["id"],
-                                    wikidatalink: item["url"],
-                                };
+                            if ( data[1].length > 0) {
+                                for (var i = 0; i < data[1].length; i++) {
 
-                                topics.push(topic);
+                                    wikidataQueryURL += data[1][i] + "|";
+
+                                    var topic = {
+                                        wikipage: data[1][i],
+                                        wikilink: data[3][i],
+                                        wikidocumentarieslink: "/" +
+                                            data[1][i].split(' ').join('_'),
+                                        summary: data[2][i],
+                                        wikidata: "",
+                                        wikidatalink: "",
+                                    }
+
+                                    topics.push(topic);
+                                }
 
                                 _this.topics = topics;
                                 // wikidataQueryURL = wikidataQueryURL.slice(0, -1);
@@ -190,13 +190,14 @@ export default {
 .input-find {
     margin: 0 10px 0 10px;
     padding: 10px;
-    font-size: 11pt;
+    /* border: 2px solid #a74e77; */
     border: none;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1em;
 }
 
 .input-find:focus {
-    font-weight:bold;
-    color:#333;
+    outline: thick ridge #a74e77;
 }
 
 .button-find {

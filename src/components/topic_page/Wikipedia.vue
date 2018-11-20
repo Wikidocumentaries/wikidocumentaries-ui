@@ -102,4 +102,8 @@ export default {
   font-style: italic;
 }
 
+.wiki-html >>> span > p:nth-child(1) {
+  margin-top:0;
+}
+
 </style>

@@ -1,22 +1,23 @@
 <template>
-     <div class="main-page">
-         <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
-            <div class="stripe">
-                <div class="yellow"></div>
-                <div class="orange"></div>
-                <div class="red"></div>
-                <div class="purple"></div>
-                <div class="turquoise"></div>
-                <div class="green"></div>
-            </div>
-             <div class="main-toolbar">
-                <div class="left-align">
-                    <a href=“#” class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
+    <div class="main-page">
+        <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
+            <div class="stripe"></div>
+            <div class="main-toolbar">
+                <a href=“#” class=“main-button” v-on:click="goToLandingPage">{{ landingPageName }}</a>
+                <div class="main-toolbar-buttons">
+                    <button
+                        class='main-button' v-on:click="goToLandingPage"
+                        >{{ landingPageName }}</button>
+                    <button
+                        v-for="tab in tabs"
+                        v-bind:key="tab.componentName"
+                        v-bind:class="['tab-button', { active:
+                        currentTabComponentName === tab.componentName }]"
+                        v-on:click="currentTabComponentName = tab.componentName"
+                        >{{ $t(tab.name) }}</button>
                 </div>
-                <div class="right-align">
-                    <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <LanguageBar class="language-bar"></LanguageBar>
-                </div>
+                <TopicSearchBox class="topic-search-box"></TopicSearchBox>
+                <LanguageBar class="language-bar"></LanguageBar>
             </div>
           <component
               v-bind:is="currentTabComponentName"
@@ -87,7 +88,6 @@ export default {
 
         var params = {
             topic: to.params.topic,
-            wikidata: to.params.wikidata,
             language: (to.query.language != undefined ? to.query.language : 'fi')
         }
 
@@ -121,22 +121,13 @@ export default {
 } */
 
 .stripe {
-    flex: 1 0 100%;
     height: 15px;
-    display: flex;
-    flex-wrap: nowrap;
+    background-image: linear-gradient(90deg, #ffd966 16.67%, #e69138 16.67%, #e69138 33.33%, #cc4125 33.33%, #cc4125 50%, #a64d79 50%, #a64d79 66.67%, #0097a7 66.66%, #0097a7 83.33%, #6aa84f 83.33%, #6aa84f 100%);
+    background-size: 100% 15px;
 }
 
 .main-button {
-    font-weight: bold;
-    font-size: 16pt;
-    margin-left: 20px;
-    color: #333;
-}
-
-a.main-button:hover {
-    box-shadow: none;
-    color:#C04822;
+    
 }
 
 .tab-button {
@@ -163,28 +154,36 @@ a.main-button:hover {
     /*border: 1px solid #ccc;*/
     padding: 0px;
 }
-
 .main-toolbar {
+    /* border-bottom: 10px solid grey; */
+    /* background-color: initial; */
+    /* color: #8e8e8e; */
+    display: -webkit-box;
     display: -ms-flexbox;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    width: 100%;
     height: 45px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main-toolbar-buttons {
-     flex: 1 1 60%;
+    flex: 1 1 60%;
     /* align-self: flex-end; */
     -webkit-box-flex: 1;
     -ms-flex: 1 1 60%;
     -ms-flex-item-align: end;
     margin-left: 25px;
-   font-size: 22px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 .topic-search-box {
     flex: 1 1 25%;
+    align-self: flex-end;
+    margin: 3px 0 3px 0;
 }
 
 .language-bar {
@@ -192,10 +191,6 @@ a.main-button:hover {
     margin-left: 40px;
     align-self: flex-end;
     background-color: gray;
-}
-
-.right-align {
-    display: flex;
 }
 
 </style>

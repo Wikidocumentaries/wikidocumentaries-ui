@@ -68,16 +68,17 @@ a:hover {
     border: 1px solid #8e8e8e;
 }
 
-.toolbar {
+ .toolbar {
   display: flex;
-	font-family: 'Barlow Condensed', sans-serif;
-    background-color: #8e8e8e;
-    color: white;
-    padding: 6px 12px;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    font-weight: bold;
-}
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #333;
+  margin: 0 20px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: bold;
+  height: 60px;
+  align-items: center;
+ }
 
 .toolbar-title {
   flex-grow: 90;
@@ -85,7 +86,7 @@ a:hover {
 }
 
 .toolbar-item-a {
-    color: white;
+  color: #333;
 }
 
 .toolbar-item-a:hover {
@@ -165,7 +166,7 @@ a:hover {
 }
 
 .text {
-	padding:0 12px;
+	padding-left:20px;
 }
 
 .text p {

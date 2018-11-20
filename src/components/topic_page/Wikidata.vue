@@ -290,7 +290,7 @@ export default {
 }
 
 .item-instance-title {
-    padding: 6px 12px;
+    padding: 0 12px;
     text-transform: uppercase;
     font-weight: bold;
 }

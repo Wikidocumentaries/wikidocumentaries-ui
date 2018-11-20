@@ -1,15 +1,15 @@
 <template>
-        <div class="language-bar">
-            <div class="flag">
-                <a href="#" @click.prevent="setLanguage('en')"><span class="flag-icon flag-icon-gb"></span></a>
-            </div>
-            <div class="flag">
-                <a href="#" @click.prevent="setLanguage('fi')"><span class="flag-icon flag-icon-fi"></span></a>
-            </div>
-            <div class="flag">
-                <a href="#" @click.prevent="setLanguage('sv')"><span class="flag-icon flag-icon-se"></span></a>
-            </div>
+    <div class="language-bar">
+        <div class="flag">
+            <a href="#" @click.prevent="setLanguage('en')"><span class="flag-icon flag-icon-gb"></span></a>
         </div>
+        <div class="flag">
+            <a href="#" @click.prevent="setLanguage('fi')"><span class="flag-icon flag-icon-fi"></span></a>
+        </div>
+        <div class="flag">
+            <a href="#" @click.prevent="setLanguage('sv')"><span class="flag-icon flag-icon-se"></span></a>
+        </div>
+    </div>
 </template>
 
 <script>

@@ -1,16 +1,17 @@
-<template>
-  <div class="header">
-      <img v-bind:src="(wikidocumentaries.headerImageURL ? wikidocumentaries.headerImageURL  : 'https://upload.wikimedia.org/wikipedia/commons/2/21/Transparent_bar.gif')" 
-          class="header-image"
-          :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')" 
-      />
-      <div class="header-contents">
-          <div class="title">
-            <h1><span>{{ wikidocumentaries.title }}</span></h1>
-          </div>
-      </div>
-  </div>
-</template>
+ <template>
+   <div class="header">
+      <img v-bind:src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
+      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
+       <div class="header-contents">
+        <div class="bottomshade">
+          <div class="titlebox">
+            <div class="title">{{ wikidocumentaries.title }}</div>
+            <div class="subtitle">{{ wikidocumentaries.subtitle }}</div>
+           </div>
+        </div>
+       </div>
+   </div>
+ </template>
 
 <script>
 export default {
@@ -47,7 +48,7 @@ export default {
 
 .header-image {
     width: 100%;
-    height: 400px; /* Remove for production? */
+    height: 350px; /* Remove for production? */
     /* Remove for production? not supported in IE 11 */
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
@@ -61,12 +62,41 @@ export default {
     object-fit: contain;
 }
 
-.title {
-    position:absolute;
-    bottom: 0px;
-    left: 10px;
-    width: calc(100% - 10px); 
+.bottomshade {
+  position: absolute;
+  height: 145px;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+.titlebox {
+    position:absolute;
+    /* left: 10px; */
+    /* width: calc(100% - 10px); */
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+    bottom: 20px;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 1em;
+}
+
+.subtitle {
+    font-size: 24px;
+    line-height: 1.5em;
+}
+
+.subtitle:first-letter {
+    text-transform: capitalize;
+}
+
+
 h1 {
     font-weight: bold;
     font-size: 32pt;
