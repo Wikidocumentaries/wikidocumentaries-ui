@@ -189,7 +189,7 @@ a.main-button:hover {
 
 .language-bar {
     flex: 1 1 180px;
-    margin-left: 40px;
+    margin-left: 20px;
     align-self: flex-end;
     background-color: gray;
 }

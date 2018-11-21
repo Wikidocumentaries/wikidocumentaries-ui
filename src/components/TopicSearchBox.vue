@@ -184,7 +184,9 @@ export default {
 .search-items {
     margin: auto;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .input-find {
@@ -193,6 +195,7 @@ export default {
     font-size: 11pt;
     border: none;
     text-align: right;
+    right:35px;
 }
 
 .input-find:focus {
@@ -266,7 +269,6 @@ export default {
 }
 
 .topic-summary {
-    font-style: italic;
 }
 
 </style>

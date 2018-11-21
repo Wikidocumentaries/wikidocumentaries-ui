@@ -69,7 +69,7 @@ export default {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .titlebox {
