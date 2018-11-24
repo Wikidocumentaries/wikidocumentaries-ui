@@ -106,11 +106,12 @@ export default {
 }
 
 .header-item {
-    /*letter-spacing: -1px;  */
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.3);
-    padding: 2px 2px;
+    padding: 5px 0 0 0;
     line-height: 1;
+}
+
+.header-item a {   
+    box-shadow: none;
 }
 
 .grid-item {
@@ -131,11 +132,23 @@ export default {
     display: flex;
     top: 1px;
     left: 1px;
-    width: 100%; 
+    width: 100%;
+    padding: 0 5px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
 }
 
 .thumb-image-glyph {
     color: white;
+    transition: opacity 80ms ease-in;
+}
+
+.thumb-image-glyph:hover {
+    opacity: 0.6;
+}
+
+.thumb-image-glyph:active {
+    opacity: 1;
 }
 
 .thumb-image-info {
@@ -143,9 +156,11 @@ export default {
     bottom: 5px;
     left: 1px;
     background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0.2) 50%, rgba(0, 0, 0, 0) 100%);
     color: white;
-    padding: 2px 10px 2px 10px;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 

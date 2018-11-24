@@ -2,7 +2,7 @@ export default {
     en: {
         LandingPage: {
             search: "Search",
-            searchInputPlaceHolder: "Freemason's grave..."
+            searchInputPlaceHolder: "Find a topic or create a new topic"
         },
         MainPage: {
             topicPageName: 'Topic page',
@@ -12,7 +12,7 @@ export default {
             returnToHomeMessage: "Back to landing page",
         },
         WaitPage: {
-            waitMessage: "Please, a moment... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+            waitMessage: "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
         },
         topic_page: {
             BaseMapDialog: {
@@ -23,7 +23,7 @@ export default {
             HomePage: {
             },
             TopicImages: {
-                headerTitle: 'Images from archives',
+                headerTitle: 'Images from the archives',
                 showImagesOnMapMenuText: "Show all images on the map",
                 showImagesOnTimelineMenuText: "Show all images on the timeline"
             },
@@ -50,7 +50,7 @@ export default {
                 noTopicFoundText: "Topic not found"
             },
             Wikipedia: {
-                headerTitle: 'Article excerpt from Wikipedia'
+                headerTitle: 'Article'
             }
         },
         map_place_match_page: {
@@ -89,7 +89,7 @@ export default {
     fi: {
         LandingPage: {
             search: "Etsi",
-            searchInputPlaceHolder: "Vapaamuurarin hauta..."
+            searchInputPlaceHolder: "Etsi aihetta tai luo uusi aihe"
         },
         MainPage: {
             topicPageName: 'Aiheen yhteenveto',
@@ -176,7 +176,7 @@ export default {
     sv: {
         LandingPage: {
             search: "Sök",
-            searchInputPlaceHolder: "Frimurarens grav..."
+            searchInputPlaceHolder: "Sök ämnen eller skap ett nytt ämne"
         },
         MainPage: {
             topicPageName: 'Ämne',
