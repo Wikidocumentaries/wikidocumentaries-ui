@@ -2,7 +2,8 @@
     <div class="topic-search-box">
         <div class="search-items">
             <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
-            <button @click="findTopics" class="button-find"><i class="wikiglyph wikiglyph-magnifying-glass"></i><span>{{ $t('LandingPage.search') }}</span></button>
+            <i class="wikiglyph wikiglyph-magnifying-glass"></i>
+            <!--button @click="findTopics" class="button-find"><span>{{ $t('LandingPage.search') }}</span></button-->
         </div>
         <div class="search-results">
             <div :class="[shouldShowMenu ? showClass : hideClass]">
@@ -182,20 +183,16 @@ export default {
 }
 
 .search-items {
-    margin: auto;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    position: relative;
 }
 
 .input-find {
-    margin: 0 10px 0 10px;
-    padding: 10px;
+    padding: 10px 35px;
     font-size: 11pt;
     border: none;
     text-align: right;
     right:35px;
+    min-width: 300px;
 }
 
 .input-find:focus {
@@ -204,8 +201,17 @@ export default {
     outline: none;
 }
 
+.input-find:focus + i {
+}
+
 .input-find:focus::placeholder {
     visibility:hidden;
+}
+
+.search-items i {
+    position:absolute;
+    top:3px;
+    right:0;
 }
 
 .button-find {

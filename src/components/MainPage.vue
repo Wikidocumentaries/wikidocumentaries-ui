@@ -11,7 +11,7 @@
             </div>
              <div class="main-toolbar">
                 <div class="left-align">
-                    <a href=“#” class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
+                    <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
                 </div>
                 <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
@@ -122,7 +122,7 @@ export default {
 
 .stripe {
     flex: 1 0 100%;
-    height: 15px;
+    height: 18px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -184,7 +184,8 @@ a.main-button:hover {
 }
 
 .topic-search-box {
-    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
 }
 
 .language-bar {

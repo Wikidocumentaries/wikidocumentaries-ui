@@ -36,7 +36,7 @@ h1, h2 {
 
 a {
 	text-decoration: none;
-  color: #0d89d6;
+  color: #0096a5;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
