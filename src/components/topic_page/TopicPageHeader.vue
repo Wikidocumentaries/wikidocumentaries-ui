@@ -48,7 +48,7 @@ export default {
 
 .header-image {
     width: 100%;
-    height: 350px; /* Remove for production? */
+    height: 50vh; /* Remove for production? */
     /* Remove for production? not supported in IE 11 */
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */
