@@ -60,24 +60,24 @@ export default {
         },
         fitTitle (title) {
             var newTitle = title;
-            if (title.length > this.maxTitleLengthInChars) {
-                newTitle = title.substr(0, this.maxTitleLengthInChars - 3) + "...";
-            }
+            //if (title.length > this.maxTitleLengthInChars) {
+            //    newTitle = title.substr(0, this.maxTitleLengthInChars - 3) + "...";
+            //}
             return newTitle;
         },
         getCredits (item) {
             var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-            if (newAuthors.length > this.maxAuthorsLengthInChars) {
-                newAuthors = newAuthors.substr(0, this.maxAuthorsLengthInChars - 3) + "..."  + ', ';
-            }
+            //if (newAuthors.length > this.maxAuthorsLengthInChars) {
+            //    newAuthors = newAuthors.substr(0, this.maxAuthorsLengthInChars - 3) + "..."  + ', ';
+            //}
             var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-            if (newInstitutions.length > this.maxInstitutionsLengthInChars) {
-                newInstitutions = newInstitutions.substr(0, this.maxInstitutionsLengthInChars - 3) + "..."  + ', ';
-            }
+            //if (newInstitutions.length > this.maxInstitutionsLengthInChars) {
+            //    newInstitutions = newInstitutions.substr(0, this.maxInstitutionsLengthInChars - 3) + "..."  + ', ';
+            //}
             var newLicense = (item.license != "" ? (item.license + ', ') : '');
-            if (newLicense.length > this.maxLicenseLengthInChars) {
-                newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "...";
-            }
+            //if (newLicense.length > this.maxLicenseLengthInChars) {
+            //    newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "...";
+            //}
 
             var credits = newAuthors + newInstitutions + newLicense;
 
@@ -115,7 +115,12 @@ export default {
 }
 
 .grid-item {
-    margin-bottom: -5px;
+    margin-bottom: -4px;
+}
+
+.grid-item:hover * {
+    opacity:1;
+    transition: opacity 80ms ease-in;
 }
 
 .grid-item--width2 { 
@@ -130,12 +135,14 @@ export default {
 .thumb-image-header {
     position:absolute;
     display: flex;
-    top: 1px;
-    left: 1px;
+    top: 0;
+    left: 0;
     width: 100%;
     padding: 0 5px 20px;
     box-sizing: border-box;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    opacity:0;
+    transition: opacity 80ms ease-in;
 }
 
 .thumb-image-glyph {
@@ -154,13 +161,15 @@ export default {
 .thumb-image-info {
     position: absolute;
     bottom: 5px;
-    left: 1px;
     background: rgb(0, 0, 0); /* fallback color */
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0.2) 50%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
     color: white;
     padding: 30px 10px 10px 10px;
     width: 100%;
     box-sizing: border-box;
+    line-height: 1.2em;
+    opacity: 0;
+    transition: opacity 80ms ease-in;
 }
 
 

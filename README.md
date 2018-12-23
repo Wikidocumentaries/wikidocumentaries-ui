@@ -1,6 +1,6 @@
 # wikidocumentaries-ui
 
-> Basic page template for the WikiDocumentaries UI
+> Basic page template for the Wikidocumentaries UI
 
 For more info, see the project page: https://wikidocumentaries.github.io/
 

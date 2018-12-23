@@ -6,7 +6,7 @@
             
         <table>
             <tr>
-                <th>WikiDocumentaries-sivu</th>
+                <th>Wikidocumentaries-sivu</th>
                 <th>Wikipedia-artikkeli</th>
                 <th>Wikidata-kohde</th>
                 <th>Wikipedia-yhteenveto</th>

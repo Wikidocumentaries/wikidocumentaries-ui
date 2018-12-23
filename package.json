@@ -1,7 +1,7 @@
 {
   "name": "wikidocumentaries-ui",
   "version": "1.0.0",
-  "description": "Basic page template for the WikiDocumentaries UI",
+  "description": "Basic page template for the Wikidocumentaries UI",
   "author": "Erno Mäkinen <ernoma@gmail.com>",
   "private": true,
   "scripts": {

@@ -36,7 +36,7 @@ h1, h2 {
 
 a {
 	text-decoration: none;
-  color: #0096a5;
+  color: #00b0dc;
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
@@ -134,7 +134,7 @@ a:hover {
 }
 
 .turquoise {
-    background: #0096a5;
+    background: #008aad;
     flex: 1 1 16.67%;
 }
 
@@ -145,7 +145,7 @@ a:hover {
 
 .turquoisebar {
   height: 10px;
-  background-color: #0096a5;
+  background-color: #008aad;
 }
 
 .redbar {

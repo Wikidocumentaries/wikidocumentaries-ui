@@ -324,6 +324,7 @@ export default {
     background: rgba(0, 0, 0, 0.3);
     color: white;
     padding: 10px;
+    line-height: 1.2em;
 }
 
 </style>

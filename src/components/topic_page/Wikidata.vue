@@ -321,7 +321,7 @@ export default {
 }
 
 .statment-value-list-item {
-    padding-bottom: 12px;
+//  padding-bottom: 12px;
     display: flex;
 }
 
