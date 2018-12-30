@@ -70,6 +70,7 @@ export default {
             //if (newAuthors.length > this.maxAuthorsLengthInChars) {
             //    newAuthors = newAuthors.substr(0, this.maxAuthorsLengthInChars - 3) + "..."  + ', ';
             //}
+            var newYear = (item.year != "" ? (item.year) + ". " : '');
             var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
             //if (newInstitutions.length > this.maxInstitutionsLengthInChars) {
             //    newInstitutions = newInstitutions.substr(0, this.maxInstitutionsLengthInChars - 3) + "..."  + ', ';
@@ -79,7 +80,7 @@ export default {
             //    newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "...";
             //}
 
-            var credits = newAuthors + newInstitutions + newLicense;
+            var credits = newAuthors + newYear + newInstitutions + newLicense;
 
             if (credits.length > 0 && credits.slice(-2) == ", ") {
                 credits = credits.substr(0, credits.length - 2);
@@ -170,6 +171,11 @@ export default {
     line-height: 1.2em;
     opacity: 0;
     transition: opacity 80ms ease-in;
+}
+
+.thumb-title {
+    max-height: 11.6em;
+    overflow: hidden;
 }
 
 

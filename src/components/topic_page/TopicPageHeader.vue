@@ -44,11 +44,12 @@ export default {
 .header {
     position:relative;
     /* width: calc(100% - 10px); */
+    background: var(--main-modal-color);
 }
 
 .header-image {
     width: 100%;
-    height: 50vh; /* Remove for production? */
+    height: 60vh; /* Remove for production? */
     /* Remove for production? not supported in IE 11 */
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%); */

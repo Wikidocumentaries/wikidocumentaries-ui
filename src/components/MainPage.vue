@@ -9,7 +9,7 @@
                 <div class="turquoise"></div>
                 <div class="green"></div>
             </div>
-             <div class="main-toolbar">
+             <div id="main-toolbar" class="main-toolbar">
                 <div class="left-align">
                     <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
                 </div>
@@ -143,7 +143,6 @@ a.main-button:hover {
     padding: 6px 12px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-
     cursor: pointer;
     font-family: 'Barlow Condensed', sans-serif;
     background-color: #8e8e8e;

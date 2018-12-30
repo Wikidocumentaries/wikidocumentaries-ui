@@ -299,10 +299,12 @@ export default {
     list-style-type: none;
     margin: 5px 20px;
     padding: 0;
+    line-height: 1.2;
+    font-size: 0.9em;
 }
 
 .statement-list-item {
-    padding-bottom: 12px;
+    padding-bottom: 6px;
     display: flex;
 }
 
@@ -328,6 +330,10 @@ export default {
 .statement-value {
     flex: 1 1 66%;
     padding-left: 6px;
+}
+
+ul.statement-values {
+    padding-inline-start: 10px;
 }
 
 .qualifier {

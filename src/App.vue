@@ -12,6 +12,18 @@ export default {
 
 <style>
 
+:root {
+  --main-txt-color: #333;
+  --main-link-color: #00b0dc;
+  --main-modal-color: #dadada;
+  --main-yellow: #ffd76e;
+  --main-orange: #ea8e43;
+  --main-red: #cf412d;
+  --main-purple: #a74e77;
+  --main-blue: #008aad;
+  --main-green: #69a656;
+}
+
 html, body {
   margin: 0px;
   padding: 0px;
@@ -36,7 +48,7 @@ h1, h2 {
 
 a {
 	text-decoration: none;
-  color: #00b0dc;
+  color: var(--main-link-color);
   transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
@@ -114,48 +126,48 @@ a:hover {
 
 
 .yellow {
-    background: #ffd76e;
+    background: var(--main-yellow);
     flex: 1 1 16.67%;
 }
 
 .orange {
-    background: #ea8e43;
+    background: var(--main-orange);
     flex: 1 1 16.67%;
 }
 
 .red {
-    background: #cf412d;
+    background: var(--main-red);
     flex: 1 1 16.67%;
 }
 
 .purple {
-    background: #a74e77;
+    background: var(--main-purple);
     flex: 1 1 16.67%;
 }
 
 .turquoise {
-    background: #008aad;
+    background: var(--main-blue);
     flex: 1 1 16.67%;
 }
 
 .green {
-    background: #69a656;
+    background: var(--main-green);
     flex: 1 1 16.67%;
 }
 
 .turquoisebar {
   height: 10px;
-  background-color: #008aad;
+  background-color: var(--main-blue);
 }
 
 .redbar {
   height: 10px;
-  background-color: #cf412d;
+  background-color: var(--main-red);
 }
 
 .greenbar {
   height: 10px;
-  background-color: #79c184;
+  background-color: var(--main-green);
 }
 
 
