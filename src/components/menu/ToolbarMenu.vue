@@ -65,12 +65,12 @@ export default {
 .dropdown-content {
     display:block;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 900%;
+    background-color: white;
+    width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 2;
     right: 0;
-    border: 1px solid black;
+    border: 1px solid var(--main-txt-color);
 }
 
 .dropdown-content-hide {
@@ -79,7 +79,7 @@ export default {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 0px 12px 6px 12px;
+    padding: 6px 12px;
     text-decoration: none;
     display: block;
     text-transform: none;
@@ -90,13 +90,12 @@ export default {
     font-weight: 400;
 }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown + Change color of dropdown links on hover */
 .dropdown-content a:hover {
+    background-color: var(--main-red);
+    color: white;
     box-shadow: none;
     outline: none;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
 
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="wikipedia">
     <div class="header">
-      <div class="header-title toolbar neg">
+      <div class="header-title toolbar">
         {{ $t('topic_page.Wikipedia.headerTitle') }}
       </div>
       <HeaderLink class="header-link" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>

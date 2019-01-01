@@ -1,7 +1,7 @@
 <template>
   <div class="Wikidata">
         <div class="header">
-            <div class="header-title toolbar neg">
+            <div class="header-title toolbar">
                 {{ $t('topic_page.Wikidata.headerTitle') }}
             </div>
             <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
@@ -293,13 +293,15 @@ export default {
     padding-left: 20px;
     text-transform: uppercase;
     font-weight: bold;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2em;
 }
 
 .statements {
     list-style-type: none;
     margin: 5px 20px;
     padding: 0;
-    line-height: 1.2;
+    line-height: 1.3;
     font-size: 0.9em;
 }
 
@@ -310,6 +312,7 @@ export default {
 
 .statement-label {
     flex: 0 0 34%;
+    font-weight: bold;
 }
 
 .statement-label::first-letter {

@@ -15,7 +15,10 @@
                 </div>
                 <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <LanguageBar class="language-bar"></LanguageBar>
+                    <!--LanguageBar class="language-bar"></LanguageBar-->
+                    <ToolbarMenu icon="wikiglyph-translation" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+            </ToolbarMenu>
                 </div>
             </div>
           <component
@@ -43,6 +46,7 @@ import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import LanguageBar from '@/components/LanguageBar'
 import TopicSearchBox from '@/components/TopicSearchBox'
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
 export default {
     name: 'MainPage',
@@ -65,7 +69,7 @@ export default {
                 // }
             ],
             WIKI: WIKI,
-            landingPageName: "Wikidocumentaries"
+            landingPageName: "Wikidocumentaries",
         }
     },
     computed: {
@@ -79,7 +83,8 @@ export default {
         MapSearchPage,
         WaitPage,
         LanguageBar,
-        TopicSearchBox
+        TopicSearchBox,
+        ToolbarMenu
     },
     beforeRouteEnter (to, from, next) {
         //console.log(to);

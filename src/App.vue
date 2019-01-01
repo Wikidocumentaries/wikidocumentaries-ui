@@ -86,7 +86,7 @@ a:hover {
   color: #333;
   margin: 0 20px;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.5em;
   font-weight: bold;
   height: 60px;
   align-items: center;
@@ -122,8 +122,19 @@ a:hover {
 .header-link {
   flex-grow: 10;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
+.header-link a {
+  color: var(--main-txt-color);
+}
+
+.header-link a:hover {
+    box-shadow: none;
+    outline: none;
+}
 
 .yellow {
     background: var(--main-yellow);

@@ -46,7 +46,7 @@ export default {
                 centuryText: ""
             },
             Wikidata: {
-                headerTitle: 'Wikidata excerpt',
+                headerTitle: 'Facts',
                 noTopicFoundText: "Topic not found"
             },
             Wikipedia: {
