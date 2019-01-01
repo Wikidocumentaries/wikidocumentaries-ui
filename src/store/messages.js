@@ -84,6 +84,7 @@ export default {
             menus: {
                 actionMenuTitle: 'Actions',
                 languageMenuTitle: "Choose language",
+                myLanguagesItem: "My languages",
             },
             languages: {
                 fi: "Finnish",
@@ -177,6 +178,7 @@ export default {
             menus: {
                 actionMenuTitle: 'Toiminnot',
                 languageMenuTitle: "Valitse kieli",
+                myLanguagesItem: "Omat kielet",
             },
             languages: {
                 fi: "suomi",
@@ -232,11 +234,11 @@ export default {
                 centuryText: "s"
             },
             Wikidata: {
-                headerTitle: 'Fakta i Wikidata',
+                headerTitle: 'Fakta',
                 noTopicFoundText: "Ämnet hittades inte"
             },
             Wikipedia: {
-                headerTitle: 'Artikel i Wikipedia'
+                headerTitle: 'Artikeln'
             }
         },
         map_place_match_page: {
@@ -270,6 +272,7 @@ export default {
             menus: {
                 actionMenuTitle: 'Funktioner',
                 languageMenuTitle: "Välj språk",
+                myLanguagesItem: "Mina språk",
             },
             languages: {
                 fi: "finska",

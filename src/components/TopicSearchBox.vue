@@ -243,6 +243,7 @@ export default {
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 50;
+    border: 1px solid #333;
 }
 
 .dropdown-content-hide {
@@ -266,7 +267,7 @@ export default {
 .dropdown-content a:hover {
     box-shadow: none;
     outline: none;
-    background-color: #cf412d;
+    background-color: var(--main-red);
     color: white;
 }
 

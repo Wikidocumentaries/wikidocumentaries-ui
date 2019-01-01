@@ -8,6 +8,12 @@
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
+const MENU_ACTIONS = {
+    CHANGE_LANGUAGE_FI: 0,
+    CHANGE_LANGUAGE_EN: 1,
+    CHANGE_LANGUAGE_SV: 2,
+}
+
 export default {
     name: 'LanguageMenu',
     props: {
@@ -29,7 +35,7 @@ export default {
                 },
                 {
                     id: MENU_ACTIONS.MY_LANGUAGES,
-                    text: 'general.languages.sv'
+                    text: 'general.menus.myLanguagesItem'
                 },
             ],
         }
@@ -41,17 +47,15 @@ export default {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
             case MENU_ACTIONS.CHANGE_LANGUAGE_FI:
-                setLanguage('fi');
+                this.$i18n.locale = 'fi';
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_EN:
-                setLanguage('en');
+                this.$i18n.locale = 'en';
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_SV:
-                setLanguage('sv');
+                this.$i18n.locale = 'sv';
+                break;
             }
-        },
-        setLanguage(language) {
-            this.$i18n.locale = language;
         }
     }
 }

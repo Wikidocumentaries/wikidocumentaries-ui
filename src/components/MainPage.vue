@@ -15,7 +15,6 @@
                 </div>
                 <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <!--LanguageBar class="language-bar"></LanguageBar-->
                     <LanguageMenu class="language-menu"></LanguageMenu>
                 </div>
             </div>
@@ -42,7 +41,6 @@ import TopicPage from '@/components/topic_page/HomePage'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
-import LanguageBar from '@/components/LanguageBar'
 import TopicSearchBox from '@/components/TopicSearchBox'
 import LanguageMenu from '@/components/LanguageMenu'
 
@@ -80,7 +78,7 @@ export default {
         MapPlaceMatchPage,
         MapSearchPage,
         WaitPage,
-        LanguageBar,
+        LanguageMenu,
         TopicSearchBox
     },
     beforeRouteEnter (to, from, next) {

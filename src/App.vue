@@ -18,7 +18,7 @@ export default {
   --main-modal-color: #dadada;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
-  --main-red: #cf412d;
+  --main-red: #cf4b2d;
   --main-purple: #a74e77;
   --main-blue: #008aad;
   --main-green: #69a656;
