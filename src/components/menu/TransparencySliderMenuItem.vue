@@ -75,7 +75,7 @@ export default {
     font-size: 11pt;
     line-height: 1.5;
     color: #333;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .slidecontainer {

@@ -83,6 +83,12 @@ export default {
             helpText: "Help",
             menus: {
                 actionMenuTitle: 'Actions',
+                languageMenuTitle: "Choose language",
+            },
+            languages: {
+                fi: "Finnish",
+                en: "English",
+                sv: "Swedish",
             }
         }
     },
@@ -133,11 +139,11 @@ export default {
                 centuryText: "-luku"
             },
             Wikidata: {
-                headerTitle: 'Tietoja Wikidatassa',
+                headerTitle: 'Tietoja',
                 noTopicFoundText: "Aihetta ei löytynyt"
             },
             Wikipedia: {
-                headerTitle: 'Artikkelin ote Wikipediasta'
+                headerTitle: 'Artikkeli'
             }
         },
         map_place_match_page: {
@@ -170,6 +176,12 @@ export default {
             helpText: "Ohje",
             menus: {
                 actionMenuTitle: 'Toiminnot',
+                languageMenuTitle: "Valitse kieli",
+            },
+            languages: {
+                fi: "suomi",
+                en: "englanti",
+                sv: "ruotsi",
             }
         }
     },
@@ -256,7 +268,13 @@ export default {
             cancel: "Avbryt",
             helpText: "Hjälp",
             menus: {
-                actionMenuTitle: 'Funtioner',
+                actionMenuTitle: 'Funktioner',
+                languageMenuTitle: "Välj språk",
+            },
+            languages: {
+                fi: "finska",
+                en: "engelska",
+                sv: "svenska",
             }
         }
     }

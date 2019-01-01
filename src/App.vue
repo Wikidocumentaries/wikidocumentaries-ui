@@ -84,11 +84,11 @@ a:hover {
   display: flex;
   font-family: 'Barlow Condensed', sans-serif;
   color: #333;
-  margin: 0 20px;
+  margin-left: 20px;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
-  height: 60px;
+  height: 45px;
   align-items: center;
  }
 

@@ -16,9 +16,7 @@
                 <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
                     <!--LanguageBar class="language-bar"></LanguageBar-->
-                    <ToolbarMenu icon="wikiglyph-translation" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-            </ToolbarMenu>
+                    <LanguageMenu class="language-menu"></LanguageMenu>
                 </div>
             </div>
           <component
@@ -46,7 +44,7 @@ import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import LanguageBar from '@/components/LanguageBar'
 import TopicSearchBox from '@/components/TopicSearchBox'
-import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import LanguageMenu from '@/components/LanguageMenu'
 
 export default {
     name: 'MainPage',
@@ -83,8 +81,7 @@ export default {
         MapSearchPage,
         WaitPage,
         LanguageBar,
-        TopicSearchBox,
-        ToolbarMenu
+        TopicSearchBox
     },
     beforeRouteEnter (to, from, next) {
         //console.log(to);
@@ -137,11 +134,12 @@ export default {
     font-size: 16pt;
     margin-left: 20px;
     color: #333;
+    cursor: pointer;
 }
 
 a.main-button:hover {
     box-shadow: none;
-    color:#C04822;
+    color: var(--main-red);
 }
 
 .tab-button {
@@ -201,6 +199,8 @@ a.main-button:hover {
 
 .right-align {
     display: flex;
+    height: 100%;
+    align-items: center;
 }
 
 </style>

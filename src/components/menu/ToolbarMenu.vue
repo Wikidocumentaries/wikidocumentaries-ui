@@ -51,19 +51,37 @@ export default {
 .menu-title {
     color: black;
     padding: 6px 12px;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .toolbar-item {
-    padding-right: 5px;
-    margin-bottom: -5px;
-    position: relative;
-    display: inline-block;
+height: 100%;
+}
+
+.toolbar-item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    transition: color 80ms ease-in, background 80ms ease-in;
+    justify-content: center;
+    cursor: pointer;
+    width: 45px;
+    
+}
+
+.toolbar-item:hover {
+    background: var(--main-txt-color);
+}
+
+.toolbar-item:hover > a {
+    color: white;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-    display:block;
+    display: flex;
+    flex-direction: column;
     position: absolute;
     background-color: white;
     width: max-content;
@@ -88,6 +106,7 @@ export default {
     line-height: 1.5;
     color: #333;
     font-weight: 400;
+    width: auto;
 }
 
 /* Links inside the dropdown + Change color of dropdown links on hover */

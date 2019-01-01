@@ -612,9 +612,24 @@ export default {
 
 .map-popup-nearby-place-container {
     position: relative;
-	background: #ffffff;
-	border: 1px solid #000000;
-    padding: 12px 6px;
+	background: #ffffff80;
+    padding: 4px 10px;
+    border: #333 1px solid;
+}
+
+.map-popup-nearby-place-container a {
+    color: #333;
+    box-shadow: none;
+}
+
+.map-popup-nearby-place-container:hover {
+    background: #333;
+    color: white;
+    z-index: 2;
+}
+
+.map-popup-nearby-place-container:hover a {
+    color: white;
 }
 
 </style>
