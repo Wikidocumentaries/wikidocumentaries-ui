@@ -13,7 +13,7 @@
                 <div class="left-align">
                     <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
                 </div>
-                <div class="right-align">
+                <div class="right-align toolbar">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
                     <LanguageMenu class="language-menu"></LanguageMenu>
                 </div>
