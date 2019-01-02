@@ -284,7 +284,7 @@ export default {
             }
         }
     },
- es: {
+    es: {
         LandingPage: {
             search: "Buscar",
             searchInputPlaceHolder: "Encuentre un tema o cree uno nuevo"
@@ -380,4 +380,3 @@ export default {
         }
     }
 }
-
