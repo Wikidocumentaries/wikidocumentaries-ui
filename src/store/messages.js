@@ -286,18 +286,18 @@ export default {
     },
     es: {
         LandingPage: {
-            search: "Search",
-            searchInputPlaceHolder: "Find a topic or create a new topic"
+            search: "Buscar",
+            searchInputPlaceHolder: "Encuentre un tema o cree uno nuevo"
         },
         MainPage: {
             topicPageName: 'Topic page',
             mapPlaceMatchPageName: 'Combine place names',
-            mapSearchPageName: 'Search maps',
+            mapSearchPageName: 'Buscar mapas',
             wikiTopicErrorMessage: "A Wikipedia page for the topic could not be found in the current language or happened other unexpected error.",
             returnToHomeMessage: "Back to landing page",
         },
         WaitPage: {
-            waitMessage: "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+            waitMessage: "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
         },
         topic_page: {
             BaseMapDialog: {
@@ -308,17 +308,17 @@ export default {
             HomePage: {
             },
             TopicImages: {
-                headerTitle: 'Images from the archives',
-                showImagesOnMapMenuText: "Show all images on the map",
-                showImagesOnTimelineMenuText: "Show all images on the timeline"
+                headerTitle: 'Imágenes de los archivos',
+                showImagesOnMapMenuText: "Mostrar todas las imágenes en el mapa",
+                showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo"
             },
             TopicMap: {
                 headerTitle: 'Topic on the map',
                 chooseHistoricalBasemapMenuText: "Choose historical base map(s)...",
-                hideImagesMenuText: "Hide images",
+                hideImagesMenuText: "Ocultar imágenes",
                 chooseTimelineMapsMenuText: "Choose timeline maps...",
-                showNearbyPlacesMenuText: "Show nearby places",
-                hideNearbyPlacesMenuText: "Hide nearby places"
+                showNearbyPlacesMenuText: "Mostrar lugares cercanos",
+                hideNearbyPlacesMenuText: "Ocultar lugares cercanos"
             },
             TopicNewspapers: {
                 headerTitle: 'Newspaper clippings',
@@ -326,16 +326,16 @@ export default {
                 addClipFromArchivesMenuText: 'Add clipping...',
             },
             TopicTimeline: {
-                headerTitle: 'Timeline',
+                headerTitle: 'Línea de tiempo',
                 showEventsOnTimelineMenuText: "Show topic events on the timeline",
                 centuryText: ""
             },
             Wikidata: {
-                headerTitle: 'Facts',
+                headerTitle: 'Datos',
                 noTopicFoundText: "Topic not found"
             },
             Wikipedia: {
-                headerTitle: 'Article'
+                headerTitle: 'Artículo'
             }
         },
         map_place_match_page: {
@@ -348,7 +348,7 @@ export default {
                 headerTitle: 'Search historical maps',
                 filterBySourceMenuText: "Filter by source...",
                 filterByTimeMenuText: "Filter based on time...",
-                filterByMapMenuText: "Filter via map..."
+                filterByMapMenuText: "Filtrar por mapa..."
             }
         },
         openlayersplugin: {
@@ -364,18 +364,18 @@ export default {
         },
         general: {
             ok: "OK",
-            cancel: "Cancel",
-            helpText: "Help",
+            cancel: "Cancelar",
+            helpText: "Ayuda",
             menus: {
-                actionMenuTitle: 'Actions',
-                languageMenuTitle: "Choose language",
-                myLanguagesItem: "My languages",
+                actionMenuTitle: 'Acciones',
+                languageMenuTitle: "Elige un idioma",
+                myLanguagesItem: "Mis idiomas",
             },
             languages: {
-                fi: "Finnish",
-                en: "English",
-                sv: "Swedish",
-                es: "Spanish",
+                fi: "Finés",
+                en: "Inglés",
+                sv: "Sueco",
+                es: "Español",
             }
         }
     }
