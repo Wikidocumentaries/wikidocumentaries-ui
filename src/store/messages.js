@@ -284,25 +284,25 @@ export default {
             }
         }
     },
-    es: {
+ es: {
         LandingPage: {
             search: "Buscar",
             searchInputPlaceHolder: "Encuentre un tema o cree uno nuevo"
         },
         MainPage: {
-            topicPageName: 'Topic page',
-            mapPlaceMatchPageName: 'Combine place names',
+            topicPageName: 'Página del tema',
+            mapPlaceMatchPageName: 'Combinar nombres de lugares',
             mapSearchPageName: 'Buscar mapas',
-            wikiTopicErrorMessage: "A Wikipedia page for the topic could not be found in the current language or happened other unexpected error.",
-            returnToHomeMessage: "Back to landing page",
+            wikiTopicErrorMessage: "No se pudo encontrar ua página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
+            returnToHomeMessage: "Volver a la página de bienvenida",
         },
         WaitPage: {
             waitMessage: "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
         },
         topic_page: {
             BaseMapDialog: {
-                chooseMapTitle: "Choose historical base map(s)",
-                chooseMapHelpNote: "Tip: ctrl+click allows to select many maps",
+                chooseMapTitle: "Elige uno o varios mapas históricos de base",
+                chooseMapHelpNote: "Tip: ctrl+click permite seleccionar varios mapas",
                 yearAbbreviation: "y.",
             },
             HomePage: {
@@ -313,26 +313,26 @@ export default {
                 showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo"
             },
             TopicMap: {
-                headerTitle: 'Topic on the map',
-                chooseHistoricalBasemapMenuText: "Choose historical base map(s)...",
+                headerTitle: 'Tema en el mapa',
+                chooseHistoricalBasemapMenuText: "Elige uno o varios mapas históricos de base...",
                 hideImagesMenuText: "Ocultar imágenes",
-                chooseTimelineMapsMenuText: "Choose timeline maps...",
+                chooseTimelineMapsMenuText: "Elige mapas para la línea de tiempo...",
                 showNearbyPlacesMenuText: "Mostrar lugares cercanos",
                 hideNearbyPlacesMenuText: "Ocultar lugares cercanos"
             },
             TopicNewspapers: {
-                headerTitle: 'Newspaper clippings',
-                searhTopicFromArchivesMenuText: 'Search from the newspapers in the National Library of Finland',
-                addClipFromArchivesMenuText: 'Add clipping...',
+                headerTitle: 'Recortes de diarios',
+                searhTopicFromArchivesMenuText: 'Buscar diarios en la Biblioteca Nacional de Finlandia',
+                addClipFromArchivesMenuText: 'Agregar recorte...',
             },
             TopicTimeline: {
                 headerTitle: 'Línea de tiempo',
-                showEventsOnTimelineMenuText: "Show topic events on the timeline",
+                showEventsOnTimelineMenuText: "Mostrar eventos por tema en la línea de tiempo",
                 centuryText: ""
             },
             Wikidata: {
                 headerTitle: 'Datos',
-                noTopicFoundText: "Topic not found"
+                noTopicFoundText: "Tema no encontrando"
             },
             Wikipedia: {
                 headerTitle: 'Artículo'
@@ -340,26 +340,26 @@ export default {
         },
         map_place_match_page: {
             PlaceMatchSettings: {
-                headerTitle: 'Combine place names'
+                headerTitle: 'Combinar nombres de lugares'
             }
         },
         map_search_page: {
             HistoricalMapsSearch: {
-                headerTitle: 'Search historical maps',
-                filterBySourceMenuText: "Filter by source...",
-                filterByTimeMenuText: "Filter based on time...",
+                headerTitle: 'Buscar mapas históricos',
+                filterBySourceMenuText: "Filtrar por fuente...",
+                filterByTimeMenuText: "Filtrar por fecha...",
                 filterByMapMenuText: "Filtrar por mapa..."
             }
         },
         openlayersplugin: {
             WikimapsWarperLayer: {
-                attribution1PrefixText: 'For the historical basemap, see credits and copyright from',
-                attribution2PrefixText: 'Rectified map from'
+                attribution1PrefixText: 'Por el mapa histórico base, vea los creditos y los derechos de autor de',
+                attribution2PrefixText: 'Mapa rectificado de'
             }
         },
         menu: {
             TransparencySliderMenuItem: {
-                transparencyLabel: "Transparency of the historical base map:"
+                transparencyLabel: "Transparencia del mapa histórico base:"
             }
         },
         general: {
@@ -380,3 +380,4 @@ export default {
         }
     }
 }
+
