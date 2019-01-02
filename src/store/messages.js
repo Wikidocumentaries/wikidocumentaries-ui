@@ -293,7 +293,7 @@ export default {
             topicPageName: 'Página del tema',
             mapPlaceMatchPageName: 'Combinar nombres de lugares',
             mapSearchPageName: 'Buscar mapas',
-            wikiTopicErrorMessage: "No se pudo encontrar ua página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
+            wikiTopicErrorMessage: "No se pudo encontrar una página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
             returnToHomeMessage: "Volver a la página de bienvenida",
         },
         WaitPage: {
@@ -353,7 +353,7 @@ export default {
         },
         openlayersplugin: {
             WikimapsWarperLayer: {
-                attribution1PrefixText: 'Por el mapa histórico base, vea los creditos y los derechos de autor de',
+                attribution1PrefixText: 'Por el mapa histórico base, vea los créditos y los derechos de autor en',
                 attribution2PrefixText: 'Mapa rectificado de'
             }
         },
