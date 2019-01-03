@@ -286,96 +286,96 @@ export default {
     },
     es: {
         LandingPage: {
-            search: "Search",
-            searchInputPlaceHolder: "Find a topic or create a new topic"
+            search: "Buscar",
+            searchInputPlaceHolder: "Encuentre un tema o cree uno nuevo"
         },
         MainPage: {
-            topicPageName: 'Topic page',
-            mapPlaceMatchPageName: 'Combine place names',
-            mapSearchPageName: 'Search maps',
-            wikiTopicErrorMessage: "A Wikipedia page for the topic could not be found in the current language or happened other unexpected error.",
-            returnToHomeMessage: "Back to landing page",
+            topicPageName: 'Página del tema',
+            mapPlaceMatchPageName: 'Combinar nombres de lugares',
+            mapSearchPageName: 'Buscar mapas',
+            wikiTopicErrorMessage: "No se pudo encontrar una página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
+            returnToHomeMessage: "Volver a la página de bienvenida",
         },
         WaitPage: {
-            waitMessage: "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+            waitMessage: "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
         },
         topic_page: {
             BaseMapDialog: {
-                chooseMapTitle: "Choose historical base map(s)",
-                chooseMapHelpNote: "Tip: ctrl+click allows to select many maps",
+                chooseMapTitle: "Elige uno o varios mapas históricos de base",
+                chooseMapHelpNote: "Tip: ctrl+click permite seleccionar varios mapas",
                 yearAbbreviation: "y.",
             },
             HomePage: {
             },
             TopicImages: {
-                headerTitle: 'Images from the archives',
-                showImagesOnMapMenuText: "Show all images on the map",
-                showImagesOnTimelineMenuText: "Show all images on the timeline"
+                headerTitle: 'Imágenes de los archivos',
+                showImagesOnMapMenuText: "Mostrar todas las imágenes en el mapa",
+                showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo"
             },
             TopicMap: {
-                headerTitle: 'Topic on the map',
-                chooseHistoricalBasemapMenuText: "Choose historical base map(s)...",
-                hideImagesMenuText: "Hide images",
-                chooseTimelineMapsMenuText: "Choose timeline maps...",
-                showNearbyPlacesMenuText: "Show nearby places",
-                hideNearbyPlacesMenuText: "Hide nearby places"
+                headerTitle: 'Tema en el mapa',
+                chooseHistoricalBasemapMenuText: "Elige uno o varios mapas históricos de base...",
+                hideImagesMenuText: "Ocultar imágenes",
+                chooseTimelineMapsMenuText: "Elige mapas para la línea de tiempo...",
+                showNearbyPlacesMenuText: "Mostrar lugares cercanos",
+                hideNearbyPlacesMenuText: "Ocultar lugares cercanos"
             },
             TopicNewspapers: {
-                headerTitle: 'Newspaper clippings',
-                searhTopicFromArchivesMenuText: 'Search from the newspapers in the National Library of Finland',
-                addClipFromArchivesMenuText: 'Add clipping...',
+                headerTitle: 'Recortes de diarios',
+                searhTopicFromArchivesMenuText: 'Buscar diarios en la Biblioteca Nacional de Finlandia',
+                addClipFromArchivesMenuText: 'Agregar recorte...',
             },
             TopicTimeline: {
-                headerTitle: 'Timeline',
-                showEventsOnTimelineMenuText: "Show topic events on the timeline",
+                headerTitle: 'Línea de tiempo',
+                showEventsOnTimelineMenuText: "Mostrar eventos por tema en la línea de tiempo",
                 centuryText: ""
             },
             Wikidata: {
-                headerTitle: 'Facts',
-                noTopicFoundText: "Topic not found"
+                headerTitle: 'Datos',
+                noTopicFoundText: "Tema no encontrando"
             },
             Wikipedia: {
-                headerTitle: 'Article'
+                headerTitle: 'Artículo'
             }
         },
         map_place_match_page: {
             PlaceMatchSettings: {
-                headerTitle: 'Combine place names'
+                headerTitle: 'Combinar nombres de lugares'
             }
         },
         map_search_page: {
             HistoricalMapsSearch: {
-                headerTitle: 'Search historical maps',
-                filterBySourceMenuText: "Filter by source...",
-                filterByTimeMenuText: "Filter based on time...",
-                filterByMapMenuText: "Filter via map..."
+                headerTitle: 'Buscar mapas históricos',
+                filterBySourceMenuText: "Filtrar por fuente...",
+                filterByTimeMenuText: "Filtrar por fecha...",
+                filterByMapMenuText: "Filtrar por mapa..."
             }
         },
         openlayersplugin: {
             WikimapsWarperLayer: {
-                attribution1PrefixText: 'For the historical basemap, see credits and copyright from',
-                attribution2PrefixText: 'Rectified map from'
+                attribution1PrefixText: 'Por el mapa histórico base, vea los créditos y los derechos de autor en',
+                attribution2PrefixText: 'Mapa rectificado de'
             }
         },
         menu: {
             TransparencySliderMenuItem: {
-                transparencyLabel: "Transparency of the historical base map:"
+                transparencyLabel: "Transparencia del mapa histórico base:"
             }
         },
         general: {
             ok: "OK",
-            cancel: "Cancel",
-            helpText: "Help",
+            cancel: "Cancelar",
+            helpText: "Ayuda",
             menus: {
-                actionMenuTitle: 'Actions',
-                languageMenuTitle: "Choose language",
-                myLanguagesItem: "My languages",
+                actionMenuTitle: 'Acciones',
+                languageMenuTitle: "Elige un idioma",
+                myLanguagesItem: "Mis idiomas",
             },
             languages: {
-                fi: "Finnish",
-                en: "English",
-                sv: "Swedish",
-                es: "Spanish",
+                fi: "Finés",
+                en: "Inglés",
+                sv: "Sueco",
+                es: "Español",
             }
         }
     }
