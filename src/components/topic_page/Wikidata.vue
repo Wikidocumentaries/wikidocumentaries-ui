@@ -89,7 +89,7 @@ export default {
             var statements = this.wikidocumentaries.wikidata.statements;
             var shownLeadingStatements = [];
 
-            const removableProperties = ['P1472', 'P94', 'P242', 'P18', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896'];
+            const removableProperties = ['P18', 'P1472', 'P41', 'P94', 'P158', 'P242', 'P948', 'P443', 'P910', 'P2959', 'P109', 'P3896', 'P1464', 'P1465', 'P1791', 'P1792', 'P1740'];
 
             var totalValuesCount = 0;
             const maxLeadingStatementsCount = 6;
@@ -125,22 +125,22 @@ export default {
                         modifiedStatement.values[j].value = newValue;
                     }
 
-                    if (totalValuesCount < maxLeadingStatementsCount) {
+                    //if (totalValuesCount < maxLeadingStatementsCount) {
                         shownLeadingStatements.push(modifiedStatement);
-                    }
-                    else {
-                        this.shownRemainingStaments.push(modifiedStatement);
-                    }
+                    //}
+                    //else {
+                    //    this.shownRemainingStaments.push(modifiedStatement);
+                    //}
 
                     totalValuesCount += statement.values.length;
                 }
                 else if (removableProperties.indexOf(statement.id) == -1) {
-                    if (totalValuesCount < maxLeadingStatementsCount) {
+                    //if (totalValuesCount < maxLeadingStatementsCount) {
                         shownLeadingStatements.push(statement);
-                    }
-                    else {
-                        this.shownRemainingStaments.push(statement);
-                    }
+                    //}
+                    //else {
+                    //    this.shownRemainingStaments.push(statement);
+                    //}
 
                     totalValuesCount += statement.values.length;
                 }
@@ -172,6 +172,8 @@ export default {
             this.expanded = !this.expanded;
         },
         getStatementURL(value) {
+            /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+                return "/" + this.wikidocumentaries.wikidata.id; //proposed linking */
             if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "/wiki/" + value.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;

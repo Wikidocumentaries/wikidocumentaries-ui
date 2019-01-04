@@ -2,7 +2,7 @@
     <div class="topic-search-box">
         <div class="search-items">
             <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
-            <i class="wikiglyph wikiglyph-magnifying-glass"></i>
+            <a href="#" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass"></i></a>
             <!--button @click="findTopics" class="button-find"><span>{{ $t('LandingPage.search') }}</span></button-->
         </div>
         <div class="search-results">
@@ -56,9 +56,9 @@ export default {
                 if (summary.indexOf(',') == 0) {
                     summary = summary.substr(1);
                 }
-                if (summary.length > this.maxSummaryLengthInChars) {
-                    summary = summary.substr(0, this.maxSummaryLengthInChars - 3) + "...";
-                }
+                //if (summary.length > this.maxSummaryLengthInChars) {
+                //    summary = summary.substr(0, this.maxSummaryLengthInChars - 3) + "...";
+                //}
                 return summary;
             }
             else {
@@ -179,20 +179,25 @@ export default {
 <style scoped>
 
 .topic-search-box {
-    
+    height: 100%;
 }
 
 .search-items {
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .input-find {
-    padding: 10px 35px;
+    padding: 10px;
     font-size: 11pt;
     border: none;
     text-align: right;
-    right:35px;
+    right: 35px;
     min-width: 300px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .input-find:focus {
@@ -201,17 +206,8 @@ export default {
     outline: none;
 }
 
-.input-find:focus + i {
-}
-
 .input-find:focus::placeholder {
     visibility:hidden;
-}
-
-.search-items i {
-    position:absolute;
-    top:3px;
-    right:0;
 }
 
 .button-find {
@@ -239,7 +235,7 @@ export default {
 .dropdown-content {
     position: absolute;
     background-color: #fff;
-    width: 325px;
+    width: 343px;
     -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 50;
@@ -257,8 +253,8 @@ export default {
     display: block;
     text-transform: none;
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 10pt;
-    line-height: 1.5;
+    font-size: 11pt;
+    line-height: 1.3;
     color: #333;
     transition: none;
 }
@@ -275,7 +271,31 @@ export default {
     font-weight: bold;
 }
 
-.topic-summary {
+span.topic-summary {
+    font-weight: initial;
+}
+
+a.search-icon {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: color 80ms ease-in, background 80ms ease-in;
+    transition: color 80ms ease-in, background 80ms ease-in;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 45px;
+    color: #333;
+}
+
+a.search-icon:hover {
+    background: var(--main-txt-color);
+    color: white;
 }
 
 </style>

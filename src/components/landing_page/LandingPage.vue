@@ -1,5 +1,6 @@
 <template>
     <div class="landing-page">
+        <!--MainToolBar></MainToolBar-->
         <div class="main-toolbar">
             <div class="yellow"></div>
             <div class="orange"></div>
@@ -35,6 +36,7 @@
 import LanguageBar from '@/components/LanguageBar'
 import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 import TopicSearchBox from '@/components/TopicSearchBox'
+//import MainToolBar from '@/components/menu/MainToolbar'
 
 export default {
     name: 'LandingPage',
@@ -62,7 +64,8 @@ export default {
     components: {
         LanguageBar,
         TopicSearchBox,
-        WikimapsWarperLayer
+        WikimapsWarperLayer,
+        //MainToolBar
     },
     mounted: function () {
         this.$store.commit('resetState');

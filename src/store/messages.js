@@ -25,7 +25,11 @@ export default {
             TopicImages: {
                 headerTitle: 'Images from the archives',
                 showImagesOnMapMenuText: "Show all images on the map",
-                showImagesOnTimelineMenuText: "Show all images on the timeline"
+                showImagesOnTimelineMenuText: "Show all images on the timeline",
+                imagesActionMenu: {
+                    menuTitle: "Actions",
+                    doGeolocatingText: "Set the location",
+                },
             },
             TopicMap: {
                 headerTitle: 'Topic on the map',
@@ -120,7 +124,11 @@ export default {
             TopicImages: {
                 headerTitle: 'Arkistojen kuvia',
                 showImagesOnMapMenuText: "Näytä kaikki kuvat kartalla",
-                showImagesOnTimelineMenuText: "Näytä kaikki kuvat aikajanalla"
+                showImagesOnTimelineMenuText: "Näytä kaikki kuvat aikajanalla",
+                imagesActionMenu: {
+                    menuTitle: "Toiminnot",
+                    doGeolocatingText: "Aseta kuvan sijainti",
+                },
             },
             TopicMap: {
                 headerTitle: 'Sijainti kartalla',
@@ -215,7 +223,11 @@ export default {
             TopicImages: {
                 headerTitle: 'Bilder från arkiver',
                 showImagesOnMapMenuText: "Visa alla bilder på kartan",
-                showImagesOnTimelineMenuText: "Visa alla bilder i tidslinjen"
+                showImagesOnTimelineMenuText: "Visa alla bilder i tidslinjen",
+                imagesActionMenu: {
+                    menuTitle: "Actions",
+                    doGeolocatingText: "Set the location",
+                },
             },
             TopicMap: {
                 headerTitle: 'Plats på kartan',
@@ -310,7 +322,11 @@ export default {
             TopicImages: {
                 headerTitle: 'Imágenes de los archivos',
                 showImagesOnMapMenuText: "Mostrar todas las imágenes en el mapa",
-                showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo"
+                showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo",
+                imagesActionMenu: {
+                    menuTitle: "Actions",
+                    doGeolocatingText: "Set the location",
+                },
             },
             TopicMap: {
                 headerTitle: 'Tema en el mapa',

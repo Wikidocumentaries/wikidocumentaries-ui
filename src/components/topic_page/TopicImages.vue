@@ -74,16 +74,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.images-component {
-    /* width: calc(100% - 1px); */
-}
-
 .masonry-grid {
     width: calc(100% - 1px);
-}
-
-.grid {
-
 }
 
 .grid-item {

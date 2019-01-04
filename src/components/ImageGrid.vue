@@ -102,10 +102,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.grid {
-
-}
-
 .header-item {
     padding: 5px 0 0 0;
     line-height: 1;

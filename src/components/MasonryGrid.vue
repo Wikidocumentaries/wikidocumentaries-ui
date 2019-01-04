@@ -4,11 +4,18 @@
             <div v-masonry-tile class="grid-item" v-for="item in items" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">
                 <img v-bind:src="item.thumbURL" class="thumb-image" v-bind:alt="item.title"/>
                 <div class="thumb-image-header">
-                    <div v-if="item.infoURL != undefined" class="header-item">
-                        <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
+                    <div class="left-align">
+                        <ImagesActionMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                            <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+                        </ImagesActionMenu>
+                        <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
+                            <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
+                        </div>
                     </div>
-                    <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
-                        <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
+                    <div class="right-align">
+                        <div v-if="item.infoURL != undefined" class="header-item">
+                            <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="thumb-image-info">
@@ -22,6 +29,8 @@
 </template>
 
 <script>
+
+import ImagesActionMenu from '@/components/menu/ImagesActionMenu'
 
 export default {
     name: 'MasonryGrid',
@@ -37,6 +46,9 @@ export default {
             maxInstitutionsLengthInChars: 30,
             maxLicenseLengthInChars: 20,
         }
+    },
+    components: {
+        ImagesActionMenu,
     },
     mounted: function () {
         this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
@@ -102,17 +114,29 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.grid {
-
-}
-
 .header-item {
-    padding: 5px 0 0 0;
     line-height: 1;
+    height: 30px;
+    width: 30px;
 }
 
 .header-item a {   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: color 80ms ease-in, background 80ms ease-in;
+    justify-content: center;
+    cursor: pointer;
     box-shadow: none;
+    color: white;
+}
+
+.header-item:hover {
+    background: white;
+}
+
+.header-item:hover a {
+    color: var(--main-txt-color);
 }
 
 .grid-item {
@@ -139,25 +163,27 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 5px 20px;
+    padding: 0 0 20px;
     box-sizing: border-box;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
     opacity:0;
     transition: opacity 80ms ease-in;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.thumb-image-glyph {
+.left-align {
+    display: flex;
+}
+
+.right-align {
+    display: flex;
+}
+
+/*.thumb-image-glyph {
     color: white;
     transition: opacity 80ms ease-in;
-}
-
-.thumb-image-glyph:hover {
-    opacity: 0.6;
-}
-
-.thumb-image-glyph:active {
-    opacity: 1;
-}
+}*/
 
 .thumb-image-info {
     position: absolute;

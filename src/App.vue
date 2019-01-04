@@ -30,8 +30,8 @@ html, body {
   /*overflow-x: hidden;*/
 }
 
-#app {
-  /* width: calc(100% - 5px); */
+a.external.text {
+    padding-left: 0px;
 }
 
 body {
@@ -40,6 +40,12 @@ body {
 	line-height: 1.5;
 	color:#333;
 	font-weight: 400;
+}
+
+.headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #333;
+  text-transform: uppercase;
 }
 
 h1, h2 {
@@ -180,7 +186,6 @@ a:hover {
   height: 10px;
   background-color: var(--main-green);
 }
-
 
 .neg {
     background-color: #FFF;

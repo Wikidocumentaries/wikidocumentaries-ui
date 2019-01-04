@@ -1,8 +1,8 @@
 <template>
-    <div class="toolbar-item">
-        <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
+    <div class="icon-item">
+        <a href="#" @click.prevent="switchShowMenu" class="icon-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
-            <div class="menu-title">
+            <div class="menu-title headline">
                 <slot name="menu-title"></slot>
             </div>
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-    name: 'ToolbarMenu',
+    name: 'IconMenu',
     props: {
         icon: String,
         items: Array
@@ -49,39 +49,39 @@ export default {
 <style scoped>
 
 .menu-title {
-    color: black;
-    padding: 6px 12px;
-    font-size: 0.9em;
+    padding: 6px 10px;
+    font-size: 1.2em;
 }
 
-.toolbar-item {
-height: 100%;
+.icon-item {
+    line-height: 1;
+    height: 30px;
+    width: 30px;
 }
 
-.toolbar-item a {
+.icon-item a {
     height: 100%;
     display: flex;
     align-items: center;
     transition: color 80ms ease-in, background 80ms ease-in;
     justify-content: center;
     cursor: pointer;
-    width: 45px;
-    
-}
-
-.toolbar-item:hover {
-    background: var(--main-txt-color);
-}
-
-.toolbar-item:hover > a {
+    box-shadow: none;
     color: white;
+}
+
+.icon-item:hover {
+    background: white;
+}
+
+.icon-item:hover > a {
+    color: var(--main-txt-color);
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    position: absolute;
     background-color: white;
     width: max-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -96,7 +96,7 @@ height: 100%;
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 6px 12px;
+    padding: 6px 10px;
     text-decoration: none;
     display: block;
     text-transform: none;

@@ -12,6 +12,7 @@ const MENU_ACTIONS = {
     CHANGE_LANGUAGE_FI: 0,
     CHANGE_LANGUAGE_EN: 1,
     CHANGE_LANGUAGE_SV: 2,
+    CHANGE_LANGUAGE_ES: 3,
 }
 
 export default {
@@ -34,9 +35,13 @@ export default {
                     text: 'general.languages.sv'
                 },
                 {
+                    id: MENU_ACTIONS.CHANGE_LANGUAGE_ES,
+                    text: 'general.languages.es'
+                },
+                /*{
                     id: MENU_ACTIONS.MY_LANGUAGES,
                     text: 'general.menus.myLanguagesItem'
-                },
+                },*/
             ],
         }
     },
@@ -54,6 +59,9 @@ export default {
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_SV:
                 this.$i18n.locale = 'sv';
+                break;
+            case MENU_ACTIONS.CHANGE_LANGUAGE_ES:
+                this.$i18n.locale = 'es';
                 break;
             }
         }

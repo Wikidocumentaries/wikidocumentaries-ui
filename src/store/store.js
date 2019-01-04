@@ -787,6 +787,7 @@ export default new Vuex.Store({
 
             state.wikidocumentaries = {
                 title: null,
+                description: null,
                 headerImageURL: null,
                 wikipedia: {
                     excerptHTML: null,
@@ -849,6 +850,9 @@ export default new Vuex.Store({
         },
         setWikidocumentariesTopicTitle(state, title) {
             state.wikidocumentaries.title = title;
+        },
+        setWikidocumentariesTopicDescription(state, title) {
+            state.wikidocumentaries.description = description;
         },
         setWikidata(state, wikidata) {
             state.wikidocumentaries.wikidata = wikidata;

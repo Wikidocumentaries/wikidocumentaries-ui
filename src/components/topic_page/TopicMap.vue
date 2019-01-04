@@ -612,24 +612,22 @@ export default {
 
 .map-popup-nearby-place-container {
     position: relative;
-	background: #ffffff80;
-    padding: 4px 10px;
-    border: #333 1px solid;
 }
 
 .map-popup-nearby-place-container a {
     color: #333;
     box-shadow: none;
+    text-shadow: -1px 0 #ffffff80, 0 1px #ffffff80, 1px 0 #ffffff80, 0 -1px #ffffff80;
 }
 
 .map-popup-nearby-place-container:hover {
-    background: #333;
-    color: white;
     z-index: 2;
+    background: white;
+    border-radius: 3px;
 }
 
-.map-popup-nearby-place-container:hover a {
-    color: white;
+.map-popup-nearby-place-container a:hover {
+    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
 }
 
 </style>
