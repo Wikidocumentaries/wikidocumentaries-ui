@@ -1,5 +1,5 @@
 <template>
-    <div class="images-action-menu>">
+    <div class="images-action-menu">
         <IconMenu icon="wikiglyph-ellipses" :items="iconActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
             <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesActionMenu.menuTitle') }}</div>
         </IconMenu>

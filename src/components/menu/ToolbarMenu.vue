@@ -1,8 +1,8 @@
 <template>
-    <div class="toolbar-item">
+    <div class="toolbar-item" @mouseleave="hideMenu">
         <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
-            <div class="menu-title">
+            <div class="menu-title headline">
                 <slot name="menu-title"></slot>
             </div>
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
@@ -49,32 +49,8 @@ export default {
 <style scoped>
 
 .menu-title {
-    color: black;
-    padding: 6px 12px;
-    font-size: 0.9em;
-}
-
-.toolbar-item {
-height: 100%;
-}
-
-.toolbar-item a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: color 80ms ease-in, background 80ms ease-in;
-    justify-content: center;
-    cursor: pointer;
-    width: 45px;
-    
-}
-
-.toolbar-item:hover {
-    background: var(--main-txt-color);
-}
-
-.toolbar-item:hover > a {
-    color: white;
+    padding: 6px 10px;
+    font-size: 1.3em;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -84,10 +60,11 @@ height: 100%;
     position: absolute;
     background-color: white;
     width: max-content;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
     z-index: 2;
     right: 0;
-    border: 1px solid var(--main-txt-color);
 }
 
 .dropdown-content-hide {
@@ -96,15 +73,13 @@ height: 100%;
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 6px 12px;
+    padding: 6px 10px;
     text-decoration: none;
     display: block;
     text-transform: none;
     font-family: 'Helvetica Neue', sans-serif;
-    font-size: 11pt;
     line-height: 1.5;
     color: #333;
-    font-weight: 400;
     width: auto;
 }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="link">
-        <a v-if="link" v-bind:href="link" target="_blank"><i class="wikiglyph wikiglyph-new-window"></i></a>
+        <a v-if="link" v-bind:href="link" target="_blank" class="toolbar-item-a"><i class="wikiglyph wikiglyph-new-window"></i></a>
     </div>
 </template>
 
@@ -19,9 +19,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.link {
-    padding-right: 10px;
-    padding-top: 5px;
-}
 
 </style>

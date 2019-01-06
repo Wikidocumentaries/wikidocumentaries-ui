@@ -18,7 +18,7 @@ export default {
   --main-modal-color: #dadada;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
-  --main-red: #cf4b2d;
+  --main-red: #ce492a;
   --main-purple: #a74e77;
   --main-blue: #008aad;
   --main-green: #69a656;
@@ -28,6 +28,11 @@ html, body {
   margin: 0px;
   padding: 0px;
   /*overflow-x: hidden;*/
+  height: 100%;
+}
+
+#app {
+  height:100%;
 }
 
 a.external.text {
@@ -49,7 +54,7 @@ body {
 }
 
 h1, h2 {
-  font-weight: normal;
+  font-weight: bold;
 }
 
 a {
@@ -65,6 +70,19 @@ a:hover {
 	outline: 0;
 }
 
+.left-align {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.right-align {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/*
 .button-ok, .button-cancel {
     border: none;
     cursor: pointer;
@@ -74,16 +92,33 @@ a:hover {
     display: inline-block;
     font-size: 16px;
 }
+*/
+
+.button-ok, .button-cancel {
+  font-weight: bold;
+  min-width: 120px;
+  margin-left: 10px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
 
 .button-ok {
-    background-color: #79c184;
-    color: black;
+  background: var(--main-link-color);
+  color: white;
 }
   
 .button-cancel {
-    color: #8e8e8e;
-    background-color: white;
-    border: 1px solid #8e8e8e;
+  color: var(--main-blue);
+  background: white;
+}
+
+.button-cancel:hover {
+  border: 1px solid var(--main-blue);
 }
 
  .toolbar {
@@ -91,20 +126,34 @@ a:hover {
   font-family: 'Barlow Condensed', sans-serif;
   color: #333;
   margin-left: 20px;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  font-weight: bold;
   height: 45px;
   align-items: center;
- }
+}
 
-.toolbar-title {
-  flex-grow: 90;
+.toolbar-item {
+    height: 100%;
+}
 
+.toolbar-item a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: color 80ms ease-in, background 80ms ease-in;
+    justify-content: center;
+    cursor: pointer;
+    width: 45px;
 }
 
 .toolbar-item-a {
   color: #333;
+}
+
+.toolbar-item:hover {
+    background: var(--main-txt-color);
+}
+
+.toolbar-item:hover > a {
+    color: white;
 }
 
 .toolbar-item-a:hover {
@@ -123,8 +172,10 @@ a:hover {
 
 .header-title {
   flex-grow: 90;
-
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
+
 .header-link {
   flex-grow: 10;
   text-align: right;

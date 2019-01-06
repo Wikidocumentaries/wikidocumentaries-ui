@@ -1,10 +1,10 @@
 <template>
   <div class="Wikidata">
-        <div class="header">
-            <div class="header-title toolbar">
+        <div class="toolbar">
+            <div class="header-title">
                 {{ $t('topic_page.Wikidata.headerTitle') }}
             </div>
-            <HeaderLink class="header-link" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
+            <HeaderLink class="toolbar-item" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
         </div>
         <div class="item-instance-title">{{ title }}</div>
         <div v-if="wikidocumentaries.wikidata != undefined"> 
@@ -294,9 +294,8 @@ export default {
 .item-instance-title {
     padding-left: 20px;
     text-transform: uppercase;
-    font-weight: bold;
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 .statements {
@@ -310,6 +309,7 @@ export default {
 .statement-list-item {
     padding-bottom: 6px;
     display: flex;
+    flex-direction: column;
 }
 
 .statement-label {
@@ -328,7 +328,7 @@ export default {
 }
 
 .statment-value-list-item {
-//  padding-bottom: 12px;
+/*  padding-bottom: 12px; */
     display: flex;
 }
 

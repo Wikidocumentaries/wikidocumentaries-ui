@@ -5,6 +5,7 @@
       <WikipediaArticle class="column one"></WikipediaArticle>
       <!--div class="divider"></div-->
       <WikidataItem class="column two"></WikidataItem>
+      <!--div class="haze"></div-->
     </div>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <TopicMap id="topicMap"></TopicMap>
@@ -66,8 +67,10 @@ export default {
 
 .row {
 	display: flex;
-	flex-direction: row;
-    /* width: calc(100% - 10px); */
+    flex-direction: row;
+    overflow-y: hidden;
+    align-items: start;
+    /*height: 60vh;*/
 }
 
 .column {
@@ -88,5 +91,13 @@ export default {
     margin: 6px 0;
     background: rgb(0, 0, 0);
 }
+
+/*.haze {
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+}*/
 
 </style>

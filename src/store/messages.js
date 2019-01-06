@@ -28,7 +28,27 @@ export default {
                 showImagesOnTimelineMenuText: "Show all images on the timeline",
                 imagesActionMenu: {
                     menuTitle: "Actions",
-                    doGeolocatingText: "Set the location",
+                    doGeolocatingText: "Set the location...",
+                },
+                imagesRemoveMenu: {
+                    menuTitle: "Remove the image because...",
+                    remDepictedText: "It depicts this topic instead",
+                    remDepictedSubMenu: {
+                        search: "Search for the topic",
+                        browse: "Browse the related topics",
+                    },
+                    remCreatorText: "It is by this creator instead",
+                    remCreatorSubMenu: {
+                        search: "Search for the creator",
+                        browse: "Browse the related actors",
+                    },
+                    remInappropriateText: "It is inappropriate because",
+                    remInappropriateSubMenu: {
+                        privacy: "It violates the privacy of the depicted",
+                        violence: "It displays extreme violence",
+                        sex: "It displays sex explicitly",
+                        explain: "Leave a note to explain",
+                    },
                 },
             },
             TopicMap: {
@@ -127,7 +147,27 @@ export default {
                 showImagesOnTimelineMenuText: "Näytä kaikki kuvat aikajanalla",
                 imagesActionMenu: {
                     menuTitle: "Toiminnot",
-                    doGeolocatingText: "Aseta kuvan sijainti",
+                    doGeolocatingText: "Aseta kuvan sijainti...",
+                },
+                imagesRemoveMenu: {
+                    menuTitle: "Remove the image because...",
+                    remDepictedText: "It depicts this topic instead",
+                    remDepictedSubMenu: {
+                        search: "Search for the topic",
+                        browse: "Browse the related topics",
+                    },
+                    remCreatorText: "It is by this creator instead",
+                    remCreatorSubMenu: {
+                        search: "Search for the creator",
+                        browse: "Browse the related actors",
+                    },
+                    remInappropriateText: "It is inappropriate because",
+                    remInappropriateSubMenu: {
+                        privacy: "It violates the privacy of the depicted",
+                        violence: "It displays extreme violence",
+                        sex: "It displays sex explicitly",
+                        explain: "Leave a note to explain",
+                    },
                 },
             },
             TopicMap: {
@@ -226,7 +266,27 @@ export default {
                 showImagesOnTimelineMenuText: "Visa alla bilder i tidslinjen",
                 imagesActionMenu: {
                     menuTitle: "Actions",
-                    doGeolocatingText: "Set the location",
+                    doGeolocatingText: "Set the location...",
+                },
+                imagesRemoveMenu: {
+                    menuTitle: "Remove the image because...",
+                    remDepictedText: "It depicts this topic instead",
+                    remDepictedSubMenu: {
+                        search: "Search for the topic",
+                        browse: "Browse the related topics",
+                    },
+                    remCreatorText: "It is by this creator instead",
+                    remCreatorSubMenu: {
+                        search: "Search for the creator",
+                        browse: "Browse the related actors",
+                    },
+                    remInappropriateText: "It is inappropriate because",
+                    remInappropriateSubMenu: {
+                        privacy: "It violates the privacy of the depicted",
+                        violence: "It displays extreme violence",
+                        sex: "It displays sex explicitly",
+                        explain: "Leave a note to explain",
+                    },
                 },
             },
             TopicMap: {
@@ -325,7 +385,27 @@ export default {
                 showImagesOnTimelineMenuText: "Mostrar todas las imágenes en la línea de tiempo",
                 imagesActionMenu: {
                     menuTitle: "Actions",
-                    doGeolocatingText: "Set the location",
+                    doGeolocatingText: "Set the location...",
+                },
+                imagesRemoveMenu: {
+                    menuTitle: "Remove the image because...",
+                    remDepictedText: "It depicts this topic instead",
+                    remDepictedSubMenu: {
+                        search: "Search for the topic",
+                        browse: "Browse the related topics",
+                    },
+                    remCreatorText: "It is by this creator instead",
+                    remCreatorSubMenu: {
+                        search: "Search for the creator",
+                        browse: "Browse the related actors",
+                    },
+                    remInappropriateText: "It is inappropriate because",
+                    remInappropriateSubMenu: {
+                        privacy: "It violates the privacy of the depicted",
+                        violence: "It displays extreme violence",
+                        sex: "It displays sex explicitly",
+                        explain: "Leave a note to explain",
+                    },
                 },
             },
             TopicMap: {

@@ -622,12 +622,11 @@ export default {
 
 .map-popup-nearby-place-container:hover {
     z-index: 2;
-    background: white;
-    border-radius: 3px;
 }
 
 .map-popup-nearby-place-container a:hover {
-    text-shadow: -2px 0 #ffffff, 0 2px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    color: var(--main-link-color);
 }
 
 </style>

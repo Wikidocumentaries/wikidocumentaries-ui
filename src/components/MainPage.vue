@@ -13,7 +13,7 @@
                 <div class="left-align">
                     <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
                 </div>
-                <div class="right-align toolbar">
+                <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
                     <LanguageMenu class="language-menu"></LanguageMenu>
                 </div>
@@ -42,7 +42,7 @@ import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPa
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import TopicSearchBox from '@/components/TopicSearchBox'
-import LanguageMenu from '@/components/LanguageMenu'
+import LanguageMenu from '@/components/menu/LanguageMenu'
 
 export default {
     name: 'MainPage',
@@ -55,14 +55,6 @@ export default {
                     name: 'MainPage.topicPageName',
                     componentName: 'TopicPage'
                 },
-                // {
-                //     name: 'MainPage.mapPlaceMatchPageName',
-                //     componentName: 'MapPlaceMatchPage'
-                // },
-                // { 
-                //     name: 'MainPage.mapSearchPageName',
-                //     componentName: 'MapSearchPage'
-                // }
             ],
             WIKI: WIKI,
             landingPageName: "Wikidocumentaries",
@@ -116,10 +108,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-/* .main-content {
-    width: calc(100% - 10px);
-} */
-
 .stripe {
     flex: 1 0 100%;
     height: 18px;
@@ -172,16 +160,15 @@ a.main-button:hover {
     justify-content: space-between;
 }
 
-.main-toolbar-buttons {
+/*. main-toolbar-buttons {
      flex: 1 1 60%;
-    /* align-self: flex-end; */
     -webkit-box-flex: 1;
     -ms-flex: 1 1 60%;
     -ms-flex-item-align: end;
     margin-left: 25px;
    font-size: 22px;
     font-weight: bold;
-}
+} */
 
 .topic-search-box {
     display: flex;
@@ -193,12 +180,6 @@ a.main-button:hover {
     margin-left: 20px;
     align-self: flex-end;
     background-color: gray;
-}
-
-.right-align {
-    display: flex;
-    height: 100%;
-    align-items: center;
 }
 
 </style>

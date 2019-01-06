@@ -3,11 +3,13 @@
         <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="grid-items">
             <div v-masonry-tile class="grid-item" v-for="item in items" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">
                 <img v-bind:src="item.thumbURL" class="thumb-image" v-bind:alt="item.title"/>
+                <div class="thumb-image-info">
+                    <div class="thumb-title">{{ fitTitle(item.title) }}</div>
+                    <div class="thumb-credit">{{ getCredits(item) }}</div>
+                </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
-                        <ImagesActionMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                            <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-                        </ImagesActionMenu>
+                        <ImagesActionMenu></ImagesActionMenu>
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
                             <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
@@ -16,11 +18,8 @@
                         <div v-if="item.infoURL != undefined" class="header-item">
                             <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                         </div>
+                        <ImagesRemoveMenu></ImagesRemoveMenu>
                     </div>
-                </div>
-                <div class="thumb-image-info">
-                    <div class="thumb-title">{{ fitTitle(item.title) }}</div>
-                    <div class="thumb-credit">{{ getCredits(item) }}</div>
                 </div>
             </div>
         </div>
@@ -31,6 +30,7 @@
 <script>
 
 import ImagesActionMenu from '@/components/menu/ImagesActionMenu'
+import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu'
 
 export default {
     name: 'MasonryGrid',
@@ -49,6 +49,7 @@ export default {
     },
     components: {
         ImagesActionMenu,
+        ImagesRemoveMenu,
     },
     mounted: function () {
         this.itemWidth = this.$refs.gridItems.clientWidth / this.maxItemsPerRow;
@@ -170,14 +171,6 @@ export default {
     transition: opacity 80ms ease-in;
     align-items: center;
     justify-content: space-between;
-}
-
-.left-align {
-    display: flex;
-}
-
-.right-align {
-    display: flex;
 }
 
 /*.thumb-image-glyph {

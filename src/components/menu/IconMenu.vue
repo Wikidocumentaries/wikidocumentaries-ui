@@ -1,6 +1,8 @@
 <template>
-    <div class="icon-item">
-        <a href="#" @click.prevent="switchShowMenu" class="icon-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
+    <div class="icon-item" @mouseleave="hideMenu">
+        <a href="#" @click.prevent="switchShowMenu" class="icon-item-a">
+            <i class="wikiglyph" v-bind:class="icon"></i>
+        </a>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
             <div class="menu-title headline">
                 <slot name="menu-title"></slot>
@@ -49,8 +51,9 @@ export default {
 <style scoped>
 
 .menu-title {
-    padding: 6px 10px;
-    font-size: 1.2em;
+    padding: 8px 10px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .icon-item {
@@ -84,10 +87,11 @@ export default {
     flex-direction: column;
     background-color: white;
     width: max-content;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
     z-index: 2;
-    right: 0;
-    border: 1px solid var(--main-txt-color);
+    position: absolute;
 }
 
 .dropdown-content-hide {
@@ -96,7 +100,7 @@ export default {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-    padding: 6px 10px;
+    padding: 7px 10px;
     text-decoration: none;
     display: block;
     text-transform: none;

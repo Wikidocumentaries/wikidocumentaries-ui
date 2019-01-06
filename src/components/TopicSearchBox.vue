@@ -291,6 +291,7 @@ a.search-icon {
     cursor: pointer;
     width: 45px;
     color: #333;
+    box-shadow: none;
 }
 
 a.search-icon:hover {

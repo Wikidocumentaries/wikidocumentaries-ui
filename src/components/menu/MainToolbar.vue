@@ -8,11 +8,11 @@
             <div class="turquoise"></div>
             <div class="green"></div>
         </div>
-        <div id="main-toolbar" class="main-toolbar">
+        <div id="top-toolbar" class="top-toolbar">
             <div class="left-align">
                 <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
             </div>
-            <div class="right-align toolbar">
+            <div class="right-align">
                 <TopicSearchBox class="topic-search-box"></TopicSearchBox>
                 <LanguageMenu class="language-menu"></LanguageMenu>
             </div>
@@ -22,7 +22,7 @@
 
 <script>
 import TopicSearchBox from '@/components/TopicSearchBox'
-import LanguageMenu from '@/components/LanguageMenu'
+import LanguageMenu from '@/components/menu/LanguageMenu'
 
 export default {
     name: 'MainToolbar',
@@ -58,6 +58,10 @@ export default {
 
 <style scoped>
 
+.main-toolbar {
+    width: 100%;
+}
+
 .stripe {
     flex: 1 0 100%;
     height: 18px;
@@ -78,7 +82,7 @@ a.main-button:hover {
     color: var(--main-red);
 }
 
-.main-toolbar {
+.top-toolbar {
     display: -ms-flexbox;
     height: 45px;
     display: flex;
@@ -95,12 +99,6 @@ a.main-button:hover {
     margin-left: 25px;
    font-size: 22px;
     font-weight: bold;
-}
-
-.right-align {
-    display: flex;
-    height: 100%;
-    align-items: center;
 }
 
 .topic-search-box {

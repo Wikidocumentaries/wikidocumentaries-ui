@@ -1,15 +1,14 @@
 <template>
   <div class="wikipedia">
-    <div class="header">
-      <div class="header-title toolbar">
-        {{ $t('topic_page.Wikipedia.headerTitle') }}
-      </div>
-      <HeaderLink class="header-link" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
+    <div class="toolbar">
+        <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
+        <HeaderLink class="toolbar-item" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
     <div class="text wiki-html">
       <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>
+      <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
     </div>
-    <div class="text wiki-html expanded-html" v-if="expanded">
+    <!--div class="text wiki-html expanded-html" v-if="expanded">
       <button class="expander top-exander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
         <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
         <i v-else class="wikiglyph wikiglyph-caret-down"></i>
@@ -19,7 +18,7 @@
     <button class="expander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
       <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
       <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-    </button>
+    </button-->
   </div>
 </template>
 

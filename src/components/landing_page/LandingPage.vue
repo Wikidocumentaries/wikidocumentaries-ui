@@ -1,32 +1,9 @@
 <template>
     <div class="landing-page">
-        <!--MainToolBar></MainToolBar-->
-        <div class="main-toolbar">
-            <div class="yellow"></div>
-            <div class="orange"></div>
-            <div class="red"></div>
-            <div class="purple"></div>
-            <div class="turquoise"></div>
-            <div class="green"></div>
-        </div>
-        <div class="header">
-            <img v-bind:src="photoOfTheDay" class="header-image"/>
-            <div class="header-contents">
-                <LanguageBar class="header-language-bar"></LanguageBar>
-                <div class="title">
-                    <h1><span>Wikidocumentaries</span></h1>
-                </div>
-            </div>
-        </div>
-        <div class="redbar horizonal-divider"></div>
-        <div class="search-area">
-            <div class="search-box">
-                <TopicSearchBox></TopicSearchBox>
-            </div>
-        </div>
-        <div class="redbar horizonal-divider"></div>
-        <div class="map-area" id="map">
-            <WikimapsWarperLayer v-for="basemapInfo in selectedBasemaps" :key="basemapInfo.server + basemapInfo.warperID" ref="warperLayer" :map="map" :basemapInfo="basemapInfo"></WikimapsWarperLayer>
+        <MainToolBar></MainToolBar>
+        <div class="cover">
+            <img v-bind:src="photoOfTheDay" class="cover-image"/>
+            <div class="cover-title">Wikidocumentaries</div>
         </div>
     </div>
 </template>
@@ -36,7 +13,7 @@
 import LanguageBar from '@/components/LanguageBar'
 import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 import TopicSearchBox from '@/components/TopicSearchBox'
-//import MainToolBar from '@/components/menu/MainToolbar'
+import MainToolBar from '@/components/menu/MainToolbar'
 
 export default {
     name: 'LandingPage',
@@ -65,7 +42,7 @@ export default {
         LanguageBar,
         TopicSearchBox,
         WikimapsWarperLayer,
-        //MainToolBar
+        MainToolBar
     },
     mounted: function () {
         this.$store.commit('resetState');
@@ -99,29 +76,19 @@ export default {
 
 .landing-page {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 100%;
-    align-items: center;
-    justify-content: center;
 }
 
-.main-toolbar {
-    flex: 1 0 100%;
-    height: 20px;
-    display: flex;
-    flex-wrap: nowrap;
+.cover {
+    width: 100%;
+    height: calc(100% - 63px);
 }
 
-.header {
-    position:relative;
+.cover-image {
     width: 100%;
-}
-.header-image {
-    width: 100%;
-    height: 500px; /* Remove for production? */
-    object-fit: cover; /* Remove for production? not supported in IE 11 */
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+    height: 100%;
+    object-fit: cover;
 }
 
 .header-language-bar {
@@ -132,23 +99,18 @@ export default {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.title {
+.cover-title {
     position:absolute;
-    bottom: 0px;
-    left: 0;
-    right: 0;
+    bottom: 60px;
+    width: 100%;
     text-align: center;
-    width: 100%; 
     color: white;
     font-family: 'Helvetica Neue',  sans-serif;
-    font-size: 32pt;
-
-}
-
-.title > h1 > span {
+    font-size: 6em;
     font-weight: bold;
 }
 
+/*
 .horizonal-divider {
     flex: 1 1 100%;
     height: 20px;
@@ -171,5 +133,5 @@ export default {
     flex: 1 1 100%;
     position: relative;
 }
-
+*/
 </style>
