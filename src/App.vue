@@ -254,4 +254,14 @@ a:hover {
 i.wikiglyph {
     font-size: 24px;
 }
+
+.noprint {
+  background-color: white !important;
+  color: #333;
+  font-size: 95%;
+  padding-left: 10px !important;
+  margin-bottom: 1em !important;
+  border: none !important;
+  border-left: 10px solid var(--main-yellow) !important;
+}
 </style>

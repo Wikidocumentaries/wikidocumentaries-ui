@@ -234,12 +234,15 @@ export default {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     position: absolute;
+    right: 0;
     background-color: #fff;
-    width: 343px;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: max-content;
+    min-width: 300px;
+    max-width: 50vw;
+    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
     z-index: 50;
-    border: 1px solid #333;
 }
 
 .dropdown-content-hide {

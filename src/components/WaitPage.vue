@@ -1,5 +1,6 @@
 <template>
     <div class="wait-page">
+        <!--div class="wait-image"><img src="/static/svgs/testimage.svg"></div-->
         <div class="bars">
             <div class="yellow"></div>
             <div class="orange"></div>
@@ -8,7 +9,7 @@
             <div class="turquoise"></div>
             <div class="green"></div>
         </div>
-       {{ $t("WaitPage.waitMessage") }}
+        <div class="wait-message">{{ $t("WaitPage.waitMessage") }}</div>
     </div>
 </template>
 
@@ -29,7 +30,7 @@ export default {
 
 .bars {
     flex: 1 0 100%;
-    height: 20px;
+    height: 18px;
     display: flex;
     flex-wrap: nowrap;
 }

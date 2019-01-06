@@ -9,7 +9,7 @@
                 </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
-                        <ImagesActionMenu></ImagesActionMenu>
+                        <!--ImagesActionMenu></ImagesActionMenu-->
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
                             <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
@@ -18,7 +18,7 @@
                         <div v-if="item.infoURL != undefined" class="header-item">
                             <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                         </div>
-                        <ImagesRemoveMenu></ImagesRemoveMenu>
+                        <!--ImagesRemoveMenu></ImagesRemoveMenu-->
                     </div>
                 </div>
             </div>
