@@ -173,7 +173,10 @@ export default {
         },
         getStatementURL(value) {
             /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
-                return "/" + this.wikidocumentaries.wikidata.id; //proposed linking */
+                return "/" + this.wikidocumentaries.wikidata.id; 
+            } else {
+                return value.url;
+            }//proposed linking */
             if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "/wiki/" + value.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
@@ -190,6 +193,11 @@ export default {
             }  
         },
         getTarget(value) {
+            /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+                return "_self";
+            } else {
+                return "_blank";
+            }//proposed linking */
             if (value.sitelinks != undefined) {
                 if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
                     return "_self";

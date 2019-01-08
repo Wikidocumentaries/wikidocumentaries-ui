@@ -6,7 +6,7 @@
         <div class="bottomshade">
           <div class="titlebox">
             <div class="title">{{ wikidocumentaries.title }}</div>
-            <div class="subtitle">{{ wikidocumentaries.subtitle }}</div>
+            <div class="subtitle">{{ wikidocumentaries.description }}</div>
            </div>
         </div>
        </div>
@@ -94,13 +94,13 @@ export default {
 
 .subtitle {
     font-size: 24px;
-    line-height: 1.5em;
+    line-height: 1.2em;
+    padding-top: 3px;
 }
 
 .subtitle:first-letter {
     text-transform: capitalize;
 }
-
 
 h1 {
     font-weight: bold;

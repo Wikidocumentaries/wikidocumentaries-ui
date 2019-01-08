@@ -80,6 +80,7 @@ export default {
             var wikidata = topic.wikidata;
             var page = topic.wikipage.split(' ').join('_');
             window.location.assign("/wd/" + wikidata + "/" + page + "?language=" + this.$i18n.locale);
+            //window.location.assign("/" + wikidata); /** proposed URL */
             //window.location.reload(true);
         },
         searchFromWikipedia: function(topicInputValue) {
@@ -236,9 +237,8 @@ export default {
     position: absolute;
     right: 0;
     background-color: #fff;
-    width: max-content;
-    min-width: 300px;
-    max-width: 50vw;
+    min-width: 350px;
+    max-width: 35vw;
     -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
     box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
