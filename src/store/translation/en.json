@@ -1,121 +1,119 @@
- {   
-    "en": {
-        "LandingPage": {
-            "search": "Search",
-            "searchInputPlaceHolder": "Find a topic or create a new topic"
+{
+    "LandingPage": {
+        "search": "Search",
+        "searchInputPlaceHolder": "Find a topic or create a new topic"
+    },
+    "MainPage": {
+        "topicPageName": "Topic page",
+        "mapPlaceMatchPageName": "Combine place names",
+        "mapSearchPageName": "Search maps",
+        "wikiTopicErrorMessage": "A Wikipedia page for the topic could not be found in the current language or happened other unexpected error.",
+        "returnToHomeMessage": "Back to landing page"
+    },
+    "WaitPage": {
+        "waitMessage": "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+    },
+    "topic_page": {
+        "BaseMapDialog": {
+            "chooseMapTitle": "Choose historical base map(s)",
+            "chooseMapHelpNote": "Tip: ctrl+click allows to select many maps",
+            "yearAbbreviation": "y."
         },
-        "MainPage": {
-            "topicPageName": "Topic page",
-            "mapPlaceMatchPageName": "Combine place names",
-            "mapSearchPageName": "Search maps",
-            "wikiTopicErrorMessage": "A Wikipedia page for the topic could not be found in the current language or happened other unexpected error.",
-            "returnToHomeMessage": "Back to landing page"
+        "HomePage": {
         },
-        "WaitPage": {
-            "waitMessage": "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
-        },
-        "topic_page": {
-            "BaseMapDialog": {
-                "chooseMapTitle": "Choose historical base map(s)",
-                "chooseMapHelpNote": "Tip: ctrl+click allows to select many maps",
-                "yearAbbreviation": "y."
+        "TopicImages": {
+            "headerTitle": "Images from the archives",
+            "showImagesOnMapMenuText": "Show all images on the map",
+            "showImagesOnTimelineMenuText": "Show all images on the timeline",
+            "imagesActionMenu": {
+                "menuTitle": "Actions",
+                "doGeolocatingText": "Set the location..."
             },
-            "HomePage": {
-            },
-            "TopicImages": {
-                "headerTitle": "Images from the archives",
-                "showImagesOnMapMenuText": "Show all images on the map",
-                "showImagesOnTimelineMenuText": "Show all images on the timeline",
-                "imagesActionMenu": {
-                    "menuTitle": "Actions",
-                    "doGeolocatingText": "Set the location..."
+            "imagesRemoveMenu": {
+                "menuTitle": "Remove the image because...",
+                "remDepictedText": "It depicts this topic instead",
+                "remDepictedSubMenu": {
+                    "search": "Search for the topic",
+                    "browse": "Browse the related topics"
                 },
-                "imagesRemoveMenu": {
-                    "menuTitle": "Remove the image because...",
-                    "remDepictedText": "It depicts this topic instead",
-                    "remDepictedSubMenu": {
-                        "search": "Search for the topic",
-                        "browse": "Browse the related topics"
-                    },
-                    "remCreatorText": "It is by this creator instead",
-                    "remCreatorSubMenu": {
-                        "search": "Search for the creator",
-                        "browse": "Browse the related actors"
-                    },
-                    "remInappropriateText": "It is inappropriate because",
-                    "remInappropriateSubMenu": {
-                        "privacy": "It violates the privacy of the depicted",
-                        "violence": "It displays extreme violence",
-                        "sex": "It displays sex explicitly",
-                        "explain": "Leave a note to explain"
-                    }
+                "remCreatorText": "It is by this creator instead",
+                "remCreatorSubMenu": {
+                    "search": "Search for the creator",
+                    "browse": "Browse the related actors"
+                },
+                "remInappropriateText": "It is inappropriate because",
+                "remInappropriateSubMenu": {
+                    "privacy": "It violates the privacy of the depicted",
+                    "violence": "It displays extreme violence",
+                    "sex": "It displays sex explicitly",
+                    "explain": "Leave a note to explain"
                 }
-            },
-            "TopicMap": {
-                "headerTitle": "Topic on the map",
-                "chooseHistoricalBasemapMenuText": "Choose historical base map(s)...",
-                "hideImagesMenuText": "Hide images",
-                "chooseTimelineMapsMenuText": "Choose timeline maps...",
-                "showNearbyPlacesMenuText": "Show nearby places",
-                "hideNearbyPlacesMenuText": "Hide nearby places"
-            },
-            "TopicNewspapers": {
-                "headerTitle": "Newspaper clippings",
-                "searhTopicFromArchivesMenuText": "Search from the newspapers in the National Library of Finland",
-                "addClipFromArchivesMenuText": "Add clipping..."
-            },
-            "TopicTimeline": {
-                "headerTitle": "Timeline",
-                "showEventsOnTimelineMenuText": "Show topic events on the timeline",
-                "centuryText": ""
-            },
-            "Wikidata": {
-                "headerTitle": "Facts",
-                "noTopicFoundText": "Topic not found"
-            },
-            "Wikipedia": {
-                "headerTitle": "Article"
             }
         },
-        "map_place_match_page": {
-            "PlaceMatchSettings": {
-                "headerTitle": "Combine place names"
-            }
+        "TopicMap": {
+            "headerTitle": "Topic on the map",
+            "chooseHistoricalBasemapMenuText": "Choose historical base map(s)...",
+            "hideImagesMenuText": "Hide images",
+            "chooseTimelineMapsMenuText": "Choose timeline maps...",
+            "showNearbyPlacesMenuText": "Show nearby places",
+            "hideNearbyPlacesMenuText": "Hide nearby places"
         },
-        "map_search_page": {
-            "HistoricalMapsSearch": {
-                "headerTitle": "Search historical maps",
-                "filterBySourceMenuText": "Filter by source...",
-                "filterByTimeMenuText": "Filter based on time...",
-                "filterByMapMenuText": "Filter via map..."
-            }
+        "TopicNewspapers": {
+            "headerTitle": "Newspaper clippings",
+            "searhTopicFromArchivesMenuText": "Search from the newspapers in the National Library of Finland",
+            "addClipFromArchivesMenuText": "Add clipping..."
         },
-        "openlayersplugin": {
-            "WikimapsWarperLayer": {
-                "attribution1PrefixText": "For the historical basemap, see credits and copyright from",
-                "attribution2PrefixText": "Rectified map from"
-            }
+        "TopicTimeline": {
+            "headerTitle": "Timeline",
+            "showEventsOnTimelineMenuText": "Show topic events on the timeline",
+            "centuryText": ""
         },
-        "menu": {
-            "TransparencySliderMenuItem": {
-                "transparencyLabel": "Transparency of the historical base map:"
-            }
+        "Wikidata": {
+            "headerTitle": "Facts",
+            "noTopicFoundText": "Topic not found"
         },
-        "general": {
-            "ok": "OK",
-            "cancel": "Cancel",
-            "helpText": "Help",
-            "menus": {
-                "actionMenuTitle": "Actions",
-                "languageMenuTitle": "Choose language",
-                "myLanguagesItem": "My languages"
-            },
-            "languages": {
-                "fi": "Finnish",
-                "en": "English",
-                "sv": "Swedish",
-                "es": "Spanish"
-            }
+        "Wikipedia": {
+            "headerTitle": "Article"
+        }
+    },
+    "map_place_match_page": {
+        "PlaceMatchSettings": {
+            "headerTitle": "Combine place names"
+        }
+    },
+    "map_search_page": {
+        "HistoricalMapsSearch": {
+            "headerTitle": "Search historical maps",
+            "filterBySourceMenuText": "Filter by source...",
+            "filterByTimeMenuText": "Filter based on time...",
+            "filterByMapMenuText": "Filter via map..."
+        }
+    },
+    "openlayersplugin": {
+        "WikimapsWarperLayer": {
+            "attribution1PrefixText": "For the historical basemap, see credits and copyright from",
+            "attribution2PrefixText": "Rectified map from"
+        }
+    },
+    "menu": {
+        "TransparencySliderMenuItem": {
+            "transparencyLabel": "Transparency of the historical base map:"
+        }
+    },
+    "general": {
+        "ok": "OK",
+        "cancel": "Cancel",
+        "helpText": "Help",
+        "menus": {
+            "actionMenuTitle": "Actions",
+            "languageMenuTitle": "Choose language",
+            "myLanguagesItem": "My languages"
+        },
+        "languages": {
+            "fi": "Finnish",
+            "en": "English",
+            "sv": "Swedish",
+            "es": "Spanish"
         }
     }
- }
+}
