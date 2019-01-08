@@ -1,0 +1,121 @@
+{
+    "sv": {
+        "LandingPage": {
+            "search": "Sök",
+            "searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne"
+        },
+        "MainPage": {
+            "topicPageName": "Ämne",
+            "mapPlaceMatchPageName": "Koppla platsnamn",
+            "mapSearchPageName": "Sök kartor",
+            "wikiTopicErrorMessage": "Det fanns ingen Wikipedia artikel on ämnet i valt språk eller en annan oförutsett fel.",
+            "returnToHomeMessage": "Tillbaka till hemsidan"
+        },
+        "WaitPage": {
+            "waitMessage": "Ett ögonblick... Söker information i Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
+        },
+        "topic_page": {
+            "BaseMapDialog": {
+                "chooseMapTitle": "Välj historisk baskarta eller baskartor",
+                "chooseMapHelpNote": "Tips: ctrl + klicka tillåter att du väljer många kartor",
+                "yearAbbreviation": "år"
+            },
+            "HomePage": {
+            },
+            "TopicImages": {
+                "headerTitle": "Bilder från arkiver",
+                "showImagesOnMapMenuText": "Visa alla bilder på kartan",
+                "showImagesOnTimelineMenuText": "Visa alla bilder i tidslinjen",
+                "imagesActionMenu": {
+                    "menuTitle": "Actions",
+                    "doGeolocatingText": "Set the location..."
+                },
+                "imagesRemoveMenu": {
+                    "menuTitle": "Remove the image because...",
+                    "remDepictedText": "It depicts this topic instead",
+                    "remDepictedSubMenu": {
+                        "search": "Search for the topic",
+                        "browse": "Browse the related topics"
+                    },
+                    "remCreatorText": "It is by this creator instead",
+                    "remCreatorSubMenu": {
+                        "search": "Search for the creator",
+                        "browse": "Browse the related actors"
+                    },
+                    "remInappropriateText": "It is inappropriate because",
+                    "remInappropriateSubMenu": {
+                        "privacy": "It violates the privacy of the depicted",
+                        "violence": "It displays extreme violence",
+                        "sex": "It displays sex explicitly",
+                        "explain": "Leave a note to explain"
+                    }
+                }
+            },
+            "TopicMap": {
+                "headerTitle": "Plats på kartan",
+                "chooseHistoricalBasemapMenuText": "Välj historisk baskarta eller baskartor...",
+                "hideImagesMenuText": "Göm bilder",
+                "chooseTimelineMapsMenuText": "Välj kartor till tidslinjen...",
+                "showNearbyPlacesMenuText": "Visa närliggande platser",
+                "hideNearbyPlacesMenuText": "Göm närliggande platser"
+            },
+            "TopicNewspapers": {
+                "headerTitle": "Pressklipp",
+                "searhTopicFromArchivesMenuText": "Sök ämnen i Nationalbibliotekets digitala samlingar",
+                "addClipFromArchivesMenuText": "Lägg till en klippning..."
+            },
+            "TopicTimeline": {
+                "headerTitle": "Tidslinje",
+                "showEventsOnTimelineMenuText": "Visa händelser i tidslinjen",
+                "centuryText": "s"
+            },
+            "Wikidata": {
+                "headerTitle": "Fakta",
+                "noTopicFoundText": "Ämnet hittades inte"
+            },
+            "Wikipedia": {
+                "headerTitle": "Artikeln"
+            }
+        },
+        "map_place_match_page": {
+            "PlaceMatchSettings": {
+                "headerTitle": "Koppla platsnamn"
+            }
+        },
+        "map_search_page": {
+            "HistoricalMapsSearch": {
+                "headerTitle": "Sök historiska kartor",
+                "filterBySourceMenuText": "Gränsa per källa...",
+                "filterByTimeMenuText": "Gränsa per tidspunkt...",
+                "filterByMapMenuText": "Gränsa sökningsareal på kartan..."
+            }
+        },
+        "openlayersplugin": {
+            "WikimapsWarperLayer": {
+                "attribution1PrefixText": "Källa och licensiering för historiska kartan: ",
+                "attribution2PrefixText": "Rektifieringen: "
+            }
+        },
+        "menu": {
+            "TransparencySliderMenuItem": {
+                "transparencyLabel": "Transparens av historiska kartan:"
+            }
+        },
+        "general": {
+            "ok": "OK",
+            "cancel": "Avbryt",
+            "helpText": "Hjälp",
+            "menus": {
+                "actionMenuTitle": "Funktioner",
+                "languageMenuTitle": "Välj språk",
+                "myLanguagesItem": "Mina språk"
+            },
+            "languages": {
+                "fi": "finska",
+                "en": "engelska",
+                "sv": "svenska",
+                "es": "spanska"
+            }
+        }
+    }
+}
