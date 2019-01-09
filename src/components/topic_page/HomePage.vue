@@ -7,10 +7,10 @@
       <WikidataItem class="column two"></WikidataItem>
       <!--div class="haze"></div-->
     </div>
-    <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <TopicMap id="topicMap"></TopicMap>
+    <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
-    <TopicNewspapers id="topicNewspapers"></TopicNewspapers>
+    <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
   </div>
 </template>
 
@@ -19,10 +19,10 @@
 import TopicPageHeader from '@/components/topic_page/TopicPageHeader'
 import WikipediaArticle from '@/components/topic_page/Wikipedia'
 import WikidataItem from '@/components/topic_page/Wikidata'
-import TopicImages from '@/components/topic_page/TopicImages'
 import TopicMap from '@/components/topic_page/TopicMap'
+import TopicImages from '@/components/topic_page/TopicImages'
 import TopicTimeline from '@/components/topic_page/TopicTimeline'
-import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
+//import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
     name: 'TopicPage',
@@ -36,10 +36,10 @@ export default {
         TopicPageHeader,
         WikipediaArticle,
         WikidataItem,
-        TopicImages,
         TopicMap,
+        TopicImages,
         TopicTimeline,
-        TopicNewspapers
+        //TopicNewspapers
     },
     computed: {
     },

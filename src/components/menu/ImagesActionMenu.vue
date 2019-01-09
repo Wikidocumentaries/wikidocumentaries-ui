@@ -12,6 +12,7 @@ import IconMenu from '@/components/menu/IconMenu'
 
 const MENU_ACTIONS = {
     DO_GEOLOCATING: 0,
+    SHOW_IMAGE: 1,
 }
 
 export default {
@@ -25,6 +26,10 @@ export default {
                     id: MENU_ACTIONS.DO_GEOLOCATING,
                     text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
                 },
+                {
+                    id: SHOW_IMAGE,
+                    text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
+                },
             ],
         }
     },
@@ -35,6 +40,9 @@ export default {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
             case DO_GEOLOCATING:
+                //this.$i18n.locale = 'fi';
+                break;
+            case SHOW_IMAGE:
                 //this.$i18n.locale = 'fi';
                 break;
             }

@@ -1,4 +1,5 @@
 <template>
+    <transition name="modal">
 	<div class="image-viewport">
 		<div class="main-content">
 			<div class="mw stripe">
@@ -140,4 +141,21 @@
 				</div>
 			</div>
 		</div>
+    </transition>
 </template>
+
+<script>
+export default {
+    name: 'ImageViewer',
+    props: {
+        shouldShowDialog: Boolean
+    },
+    computed: {
+    },
+    methods: {
+        handleCancel: function () {
+            this.$emit('close');
+        }
+    }
+}
+</script>
