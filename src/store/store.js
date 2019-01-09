@@ -903,7 +903,7 @@ export default new Vuex.Store({
             //console.log('actions.updateWikidocumentaries');
             commit('resetState');
             commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_WIKI_EXTERNAL);
-            commit('setWikidocumentariesTopicTitle', params.topic.split('_').join(' '));
+            commit('setWikidocumentariesTopicTitle', params.topic);
             commit('setWikidataId', params.wikidata);
             var promiseWiki = dispatch('getWikiDocumentariesData', params);
             //var promiseImages = dispatch('getTopicImages', params)
@@ -916,6 +916,13 @@ export default new Vuex.Store({
                 }
                 else {
                     params.wiki = data;
+
+                    params.topic = data.wikidata.title;
+                    commit('setWikidocumentariesTopicTitle', params.topic);
+
+                    params.wikidata = data.wikidata.id;
+                    commit('setWikidataId', params.wikidata);
+		    
                     commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_IMAGES_EXTERNAL);
 
                     dispatch('getTopicImages', params).then((result) => {

@@ -172,25 +172,11 @@ export default {
             this.expanded = !this.expanded;
         },
         getStatementURL(value) {
-            /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
-                return "/" + this.wikidocumentaries.wikidata.id; 
+            if (value.url) {
+                return "/" + value.url.split("/")[value.url.split("/").length-1] + "?language=" + this.$i18n.locale; 
             } else {
                 return value.url;
-            }//proposed linking */
-            if (value.sitelinks != undefined) {
-                if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
-                    return "/wiki/" + value.sitelinks[this.$i18n.locale + "wiki"].split(' ').join('_') + "?language=" + this.$i18n.locale;
-                }
-                else if (value.sitelinks.enwiki != undefined) {
-                    return "/wiki/" + value.sitelinks.enwiki.split(' ').join('_') + "?language=" + "en";
-                }
-                else {
-                    return value.url;
-                }
             }
-            else {
-                return value.url;
-            }  
         },
         getTarget(value) {
             /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {

@@ -24,9 +24,9 @@
             </div>
             <div v-if="showNearbyPlaces">
                 <div v-for="item in nearbyWikiItems" :key="item.wikidata.id">
-                    <MapOverlay v-if="item.wikidata.sitelinks[language + 'wiki'] != undefined" :map="map" :position="item.position" :offset="[0,0]" :autoPan="false" :autoPanMargin="200" :overlayGroupItemCount="nearbyWikiItems.length">
+                    <MapOverlay v-if="item.wikidata.id != undefined" :map="map" :position="item.position" :offset="[0,0]" :autoPan="false" :autoPanMargin="200" :overlayGroupItemCount="nearbyWikiItems.length">
                         <div class="map-popup-nearby-place-container">
-                            <a :href="getSiteLink(item.wikidata.sitelinks[language + 'wiki'])">{{ item.wikidata.sitelinks[language + 'wiki'].title }}</a>
+                            <a :href="getTopicURL(item)">{{ item.title }}</a>
                         </div>
                     </MapOverlay>
                 </div>
@@ -288,10 +288,8 @@ export default {
 
             this.$store.dispatch('getHistoricalBasemaps', params);
         },
-        getSiteLink(sitelink) {
-            var link = '/wiki/';
-            link += encodeURIComponent(sitelink.title);
-            return link;
+        getTopicURL(item) {
+            return item.wikidata.id + '?language=' + this.$i18n.locale;
         },
         createImageFeatures () {
             var ol = this.$ol;

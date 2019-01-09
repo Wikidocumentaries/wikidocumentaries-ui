@@ -7,7 +7,7 @@
         </div>
         <div class="search-results">
             <div :class="[shouldShowMenu ? showClass : hideClass]">
-                <a v-for="topic in topics" :key="topic.wikidata" href="#" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
+                <a v-for="topic in topics" :key="topic.wikidata" :href="topic.wikidata" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
             </div>
         </div>
     </div>
@@ -79,8 +79,7 @@ export default {
             //console.log("showTopic");
             var wikidata = topic.wikidata;
             var page = topic.wikipage.split(' ').join('_');
-            window.location.assign("/wd/" + wikidata + "/" + page + "?language=" + this.$i18n.locale);
-            //window.location.assign("/" + wikidata); /** proposed URL */
+            window.location.assign("/" + wikidata + "?language=" + this.$i18n.locale);
             //window.location.reload(true);
         },
         searchFromWikipedia: function(topicInputValue) {

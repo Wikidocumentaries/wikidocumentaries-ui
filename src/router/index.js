@@ -41,23 +41,18 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/wd/:wikidata/:topic?',
-      name: 'WDTopicPage',
-      component: MainPage
+	path: '/wikipedia/:language/:topic',
+	component: MainPage
+	/*
+	redirect: to => {
+	  return "/Q5501061"
+	}
+*/
     },
-    /*{
-      path: '/:wikidata',
-      name: 'WDTopicPage',
-      component: MainPage
-},*/ /**proposed linking */
     {
-      path: '/wiki/:topic',
+      path: '/:wikidata/:language?/:topic?',
       name: 'TopicPage',
       component: MainPage
-    },
-    {
-      path: '/wiki/',
-      redirect: { name: 'LandingPage' }
     },
   ]
 })
