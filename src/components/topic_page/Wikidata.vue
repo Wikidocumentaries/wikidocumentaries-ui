@@ -15,7 +15,8 @@
                         <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                             <div class="statement-value">
                                 <div v-if="value.url != null">
-                                    <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                     <br v-if="value.qualifiers != undefined">
                                     <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                 </div>
@@ -41,7 +42,8 @@
                             <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                                 <div class="statement-value">
                                     <div v-if="value.url != null">
-                                        <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                         <br v-if="value.qualifiers != undefined">
                                         <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                     </div>

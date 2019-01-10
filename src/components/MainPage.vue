@@ -85,6 +85,18 @@ export default {
 
         store.dispatch('updateWikidocumentaries', params).then(res => next());
     },
+    beforeRouteUpdate (to, from, next) {
+        //console.log(to);
+        // TODO
+
+        var params = {
+            topic: to.params.topic,
+            wikidata: to.params.wikidata,
+            language: (to.query.language != undefined ? to.query.language : 'fi')
+        }
+
+        store.dispatch('updateWikidocumentaries', params).then(res => next());
+    },
     created () {
         //console.log(window.location);
         var langParam = null;

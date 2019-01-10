@@ -7,7 +7,7 @@
         </div>
         <div class="search-results">
             <div :class="[shouldShowMenu ? showClass : hideClass]">
-                <a v-for="topic in topics" :key="topic.wikidata" :href="topic.wikidata" @click.prevent="showTopic(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></a>
+                <router-link v-for="topic in topics" :key="topic.wikidata" :to="getTopicURL(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></router-link>
             </div>
         </div>
     </div>
@@ -75,12 +75,8 @@ export default {
             }
             //this.$router.push('/Vapaamuurarin_hauta');
         },
-        showTopic: function (topic) {
-            //console.log("showTopic");
-            var wikidata = topic.wikidata;
-            var page = topic.wikipage.split(' ').join('_');
-            window.location.assign("/" + wikidata + "?language=" + this.$i18n.locale);
-            //window.location.reload(true);
+        getTopicURL: function(topic) {
+            return "/" + topic.wikidata + "?language=" + this.$i18n.locale;
         },
         searchFromWikipedia: function(topicInputValue) {
             //console.log("searchFromWikipedia");
