@@ -925,6 +925,11 @@ export default new Vuex.Store({
 		    
                     commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_IMAGES_EXTERNAL);
 
+                    // hide /wikipedia/ path from user now that we know the wikidata ID
+                    if (window.location.pathname.indexOf("/wikipedia/") == 0) {
+                        window.history.replaceState(null, "", "/"+params.wikidata+window.location.search);
+                    }
+
                     dispatch('getTopicImages', params).then((result) => {
 
                         commit('setWikidocumentariesDataState', WIKI.STATES.READY);
