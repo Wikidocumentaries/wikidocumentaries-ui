@@ -8,7 +8,7 @@ import store from './store/store.js'
 
 import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
-import messages from './store/messages.js'
+import * as messages from './store/messages.js'
 const i18n = new VueI18n({
   locale: 'fi', // set locale
   messages // set locale messages
