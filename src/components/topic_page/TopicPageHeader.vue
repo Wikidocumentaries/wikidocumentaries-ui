@@ -64,19 +64,17 @@ export default {
 }
 
 .bottomshade {
-  position: absolute;
-  height: 145px;
-  width: 100%;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+    padding-top: 35px;
 }
 
 .titlebox {
-    position:absolute;
-    /* left: 10px; */
-    /* width: calc(100% - 10px); */
+    position:relative;
     font-weight: bold;
     color: #fff;
     margin-left: 20px;

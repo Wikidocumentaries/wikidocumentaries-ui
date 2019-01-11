@@ -235,27 +235,27 @@ export default {
             if (value.unit != undefined) {
                 text += " " + value.unit;
 
-                if (this.$i18n.locale == 'fi') {
-                    if ((value.unit == 'metri' ||
+                if (this.$i18n.locale == 'fi' && value.value != 1) {
+                    if (value.unit == 'metri' ||
                         value.unit == 'kilometri' ||
                         value.unit == 'neliömetri' ||
                         value.unit == 'neliökilometri' ||
                         value.unit == 'kuutiometri' ||
                         value.unit == 'kuutiokilometri' ||
-                        value.unit == 'kuutiometri') 
-                        && value.value != 1) {
+                        value.unit == 'kuutiometri') {
                         text += "ä";
                     }
-                    else if (value.unit == 'aste'
-                        && value.value != 1) {
+                    else if (value.unit == 'aste') {
                         text += "tta";
                     }
-                    else if (value.unit.indexOf("gram", value.unit.length - "gram".length) != -1
-                        && value.value != 1) {
+                    else if (value.unit.indexOf("gram", value.unit.length - "gram".length) != -1) {
                         text += "maa";
                     }
-                    else if (value.unit == "astronominen yksikkö" && value.value != 1) {
+                    else if (value.unit == "astronominen yksikkö") {
                         text = text.substring(0, text.length - "astronominen yksikkö".length) + "astronomista yksikköä";
+                    }
+                    else {
+                        text += "a";
                     }
                 }
                 //console.log("value.unit != undefined");
