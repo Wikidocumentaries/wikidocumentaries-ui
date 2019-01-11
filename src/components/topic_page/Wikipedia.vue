@@ -4,9 +4,12 @@
         <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
         <HeaderLink class="toolbar-item" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
-    <div class="text wiki-html">
+    <div v-if="wikidocumentaries.wikipedia.wikipediaURL" class="text wiki-html">
       <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>
       <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
+    </div>
+    <div v-else class="text wiki-html">
+      <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
     </div>
     <!--div class="text wiki-html expanded-html" v-if="expanded">
       <button class="expander top-exander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">

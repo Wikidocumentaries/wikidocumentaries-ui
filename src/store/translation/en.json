@@ -73,7 +73,8 @@
             "noTopicFoundText": "Topic not found"
         },
         "Wikipedia": {
-            "headerTitle": "Article"
+            "headerTitle": "Article",
+            "missingArticle": "There is no article about this topic in English. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon."
         }
     },
     "map_place_match_page": {

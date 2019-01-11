@@ -73,7 +73,8 @@
             "noTopicFoundText": "Aihetta ei löytynyt"
         },
         "Wikipedia": {
-            "headerTitle": "Artikkeli"
+            "headerTitle": "Artikkeli",
+            "missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Katso, onko aiheesta kirjoitettua artikkeleita toisilla kielillä ylläolevasta kielivalikosta tai luo artikkeli itse klikkaamalla plus-ikonia."
         }
     },
     "map_place_match_page": {
