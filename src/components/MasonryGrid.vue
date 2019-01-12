@@ -1,8 +1,8 @@
 <template> <!-- to use with a data, each item has to have id, imageURL and title. If the item has infoURL, geoLocations, authors, institutions, license they are used. -->
     <div class="masonry-grid">
         <div ref="gridItems" v-masonry transition-duration="0.3s" item-selector=".grid-item" v-viewer="{/*navbar: false, toolbar: false, */title: true}" class="grid-items">
-            <div v-masonry-tile class="grid-item" v-for="item in items" v-bind:key="item.id" :style="{ width: itemWidth + 'px'}">
-                <img v-bind:src="item.thumbURL" class="thumb-image" v-bind:alt="item.title"/>
+            <div v-masonry-tile class="grid-item" v-for="item in items" :key="item.id" :style="{ width: itemWidth + 'px'}">
+                <img :src="item.thumbURL" class="thumb-image" :alt="item.title"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
                     <div class="thumb-credit">{{ getCredits(item) }}</div>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="right-align">
                         <div v-if="item.infoURL != undefined" class="header-item">
-                            <a v-bind:href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
+                            <a :href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                         </div>
                         <!--ImagesRemoveMenu></ImagesRemoveMenu-->
                     </div>
@@ -73,25 +73,13 @@ export default {
         },
         fitTitle (title) {
             var newTitle = title;
-            //if (title.length > this.maxTitleLengthInChars) {
-            //    newTitle = title.substr(0, this.maxTitleLengthInChars - 3) + "...";
-            //}
             return newTitle;
         },
         getCredits (item) {
             var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-            //if (newAuthors.length > this.maxAuthorsLengthInChars) {
-            //    newAuthors = newAuthors.substr(0, this.maxAuthorsLengthInChars - 3) + "..."  + ', ';
-            //}
             var newYear = (item.year != "" ? (item.year) + ". " : '');
             var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-            //if (newInstitutions.length > this.maxInstitutionsLengthInChars) {
-            //    newInstitutions = newInstitutions.substr(0, this.maxInstitutionsLengthInChars - 3) + "..."  + ', ';
-            //}
             var newLicense = (item.license != "" ? (item.license + ', ') : '');
-            //if (newLicense.length > this.maxLicenseLengthInChars) {
-            //    newLicense = newLicense.substr(0, this.maxLicenseLengthInChars - 3) + "...";
-            //}
 
             var credits = newAuthors + newYear + newInstitutions + newLicense;
 
@@ -141,7 +129,6 @@ export default {
 }
 
 .grid-item {
-    margin-bottom: -4px;
     cursor: pointer;
 }
 
@@ -152,49 +139,6 @@ export default {
 
 .grid-item--width2 { 
     width: 400px;
-}
-
-.thumb-image {
-    width: 100%;
-}
-
-.thumb-image-header {
-    position:absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 0 20px;
-    box-sizing: border-box;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-    opacity:0;
-    transition: opacity 80ms ease-in;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/*.thumb-image-glyph {
-    color: white;
-    transition: opacity 80ms ease-in;
-}*/
-
-.thumb-image-info {
-    position: absolute;
-    bottom: 5px;
-    background: rgb(0, 0, 0); /* fallback color */
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
-    color: white;
-    padding: 30px 10px 10px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    line-height: 1.2em;
-    opacity: 0;
-    transition: opacity 80ms ease-in;
-}
-
-.thumb-title {
-    max-height: 11.6em;
-    overflow: hidden;
 }
 
 

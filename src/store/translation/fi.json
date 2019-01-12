@@ -75,6 +75,15 @@
         "Wikipedia": {
             "headerTitle": "Artikkeli",
             "missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Katso, onko aiheesta kirjoitettua artikkeleita toisilla kielillä ylläolevasta kielivalikosta tai luo artikkeli itse klikkaamalla plus-ikonia."
+        },
+        "Gallery": {
+            "headerTitle": "Aiheeseen liittyvät ihmiset",
+            "menuTitle": "Näytä",
+            "showBorn": "Täällä syntyneet",
+            "showDied": "Täällä kuolleet",
+            "showBuried": "Tänne haudatut",
+            "showRelated": "Aiheeseen liittyvät",
+            "showAll": "Kaikki"
         }
     },
     "map_place_match_page": {

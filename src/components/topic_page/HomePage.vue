@@ -5,8 +5,9 @@
       <WikipediaArticle class="column one"></WikipediaArticle>
       <!--div class="divider"></div-->
       <WikidataItem class="column two"></WikidataItem>
-      <!--div class="haze"></div-->
     </div>
+    <!--div class="haze"></div-->
+    <!--Gallery id="gallery"></Gallery-->
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
@@ -22,6 +23,7 @@ import WikidataItem from '@/components/topic_page/Wikidata'
 import TopicMap from '@/components/topic_page/TopicMap'
 import TopicImages from '@/components/topic_page/TopicImages'
 import TopicTimeline from '@/components/topic_page/TopicTimeline'
+//import Gallery from '@/components/topic_page/Gallery'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -39,6 +41,7 @@ export default {
         TopicMap,
         TopicImages,
         TopicTimeline,
+        //Gallery
         //TopicNewspapers
     },
     computed: {
@@ -92,12 +95,12 @@ export default {
     background: rgb(0, 0, 0);
 }
 
-/*.haze {
+.haze {
     position: absolute;
     background: white;
     width: 100%;
     height: 10vh;
     bottom: 0;
-}*/
+}
 
 </style>

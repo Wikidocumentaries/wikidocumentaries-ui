@@ -85,7 +85,7 @@ export default {
 .grid-item--width2 { 
     width: 400px;
 }
-
+/*
 .thumb-image {
     width: 100%;
     cursor: zoom-in;
@@ -97,7 +97,7 @@ export default {
     left: 10px;
     width: 100%; 
 }
-
+*/
 .thumb-image-glyph {
     color: white;
 }
