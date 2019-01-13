@@ -15,7 +15,8 @@
                         <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                             <div class="statement-value">
                                 <div v-if="value.url != null">
-                                    <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                     <br v-if="value.qualifiers != undefined">
                                     <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                 </div>
@@ -41,7 +42,8 @@
                             <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                                 <div class="statement-value">
                                     <div v-if="value.url != null">
-                                        <a v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                         <br v-if="value.qualifiers != undefined">
                                         <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                     </div>
@@ -172,32 +174,19 @@ export default {
             this.expanded = !this.expanded;
         },
         getStatementURL(value) {
-            if (value.url) {
-                return "/" + value.url.split("/")[value.url.split("/").length-1] + "?language=" + this.$i18n.locale; 
+            var QID = "/" + value.url.split("/")[value.url.split("/").length-1] + "?language=" + this.$i18n.locale;
+            if (QID != undefined) {
+                return QID;
             } else {
                 return value.url;
             }
         },
         getTarget(value) {
-            /* if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+            if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
                 return "_self";
             } else {
                 return "_blank";
-            }//proposed linking */
-            if (value.sitelinks != undefined) {
-                if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
-                    return "_self";
-                }
-                else if (value.sitelinks.enwiki != undefined) {
-                    return "_self";
-                }
-                else {
-                    return "_blank";
-                }
-            }
-            else {
-                return "_blank";
-            }  
+            } 
         },
         getStyle(value) {
             if (value.sitelinks != undefined) {
@@ -233,27 +222,27 @@ export default {
             if (value.unit != undefined) {
                 text += " " + value.unit;
 
-                if (this.$i18n.locale == 'fi') {
-                    if ((value.unit == 'metri' ||
+                if (this.$i18n.locale == 'fi' && value.value != 1) {
+                    if (value.unit == 'metri' ||
                         value.unit == 'kilometri' ||
                         value.unit == 'neliömetri' ||
                         value.unit == 'neliökilometri' ||
                         value.unit == 'kuutiometri' ||
                         value.unit == 'kuutiokilometri' ||
-                        value.unit == 'kuutiometri') 
-                        && value.value != 1) {
+                        value.unit == 'kuutiometri') {
                         text += "ä";
                     }
-                    else if (value.unit == 'aste'
-                        && value.value != 1) {
+                    else if (value.unit == 'aste') {
                         text += "tta";
                     }
-                    else if (value.unit.indexOf("gram", value.unit.length - "gram".length) != -1
-                        && value.value != 1) {
+                    else if (value.unit.indexOf("gram", value.unit.length - "gram".length) != -1) {
                         text += "maa";
                     }
-                    else if (value.unit == "astronominen yksikkö" && value.value != 1) {
+                    else if (value.unit == "astronominen yksikkö") {
                         text = text.substring(0, text.length - "astronominen yksikkö".length) + "astronomista yksikköä";
+                    }
+                    else {
+                        text += "a";
                     }
                 }
                 //console.log("value.unit != undefined");
