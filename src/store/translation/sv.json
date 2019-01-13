@@ -73,7 +73,8 @@
             "noTopicFoundText": "Ämnet hittades inte"
         },
         "Wikipedia": {
-            "headerTitle": "Artikeln"
+            "headerTitle": "Artikeln",
+            "missingArticle": "There is no article about this topic in your language. Try another language in the language menu above or create the article."
         }
     },
     "map_place_match_page": {

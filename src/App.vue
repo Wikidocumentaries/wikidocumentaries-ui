@@ -263,4 +263,42 @@ i.wikiglyph {
   border: none !important;
   border-left: 10px solid var(--main-yellow) !important;
 }
+
+.thumb-image {
+    width: 100%;
+}
+
+.thumb-image-header {
+    position:absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 20px;
+    box-sizing: border-box;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    opacity:0;
+    transition: opacity 80ms ease-in;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thumb-image-info {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.2em;
+    opacity: 0;
+    transition: opacity 80ms ease-in;
+}
+
+.thumb-title {
+    max-height: 11.6em;
+    overflow: hidden;
+}
 </style>

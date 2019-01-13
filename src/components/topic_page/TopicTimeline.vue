@@ -441,9 +441,9 @@ export default {
         },
         getItemExplanation(index) {
             var newTitle = this.sortedTimelineItems[index].title;
-            //if (newTitle.length > this.maxTitleLengthInChars) {
-            //    newTitle = newTitle.substr(0, this.maxTitleLengthInChars - 3) + "...";
-            //}
+            if (newTitle.length > this.maxTitleLengthInChars) {
+                newTitle = newTitle.substr(0, this.maxTitleLengthInChars - 3) + "...";
+            }
             return newTitle;
         },
         timelineExplanationBoxStyle(index) {
@@ -627,12 +627,6 @@ function getTextWidth(text, font) {
     color: #333;
     font-style: italic;
     position: relative;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 20vh;
-    overflow: scroll;
 }
 
 .timeline-explanation {

@@ -26,7 +26,7 @@
                 <div v-for="item in nearbyWikiItems" :key="item.wikidata.id">
                     <MapOverlay v-if="item.wikidata.id != undefined" :map="map" :position="item.position" :offset="[0,0]" :autoPan="false" :autoPanMargin="200" :overlayGroupItemCount="nearbyWikiItems.length">
                         <div class="map-popup-nearby-place-container">
-                            <a :href="getTopicURL(item)">{{ item.title }}</a>
+                            <router-link :to="getTopicURL(item)">{{ item.title }}</router-link>
                         </div>
                     </MapOverlay>
                 </div>

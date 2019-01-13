@@ -75,7 +75,17 @@
             "noTopicFoundText": "Topic not found"
         },
         "Wikipedia": {
-            "headerTitle": "Article"
+            "headerTitle": "Article",
+            "missingArticle": "There is no article about this topic in English. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon."
+        },
+        "Gallery": {
+            "headerTitle": "People related to the topic",
+            "menuTitle": "Show",
+            "showBorn": "Born here",
+            "showDied": "Died here",
+            "showBuried": "Buried here",
+            "showRelated": "Related otherwise",
+            "showAll": "All"
         }
     },
     "map_place_match_page": {
