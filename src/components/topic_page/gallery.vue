@@ -7,7 +7,6 @@
             </ToolbarMenu>
         </div>
         <div class="gallery">
-            <!--GalleryItem></GalleryItem-->
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
             <router-link tag="div" v-for="image in images" :key="image.id" :to="image.qid" class="gallery-item">
                 <img :src="image.src" class="gallery-image"/>
@@ -31,7 +30,6 @@
 <script>
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
-//import GalleryItem from '@/components/topic_page/GalleryItem'
 
 const MENU_ACTIONS = {
     SHOW_BORN: 0,
@@ -164,8 +162,7 @@ export default {
         }
     },
     components: {
-        ToolbarMenu,
-        //GalleryItem
+        ToolbarMenu
     },
     mounted: function () {
     },
