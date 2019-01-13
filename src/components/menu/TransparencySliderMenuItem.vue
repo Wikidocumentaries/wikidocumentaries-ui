@@ -71,7 +71,7 @@ export default {
 .opacity-slider-menu-item {
     padding: 6px 12px;
     text-transform: none;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 11pt;
     line-height: 1.5;
     color: #333;

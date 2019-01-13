@@ -27,7 +27,8 @@
             "showImagesOnTimelineMenuText": "Show all images on the timeline",
             "imagesActionMenu": {
                 "menuTitle": "Actions",
-                "doGeolocatingText": "Set the location..."
+                "doGeolocatingText": "Set the location...",
+                "showImageText": "Näytä kuva"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
@@ -45,7 +46,8 @@
                 "remInappropriateSubMenu": {
                     "privacy": "It violates the privacy of the depicted",
                     "violence": "It displays extreme violence",
-                    "sex": "It displays sex explicitly",
+                    "sex": "It displays explicit sex",
+                    "copyvio": "It violates copyright",
                     "explain": "Leave a note to explain"
                 }
             }

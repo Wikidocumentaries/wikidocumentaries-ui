@@ -105,7 +105,7 @@ export default {
     width: 100%;
     text-align: center;
     color: white;
-    font-family: 'Helvetica Neue',  sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 6em;
     font-weight: bold;
 }

@@ -517,11 +517,6 @@ function getTextWidth(text, font) {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.toolbar {
-    /* 3px <-> take into account the timeline-item width */
-    /* margin-right: -3px;  */
-}
-
 .dev-color {
     color: #d8c697;
     background: #dbc1be;
@@ -627,7 +622,6 @@ function getTextWidth(text, font) {
 .timeline-explanations {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Arial', sans-serif;
     font-size: 11pt;
     line-height: 1.5;
     color: #333;

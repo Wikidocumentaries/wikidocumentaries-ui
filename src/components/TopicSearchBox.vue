@@ -254,7 +254,7 @@ export default {
     text-decoration: none;
     display: block;
     text-transform: none;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     font-size: 11pt;
     line-height: 1.3;
     color: #333;

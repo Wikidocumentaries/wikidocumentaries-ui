@@ -2,7 +2,7 @@
     <div class="toolbar-item" @mouseleave="hideMenu">
         <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
-            <div class="menu-title headline">
+            <div class="menu-title">
                 <slot name="menu-title"></slot>
             </div>
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
@@ -77,7 +77,7 @@ export default {
     text-decoration: none;
     display: block;
     text-transform: none;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.5;
     color: #333;
     width: auto;

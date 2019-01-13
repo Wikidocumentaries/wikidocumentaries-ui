@@ -27,8 +27,8 @@ export default {
                     text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
                 },
                 {
-                    id: SHOW_IMAGE,
-                    text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
+                    id: MENU_ACTIONS.SHOW_IMAGE,
+                    text: 'topic_page.TopicImages.imagesActionMenu.showImageText'
                 },
             ],
         }

@@ -203,7 +203,7 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -312,7 +312,7 @@ export default {
 
 .thumb-year {
     color: white;
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     padding-top: 5px;
 }
 

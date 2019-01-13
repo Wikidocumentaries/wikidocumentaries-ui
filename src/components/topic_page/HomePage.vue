@@ -9,7 +9,7 @@
     </div>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
-    <TopicTimeline id="topicTimeline"></TopicTimeline>
+    <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
     <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
   </div>
 </template>
@@ -21,7 +21,7 @@ import WikipediaArticle from '@/components/topic_page/Wikipedia'
 import WikidataItem from '@/components/topic_page/Wikidata'
 import TopicMap from '@/components/topic_page/TopicMap'
 import TopicImages from '@/components/topic_page/TopicImages'
-import TopicTimeline from '@/components/topic_page/TopicTimeline'
+//import TopicTimeline from '@/components/topic_page/TopicTimeline'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -38,7 +38,7 @@ export default {
         WikidataItem,
         TopicMap,
         TopicImages,
-        TopicTimeline,
+        //TopicTimeline,
         //TopicNewspapers
     },
     computed: {

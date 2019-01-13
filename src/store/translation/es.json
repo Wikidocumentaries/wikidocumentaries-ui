@@ -45,7 +45,8 @@
                 "remInappropriateSubMenu": {
                     "privacy": "It violates the privacy of the depicted",
                     "violence": "It displays extreme violence",
-                    "sex": "It displays sex explicitly",
+                    "sex": "It displays explicit sex",
+                    "copyvio": "It violates copyright",
                     "explain": "Leave a note to explain"
                 }
             }

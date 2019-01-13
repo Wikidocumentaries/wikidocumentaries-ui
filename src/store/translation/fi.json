@@ -27,7 +27,8 @@
             "showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla",
             "imagesActionMenu": {
                 "menuTitle": "Toiminnot",
-                "doGeolocatingText": "Aseta kuvan sijainti..."
+                "doGeolocatingText": "Anna kuvan sijainti",
+                "showImageText": "Näytä kuva"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",

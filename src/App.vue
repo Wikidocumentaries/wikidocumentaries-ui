@@ -40,14 +40,14 @@ a.external.text {
 }
 
 body {
-	font-family: 'Helvetica Neue', sans-serif;
+	font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	font-size: 11pt;
 	line-height: 1.5;
 	color:#333;
 	font-weight: 400;
 }
 
-.headline {
+.menu-title, .header-title {
   font-family: 'Barlow Condensed', sans-serif;
   color: #333;
   text-transform: uppercase;
@@ -123,7 +123,6 @@ a:hover {
 
  .toolbar {
   display: flex;
-  font-family: 'Barlow Condensed', sans-serif;
   color: #333;
   margin-left: 20px;
   height: 45px;
