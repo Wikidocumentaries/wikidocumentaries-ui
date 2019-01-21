@@ -114,7 +114,7 @@ export default {
   padding: 0px 30px 20px 30px;
   background-color: #fff;
   border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+  box-shadow: var(--main-shadow);
   transition: all .3s ease;
   font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   display: flex;

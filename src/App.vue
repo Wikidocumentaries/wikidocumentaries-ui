@@ -22,6 +22,7 @@ export default {
   --main-purple: #a74e77;
   --main-blue: #008aad;
   --main-green: #69a656;
+  --main-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
 }
 
 html, body {

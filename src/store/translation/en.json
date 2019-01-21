@@ -27,23 +27,25 @@
             "showImagesOnTimelineMenuText": "Show all images on the timeline",
             "imagesActionMenu": {
                 "menuTitle": "Actions",
+                "menuTooltip": "Actions",
                 "doGeolocatingText": "Set the location...",
                 "showImageText": "Näytä kuva"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
-                "remDepictedText": "It depicts this topic instead",
-                "remDepictedSubMenu": {
+                "menuTooltip": "Remove the image",
+                "remDepicted": {
+                    "menuTitle": "It depicts this topic instead",
                     "search": "Search for the topic",
                     "browse": "Browse the related topics"
                 },
-                "remCreatorText": "It is by this creator instead",
-                "remCreatorSubMenu": {
+                "remCreator": {
+                    "menuTitle": "It is by this creator instead",
                     "search": "Search for the creator",
                     "browse": "Browse the related actors"
                 },
-                "remInappropriateText": "It is inappropriate because",
-                "remInappropriateSubMenu": {
+                "remInappropriate": {
+                    "menuTitle": "It is inappropriate because",
                     "privacy": "It violates the privacy of the depicted",
                     "violence": "It displays extreme violence",
                     "sex": "It displays explicit sex",
@@ -76,7 +78,13 @@
         },
         "Wikipedia": {
             "headerTitle": "Article",
-            "missingArticle": "There is no article about this topic in English. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon."
+            "missingArticle": "There is no article about this topic in English. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon.",
+            "languageMenu": {
+                "menuTitle": "Read the article in another language",
+                "menuTooltip": "Read the article in another language",
+                "translateArticleText": "Translate this article to your language",
+                "otherLanguagestext": "Other languages"
+            }
         },
         "Gallery": {
             "headerTitle": "People related to the topic",
@@ -118,6 +126,7 @@
         "helpText": "Help",
         "menus": {
             "actionMenuTitle": "Actions",
+            "actionMenuTooltip": "Actions",
             "languageMenuTitle": "Choose language",
             "myLanguagesItem": "My languages"
         },

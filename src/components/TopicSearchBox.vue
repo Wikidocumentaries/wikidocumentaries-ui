@@ -234,9 +234,9 @@ export default {
     background-color: #fff;
     min-width: 350px;
     max-width: 35vw;
-    -webkit-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow: var(--main-shadow);
+    -moz-box-shadow: var(--main-shadow);
+    box-shadow: var(--main-shadow);
     z-index: 50;
 }
 
