@@ -174,15 +174,14 @@ export default {
             this.expanded = !this.expanded;
         },
         getStatementURL(value) {
-            var QID = "/" + value.url.split("/")[value.url.split("/").length-1] + "?language=" + this.$i18n.locale;
-            if (QID != undefined) {
-                return QID;
+            if (value.id) {
+                return "/" + value.id + "?language=" + this.$i18n.locale;
             } else {
                 return value.url;
             }
         },
         getTarget(value) {
-            if (this.wikidocumentaries.wikidata != undefined && this.wikidocumentaries.wikidata.id != undefined) {
+            if (value.id) {
                 return "_self";
             } else {
                 return "_blank";
