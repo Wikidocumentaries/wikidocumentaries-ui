@@ -1,7 +1,6 @@
 <template>
     <div class="link">
-        <a v-if="link" :href="link" target="_blank" class="toolbar-item-a"><i class="wikiglyph wikiglyph-new-window"></i></a>
-        <a v-else :href="link" target="_blank" class="toolbar-item-a"><i class="wikiglyph wikiglyph-plus"></i></a>
+        <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', link ? 'wikiglyph-new-window' : 'wikiglyph-plus']"></i></a>
     </div>
 </template>
 
@@ -16,10 +15,13 @@ export default {
         }
     },
     computed: {
-        newTopic() {
-            return {
-                value: "https://fi.wikipedia.org/"
-                //"https://" + language + "wikipedia.org/wiki/" + title;
+        target() {
+            if (this.link) {
+                return this.link;
+            } else {
+                var language = this.$i18n.locale;
+                var title = this.$store.state.wikidocumentaries.title;
+                return "https://" + language + ".wikipedia.org/w/index.php?title=" + title + "&action=edit";
             }
         }
     }
