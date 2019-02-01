@@ -14,7 +14,7 @@ export default {
 
 :root {
   --main-txt-color: #333;
-  --main-link-color: #00b0dc;
+  --main-link-color: #00a3cc;
   --main-modal-color: #dadada;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
@@ -23,6 +23,10 @@ export default {
   --main-blue: #008aad;
   --main-green: #69a656;
   --main-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+  --main-font-size: 11pt;
+  --main-line-height: 1.5;
+  --title-font-size: 3.5em;
+  --subtitle-font-size: 1.7em;
 }
 
 html, body {
@@ -42,15 +46,15 @@ a.external.text {
 
 body {
 	font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	font-size: 11pt;
-	line-height: 1.5;
-	color:#333;
+	font-size: var(--main-font-size);
+	line-height: var(--main-line-height);
+	color: var(--main-txt-color);
 	font-weight: 400;
 }
 
 .menu-title, .header-title {
   font-family: 'Barlow Condensed', sans-serif;
-  color: #333;
+  color: var(--main-txt-color);
   text-transform: uppercase;
 }
 
@@ -66,9 +70,31 @@ a {
 
 a:hover {
 	text-decoration: none;
-	color: #333;
+	color: var(--main-txt-color);
 	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 	outline: 0;
+}
+
+.title {
+    font-size: var(--title-font-size);
+    font-weight: bold;
+    line-height: 1em;
+    margin-right: 0.2em;
+    position: relative;
+    /*cursor: pointer;*/
+}
+
+.subtitle {
+    font-size: var(--subtitle-font-size);
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 3px 0.2em 0 0;
+    position: relative;
+    /*cursor: pointer;*/
+}
+
+.title::first-letter, .subtitle::first-letter {
+  text-transform: capitalize;
 }
 
 .left-align {
@@ -82,18 +108,6 @@ a:hover {
     height: 100%;
     align-items: center;
 }
-
-/*
-.button-ok, .button-cancel {
-    border: none;
-    cursor: pointer;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-*/
 
 .button-ok, .button-cancel {
   font-weight: bold;
@@ -132,6 +146,7 @@ a:hover {
 
 .toolbar-item {
     height: 100%;
+    position: relative;
 }
 
 .toolbar-item a {
@@ -150,6 +165,41 @@ a:hover {
 
 .toolbar-item:hover {
     background: var(--main-txt-color);
+}
+
+.toolbar-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  color: white;
+  right: 0;
+  white-space: nowrap;
+  padding: 5px 7px;
+  font-size: 0.85rem;
+  top: 115%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  transition-delay: 1s;
+  width: max-content;
+  line-height: 1;
+  font-weight: initial;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  right: 18px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
 }
 
 .toolbar-item:hover > a {

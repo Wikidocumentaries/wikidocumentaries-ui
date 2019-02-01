@@ -1,6 +1,6 @@
 <template>
     <div class="link">
-        <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', link ? 'wikiglyph-new-window' : 'wikiglyph-plus']"></i></a>
+        <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', link ? 'wikiglyph-new-window' : 'wikiglyph-plus']"></i></a><span class="tooltip">{{ tooltip }}</span>
     </div>
 </template>
 
@@ -8,7 +8,8 @@
 export default {
     name: 'HeaderLink',
     props: {
-        link: String
+        link: String,
+        tooltip: String
     },
     data () {
         return {

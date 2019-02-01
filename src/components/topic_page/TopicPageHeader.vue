@@ -1,17 +1,35 @@
- <template>
-   <div class="header">
-      <img :src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
-      <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
-       <div class="header-contents">
+<template>
+    <div class="header">
+        <img :src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
+        <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
+        <div class="header-contents">
         <div class="bottomshade">
-          <div class="titlebox">
-            <div class="title">{{ wikidocumentaries.title }}</div>
-            <div class="subtitle">{{ wikidocumentaries.description }}</div>
-           </div>
+            <div class="titlebox">
+                <div class="titlecont">
+                    <div class="title">{{ wikidocumentaries.title }}</div>
+                    <!--span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                    <div class="buttons">
+                        <i class="wikiglyph wikiglyph-check wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleApproveText') }}</span>
+                    </div>
+                    <div class="buttons">
+                        <i class="wikiglyph wikiglyph-edit wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                    </div-->
+                </div>
+                <div class="subtitlecont">
+                    <div class="subtitle">{{ wikidocumentaries.description }}</div>
+                    <!--span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                    <div class="buttons">
+                        <i class="wikiglyph wikiglyph-check wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleApproveText') }}</span>
+                    </div>
+                    <div class="buttons">
+                        <i class="wikiglyph wikiglyph-edit wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                    </div-->
+                </div>
+                </div>
+            </div>
         </div>
-       </div>
-   </div>
- </template>
+    </div>
+</template>
 
 <script>
 export default {
@@ -43,7 +61,6 @@ export default {
 
 .header {
     position:relative;
-    /* width: calc(100% - 10px); */
     background: var(--main-modal-color);
 }
 
@@ -75,41 +92,67 @@ export default {
 
 .titlebox {
     position:relative;
-    font-weight: bold;
     color: #fff;
-    margin-left: 20px;
+    margin: 0 20px;
     bottom: 20px;
 }
 
-.title {
-    font-size: 48px;
-    line-height: 1em;
+.titlecont, .subtitlecont {
+    display: flex;
 }
 
-.title::first-letter {
-  text-transform: capitalize;
+.buttons {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
 }
 
-.subtitle {
-    font-size: 24px;
-    line-height: 1.2em;
-    padding-top: 3px;
+.buttons:hover {
+    cursor: pointer;
 }
 
-.subtitle:first-letter {
-    text-transform: capitalize;
+.title:hover + .tooltip, .subtitle:hover + .tooltip, .buttons:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 32pt;
-    text-transform: uppercase;
-    color: #ffffff;
+.title + .tooltip, .subtitle + .tooltip, .buttons .tooltip  {
+    left: 0;
 }
-h1 span { 
-   /*letter-spacing: -1px;  */
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.3);
-   padding: 10px; 
+
+.title + .tooltip {
+    bottom: 100%;
+    top: unset;
+}
+
+.title + .tooltip::after {
+  content: " ";
+  position: absolute;
+  top: 100%;  /* At the top of the tooltip */
+  bottom: unset;
+  left: 50%;
+  right:unset;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.title:focus::first-letter, .subtitle:focus::first-letter {
+    text-transform: none;
+}
+
+.wikiglyph-titlebutton {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2.8em;
+    margin-left: 0.1em;
+}
+
+.wikiglyph-subtitlebutton {
+    display: flex;
+    align-items: flex-end;
+    font-size: 1.7em;
+    margin-left: 0.1em;
 }
 </style>

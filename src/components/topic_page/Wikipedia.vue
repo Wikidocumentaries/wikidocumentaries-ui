@@ -2,7 +2,8 @@
   <div class="wikipedia">
     <div class="toolbar">
         <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
-        <HeaderLink class="toolbar-item" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
+        <HeaderLink v-if="wikidocumentaries.wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
+        <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
     <div v-if="wikidocumentaries.wikipedia.wikipediaURL" class="text wiki-html">
       <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>

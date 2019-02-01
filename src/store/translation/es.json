@@ -21,6 +21,12 @@
         },
         "HomePage": {
         },
+        "Header": {
+            "titleEditText": "Edit the title",
+            "titleApproveText": "Approve this title",
+            "subtitleEditText": "Edit the description",
+            "subtitleApproveText": "Approve this description"
+        },
         "TopicImages": {
             "headerTitle": "Imágenes de los archivos",
             "showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
@@ -71,11 +77,25 @@
         },
         "Wikidata": {
             "headerTitle": "Datos",
+            "extLink": {
+                "linkTitleWD": "View or edit in Wikidata"
+            },
             "noTopicFoundText": "Tema no encontrando"
         },
         "Wikipedia": {
             "headerTitle": "Artículo",
-            "missingArticle": "There is no article about this topic in your language. Try another language in the language menu above or create the article."
+            "missingArticle": "There is no article about this topic in Spanish. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon.",
+            "extLink": {
+                "linkTitleWP": "Read or edit in Wikipedia"
+            },
+            "addLink": {
+                "linkTitleWP": "Create an article in Wikipedia"
+            },
+            "languageMenu": {
+                "menuTitle": "Read the article in another language",
+                "translateArticleText": "Translate this article to your language",
+                "otherLanguagestext": "Other languages"
+            }
         }
     },
     "map_place_match_page": {

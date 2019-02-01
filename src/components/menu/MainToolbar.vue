@@ -10,7 +10,7 @@
         </div>
         <div id="top-toolbar" class="top-toolbar">
             <div class="left-align">
-                <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
+                <a class="main-button" @click="goToLandingPage">{{ landingPageName }}</a>
             </div>
             <div class="right-align">
                 <TopicSearchBox class="topic-search-box"></TopicSearchBox>

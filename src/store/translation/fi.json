@@ -21,6 +21,12 @@
         },
         "HomePage": {
         },
+        "Header": {
+            "titleEditText": "Muokkaa otsikkoa",
+            "titleApproveText": "Hyväksy tämä otsikko",
+            "subtitleEditText": "Muokkaa kuvausta",
+            "subtitleApproveText": "Hyväksy tämä kuvaus"
+        },
         "TopicImages": {
             "headerTitle": "Arkistojen kuvia",
             "showImagesOnMapMenuText": "Näytä kaikki kuvat kartalla",
@@ -71,11 +77,25 @@
         },
         "Wikidata": {
             "headerTitle": "Tietoja",
+            "extLink": {
+                "linkTitleWD": "Tarkastele tai muokkaa Wikidatassa"
+            },
             "noTopicFoundText": "Aihetta ei löytynyt"
         },
         "Wikipedia": {
             "headerTitle": "Artikkeli",
-            "missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Katso, onko aiheesta kirjoitettua artikkeleita toisilla kielillä ylläolevasta kielivalikosta tai luo artikkeli itse klikkaamalla plus-ikonia."
+            "missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Katso ylläolevasta kielivalikosta, onko aiheesta kirjoitettu artikkeleita toisilla kielillä tai luo artikkeli itse klikkaamalla plus-ikonia.",
+            "extLink": {
+                "linkTitleWP": "Lue tai muokkaa Wikipediassa"
+            },
+            "addLink": {
+                "linkTitleWP": "Luo artikkeli Wikipediaan"
+            },
+            "languageMenu": {
+                "menuTitle": "Lue artikkeli toisella kielellä",
+                "translateArticleText": "Käännä artikkeli suomeksi",
+                "otherLanguagestext": "Muut kielet"
+            }
         },
         "Gallery": {
             "headerTitle": "Aiheeseen liittyvät ihmiset",

@@ -4,7 +4,7 @@
             <div class="header-title">
                 {{ $t('topic_page.Wikidata.headerTitle') }}
             </div>
-            <HeaderLink class="toolbar-item" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
+            <HeaderLink class="toolbar-item" :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
         </div>
         <div class="item-instance-title">{{ title }}</div>
         <div v-if="wikidocumentaries.wikidata != undefined"> 

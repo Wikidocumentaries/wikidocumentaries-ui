@@ -2,7 +2,7 @@
     <div class="map-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
-            <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                 <TransparencySliderMenuItem slot="custom-menu-item"></TransparencySliderMenuItem>
             </ToolbarMenu>

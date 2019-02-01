@@ -21,6 +21,12 @@
         },
         "HomePage": {
         },
+        "Header": {
+            "titleEditText": "Edit the title",
+            "titleApproveText": "Approve this title",
+            "subtitleEditText": "Edit the description",
+            "subtitleApproveText": "Approve this description"
+        },
         "TopicImages": {
             "headerTitle": "Bilder från arkiver",
             "showImagesOnMapMenuText": "Visa alla bilder på kartan",
@@ -70,11 +76,25 @@
         },
         "Wikidata": {
             "headerTitle": "Fakta",
+            "extLink": {
+                "linkTitleWD": "View or edit in Wikidata"
+            },
             "noTopicFoundText": "Ämnet hittades inte"
         },
         "Wikipedia": {
             "headerTitle": "Artikeln",
-            "missingArticle": "There is no article about this topic in your language. Try another language in the language menu above or create the article."
+            "missingArticle": "There is no article about this topic in your language. Try another language in the language menu above or create the article.",
+            "extLink": {
+                "linkTitleWP": "Read or edit in Wikipedia"
+            },
+            "addLink": {
+                "linkTitleWP": "Create an article in Wikipedia"
+            },
+            "languageMenu": {
+                "menuTitle": "Read the article in another language",
+                "translateArticleText": "Translate this article to your language",
+                "otherLanguagestext": "Other languages"
+            }
         }
     },
     "map_place_match_page": {

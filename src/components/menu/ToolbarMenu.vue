@@ -1,6 +1,6 @@
 <template>
     <div class="toolbar-item" @mouseleave="hideMenu">
-        <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" v-bind:class="icon"></i></a>
+        <a href="#" @click.prevent="switchShowMenu" class="toolbar-item-a"><i class="wikiglyph" :class="icon"></i></a><span class="tooltip">{{ tooltip }}</span>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
             <div class="menu-title">
                 <slot name="menu-title"></slot>
@@ -16,7 +16,8 @@ export default {
     name: 'ToolbarMenu',
     props: {
         icon: String,
-        items: Array
+        items: Array,
+        tooltip: String
     },
     data () {
         return {

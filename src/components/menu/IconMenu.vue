@@ -1,7 +1,7 @@
 <template>
     <div class="icon-item" @mouseleave="hideMenu">
         <a href="#" @click.prevent="switchShowMenu" class="icon-item-a">
-            <i class="wikiglyph" v-bind:class="icon"></i>
+            <i class="wikiglyph" :class="icon"></i>
         </a>
         <div :class="[shouldShowMenu ? showClass : hideClass]">
             <div class="menu-title">
