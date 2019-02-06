@@ -295,10 +295,16 @@ a:hover {
 
 .text {
 	padding-left:20px;
+  vertical-align: text-bottom;
 }
 
 .text p {
 	margin: 12px 0;
+}
+
+.text * ::selection {
+  background-color: var(--main-txt-color);
+  color: white;
 }
 
 i.wikiglyph {

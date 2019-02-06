@@ -9,14 +9,14 @@
         <div class="item-instance-title">{{ title }}</div>
         <div v-if="wikidocumentaries.wikidata != undefined"> 
             <ul class="statements">
-                <li class="statement-list-item" v-for="statement in shownLeadingStatements" v-bind:key="statement.id">
+                <li class="statement-list-item" v-for="statement in shownLeadingStatements" :key="statement.id">
                     <div class="statement-label">{{ statement.label }}</div>
                     <ul class="statement-values">
                         <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                             <div class="statement-value">
                                 <div v-if="value.url != null">
-                                    <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
-                                    <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
+                                    <a v-if="getTarget(value) != '_self'" :href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                    <router-link v-if="getTarget(value) == '_self'" :to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                     <br v-if="value.qualifiers != undefined">
                                     <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                 </div>
@@ -36,14 +36,14 @@
                     <i v-else class="wikiglyph wikiglyph-caret-down"></i>
                 </button>
                 <ul class="statements">
-                    <li class="statement-list-item" v-for="statement in shownRemainingStaments" v-bind:key="statement.id">
+                    <li class="statement-list-item" v-for="statement in shownRemainingStaments" :key="statement.id">
                         <div class="statement-label">{{ statement.label }}</div>
                         <ul class="statement-values">
                             <li class="statment-value-list-item" v-for="(value, index) in statement.values" :key="getID(value) + index">
                                 <div class="statement-value">
                                     <div v-if="value.url != null">
-                                        <a v-if="getTarget(value) != '_self'" v-bind:href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
-                                        <router-link v-if="getTarget(value) == '_self'" v-bind:to="getStatementURL(value)">{{ getValue(value) }}</router-link>
+                                        <a v-if="getTarget(value) != '_self'" :href="getStatementURL(value)" :target="getTarget(value)" :style="getStyle(value)">{{ getValue(value) }}</a>
+                                        <router-link v-if="getTarget(value) == '_self'" :to="getStatementURL(value)">{{ getValue(value) }}</router-link>
                                         <br v-if="value.qualifiers != undefined">
                                         <span v-if="value.qualifiers != undefined" class="qualifier">{{ getQualifiers(value) }}</span>
                                     </div>

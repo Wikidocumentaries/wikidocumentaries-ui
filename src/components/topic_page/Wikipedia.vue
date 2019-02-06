@@ -36,6 +36,22 @@ export default {
       wikidocumentaries () {
           return this.$store.state.wikidocumentaries;
       },
+      getSelected () {
+        if(window.getSelection) { return window.getSelection(); }
+        else if(document.getSelection) { return document.getSelection(); }
+        else {
+          var selection = document.selection && document.selection.createRange();
+          if(selection.text) { return selection.text; }
+          return false;
+        }
+        return false;
+      },
+      doSelection () {
+        var selection = getSelected();
+        if (selection) {
+          alert(selection);
+        }
+      }
   },
   data () {
     return {
@@ -108,5 +124,4 @@ export default {
 .wiki-html >>> span > p:nth-child(1) {
   margin-top:0;
 }
-
 </style>

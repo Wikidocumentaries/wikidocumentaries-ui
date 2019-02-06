@@ -7,7 +7,7 @@
       <WikidataItem class="column two"></WikidataItem>
     </div>
     <!--div class="haze"></div-->
-    <!--Gallery id="gallery"></Gallery-->
+    <Gallery id="gallery"></Gallery>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
@@ -23,7 +23,7 @@ import WikidataItem from '@/components/topic_page/Wikidata'
 import TopicMap from '@/components/topic_page/TopicMap'
 import TopicImages from '@/components/topic_page/TopicImages'
 import TopicTimeline from '@/components/topic_page/TopicTimeline'
-//import Gallery from '@/components/topic_page/Gallery'
+import Gallery from '@/components/topic_page/Gallery'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -41,7 +41,7 @@ export default {
         TopicMap,
         TopicImages,
         TopicTimeline,
-        //Gallery
+        Gallery
         //TopicNewspapers
     },
     computed: {
