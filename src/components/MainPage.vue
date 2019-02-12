@@ -15,7 +15,7 @@
                 </div>
                 <div class="right-align">
                     <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <LanguageMenu class="language-menu"></LanguageMenu>
+                    <UILanguageMenu class="language-menu"></UILanguageMenu>
                 </div>
             </div>
           <component
@@ -42,7 +42,7 @@ import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPa
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import TopicSearchBox from '@/components/TopicSearchBox'
-import LanguageMenu from '@/components/menu/LanguageMenu'
+import UILanguageMenu from '@/components/menu/UILanguageMenu'
 
 export default {
     name: 'MainPage',
@@ -70,7 +70,7 @@ export default {
         MapPlaceMatchPage,
         MapSearchPage,
         WaitPage,
-        LanguageMenu,
+        UILanguageMenu,
         TopicSearchBox
     },
     beforeRouteEnter (to, from, next) {

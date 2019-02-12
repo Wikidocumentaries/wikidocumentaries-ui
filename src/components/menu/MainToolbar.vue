@@ -14,7 +14,7 @@
             </div>
             <div class="right-align">
                 <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                <LanguageMenu class="language-menu"></LanguageMenu>
+                <UILanguageMenu class="language-menu"></UILanguageMenu>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
 
 <script>
 import TopicSearchBox from '@/components/TopicSearchBox'
-import LanguageMenu from '@/components/menu/LanguageMenu'
+import UILanguageMenu from '@/components/menu/UILanguageMenu'
 
 export default {
     name: 'MainToolbar',
@@ -32,7 +32,7 @@ export default {
         }
     },
     components: {
-        LanguageMenu,
+        UILanguageMenu,
         TopicSearchBox
     },
     created () {
