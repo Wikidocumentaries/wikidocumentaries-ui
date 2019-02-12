@@ -11,7 +11,8 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"//const BASE_URL = "http://localhost:3000/"
+const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+//const BASE_URL = "http://localhost:3000/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
@@ -933,13 +934,14 @@ export default new Vuex.Store({
                     dispatch('getTopicImages', params).then((result) => {
 
                         commit('setWikidocumentariesDataState', WIKI.STATES.READY);
-                        //console.log(result);
-                        //console.log(data.wikipedia.originalimage);
+                        // console.log(result);
+                        // console.log(data.wikipedia.originalimage.source);
 
-                        if ( data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
+                        if (data.wikipedia != undefined && data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
                             commit('setHeaderImageURL', data.wikipedia.originalimage.source);
                         }
-                        else if (result.length > 0) { // Set the first image (not pdf) in the results as header image 
+                        else if (result.length > 0) { 
+                            // Set the first image (not pdf) in the results as header image
                             for (var i = 0; i < result.length; i++) {
                                 if (result[i].imageURL.indexOf('.pdf') == -1) {
                                     commit('setHeaderImageURL', result[i].imageURL);
