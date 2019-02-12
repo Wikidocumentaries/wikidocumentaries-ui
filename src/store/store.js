@@ -1070,8 +1070,11 @@ export default new Vuex.Store({
                     var statements = params.wiki.wikidata.statements;
                     for (var i = 0; i < statements.length; i++) {
                         if (statements[i].id == "P373") {
+                            // Pass on Commons category, if any
                             requestConfig.params.commons_category = statements[i].values[0].value;
-                            break;
+                        } else if (statements[i].id == "P131") {
+                            // Add administrative territorial entity to topic, if any
+                            requestConfig.params.topic += ", " + statements[i].values[0].value;
                         }
                     }
                 }
