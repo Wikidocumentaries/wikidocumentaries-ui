@@ -19,51 +19,23 @@ export default {
     name: 'ArticleLanguageMenu',
     props: {
     },
-    data () {
-        return {
-            toolbarActionMenuItems: [
-                {
-                    id: MENU_ACTIONS.CHANGE_LANGUAGE_FI,
-                    text: 'general.languages.fi'
-                },
-                {
-                    id: MENU_ACTIONS.CHANGE_LANGUAGE_EN,
-                    text: 'general.languages.en'
-                },
-                {
-                    id: MENU_ACTIONS.CHANGE_LANGUAGE_SV,
-                    text: 'general.languages.sv'
-                },
-                {
-                    id: MENU_ACTIONS.CHANGE_LANGUAGE_ES,
-                    text: 'general.languages.es'
-                },
-                /*{
-                    id: MENU_ACTIONS.MY_LANGUAGES,
-                    text: 'general.menus.myLanguagesItem'
-                },*/
-            ],
-        }
+    computed: {
+        toolbarActionMenuItems () {
+            return this.$store.state.wikidocumentaries.wikidata.sitelinks.map((sitelink) => {
+                return {
+                    id: sitelink.site,
+                    text: sitelink.site.replace(/wiki/, ""), // enwiki -> en
+                };
+            })
+        },
     },
     components: {
         ToolbarMenu,
     },
     methods: {
         onDoMenuItemAction (menuItem) {
-            switch (menuItem.id) {
-            case MENU_ACTIONS.CHANGE_LANGUAGE_FI:
-                this.$i18n.locale = 'fi';
-                break;
-            case MENU_ACTIONS.CHANGE_LANGUAGE_EN:
-                this.$i18n.locale = 'en';
-                break;
-            case MENU_ACTIONS.CHANGE_LANGUAGE_SV:
-                this.$i18n.locale = 'sv';
-                break;
-            case MENU_ACTIONS.CHANGE_LANGUAGE_ES:
-                this.$i18n.locale = 'es';
-                break;
-            }
+            this.$i18n.locale = menuItem.id.replace(/wiki/, "");
+            this.$store.dispatch('updateWikidocumentaries', {topic: null, wikidata: this.$store.state.wikidocumentaries.wikidataId, language: this.$i18n.locale});
         }
     }
 }
