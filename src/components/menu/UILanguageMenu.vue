@@ -50,19 +50,24 @@ export default {
     },
     methods: {
         onDoMenuItemAction (menuItem) {
+            var language;
             switch (menuItem.id) {
             case MENU_ACTIONS.CHANGE_LANGUAGE_FI:
-                this.$i18n.locale = 'fi';
+                language = 'fi';
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_EN:
-                this.$i18n.locale = 'en';
+                language = 'en';
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_SV:
-                this.$i18n.locale = 'sv';
+                language = 'sv';
                 break;
             case MENU_ACTIONS.CHANGE_LANGUAGE_ES:
-                this.$i18n.locale = 'es';
+                language = 'es';
                 break;
+            }
+            if (language) {
+                this.$i18n.locale = language;
+                this.$store.dispatch('updateWikidocumentaries', {topic: null, wikidata: this.$store.state.wikidocumentaries.wikidataId, language: language});
             }
         }
     }
