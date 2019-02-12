@@ -2,6 +2,7 @@
   <div class="wikipedia">
     <div class="toolbar">
         <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
+        <ArticleLanguageMenu class="language-menu"></ArticleLanguageMenu>
         <HeaderLink v-if="wikidocumentaries.wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
         <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
     </div>
@@ -28,6 +29,7 @@
 
 <script>
 import HeaderLink from '@/components/HeaderLink'
+import ArticleLanguageMenu from '@/components/menu/ArticleLanguageMenu'
 export default {
   name: 'WikipediaArticle',
   props: {
@@ -59,7 +61,8 @@ export default {
     }
   },
   components: {
-    HeaderLink
+    HeaderLink,
+    ArticleLanguageMenu
   },
   methods: {
     switchExpand(event) {

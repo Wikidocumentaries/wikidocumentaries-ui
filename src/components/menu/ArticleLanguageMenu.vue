@@ -16,7 +16,7 @@ const MENU_ACTIONS = {
 }
 
 export default {
-    name: 'LanguageMenu',
+    name: 'ArticleLanguageMenu',
     props: {
     },
     data () {
