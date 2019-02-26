@@ -25,7 +25,8 @@
     "vue-masonry": "^0.11.4",
     "vue-router": "^3.0.1",
     "vue-scrollto": "^2.11.0",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "wikidata-sdk": "^5.15.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

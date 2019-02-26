@@ -755,6 +755,7 @@ export default new Vuex.Store({
             coordinates: [24.9351, 60.1658],
         },
         nearbyWikiItems: [],
+        BASE_URL: BASE_URL,
     },
     getters: {
         topicStartYear: state => {
@@ -823,6 +824,7 @@ export default new Vuex.Store({
             state.selectedBasemapOpacity = 0.7;
             state.shouldFitMapToBasemap = false;
             state.nearbyWikiItems = [];
+            state.BASE_URL = BASE_URL;
         },
         setImagesShownOnMap(state, images) {
             state.shownImages = images;
