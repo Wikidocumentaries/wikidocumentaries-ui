@@ -35,7 +35,7 @@
                 "menuTitle": "Actions",
                 "menuTooltip": "Actions",
                 "doGeolocatingText": "Set the location...",
-                "showImageText": "Näytä kuva"
+                "showImageText": "Show image"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
