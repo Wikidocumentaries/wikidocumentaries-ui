@@ -1,11 +1,21 @@
 <template>
-<div v-if="results.length">
-  <div class="toolbar"><div class="header-title">Sampo</div></div>
-  <ul>
-    <li v-for="item in results">
-      <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
-    </li>
-  </ul>
+<div>
+  <div v-if="results.length">
+    <div class="toolbar"><div class="header-title">Sampo</div></div>
+    <ul>
+      <li v-for="item in results">
+        <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
+      </li>
+    </ul>
+  </div>
+  <div v-if="wikidataResults.length">
+    <div class="toolbar"><div class="header-title">Tapahtumat</div></div>
+    <ul>
+      <li v-for="item in wikidataResults">
+        {{ item.wdLabel }} {{ item.time.substring(0, 4) }} {{ item.label }}
+      </li>
+    </ul>
+  </div>
 </div>
 </template>
 
@@ -16,7 +26,8 @@ export default {
     name: 'SampoGallery',
     data() {
         return {
-            results: []
+            results: [],
+            wikidataResults: [],
         };
     },
     mounted() {
@@ -107,6 +118,31 @@ ORDER BY ?start
         axios
             .get(url)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
+            .catch(error => console.log(error));
+
+
+        const wikidataSparql = `
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+SELECT ?statement ?wdLabel ?p2 ?time ?label WHERE {
+SERVICE <https://query.wikidata.org/sparql> {
+  wd:Q170068 ?p ?statement .
+  ?wd wikibase:claim ?p .
+  ?wd rdfs:label ?wdLabel .
+  FILTER((LANG(?wdLabel)) = "fi")
+  ?statement ?p2 ?q1 .
+  ?statement ?p3 ?q2 .
+  ?q1 wikibase:timeValue ?time .
+  ?q2 rdfs:label ?label .
+  FILTER((LANG(?label)) = "fi")
+  }
+}
+        `;
+
+        const url2 = wdk.sparqlQuery(wikidataSparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql");
+        axios
+            .get(url2)
+            .then(response => (this.wikidataResults = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
     },
 }
