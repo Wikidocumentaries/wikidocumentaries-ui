@@ -3,7 +3,7 @@
   <div class="toolbar"><div class="header-title">Sampo</div></div>
   <ul>
     <li v-for="item in results">
-      {{ item.relation }} {{ item.start.substring(0, 4) }}: {{ item.description }}
+      <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
     </li>
   </ul>
 </div>
