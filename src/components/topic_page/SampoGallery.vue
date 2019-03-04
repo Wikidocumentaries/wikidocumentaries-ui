@@ -137,7 +137,8 @@ SERVICE <https://query.wikidata.org/sparql> {
   FILTER((LANG(?label)) = "fi")
   }
 }
-        `;
+        `.replace(/Q170068/g, this.$store.state.wikidocumentaries.wikidataId)
+         .replace(/"fi"/g, JSON.stringify(this.$i18n.locale));
 
         const url2 = wdk.sparqlQuery(wikidataSparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql");
         axios
