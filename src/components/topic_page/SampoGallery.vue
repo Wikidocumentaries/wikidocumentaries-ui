@@ -1,7 +1,10 @@
 <template>
 <div>
   <div v-if="results.length">
-    <div class="toolbar"><div class="header-title">Sampo</div></div>
+    <div class="toolbar"><div class="header-title">
+      <span v-if="kblink"><a :href="kblink">Kansallisbiografia</a> via </span>
+      <a :href="results[0].ldflink">Linked Data Finland</a>
+    </div></div>
     <ul>
       <li v-for="item in results">
         <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
@@ -26,6 +29,7 @@ export default {
     name: 'SampoGallery',
     data() {
         return {
+            kblink: null,
             results: [],
             wikidataResults: [],
         };
@@ -44,41 +48,23 @@ export default {
         for (var index in statements) {
           if (statements[index].id == 'P2180') {
               kbid = statements[index].values[0].value;
+              this.kblink = "http://www.kansallisbiografia.fi/kb/artikkeli/"+kbid;
           }
         }
-        /*
-        const sparql = `
-PREFIX ldfhis: <http://ldf.fi/history/sparql>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-SELECT ?start ?relation ?description
-WHERE {
-    SERVICE ldfhis: {
-       ?s rdfs:label ` + JSON.stringify(title) + `@fi .
-       ?s2 ?p ?s ; rdfs:label ?description .
-       ?s2 crm:P4_has_time-span [ crm:P82a_start_of_the_beginning ?start ]
-       SERVICE ldfhis: {
-        ?p rdfs:label ?relation .
-        FILTER (lang(?relation) = "fi")
-       }
-    }
-}
-ORDER BY ?start
-        `; */
 
         let sparql;
-        if (kbid) {
-        sparql = `
+        if (kbid) { // Entry has a "kansallisbiografia-id" => is a person
+          sparql = `
     PREFIX ldfhis: <http://ldf.fi/history/sparql>
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
     PREFIX kart: <http://www.kansallisbiografia.fi/kb/artikkeli/>
-    SELECT ?time ?event ?relation ?description
+    SELECT ?time ?event ?relation ?description ?ldflink
     WHERE {
       SERVICE ldfhis: {
         {
-          ?s rdfs:seeAlso kart:` + kbid + ` .
-          ?event ?p ?s ; rdfs:label ?description .
+          ?ldflink rdfs:seeAlso kart:` + kbid + ` .
+          ?event ?p ?ldflink ; rdfs:label ?description .
           ?event crm:P4_has_time-span [ crm:P82_at_some_time_within ?time ]
         }
         {
@@ -91,16 +77,16 @@ ORDER BY ?start
         `;
 
         } else {
-        sparql = `
+          sparql = `
         PREFIX ldfhis: <http://ldf.fi/history/sparql>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
-        SELECT DISTINCT (substr(str(?strt), 1, 4) AS ?time) ?event ?relation ?description
+        SELECT DISTINCT (substr(str(?strt), 1, 4) AS ?time) ?event ?relation ?description ?ldflink
         WHERE {
           SERVICE ldfhis: {
             {
-              ?s rdfs:label ` + JSON.stringify(title) + `@fi .
-              ?event ?p ?s ; rdfs:label ?description .
+              ?ldflink rdfs:label ` + JSON.stringify(title) + `@fi .
+              ?event ?p ?ldflink ; rdfs:label ?description .
               ?event crm:P4_has_time-span [ crm:P82a_start_of_the_beginning ?strt ]
             }
             {
