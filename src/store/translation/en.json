@@ -76,7 +76,7 @@
         "TopicTimeline": {
             "headerTitle": "Timeline",
             "showEventsOnTimelineMenuText": "Show topic events on the timeline",
-            "centuryText": ""
+            "centuryText": "C"
         },
         "Wikidata": {
             "headerTitle": "Facts",
