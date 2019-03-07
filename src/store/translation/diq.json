@@ -1,0 +1,76 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirzali",
+			"Orbot707"
+		]
+	},
+	"LandingPage": {
+		"search": "Cı geyre",
+		"searchInputPlaceHolder": "Mewzu bıvinê ya zi mewzuya newiye vırazê"
+	},
+	"MainPage": {
+		"topicPageName": "Pela mewzuyi",
+		"mapPlaceMatchPageName": "Cay namey kombine",
+		"mapSearchPageName": "Xerita cı geyre",
+		"returnToHomeMessage": "Peyser şo esaspele"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Tarixi base xerita(y) weçine",
+			"chooseMapHelpNote": "Tip: ctrl+click weçinayışê zaf xerita da no.",
+			"yearAbbreviation": "S."
+		},
+		"Header": {
+			"titleEditText": "Sernameyi bıvurne",
+			"titleApproveText": "Nê sernamey tesdiq kerê",
+			"subtitleEditText": "Şınasiye bıvurne",
+			"subtitleApproveText": "Nê şınasnayışi tesdiq kerê"
+		},
+		"TopicImages": {
+			"headerTitle": "Arşiv ra resimi",
+			"showImagesOnMapMenuText": "Resima pêroyın xerita de bıvinê",
+			"showImagesOnTimelineMenuText": "Resima pêroyın timeline de bıvinê",
+			"imagesActionMenu": {
+				"menuTitle": "Hereketi",
+				"menuTooltip": "Hereketi"
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "Resıman bınımne"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Wareyê saete"
+		},
+		"Wikidata": {
+			"noTopicFoundText": "Mewzu nêvêniya"
+		},
+		"Wikipedia": {
+			"headerTitle": "Meqale",
+			"languageMenu": {
+				"otherLanguagestext": "Zıwanê bini"
+			}
+		},
+		"Gallery": {
+			"menuTitle": "Bımocne",
+			"showAll": "Pêro"
+		}
+	},
+	"general": {
+		"ok": "TEMAM",
+		"cancel": "Bıtexelne",
+		"helpText": "Peşti",
+		"menus": {
+			"actionMenuTitle": "Hereketi",
+			"actionMenuTooltip": "Hereketi",
+			"languageMenuTitle": "Zıwan weçine",
+			"myLanguagesItem": "Zıwanê mı"
+		},
+		"languages": {
+			"fi": "Finki",
+			"en": "İngılızki",
+			"sv": "İswecki",
+			"es": "İspanyolki"
+		}
+	}
+}

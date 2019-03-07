@@ -1,0 +1,106 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"LandingPage": {
+		"search": "Traži",
+		"searchInputPlaceHolder": "Pronađite temu ili izradite novu"
+	},
+	"MainPage": {
+		"topicPageName": "Tematska stranica",
+		"mapPlaceMatchPageName": "Pridruži imena mjesta",
+		"mapSearchPageName": "Pretraži mape",
+		"returnToHomeMessage": "Nazad na početnu stranicu"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Izaberite povijesne bazove karte",
+			"chooseMapHelpNote": "Savjet: Ctrl+grip omogućuje odabir više mapa odjednom",
+			"yearAbbreviation": "g."
+		},
+		"Header": {
+			"titleEditText": "Uredi naslov",
+			"titleApproveText": "Odobri naslov",
+			"subtitleEditText": "Uredi opis",
+			"subtitleApproveText": "Odobri opis"
+		},
+		"TopicImages": {
+			"headerTitle": "Slike iz arhiva",
+			"showImagesOnMapMenuText": "Prikaži sve slike na mapi",
+			"showImagesOnTimelineMenuText": "Prikaži sve slike u vrijemeslijedu",
+			"imagesActionMenu": {
+				"menuTitle": "Radnje",
+				"menuTooltip": "Radnje",
+				"doGeolocatingText": "Zadaj lokaciju...",
+				"showImageText": "Prikaži sliku"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Ukloni sliku jer...",
+				"menuTooltip": "Ukloni sliku"
+			}
+		},
+		"TopicMap": {
+			"showNearbyPlacesMenuText": "Prikaži mjesta u blizini",
+			"hideNearbyPlacesMenuText": "Sakrij mjesta u blizini"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Izrezci novina",
+			"searhTopicFromArchivesMenuText": "Potraži novine u Nacionalnoj knjižnici Finske",
+			"addClipFromArchivesMenuText": "Dodaj izrezak..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Vrijemeslijed",
+			"showEventsOnTimelineMenuText": "Prikaži tematske događaje u vrijemeslijedu",
+			"centuryText": "v."
+		},
+		"Wikidata": {
+			"headerTitle": "Fakti",
+			"extLink": {
+				"linkTitleWD": "Pogl. ili uredi na Wikipoatke"
+			},
+			"noTopicFoundText": "Nisam pronašao temu"
+		},
+		"Wikipedia": {
+			"headerTitle": "Članak",
+			"languageMenu": {
+				"otherLanguagestext": "Drugi jezici"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Osobe povezane s ovom temom",
+			"menuTitle": "Prikaži",
+			"showAll": "Sve"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Pretraži povijesne karte",
+			"filterBySourceMenuText": "Filtriraj prema izvoru...",
+			"filterByTimeMenuText": "Filtritaj prema vremenu...",
+			"filterByMapMenuText": "Filtriraj prema mapama..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution2PrefixText": "Ispravljena mapa od"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Premazivanje na povijesnoj baznoj mapi:"
+		}
+	},
+	"general": {
+		"ok": "U redu",
+		"cancel": "Otkaži",
+		"helpText": "Pomoć",
+		"menus": {
+			"actionMenuTitle": "Radnje",
+			"actionMenuTooltip": "Radnje",
+			"languageMenuTitle": "Izaberite jezik",
+			"myLanguagesItem": "Moji jezici"
+		}
+	}
+}

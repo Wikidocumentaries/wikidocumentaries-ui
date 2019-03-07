@@ -1,0 +1,94 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"LandingPage": {
+		"search": "검색"
+	},
+	"MainPage": {
+		"topicPageName": "주제 문서",
+		"mapSearchPageName": "지도 검색"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"yearAbbreviation": "y."
+		},
+		"Header": {
+			"titleEditText": "제목 편집",
+			"titleApproveText": "이 제목 승인",
+			"subtitleEditText": "설명 편집"
+		},
+		"TopicImages": {
+			"imagesActionMenu": {
+				"doGeolocatingText": "위치 설정...",
+				"showImageText": "이미지 표시"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "이미지 제거 이유",
+				"menuTooltip": "이미지 제거",
+				"remDepicted": {
+					"search": "주제 검색",
+					"browse": "관련 주제 찾아보기"
+				},
+				"remCreator": {
+					"search": "만든이 검색"
+				}
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "이미지 숨기기",
+			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
+			"showNearbyPlacesMenuText": "주변 장소 표시"
+		},
+		"TopicTimeline": {
+			"headerTitle": "타임라인"
+		},
+		"Wikidata": {
+			"extLink": {
+				"linkTitleWD": "위키데이터에서 보기 또는 편집"
+			},
+			"noTopicFoundText": "주제가 없습니다"
+		},
+		"Wikipedia": {
+			"headerTitle": "문서",
+			"extLink": {
+				"linkTitleWP": "위키백과에서 읽기 또는 편집"
+			},
+			"languageMenu": {
+				"translateArticleText": "이 문서를 내 언어로 번역하기",
+				"otherLanguagestext": "다른 언어"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "주제와 관련된 인물",
+			"menuTitle": "보기",
+			"showBorn": "여기서 태어남",
+			"showDied": "여기서 죽음",
+			"showBuried": "여기에 묻힘",
+			"showAll": "모두"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "역사적 지도 검색",
+			"filterByMapMenuText": "맵을 통해 필터..."
+		}
+	},
+	"general": {
+		"ok": "확인",
+		"cancel": "취소",
+		"helpText": "도움말",
+		"menus": {
+			"languageMenuTitle": "언어 선택",
+			"myLanguagesItem": "내 언어"
+		},
+		"languages": {
+			"fi": "핀란드어",
+			"en": "영어",
+			"sv": "스웨덴어",
+			"es": "스페인어"
+		}
+	}
+}

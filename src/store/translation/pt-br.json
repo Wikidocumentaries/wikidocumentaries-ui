@@ -1,0 +1,157 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"LandingPage": {
+		"search": "Pesquisar",
+		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico"
+	},
+	"MainPage": {
+		"topicPageName": "Página do tópico",
+		"mapPlaceMatchPageName": "Combinar nomes de lugares",
+		"mapSearchPageName": "Pesquisar mapas",
+		"wikiTopicErrorMessage": "Uma página da Wikipedia para o tópico não foi encontrada no idioma atual ou ocorreu outro erro inesperado.",
+		"returnToHomeMessage": "Voltar para a página de destino"
+	},
+	"WaitPage": {
+		"waitMessage": "Um momento, por favor... Recuperando dados da Wikipedia, Wikidata, Wikimedia Commons, Mapa Warper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Escolha o(s) mapa(s) de base histórico",
+			"chooseMapHelpNote": "Dica: ctrl+ clique permite selecionar muitos mapas",
+			"yearAbbreviation": "y."
+		},
+		"Header": {
+			"titleEditText": "Editar o título",
+			"titleApproveText": "Aprovar esse titulo",
+			"subtitleEditText": "Editar a descrição",
+			"subtitleApproveText": "Aprovar esta descrição"
+		},
+		"TopicImages": {
+			"headerTitle": "Imagens dos arquivos",
+			"showImagesOnMapMenuText": "Mostrar todas as imagens no mapa",
+			"showImagesOnTimelineMenuText": "Mostrar todas as imagens na linha do tempo",
+			"imagesActionMenu": {
+				"menuTitle": "Ações",
+				"menuTooltip": "Ações",
+				"doGeolocatingText": "Definir a localização...",
+				"showImageText": "Mostrar imagem"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Remova a imagem porque...",
+				"menuTooltip": "Remover a imagem",
+				"remDepicted": {
+					"menuTitle": "Descreve este tópico em vez disso",
+					"search": "Procurar pelo tópico",
+					"browse": "Navegar pelos tópicos relacionados"
+				},
+				"remCreator": {
+					"menuTitle": "É por esse criador",
+					"search": "Pesquisar pelo criador",
+					"browse": "Navegar pelos atores relacionados"
+				},
+				"remInappropriate": {
+					"menuTitle": "É inapropriado porque",
+					"privacy": "Viola a privacidade do representado",
+					"violence": "Exibe violência extrema",
+					"sex": "Ele exibe sexo explícito",
+					"copyvio": "Viola os direitos autorais",
+					"explain": "Deixe uma nota para explicar"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Tópico no mapa",
+			"chooseHistoricalBasemapMenuText": "Escolha o(s) mapa(s) básico(s) histórico(s)...",
+			"hideImagesMenuText": "Ocultar imagens",
+			"chooseTimelineMapsMenuText": "Escolha os mapas da linha do tempo...",
+			"showNearbyPlacesMenuText": "Mostrar locais próximos",
+			"hideNearbyPlacesMenuText": "Ocultar lugares próximos"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Recortes de jornais",
+			"searhTopicFromArchivesMenuText": "Pesquisa dos jornais na Biblioteca Nacional da Finlândia",
+			"addClipFromArchivesMenuText": "Adicionar recorte..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Linha do tempo",
+			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha do tempo",
+			"centuryText": "C"
+		},
+		"Wikidata": {
+			"headerTitle": "Fatos",
+			"extLink": {
+				"linkTitleWD": "Ver ou editar no Wikidata"
+			},
+			"noTopicFoundText": "Tópico não encontrado"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artigo",
+			"missingArticle": "Não há artigo sobre esse assunto em inglês. Veja se há artigos em outros idiomas no menu de idiomas acima ou crie o artigo clicando no ícone de mais.",
+			"extLink": {
+				"linkTitleWP": "Leia ou edite na Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Crie um artigo na Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Leia o artigo em outro idioma",
+				"translateArticleText": "Traduzir este artigo para o seu idioma",
+				"otherLanguagestext": "Outros idiomas"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Pessoas relacionadas ao tópico",
+			"menuTitle": "Mostrar",
+			"showBorn": "Nascido aqui",
+			"showDied": "Morreu aqui",
+			"showBuried": "Enterrado aqui",
+			"showRelated": "Relacionado de outra forma",
+			"showAll": "Todos"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combinar nomes de lugares"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Pesquisar mapas históricos",
+			"filterBySourceMenuText": "Filtrar por fonte...",
+			"filterByTimeMenuText": "Filtrar com base no tempo...",
+			"filterByMapMenuText": "Filtrar via mapa..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Para o mapa base histórico, veja os créditos e direitos autorais de",
+			"attribution2PrefixText": "Mapa retificado de"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparência do mapa base histórico:"
+		}
+	},
+	"general": {
+		"ok": "OK",
+		"cancel": "Cancelar",
+		"helpText": "Ajuda",
+		"menus": {
+			"actionMenuTitle": "Ações",
+			"actionMenuTooltip": "Ações",
+			"languageMenuTitle": "Escolher idioma",
+			"myLanguagesItem": "Meus idiomas"
+		},
+		"languages": {
+			"fi": "Finlandês",
+			"en": "Inglês",
+			"sv": "Sueco",
+			"es": "Espanhol"
+		}
+	}
+}

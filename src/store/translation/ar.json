@@ -1,0 +1,158 @@
+{
+	"@metadata": {
+		"authors": [
+			"Meno25",
+			"ديفيد"
+		]
+	},
+	"LandingPage": {
+		"search": "بحث",
+		"searchInputPlaceHolder": "ابحث عن موضوع أو أنشئ موضوعا جديدا"
+	},
+	"MainPage": {
+		"topicPageName": "صفحة موضوع",
+		"mapPlaceMatchPageName": "دمج أسماء الأماكن",
+		"mapSearchPageName": "البحث في الخرائط",
+		"wikiTopicErrorMessage": "لا يمكن العثور على صفحة ويكيبيديا عن الموضوع باللغة الحالية أو حدث خطأ غير متوقع آخر.",
+		"returnToHomeMessage": "العودة إلى صفحة الهبوط"
+	},
+	"WaitPage": {
+		"waitMessage": "لحظة، من فضلك... جارٍ استرجاع البيانات من ويكيبيديا، ويكييداتا ، ويكيميديا ​​كومنز، ماب واربر ، فنا، فليكر ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "اختر خريطة(خرائط) أساسية تاريخية",
+			"chooseMapHelpNote": "نصيحة: ctrl+click يسمح لك بتحديد العديد من الخرائط",
+			"yearAbbreviation": "س."
+		},
+		"Header": {
+			"titleEditText": "تحرير العنوان",
+			"titleApproveText": "الموافقة على هذا العنوان",
+			"subtitleEditText": "تعديل الوصف",
+			"subtitleApproveText": "الموافقة على هذا الوصف"
+		},
+		"TopicImages": {
+			"headerTitle": "صور من الأرشيف",
+			"showImagesOnMapMenuText": "عرض جميع الصور على الخريطة",
+			"showImagesOnTimelineMenuText": "عرض جميع الصور على الجدول الزمني",
+			"imagesActionMenu": {
+				"menuTitle": "الأفعال",
+				"menuTooltip": "أفعال",
+				"doGeolocatingText": "تعيين الموقع...",
+				"showImageText": "عرض الصورة"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "أزل الصورة لأن...",
+				"menuTooltip": "أزل الصورة",
+				"remDepicted": {
+					"menuTitle": "يصور هذا الموضوع بدلا من ذلك",
+					"search": "ابحث عن الموضوع",
+					"browse": "تصفح المواضيع ذات الصلة"
+				},
+				"remCreator": {
+					"menuTitle": "بواسطة هذا المنشئ بدلا من ذلك",
+					"search": "ابحث عن المنشئ",
+					"browse": "تصفح الفاعلين المرتبطين"
+				},
+				"remInappropriate": {
+					"menuTitle": "هذا غير مناسب لأن",
+					"privacy": "ينتهك خصوصية الصور",
+					"violence": "يعرض عنفا شديدا",
+					"sex": "تعرض جنسا صريحا",
+					"copyvio": "ينتهك حقوق الطبع والنشر",
+					"explain": "ترك ملاحظة للشرح"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "الموضوع على الخريطة",
+			"chooseHistoricalBasemapMenuText": "اختر خريطة(خرائط) أساسية تاريخية...",
+			"hideImagesMenuText": "إخفاء الصور",
+			"chooseTimelineMapsMenuText": "اختر خرائط الجدول الزمني...",
+			"showNearbyPlacesMenuText": "عرض الأماكن القريبة",
+			"hideNearbyPlacesMenuText": "إخفاء الأماكن القريبة"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "قصاصات صحفية",
+			"searhTopicFromArchivesMenuText": "البحث من الصحف في مكتبة فنلندا الوطنية",
+			"addClipFromArchivesMenuText": "إضافة لقطة..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "الجدول الزمني",
+			"showEventsOnTimelineMenuText": "عرض أحداث الموضوع على المخطط الزمني",
+			"centuryText": "ق"
+		},
+		"Wikidata": {
+			"headerTitle": "حقائق",
+			"extLink": {
+				"linkTitleWD": "عرض أو تحرير في ويكي بيانات"
+			},
+			"noTopicFoundText": "الموضوع غير موجود"
+		},
+		"Wikipedia": {
+			"headerTitle": "مقالة",
+			"missingArticle": "لا توجد مقالة حول هذا الموضوع بالعربية، تحقق مما إذا كانت هناك مقالات بلغات أخرى في قائمة اللغات أعلاه، أو قم بإنشاء المقالة بالنقر فوق رمز الزائد.",
+			"extLink": {
+				"linkTitleWP": "قراءة أو تحرير في ويكيبيديا"
+			},
+			"addLink": {
+				"linkTitleWP": "إنشاء مقالة في ويكيبيديا"
+			},
+			"languageMenu": {
+				"menuTitle": "اقرأ المقالة بلغة أخرى",
+				"translateArticleText": "ترجمة هذه المقالة إلى لغتك",
+				"otherLanguagestext": "لغات أخرى"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "الناس المرتبطون بالموضوع",
+			"menuTitle": "أظهر",
+			"showBorn": "وُلِد هنا",
+			"showDied": "تُوفِّي هنا",
+			"showBuried": "دُفِن هنا",
+			"showRelated": "ذو صلة خلاف ذلك",
+			"showAll": "الكل"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "دمج أسماء الأماكن"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "ابحث في الخرائط التاريخية",
+			"filterBySourceMenuText": "تصفية حسب المصدر...",
+			"filterByTimeMenuText": "تصفية على أساس الوقت...",
+			"filterByMapMenuText": "تصفية عبر الخريطة..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "بالنسبة لخريطة الأساس التاريخية، راجع الإحالات وحقوق الطبع والنشر من",
+			"attribution2PrefixText": "تم تصحيح الخريطة من"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "شفافية الخريطة الأساسية التاريخية:"
+		}
+	},
+	"general": {
+		"ok": "موافق",
+		"cancel": "إلغاء",
+		"helpText": "مساعدة",
+		"menus": {
+			"actionMenuTitle": "أفعال",
+			"actionMenuTooltip": "أفعال",
+			"languageMenuTitle": "اختر اللغة",
+			"myLanguagesItem": "لغتي"
+		},
+		"languages": {
+			"fi": "الفنلندية",
+			"en": "الإنجليزية",
+			"sv": "السويدية",
+			"es": "الإسبانية"
+		}
+	}
+}

@@ -1,141 +1,156 @@
 {
-    "LandingPage": {
-        "search": "Buscar",
-        "searchInputPlaceHolder": "Encuentre un tema o cree uno nuevo"
-    },
-    "MainPage": {
-        "topicPageName": "Página del tema",
-        "mapPlaceMatchPageName": "Combinar nombres de lugares",
-        "mapSearchPageName": "Buscar mapas",
-        "wikiTopicErrorMessage": "No se pudo encontrar una página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
-        "returnToHomeMessage": "Volver a la página de bienvenida"
-    },
-    "WaitPage": {
-        "waitMessage": "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
-    },
-    "topic_page": {
-        "BaseMapDialog": {
-            "chooseMapTitle": "Elige uno o varios mapas históricos de base",
-            "chooseMapHelpNote": "Tip: ctrl+click permite seleccionar varios mapas",
-            "yearAbbreviation": "y."
-        },
-        "HomePage": {
-        },
-        "Header": {
-            "titleEditText": "Edit the title",
-            "titleApproveText": "Approve this title",
-            "subtitleEditText": "Edit the description",
-            "subtitleApproveText": "Approve this description"
-        },
-        "TopicImages": {
-            "headerTitle": "Imágenes de los archivos",
-            "showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
-            "showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
-            "imagesActionMenu": {
-                "menuTitle": "Actions",
-                "doGeolocatingText": "Set the location..."
-            },
-            "imagesRemoveMenu": {
-                "menuTitle": "Remove the image because...",
-                "remDepictedText": "It depicts this topic instead",
-                "remDepictedSubMenu": {
-                    "search": "Search for the topic",
-                    "browse": "Browse the related topics"
-                },
-                "remCreatorText": "It is by this creator instead",
-                "remCreatorSubMenu": {
-                    "search": "Search for the creator",
-                    "browse": "Browse the related actors"
-                },
-                "remInappropriateText": "It is inappropriate because",
-                "remInappropriateSubMenu": {
-                    "privacy": "It violates the privacy of the depicted",
-                    "violence": "It displays extreme violence",
-                    "sex": "It displays explicit sex",
-                    "copyvio": "It violates copyright",
-                    "explain": "Leave a note to explain"
-                }
-            }
-        },
-        "TopicMap": {
-            "headerTitle": "Tema en el mapa",
-            "chooseHistoricalBasemapMenuText": "Elige uno o varios mapas históricos de base...",
-            "hideImagesMenuText": "Ocultar imágenes",
-            "chooseTimelineMapsMenuText": "Elige mapas para la línea de tiempo...",
-            "showNearbyPlacesMenuText": "Mostrar lugares cercanos",
-            "hideNearbyPlacesMenuText": "Ocultar lugares cercanos"
-        },
-        "TopicNewspapers": {
-            "headerTitle": "Recortes de diarios",
-            "searhTopicFromArchivesMenuText": "Buscar diarios en la Biblioteca Nacional de Finlandia",
-            "addClipFromArchivesMenuText": "Agregar recorte..."
-        },
-        "TopicTimeline": {
-            "headerTitle": "Línea de tiempo",
-            "showEventsOnTimelineMenuText": "Mostrar eventos por tema en la línea de tiempo",
-            "centuryText": ""
-        },
-        "Wikidata": {
-            "headerTitle": "Datos",
-            "extLink": {
-                "linkTitleWD": "View or edit in Wikidata"
-            },
-            "noTopicFoundText": "Tema no encontrando"
-        },
-        "Wikipedia": {
-            "headerTitle": "Artículo",
-            "missingArticle": "There is no article about this topic in Spanish. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon.",
-            "extLink": {
-                "linkTitleWP": "Read or edit in Wikipedia"
-            },
-            "addLink": {
-                "linkTitleWP": "Create an article in Wikipedia"
-            },
-            "languageMenu": {
-                "menuTitle": "Read the article in another language",
-                "translateArticleText": "Translate this article to your language",
-                "otherLanguagestext": "Other languages"
-            }
-        }
-    },
-    "map_place_match_page": {
-        "PlaceMatchSettings": {
-            "headerTitle": "Combinar nombres de lugares"
-        }
-    },
-    "map_search_page": {
-        "HistoricalMapsSearch": {
-            "headerTitle": "Buscar mapas históricos",
-            "filterBySourceMenuText": "Filtrar por fuente...",
-            "filterByTimeMenuText": "Filtrar por fecha...",
-            "filterByMapMenuText": "Filtrar por mapa..."
-        }
-    },
-    "openlayersplugin": {
-        "WikimapsWarperLayer": {
-            "attribution1PrefixText": "Por el mapa histórico base, vea los créditos y los derechos de autor en",
-            "attribution2PrefixText": "Mapa rectificado de"
-        }
-    },
-    "menu": {
-        "TransparencySliderMenuItem": {
-            "transparencyLabel": "Transparencia del mapa histórico base:"
-        }
-    },
-    "general": {
-        "ok": "OK",
-        "cancel": "Cancelar",
-        "helpText": "Ayuda",
-        "menus": {
-            "actionMenuTitle": "Acciones",
-            "languageMenuTitle": "Elige un idioma",
-            "myLanguagesItem": "Mis idiomas"
-        },
-        "languages": {
-            "fi": "Finés",
-            "en": "Inglés",
-            "sv": "Sueco",
-            "es": "Español"
-        }
-    }
+	"@metadata": {
+		"authors": [
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Buscar",
+		"searchInputPlaceHolder": "Encuentre un tema o cree uno nuevo"
+	},
+	"MainPage": {
+		"topicPageName": "Página del tema",
+		"mapPlaceMatchPageName": "Combinar nombres de lugares",
+		"mapSearchPageName": "Buscar mapas",
+		"wikiTopicErrorMessage": "No se pudo encontrar una página de Wikipedia para el tema en el lenguaje actual o hubo otro error inesperado.",
+		"returnToHomeMessage": "Volver a la página de bienvenida"
+	},
+	"WaitPage": {
+		"waitMessage": "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Elige uno o varios mapas históricos de base",
+			"chooseMapHelpNote": "Tip: ctrl+click permite seleccionar varios mapas",
+			"yearAbbreviation": "y."
+		},
+		"Header": {
+			"titleEditText": "Editar el título",
+			"titleApproveText": "Aprobar este título",
+			"subtitleEditText": "Editar descripción",
+			"subtitleApproveText": "Aprobar esta descripción"
+		},
+		"TopicImages": {
+			"headerTitle": "Imágenes de los archivos",
+			"showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
+			"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
+			"imagesActionMenu": {
+				"menuTitle": "Acciones",
+				"menuTooltip": "Acciones",
+				"doGeolocatingText": "Set the location...",
+				"showImageText": "Mostrar imágen"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Eliminar la imagen porque...",
+				"menuTooltip": "Eliminar imagen",
+				"remDepicted": {
+					"menuTitle": "Describe este tema en cambio",
+					"search": "Buscar el tema",
+					"browse": "Explorar el relacionó temas"
+				},
+				"remCreator": {
+					"menuTitle": "Es por este creador en cambio",
+					"search": "Buscar el creador",
+					"browse": "Explorar el relacionó actores"
+				},
+				"remInappropriate": {
+					"menuTitle": "Es inapropiado porque",
+					"privacy": "Viola la intimidad del descrito",
+					"violence": "Muestra violencia extrema",
+					"sex": "Muestra sexo explícito",
+					"copyvio": "Viola copyright",
+					"explain": "Dejar una nota para explicar"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Tema en el mapa",
+			"chooseHistoricalBasemapMenuText": "Elige uno o varios mapas históricos de base...",
+			"hideImagesMenuText": "Ocultar imágenes",
+			"chooseTimelineMapsMenuText": "Elige mapas para la línea de tiempo...",
+			"showNearbyPlacesMenuText": "Mostrar lugares cercanos",
+			"hideNearbyPlacesMenuText": "Ocultar lugares cercanos"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Recortes de diarios",
+			"searhTopicFromArchivesMenuText": "Buscar diarios en la Biblioteca Nacional de Finlandia",
+			"addClipFromArchivesMenuText": "Agregar recorte..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Línea de tiempo",
+			"showEventsOnTimelineMenuText": "Mostrar eventos por tema en la línea de tiempo",
+			"centuryText": "C"
+		},
+		"Wikidata": {
+			"headerTitle": "Datos",
+			"extLink": {
+				"linkTitleWD": "Vista o editar en Wikidata"
+			},
+			"noTopicFoundText": "Tema no encontrando"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artículo",
+			"missingArticle": "No hay ningún artículo sobre este tema en español. Ver si hay artículos en otras lenguas en la carta de lengua encima, o crear el artículo por clicking en el plus-icono.",
+			"extLink": {
+				"linkTitleWP": "Leído o editar en Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Crear un artículo en Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Leído el artículo en otra lengua",
+				"translateArticleText": "Traducir este artículo a vuestra lengua",
+				"otherLanguagestext": "Otros idiomas"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Las personas relacionaron al tema",
+			"menuTitle": "Mostrar",
+			"showBorn": "Nacido aquí",
+			"showDied": "Muerto aquí",
+			"showBuried": "Enterrado aquí",
+			"showAll": "Todas"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combinar nombres de lugares"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Buscar mapas históricos",
+			"filterBySourceMenuText": "Filtrar por fuente...",
+			"filterByTimeMenuText": "Filtrar por fecha...",
+			"filterByMapMenuText": "Filtrar por mapa..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Por el mapa histórico base, vea los créditos y los derechos de autor en",
+			"attribution2PrefixText": "Mapa rectificado de"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparencia del mapa histórico base:"
+		}
+	},
+	"general": {
+		"ok": "OK",
+		"cancel": "Cancelar",
+		"helpText": "Ayuda",
+		"menus": {
+			"actionMenuTitle": "Acciones",
+			"actionMenuTooltip": "Acciones",
+			"languageMenuTitle": "Elige un idioma",
+			"myLanguagesItem": "Mis idiomas"
+		},
+		"languages": {
+			"fi": "Finés",
+			"en": "Inglés",
+			"sv": "Sueco",
+			"es": "Español"
+		}
+	}
 }

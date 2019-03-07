@@ -1,0 +1,158 @@
+{
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Wladek92"
+		]
+	},
+	"LandingPage": {
+		"search": "Rechercher",
+		"searchInputPlaceHolder": "Trouver un sujet ou créer un nouveau sujet"
+	},
+	"MainPage": {
+		"topicPageName": "Page du sujet",
+		"mapPlaceMatchPageName": "Combiner les noms d’endroits",
+		"mapSearchPageName": "Rechercher les cartes",
+		"wikiTopicErrorMessage": "Une page Wikipédia pour le sujet n’a pas pu être trouvée dans la langue actuelle, ou une autre erreur s’est produite.",
+		"returnToHomeMessage": "Retour à la page d’accueil"
+	},
+	"WaitPage": {
+		"waitMessage": "Un moment, SVP… Récupération des données depuis Wikipédia, Wikidata, Wikimédia Communs, Map Warper, Finna, Flickr…"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Choisir les cartes de base historiques",
+			"chooseMapHelpNote": "Conseil : ctrl+clic permet de sélectionner plusieurs cartes",
+			"yearAbbreviation": "a."
+		},
+		"Header": {
+			"titleEditText": "Modifier le titre",
+			"titleApproveText": "Approuver ce titre",
+			"subtitleEditText": "Modifier la description",
+			"subtitleApproveText": "Approuver cette description"
+		},
+		"TopicImages": {
+			"headerTitle": "Images des archives",
+			"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
+			"showImagesOnTimelineMenuText": "Afficher toutes les images sur la ligne temporelle",
+			"imagesActionMenu": {
+				"menuTitle": "Actions",
+				"menuTooltip": "Actions",
+				"doGeolocatingText": "Définir l’emplacement…",
+				"showImageText": "Afficher l’image"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Supprimer l’image parce que…",
+				"menuTooltip": "Supprimer l’image",
+				"remDepicted": {
+					"menuTitle": "Il représente plutôt le sujet",
+					"search": "Rechercher le sujet",
+					"browse": "Naviguer dans les sujets associés"
+				},
+				"remCreator": {
+					"menuTitle": "C’est plutôt par ce créateur",
+					"search": "Rechercher le créateur",
+					"browse": "Naviguer parmi les acteurs associés"
+				},
+				"remInappropriate": {
+					"menuTitle": "Ce n’est pas approprié parce que",
+					"privacy": "Cela viole la confidentialité de ce qui est représenté",
+					"violence": "Cela affiche une violence extrême",
+					"sex": "Cela affiche du sexe explicite",
+					"copyvio": "Cela viole le droit d’auteur",
+					"explain": "Laisser une note pour expliquer"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Sujet sur la carte",
+			"chooseHistoricalBasemapMenuText": "Choisir les cartes de base historiques…",
+			"hideImagesMenuText": "Masquer les images",
+			"chooseTimelineMapsMenuText": "Choisir les cartes de la frise temporelle…",
+			"showNearbyPlacesMenuText": "Afficher les lieux à proximité",
+			"hideNearbyPlacesMenuText": "Masquer les lieux à proximité"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Coupures de journaux",
+			"searhTopicFromArchivesMenuText": "Rechercher dans les journaux de la Bibliothèque nationale de Finlande",
+			"addClipFromArchivesMenuText": "Ajouter une coupure…"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Frise temporelle",
+			"showEventsOnTimelineMenuText": "Afficher les événements du sujet sur la frise temporelle",
+			"centuryText": "S"
+		},
+		"Wikidata": {
+			"headerTitle": "Faits",
+			"extLink": {
+				"linkTitleWD": "Afficher ou modifier dans Wikidata"
+			},
+			"noTopicFoundText": "Sujet non trouvé"
+		},
+		"Wikipedia": {
+			"headerTitle": "Article",
+			"missingArticle": "Il n’y a pas d’article sur ce sujet en anglais. Voir s’il y a des articles dans d’autres langues dans le menu de langues ci-dessus, ou créer l’article en cliquant sur l’icône plus.",
+			"extLink": {
+				"linkTitleWP": "Lire ou modifier dans Wikipédia"
+			},
+			"addLink": {
+				"linkTitleWP": "Créer un article dans Wikipédia"
+			},
+			"languageMenu": {
+				"menuTitle": "Lire l’article dans une autre langue",
+				"translateArticleText": "Traduire cet article dans votre langue",
+				"otherLanguagestext": "Autres langues"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Personnes liées au sujet",
+			"menuTitle": "Afficher",
+			"showBorn": "Né ici",
+			"showDied": "Décédé ici",
+			"showBuried": "Enterré ici",
+			"showRelated": "Autre relation",
+			"showAll": "Tous"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combiner les noms de lieux"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Rechercher les cartes historiques",
+			"filterBySourceMenuText": "Filtrer par source…",
+			"filterByTimeMenuText": "Filtrer par la date…",
+			"filterByMapMenuText": "Filtrer via la carte…"
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Pour la carte de base historique, voyez les crédits et les droits d’auteur de",
+			"attribution2PrefixText": "Carte rectifiée de"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparence de la carte de base historique :"
+		}
+	},
+	"general": {
+		"ok": "OK",
+		"cancel": "Annuler",
+		"helpText": "Aide",
+		"menus": {
+			"actionMenuTitle": "Actions",
+			"actionMenuTooltip": "Actions",
+			"languageMenuTitle": "Choisir la langue",
+			"myLanguagesItem": "Mes langues"
+		},
+		"languages": {
+			"fi": "Finnois",
+			"en": "Anglais",
+			"sv": "Suédois",
+			"es": "Espagnol"
+		}
+	}
+}

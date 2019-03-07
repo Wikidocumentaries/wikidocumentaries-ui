@@ -1,0 +1,77 @@
+{
+	"@metadata": {
+		"authors": [
+			"Saederup92"
+		]
+	},
+	"LandingPage": {
+		"search": "Søg"
+	},
+	"MainPage": {
+		"mapPlaceMatchPageName": "Kombiner stednavne",
+		"mapSearchPageName": "Søg kort"
+	},
+	"topic_page": {
+		"Header": {
+			"titleEditText": "Rediger titlen",
+			"subtitleEditText": "Rediger beskrivelsen"
+		},
+		"TopicImages": {
+			"imagesActionMenu": {
+				"menuTitle": "Handlinger",
+				"menuTooltip": "Handlinger",
+				"showImageText": "Vis billeder"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Fjern billedet fordi...",
+				"menuTooltip": "Fjern billedet",
+				"remDepicted": {
+					"search": "Søg efter emnet"
+				},
+				"remCreator": {
+					"search": "Søg efter skaberen"
+				}
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "Skjul billeder"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Tidslinje"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikel",
+			"languageMenu": {
+				"translateArticleText": "Oversæt denne artikel til dit sprog",
+				"otherLanguagestext": "Andre sprog"
+			}
+		},
+		"Gallery": {
+			"menuTitle": "Vis",
+			"showBorn": "Født her",
+			"showDied": "Døde her",
+			"showBuried": "Begravet her",
+			"showAll": "Alle"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"filterBySourceMenuText": "Filtrer efter kilde..."
+		}
+	},
+	"general": {
+		"helpText": "Hjælp",
+		"menus": {
+			"actionMenuTitle": "Handlinger",
+			"actionMenuTooltip": "Handlinger",
+			"languageMenuTitle": "Vælg sprog",
+			"myLanguagesItem": "Mine sprog"
+		},
+		"languages": {
+			"fi": "Finsk",
+			"en": "Engelsk",
+			"sv": "Svensk",
+			"es": "Spansk"
+		}
+	}
+}

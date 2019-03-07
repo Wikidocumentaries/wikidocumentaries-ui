@@ -1,0 +1,158 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06",
+			"Vlad5250"
+		]
+	},
+	"LandingPage": {
+		"search": "Пребарај",
+		"searchInputPlaceHolder": "Најдете тема или создадете нова"
+	},
+	"MainPage": {
+		"topicPageName": "Тематска страница",
+		"mapPlaceMatchPageName": "Здружи имиња на места",
+		"mapSearchPageName": "Пребарај карти",
+		"wikiTopicErrorMessage": "Не можев да најдам страница за темата на Википедија на тековниот јазик, или пак наидов на неочекувана грешка.",
+		"returnToHomeMessage": "Назад на почетната страница"
+	},
+	"WaitPage": {
+		"waitMessage": "Почекајте... Преземам податоци од Википедија, Википодатоци, Ризницата, Map Warper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Изберете историски подложни карти",
+			"chooseMapHelpNote": "Совет: Ctrl+стисок овозможува избор на повеќе карти наеднаш",
+			"yearAbbreviation": "г."
+		},
+		"Header": {
+			"titleEditText": "Уреди го насловот",
+			"titleApproveText": "Одобри го овој наслов",
+			"subtitleEditText": "Уреди го описот",
+			"subtitleApproveText": "Одобри го овој опис"
+		},
+		"TopicImages": {
+			"headerTitle": "Слики од архиви",
+			"showImagesOnMapMenuText": "Прикажи ги сите слики на картата",
+			"showImagesOnTimelineMenuText": "Прикажи ги сите слики во времеследот",
+			"imagesActionMenu": {
+				"menuTitle": "Дејства",
+				"menuTooltip": "Дејства",
+				"doGeolocatingText": "Задај местоположба...",
+				"showImageText": "Прикажи слика"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Отстрани ја сликата бидејќи...",
+				"menuTooltip": "Отстрани слика",
+				"remDepicted": {
+					"menuTitle": "Ја прикажува оваа тема наместо наведената",
+					"search": "Пребарај ја темата",
+					"browse": "Прелистај по поврзани теми"
+				},
+				"remCreator": {
+					"menuTitle": "Е дело на овој творец, наместо наведениот",
+					"search": "Пребарај го творецот",
+					"browse": "Прелистај по поврзани творци"
+				},
+				"remInappropriate": {
+					"menuTitle": "Неумесна е бидејќи",
+					"privacy": "Ја нарушува приватноста на прикажаната личност",
+					"violence": "Прикажува жестоко насилство",
+					"sex": "Прикажува очигледен полов однос",
+					"copyvio": "Нарушува авторски права",
+					"explain": "Напишете прибелешка со објаснување"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Тема на картата",
+			"chooseHistoricalBasemapMenuText": "Изберете историски подложни карти...",
+			"hideImagesMenuText": "Скриј слики",
+			"chooseTimelineMapsMenuText": "Изберете времеследни карти...",
+			"showNearbyPlacesMenuText": "Прикажи места во близина",
+			"hideNearbyPlacesMenuText": "Скриј места во близина"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Исечоци од весници",
+			"searhTopicFromArchivesMenuText": "Пребарај по весниците во Националната библиотека на Финска",
+			"addClipFromArchivesMenuText": "Додај исечок..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Времеслед",
+			"showEventsOnTimelineMenuText": "Прикажи тематски настани во времеследот",
+			"centuryText": "в."
+		},
+		"Wikidata": {
+			"headerTitle": "Факти",
+			"extLink": {
+				"linkTitleWD": "Погл. или уреди на Википоатоци"
+			},
+			"noTopicFoundText": "Не ја пронајдов темата"
+		},
+		"Wikipedia": {
+			"headerTitle": "Статија",
+			"missingArticle": "Оваа тема нема статија на македонски. Погледајте во јазичното мени погоре дали постојат статии на други јазици, или пак создајте ја статијата стискајќи на знакот плус.",
+			"extLink": {
+				"linkTitleWP": "Прочитај или уреди на Википедија"
+			},
+			"addLink": {
+				"linkTitleWP": "Создај статија на Википедија"
+			},
+			"languageMenu": {
+				"menuTitle": "Прочитајте ја статијата на друг јазик",
+				"translateArticleText": "Преведете ја статијава на вашиот јазик",
+				"otherLanguagestext": "Други јазици"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Личности поврзани со темата",
+			"menuTitle": "Прикажи",
+			"showBorn": "Родени овде",
+			"showDied": "Починати овде",
+			"showBuried": "Погребани овде",
+			"showRelated": "Поинаку поврзани",
+			"showAll": "Сите"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Здружи имиња на места"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Пребарај историски карти",
+			"filterBySourceMenuText": "Филтрирај по извор...",
+			"filterByTimeMenuText": "Филтритај по време...",
+			"filterByMapMenuText": "Филтрирај по карти..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "За историската подложна карта, погледајте ги приписните и авторскоправните податоци од",
+			"attribution2PrefixText": "Исправена карта од"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Облога на историската подложна карта:"
+		}
+	},
+	"general": {
+		"ok": "ОК",
+		"cancel": "Откажи",
+		"helpText": "Помош",
+		"menus": {
+			"actionMenuTitle": "Дејства",
+			"actionMenuTooltip": "Дејства",
+			"languageMenuTitle": "Изберете јазик",
+			"myLanguagesItem": "Мои јазици"
+		},
+		"languages": {
+			"fi": "фински",
+			"en": "англиски",
+			"sv": "шведски",
+			"es": "шпански"
+		}
+	}
+}

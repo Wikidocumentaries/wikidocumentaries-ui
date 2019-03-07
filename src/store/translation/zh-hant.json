@@ -1,0 +1,157 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"LandingPage": {
+		"search": "搜尋",
+		"searchInputPlaceHolder": "尋找主題或建立新的主題"
+	},
+	"MainPage": {
+		"topicPageName": "主題頁面",
+		"mapPlaceMatchPageName": "結合地點名稱",
+		"mapSearchPageName": "搜尋地圖",
+		"wikiTopicErrorMessage": "無法在目前語言找出該主題的維基百科頁面，或是發生其它預期外的錯誤。",
+		"returnToHomeMessage": "返回到達頁面"
+	},
+	"WaitPage": {
+		"waitMessage": "請稍等…正在從維基百科、維基數據、維基共享資源、Map Warper、Finna、Flickr 檢索資料…"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "選擇歷史性的地圖",
+			"chooseMapHelpNote": "提示：按下 ctrl 鍵 + 點擊能允許選擇多個地圖",
+			"yearAbbreviation": "年份"
+		},
+		"Header": {
+			"titleEditText": "編輯標題",
+			"titleApproveText": "批准此標題",
+			"subtitleEditText": "編輯描述",
+			"subtitleApproveText": "批准此描述"
+		},
+		"TopicImages": {
+			"headerTitle": "來自存檔的圖片",
+			"showImagesOnMapMenuText": "在地圖上秀出所有圖片",
+			"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片",
+			"imagesActionMenu": {
+				"menuTitle": "操作",
+				"menuTooltip": "操作",
+				"doGeolocatingText": "設定位置…",
+				"showImageText": "秀出圖片"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "移除圖片，因為…",
+				"menuTooltip": "移除圖片",
+				"remDepicted": {
+					"menuTitle": "描述主題取代",
+					"search": "搜尋主題",
+					"browse": "瀏覽相關主題"
+				},
+				"remCreator": {
+					"menuTitle": "透過創建者取代",
+					"search": "搜尋創建者",
+					"browse": "瀏覽相關行為者"
+				},
+				"remInappropriate": {
+					"menuTitle": "這不合適，因為",
+					"privacy": "這違反了私隱描述",
+					"violence": "有表現出極端暴力",
+					"sex": "有表現出露骨色情",
+					"copyvio": "有侵犯版權",
+					"explain": "留下解釋用的註釋"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "地圖上的主題",
+			"chooseHistoricalBasemapMenuText": "選擇歷史性的地圖…",
+			"hideImagesMenuText": "隱藏圖片",
+			"chooseTimelineMapsMenuText": "選擇時間軸地圖…",
+			"showNearbyPlacesMenuText": "秀出附近地點",
+			"hideNearbyPlacesMenuText": "隱藏附近地點"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "報紙剪報",
+			"searhTopicFromArchivesMenuText": "從藏於芬蘭國家圖書館的報紙搜尋",
+			"addClipFromArchivesMenuText": "新增剪報…"
+		},
+		"TopicTimeline": {
+			"headerTitle": "時間軸",
+			"showEventsOnTimelineMenuText": "秀出在時間軸上的主題事件",
+			"centuryText": "世紀"
+		},
+		"Wikidata": {
+			"headerTitle": "實情",
+			"extLink": {
+				"linkTitleWD": "在維基數據檢視或編輯"
+			},
+			"noTopicFoundText": "查無主題"
+		},
+		"Wikipedia": {
+			"headerTitle": "條目",
+			"missingArticle": "在英語裡沒有關於此主題的條目。查看上方語言選單是否有該條目的其它語言版本，或是透過點擊加號圖標來建立條目。",
+			"extLink": {
+				"linkTitleWP": "在維基百科閱讀或編輯"
+			},
+			"addLink": {
+				"linkTitleWP": "在維基百科建立一個條目"
+			},
+			"languageMenu": {
+				"menuTitle": "閱讀條目的別種語言版本",
+				"translateArticleText": "翻譯此條目成您使用的語言",
+				"otherLanguagestext": "其它語言"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "與主題關聯的人物",
+			"menuTitle": "秀出",
+			"showBorn": "出生於此",
+			"showDied": "逝世於此",
+			"showBuried": "埋葬於此",
+			"showRelated": "否則相關",
+			"showAll": "所有"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "結合地點名稱"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "搜尋歷史地圖",
+			"filterBySourceMenuText": "依來源篩選…",
+			"filterByTimeMenuText": "基於時間篩選…",
+			"filterByMapMenuText": "透過地圖篩選…"
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "關於歷史地圖，請查看製作群與版權",
+			"attribution2PrefixText": "矯正地圖自"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "歷史性地圖的透明度："
+		}
+	},
+	"general": {
+		"ok": "好",
+		"cancel": "取消",
+		"helpText": "說明",
+		"menus": {
+			"actionMenuTitle": "操作",
+			"actionMenuTooltip": "操作",
+			"languageMenuTitle": "選擇語言",
+			"myLanguagesItem": "我的語言"
+		},
+		"languages": {
+			"fi": "芬蘭語",
+			"en": "英語",
+			"sv": "瑞典語",
+			"es": "西班牙語"
+		}
+	}
+}

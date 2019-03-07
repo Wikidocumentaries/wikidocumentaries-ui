@@ -1,154 +1,153 @@
 {
-    "LandingPage": {
-        "search": "Search button text, currently not in use",
-        "searchInputPlaceHolder": "Search input field placeholder text"
-    },
-    "MainPage": {
-        "topicPageName": "Topic tab name, currently not in use",
-        "mapPlaceMatchPageName": "Place name matching tab name, currently not in use",
-        "mapSearchPageName": "Maps search tab name, currently not in use",
-        "wikiTopicErrorMessage": "Wikipedia page error message for, currently not in use",
-        "returnToHomeMessage": "Tooltip text for main site button"
-    },
-    "WaitPage": {
-        "waitMessage": "Main wait message for the topic page"
-    },
-    "topic_page": {
-        "BaseMapDialog": {
-            "chooseMapTitle": "Main title for the base map modal",
-            "chooseMapHelpNote": "Help text for the base map modal",
-            "yearAbbreviation": "Abbreviation for year in the base maps modal"
-        },
-        "HomePage": {
-        },
-        "Header": {
-            "titleEditText": "Help text for the main title edit field",
-            "titleApproveText": "Help text for approving the main title",
-            "subtitleEditText": "Help text for editing the main description",
-            "subtitleApproveText": "Help text for approving the main description"
-        },
-        "TopicImages": {
-            "headerTitle": "Main title for the Images section ",
-            "showImagesOnMapMenuText": "Menu item for showing images on the map",
-            "showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
-            "imagesActionMenu": {
-                "menuTitle": "Menu title for the Images Actions menu",
-                "menuTooltip": "Tooltip text for the Actions menu",
-                "doGeolocatingText": "Menu item for Geolocating",
-                "showImageText": "Menu item for showing the image"
-            },
-            "imagesRemoveMenu": {
-                "menuTitle": "Menu title for Remove menu",
-                "menuTooltip": "Tooltip fot the Remove menu",
-                "remDepicted": {
-                    "menuTitle": "Tooltip text for the Remove menu",
-                    "search": "Menu item for Search in the Remove menu",
-                    "browse": "Menu item for Browse in the Remove menu"
-                },
-                "remCreator": {
-                    "menuTitle": "Menu item for Other creator option in the Remove menu",
-                    "search": "Menu item for Search for other creator in the Remove menu",
-                    "browse": "Menu item for Browse other creators in the Remove menu"
-                },
-                "remInappropriate": {
-                    "menuTitle": "Menu title in the Inappropriate image menu",
-                    "privacy": "Menu item for a privacy violation in the Inappropriate image menu",
-                    "violence": "Menu item for a violence flag in the Inappropriate image menu",
-                    "sex": "Menu item for explicit sex in the Inappropriate image menu",
-                    "copyvio": "Menu item for copyright violation in the Inappropriate image menu",
-                    "explain": "Menu item for leaving a note in the Inappropriate image menu"
-                }
-            }
-        },
-        "TopicMap": {
-            "headerTitle": "Main title in the Map section",
-            "chooseHistoricalBasemapMenuText": "Menu item for choosing the historical base mao in the Map menu",
-            "hideImagesMenuText": "Menu item for hiding images in the Map menu",
-            "chooseTimelineMapsMenuText": "Menu item for choosing maps in the Map menu",
-            "showNearbyPlacesMenuText": "Menu item for showing nearby places in the Map menu",
-            "hideNearbyPlacesMenuText": "Menu item for hiding nearby places in the Map menu"
-        },
-        "TopicNewspapers": {
-            "headerTitle": "Main title in the Newspapers section",
-            "searhTopicFromArchivesMenuText": "Menu item for searching newspapers articles in the Newspapers section",
-            "addClipFromArchivesMenuText": "Menu item for adding a newspaper clipping in the Newspaper section"
-        },
-        "TopicTimeline": {
-            "headerTitle": "Main title in the Timeline section",
-            "showEventsOnTimelineMenuText": "Menu item for showing events in the Timeline section",
-            "centuryText": "Abbreviation for showing the Century in the Timeline section"
-        },
-        "Wikidata": {
-            "headerTitle": "Main title in the Data section",
-            "extLink": {
-                "linkTitleWD": "Tooltip for viewing in Wikidata in the Data section"
-            },
-            "noTopicFoundText": "Error message for content not found in the Data section"
-        },
-        "Wikipedia": {
-            "headerTitle": "Main title for the Article section",
-            "missingArticle": "Error message for a missing article in the Article section",
-            "extLink": {
-                "linkTitleWP": "Tooltip message for viewing an article in the Article section"
-            },
-            "addLink": {
-                "linkTitleWP": "Tooltip message for creating an article in the Article section"
-            },
-            "languageMenu": {
-                "menuTitle": "Menu title for the Article Language menu",
-                "translateArticleText": "Menu item for translating the article in the Article Language menu",
-                "otherLanguagestext": "Menu item for reading the article in another language in the Article Language menu"
-            }
-        },
-        "Gallery": {
-            "headerTitle": "Main title for the Gallery section",
-            "menuTitle": "Menu title for the Gallery menu",
-            "showBorn": "Menu item for people born in a place in the Gallery menu",
-            "showDied": "Menu item for people died in a place in the Gallery menu",
-            "showBuried": "Menu item for people buried in a place in the Gallery menu",
-            "showRelated": "Menu item for people related to a place in the Gallery menu",
-            "showAll": "All"
-        }
-    },
-    "map_place_match_page": {
-        "PlaceMatchSettings": {
-            "headerTitle": "Main title for a place match section, not in use currently"
-        }
-    },
-    "map_search_page": {
-        "HistoricalMapsSearch": {
-            "headerTitle": "Main title for a Map search",
-            "filterBySourceMenuText": "Menu item for Filter by source...",
-            "filterByTimeMenuText": "Menu item for Filter based on time...",
-            "filterByMapMenuText": "Menu item for Filter via map..."
-        }
-    },
-    "openlayersplugin": {
-        "WikimapsWarperLayer": {
-            "attribution1PrefixText": "Attribution prefix text for the Wikimaps Warper layer",
-            "attribution2PrefixText": "Attribution prefix text 2 for the Wikimaps Warper layer"
-        }
-    },
-    "menu": {
-        "TransparencySliderMenuItem": {
-            "transparencyLabel": "Menu item for Transparency of the historical base map"
-        }
-    },
-    "general": {
-        "ok": "OK - general button text",
-        "cancel": "Cancel - general nutton text",
-        "helpText": "Help - general text",
-        "menus": {
-            "actionMenuTitle": "Menu title for the Actions menu",
-            "actionMenuTooltip": "Tooptip text for the Actions menu",
-            "languageMenuTitle": "Menu title for the Language menu",
-            "myLanguagesItem": "Menu item for the My languages menu"
-        },
-        "languages": {
-            "fi": "Finnish language option",
-            "en": "English language option",
-            "sv": "Swedish language option",
-            "es": "Spanish language option"
-        }
-    }
+	"@metadata": [],
+	"LandingPage": {
+		"search": "Search button text, currently not in use",
+		"searchInputPlaceHolder": "Search input field placeholder text"
+	},
+	"MainPage": {
+		"topicPageName": "Topic tab name, currently not in use",
+		"mapPlaceMatchPageName": "Place name matching tab name, currently not in use",
+		"mapSearchPageName": "Maps search tab name, currently not in use",
+		"wikiTopicErrorMessage": "Wikipedia page error message for, currently not in use",
+		"returnToHomeMessage": "Tooltip text for main site button"
+	},
+	"WaitPage": {
+		"waitMessage": "Main wait message for the topic page"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Main title for the base map modal",
+			"chooseMapHelpNote": "Help text for the base map modal",
+			"yearAbbreviation": "Abbreviation for year in the base maps modal"
+		},
+		"Header": {
+			"titleEditText": "Help text for the main title edit field",
+			"titleApproveText": "Help text for approving the main title",
+			"subtitleEditText": "Help text for editing the main description",
+			"subtitleApproveText": "Help text for approving the main description"
+		},
+		"TopicImages": {
+			"headerTitle": "Main title for the Images section",
+			"showImagesOnMapMenuText": "Menu item for showing images on the map",
+			"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
+			"imagesActionMenu": {
+				"menuTitle": "Menu title for the Images Actions menu",
+				"menuTooltip": "Tooltip text for the Actions menu",
+				"doGeolocatingText": "Menu item for Geolocating",
+				"showImageText": "Menu item for showing the image"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Menu title for Remove menu",
+				"menuTooltip": "Tooltip fot the Remove menu",
+				"remDepicted": {
+					"menuTitle": "Tooltip text for the Remove menu",
+					"search": "Menu item for Search in the Remove menu",
+					"browse": "Menu item for Browse in the Remove menu"
+				},
+				"remCreator": {
+					"menuTitle": "Menu item for Other creator option in the Remove menu",
+					"search": "Menu item for Search for other creator in the Remove menu",
+					"browse": "Menu item for Browse other creators in the Remove menu"
+				},
+				"remInappropriate": {
+					"menuTitle": "Menu title in the Inappropriate image menu",
+					"privacy": "Menu item for a privacy violation in the Inappropriate image menu",
+					"violence": "Menu item for a violence flag in the Inappropriate image menu",
+					"sex": "Menu item for explicit sex in the Inappropriate image menu",
+					"copyvio": "Menu item for copyright violation in the Inappropriate image menu",
+					"explain": "Menu item for leaving a note in the Inappropriate image menu"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Main title in the Map section",
+			"chooseHistoricalBasemapMenuText": "Menu item for choosing the historical base mao in the Map menu",
+			"hideImagesMenuText": "Menu item for hiding images in the Map menu",
+			"chooseTimelineMapsMenuText": "Menu item for choosing maps in the Map menu",
+			"showNearbyPlacesMenuText": "Menu item for showing nearby places in the Map menu",
+			"hideNearbyPlacesMenuText": "Menu item for hiding nearby places in the Map menu"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Main title in the Newspapers section",
+			"searhTopicFromArchivesMenuText": "Menu item for searching newspapers articles in the Newspapers section",
+			"addClipFromArchivesMenuText": "Menu item for adding a newspaper clipping in the Newspaper section"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Main title in the Timeline section",
+			"showEventsOnTimelineMenuText": "Menu item for showing events in the Timeline section",
+			"centuryText": "Abbreviation for showing the Century in the Timeline section"
+		},
+		"Wikidata": {
+			"headerTitle": "Main title in the Data section",
+			"extLink": {
+				"linkTitleWD": "Tooltip for viewing in Wikidata in the Data section"
+			},
+			"noTopicFoundText": "Error message for content not found in the Data section"
+		},
+		"Wikipedia": {
+			"headerTitle": "Main title for the Article section",
+			"missingArticle": "Error message for a missing article in the Article section",
+			"extLink": {
+				"linkTitleWP": "Tooltip message for viewing an article in the Article section"
+			},
+			"addLink": {
+				"linkTitleWP": "Tooltip message for creating an article in the Article section"
+			},
+			"languageMenu": {
+				"menuTitle": "Menu title for the Article Language menu",
+				"translateArticleText": "Menu item for translating the article in the Article Language menu",
+				"otherLanguagestext": "Menu item for reading the article in another language in the Article Language menu"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Main title for the Gallery section",
+			"menuTitle": "Menu title for the Gallery menu",
+			"showBorn": "Menu item for people born in a place in the Gallery menu",
+			"showDied": "Menu item for people died in a place in the Gallery menu",
+			"showBuried": "Menu item for people buried in a place in the Gallery menu",
+			"showRelated": "Menu item for people related to a place in the Gallery menu",
+			"showAll": "All"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Main title for a place match section, not in use currently"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Main title for a Map search",
+			"filterBySourceMenuText": "Menu item for Filter by source...",
+			"filterByTimeMenuText": "Menu item for Filter based on time...",
+			"filterByMapMenuText": "Menu item for Filter via map..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Attribution prefix text for the Wikimaps Warper layer",
+			"attribution2PrefixText": "Attribution prefix text 2 for the Wikimaps Warper layer"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Menu item for Transparency of the historical base map"
+		}
+	},
+	"general": {
+		"ok": "OK - general button text",
+		"cancel": "Cancel - general nutton text",
+		"helpText": "Help - general text",
+		"menus": {
+			"actionMenuTitle": "Menu title for the Actions menu",
+			"actionMenuTooltip": "Tooptip text for the Actions menu",
+			"languageMenuTitle": "Menu title for the Language menu",
+			"myLanguagesItem": "Menu item for the My languages menu"
+		},
+		"languages": {
+			"fi": "Finnish language option",
+			"en": "English language option",
+			"sv": "Swedish language option",
+			"es": "Spanish language option"
+		}
+	}
 }
