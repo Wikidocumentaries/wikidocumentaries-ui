@@ -1,0 +1,104 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"LandingPage": {
+		"search": "Sichen"
+	},
+	"MainPage": {
+		"mapSearchPageName": "Kaarten duerchsichen"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"yearAbbreviation": "J."
+		},
+		"Header": {
+			"titleEditText": "Den Titel änneren",
+			"titleApproveText": "Dësen Titel akzeptéieren",
+			"subtitleEditText": "D'Beschreiwung änneren",
+			"subtitleApproveText": "Dës Beschreiwung akzeptéieren"
+		},
+		"TopicImages": {
+			"headerTitle": "Biller aus den Archiven",
+			"showImagesOnMapMenuText": "All Biller op der Kaart weisen",
+			"showImagesOnTimelineMenuText": "All Biller op dem Zäitplang weisen",
+			"imagesActionMenu": {
+				"menuTitle": "Aktiounen",
+				"menuTooltip": "Aktiounen",
+				"showImageText": "Bild weisen"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "D'Bild ewechhuele well...",
+				"menuTooltip": "D'Bild ewechhuelen"
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "Biller verstoppen",
+			"showNearbyPlacesMenuText": "Plazen nobäi weisen"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Chronologie",
+			"centuryText": "Jh"
+		},
+		"Wikidata": {
+			"headerTitle": "Fakten",
+			"extLink": {
+				"linkTitleWD": "Op Wikidata kucken oder änneren"
+			},
+			"noTopicFoundText": "Sujet net fonnt"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikel",
+			"extLink": {
+				"linkTitleWP": "Op Wikipedia liesen oder änneren"
+			},
+			"addLink": {
+				"linkTitleWP": "En Artikel op Wikipedia uleeën"
+			},
+			"languageMenu": {
+				"menuTitle": "Den Artikel an enger anerer Sprooch liesen",
+				"translateArticleText": "Iwwersetzt dësen Artikel an Är Sprooch",
+				"otherLanguagestext": "Aner Sproochen"
+			}
+		},
+		"Gallery": {
+			"menuTitle": "Weisen",
+			"showBorn": "Hei gebuer",
+			"showDied": "Hei gestuerwen",
+			"showBuried": "Hei begruewen",
+			"showRelated": "An enger anerer Relatioun",
+			"showAll": "All"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Nimm vu Plaze kombinéieren"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"filterBySourceMenuText": "No Quell filteren...",
+			"filterByTimeMenuText": "Nom Datum filteren...",
+			"filterByMapMenuText": "No der Kaart filteren..."
+		}
+	},
+	"general": {
+		"ok": "OK",
+		"cancel": "Ofbriechen",
+		"helpText": "Hëllef",
+		"menus": {
+			"actionMenuTitle": "Aktiounen",
+			"actionMenuTooltip": "Aktiounen",
+			"languageMenuTitle": "Sprooch eraussichen",
+			"myLanguagesItem": "Meng Sproochen"
+		},
+		"languages": {
+			"fi": "Finnesch",
+			"en": "Englesch",
+			"sv": "Schwedesch",
+			"es": "Spuenesch"
+		}
+	}
+}

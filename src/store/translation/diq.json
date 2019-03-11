@@ -7,40 +7,49 @@
 	},
 	"LandingPage": {
 		"search": "Cı geyre",
-		"searchInputPlaceHolder": "Mewzu bıvinê ya zi mewzuya newiye vırazê"
+		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze"
 	},
 	"MainPage": {
 		"topicPageName": "Pela mewzuyi",
-		"mapPlaceMatchPageName": "Cay namey kombine",
-		"mapSearchPageName": "Xerita cı geyre",
-		"returnToHomeMessage": "Peyser şo esaspele"
+		"mapPlaceMatchPageName": "Nameyanê cayan yew ke",
+		"mapSearchPageName": "Xeritan cı geyre",
+		"returnToHomeMessage": "Peyser şo pela akerdışi"
 	},
 	"topic_page": {
 		"BaseMapDialog": {
-			"chooseMapTitle": "Tarixi base xerita(y) weçine",
-			"chooseMapHelpNote": "Tip: ctrl+click weçinayışê zaf xerita da no.",
-			"yearAbbreviation": "S."
+			"chooseMapTitle": "Xeritanê tarixiyê bıngehınan weçine",
+			"chooseMapHelpNote": "Tip: ctrl+click weçinayışê zehf xeritan dano",
+			"yearAbbreviation": "s."
 		},
 		"Header": {
 			"titleEditText": "Sernameyi bıvurne",
-			"titleApproveText": "Nê sernamey tesdiq kerê",
+			"titleApproveText": "Nê sernameyi tesdiq ke",
 			"subtitleEditText": "Şınasiye bıvurne",
-			"subtitleApproveText": "Nê şınasnayışi tesdiq kerê"
+			"subtitleApproveText": "Nê şınasnayışi tesdiq ke"
 		},
 		"TopicImages": {
-			"headerTitle": "Arşiv ra resimi",
-			"showImagesOnMapMenuText": "Resima pêroyın xerita de bıvinê",
-			"showImagesOnTimelineMenuText": "Resima pêroyın timeline de bıvinê",
+			"headerTitle": "Arşivan ra resımi",
+			"showImagesOnMapMenuText": "Resıman pêro xerita de bımocne",
+			"showImagesOnTimelineMenuText": "Resıman pêro ustına wexti de bımocne",
 			"imagesActionMenu": {
 				"menuTitle": "Hereketi",
-				"menuTooltip": "Hereketi"
+				"menuTooltip": "Hereketi",
+				"showImageText": "Resım bımocne"
+			},
+			"imagesRemoveMenu": {
+				"menuTooltip": "Resımi wedare",
+				"remDepicted": {
+					"search": "Mewzu cı geyre"
+				}
 			}
 		},
 		"TopicMap": {
+			"chooseHistoricalBasemapMenuText": "Xeritanê tarixiyê bıngehınan weçine",
 			"hideImagesMenuText": "Resıman bınımne"
 		},
 		"TopicTimeline": {
-			"headerTitle": "Wareyê saete"
+			"headerTitle": "Wareyê saete",
+			"centuryText": "SS"
 		},
 		"Wikidata": {
 			"noTopicFoundText": "Mewzu nêvêniya"

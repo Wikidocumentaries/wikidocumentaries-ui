@@ -12,7 +12,11 @@
 		"topicPageName": "Tematska stranica",
 		"mapPlaceMatchPageName": "Pridruži imena mjesta",
 		"mapSearchPageName": "Pretraži mape",
+		"wikiTopicErrorMessage": "Nisam mogao pronaći stranicu za temu na Wikipediji na trenutnom jeziku, ili pak sam naišao na neočekivanu grešku.",
 		"returnToHomeMessage": "Nazad na početnu stranicu"
+	},
+	"WaitPage": {
+		"waitMessage": "Molimo pričekajte... Preuzimam podaci iz Wikipedije, Wikipodataka, Ostave, Map Warper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -38,10 +42,32 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Ukloni sliku jer...",
-				"menuTooltip": "Ukloni sliku"
+				"menuTooltip": "Ukloni sliku",
+				"remDepicted": {
+					"menuTitle": "Prikazuje ovu temu umjesto navedene",
+					"search": "Pretraži temu",
+					"browse": "Pregledaj povezane teme"
+				},
+				"remCreator": {
+					"menuTitle": "Je djelo ovog kreatora, umjesto navedenog",
+					"search": "Pretraži kreatora",
+					"browse": "Pregledaj povezane stvaraoce"
+				},
+				"remInappropriate": {
+					"menuTitle": "Neugodna jer",
+					"privacy": "Ona krši privatnost prikazane osobe",
+					"violence": "To pokazuje brutalno nasilje",
+					"sex": "Prikazuje očigledan spolni odnos",
+					"copyvio": "Krši autorska prava",
+					"explain": "Napišite pribelešku s objašnjenjem"
+				}
 			}
 		},
 		"TopicMap": {
+			"headerTitle": "Tema na mapi",
+			"chooseHistoricalBasemapMenuText": "Izaberite povijesne bazove karte...",
+			"hideImagesMenuText": "Sakrij slike",
+			"chooseTimelineMapsMenuText": "Izaberite vremesledne mape...",
 			"showNearbyPlacesMenuText": "Prikaži mjesta u blizini",
 			"hideNearbyPlacesMenuText": "Sakrij mjesta u blizini"
 		},
@@ -64,14 +90,32 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Članak",
+			"missingArticle": "Ova tema nema članak na srpskohrvatskom jeziku. Pogledajte u gornjem izborniku postoje li članci na drugim jezicima, ili pak stvorite članak klikom na znak plus.",
+			"extLink": {
+				"linkTitleWP": "Pročitaj ili uredi na Wikipediji"
+			},
+			"addLink": {
+				"linkTitleWP": "Napravi članak na Wikipediji"
+			},
 			"languageMenu": {
+				"menuTitle": "Pročitajte članak na drugom jeziku",
+				"translateArticleText": "Prevedite članak na svoj jezik",
 				"otherLanguagestext": "Drugi jezici"
 			}
 		},
 		"Gallery": {
 			"headerTitle": "Osobe povezane s ovom temom",
 			"menuTitle": "Prikaži",
+			"showBorn": "Rođeni ovdje",
+			"showDied": "Umrli su ovdje",
+			"showBuried": "Sahranjeni ovdje",
+			"showRelated": "Inače povezani",
 			"showAll": "Sve"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Pridruži imena mjesta"
 		}
 	},
 	"map_search_page": {
@@ -84,6 +128,7 @@
 	},
 	"openlayersplugin": {
 		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Za povijesnu baznu mapu pogledajte suptilne i autorskopravne podatke s",
 			"attribution2PrefixText": "Ispravljena mapa od"
 		}
 	},

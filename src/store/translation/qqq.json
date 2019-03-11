@@ -1,7 +1,11 @@
 {
-	"@metadata": [],
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
 	"LandingPage": {
-		"search": "Search button text, currently not in use",
+		"search": "Search button text, currently not in use\n{{Identical|Search}}",
 		"searchInputPlaceHolder": "Search input field placeholder text"
 	},
 	"MainPage": {
@@ -73,19 +77,19 @@
 			"addClipFromArchivesMenuText": "Menu item for adding a newspaper clipping in the Newspaper section"
 		},
 		"TopicTimeline": {
-			"headerTitle": "Main title in the Timeline section",
+			"headerTitle": "Main title in the Timeline section\n{{Identical|Timeline}}",
 			"showEventsOnTimelineMenuText": "Menu item for showing events in the Timeline section",
 			"centuryText": "Abbreviation for showing the Century in the Timeline section"
 		},
 		"Wikidata": {
-			"headerTitle": "Main title in the Data section",
+			"headerTitle": "Main title in the Data section\n{{Identical|Fact}}",
 			"extLink": {
 				"linkTitleWD": "Tooltip for viewing in Wikidata in the Data section"
 			},
 			"noTopicFoundText": "Error message for content not found in the Data section"
 		},
 		"Wikipedia": {
-			"headerTitle": "Main title for the Article section",
+			"headerTitle": "Main title for the Article section\n{{Identical|Article}}",
 			"missingArticle": "Error message for a missing article in the Article section",
 			"extLink": {
 				"linkTitleWP": "Tooltip message for viewing an article in the Article section"
@@ -101,12 +105,12 @@
 		},
 		"Gallery": {
 			"headerTitle": "Main title for the Gallery section",
-			"menuTitle": "Menu title for the Gallery menu",
+			"menuTitle": "Menu title for the Gallery menu\n{{Identical|Show}}",
 			"showBorn": "Menu item for people born in a place in the Gallery menu",
 			"showDied": "Menu item for people died in a place in the Gallery menu",
 			"showBuried": "Menu item for people buried in a place in the Gallery menu",
 			"showRelated": "Menu item for people related to a place in the Gallery menu",
-			"showAll": "All"
+			"showAll": "All\n{{Identical|all}}"
 		}
 	},
 	"map_place_match_page": {
@@ -134,12 +138,12 @@
 		}
 	},
 	"general": {
-		"ok": "OK - general button text",
-		"cancel": "Cancel - general nutton text",
-		"helpText": "Help - general text",
+		"ok": "OK - general button text\n{{Identical|OK}}",
+		"cancel": "Cancel - general button text\n{{Identical|Cancel}}",
+		"helpText": "Help - general text\n{{Identical|Help}}",
 		"menus": {
-			"actionMenuTitle": "Menu title for the Actions menu",
-			"actionMenuTooltip": "Tooptip text for the Actions menu",
+			"actionMenuTitle": "Menu title for the Actions menu\n{{Identical|Action}}",
+			"actionMenuTooltip": "Tooltip text for the Actions menu\n{{Identical|Action}}",
 			"languageMenuTitle": "Menu title for the Language menu",
 			"myLanguagesItem": "Menu item for the My languages menu"
 		},

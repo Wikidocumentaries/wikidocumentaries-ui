@@ -43,7 +43,8 @@
 			"showNearbyPlacesMenuText": "주변 장소 표시"
 		},
 		"TopicTimeline": {
-			"headerTitle": "타임라인"
+			"headerTitle": "타임라인",
+			"centuryText": "C"
 		},
 		"Wikidata": {
 			"extLink": {

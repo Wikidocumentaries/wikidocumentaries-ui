@@ -1,0 +1,157 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"LandingPage": {
+		"search": "Ara",
+		"searchInputPlaceHolder": "Bir konu bul veya yeni bir konu oluştur"
+	},
+	"MainPage": {
+		"topicPageName": "Konu sayfası",
+		"mapPlaceMatchPageName": "Yer isimlerini birleştir",
+		"mapSearchPageName": "Harita ara",
+		"wikiTopicErrorMessage": "Konu için bir Vikipedi sayfası mevcut dilde bulunamadı veya beklenmeyen bir hata oluştu.",
+		"returnToHomeMessage": "Açılış sayfasına dön"
+	},
+	"WaitPage": {
+		"waitMessage": "Bir dakika, lütfen... Vikipedi, Vikiveri, Wikimedia Commons, Map Warper, Finna, Flickr'dan veri alınıyor..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Tarihsel harita seç",
+			"chooseMapHelpNote": "İpucu: ctrl+click birçok harita seçmenize izin verir",
+			"yearAbbreviation": "y."
+		},
+		"Header": {
+			"titleEditText": "Başlığı düzenle",
+			"titleApproveText": "Bu başlığı onayla",
+			"subtitleEditText": "Açıklamayı düzenle",
+			"subtitleApproveText": "Bu açıklamayı onayla"
+		},
+		"TopicImages": {
+			"headerTitle": "Arşivden görüntüler",
+			"showImagesOnMapMenuText": "Tüm görüntüleri haritada göster",
+			"showImagesOnTimelineMenuText": "Tüm görüntüleri zaman çizelgesinde göster",
+			"imagesActionMenu": {
+				"menuTitle": "İşlemler",
+				"menuTooltip": "İşlemler",
+				"doGeolocatingText": "Konumu ayarla...",
+				"showImageText": "Görüntüyü göster"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Görüntüyü kaldır çünkü...",
+				"menuTooltip": "Bu görüntüyü kaldır",
+				"remDepicted": {
+					"menuTitle": "Bunun yerine bu konuyu gösteriyor",
+					"search": "Konu ara",
+					"browse": "İlgili konulara göz at"
+				},
+				"remCreator": {
+					"menuTitle": "Onun yerine oluşturanı tarafından",
+					"search": "Oluşturanı ara",
+					"browse": "İlgili aktörlere göz at"
+				},
+				"remInappropriate": {
+					"menuTitle": "Uygunsuz çünkü",
+					"privacy": "Tasvir edilenlerin gizliliğini ihlal ediyor",
+					"violence": "Aşırı şiddet içeriyor",
+					"sex": "Belirgin seks görüntüleri barındırıyor",
+					"copyvio": "Telif hakkını ihlal ediyor",
+					"explain": "Açıklamak için bir not bırakın"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Haritadaki konu",
+			"chooseHistoricalBasemapMenuText": "Tarihsel harita seç...",
+			"hideImagesMenuText": "Görüntüleri gizle",
+			"chooseTimelineMapsMenuText": "Zaman çizelgesi haritalarını seç...",
+			"showNearbyPlacesMenuText": "Yakındaki yerleri göster",
+			"hideNearbyPlacesMenuText": "Yakındaki yerleri gizle"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Gazete kupürleri",
+			"searhTopicFromArchivesMenuText": "Finlandiya Milli Kütüphanesi'ndeki gazetelerde arama yap",
+			"addClipFromArchivesMenuText": "Küpür ekle..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Zaman çizelgesi",
+			"showEventsOnTimelineMenuText": "Zaman çizelgesinde konu olaylarını göster",
+			"centuryText": "YY"
+		},
+		"Wikidata": {
+			"headerTitle": "Gerçekler",
+			"extLink": {
+				"linkTitleWD": "Vikiveri'de görüntüle veya düzenle"
+			},
+			"noTopicFoundText": "Konu bulunamadı"
+		},
+		"Wikipedia": {
+			"headerTitle": "Madde",
+			"missingArticle": "Bu konuyla ilgili İngilizce yazı bulunmamaktadır. Yukarıdaki dil menüsünde başka dillerde maddeler olup olmadığına bakın veya artı simgesine tıklayarak maddeyi oluşturun.",
+			"extLink": {
+				"linkTitleWP": "Vikipedi'de oku veya düzenle"
+			},
+			"addLink": {
+				"linkTitleWP": "Vikipedi'de bir madde oluştur"
+			},
+			"languageMenu": {
+				"menuTitle": "Maddeyi başka bir dilde oku",
+				"translateArticleText": "Bu maddeyi diline çevir",
+				"otherLanguagestext": "Diğer diller"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Konu ile ilgili kişiler",
+			"menuTitle": "Göster",
+			"showBorn": "Burada doğdu",
+			"showDied": "Burada öldü",
+			"showBuried": "Buraya gömüldü",
+			"showRelated": "Bunun dışında ilgili",
+			"showAll": "Hepsi"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Yer isimlerini birleştir"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Tarihsel haritalarda ara",
+			"filterBySourceMenuText": "Kaynağa göre filtrele...",
+			"filterByTimeMenuText": "Zamana göre filtrele...",
+			"filterByMapMenuText": "Harita üzerinden filtrele..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Tarihi haritalar için telif hakkı ve atıflara bak",
+			"attribution2PrefixText": "Rektifiye harita"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Tarihi haritanın şeffaflığı:"
+		}
+	},
+	"general": {
+		"ok": "Tamam",
+		"cancel": "İptal",
+		"helpText": "Yardım",
+		"menus": {
+			"actionMenuTitle": "İşlemler",
+			"actionMenuTooltip": "İşlemler",
+			"languageMenuTitle": "Dil seç",
+			"myLanguagesItem": "Dillerim"
+		},
+		"languages": {
+			"fi": "Fince",
+			"en": "İngilizce",
+			"sv": "İsveççe",
+			"es": "İspanyolca"
+		}
+	}
+}

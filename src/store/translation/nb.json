@@ -1,0 +1,60 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kingu"
+		]
+	},
+	"LandingPage": {
+		"search": "Søk",
+		"searchInputPlaceHolder": "Finn et emne eller start et nytt"
+	},
+	"MainPage": {
+		"topicPageName": "Emneside",
+		"mapPlaceMatchPageName": "Kombiner stedsnavn"
+	},
+	"topic_page": {
+		"TopicImages": {
+			"showImagesOnMapMenuText": "Vis alle bilder på kartet",
+			"imagesActionMenu": {
+				"menuTitle": "Handlinger",
+				"menuTooltip": "Handlinger",
+				"showImageText": "Vis bilde"
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "Tidslinje"
+		},
+		"Wikidata": {
+			"headerTitle": "Fakta"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikkel",
+			"languageMenu": {
+				"otherLanguagestext": "Andre språk"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Folk tilknyttet emnet",
+			"menuTitle": "Vis",
+			"showBorn": "Født her",
+			"showDied": "Døde her",
+			"showBuried": "Gravlagt her"
+		}
+	},
+	"general": {
+		"ok": "OK",
+		"cancel": "Avbryt",
+		"helpText": "Hjelp",
+		"menus": {
+			"actionMenuTitle": "Handlinger",
+			"actionMenuTooltip": "Handlinger",
+			"languageMenuTitle": "Velg språk",
+			"myLanguagesItem": "Mine språk"
+		},
+		"languages": {
+			"en": "Engelsk",
+			"sv": "Svensk",
+			"es": "Spansk"
+		}
+	}
+}
