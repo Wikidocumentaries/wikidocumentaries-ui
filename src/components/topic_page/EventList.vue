@@ -27,8 +27,7 @@ export default {
     name: 'EventList',
     data() {
         return {
-            results: [],
-            wikidataResults: [],
+            results: []
         };
     },
     mounted() {
@@ -111,7 +110,7 @@ export default {
             }
           }
           ORDER BY ?time
-        `; // .replace(/Q170068/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q170068/g, this.$store.state.wikidocumentaries.wikidataId);
 
         } else {
           sparql = `
@@ -199,7 +198,7 @@ export default {
             .get(url)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
-            
+
 
 
 //         const wikidataSparql = `
