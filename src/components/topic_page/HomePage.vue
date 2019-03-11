@@ -1,12 +1,13 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div class="row"> 
+    <div class="row">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <!--div class="divider"></div-->
       <WikidataItem class="column two"></WikidataItem>
     </div>
-    <SampoGallery></SampoGallery>
+    <!-- <SampoGallery></SampoGallery> -->
+    <EventList></EventList>
     <!--div class="haze"></div-->
     <!--Gallery id="gallery"></Gallery-->
     <TopicMap id="topicMap"></TopicMap>
@@ -24,7 +25,8 @@ import WikidataItem from '@/components/topic_page/Wikidata'
 import TopicMap from '@/components/topic_page/TopicMap'
 import TopicImages from '@/components/topic_page/TopicImages'
 import TopicTimeline from '@/components/topic_page/TopicTimeline'
-import SampoGallery from '@/components/topic_page/SampoGallery'
+// import SampoGallery from '@/components/topic_page/SampoGallery'
+import EventList from '@/components/topic_page/EventList'
 //import Gallery from '@/components/topic_page/Gallery'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
@@ -43,7 +45,8 @@ export default {
         TopicMap,
         TopicImages,
         TopicTimeline,
-        SampoGallery,
+        // SampoGallery,
+        EventList,
         //Gallery
         //TopicNewspapers
     },
