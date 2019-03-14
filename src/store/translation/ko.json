@@ -22,6 +22,8 @@
 		},
 		"TopicImages": {
 			"imagesActionMenu": {
+				"menuTitle": "동작",
+				"menuTooltip": "동작",
 				"doGeolocatingText": "위치 설정...",
 				"showImageText": "이미지 표시"
 			},
@@ -34,13 +36,17 @@
 				},
 				"remCreator": {
 					"search": "만든이 검색"
+				},
+				"remInappropriate": {
+					"menuTitle": "부적절한 이유:"
 				}
 			}
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "이미지 숨기기",
 			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
-			"showNearbyPlacesMenuText": "주변 장소 표시"
+			"showNearbyPlacesMenuText": "주변 장소 표시",
+			"hideNearbyPlacesMenuText": "주변 장소 숨기기"
 		},
 		"TopicTimeline": {
 			"headerTitle": "타임라인",
@@ -82,6 +88,8 @@
 		"cancel": "취소",
 		"helpText": "도움말",
 		"menus": {
+			"actionMenuTitle": "동작",
+			"actionMenuTooltip": "동작",
 			"languageMenuTitle": "언어 선택",
 			"myLanguagesItem": "내 언어"
 		},

@@ -17,7 +17,7 @@
 		"returnToHomeMessage": "Retour à la page d’accueil"
 	},
 	"WaitPage": {
-		"waitMessage": "Un moment, SVP… Récupération des données depuis Wikipédia, Wikidata, Wikimédia Communs, Map Warper, Finna, Flickr…"
+		"waitMessage": "Un moment, svp… Récupération des données depuis Wikipédia, Wikidata, Wikimédia Communs, Map Warper, Finna, Flickr…"
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -32,9 +32,9 @@
 			"subtitleApproveText": "Approuver cette description"
 		},
 		"TopicImages": {
-			"headerTitle": "Images des archives",
+			"headerTitle": "Images d'archives",
 			"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
-			"showImagesOnTimelineMenuText": "Afficher toutes les images sur la ligne temporelle",
+			"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
 			"imagesActionMenu": {
 				"menuTitle": "Actions",
 				"menuTooltip": "Actions",

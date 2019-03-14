@@ -34,12 +34,21 @@
 			"imagesActionMenu": {
 				"menuTitle": "Hereketi",
 				"menuTooltip": "Hereketi",
+				"doGeolocatingText": "Lokasyoni eyar ke...",
 				"showImageText": "Resım bımocne"
 			},
 			"imagesRemoveMenu": {
+				"menuTitle": "Resımi wedare, çıke...",
 				"menuTooltip": "Resımi wedare",
 				"remDepicted": {
 					"search": "Mewzu cı geyre"
+				},
+				"remCreator": {
+					"search": "Vıraştoği cı geyre",
+					"browse": "Çım berze ra aktoranê eleqayınan"
+				},
+				"remInappropriate": {
+					"menuTitle": "Hewl niyo, çıke"
 				}
 			}
 		},
@@ -52,17 +61,52 @@
 			"centuryText": "SS"
 		},
 		"Wikidata": {
+			"headerTitle": "Raşti",
+			"extLink": {
+				"linkTitleWD": "Wikidata de bıvêne ya zi bıvurne"
+			},
 			"noTopicFoundText": "Mewzu nêvêniya"
 		},
 		"Wikipedia": {
 			"headerTitle": "Meqale",
+			"extLink": {
+				"linkTitleWP": "Wikipediya de bıwane ya zi bıvurne"
+			},
+			"addLink": {
+				"linkTitleWP": "Wikipediya de yew meqale vıraze"
+			},
 			"languageMenu": {
+				"menuTitle": "Meqaleyi yewna zıwan de bıwane",
+				"translateArticleText": "Nê meqaleyi bıçarne ra zıwanê xo",
 				"otherLanguagestext": "Zıwanê bini"
 			}
 		},
 		"Gallery": {
+			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
 			"menuTitle": "Bımocne",
+			"showBorn": "Tiya ameyo dınya",
+			"showDied": "Tiya merdo",
+			"showBuried": "Tiya dardo we",
+			"showRelated": "Maneyo bin",
 			"showAll": "Pêro"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Cayê nameyan yew ke"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Xeritaya tarixiye de cı geyre",
+			"filterBySourceMenuText": "Goreyê çımeyi parzûn ke...",
+			"filterByTimeMenuText": "Goreyê zemani parzûn ke...",
+			"filterByMapMenuText": "Xerita sero parzûn ke..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution2PrefixText": "Xeritaya rektifiye"
 		}
 	},
 	"general": {
