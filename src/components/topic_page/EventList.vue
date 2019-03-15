@@ -58,7 +58,7 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 SELECT ?time ?event ?relation ?description ?ref1 ?ref2
 WHERE { { SERVICE wikidata: {
-SELECT (CONCAT(MIN(?time), "-", MAX(?time)) AS ?time) ?event
+SELECT (GROUP_CONCAT(DISTINCT ?time;separator="-") AS ?time) ?event
 (SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?description;separator="; ") AS ?description)
 (SAMPLE(?ref1) AS ?ref1) WHERE {
 SELECT DISTINCT ?time ?event ?relation ?description ?ref1 WHERE {
@@ -115,7 +115,7 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 SELECT ?time ?event ?relation ?description ?ref1 ?ref2
 WHERE { {
 SERVICE wikidata: {
-SELECT (CONCAT(MIN(?time), "-", MAX(?time)) AS ?time) ?event
+SELECT (GROUP_CONCAT(DISTINCT ?time;separator="-") AS ?time) ?event
 (SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?description;separator="; ") AS ?description)
 (SAMPLE(?ref1) AS ?ref1) WHERE {
 SELECT DISTINCT ?time ?event ?relation ?description ?ref1 WHERE {
