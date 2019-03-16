@@ -4,7 +4,7 @@
             <div class="modal-wrapper">
                 <div class="modal-container" @click.stop>
                     <div class="modal-header">
-                        <h3 class="modal-header-h3">{{ $t('topic_page.BaseMapDialog.chooseMapTitle') }}</h3>
+                        <div class="modal-header-title">{{ $t('topic_page.BaseMapDialog.chooseMapTitle') }}</div>
                         <p>{{ $t('topic_page.BaseMapDialog.chooseMapHelpNote') }}</p>
                     </div>
                     <div class="modal-body">
@@ -198,7 +198,7 @@ export default {
   width: 90%;
   height: 90%;
   margin: 0px auto;
-  padding: 0px 30px 20px 30px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: var(--main-shadow);
@@ -210,16 +210,12 @@ export default {
 }
 
 .modal-header {
-    padding: 6px 12px;
     flex-wrap: wrap;
-    font-family: 'Barlow Condensed', sans-serif;
-    color: #8e8e8e;
 }
 
-.modal-header-h3 {
-    text-transform: uppercase;
-    font-size: 1.4em;
-    font-weight: bold;
+.modal-header-title {
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
 .modal-body {
