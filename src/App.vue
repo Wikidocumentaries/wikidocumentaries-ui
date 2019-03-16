@@ -75,6 +75,10 @@ a:hover {
 	outline: 0;
 }
 
+.extlink {
+  filter: brightness(90%);
+}
+
 .title {
     font-size: var(--title-font-size);
     font-weight: bold;
@@ -88,7 +92,6 @@ a:hover {
     font-size: var(--subtitle-font-size);
     font-weight: bold;
     line-height: 1.2em;
-    margin: 3px 0.2em 0 0;
     position: relative;
     /*cursor: pointer;*/
 }
@@ -110,7 +113,6 @@ a:hover {
 }
 
 .button-ok, .button-cancel {
-  font-weight: bold;
   min-width: 120px;
   margin-left: 10px;
   min-height: 35px;
@@ -120,6 +122,8 @@ a:hover {
   border-radius: 2px;
   cursor: pointer;
   box-sizing: border-box;
+  border: none;
+  font-size: var(--main-font-size);
 }
 
 .button-ok {
@@ -134,6 +138,10 @@ a:hover {
 
 .button-cancel:hover {
   border: 1px solid var(--main-blue);
+}
+
+.button-ok:hover {
+  filter: brightness(110%);
 }
 
  .toolbar {
@@ -295,7 +303,6 @@ a:hover {
 
 .text {
 	padding-left:20px;
-  vertical-align: text-bottom;
 }
 
 .text p {
@@ -342,6 +349,7 @@ i.wikiglyph {
 
 .thumb-image-info {
     position: absolute;
+    font-size: 0.95em;
     bottom: 0;
     background: rgb(0, 0, 0); /* fallback color */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
