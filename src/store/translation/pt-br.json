@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eduardo Addad de Oliveira"
+			"Eduardo Addad de Oliveira",
+			"Fitoschido"
 		]
 	},
 	"LandingPage": {
@@ -22,7 +23,7 @@
 		"BaseMapDialog": {
 			"chooseMapTitle": "Escolha o(s) mapa(s) de base histórico",
 			"chooseMapHelpNote": "Dica: ctrl+ clique permite selecionar muitos mapas",
-			"yearAbbreviation": "y."
+			"yearAbbreviation": "a."
 		},
 		"Header": {
 			"titleEditText": "Editar o título",

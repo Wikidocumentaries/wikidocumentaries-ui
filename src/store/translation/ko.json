@@ -5,7 +5,8 @@
 		]
 	},
 	"LandingPage": {
-		"search": "검색"
+		"search": "검색",
+		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기"
 	},
 	"MainPage": {
 		"topicPageName": "주제 문서",
@@ -13,14 +14,18 @@
 	},
 	"topic_page": {
 		"BaseMapDialog": {
+			"chooseMapHelpNote": "팁: Ctrl+클릭을 통해 다수의 지도를 선택할 수 있습니다",
 			"yearAbbreviation": "y."
 		},
 		"Header": {
 			"titleEditText": "제목 편집",
 			"titleApproveText": "이 제목 승인",
-			"subtitleEditText": "설명 편집"
+			"subtitleEditText": "설명 편집",
+			"subtitleApproveText": "이 설명을 승인합니다"
 		},
 		"TopicImages": {
+			"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
+			"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
 			"imagesActionMenu": {
 				"menuTitle": "동작",
 				"menuTooltip": "동작",
@@ -63,7 +68,11 @@
 			"extLink": {
 				"linkTitleWP": "위키백과에서 읽기 또는 편집"
 			},
+			"addLink": {
+				"linkTitleWP": "위키백과에 문서 만들기"
+			},
 			"languageMenu": {
+				"menuTitle": "다른 언어로 문서 읽기",
 				"translateArticleText": "이 문서를 내 언어로 번역하기",
 				"otherLanguagestext": "다른 언어"
 			}

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Susannaanas"
+			"Susannaanas",
+			"Fitoschido"
 		]
 	},
 	"LandingPage": {
@@ -22,7 +23,7 @@
 		"BaseMapDialog": {
 			"chooseMapTitle": "Elige uno o varios mapas históricos de base",
 			"chooseMapHelpNote": "Tip: ctrl+click permite seleccionar varios mapas",
-			"yearAbbreviation": "y."
+			"yearAbbreviation": "a."
 		},
 		"Header": {
 			"titleEditText": "Editar el título",
@@ -51,14 +52,14 @@
 				"remCreator": {
 					"menuTitle": "Es por este creador en cambio",
 					"search": "Buscar el creador",
-					"browse": "Explorar el relacionó actores"
+					"browse": "Explorar los actores relacionados"
 				},
 				"remInappropriate": {
 					"menuTitle": "Es inapropiado porque",
 					"privacy": "Viola la intimidad del descrito",
 					"violence": "Muestra violencia extrema",
 					"sex": "Muestra sexo explícito",
-					"copyvio": "Viola copyright",
+					"copyvio": "Viola los derechos de autor",
 					"explain": "Dejar una nota para explicar"
 				}
 			}
@@ -84,7 +85,7 @@
 		"Wikidata": {
 			"headerTitle": "Datos",
 			"extLink": {
-				"linkTitleWD": "Vista o editar en Wikidata"
+				"linkTitleWD": "Ver o editar en Wikidata"
 			},
 			"noTopicFoundText": "Tema no encontrando"
 		},
@@ -92,23 +93,24 @@
 			"headerTitle": "Artículo",
 			"missingArticle": "No hay ningún artículo sobre este tema en español. Ver si hay artículos en otras lenguas en la carta de lengua encima, o crear el artículo por clicking en el plus-icono.",
 			"extLink": {
-				"linkTitleWP": "Leído o editar en Wikipedia"
+				"linkTitleWP": "Leer o editar en Wikipedia"
 			},
 			"addLink": {
 				"linkTitleWP": "Crear un artículo en Wikipedia"
 			},
 			"languageMenu": {
-				"menuTitle": "Leído el artículo en otra lengua",
+				"menuTitle": "Leer el artículo en otra lengua",
 				"translateArticleText": "Traducir este artículo a vuestra lengua",
 				"otherLanguagestext": "Otros idiomas"
 			}
 		},
 		"Gallery": {
-			"headerTitle": "Las personas relacionaron al tema",
+			"headerTitle": "Personas relacionadas al tema",
 			"menuTitle": "Mostrar",
 			"showBorn": "Nacido aquí",
 			"showDied": "Muerto aquí",
 			"showBuried": "Enterrado aquí",
+			"showRelated": "Relacionados de otra manera",
 			"showAll": "Todas"
 		}
 	},
@@ -137,7 +139,7 @@
 		}
 	},
 	"general": {
-		"ok": "OK",
+		"ok": "Aceptar",
 		"cancel": "Cancelar",
 		"helpText": "Ayuda",
 		"menus": {
