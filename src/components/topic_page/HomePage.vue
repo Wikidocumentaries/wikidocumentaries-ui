@@ -9,7 +9,8 @@
     <!-- <SampoGallery></SampoGallery> -->
     <EventList></EventList>
     <!--div class="haze"></div-->
-    <!--Gallery id="gallery"></Gallery-->
+    <People id="people"></People>
+    <Works id="works"></Works>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
@@ -27,7 +28,8 @@ import TopicImages from '@/components/topic_page/TopicImages'
 import TopicTimeline from '@/components/topic_page/TopicTimeline'
 // import SampoGallery from '@/components/topic_page/SampoGallery'
 import EventList from '@/components/topic_page/EventList'
-//import Gallery from '@/components/topic_page/Gallery'
+import Works from '@/components/topic_page/Works'
+import People from '@/components/topic_page/People'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -47,7 +49,8 @@ export default {
         TopicTimeline,
         // SampoGallery,
         EventList,
-        //Gallery
+        Works,
+        People
         //TopicNewspapers
     },
     computed: {

@@ -111,7 +111,40 @@
 			"showBuried": "Menu item for people buried in a place in the Gallery menu",
 			"showRelated": "Menu item for people related to a place in the Gallery menu",
 			"showAll": "All\n{{Identical|all}}"
-		}
+		},
+        "Works": {
+            "headerTitle": "Main title of the Works section",
+            "sortMenuTitle": "Menu title of the sort menu",
+            "sortMenuTooltip": "Tooltip of the sort menu",
+            "sortMenuOptionTime": "Menu item for sorting by time",
+            "sortMenuOptionAlpha": "Menu item for sorting alphabetically",
+            "sortMenuOptionDist": "Menu item for sorting by distance",
+            "sortMenuOptionRev": "Menu item for reversing the current sort order",
+            "sortMenuOptionClear": "Menu item for clearing the current sort order",
+            "facetMenuTitle": "Menu title of the Facet menu",
+            "facetMenuOptionType": "Menu item for faceting by type",
+            "facetMenuOptionColl": "Menu item for faceting by collection",
+            "facetMenuOptionCity": "Menu item for faceting by city",
+            "displayMenuTitle": "Menu title of the Display menu",
+            "displayMenuOptionGallery": "Menu option for displaying as gallery",
+            "displayMenuOptionList": "Menu option for displaying as list",
+            "showAll": "Option to clear all filters and showing all items"
+        },
+        "People": {
+            "headerTitle": "Main title of the People section",
+            "sortMenuTitle": "Menu title of the sort menu",
+            "sortMenuTooltip": "Tooltip of the sort menu",
+            "sortMenuOptionBirth": "Menu item for sorting by birth date",
+            "sortMenuOptionDeath": "Menu item for sorting by death date",
+            "sortMenuOptionFirst": "Manu item for sorting by first name",
+            "sortMenuOptionLast": "Menu item for sorting by last name",
+            "sortMenuOptionRev": "Menu item for reversing the current sort order",
+            "sortMenuOptionClear": "Menu item for clearing the current sort order",
+            "facetMenuTitle": "Menu title of the Facet menu in the People component",
+            "facetMenuOptionProfession": "Menu item for faceting by profession",
+            "facetMenuOptionCountry": "Menu item for faceting by country",
+            "facetMenuOptionCity": "Menu item for faceting by gender"
+        }
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

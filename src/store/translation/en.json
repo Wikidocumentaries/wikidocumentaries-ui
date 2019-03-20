@@ -108,6 +108,39 @@
             "showBuried": "Buried here",
             "showRelated": "Related otherwise",
             "showAll": "All"
+        },
+        "Works": {
+            "headerTitle": "Works",
+            "sortMenuTitle": "Sort",
+            "sortMenuTooltip": "Sort items",
+            "sortMenuOptionTime": "By time",
+            "sortMenuOptionAlpha": "Alphabetically",
+            "sortMenuOptionDist": "By distance",
+            "sortMenuOptionRev": "Reverse sort",
+            "sortMenuOptionClear": "Clear sort",
+            "facetMenuTitle": "Facet by",
+            "facetMenuOptionType": "Type",
+            "facetMenuOptionColl": "Collection",
+            "facetMenuOptionCity": "City",
+            "displayMenuTitle": "Display as",
+            "displayMenuOptionGallery": "Gallery",
+            "displayMenuOptionList": "List",
+            "showAll": "All"
+        },
+        "People": {
+            "headerTitle": "People related to the topic",
+            "sortMenuTitle": "Sort",
+            "sortMenuTooltip": "Change the sort order",
+            "sortMenuOptionBirth": "By birth date",
+            "sortMenuOptionDeath": "By death date",
+            "sortMenuOptionFirst": "By first name",
+            "sortMenuOptionLast": "By last name",
+            "sortMenuOptionRev": "Reverse sort order",
+            "sortMenuOptionClear": "Clear sort",
+            "facetMenuTitle": "Facet by",
+            "facetMenuOptionProfession": "Profession",
+            "facetMenuOptionCountry": "Country",
+            "facetMenuOptionCity": "Gender"
         }
     },
     "map_place_match_page": {
