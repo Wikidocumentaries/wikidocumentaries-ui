@@ -7,11 +7,10 @@
                 <div slot="menu-title">{{ $t('topic_page.Works.sortMenuTitle') }}</div>
             </ToolbarMenu-->
         </div>
-        <div class="gallery">
+        <div v-if="imageitems.length" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in results" :key="item.id" :to="item.work.value" class="gallery-item">
-                <img v-if="item.image" :src="item.image" class="gallery-image"/>
-                <div v-else class="noimage"></div>
+            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="item.work.value" class="gallery-item">
+                <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.work.label }}</div>
                     <div class="thumb-credit">{{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}</div>
@@ -25,6 +24,11 @@
                     </div>
                 </div>
             </router-link>
+        </div>
+        <div v-else class="list">
+            <a :href="item.work.value"  v-for="item in results" :key="item.id" class="listrow">
+            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}
+            </a>
         </div>
 	</div>
 </div>
@@ -115,11 +119,11 @@ ORDER BY ?creation_date ?publishing_date
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
         },
-        // withImage () {
-        //     return this.results.filter(function(i) {
-        //         return i.image
-        //     },
-        // }
+        imageitems: function() {
+            return this.results.filter(function(u) {
+                return u.image;
+            })
+        }
     },
     watch: {
     },
@@ -204,6 +208,10 @@ ORDER BY ?creation_date ?publishing_date
     background: var(--main-modal-color);
     height: 35vh;
     width: 150px;
+}
+
+.listrow {
+    margin-left:20px;
 }
 
 </style>

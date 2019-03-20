@@ -7,10 +7,9 @@
       <WikidataItem class="column two"></WikidataItem>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
-    <EventList></EventList>
-    <!--div class="haze"></div-->
     <People id="people"></People>
     <Works id="works"></Works>
+    <EventList></EventList>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
     <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
@@ -102,14 +101,6 @@ export default {
     width: 1px;
     margin: 6px 0;
     background: rgb(0, 0, 0);
-}
-
-.haze {
-    position: absolute;
-    background: white;
-    width: 100%;
-    height: 10vh;
-    bottom: 0;
 }
 
 </style>

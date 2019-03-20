@@ -105,7 +105,7 @@ SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?
     OPTIONAL { ?person wdt:P27 ?country. 
               ?country wdt:P1549 ?nationality .
               FILTER(LANG(?nationality)="fi") }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,es,it,ca". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
 GROUP BY ?person ?personLabel ?nationality
