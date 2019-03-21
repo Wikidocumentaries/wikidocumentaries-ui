@@ -112,6 +112,39 @@
 			"showBuried": "دُفِن هنا",
 			"showRelated": "ذو صلة خلاف ذلك",
 			"showAll": "الكل"
+		},
+		"Works": {
+			"headerTitle": "الأعمال",
+			"sortMenuTitle": "الترتيب",
+			"sortMenuTooltip": "فرز العناصر",
+			"sortMenuOptionTime": "حسب الوقت",
+			"sortMenuOptionAlpha": "أبجديا",
+			"sortMenuOptionDist": "حسب المسافة",
+			"sortMenuOptionRev": "عكس النوع",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuOptionType": "النوع",
+			"facetMenuOptionColl": "المجموعة",
+			"facetMenuOptionCity": "المدينة",
+			"displayMenuTitle": "العرض",
+			"displayMenuOptionGallery": "معرض",
+			"displayMenuOptionList": "قائمة",
+			"showAll": "الكل"
+		},
+		"People": {
+			"headerTitle": "أشخاص مرتبطون بالموضوع",
+			"sortMenuTitle": "ترتيب",
+			"sortMenuTooltip": "تغيير ترتيب الفرز",
+			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
+			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
+			"sortMenuOptionFirst": "حسب الاسم الأول",
+			"sortMenuOptionLast": "حسب الاسم الأخير",
+			"sortMenuOptionRev": "عكس الترتيب",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuOptionProfession": "المهنة",
+			"facetMenuOptionCountry": "البلد",
+			"facetMenuOptionCity": "الجنس"
 		}
 	},
 	"map_place_match_page": {

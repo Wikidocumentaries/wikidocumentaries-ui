@@ -89,6 +89,15 @@
 			"showBuried": "Tiya dardo we",
 			"showRelated": "Maneyo bin",
 			"showAll": "Pêro"
+		},
+		"Works": {
+			"sortMenuOptionAlpha": "Alfabetik",
+			"facetMenuOptionCity": "Sûke",
+			"showAll": "Pêro"
+		},
+		"People": {
+			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
+			"facetMenuOptionCity": "Cınsiyet"
 		}
 	},
 	"map_place_match_page": {

@@ -9,10 +9,10 @@
 		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne"
 	},
 	"MainPage": {
-		"topicPageName": "Ämne",
+		"topicPageName": "Ämnesida",
 		"mapPlaceMatchPageName": "Koppla platsnamn",
 		"mapSearchPageName": "Sök kartor",
-		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia artikel on ämnet i valt språk eller en annan oförutsett fel.",
+		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia artikel om ämnet i valt språk eller en annan oförutsett fel.",
 		"returnToHomeMessage": "Tillbaka till hemsidan"
 	},
 	"WaitPage": {
@@ -26,43 +26,54 @@
 		},
 		"Header": {
 			"titleEditText": "Rediger titeln",
-			"titleApproveText": "Approve this title",
+			"titleApproveText": "Godkänn denna titel",
 			"subtitleEditText": "Redigera beskrivningen",
-			"subtitleApproveText": "Approve this description"
+			"subtitleApproveText": "Godkänn denna beskrivning"
 		},
 		"TopicImages": {
-			"headerTitle": "Bilder från arkiver",
+			"headerTitle": "Bilder från arkiven",
 			"showImagesOnMapMenuText": "Visa alla bilder på kartan",
-			"showImagesOnTimelineMenuText": "Visa alla bilder i tidslinjen",
+			"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
 			"imagesActionMenu": {
 				"menuTitle": "Åtgärder",
 				"menuTooltip": "Åtgärder",
-				"doGeolocatingText": "Sätta plats...",
+				"doGeolocatingText": "Ange platsen...",
 				"showImageText": "Visa bilden"
 			},
 			"imagesRemoveMenu": {
-				"menuTitle": "Avlägsna bilden ty...",
+				"menuTitle": "Ta bort bilden eftersom...",
 				"menuTooltip": "Ta bort bilden",
 				"remDepicted": {
-					"search": "Sök efter ett ämnet"
+					"menuTitle": "Det visar istället detta ämne",
+					"search": "Sök efter ämnet",
+					"browse": "Bläddra i relaterade ämnen"
 				},
 				"remCreator": {
+					"menuTitle": "Det är av den här skaparen istället",
 					"search": "Sök efter skaparen"
+				},
+				"remInappropriate": {
+					"menuTitle": "Den är olämplig eftersom",
+					"privacy": "Den bryter mot den avbildade personens integritet",
+					"violence": "Den visar extremt våld",
+					"sex": "Den visar explicit sex",
+					"copyvio": "Den bryter mot upphovsrätten",
+					"explain": "Lämna en anteckning för att förklara"
 				}
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Plats på kartan",
 			"chooseHistoricalBasemapMenuText": "Välj historisk baskarta eller baskartor...",
-			"hideImagesMenuText": "Göm bilder",
-			"chooseTimelineMapsMenuText": "Välj kartor till tidslinjen...",
+			"hideImagesMenuText": "Dölj bilder",
+			"chooseTimelineMapsMenuText": "Välj tidslinjekartor ...",
 			"showNearbyPlacesMenuText": "Visa närliggande platser",
-			"hideNearbyPlacesMenuText": "Göm närliggande platser"
+			"hideNearbyPlacesMenuText": "Dölj platser i närheten"
 		},
 		"TopicNewspapers": {
-			"headerTitle": "Pressklipp",
-			"searhTopicFromArchivesMenuText": "Sök ämnen i Nationalbibliotekets digitala samlingar",
-			"addClipFromArchivesMenuText": "Lägg till en klippning..."
+			"headerTitle": "Tidningar",
+			"searhTopicFromArchivesMenuText": "Sök från tidningarna i Finlands nationalbibliotek",
+			"addClipFromArchivesMenuText": "Lägg till klippning ..."
 		},
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje",
@@ -72,29 +83,32 @@
 		"Wikidata": {
 			"headerTitle": "Fakta",
 			"extLink": {
-				"linkTitleWD": "View or edit in Wikidata"
+				"linkTitleWD": "Visa eller redigera i Wikidata"
 			},
-			"noTopicFoundText": "Ämnet hittades inte"
+			"noTopicFoundText": "Ämne inte hittat"
 		},
 		"Wikipedia": {
-			"headerTitle": "Artikeln",
-			"missingArticle": "There is no article about this topic in your language. Try another language in the language menu above or create the article.",
+			"headerTitle": "Artikel",
+			"missingArticle": "Det finns ingen artikel om detta ämne på engelska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
 			"extLink": {
-				"linkTitleWP": "Read or edit in Wikipedia"
+				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
 			"addLink": {
-				"linkTitleWP": "Create an article in Wikipedia"
+				"linkTitleWP": "Skapa en artikel i Wikipedia"
 			},
 			"languageMenu": {
-				"menuTitle": "Read the article in another language",
-				"translateArticleText": "Translate this article to your language",
-				"otherLanguagestext": "Other languages"
+				"menuTitle": "Läs artikeln på ett annat språk",
+				"translateArticleText": "Översätt denna artikel till ditt språk",
+				"otherLanguagestext": "Andra språk"
 			}
 		},
 		"Gallery": {
+			"headerTitle": "Människor relaterade till ämnet",
 			"menuTitle": "Visa",
 			"showBorn": "Född här",
-			"showBuried": "Begravit hit",
+			"showDied": "Död här",
+			"showBuried": "Begravd här",
+			"showRelated": "Relaterat annars",
 			"showAll": "Alla"
 		}
 	},
@@ -107,19 +121,19 @@
 		"HistoricalMapsSearch": {
 			"headerTitle": "Sök historiska kartor",
 			"filterBySourceMenuText": "Gränsa per källa...",
-			"filterByTimeMenuText": "Gränsa per tidspunkt...",
+			"filterByTimeMenuText": "Gränsa baserat på tid...",
 			"filterByMapMenuText": "Gränsa sökningsareal på kartan..."
 		}
 	},
 	"openlayersplugin": {
 		"WikimapsWarperLayer": {
 			"attribution1PrefixText": "Källa och licensiering för historiska kartan:",
-			"attribution2PrefixText": "Rektifieringen:"
+			"attribution2PrefixText": "Rektifierad karta från"
 		}
 	},
 	"menu": {
 		"TransparencySliderMenuItem": {
-			"transparencyLabel": "Transparens av historiska kartan:"
+			"transparencyLabel": "Transparens av den historiska baskartan:"
 		}
 	},
 	"general": {
@@ -127,16 +141,16 @@
 		"cancel": "Avbryt",
 		"helpText": "Hjälp",
 		"menus": {
-			"actionMenuTitle": "Funktioner",
+			"actionMenuTitle": "Åtgärder",
 			"actionMenuTooltip": "Åtgärder",
 			"languageMenuTitle": "Välj språk",
 			"myLanguagesItem": "Mina språk"
 		},
 		"languages": {
 			"fi": "finska",
-			"en": "engelska",
+			"en": "engelsk",
 			"sv": "svenska",
-			"es": "spanska"
+			"es": "spansk"
 		}
 	}
 }

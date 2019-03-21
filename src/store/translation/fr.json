@@ -112,6 +112,37 @@
 			"showBuried": "Enterré ici",
 			"showRelated": "Autre relation",
 			"showAll": "Tous"
+		},
+		"Works": {
+			"headerTitle": "Works",
+			"sortMenuTitle": "Trier",
+			"sortMenuTooltip": "Trier les éléments",
+			"sortMenuOptionTime": "Selon l'heure",
+			"sortMenuOptionAlpha": "Par ordre alphabétique",
+			"sortMenuOptionDist": "Selon la distance",
+			"sortMenuOptionRev": "Tri inversé",
+			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuOptionType": "Type",
+			"facetMenuOptionColl": "Collection",
+			"facetMenuOptionCity": "Ville",
+			"displayMenuTitle": "Afficher comme",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Lister",
+			"showAll": "Tout"
+		},
+		"People": {
+			"headerTitle": "Personnes liées au sujet",
+			"sortMenuTitle": "Trier",
+			"sortMenuTooltip": "Modifier l'ordre de tri",
+			"sortMenuOptionBirth": "Par date de naissance",
+			"sortMenuOptionDeath": "Par date de décès",
+			"sortMenuOptionFirst": "Par prénom",
+			"sortMenuOptionLast": "Par nom de famille",
+			"sortMenuOptionRev": "Ordre de tri inverse",
+			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuOptionProfession": "Profession",
+			"facetMenuOptionCountry": "Pays",
+			"facetMenuOptionCity": "Genre"
 		}
 	},
 	"map_place_match_page": {

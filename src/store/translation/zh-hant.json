@@ -111,6 +111,39 @@
 			"showBuried": "埋葬於此",
 			"showRelated": "否則相關",
 			"showAll": "所有"
+		},
+		"Works": {
+			"headerTitle": "作品",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "排序項目",
+			"sortMenuOptionTime": "按時間",
+			"sortMenuOptionAlpha": "按字母順序",
+			"sortMenuOptionDist": "按距離",
+			"sortMenuOptionRev": "反向排序",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuOptionType": "類型",
+			"facetMenuOptionColl": "收藏",
+			"facetMenuOptionCity": "城市",
+			"displayMenuTitle": "顯示成",
+			"displayMenuOptionGallery": "圖庫",
+			"displayMenuOptionList": "清單",
+			"showAll": "所有"
+		},
+		"People": {
+			"headerTitle": "與主題關聯的人物",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "更改排序順序",
+			"sortMenuOptionBirth": "按出生日期",
+			"sortMenuOptionDeath": "按逝世日期",
+			"sortMenuOptionFirst": "按名字",
+			"sortMenuOptionLast": "按姓氏",
+			"sortMenuOptionRev": "反向排序順序",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuOptionProfession": "職業",
+			"facetMenuOptionCountry": "國家",
+			"facetMenuOptionCity": "性別"
 		}
 	},
 	"map_place_match_page": {

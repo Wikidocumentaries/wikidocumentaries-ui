@@ -111,6 +111,39 @@
 			"showBuried": "Hier beerdigt",
 			"showRelated": "Anderweitig verwandt",
 			"showAll": "Alle"
+		},
+		"Works": {
+			"headerTitle": "Werke",
+			"sortMenuTitle": "Sortieren",
+			"sortMenuTooltip": "Objekte sortieren",
+			"sortMenuOptionTime": "Nach Zeit",
+			"sortMenuOptionAlpha": "Alphabetisch",
+			"sortMenuOptionDist": "Nach Entfernung",
+			"sortMenuOptionRev": "Umgekehrte Sortierung",
+			"sortMenuOptionClear": "Sortierung aufheben",
+			"facetMenuTitle": "Aspekt nach",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Sammlung",
+			"facetMenuOptionCity": "Stadt",
+			"displayMenuTitle": "Anzeigen als",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Liste",
+			"showAll": "Alle"
+		},
+		"People": {
+			"headerTitle": "Personen bezüglich zum Thema",
+			"sortMenuTitle": "Sortieren",
+			"sortMenuTooltip": "Die Sortierreihenfolge ändern",
+			"sortMenuOptionBirth": "Nach Geburtsdatum",
+			"sortMenuOptionDeath": "Nach Sterbedatum",
+			"sortMenuOptionFirst": "Nach Vorname",
+			"sortMenuOptionLast": "Nach Nachname",
+			"sortMenuOptionRev": "Umgekehrte Sortierreihenfolge",
+			"sortMenuOptionClear": "Sortierung aufheben",
+			"facetMenuTitle": "Aspekt nach",
+			"facetMenuOptionProfession": "Beruf",
+			"facetMenuOptionCountry": "Staat",
+			"facetMenuOptionCity": "Geschlecht"
 		}
 	},
 	"map_place_match_page": {
