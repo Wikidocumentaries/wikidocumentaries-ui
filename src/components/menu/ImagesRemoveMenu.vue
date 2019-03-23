@@ -1,7 +1,7 @@
 <template>
     <div class="images-remove-menu">
         <IconMenu icon="wikiglyph-cross" :items="iconRemoveMenuItems" @doMenuItemAction="onDoMenuItemAction">
-            <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesRemoveMenu.menuTitle') }}</div>
+            <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesRemoveMenu.shortMenuTitle') }}</div>
         </IconMenu>
     </div>
 </template>

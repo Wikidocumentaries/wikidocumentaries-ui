@@ -30,11 +30,12 @@
         "TopicImages": {
             "headerTitle": "Images from the archives",
             "intro": "These images are gathered from several sources and they might not always represent to topic accurately. You can favourite an image or remove it from the page if it does not belong.",
-            "ationsMenu": {
+            "actionsMenu": {
                 "menuTitle": "Display or arrange images",
                 "tooltip": "Display or arrange images",
                 "showImagesOnMapMenuText": "Show all images on the map",
-                "showImagesOnTimelineMenuText": "Show all images on the timeline"
+                "showImagesOnTimelineMenuText": "Show all images on the timeline",
+                "selectPortraits": "Select good quality portraits of this person"
             },
             "imagesActionMenu": {
                 "menuTitle": "Actions",
