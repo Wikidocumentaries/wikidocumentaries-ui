@@ -29,39 +29,70 @@
         },
         "TopicImages": {
             "headerTitle": "Images from the archives",
-            "showImagesOnMapMenuText": "Show all images on the map",
-            "showImagesOnTimelineMenuText": "Show all images on the timeline",
+            "intro": "These images are gathered from several sources and they might not always represent to topic accurately. You can favourite an image or remove it from the page if it does not belong.",
+            "ationsMenu": {
+                "menuTitle": "Display or arrange images",
+                "tooltip": "Display or arrange images",
+                "showImagesOnMapMenuText": "Show all images on the map",
+                "showImagesOnTimelineMenuText": "Show all images on the timeline"
+            },
             "imagesActionMenu": {
                 "menuTitle": "Actions",
                 "menuTooltip": "Actions",
                 "doGeolocatingText": "Set the location...",
-                "showImageText": "Show image"
+                "showImageText": "Show image",
+                "selectFeatured": "Choose as a header image"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
+                "shortMenuTitle": "Remove the image",
                 "menuTooltip": "Remove the image",
                 "remDepicted": {
                     "menuTitle": "It depicts this topic instead",
+                    "shortMenuTitle": "It depicts another topic",
                     "search": "Search for the topic",
                     "browse": "Browse the related topics"
                 },
                 "remCreator": {
                     "menuTitle": "It is by this creator instead",
+                    "shortMenuTitle": "It is by another creator",
                     "search": "Search for the creator",
                     "browse": "Browse the related actors"
                 },
                 "remInappropriate": {
                     "menuTitle": "It is inappropriate because",
+                    "shortMenuTitle": "It is inappropriate",
                     "privacy": "It violates the privacy of the depicted",
                     "violence": "It displays extreme violence",
                     "sex": "It displays explicit sex",
                     "copyvio": "It violates copyright",
                     "explain": "Leave a note to explain"
                 }
+            },
+            "facetMenu": {
+                "menuTitle": "Facet images by",
+                "menuTooltip": "Facet images by different criteria",
+                "time": "time",
+                "map": "map",
+                "people": "people",
+                "places": "places",
+                "topics": "topics",
+                "form": "form",
+                "imageSize": "image size",
+                "large": "large",
+                "medium": "medium",
+                "small": "small",
+                "type": "image type",
+                "creator": "creator",
+                "platform": "platform",
+                "source": "source",
+                "saveSelection": "Save selection as a collection",
+                "clear": "Clear choices"
             }
         },
         "TopicMap": {
             "headerTitle": "Topic on the map",
+            "intro": "The topic's place is displayed on the map. You can also display the images and other data on the map or choose a historical map as a base layer.",
             "chooseHistoricalBasemapMenuText": "Choose historical base map(s)...",
             "hideImagesMenuText": "Hide images",
             "chooseTimelineMapsMenuText": "Choose timeline maps...",
@@ -111,6 +142,7 @@
         },
         "Works": {
             "headerTitle": "Works",
+            "intro": "These are works by the the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",
             "sortMenuTitle": "Sort",
             "sortMenuTooltip": "Sort items",
             "sortMenuOptionTime": "By time",
@@ -119,16 +151,19 @@
             "sortMenuOptionRev": "Reverse sort",
             "sortMenuOptionClear": "Clear sort",
             "facetMenuTitle": "Facet by",
+            "facetMenuTooltip": "Facet works by different criteria",
             "facetMenuOptionType": "Type",
             "facetMenuOptionColl": "Collection",
             "facetMenuOptionCity": "City",
             "displayMenuTitle": "Display as",
+            "displayMenuTooltip": "Choose the display",
             "displayMenuOptionGallery": "Gallery",
             "displayMenuOptionList": "List",
             "showAll": "All"
         },
         "People": {
             "headerTitle": "People related to the topic",
+            "intro": "These are people who are related to the topic of this page. You can enter a page collecting all the information about the person by clicking on it. You can display the people also as a list.",
             "sortMenuTitle": "Sort",
             "sortMenuTooltip": "Change the sort order",
             "sortMenuOptionBirth": "By birth date",
@@ -138,6 +173,7 @@
             "sortMenuOptionRev": "Reverse sort order",
             "sortMenuOptionClear": "Clear sort",
             "facetMenuTitle": "Facet by",
+            "facetMenuTooltip": "Facet people by different aspects",
             "facetMenuOptionProfession": "Profession",
             "facetMenuOptionCountry": "Country",
             "facetMenuOptionCity": "Gender"
