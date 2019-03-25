@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Main title for the Images section",
-			"showImagesOnMapMenuText": "Menu item for showing images on the map",
-			"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Menu item for showing images on the map",
+				"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Menu title for the Images Actions menu",
 				"menuTooltip": "Tooltip text for the Actions menu",
@@ -124,11 +127,11 @@
 			"facetMenuTitle": "Menu title of the Facet menu",
 			"facetMenuOptionType": "Menu item for faceting by type",
 			"facetMenuOptionColl": "Menu item for faceting by collection",
-			"facetMenuOptionCity": "Menu item for faceting by city",
+			"facetMenuOptionCity": "Menu item for faceting by city\n{{Identical|City}}",
 			"displayMenuTitle": "Menu title of the Display menu",
 			"displayMenuOptionGallery": "Menu option for displaying as gallery",
 			"displayMenuOptionList": "Menu option for displaying as list",
-			"showAll": "Option to clear all filters and showing all items"
+			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
 		},
 		"People": {
 			"headerTitle": "Main title of the People section",

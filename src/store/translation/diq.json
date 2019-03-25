@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mirzali",
-			"Orbot707"
+			"Orbot707",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -29,8 +30,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Arşivan ra resımi",
-			"showImagesOnMapMenuText": "Resıman pêro xerita de bımocne",
-			"showImagesOnTimelineMenuText": "Resıman pêro ustına wexti de bımocne",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Resıman pêro xerita de bımocne",
+				"showImagesOnTimelineMenuText": "Resıman pêro ustına wexti de bımocne"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Hereketi",
 				"menuTooltip": "Hereketi",
@@ -92,11 +95,15 @@
 		},
 		"Works": {
 			"sortMenuOptionAlpha": "Alfabetik",
+			"facetMenuOptionType": "Babet",
 			"facetMenuOptionCity": "Sûke",
+			"displayMenuOptionGallery": "Galeriye",
+			"displayMenuOptionList": "Liste",
 			"showAll": "Pêro"
 		},
 		"People": {
 			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
+			"facetMenuOptionCountry": "Dewlete",
 			"facetMenuOptionCity": "Cınsiyet"
 		}
 	},

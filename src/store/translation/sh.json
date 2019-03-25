@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250"
+			"Vlad5250",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Slike iz arhiva",
-			"showImagesOnMapMenuText": "Prikaži sve slike na mapi",
-			"showImagesOnTimelineMenuText": "Prikaži sve slike u vrijemeslijedu",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Prikaži sve slike na mapi",
+				"showImagesOnTimelineMenuText": "Prikaži sve slike u vrijemeslijedu"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Radnje",
 				"menuTooltip": "Radnje",

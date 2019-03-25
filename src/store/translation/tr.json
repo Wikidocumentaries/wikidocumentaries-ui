@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Arşivden görüntüler",
-			"showImagesOnMapMenuText": "Tüm görüntüleri haritada göster",
-			"showImagesOnTimelineMenuText": "Tüm görüntüleri zaman çizelgesinde göster",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Tüm görüntüleri haritada göster",
+				"showImagesOnTimelineMenuText": "Tüm görüntüleri zaman çizelgesinde göster"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "İşlemler",
 				"menuTooltip": "İşlemler",

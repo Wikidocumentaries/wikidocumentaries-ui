@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -22,8 +23,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Biller aus den Archiven",
-			"showImagesOnMapMenuText": "All Biller op der Kaart weisen",
-			"showImagesOnTimelineMenuText": "All Biller op dem Zäitplang weisen",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "All Biller op der Kaart weisen",
+				"showImagesOnTimelineMenuText": "All Biller op dem Zäitplang weisen"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Aktiounen",
 				"menuTooltip": "Aktiounen",
@@ -70,6 +73,13 @@
 			"showBuried": "Hei begruewen",
 			"showRelated": "An enger anerer Relatioun",
 			"showAll": "All"
+		},
+		"Works": {
+			"facetMenuOptionCity": "Stad",
+			"showAll": "All"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Nom Gebuertsdatum"
 		}
 	},
 	"map_place_match_page": {

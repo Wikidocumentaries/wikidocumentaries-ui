@@ -52,6 +52,24 @@
 			"showDied": "Døde her",
 			"showBuried": "Begravet her",
 			"showAll": "Alle"
+		},
+		"Works": {
+			"headerTitle": "Værker",
+			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionDist": "Efter afstand",
+			"facetMenuOptionType": "Type",
+			"facetMenuOptionCity": "By",
+			"displayMenuOptionGallery": "Galleri",
+			"displayMenuOptionList": "Liste",
+			"showAll": "Alle"
+		},
+		"People": {
+			"sortMenuTitle": "Sortér",
+			"sortMenuOptionBirth": "Efter fødselsdato",
+			"sortMenuOptionFirst": "Efter fornavn",
+			"sortMenuOptionLast": "Efter efternavn",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Køn"
 		}
 	},
 	"map_search_page": {

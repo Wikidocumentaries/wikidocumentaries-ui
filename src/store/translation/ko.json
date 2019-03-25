@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ykhwong"
+			"Ykhwong",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -24,8 +25,10 @@
 			"subtitleApproveText": "이 설명을 승인합니다"
 		},
 		"TopicImages": {
-			"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
-			"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
+				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "동작",
 				"menuTooltip": "동작",
@@ -84,6 +87,24 @@
 			"showDied": "여기서 죽음",
 			"showBuried": "여기에 묻힘",
 			"showAll": "모두"
+		},
+		"Works": {
+			"sortMenuTitle": "정렬",
+			"sortMenuOptionTime": "시간순",
+			"sortMenuOptionAlpha": "알파벳순",
+			"sortMenuOptionDist": "거리순",
+			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuOptionCity": "도시",
+			"displayMenuOptionGallery": "갤러리",
+			"displayMenuOptionList": "목록",
+			"showAll": "모두"
+		},
+		"People": {
+			"headerTitle": "주제와 관련된 인물",
+			"sortMenuTitle": "정렬",
+			"sortMenuOptionFirst": "이름순",
+			"sortMenuOptionLast": "성(이름)순",
+			"facetMenuOptionCountry": "국가"
 		}
 	},
 	"map_search_page": {

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Metalhead64"
+			"Metalhead64",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,13 +33,19 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder von den Archiven",
-			"showImagesOnMapMenuText": "Alle Bilder auf der Karte anzeigen",
-			"showImagesOnTimelineMenuText": "Alle Bilder auf der Zeitleiste anzeigen",
+			"actionsMenu": {
+				"menuTitle": "Bilder anzeigen oder anordnen",
+				"tooltip": "Bilder anzeigen oder anordnen",
+				"showImagesOnMapMenuText": "Alle Bilder auf der Karte anzeigen",
+				"showImagesOnTimelineMenuText": "Alle Bilder auf der Zeitleiste anzeigen",
+				"selectPortraits": "Porträts dieser Person in guter Qualität auswählen"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Aktionen",
 				"menuTooltip": "Aktionen",
 				"doGeolocatingText": "Den Standort festlegen …",
-				"showImageText": "Bild anzeigen"
+				"showImageText": "Bild anzeigen",
+				"selectFeatured": "Als Kopfbild auswählen"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Das Bild entfernen, da …",
@@ -61,6 +68,13 @@
 					"copyvio": "Es verstößt gegen das Urheberrecht",
 					"explain": "Hinterlasse eine Anmerkung zur Erklärung"
 				}
+			},
+			"facetMenu": {
+				"menuTooltip": "Aspektbilder nach unterschiedlichen Kriterien",
+				"imageSize": "Bildgröße",
+				"platform": "Plattform",
+				"source": "Quelle",
+				"clear": "Auswahlen löschen"
 			}
 		},
 		"TopicMap": {
@@ -126,6 +140,7 @@
 			"facetMenuOptionColl": "Sammlung",
 			"facetMenuOptionCity": "Stadt",
 			"displayMenuTitle": "Anzeigen als",
+			"displayMenuTooltip": "Die Anzeige auswählen",
 			"displayMenuOptionGallery": "Galerie",
 			"displayMenuOptionList": "Liste",
 			"showAll": "Alle"
