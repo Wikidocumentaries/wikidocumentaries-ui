@@ -112,9 +112,9 @@ GROUP BY ?person ?personLabel ?nationality
 ORDER BY ?birth_year ?death_year
 LIMIT 50
         `.replace(/Q78/g, this.$store.state.wikidocumentaries.wikidataId);
-        const url = wdk.sparqlQuery(sparql);
+        const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
-            .get(url)
+            .post(url, body)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
     },
