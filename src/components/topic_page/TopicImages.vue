@@ -37,7 +37,7 @@ export default {
             toolbarActionMenuItems: [
                 {
                     id: MENU_ACTIONS.SHOW_IMAGES_ON_MAP,
-                    text: 'topic_page.TopicImages.showImagesOnMapMenuText'
+                    text: 'topic_page.TopicImages.actionsMenu.showImagesOnMapMenuText'
                 },
                 // {
                 //     id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,

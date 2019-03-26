@@ -1,9 +1,10 @@
 <template>
-    <div class="header">
+    <div :class="( wikidocumentaries.headerImageURL ? 'header' : 'header-compact')">
+        <img :src="coatOfArms" class="header-coa" />
         <img :src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
         <div class="header-contents">
-        <div class="bottomshade">
+        <div id="shade" :class="(wikidocumentaries.headerImageURL ? 'bottomshade' : 'noshade')">
             <div class="titlebox">
                 <div class="titlecont">
                     <div class="title">{{ wikidocumentaries.title }}</div>
@@ -38,6 +39,7 @@ export default {
     },
     data () {
         return {
+
         }
     },
     computed: {
@@ -51,7 +53,21 @@ export default {
             else {
                 return false;
             }
+        },
+        coatOfArms () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements
+            let coaid;
+            for (var index in statements) {
+                if (statements[index].id == 'P94') {
+                    coaid = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+coaid;
+                }
+            }
         }
+    //     compactHeight() {
+    //         return 'height:' + this.$refs.shade.clientHeight;
+    //         console.log('height:' + this.$refs.shade.clientHeight);
+    //   }
     }
 }
 </script>
@@ -62,14 +78,20 @@ export default {
 .header {
     position:relative;
     background: var(--main-modal-color);
+    height: 60vh;
+    transition: height 0.5s;
+}
+
+.header-compact {
+    position:relative;
+    background: var(--main-blue);
+    min-height:25vh;
 }
 
 .header-image {
     width: 100%;
-    height: 60vh; /* Remove for production? */
+    /* Remove for production? */
     /* Remove for production? not supported in IE 11 */
-    /* -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); */
 }
 
 .header-nonhuman {
@@ -80,6 +102,13 @@ export default {
     object-fit: contain;
 }
 
+.header-coa {
+    position: absolute;
+    right: 0;
+    height: 35%;
+    margin: 20px;
+}
+
 .bottomshade {
     position: absolute;
     width: 100%;
@@ -87,6 +116,15 @@ export default {
     right: 0px;
     bottom: 0px;
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0) 100%);
+    padding-top: 35px;
+}
+
+.noshade {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     padding-top: 35px;
 }
 

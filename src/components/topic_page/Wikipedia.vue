@@ -13,17 +13,6 @@
     <div v-else class="text wiki-html">
       <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
     </div>
-    <!--div class="text wiki-html expanded-html" v-if="expanded">
-      <button class="expander top-exander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
-        <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
-        <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-      </button>
-      <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
-    </div>
-    <button class="expander" v-if="wikidocumentaries.wikipedia.remainingHTML != null" @click="switchExpand()">
-      <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
-      <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-    </button-->
   </div>
 </template>
 

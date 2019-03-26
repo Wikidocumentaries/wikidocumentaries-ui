@@ -3,20 +3,21 @@
 	<div class="gallery-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.People.headerTitle') }}</div>
-            <!--ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
-            </ToolbarMenu-->
+            </ToolbarMenu>
         </div>
         <div class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in results" :key="item.id" :to="item.person.value" class="gallery-item">
+            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
                 <img v-if="item.image" :src="item.image" class="gallery-image"/>
                 <div v-else class="noimage"></div>
-                <div class="thumb-image-info">
+                <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
                     <div class="thumb-title">{{ item.person.label }}</div>
-                    <div class="thumb-credit">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
+                    <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
                 </div>
-                <div class="thumb-image-header">
+                <!--div class="thumb-image-header"-->
+                <div>
                     <div class="left-align">
                         <!--ImagesActionMenu></ImagesActionMenu-->
                     </div>
@@ -86,13 +87,13 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) ?nationality WHERE {
+SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
-      { ?person ?rel_out wd:Q78 .}
+      { ?person ?rel_out wd:Q314595 .}
       UNION
-      { wd:Q78 ?rel_in ?person .}
+      { wd:Q314595 ?rel_in ?person .}
     }
     OPTIONAL { ?person wdt:P18 ?image. }
     OPTIONAL { ?person wdt:P569 ?birth.
@@ -108,10 +109,11 @@ SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
-GROUP BY ?person ?personLabel ?nationality
+GROUP BY ?person ?personLabel
 ORDER BY ?birth_year ?death_year
 LIMIT 50
-        `.replace(/Q78/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
+        .replace(/fi/g, this.$i18n.locale);
         const url = wdk.sparqlQuery(sparql);
         axios
             .get(url)
@@ -121,7 +123,7 @@ LIMIT 50
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
-        },
+        }
     },
     watch: {
     },
@@ -160,6 +162,9 @@ LIMIT 50
         // },
         navigate(target) {
             this.$router.push({ target });
+        },
+        getItemURL(value) {
+            return "/" + value + "?language=" + this.$i18n.locale;
         }
     }
 }
@@ -181,29 +186,53 @@ LIMIT 50
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
+    background: var(--main-blue);
 }
 
-.gallery-item *{
+.gallery-item * {
     opacity:1;
+    transition: opacity 80ms ease-in;
 }
 
 .gallery-item > img {
     height: 100%;
 }
 
-.gallery-item:hover * {
-    transition: opacity 80ms ease-in;
+/* .gallery-item:hover * {
+    transition: opacity height 80ms ease-in;
+} */
+
+.gallery-item:hover .gallery-image {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.5;
 }
 
 .thumb-title {
     font-family: barlow condensed;
     text-transform: uppercase;
     font-size: 1.2em;
-    padding-bottom: 2px;
+}
+
+.thumb-title {
+    font-family: barlow condensed;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.appearing {
+    height: 0;
+    opacity: 0;
+    transition: height 80ms ease-in;
+}
+
+.gallery-item:hover .appearing {
+    height:unset;
+    opacity: 1;
 }
 
 .noimage {
-    background: var(--main-modal-color);
+    background: var(--main-blue);
     height: 35vh;
     width: 150px;
 }

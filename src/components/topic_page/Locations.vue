@@ -2,19 +2,19 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.Works.headerTitle') }}</div>
+            <div class="header-title">{{ $t('topic_page.Locations.headerTitle') }}</div>
             <DisplayMenu></DisplayMenu>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Works.sortMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('topic_page.Works.sortMenuTitle') }}</div>
+            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Locations.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                <div slot="menu-title">{{ $t('topic_page.Works.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
         <div v-if="imageitems.length" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
+            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.location.value)" class="gallery-item">
                 <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
-                    <div class="thumb-title">{{ item.work.label }}</div>
-                    <div class="thumb-credit">{{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}</div>
+                    <div class="thumb-title">{{ item.location.label }}</div>
+                    <div class="thumb-credit">{{ item.location.typeLabel }} {{ item.dated}}</div>
                 </div>
                 <!--div class="thumb-image-header"-->
                 <div class="thumb-image-header">
@@ -29,8 +29,8 @@
         </div>
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
-            <a :href="getItemURL(item.work.value)" >
-            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}
+            <a :href="getItemURL(item.location.value)" >
+            <span class="thumb-title">{{ item.location.label }}</span> {{ item.location.label }} {{ item.dated}}
             </a>
             </div>
         </div>
@@ -48,13 +48,12 @@ import DisplayMenu from '@/components/menu/DisplayMenu'
 const MENU_ACTIONS = {
     SORT_TIME: 0,
     SORT_ALPHA: 1,
-    SORT_DIST: 2,
-    SORT_REV: 3,
-    SHOW_CLEAR: 4
+    SORT_REV: 2,
+    SHOW_CLEAR: 3
 }
 
 export default {
-    name: 'Works',
+    name: 'Locations',
     components: {
         ToolbarMenu,
         DisplayMenu
@@ -65,23 +64,19 @@ export default {
             toolbarActionMenuItems: [
             {
                 id: MENU_ACTIONS.SORT_TIME,
-                text: 'topic_page.Works.sortMenuOptionTime'
+                text: 'topic_page.Locations.sortMenu.optionTime'
             },
             {
                 id: MENU_ACTIONS.SORT_ALPHA,
-                text: 'topic_page.Works.sortMenuOptionAlpha'
-            },
-            {
-                id: MENU_ACTIONS.SORT_DIST,
-                text: 'topic_page.Works.sortMenuOptionDist'
+                text: 'topic_page.Locations.sortMenu.optionAlpha'
             },
             {
                 id: MENU_ACTIONS.SORT_REV,
-                text: 'topic_page.Works.sortMenuOptionRev'
+                text: 'topic_page.Locations.sortMenu.optionRev'
             },
             {
                 id: MENU_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.Works.sortMenuOptionClear'
+                text: 'topic_page.Locations.sortMenu.optionClear'
             },
             ],
         };
@@ -91,30 +86,27 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
-
-    ?pi wdt:P1647* wd:P170 .
-    ?pi wikibase:directClaim ?p . 
-    ?work ?p wd:Q216904.
-    OPTIONAL { ?work wdt:P18 ?image. }
-    OPTIONAL { ?work wdt:P973 ?desc_url. }
-    OPTIONAL { ?work wdt:P31 ?type. }
-    OPTIONAL { ?work wdt:P195 ?collection. }
-    OPTIONAL { ?work wdt:P571 ?creation_date. 
-             BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?work wdt:P577 ?publishing_date. 
-             BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
-    OPTIONAL { ?work wdt:P6216 ?copyright. }
-    OPTIONAL { ?work wdt:P123 ?publisher. }
-    OPTIONAL { ?work wdt:P625 ?coordinates. }
-    OPTIONAL { ?work wdt:P6375 ?address. }
-    OPTIONAL { ?work wdt:P131* ?municipality.
-              ?municipality (wdt:P31/wdt:P279) wd:Q13221722. }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
-
+SELECT ?location ?locationLabel (GROUP_CONCAT(?typeLabel; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(?dated; separator="/") as ?dated) (GROUP_CONCAT(?creatorLabel; separator=", ") as ?creatorLabel) WHERE {
+  ?pi wdt:P1647* wd:P276 .
+  ?pi wikibase:directClaim ?p .
+  ?location ?p wd:Q1772186.
+  OPTIONAL { ?location wdt:P31 ?type .
+            ?type rdfs:label ?typeLabel .
+              FILTER(LANG(?typeLabel)="fi") }
+  OPTIONAL { ?location wdt:P18 ?image. }
+  OPTIONAL { ?location wdt:P6375 ?address. }
+  OPTIONAL { ?location wdt:P571 ?date. 
+           BIND(STR(YEAR(?date)) AS ?dated)}
+  OPTIONAL { ?location wdt:P170|wdt:P84 ?creator. 
+           ?creator rdfs:label ?creatorLabel.
+           FILTER(LANG(?creatorLabel)="fi")}
+  MINUS { ?location wdt:P31 wd:Q5 .}
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,ca,se,sms,is,da,ru". }
 }
-ORDER BY ?creation_date ?publishing_date
-        `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId);
+GROUP BY ?location ?locationLabel
+ORDER BY ?dated
+LIMIT 100
+        `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId);
         const url = wdk.sparqlQuery(sparql);
         axios
             .get(url)

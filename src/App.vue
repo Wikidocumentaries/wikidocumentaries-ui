@@ -295,7 +295,6 @@ a:hover {
 
 .text {
 	padding-left:20px;
-  vertical-align: text-bottom;
 }
 
 .text p {
@@ -343,8 +342,19 @@ i.wikiglyph {
 .thumb-image-info {
     position: absolute;
     bottom: 0;
-    background: rgb(0, 0, 0); /* fallback color */
     background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
+    color: white;
+    padding: 30px 10px 10px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.2em;
+    opacity: 0;
+    transition: opacity 80ms ease-in;
+}
+
+.thumb-image-info-plain {
+    position: absolute;
+    bottom: 0;
     color: white;
     padding: 30px 10px 10px 10px;
     width: 100%;

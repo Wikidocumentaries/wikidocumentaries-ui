@@ -1,12 +1,15 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div class="row">
+    <div class="row" :class="toggleExpand">
       <WikipediaArticle class="column one"></WikipediaArticle>
-      <!--div class="divider"></div-->
       <WikidataItem class="column two"></WikidataItem>
+      <div @click="toggleExpand()" class="haze"><div class="toolbar-item block">
+        <a class="toolbar-item-a"><i class="wikiglyph wikiglyph-caret-down"></i></a><span class="tooltip">{{ tooltip }}</span>
+    </div></div>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
+    <Locations id="locations"></Locations>
     <People id="people"></People>
     <Works id="works"></Works>
     <EventList></EventList>
@@ -29,6 +32,7 @@ import TopicTimeline from '@/components/topic_page/TopicTimeline'
 import EventList from '@/components/topic_page/EventList'
 import Works from '@/components/topic_page/Works'
 import People from '@/components/topic_page/People'
+import Locations from '@/components/topic_page/Locations'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -37,6 +41,7 @@ export default {
     },
     data () {
         return {
+            isExpanded: false
         }
     },
     components: {
@@ -49,7 +54,8 @@ export default {
         // SampoGallery,
         EventList,
         Works,
-        People
+        People,
+        Locations
         //TopicNewspapers
     },
     computed: {
@@ -64,6 +70,12 @@ export default {
             //console.log("HomePage.onShowImagesOnTimeline");
 
             this.$scrollTo("#topicTimeline");
+        },
+        toggleExpand: function(event) {
+            this.isExpanded = !this.isExpanded;
+            return {
+                expanded: isExpanded
+            }
         }
     }
 }
@@ -77,11 +89,17 @@ export default {
 } */
 
 .row {
-	display: flex;
+	position: relative;
+    display: flex;
     flex-direction: row;
     overflow-y: hidden;
     align-items: start;
-    /*height: 60vh;*/
+    padding-bottom: 45px;
+    max-height: 50vh;
+}
+
+.expanded {
+    max-height:unset;
 }
 
 .column {
@@ -101,6 +119,21 @@ export default {
     width: 1px;
     margin: 6px 0;
     background: rgb(0, 0, 0);
+}
+
+.haze {
+    height: 45px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+vertical-align: middle;
+line-height: 45px;
+}
+
+.block {
+    display: inline-block;
 }
 
 </style>

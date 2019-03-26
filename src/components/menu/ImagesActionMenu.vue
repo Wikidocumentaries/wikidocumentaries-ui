@@ -11,8 +11,9 @@
 import IconMenu from '@/components/menu/IconMenu'
 
 const MENU_ACTIONS = {
-    DO_GEOLOCATING: 0,
-    SHOW_IMAGE: 1,
+//    DO_GEOLOCATING: 0,
+//    SHOW_IMAGE: 1,
+    SELECT_HEADER: 0,
 }
 
 export default {
@@ -23,13 +24,17 @@ export default {
         return {
             iconActionMenuItems: [
                 {
-                    id: MENU_ACTIONS.DO_GEOLOCATING,
-                    text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
+                    id: MENU_ACTIONS.SELECT_HEADER,
+                    text: 'topic_page.TopicImages.imagesActionMenu.selectFeatured'
                 },
-                {
-                    id: MENU_ACTIONS.SHOW_IMAGE,
-                    text: 'topic_page.TopicImages.imagesActionMenu.showImageText'
-                },
+                // {
+                //     id: MENU_ACTIONS.DO_GEOLOCATING,
+                //     text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
+                // },
+                // {
+                //     id: MENU_ACTIONS.SHOW_IMAGE,
+                //     text: 'topic_page.TopicImages.imagesActionMenu.showImageText'
+                // },
             ],
         }
     },

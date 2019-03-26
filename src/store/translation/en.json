@@ -35,7 +35,9 @@
                 "tooltip": "Display or arrange images",
                 "showImagesOnMapMenuText": "Show all images on the map",
                 "showImagesOnTimelineMenuText": "Show all images on the timeline",
-                "selectPortraits": "Select good quality portraits of this person"
+                "selectPortraits": "Select good quality portraits of this person",
+                "arrangeByTime": "Arrange images by time",
+                "selectWorks": "Select images of works"
             },
             "imagesActionMenu": {
                 "menuTitle": "Actions",
@@ -83,7 +85,7 @@
                 "large": "large",
                 "medium": "medium",
                 "small": "small",
-                "type": "image type",
+                "type": "media type",
                 "creator": "creator",
                 "platform": "platform",
                 "source": "source",
@@ -119,7 +121,9 @@
         },
         "Wikipedia": {
             "headerTitle": "Article",
-            "missingArticle": "There is no article about this topic in English. See if there are articles in other languages in the language menu above, or create the article by clicking on the plus-icon.",
+            "missingArticle": "There is no article about this topic in your language. You can read the article in another available language by choosing from the language menu above. You can create the article in your language by clicking on the plus icon.",
+            "missingArticleFallback": "There is no article about this topic in your language. This article in another language is shown to you based on your language fallback preferences. You can read the article in another available language by choosing from the language menu above. You can translate the article to your language by choosing it in the language menu.",
+            "missingArticleAuto": "There is no article about this topic in any language. This short text has been automatically created from the recorded facts. You can save this draft and start editing the article.",
             "extLink": {
                 "linkTitleWP": "Read or edit in Wikipedia"
             },
@@ -141,6 +145,33 @@
             "showRelated": "Related otherwise",
             "showAll": "All"
         },
+        "Locations": {
+            "headerTitle": "Works",
+            "intro": "Here you see anything that is located in the topic of this page. Display as list to see all locations that have been stored.",
+            "sortMenu": {
+                "title": "Sort locations",
+                "tooltip": "Sort locations",
+                "optionTime": "By time",
+                "optionAlpha": "Alphabetically",
+                "optionDist": "By distance",
+                "optionRev": "Reverse sort",
+                "optionClear": "Clear sort"
+            },
+            "facetMenu": {
+                "title": "Facet locations by",
+                "tooltip": "Facet locations by different criteria",
+                "optionType": "Type",
+                "optionColl": "Creator",
+                "optionCity": "Location"
+            },
+            "displayMenu": {
+                "title": "Display as",
+                "tooltip": "Choose the display",
+                "optionGallery": "Gallery",
+                "optionList": "List"
+            },
+            "showAll": "All"
+        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",
@@ -155,7 +186,7 @@
             "facetMenuTooltip": "Facet works by different criteria",
             "facetMenuOptionType": "Type",
             "facetMenuOptionColl": "Collection",
-            "facetMenuOptionCity": "City",
+            "facetMenuOptionCity": "Location",
             "displayMenuTitle": "Display as",
             "displayMenuTooltip": "Choose the display",
             "displayMenuOptionGallery": "Gallery",
