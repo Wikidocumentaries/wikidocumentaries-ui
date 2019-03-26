@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Gomoko",
-			"Wladek92"
+			"Wladek92",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -33,8 +34,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Images d'archives",
-			"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
-			"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
+				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Actions",
 				"menuTooltip": "Actions",
@@ -122,6 +125,7 @@
 			"sortMenuOptionDist": "Selon la distance",
 			"sortMenuOptionRev": "Tri inversé",
 			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuTitle": "Facet par",
 			"facetMenuOptionType": "Type",
 			"facetMenuOptionColl": "Collection",
 			"facetMenuOptionCity": "Ville",
@@ -140,6 +144,7 @@
 			"sortMenuOptionLast": "Par nom de famille",
 			"sortMenuOptionRev": "Ordre de tri inverse",
 			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuTitle": "Facet par",
 			"facetMenuOptionProfession": "Profession",
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"

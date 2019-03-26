@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Meno25",
-			"ديفيد"
+			"ديفيد",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -33,8 +34,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "صور من الأرشيف",
-			"showImagesOnMapMenuText": "عرض جميع الصور على الخريطة",
-			"showImagesOnTimelineMenuText": "عرض جميع الصور على الجدول الزمني",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "عرض جميع الصور على الخريطة",
+				"showImagesOnTimelineMenuText": "عرض جميع الصور على الجدول الزمني"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "الأفعال",
 				"menuTooltip": "أفعال",

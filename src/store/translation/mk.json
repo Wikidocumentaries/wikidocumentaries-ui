@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Bjankuloski06",
-			"Vlad5250"
+			"Vlad5250",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -33,8 +34,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Слики од архиви",
-			"showImagesOnMapMenuText": "Прикажи ги сите слики на картата",
-			"showImagesOnTimelineMenuText": "Прикажи ги сите слики во времеследот",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Прикажи ги сите слики на картата",
+				"showImagesOnTimelineMenuText": "Прикажи ги сите слики во времеследот"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Дејства",
 				"menuTooltip": "Дејства",
@@ -112,6 +115,39 @@
 			"showBuried": "Погребани овде",
 			"showRelated": "Поинаку поврзани",
 			"showAll": "Сите"
+		},
+		"Works": {
+			"headerTitle": "Дела",
+			"sortMenuTitle": "Подреди",
+			"sortMenuTooltip": "Подреди ставки",
+			"sortMenuOptionTime": "По време",
+			"sortMenuOptionAlpha": "Азбучно",
+			"sortMenuOptionDist": "По оддалеченост",
+			"sortMenuOptionRev": "По обратен редослед",
+			"sortMenuOptionClear": "Поништи подредено",
+			"facetMenuTitle": "Аспект од",
+			"facetMenuOptionType": "Вид",
+			"facetMenuOptionColl": "Збирка",
+			"facetMenuOptionCity": "Град",
+			"displayMenuTitle": "Прикажи како",
+			"displayMenuOptionGallery": "Галерија",
+			"displayMenuOptionList": "Список",
+			"showAll": "Сите"
+		},
+		"People": {
+			"headerTitle": "Личности поврзани со темата",
+			"sortMenuTitle": "Подреди",
+			"sortMenuTooltip": "Смени редослед на подредување",
+			"sortMenuOptionBirth": "По датум нараѓање",
+			"sortMenuOptionDeath": "По датум на смрт",
+			"sortMenuOptionFirst": "По име",
+			"sortMenuOptionLast": "По презиме",
+			"sortMenuOptionRev": "Обратен редослед",
+			"sortMenuOptionClear": "Поништи подредено",
+			"facetMenuTitle": "Аспект од",
+			"facetMenuOptionProfession": "Занимање",
+			"facetMenuOptionCountry": "Земја",
+			"facetMenuOptionCity": "Пол"
 		}
 	},
 	"map_place_match_page": {

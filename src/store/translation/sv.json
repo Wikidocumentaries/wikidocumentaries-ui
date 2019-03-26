@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Susannaanas"
+			"Susannaanas",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder från arkiven",
-			"showImagesOnMapMenuText": "Visa alla bilder på kartan",
-			"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Visa alla bilder på kartan",
+				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Åtgärder",
 				"menuTooltip": "Åtgärder",
@@ -50,7 +53,8 @@
 				},
 				"remCreator": {
 					"menuTitle": "Det är av den här skaparen istället",
-					"search": "Sök efter skaparen"
+					"search": "Sök efter skaparen",
+					"browse": "Bläddra i relaterade aktörer"
 				},
 				"remInappropriate": {
 					"menuTitle": "Den är olämplig eftersom",
@@ -89,7 +93,7 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
-			"missingArticle": "Det finns ingen artikel om detta ämne på engelska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
+			"missingArticle": "Det finns ingen artikel om detta ämne på svenska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
@@ -110,6 +114,10 @@
 			"showBuried": "Begravd här",
 			"showRelated": "Relaterat annars",
 			"showAll": "Alla"
+		},
+		"Works": {
+			"headerTitle": "Verk",
+			"sortMenuTitle": "Sortera"
 		}
 	},
 	"map_place_match_page": {

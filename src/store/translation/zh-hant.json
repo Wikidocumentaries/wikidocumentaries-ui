@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "來自存檔的圖片",
-			"showImagesOnMapMenuText": "在地圖上秀出所有圖片",
-			"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "在地圖上秀出所有圖片",
+				"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "操作",
 				"menuTooltip": "操作",

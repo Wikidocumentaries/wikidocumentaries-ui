@@ -100,9 +100,9 @@ export default {
 
         }
 
-        const url = wdk.sparqlQuery(sparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql");
+        const [url, body] = wdk.sparqlQuery(sparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql").split('?');
         axios
-            .get(url)
+            .post(url, body)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
 
@@ -126,9 +126,9 @@ SERVICE <https://query.wikidata.org/sparql> {
         `.replace(/Q170068/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/"fi"/g, JSON.stringify(this.$i18n.locale));
 
-        const url2 = wdk.sparqlQuery(wikidataSparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql");
+        const [url2, body2] = wdk.sparqlQuery(wikidataSparql).replace("https://query.wikidata.org/sparql", this.$store.state.BASE_URL+"sparql").split('?');
         axios
-            .get(url2)
+            .post(url2, body2)
             .then(response => (this.wikidataResults = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
     },

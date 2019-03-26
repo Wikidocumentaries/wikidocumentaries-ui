@@ -115,9 +115,9 @@ SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?
 }
 ORDER BY ?creation_date ?publishing_date
         `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId);
-        const url = wdk.sparqlQuery(sparql);
+        const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
-            .get(url)
+            .post(url, body)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
     },

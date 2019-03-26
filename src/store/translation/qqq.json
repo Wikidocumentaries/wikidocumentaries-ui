@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -159,12 +160,12 @@
 			"facetMenuTooltip": "Tooltip of the Facet menu in the Works component",
 			"facetMenuOptionType": "Menu item for faceting by type",
 			"facetMenuOptionColl": "Menu item for faceting by collection",
-			"facetMenuOptionCity": "Menu item for faceting by city",
+			"facetMenuOptionCity": "Menu item for faceting by city\n{{Identical|City}}",
 			"displayMenuTitle": "Menu title of the Display menu",
 			"displayMenuTooltip": "Tooltip of the Display menu",
 			"displayMenuOptionGallery": "Menu option for displaying as gallery",
 			"displayMenuOptionList": "Menu option for displaying as list",
-			"showAll": "Option to clear all filters and showing all items"
+			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
 		},
 		"People": {
 			"headerTitle": "Main title of the People section",

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Susannaanas"
+			"Susannaanas",
+			"Abijeet Patro"
 		]
 	},
 	"LandingPage": {
@@ -32,8 +33,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Arkistojen kuvia",
-			"showImagesOnMapMenuText": "Näytä kaikki kuvat kartalla",
-			"showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Näytä kaikki kuvat kartalla",
+				"showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Toiminnot",
 				"menuTooltip": "Toiminnot",
@@ -111,6 +114,39 @@
 			"showBuried": "Tänne haudatut",
 			"showRelated": "Aiheeseen liittyvät",
 			"showAll": "Kaikki"
+		},
+		"Works": {
+			"headerTitle": "Teokset",
+			"sortMenuTitle": "Järjestä",
+			"sortMenuTooltip": "Järjestä teokset",
+			"sortMenuOptionTime": "Ajan perusteella",
+			"sortMenuOptionAlpha": "Aakkosjärjestykseen",
+			"sortMenuOptionDist": "Etäisyyden mukaan",
+			"sortMenuOptionRev": "Käänteinen järjestys",
+			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
+			"facetMenuTitle": "Ryhmittele",
+			"facetMenuOptionType": "Tyypin mukaan",
+			"facetMenuOptionColl": "Kokoelman mukaan",
+			"facetMenuOptionCity": "Kunnan mukaan",
+			"displayMenuTitle": "Näytä",
+			"displayMenuOptionGallery": "Galleriana",
+			"displayMenuOptionList": "Luettelona",
+			"showAll": "Kaikki"
+		},
+		"People": {
+			"headerTitle": "Aiheeseen liittyvät ihmiset",
+			"sortMenuTitle": "Järjestä",
+			"sortMenuTooltip": "Muuta järjestystä",
+			"sortMenuOptionBirth": "Syntymäajan mukaan",
+			"sortMenuOptionDeath": "Kuolinajan mukaan",
+			"sortMenuOptionFirst": "Etunimen mukaan",
+			"sortMenuOptionLast": "Sukunimen mukaan",
+			"sortMenuOptionRev": "Käänteinen järjestys",
+			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
+			"facetMenuTitle": "Ryhmittele",
+			"facetMenuOptionProfession": "Ammatin mukaan",
+			"facetMenuOptionCountry": "Maan mukaan",
+			"facetMenuOptionCity": "Sukupuolen mukaan"
 		}
 	},
 	"map_place_match_page": {
