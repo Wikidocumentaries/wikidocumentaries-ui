@@ -368,4 +368,40 @@ i.wikiglyph {
     max-height: 11.6em;
     overflow: hidden;
 }
+
+.gallery {
+    height: 35vh;
+    display: flex;
+    padding-left: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.gallery-item {
+    height: 100%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    background: var(--main-blue);
+}
+
+.gallery-item * {
+    opacity:1;
+    transition: opacity 80ms ease-in;
+}
+
+.gallery-item > img {
+    height: 100%;
+}
+
+/* .gallery-item:hover * {
+    transition: opacity height 80ms ease-in;
+} */
+
+.gallery-item:hover .gallery-image {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
 </style>
