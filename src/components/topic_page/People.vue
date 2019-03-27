@@ -34,17 +34,23 @@
 <script>
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import {sortResults} from '@/common/utils'
 import axios from 'axios'
 import wdk from 'wikidata-sdk'
 
 const MENU_ACTIONS = {
     SORT_BIRTH: 0,
     SORT_DEATH: 1,
-    SORT_FIRST: 2,
-    SORT_LAST: 3,
-    SORT_REV: 4,
-    SHOW_CLEAR: 5
+    SORT_NAME: 2,
+    SORT_REV: 3,
+    SORT_CLEAR: 4
 }
+
+const MAX_ITEMS_TO_VIEW = 50;
+const DEFAULT_SORT = ["birth_year", "death_year"];
+
+let fullResults;
+let currentSort = DEFAULT_SORT.slice();
 
 export default {
     name: 'People',
@@ -64,27 +70,23 @@ export default {
                 text: 'topic_page.People.sortMenuOptionDeath'
             },
             {
-                id: MENU_ACTIONS.SORT_FIRST,
+                id: MENU_ACTIONS.SORT_NAME,
                 text: 'topic_page.People.sortMenuOptionFirst'
             },
             {
-                id: MENU_ACTIONS.SORT_LAST,
-                text: 'topic_page.People.sortMenuOptionLast'
-            },
-            {
                 id: MENU_ACTIONS.SORT_REV,
-                text: 'topic_page.People.sortMenuOptionLast'
+                text: 'topic_page.People.sortMenuOptionRev'
             },
             {
                 id: MENU_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.People.sortMenuOptionRev'
+                text: 'topic_page.People.sortMenuOptionClear'
             },
             ],
         };
     },
     mounted() {
         var title = this.$store.state.wikidocumentaries.title;
-        const statements = this.$store.state.wikidocumentaries.wikidata.statements
+        const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
 SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
@@ -100,24 +102,26 @@ SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?
               BIND(STR(YEAR(?birth)) AS ?birth_year)}
     OPTIONAL { ?person wdt:P570 ?death.
               BIND(STR(YEAR(?death)) AS ?death_year)}
-    OPTIONAL { ?person wdt:P106 ?profession. 
+    OPTIONAL { ?person wdt:P106 ?profession.
               ?profession rdfs:label ?professionLabel .
               FILTER(LANG(?professionLabel)="fi") }
-    OPTIONAL { ?person wdt:P27 ?country. 
+    OPTIONAL { ?person wdt:P27 ?country.
               ?country wdt:P1549 ?nationality .
               FILTER(LANG(?nationality)="fi") }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
 GROUP BY ?person ?personLabel
-ORDER BY ?birth_year ?death_year
-LIMIT 50
+LIMIT 1000
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
-            .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
+            .then(response => {
+							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
+							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+						})
             .catch(error => console.log(error));
     },
     computed: {
@@ -130,17 +134,28 @@ LIMIT 50
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case MENU_ACTIONS.SORT_TIME:
+            case MENU_ACTIONS.SORT_BIRTH:
+								currentSort = ["birth_year"];
                 break;
-            case MENU_ACTIONS.SORT_ALPHA:
+            case MENU_ACTIONS.SORT_DEATH:
+								currentSort = ["death_year"];
                 break;
-            case MENU_ACTIONS.SORT_DIST:
+            case MENU_ACTIONS.SORT_NAME:
+								currentSort = ["person.label"];
                 break;
-            case MENU_ACTIONS.SORT_REV:
-                break;
+						case MENU_ACTIONS.SORT_REV:
+								for (let i in currentSort) {
+									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
+									else currentSort[i] = '-' + currentSort[i];
+								}
+		            break;
             case MENU_ACTIONS.SORT_CLEAR:
+								currentSort = DEFAULT_SORT.slice();
                 break;
             }
+						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						// console.log("currentSort: ", currentSort);
+						// console.log("results: ", this.results);
         },
         fitTitle (title) {
             var newTitle = title;
@@ -168,6 +183,8 @@ LIMIT 50
         }
     }
 }
+
+
 </script>
 
 <style scoped>

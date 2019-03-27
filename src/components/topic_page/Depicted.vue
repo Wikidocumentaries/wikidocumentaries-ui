@@ -39,16 +39,23 @@
 <script>
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import {sortResults} from '@/common/utils'
 import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const MENU_ACTIONS = {
     SORT_TIME: 0,
-    SORT_ALPHA: 1,
+    SORT_LABEL: 1,
     SORT_REV: 2,
-    SHOW_CLEAR: 3
+    SORT_CLEAR: 3
 }
+
+const MAX_ITEMS_TO_VIEW = 50;
+const DEFAULT_SORT = ["creation_year", "publishing_year"];
+
+let fullResults;
+let currentSort = DEFAULT_SORT.slice();
 
 export default {
     name: 'Depicted',
@@ -65,7 +72,7 @@ export default {
                 text: 'topic_page.Depicted.sortMenuOptionTime'
             },
             {
-                id: MENU_ACTIONS.SORT_ALPHA,
+                id: MENU_ACTIONS.SORT_LABEL,
                 text: 'topic_page.Depicted.sortMenuOptionAlpha'
             },
             {
@@ -90,21 +97,23 @@ SELECT ?depicted ?depictedLabel ?image ?creation_year ?publishing_year ?desc_url
     OPTIONAL { ?depicted wdt:P973 ?desc_url. }
     OPTIONAL { ?depicted wdt:P31 ?type. }
     OPTIONAL { ?depicted wdt:P195 ?collection. }
-    OPTIONAL { ?depicted wdt:P571 ?creation_date. 
+    OPTIONAL { ?depicted wdt:P571 ?creation_date.
              BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?depicted wdt:P577 ?publishing_date. 
+    OPTIONAL { ?depicted wdt:P577 ?publishing_date.
              BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
     OPTIONAL { ?depicted wdt:P6216 ?copyright. }
     OPTIONAL { ?depicted wdt:P123 ?publisher. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
-ORDER BY ?creation_date ?publishing_date
 LIMIT 50
         `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
-            .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
+            .then(response => {
+							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
+							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+						})
             .catch(error => console.log(error));
     },
     computed: {
@@ -123,14 +132,22 @@ LIMIT 50
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
             case MENU_ACTIONS.SORT_TIME:
+								currentSort = ["creation_year", "publishing_year"];
                 break;
-            case MENU_ACTIONS.SORT_ALPHA:
+            case MENU_ACTIONS.SORT_LABEL:
+								currentSort = ["depicted.label"];
                 break;
             case MENU_ACTIONS.SORT_REV:
+								for (let i in currentSort) {
+									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
+									else currentSort[i] = '-' + currentSort[i];
+								}
                 break;
             case MENU_ACTIONS.SORT_CLEAR:
+								currentSort = DEFAULT_SORT.slice();
                 break;
             }
+						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
         },
         fitTitle (title) {
             var newTitle = title;

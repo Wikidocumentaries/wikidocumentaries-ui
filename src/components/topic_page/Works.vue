@@ -41,17 +41,24 @@
 <script>
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import {sortResults} from '@/common/utils'
 import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const MENU_ACTIONS = {
     SORT_TIME: 0,
-    SORT_ALPHA: 1,
+    SORT_LABEL: 1,
     SORT_DIST: 2,
     SORT_REV: 3,
-    SHOW_CLEAR: 4
+    SORT_CLEAR: 4
 }
+
+const MAX_ITEMS_TO_VIEW = 50;
+const DEFAULT_SORT = ["creation_year", "publishing_year"];
+
+let fullResults;
+let currentSort = DEFAULT_SORT.slice();
 
 export default {
     name: 'Works',
@@ -68,13 +75,13 @@ export default {
                 text: 'topic_page.Works.sortMenuOptionTime'
             },
             {
-                id: MENU_ACTIONS.SORT_ALPHA,
+                id: MENU_ACTIONS.SORT_LABEL,
                 text: 'topic_page.Works.sortMenuOptionAlpha'
             },
-            {
-                id: MENU_ACTIONS.SORT_DIST,
-                text: 'topic_page.Works.sortMenuOptionDist'
-            },
+            // {
+            //     id: MENU_ACTIONS.SORT_DIST,
+            //     text: 'topic_page.Works.sortMenuOptionDist'
+            // },
             {
                 id: MENU_ACTIONS.SORT_REV,
                 text: 'topic_page.Works.sortMenuOptionRev'
@@ -93,15 +100,15 @@ export default {
         sparql = `
 SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
     ?pi wdt:P1647* wd:P170 .
-    ?pi wikibase:directClaim ?p . 
+    ?pi wikibase:directClaim ?p .
     ?work ?p wd:Q216904.
     OPTIONAL { ?work wdt:P18 ?image. }
     OPTIONAL { ?work wdt:P973 ?desc_url. }
     OPTIONAL { ?work wdt:P31 ?type. }
     OPTIONAL { ?work wdt:P195 ?collection. }
-    OPTIONAL { ?work wdt:P571 ?creation_date. 
+    OPTIONAL { ?work wdt:P571 ?creation_date.
              BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?work wdt:P577 ?publishing_date. 
+    OPTIONAL { ?work wdt:P577 ?publishing_date.
              BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
     OPTIONAL { ?work wdt:P6216 ?copyright. }
     OPTIONAL { ?work wdt:P123 ?publisher. }
@@ -111,14 +118,16 @@ SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?
               ?municipality (wdt:P31/wdt:P279) wd:Q13221722. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
-ORDER BY ?creation_date ?publishing_date
-LIMIT 50
+LIMIT 1000
         `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
-            .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
+            .then(response => {
+							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
+							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+						})
             .catch(error => console.log(error));
     },
     computed: {
@@ -137,16 +146,24 @@ LIMIT 50
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
             case MENU_ACTIONS.SORT_TIME:
+								currentSort = ["creation_year", "publishing_year"];
                 break;
-            case MENU_ACTIONS.SORT_ALPHA:
+            case MENU_ACTIONS.SORT_LABEL:
+								currentSort = ["work.label"];
                 break;
-            case MENU_ACTIONS.SORT_DIST:
-                break;
+            // case MENU_ACTIONS.SORT_DIST:
+            //     break;
             case MENU_ACTIONS.SORT_REV:
+								for (let i in currentSort) {
+									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
+									else currentSort[i] = '-' + currentSort[i];
+								}
                 break;
             case MENU_ACTIONS.SORT_CLEAR:
+								currentSort = DEFAULT_SORT.slice();
                 break;
             }
+						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
         },
         fitTitle (title) {
             var newTitle = title;
