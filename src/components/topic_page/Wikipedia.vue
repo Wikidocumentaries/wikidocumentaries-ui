@@ -2,13 +2,13 @@
   <div class="wikipedia">
     <div class="toolbar">
         <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
-        <ArticleLanguageMenu class="language-menu"></ArticleLanguageMenu>
-        <HeaderLink v-if="wikidocumentaries.wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
-        <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikidocumentaries.wikipedia.wikipediaURL"></HeaderLink>
+        <ArticleLanguageMenu class="language-menu" @doLanguageChange="onLanguageChange"></ArticleLanguageMenu>
+        <HeaderLink v-if="wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
+        <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
     </div>
-    <div v-if="wikidocumentaries.wikipedia.wikipediaURL" class="text wiki-html">
-      <span v-html="wikidocumentaries.wikipedia.excerptHTML"></span>
-      <span v-html="wikidocumentaries.wikipedia.remainingHTML"></span>
+    <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
+      <span v-html="wikipedia.excerptHTML"></span>
+      <span v-html="wikipedia.remainingHTML"></span>
     </div>
     <div v-else class="text wiki-html">
       <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import HeaderLink from '@/components/HeaderLink'
 import ArticleLanguageMenu from '@/components/menu/ArticleLanguageMenu'
 export default {
@@ -24,9 +25,6 @@ export default {
   props: {
   },
   computed: {
-      wikidocumentaries () {
-          return this.$store.state.wikidocumentaries;
-      },
       getSelected () {
         if(window.getSelection) { return window.getSelection(); }
         else if(document.getSelection) { return document.getSelection(); }
@@ -46,7 +44,9 @@ export default {
   },
   data () {
     return {
-      expanded: false
+      expanded: false,
+      language: this.$i18n.locale,
+      wikipedia: this.$store.state.wikidocumentaries.wikipedia,
     }
   },
   components: {
@@ -56,6 +56,29 @@ export default {
   methods: {
     switchExpand(event) {
       this.expanded = !this.expanded;
+    },
+    onLanguageChange(language) {
+      this.language = language;
+
+      var requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/wiki",
+        method: "get",
+        params: {
+          wikidata: this.$store.state.wikidocumentaries.wikidataId,
+          language: language,
+        }
+      };
+      axios.request(requestConfig).then(response => {
+        if (response.data.wikidata == null ) {
+          console.log("response.data.wikipedia == null");
+          context.commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
+        } else {
+          this.wikipedia.excerptHTML = response.data.wikipediaExcerptHTML;
+          this.wikipedia.remainingHTML = response.data.wikipediaRemainingHTML;
+          this.wikipedia.wikipediaURL = response.data.wikipedia.content_urls.desktop.page;
+        }
+      });
     }
   }
 }
