@@ -113,7 +113,7 @@ GROUP BY ?person ?personLabel
 ORDER BY ?birth_year ?death_year
 LIMIT 50
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
-        .replace(/fi/g, this.$store.state.wikidocumentaries.wikidataId);
+         .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)

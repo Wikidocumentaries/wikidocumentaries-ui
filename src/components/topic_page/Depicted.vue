@@ -2,21 +2,19 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.Works.headerTitle') }}</div>
+            <div class="header-title">{{ $t('topic_page.Depicted.headerTitle') }}</div>
             <DisplayMenu></DisplayMenu>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Works.sortMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('topic_page.Works.sortMenuTitle') }}</div>
+            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Depicted.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+                <div slot="menu-title">{{ $t('topic_page.Depicted.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
         <div v-if="imageitems.length" class="gallery">
-            <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
+            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
                 <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
-                    <div class="thumb-title">{{ item.work.label }}</div>
-                    <div class="thumb-credit">{{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}</div>
+                    <div class="thumb-title">{{ item.depicted.label }}</div>
+                    <div class="thumb-credit">{{ item.depicted.typeLabel }} </div>
                 </div>
-                <!--div class="thumb-image-header"-->
                 <div class="thumb-image-header">
                     <div class="left-align">
                         <!--ImagesActionMenu></ImagesActionMenu-->
@@ -29,8 +27,8 @@
         </div>
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
-            <a :href="getItemURL(item.work.value)" >
-            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}
+            <a :href="getItemURL(item.depicted.value)" >
+            <span class="thumb-title">{{ item.depicted.label }}</span>
             </a>
             </div>
         </div>
@@ -48,13 +46,12 @@ import DisplayMenu from '@/components/menu/DisplayMenu'
 const MENU_ACTIONS = {
     SORT_TIME: 0,
     SORT_ALPHA: 1,
-    SORT_DIST: 2,
-    SORT_REV: 3,
-    SHOW_CLEAR: 4
+    SORT_REV: 2,
+    SHOW_CLEAR: 3
 }
 
 export default {
-    name: 'Works',
+    name: 'Depicted',
     components: {
         ToolbarMenu,
         DisplayMenu
@@ -65,23 +62,19 @@ export default {
             toolbarActionMenuItems: [
             {
                 id: MENU_ACTIONS.SORT_TIME,
-                text: 'topic_page.Works.sortMenuOptionTime'
+                text: 'topic_page.Depicted.sortMenuOptionTime'
             },
             {
                 id: MENU_ACTIONS.SORT_ALPHA,
-                text: 'topic_page.Works.sortMenuOptionAlpha'
-            },
-            {
-                id: MENU_ACTIONS.SORT_DIST,
-                text: 'topic_page.Works.sortMenuOptionDist'
+                text: 'topic_page.Depicted.sortMenuOptionAlpha'
             },
             {
                 id: MENU_ACTIONS.SORT_REV,
-                text: 'topic_page.Works.sortMenuOptionRev'
+                text: 'topic_page.Depicted.sortMenuOptionRev'
             },
             {
                 id: MENU_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.Works.sortMenuOptionClear'
+                text: 'topic_page.Depicted.sortMenuOptionClear'
             },
             ],
         };
@@ -91,30 +84,23 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
-    ?pi wdt:P1647* wd:P170 .
-    ?pi wikibase:directClaim ?p . 
-    ?work ?p wd:Q216904.
-    OPTIONAL { ?work wdt:P18 ?image. }
-    OPTIONAL { ?work wdt:P973 ?desc_url. }
-    OPTIONAL { ?work wdt:P31 ?type. }
-    OPTIONAL { ?work wdt:P195 ?collection. }
-    OPTIONAL { ?work wdt:P571 ?creation_date. 
+SELECT ?depicted ?depictedLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
+    ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
+    OPTIONAL { ?depicted wdt:P18 ?image. }
+    OPTIONAL { ?depicted wdt:P973 ?desc_url. }
+    OPTIONAL { ?depicted wdt:P31 ?type. }
+    OPTIONAL { ?depicted wdt:P195 ?collection. }
+    OPTIONAL { ?depicted wdt:P571 ?creation_date. 
              BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?work wdt:P577 ?publishing_date. 
+    OPTIONAL { ?depicted wdt:P577 ?publishing_date. 
              BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
-    OPTIONAL { ?work wdt:P6216 ?copyright. }
-    OPTIONAL { ?work wdt:P123 ?publisher. }
-    OPTIONAL { ?work wdt:P625 ?coordinates. }
-    OPTIONAL { ?work wdt:P6375 ?address. }
-    OPTIONAL { ?work wdt:P131* ?municipality.
-              ?municipality (wdt:P31/wdt:P279) wd:Q13221722. }
+    OPTIONAL { ?depicted wdt:P6216 ?copyright. }
+    OPTIONAL { ?depicted wdt:P123 ?publisher. }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
 ORDER BY ?creation_date ?publishing_date
 LIMIT 50
-        `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId)
-         .replace(/fi/g, this.$i18n.locale);
+        `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
@@ -139,8 +125,6 @@ LIMIT 50
             case MENU_ACTIONS.SORT_TIME:
                 break;
             case MENU_ACTIONS.SORT_ALPHA:
-                break;
-            case MENU_ACTIONS.SORT_DIST:
                 break;
             case MENU_ACTIONS.SORT_REV:
                 break;

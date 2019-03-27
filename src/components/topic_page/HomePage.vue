@@ -10,8 +10,9 @@
     </div>
     <!-- <SampoGallery></SampoGallery> -->
     <Locations id="locations"></Locations>
-    <People id="people"></People>
     <Works id="works"></Works>
+    <Depicted id="locations"></Depicted>
+    <People id="people"></People>
     <EventList></EventList>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
@@ -33,6 +34,7 @@ import EventList from '@/components/topic_page/EventList'
 import Works from '@/components/topic_page/Works'
 import People from '@/components/topic_page/People'
 import Locations from '@/components/topic_page/Locations'
+import Depicted from '@/components/topic_page/Depicted'
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -55,7 +57,8 @@ export default {
         EventList,
         Works,
         People,
-        Locations
+        Locations,
+        Depicted
         //TopicNewspapers
     },
     computed: {

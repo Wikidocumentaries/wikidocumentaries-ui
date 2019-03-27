@@ -5,7 +5,7 @@
             <div class="header-title">{{ $t('topic_page.Locations.headerTitle') }}</div>
             <DisplayMenu></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Locations.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('topic_page.Works.sortMenu.title') }}</div>
+                <div slot="menu-title">{{ $t('topic_page.Locations.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
         <div v-if="imageitems.length" class="gallery">
@@ -101,11 +101,11 @@ SELECT ?location ?locationLabel (GROUP_CONCAT(?typeLabel; separator=", ") as ?ty
            ?creator rdfs:label ?creatorLabel.
            FILTER(LANG(?creatorLabel)="fi")}
   MINUS { ?location wdt:P31 wd:Q5 .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,ca,se,sms,is,da,ru". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
 }
 GROUP BY ?location ?locationLabel
 ORDER BY ?dated
-LIMIT 100
+LIMIT 50
         `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId);
         const url = wdk.sparqlQuery(sparql);
         axios

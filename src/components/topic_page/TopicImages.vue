@@ -1,5 +1,5 @@
 <template>
-    <div class="images-component">
+    <div v-if="wikidocumentaries.images.length" class="images-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
@@ -16,11 +16,6 @@
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import MasonryGrid from '@/components/MasonryGrid'
 
-const MENU_ACTIONS = {
-    SHOW_IMAGES_ON_MAP: 1,
-    SHOW_IMAGES_ON_TIMELINE: 2,
-}
-
 export default {
     name: 'TopicImages',
     props: {
@@ -33,6 +28,10 @@ export default {
     mounted: function () {
     },
     data () {
+        const MENU_ACTIONS = {
+            SHOW_IMAGES_ON_MAP: 1,
+            SHOW_IMAGES_ON_TIMELINE: 2,
+        }
         return {
             toolbarActionMenuItems: [
                 {

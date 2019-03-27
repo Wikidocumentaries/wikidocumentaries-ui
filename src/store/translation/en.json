@@ -146,7 +146,7 @@
             "showAll": "All"
         },
         "Locations": {
-            "headerTitle": "Works",
+            "headerTitle": "Locations",
             "intro": "Here you see anything that is located in the topic of this page. Display as list to see all locations that have been stored.",
             "sortMenu": {
                 "title": "Sort locations",
@@ -163,6 +163,31 @@
                 "optionType": "Type",
                 "optionColl": "Creator",
                 "optionCity": "Location"
+            },
+            "displayMenu": {
+                "title": "Display as",
+                "tooltip": "Choose the display",
+                "optionGallery": "Gallery",
+                "optionList": "List"
+            },
+            "showAll": "All"
+        },
+        "Depicted": {
+            "headerTitle": "Depicted",
+            "intro": "This topic is depicted in these works. Sort the works by different criteria, display as list to see the ones without image.",
+            "sortMenu": {
+                "title": "Sort works",
+                "tooltip": "Sort works",
+                "optionTime": "By time",
+                "optionAlpha": "Alphabetically",
+                "optionRev": "Reverse sort",
+                "optionClear": "Clear sort"
+            },
+            "facetMenu": {
+                "title": "Facet works by",
+                "tooltip": "Facet works by different criteria",
+                "optionType": "Type",
+                "optionColl": "Creator"
             },
             "displayMenu": {
                 "title": "Display as",

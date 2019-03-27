@@ -1,5 +1,5 @@
 <template>
-    <div class="map-component">
+    <div v-if="topicLocation.length" class="map-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
