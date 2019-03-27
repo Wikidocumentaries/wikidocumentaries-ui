@@ -17,7 +17,7 @@
                     <div class="thumb-credit">{{ item.location.typeLabel }} {{ item.dated}}</div>
                 </div>
                 <!--div class="thumb-image-header"-->
-                <div class="thumb-image-header">
+                <div>
                     <div class="left-align">
                         <!--ImagesActionMenu></ImagesActionMenu-->
                     </div>
