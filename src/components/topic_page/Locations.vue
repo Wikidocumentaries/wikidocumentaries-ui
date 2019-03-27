@@ -107,9 +107,9 @@ GROUP BY ?location ?locationLabel
 ORDER BY ?dated
 LIMIT 50
         `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId);
-        const url = wdk.sparqlQuery(sparql);
+        const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
-            .get(url)
+            .post(url, body)
             .then(response => (this.results = wdk.simplify.sparqlResults(response.data)))
             .catch(error => console.log(error));
     },
