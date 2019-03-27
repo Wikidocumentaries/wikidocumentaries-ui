@@ -18,6 +18,7 @@ const MENU_ACTIONS = {
 export default {
     name: 'ArticleLanguageMenu',
     props: {
+        doLanguageChange: Function,
     },
     computed: {
         toolbarActionMenuItems () {
@@ -33,9 +34,8 @@ export default {
         ToolbarMenu,
     },
     methods: {
-        onDoMenuItemAction (menuItem) {
-            this.$i18n.locale = menuItem.id.replace(/wiki/, "");
-            this.$store.dispatch('updateWikidocumentaries', {topic: null, wikidata: this.$store.state.wikidocumentaries.wikidataId, language: this.$i18n.locale});
+        onDoMenuItemAction(menuItem) {
+            this.$emit('doLanguageChange', menuItem.id.replace(/wiki/, ""));
         }
     }
 }
