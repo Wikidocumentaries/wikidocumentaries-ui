@@ -16,6 +16,7 @@ const MENU_ACTIONS = {
 export default {
     name: 'DisplayMenu',
     props: {
+      doDisplayChange: Function
     },
     data () {
         return {
@@ -38,8 +39,7 @@ export default {
     },
     methods: {
         onDoMenuItemAction (menuItem) {
-            this.$i18n.locale = menuItem.id.replace(/wiki/, "");
-            this.$store.dispatch('updateWikidocumentaries', {topic: null, wikidata: this.$store.state.wikidocumentaries.wikidataId, language: this.$i18n.locale});
+            this.$emit('doDisplayChange', menuItem);
         }
     }
 }

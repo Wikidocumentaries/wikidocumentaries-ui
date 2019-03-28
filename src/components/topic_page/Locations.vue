@@ -3,14 +3,14 @@
 	<div class="gallery-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.Locations.headerTitle') }}</div>
-            <DisplayMenu></DisplayMenu>
+            <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Locations.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Locations.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
-        <div v-if="imageitems.length" class="gallery">
+        <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.location.value)" class="gallery-item">
+            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.location.value)" class="gallery-item">
                 <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.location.label }}</div>
@@ -46,11 +46,16 @@ import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
-const MENU_ACTIONS = {
-    SORT_TIME: 0,
-    SORT_LABEL: 1,
-    SORT_REV: 2,
+const SORT_ACTIONS = {
+    BY_TIME: 0,
+    BY_LABEL: 1,
+    SORT_REVERSE: 2,
     SORT_CLEAR: 3
+}
+
+const DISPLAY_ACTIONS = {
+	GALLERY: 0,
+	LIST: 1,
 }
 
 const MAX_ITEMS_TO_VIEW = 50;
@@ -58,6 +63,7 @@ const DEFAULT_SORT = ["time"];
 
 let fullResults;
 let currentSort = DEFAULT_SORT.slice();
+let currentDisplay = DISPLAY_ACTIONS.GALLERY;
 
 export default {
     name: 'Locations',
@@ -68,21 +74,22 @@ export default {
     data () {
         return {
             results: [],
+						gallery: true,
             toolbarActionMenuItems: [
             {
-                id: MENU_ACTIONS.SORT_TIME,
+                id: SORT_ACTIONS.BY_TIME,
                 text: 'topic_page.Locations.sortMenu.optionTime'
             },
             {
-                id: MENU_ACTIONS.SORT_LABEL,
+                id: SORT_ACTIONS.BY_LABEL,
                 text: 'topic_page.Locations.sortMenu.optionAlpha'
             },
             {
-                id: MENU_ACTIONS.SORT_REV,
+                id: SORT_ACTIONS.SORT_REVERSE,
                 text: 'topic_page.Locations.sortMenu.optionRev'
             },
             {
-                id: MENU_ACTIONS.SORT_CLEAR,
+                id: SORT_ACTIONS.SORT_CLEAR,
                 text: 'topic_page.Locations.sortMenu.optionClear'
             },
             ],
@@ -117,8 +124,9 @@ LIMIT 1000
         axios
             .post(url, body)
             .then(response => {
-							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
-							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+							fullResults = wdk.simplify.sparqlResults(response.data);
+							this.results = selectResults();
+							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
     },
@@ -137,24 +145,36 @@ LIMIT 1000
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case MENU_ACTIONS.SORT_TIME:
+            case SORT_ACTIONS.BY_TIME:
 								currentSort = ["time"];
                 break;
-            case MENU_ACTIONS.SORT_LABEL:
+            case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["location.label"];
                 break;
-            case MENU_ACTIONS.SORT_REV:
+            case SORT_ACTIONS.SORT_REVERSE:
 								for (let i in currentSort) {
 									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
 									else currentSort[i] = '-' + currentSort[i];
 								}
                 break;
-            case MENU_ACTIONS.SORT_CLEAR:
+            case SORT_ACTIONS.SORT_CLEAR:
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
-						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						this.results = selectResults();
         },
+				onDisplayChange (menuItem) {
+					switch (menuItem.id) {
+						case DISPLAY_ACTIONS.GALLERY:
+							currentDisplay = DISPLAY_ACTIONS.GALLERY;
+							break;
+						case DISPLAY_ACTIONS.LIST:
+							currentDisplay = DISPLAY_ACTIONS.LIST;
+							break;
+					}
+					this.results = selectResults();
+					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+				},
         fitTitle (title) {
             var newTitle = title;
             return newTitle;
@@ -181,6 +201,17 @@ LIMIT 1000
         }
     }
 }
+
+const selectResults = () => {
+	let tmpResults = fullResults;
+	if (currentSort[0].includes("time")) tmpResults = tmpResults.filter(x => x.time);
+	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+		tmpResults = tmpResults.filter(x => x.image);
+		if (tmpResults.length < 1) currentDisplay = DISPLAY_ACTIONS.LIST;
+	}
+	return tmpResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+}
+
 </script>
 
 <style scoped>
