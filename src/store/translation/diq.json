@@ -53,6 +53,9 @@
 				"remInappropriate": {
 					"menuTitle": "Hewl niyo, çıke"
 				}
+			},
+			"facetMenu": {
+				"type": "tewrê medya"
 			}
 		},
 		"TopicMap": {
@@ -92,6 +95,17 @@
 			"showBuried": "Tiya dardo we",
 			"showRelated": "Maneyo bin",
 			"showAll": "Pêro"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionAlpha": "Alfabetik"
+			},
+			"facetMenu": {
+				"optionColl": "Vıraştoğ"
+			},
+			"displayMenu": {
+				"optionList": "Liste"
+			}
 		},
 		"Works": {
 			"sortMenuOptionAlpha": "Alfabetik",

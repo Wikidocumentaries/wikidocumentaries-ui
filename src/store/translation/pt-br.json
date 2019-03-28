@@ -34,41 +34,73 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Imagens dos arquivos",
+			"intro": "Essas imagens são coletadas de várias fontes e nem sempre representam o tópico com precisão. Você pode favoritar uma imagem ou removê-la da página, se ela não pertencer.",
 			"actionsMenu": {
+				"menuTitle": "Exibir ou organizar imagens",
+				"tooltip": "Exibir ou organizar imagens",
 				"showImagesOnMapMenuText": "Mostrar todas as imagens no mapa",
-				"showImagesOnTimelineMenuText": "Mostrar todas as imagens na linha do tempo"
+				"showImagesOnTimelineMenuText": "Mostrar todas as imagens na linha do tempo",
+				"selectPortraits": "Selecione retratos de boa qualidade desta pessoa",
+				"arrangeByTime": "Organizar imagens por hora",
+				"selectWorks": "Selecione imagens de trabalhos"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Ações",
 				"menuTooltip": "Ações",
 				"doGeolocatingText": "Definir a localização...",
-				"showImageText": "Mostrar imagem"
+				"showImageText": "Mostrar imagem",
+				"selectFeatured": "Escolha como uma imagem de cabeçalho"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Remova a imagem porque...",
+				"shortMenuTitle": "Remover a imagem",
 				"menuTooltip": "Remover a imagem",
 				"remDepicted": {
 					"menuTitle": "Descreve este tópico em vez disso",
+					"shortMenuTitle": "Ele descreve outro tópico",
 					"search": "Procurar pelo tópico",
 					"browse": "Navegar pelos tópicos relacionados"
 				},
 				"remCreator": {
 					"menuTitle": "É por esse criador",
+					"shortMenuTitle": "É por outro criador",
 					"search": "Pesquisar pelo criador",
 					"browse": "Navegar pelos atores relacionados"
 				},
 				"remInappropriate": {
 					"menuTitle": "É inapropriado porque",
+					"shortMenuTitle": "É inadequado",
 					"privacy": "Viola a privacidade do representado",
 					"violence": "Exibe violência extrema",
 					"sex": "Ele exibe sexo explícito",
 					"copyvio": "Viola os direitos autorais",
 					"explain": "Deixe uma nota para explicar"
 				}
+			},
+			"facetMenu": {
+				"menuTitle": "Imagens facetadas por",
+				"menuTooltip": "Imagens facetadas por diferentes critérios",
+				"time": "horário",
+				"map": "mapa",
+				"people": "pessoas",
+				"places": "lugares",
+				"topics": "tópicos",
+				"form": "forma",
+				"imageSize": "tamanho da imagem",
+				"large": "grande",
+				"medium": "médio",
+				"small": "pequeno",
+				"type": "tipo de mídia",
+				"creator": "criador",
+				"platform": "plataforma",
+				"source": "fonte",
+				"saveSelection": "Salvar seleção como uma coleção",
+				"clear": "Escolhas claras"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Tópico no mapa",
+			"intro": "O lugar do tópico é exibido no mapa. Você também pode exibir as imagens e outros dados no mapa ou escolher um mapa histórico como uma camada de base.",
 			"chooseHistoricalBasemapMenuText": "Escolha o(s) mapa(s) básico(s) histórico(s)...",
 			"hideImagesMenuText": "Ocultar imagens",
 			"chooseTimelineMapsMenuText": "Escolha os mapas da linha do tempo...",
@@ -94,7 +126,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artigo",
-			"missingArticle": "Não há artigo sobre esse assunto em inglês. Veja se há artigos em outros idiomas no menu de idiomas acima ou crie o artigo clicando no ícone de mais.",
+			"missingArticle": "Não há artigo sobre esse tópico em seu idioma. Você pode ler o artigo em outro idioma disponível escolhendo no menu de idiomas acima. Você pode criar o artigo no seu idioma clicando no ícone de mais.",
+			"missingArticleFallback": "Não há artigo sobre esse tópico em seu idioma. Este artigo em outro idioma é mostrado para você com base nas suas preferências de fallback de idioma. Você pode ler o artigo em outro idioma disponível escolhendo no menu de idiomas acima. Você pode traduzir o artigo para o seu idioma, escolhendo-o no menu de idiomas.",
+			"missingArticleAuto": "Não há artigo sobre este tópico em nenhum idioma. Este texto curto foi criado automaticamente a partir dos fatos registrados. Você pode salvar este rascunho e começar a editar o artigo.",
 			"extLink": {
 				"linkTitleWP": "Leia ou edite na Wikipedia"
 			},
@@ -116,8 +150,61 @@
 			"showRelated": "Relacionado de outra forma",
 			"showAll": "Todos"
 		},
+		"Locations": {
+			"headerTitle": "Localizações",
+			"intro": "Aqui você vê tudo o que está localizado no tópico desta página. Exibir como lista para ver todos os locais que foram armazenados.",
+			"sortMenu": {
+				"title": "Ordenar localizações",
+				"tooltip": "Ordenar localizações",
+				"optionTime": "Por tempo",
+				"optionAlpha": "Alfabeticamente",
+				"optionDist": "Pela distância",
+				"optionRev": "Ordenação reversa",
+				"optionClear": "Tipo claro"
+			},
+			"facetMenu": {
+				"title": "Localizações de facetas por",
+				"tooltip": "Localizações de facetas por diferentes critérios",
+				"optionType": "Tipo",
+				"optionColl": "Criador",
+				"optionCity": "Localização"
+			},
+			"displayMenu": {
+				"title": "Mostrar como",
+				"tooltip": "Escolha a exibição",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todos"
+		},
+		"Depicted": {
+			"headerTitle": "Retratado",
+			"intro": "Este tópico é descrito nesses trabalhos. Classifique os trabalhos por critérios diferentes, exiba como lista para ver os sem imagem.",
+			"sortMenu": {
+				"title": "Ordenar trabalhos",
+				"tooltip": "Ordenar trabalhos",
+				"optionTime": "Por tempo",
+				"optionAlpha": "Alfabética",
+				"optionRev": "Ordenação reversa",
+				"optionClear": "Tipo claro"
+			},
+			"facetMenu": {
+				"title": "Trabalho faceto por",
+				"tooltip": "Faceta funciona por diferentes critérios",
+				"optionType": "Tipo",
+				"optionColl": "Criador"
+			},
+			"displayMenu": {
+				"title": "Mostrar como",
+				"tooltip": "Escolha a exibição",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todos"
+		},
 		"Works": {
 			"headerTitle": "Trabalho",
+			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Ordenar itens",
 			"sortMenuOptionTime": "Por tempo",
@@ -126,25 +213,30 @@
 			"sortMenuOptionRev": "Ordenação reversa",
 			"sortMenuOptionClear": "Tipo claro",
 			"facetMenuTitle": "Faceta por",
+			"facetMenuTooltip": "Faceta funciona por diferentes critérios",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Coleção",
-			"facetMenuOptionCity": "Cidade",
+			"facetMenuOptionCity": "Localização",
 			"displayMenuTitle": "Mostrar como",
+			"displayMenuTooltip": "Escolha a exibição",
 			"displayMenuOptionGallery": "Galeria",
 			"displayMenuOptionList": "Lista",
 			"showAll": "Todos"
 		},
 		"People": {
 			"headerTitle": "Pessoas relacionadas ao tópico",
+			"intro": "Estas são pessoas relacionadas ao tópico desta página. Você pode inserir uma página coletando todas as informações sobre a pessoa clicando nela. Você pode exibir as pessoas também como uma lista.",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Alterar a ordem de classificação",
 			"sortMenuOptionBirth": "Por data de nascimento",
 			"sortMenuOptionDeath": "Por data de morte",
+			"sortMenuOptionName": "Por nome",
 			"sortMenuOptionFirst": "Pelo primeiro nome",
 			"sortMenuOptionLast": "Pelo sobrenome",
 			"sortMenuOptionRev": "Ordem de classificação inversa",
 			"sortMenuOptionClear": "Tipo claro",
 			"facetMenuTitle": "Faceta por",
+			"facetMenuTooltip": "Faceta pessoas por diferentes aspectos",
 			"facetMenuOptionProfession": "Profissão",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Gênero"
@@ -182,7 +274,8 @@
 			"actionMenuTitle": "Ações",
 			"actionMenuTooltip": "Ações",
 			"languageMenuTitle": "Escolher idioma",
-			"myLanguagesItem": "Meus idiomas"
+			"myLanguagesItem": "Meus idiomas",
+			"languageMenuTranslate": "Traduzir este artigo"
 		},
 		"languages": {
 			"fi": "Finlandês",

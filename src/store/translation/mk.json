@@ -34,41 +34,71 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Слики од архиви",
+			"intro": "Овие слики се насобрани од неколку извори и затоа можеби не се секогаш точни и претставителни за темата. Можете да ги означувате сликите како омилени, или да ги отстранувате од страницата ако сметате дека не припаѓаат на неа.",
 			"actionsMenu": {
+				"menuTitle": "Прикажи и распореди слики",
+				"tooltip": "Прикажи или распореди слики",
 				"showImagesOnMapMenuText": "Прикажи ги сите слики на картата",
-				"showImagesOnTimelineMenuText": "Прикажи ги сите слики во времеследот"
+				"showImagesOnTimelineMenuText": "Прикажи ги сите слики во времеследот",
+				"selectPortraits": "Одберете квалитетни портрети од оваа личност"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Дејства",
 				"menuTooltip": "Дејства",
 				"doGeolocatingText": "Задај местоположба...",
-				"showImageText": "Прикажи слика"
+				"showImageText": "Прикажи слика",
+				"selectFeatured": "Направи ја заглавна слика"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Отстрани ја сликата бидејќи...",
+				"shortMenuTitle": "Отстрани слика",
 				"menuTooltip": "Отстрани слика",
 				"remDepicted": {
 					"menuTitle": "Ја прикажува оваа тема наместо наведената",
+					"shortMenuTitle": "Прикажува друга тема",
 					"search": "Пребарај ја темата",
 					"browse": "Прелистај по поврзани теми"
 				},
 				"remCreator": {
 					"menuTitle": "Е дело на овој творец, наместо наведениот",
+					"shortMenuTitle": "Дело е на друг творец",
 					"search": "Пребарај го творецот",
 					"browse": "Прелистај по поврзани творци"
 				},
 				"remInappropriate": {
 					"menuTitle": "Неумесна е бидејќи",
+					"shortMenuTitle": "Несоодветна е",
 					"privacy": "Ја нарушува приватноста на прикажаната личност",
 					"violence": "Прикажува жестоко насилство",
 					"sex": "Прикажува очигледен полов однос",
 					"copyvio": "Нарушува авторски права",
 					"explain": "Напишете прибелешка со објаснување"
 				}
+			},
+			"facetMenu": {
+				"menuTitle": "Аспектни слики од",
+				"menuTooltip": "Аспектни слики по други критериуми",
+				"time": "време",
+				"map": "карта",
+				"people": "луѓе",
+				"places": "места",
+				"topics": "теми",
+				"form": "облик",
+				"imageSize": "големина на сликата",
+				"large": "голема",
+				"medium": "средна",
+				"small": "мала",
+				"type": "вид на слика",
+				"creator": "творец",
+				"platform": "начин",
+				"source": "извор",
+				"saveSelection": "Зачувај го избраното како збирка",
+				"clear": "Поништи избрано"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Тема на картата",
+			"intro": "Местото на темата е прикажано на картата. На неа воедно да прикажувате слики и други податоци, или пак да изберете историска карта како подлога.",
 			"chooseHistoricalBasemapMenuText": "Изберете историски подложни карти...",
 			"hideImagesMenuText": "Скриј слики",
 			"chooseTimelineMapsMenuText": "Изберете времеследни карти...",
@@ -118,6 +148,7 @@
 		},
 		"Works": {
 			"headerTitle": "Дела",
+			"intro": "Ова се дела на даденото лице, колектив или организација кој(а) е тема на страницава. Можете да стиснете на страница што ги прибира сите информации за делото. Работи само за прикажаните слики. Изберете списочен приказ за да ги видите сите поврзани дела кои се складирани.",
 			"sortMenuTitle": "Подреди",
 			"sortMenuTooltip": "Подреди ставки",
 			"sortMenuOptionTime": "По време",
@@ -126,16 +157,19 @@
 			"sortMenuOptionRev": "По обратен редослед",
 			"sortMenuOptionClear": "Поништи подредено",
 			"facetMenuTitle": "Аспект од",
+			"facetMenuTooltip": "Аспектни дела по други критериуми",
 			"facetMenuOptionType": "Вид",
 			"facetMenuOptionColl": "Збирка",
 			"facetMenuOptionCity": "Град",
 			"displayMenuTitle": "Прикажи како",
+			"displayMenuTooltip": "Изберете го приказот",
 			"displayMenuOptionGallery": "Галерија",
 			"displayMenuOptionList": "Список",
 			"showAll": "Сите"
 		},
 		"People": {
 			"headerTitle": "Личности поврзани со темата",
+			"intro": "Ова се личности поврзани со темата на страницава. Можете да стиснете на страница што ги прибира сите информации за лицето. Исто така, можете да изберете личностите да се прикажуваат во список.",
 			"sortMenuTitle": "Подреди",
 			"sortMenuTooltip": "Смени редослед на подредување",
 			"sortMenuOptionBirth": "По датум нараѓање",
@@ -145,6 +179,7 @@
 			"sortMenuOptionRev": "Обратен редослед",
 			"sortMenuOptionClear": "Поништи подредено",
 			"facetMenuTitle": "Аспект од",
+			"facetMenuTooltip": "Аспектни Личности според други аспекти",
 			"facetMenuOptionProfession": "Занимање",
 			"facetMenuOptionCountry": "Земја",
 			"facetMenuOptionCity": "Пол"

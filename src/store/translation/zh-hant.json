@@ -64,6 +64,17 @@
 					"copyvio": "有侵犯版權",
 					"explain": "留下解釋用的註釋"
 				}
+			},
+			"facetMenu": {
+				"time": "時間",
+				"map": "地圖",
+				"topics": "主題",
+				"imageSize": "圖片大小",
+				"large": "大",
+				"medium": "中",
+				"small": "小",
+				"platform": "平台",
+				"source": "來源"
 			}
 		},
 		"TopicMap": {
@@ -115,6 +126,44 @@
 			"showRelated": "否則相關",
 			"showAll": "所有"
 		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "按時間",
+				"optionAlpha": "按字母順序",
+				"optionDist": "按距離",
+				"optionRev": "反向排序",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"optionType": "類型",
+				"optionColl": "建立者",
+				"optionCity": "地點"
+			},
+			"displayMenu": {
+				"title": "顯示成",
+				"optionGallery": "圖庫",
+				"optionList": "清單"
+			},
+			"showAll": "所有"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "按時間",
+				"optionAlpha": "按字母順序",
+				"optionRev": "反向排序",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"optionType": "類型",
+				"optionColl": "建立者"
+			},
+			"displayMenu": {
+				"title": "顯示成",
+				"optionGallery": "圖庫",
+				"optionList": "清單"
+			},
+			"showAll": "所有"
+		},
 		"Works": {
 			"headerTitle": "作品",
 			"sortMenuTitle": "排序",
@@ -127,7 +176,7 @@
 			"facetMenuTitle": "分面按",
 			"facetMenuOptionType": "類型",
 			"facetMenuOptionColl": "收藏",
-			"facetMenuOptionCity": "城市",
+			"facetMenuOptionCity": "位置",
 			"displayMenuTitle": "顯示成",
 			"displayMenuOptionGallery": "圖庫",
 			"displayMenuOptionList": "清單",
@@ -139,6 +188,7 @@
 			"sortMenuTooltip": "更改排序順序",
 			"sortMenuOptionBirth": "按出生日期",
 			"sortMenuOptionDeath": "按逝世日期",
+			"sortMenuOptionName": "按名稱",
 			"sortMenuOptionFirst": "按名字",
 			"sortMenuOptionLast": "按姓氏",
 			"sortMenuOptionRev": "反向排序順序",
@@ -181,7 +231,8 @@
 			"actionMenuTitle": "操作",
 			"actionMenuTooltip": "操作",
 			"languageMenuTitle": "選擇語言",
-			"myLanguagesItem": "我的語言"
+			"myLanguagesItem": "我的語言",
+			"languageMenuTranslate": "翻譯此條目"
 		},
 		"languages": {
 			"fi": "芬蘭語",

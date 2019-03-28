@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Susannaanas",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"WikiPhoenix"
 		]
 	},
 	"LandingPage": {
@@ -35,7 +36,8 @@
 			"headerTitle": "Bilder från arkiven",
 			"actionsMenu": {
 				"showImagesOnMapMenuText": "Visa alla bilder på kartan",
-				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen"
+				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
+				"arrangeByTime": "Arrangera bilder efter tid"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Åtgärder",
@@ -45,6 +47,7 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Ta bort bilden eftersom...",
+				"shortMenuTitle": "Ta bort bilden",
 				"menuTooltip": "Ta bort bilden",
 				"remDepicted": {
 					"menuTitle": "Det visar istället detta ämne",
@@ -64,6 +67,22 @@
 					"copyvio": "Den bryter mot upphovsrätten",
 					"explain": "Lämna en anteckning för att förklara"
 				}
+			},
+			"facetMenu": {
+				"time": "tid",
+				"map": "karta",
+				"places": "platser",
+				"topics": "ämnen",
+				"form": "formulär",
+				"imageSize": "bildstorlek",
+				"large": "stor",
+				"medium": "medel",
+				"small": "liten",
+				"type": "mediatyp",
+				"creator": "skapare",
+				"platform": "plattform",
+				"source": "källa",
+				"clear": "Rensa val"
 			}
 		},
 		"TopicMap": {
@@ -115,9 +134,56 @@
 			"showRelated": "Relaterat annars",
 			"showAll": "Alla"
 		},
+		"Locations": {
+			"headerTitle": "Platser",
+			"sortMenu": {
+				"title": "Sortera platser",
+				"tooltip": "Sortera platser",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionDist": "Efter avstånd",
+				"optionRev": "Omvänd sortering",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionColl": "Skapare",
+				"optionCity": "Plats"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Sortera verk",
+				"tooltip": "Sortera verk",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionRev": "Omvänd sortering",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionColl": "Skapare"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
 		"Works": {
 			"headerTitle": "Verk",
-			"sortMenuTitle": "Sortera"
+			"sortMenuTitle": "Sortera",
+			"facetMenuOptionCity": "Plats"
+		},
+		"People": {
+			"sortMenuOptionName": "Efter namn"
 		}
 	},
 	"map_place_match_page": {

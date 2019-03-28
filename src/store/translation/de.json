@@ -33,12 +33,15 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder von den Archiven",
+			"intro": "Diese Bilder wurden von mehreren Quellen gesammelt und könnten das Thema nicht immer exakt darstellen. Du kannst ein Bild favorisieren oder es von der Seite entfernen, falls es nicht dort hingehört.",
 			"actionsMenu": {
 				"menuTitle": "Bilder anzeigen oder anordnen",
 				"tooltip": "Bilder anzeigen oder anordnen",
 				"showImagesOnMapMenuText": "Alle Bilder auf der Karte anzeigen",
 				"showImagesOnTimelineMenuText": "Alle Bilder auf der Zeitleiste anzeigen",
-				"selectPortraits": "Porträts dieser Person in guter Qualität auswählen"
+				"selectPortraits": "Porträts dieser Person in guter Qualität auswählen",
+				"arrangeByTime": "Bilder nach Zeit anordnen",
+				"selectWorks": "Bilder der Werke auswählen"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Aktionen",
@@ -49,19 +52,23 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Das Bild entfernen, da …",
+				"shortMenuTitle": "Das Bild entfernen",
 				"menuTooltip": "Das Bild entfernen",
 				"remDepicted": {
 					"menuTitle": "Es stellt stattdessen dieses Thema dar",
+					"shortMenuTitle": "Es stellt ein anderes Thema dar",
 					"search": "Nach dem Thema suchen",
 					"browse": "Die verwandten Themen durchsuchen"
 				},
 				"remCreator": {
 					"menuTitle": "Es ist stattdessen von diesem Urheber",
+					"shortMenuTitle": "Es stammt von einem anderen Urheber",
 					"search": "Nach dem Urheber suchen",
 					"browse": "Die ähnlichen Urheber durchsuchen"
 				},
 				"remInappropriate": {
 					"menuTitle": "Es ist unangemessen, da",
+					"shortMenuTitle": "Es ist unangemessen",
 					"privacy": "Es verstößt gegen die Privatsphäre der Abgebildeten",
 					"violence": "Es zeigt extreme Gewalt",
 					"sex": "Es zeigt eindeutigen Sex",
@@ -70,15 +77,29 @@
 				}
 			},
 			"facetMenu": {
+				"menuTitle": "Aspektbilder nach",
 				"menuTooltip": "Aspektbilder nach unterschiedlichen Kriterien",
+				"time": "Zeit",
+				"map": "Karte",
+				"people": "Personen",
+				"places": "Orte",
+				"topics": "Themen",
+				"form": "Form",
 				"imageSize": "Bildgröße",
+				"large": "Groß",
+				"medium": "Mittel",
+				"small": "Klein",
+				"type": "Medientyp",
+				"creator": "Urheber",
 				"platform": "Plattform",
 				"source": "Quelle",
+				"saveSelection": "Auswahl als Sammlung speichern",
 				"clear": "Auswahlen löschen"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Thema auf der Karte",
+			"intro": "Der Ort des Themas wird auf der Karte angezeigt. Du kannst auch die Bilder und andere Daten auf der Karte anzeigen oder eine historische Karte als Basisebene auswählen.",
 			"chooseHistoricalBasemapMenuText": "Historische Basiskarte(n) auswählen …",
 			"hideImagesMenuText": "Bilder ausblenden",
 			"chooseTimelineMapsMenuText": "Zeitleistenkarten auswählen …",
@@ -104,7 +125,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
-			"missingArticle": "Es gibt keinen Artikel über dieses Thema auf Deutsch. Schau nach, ob es Artikel in anderen Sprachen im obigen Sprachmenü gibt oder erstelle einfach den Artikel, indem du auf das Plussymbol klickst.",
+			"missingArticle": "Es gibt keinen Artikel über dieses Thema in deiner Sprache. Du kannst den Artikel in einer anderen verfügbaren Sprache lesen, indem du sie im obigen Sprachmenü auswählst. Du kannst den Artikel in deiner Sprache erstellen, indem du auf das Plus-Symbol klickst.",
+			"missingArticleFallback": "Es gibt keinen Artikel über dieses Thema in deiner Sprache. Dieser Artikel wird dir basierend auf deinen Sprach-Fallback-Einstellungen in einer anderen Sprache angezeigt. Du kannst den Artikel in einer anderen verfügbaren Sprache lesen, indem du diese im obigen Sprachmenü auswählst. Du kannst den Artikel in deine Sprache übersetzen, indem du diese im Sprachmenü auswählst.",
+			"missingArticleAuto": "Es gibt keinen Artikel über dieses Thema in irgendeiner Sprache. Dieser kurze Text wurde automatisch von den aufgezeichneten Fakten erzeugt. Du kannst diesen Entwurf speichern und mit der Bearbeitung des Artikels beginnen.",
 			"extLink": {
 				"linkTitleWP": "In Wikipedia lesen oder bearbeiten"
 			},
@@ -126,8 +149,61 @@
 			"showRelated": "Anderweitig verwandt",
 			"showAll": "Alle"
 		},
+		"Locations": {
+			"headerTitle": "Standorte",
+			"intro": "Hier siehst du alles, was im Thema dieser Seite angesiedelt ist. Als Liste anzeigen, um alle Standorte anzusehen, die gespeichert wurden.",
+			"sortMenu": {
+				"title": "Standorte sortieren",
+				"tooltip": "Standorte sortieren",
+				"optionTime": "Nach Zeit",
+				"optionAlpha": "Alphabetisch",
+				"optionDist": "Nach Entfernung",
+				"optionRev": "Sortierung umkehren",
+				"optionClear": "Sortierung löschen"
+			},
+			"facetMenu": {
+				"title": "Aspektstandorte nach",
+				"tooltip": "Aspektstandorte nach unterschiedlichen Kriterien",
+				"optionType": "Typ",
+				"optionColl": "Urheber",
+				"optionCity": "Standort"
+			},
+			"displayMenu": {
+				"title": "Anzeigen als",
+				"tooltip": "Die Anzeige auswählen",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
+		"Depicted": {
+			"headerTitle": "Abgebildet",
+			"intro": "Dieses Thema ist in diesen Werken abgebildet. Die Werke nach unterschiedlichen Kriterien sortieren, als Liste anzeigen, um diejenigen ohne Bild anzusehen.",
+			"sortMenu": {
+				"title": "Werke sortieren",
+				"tooltip": "Werke sortieren",
+				"optionTime": "Nach Zeit",
+				"optionAlpha": "Alphabetisch",
+				"optionRev": "Sortierung umkehren",
+				"optionClear": "Sortierung löschen"
+			},
+			"facetMenu": {
+				"title": "Aspektwerke nach",
+				"tooltip": "Aspektwerke nach unterschiedlichen Kriterien",
+				"optionType": "Typ",
+				"optionColl": "Urheber"
+			},
+			"displayMenu": {
+				"title": "Anzeigen als",
+				"tooltip": "Die Anzeige auswählen",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
 		"Works": {
 			"headerTitle": "Werke",
+			"intro": "Dies sind Werke von der Person, dem Kollektiv oder der Organisation, die Thema dieser Seite ist. Du kannst eine Seite eingeben, die alle Informationen über das Werk sammelt, indem du auf sie klickst. Es werden nur Werke mit Bildern angezeigt. Als Liste anzeigen, um alle verwandten Werke anzusehen, die gespeichert wurden.",
 			"sortMenuTitle": "Sortieren",
 			"sortMenuTooltip": "Objekte sortieren",
 			"sortMenuOptionTime": "Nach Zeit",
@@ -136,9 +212,10 @@
 			"sortMenuOptionRev": "Umgekehrte Sortierung",
 			"sortMenuOptionClear": "Sortierung aufheben",
 			"facetMenuTitle": "Aspekt nach",
+			"facetMenuTooltip": "Aspektwerke nach unterschiedlichen Kriterien",
 			"facetMenuOptionType": "Typ",
 			"facetMenuOptionColl": "Sammlung",
-			"facetMenuOptionCity": "Stadt",
+			"facetMenuOptionCity": "Standort",
 			"displayMenuTitle": "Anzeigen als",
 			"displayMenuTooltip": "Die Anzeige auswählen",
 			"displayMenuOptionGallery": "Galerie",
@@ -147,15 +224,18 @@
 		},
 		"People": {
 			"headerTitle": "Personen bezüglich zum Thema",
+			"intro": "Dies sind Personen, die mit dem Thema dieser Seite verwandt sind. Du kannst eine Seite eingeben, die alle Informationen über die Person sammelt, indem du sie anklickst. Du kannst die Personen auch als Liste anzeigen.",
 			"sortMenuTitle": "Sortieren",
 			"sortMenuTooltip": "Die Sortierreihenfolge ändern",
 			"sortMenuOptionBirth": "Nach Geburtsdatum",
 			"sortMenuOptionDeath": "Nach Sterbedatum",
+			"sortMenuOptionName": "Nach Name",
 			"sortMenuOptionFirst": "Nach Vorname",
 			"sortMenuOptionLast": "Nach Nachname",
 			"sortMenuOptionRev": "Umgekehrte Sortierreihenfolge",
 			"sortMenuOptionClear": "Sortierung aufheben",
 			"facetMenuTitle": "Aspekt nach",
+			"facetMenuTooltip": "Personen nach unterschiedlichen Aspekten",
 			"facetMenuOptionProfession": "Beruf",
 			"facetMenuOptionCountry": "Staat",
 			"facetMenuOptionCity": "Geschlecht"
@@ -193,7 +273,8 @@
 			"actionMenuTitle": "Aktionen",
 			"actionMenuTooltip": "Aktionen",
 			"languageMenuTitle": "Sprache auswählen",
-			"myLanguagesItem": "Meine Sprachen"
+			"myLanguagesItem": "Meine Sprachen",
+			"languageMenuTranslate": "Diesen Artikel übersetzen"
 		},
 		"languages": {
 			"fi": "Finnisch",

@@ -34,41 +34,73 @@
 		},
 		"TopicImages": {
 			"headerTitle": "صور من الأرشيف",
+			"intro": "يتم جمع هذه الصور من عدة مصادر وقد لا تمثل دائما الموضوع بدقة، يمكنك تفضيل صورة أو إزالتها من الصفحة إذا لم تكن تنتمي.",
 			"actionsMenu": {
+				"menuTitle": "عرض أو ترتيب الصور",
+				"tooltip": "عرض أو ترتيب الصور",
 				"showImagesOnMapMenuText": "عرض جميع الصور على الخريطة",
-				"showImagesOnTimelineMenuText": "عرض جميع الصور على الجدول الزمني"
+				"showImagesOnTimelineMenuText": "عرض جميع الصور على الجدول الزمني",
+				"selectPortraits": "حدد صور جيدة النوعية لهذا الشخص",
+				"arrangeByTime": "ترتيب الصور حسب الوقت",
+				"selectWorks": "حدد صور الأعمال"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "الأفعال",
 				"menuTooltip": "أفعال",
 				"doGeolocatingText": "تعيين الموقع...",
-				"showImageText": "عرض الصورة"
+				"showImageText": "عرض الصورة",
+				"selectFeatured": "اختيار كصورة عنوان"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "أزل الصورة لأن...",
+				"shortMenuTitle": "أزل الصورة",
 				"menuTooltip": "أزل الصورة",
 				"remDepicted": {
 					"menuTitle": "يصور هذا الموضوع بدلا من ذلك",
+					"shortMenuTitle": "يصور موضوعا آخر",
 					"search": "ابحث عن الموضوع",
 					"browse": "تصفح المواضيع ذات الصلة"
 				},
 				"remCreator": {
 					"menuTitle": "بواسطة هذا المنشئ بدلا من ذلك",
+					"shortMenuTitle": "من قبل منشئ آخر",
 					"search": "ابحث عن المنشئ",
 					"browse": "تصفح الفاعلين المرتبطين"
 				},
 				"remInappropriate": {
 					"menuTitle": "هذا غير مناسب لأن",
+					"shortMenuTitle": "غير مناسبة",
 					"privacy": "ينتهك خصوصية الصور",
 					"violence": "يعرض عنفا شديدا",
 					"sex": "تعرض جنسا صريحا",
 					"copyvio": "ينتهك حقوق الطبع والنشر",
 					"explain": "ترك ملاحظة للشرح"
 				}
+			},
+			"facetMenu": {
+				"menuTitle": "صور الوجه حسب",
+				"menuTooltip": "صور الوجه بمعايير مختلفة",
+				"time": "الوقت",
+				"map": "خريطة",
+				"people": "الأشخاص",
+				"places": "الأماكن",
+				"topics": "المواضيع",
+				"form": "النموذج",
+				"imageSize": "حجم الصورة",
+				"large": "كبيرة",
+				"medium": "متوسطة",
+				"small": "صغيرة",
+				"type": "نوع الوسائط",
+				"creator": "المنشئ",
+				"platform": "المنصة",
+				"source": "المصدر",
+				"saveSelection": "حفظ الاختيار كمجموعة",
+				"clear": "مسح الخيارات"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "الموضوع على الخريطة",
+			"intro": "يتم عرض مكان الموضوع على الخريطة، يمكنك أيضا عرض الصور والبيانات الأخرى على الخريطة أو اختيار خريطة تاريخية كطبقة أساسية.",
 			"chooseHistoricalBasemapMenuText": "اختر خريطة(خرائط) أساسية تاريخية...",
 			"hideImagesMenuText": "إخفاء الصور",
 			"chooseTimelineMapsMenuText": "اختر خرائط الجدول الزمني...",
@@ -94,7 +126,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "مقالة",
-			"missingArticle": "لا توجد مقالة حول هذا الموضوع بالعربية، تحقق مما إذا كانت هناك مقالات بلغات أخرى في قائمة اللغات أعلاه، أو قم بإنشاء المقالة بالنقر فوق رمز الزائد.",
+			"missingArticle": "لا توجد مقالة عن هذا الموضوع بلغتك، يمكنك قراءة المقالة بلغة أخرى متاحة من خلال الاختيار من قائمة اللغات أعلاه، يمكنك إنشاء المقالة بلغتك عن طريق النقر فوق أيقونة علامة الجمع.",
+			"missingArticleFallback": "لا توجد مقالة عن هذا الموضوع بلغتك، يتم عرض هذه المقالة بلغة أخرى لك استنادا إلى تفضيلات اللغة الاحتياطية الخاصة بك، يمكنك قراءة المقالة بلغة أخرى متاحة من خلال الاختيار من قائمة اللغات أعلاه، يمكنك ترجمة المقالة إلى لغتك باختيارها في قائمة اللغات.",
+			"missingArticleAuto": "لا توجد مقالة عن هذا الموضوع بأية لغة، تم إنشاء هذا النص القصير تلقائيا من الحقائق المسجلة، يمكنك حفظ هذه المسودة وبدء تحرير المقالة.",
 			"extLink": {
 				"linkTitleWP": "قراءة أو تحرير في ويكيبيديا"
 			},
@@ -116,8 +150,61 @@
 			"showRelated": "ذو صلة خلاف ذلك",
 			"showAll": "الكل"
 		},
+		"Locations": {
+			"headerTitle": "المواقع",
+			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
+			"sortMenu": {
+				"title": "فرز المواقع",
+				"tooltip": "فرز المواقع",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionDist": "حسب المسافة",
+				"optionRev": "عكس الترتيب",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "مواقع الوجه حسب",
+				"tooltip": "مواقع الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ",
+				"optionCity": "الموقع"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
+		"Depicted": {
+			"headerTitle": "المصور",
+			"intro": "هذا الموضوع مصور في هذه الأعمال، افرز الأعمال حسب معايير مختلفة، واعرضها كقائمة لرؤيتها دون صورة.",
+			"sortMenu": {
+				"title": "ترتيب الأعمال",
+				"tooltip": "ترتيب الأعمال",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionRev": "عكس الترتيب",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "أعمال الوجه حسب",
+				"tooltip": "أعمال الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
 		"Works": {
 			"headerTitle": "الأعمال",
+			"intro": "هذه هي أعمال الشخص أو الجماعة أو المنظمة، التي هي موضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات حول العمل من خلال النقر عليه، يعمل فقط مع الصور، اعرض كقائمة لرؤية جميع الأعمال ذات الصلة، التي تم تخزينها.",
 			"sortMenuTitle": "الترتيب",
 			"sortMenuTooltip": "فرز العناصر",
 			"sortMenuOptionTime": "حسب الوقت",
@@ -126,25 +213,30 @@
 			"sortMenuOptionRev": "عكس النوع",
 			"sortMenuOptionClear": "مسح الفرز",
 			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
 			"facetMenuOptionType": "النوع",
 			"facetMenuOptionColl": "المجموعة",
-			"facetMenuOptionCity": "المدينة",
+			"facetMenuOptionCity": "الموقع",
 			"displayMenuTitle": "العرض",
+			"displayMenuTooltip": "اختيار العرض",
 			"displayMenuOptionGallery": "معرض",
 			"displayMenuOptionList": "قائمة",
 			"showAll": "الكل"
 		},
 		"People": {
 			"headerTitle": "أشخاص مرتبطون بالموضوع",
+			"intro": "هؤلاء هم الأشخاص الذين يرتبطون بموضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات عن الشخص من خلال النقر عليها، يمكنك عرض الأشخاص أيضا كقائمة.",
 			"sortMenuTitle": "ترتيب",
 			"sortMenuTooltip": "تغيير ترتيب الفرز",
 			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
 			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
+			"sortMenuOptionName": "حسب الاسم",
 			"sortMenuOptionFirst": "حسب الاسم الأول",
 			"sortMenuOptionLast": "حسب الاسم الأخير",
 			"sortMenuOptionRev": "عكس الترتيب",
 			"sortMenuOptionClear": "مسح الفرز",
 			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",
 			"facetMenuOptionProfession": "المهنة",
 			"facetMenuOptionCountry": "البلد",
 			"facetMenuOptionCity": "الجنس"
@@ -182,7 +274,8 @@
 			"actionMenuTitle": "أفعال",
 			"actionMenuTooltip": "أفعال",
 			"languageMenuTitle": "اختر اللغة",
-			"myLanguagesItem": "لغتي"
+			"myLanguagesItem": "لغتي",
+			"languageMenuTranslate": "ترجمة هذه المقالة"
 		},
 		"languages": {
 			"fi": "الفنلندية",

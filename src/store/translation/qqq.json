@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -33,41 +34,41 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Main title for the Images section",
-            "intro": "Introductory text to the Images section",
-            "actionsMenu": {
-                "menuTitle": "Menu title for Image actions menu",
-                "tooltip": "Tooltip for the Image actions menu",
-                "showImagesOnMapMenuText": "Menu item for showing images on the map",
+			"intro": "Help message for the Images section",
+			"actionsMenu": {
+				"menuTitle": "Menu title of the Actions menu in the Images section",
+				"tooltip": "Menu tooltip of the Actions menu in the Images section",
+				"showImagesOnMapMenuText": "Menu item for showing images on the map",
 				"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
-                "selectPortraits": "Menu iten for selecting portraits",
-                "arrangeByTime": "Menu item for arranging images by time"
-            },
+				"selectPortraits": "Menu item in the Actions menu in the Images section",
+				"arrangeByTime": "Menu item for arranging images by time"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Menu title for the Images Actions menu",
 				"menuTooltip": "Tooltip text for the Actions menu",
 				"doGeolocatingText": "Menu item for Geolocating",
 				"showImageText": "Menu item for showing the image",
-                "selectFeatured": "Menu item to choose the image as a header image"
+				"selectFeatured": "Menu item in the Actions menu of an image in the Images section"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Menu title for the Remove menu",
-                "shortMenuTitle": "Short menu title for the Remove menu",
+				"shortMenuTitle": "Menu title of the Remove menu of an image in the Images section",
 				"menuTooltip": "Tooltip for the the Remove menu",
 				"remDepicted": {
 					"menuTitle": "Menu title text for the Depicts other topic suboptions in the Remove menu",
-					"shortMenuTitle": "Short menu title for Depicts other topic option in the Remove menu",
+					"shortMenuTitle": "Short menu option in the Remove menu of an image in the Images section to remove images by a topic that is not the same as the topic of the page",
 					"search": "Menu item for Search in the Remove menu",
 					"browse": "Menu item for Browse in the Remove menu"
 				},
 				"remCreator": {
 					"menuTitle": "Menu title for Other creator suboptions in the Remove menu",
-					"shortMenuTitle": "Short menu title for Other creator option in the Remove menu",
+					"shortMenuTitle": "Short menu option in the Remove menu of an image in the Images section to remove an image by a creator that is not the same as the topic of the page",
 					"search": "Menu item for Search for other creator in the Remove menu",
 					"browse": "Menu item for Browse other creators in the Remove menu"
 				},
 				"remInappropriate": {
 					"menuTitle": "Menu title for Inappropriate images suboptions in the Remove menu",
-					"shortMenuTitle": "Short menu title for the Inappropriate image in the Remove menu",
+					"shortMenuTitle": "Short menu option in the Remove menu of an image in the Images section to remove an inappropriate image",
 					"privacy": "Menu item for a privacy violation in the Inappropriate image menu",
 					"violence": "Menu item for a violence flag in the Inappropriate image menu",
 					"sex": "Menu item for explicit sex in the Inappropriate image menu",
@@ -75,30 +76,30 @@
 					"explain": "Menu item for leaving a note in the Inappropriate image menu"
 				}
 			},
-            "facetMenu": {
-                "menuTitle": "Menu title for faceting menu",
-                "menuTooltip": "Tooltip text for the Faceting menu",
-                "time": "Option Time in the Faceting menu",
-                "map": "Option Map in the Faceting menu",
-                "people": "Option People in the Faceting menu",
-                "places": "Option Places inthe Faceting menu",
-                "topics": "Option Topics in the Faceting menu",
-                "form": "Option For in the Faceting menu",
-                "imageSize": "Option Image size in the Faceting menu",
-                "large": "Option Large in the Image size option in the Faceting menu",
-                "medium": "Option Medium in the Image size option in the Faceting menu",
-                "small": "Option Small in the Image size option in the Faceting menu",
-                "type": "Option Type in the Faceting menu",
-                "creator": "Option Creator in the Faceting menu",
-                "platform": "Option Platform in the Faceting menu",
-                "source": "Option Source in the Faceting menu",
-                "saveSelection": "Option to Save selection as a collection in the Faceting menu",
-                "clear": "Option to Clear choices in the Faceting menu"
-            }
+			"facetMenu": {
+				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
+				"menuTooltip": "Menu tooltip of the Facet menu in the Images section",
+				"time": "Menu option in the Facet menu in the Images section to facet by time - the title and the option form a compound",
+				"map": "Option Map in the Faceting menu",
+				"people": "Menu option in the Facet menu in the Images section to facet by people - the title and the option form a compound",
+				"places": "Option Places inthe Faceting menu",
+				"topics": "Option Topics in the Faceting menu",
+				"form": "Menu option in the Facet menu in the Images section to facet by image form - the title and the option form a compound",
+				"imageSize": "Menu option in the Facet menu in the Images section to facet by image size - the title and the option form a compound",
+				"large": "Option Large in the Image size option in the Faceting menu",
+				"medium": "Option Medium in the Image size option in the Faceting menu",
+				"small": "Option Small in the Image size option in the Faceting menu",
+				"type": "Menu option in the Facet menu in the Images section to facet by image type - the title and the option form a compound",
+				"creator": "Menu option in the Facet menu in the Images section to facet by creator - the title and the option form a compound",
+				"platform": "Menu option in the Facet menu in the Images section to facet by publishing platform - the title and the option form a compound",
+				"source": "Menu option in the Facet menu in the Images section to facet by source - the title and the option form a compound",
+				"saveSelection": "Option in the Facet menu in the Images section to save the choices as a dynamic collection of images",
+				"clear": "Option in the Facet menu in the Images section to clear the choices"
+			}
 		},
 		"TopicMap": {
 			"headerTitle": "Main title in the Map section",
-            "intro": "Introductory text to the Map section",
+			"intro": "Introductory text of the Map section",
 			"chooseHistoricalBasemapMenuText": "Menu item for choosing the historical base mao in the Map menu",
 			"hideImagesMenuText": "Menu item for hiding images in the Map menu",
 			"chooseTimelineMapsMenuText": "Menu item for choosing maps in the Map menu",
@@ -148,7 +149,7 @@
 		},
 		"Works": {
 			"headerTitle": "Main title of the Works section",
-            "intro": "Introduction to the Works section",
+			"intro": "Introductory text of the Works section",
 			"sortMenuTitle": "Menu title of the Sort menu",
 			"sortMenuTooltip": "Tooltip of the Sort menu",
 			"sortMenuOptionTime": "Menu item for sorting by time",
@@ -157,19 +158,19 @@
 			"sortMenuOptionRev": "Menu item for reversing the current sort order",
 			"sortMenuOptionClear": "Menu item for clearing the current sort order",
 			"facetMenuTitle": "Menu title of the Facet menu in the Works component",
-			"facetMenuTooltip": "Tooltip of the Facet menu in the Works component",
+			"facetMenuTooltip": "Menu tooltip of the Facet menu in the Works section",
 			"facetMenuOptionType": "Menu item for faceting by type",
 			"facetMenuOptionColl": "Menu item for faceting by collection",
 			"facetMenuOptionCity": "Menu item for faceting by city\n{{Identical|City}}",
 			"displayMenuTitle": "Menu title of the Display menu",
-			"displayMenuTooltip": "Tooltip of the Display menu",
+			"displayMenuTooltip": "Display menu tooltip in the Works section",
 			"displayMenuOptionGallery": "Menu option for displaying as gallery",
 			"displayMenuOptionList": "Menu option for displaying as list",
 			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
 		},
 		"People": {
 			"headerTitle": "Main title of the People section",
-            "intro": "Introduction to the People section",
+			"intro": "Introductory text of the People section",
 			"sortMenuTitle": "Menu title of the sort menu",
 			"sortMenuTooltip": "Tooltip of the sort menu",
 			"sortMenuOptionBirth": "Menu item for sorting by birth date",
@@ -179,7 +180,7 @@
 			"sortMenuOptionRev": "Menu item for reversing the current sort order",
 			"sortMenuOptionClear": "Menu item for clearing the current sort order",
 			"facetMenuTitle": "Menu title of the Facet menu in the People component",
-			"facetMenuTooltip": "Tooltip of the Facet menu in the People component",
+			"facetMenuTooltip": "Menu tooltip of the Facet menu in the People section",
 			"facetMenuOptionProfession": "Menu item for faceting by profession",
 			"facetMenuOptionCountry": "Menu item for faceting by country",
 			"facetMenuOptionCity": "Menu item for faceting by gender"

@@ -33,41 +33,71 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Arkistojen kuvia",
+			"intro": "Nämä kuvat on koottu useista lähteistä eivätkä ne aina kuvaa aihetta täsmällisesti. Voit valita kuva suosikiksi tai poistaa sen sivulta, jos se ei liity aiheeseen.",
 			"actionsMenu": {
+				"menuTitle": "Näytä tai järjestele kuvia",
+				"tooltip": "Esitä tai järjestele kuvia",
 				"showImagesOnMapMenuText": "Näytä kaikki kuvat kartalla",
-				"showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla"
+				"showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla",
+				"selectPortraits": "Valitse hyvälaatuisia muotokuvia tästä henkilöstä"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Toiminnot",
 				"menuTooltip": "Toiminnot",
 				"doGeolocatingText": "Anna kuvan sijainti",
-				"showImageText": "Näytä kuva"
+				"showImageText": "Näytä kuva",
+				"selectFeatured": "Valitse pääkuvaksi"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Remove the image because...",
+				"shortMenuTitle": "Poista kuva",
 				"menuTooltip": "Poista kuva",
 				"remDepicted": {
 					"menuTitle": "Se esittää tätä aihetta sen sijaan",
+					"shortMenuTitle": "Se kuvaa toista aihetta",
 					"search": "Etsi aihetta",
 					"browse": "Selaa aiheeseen liittyviä muita aiheita"
 				},
 				"remCreator": {
 					"menuTitle": "Se on tältä tekijältä sen sijaan",
+					"shortMenuTitle": "Se on toiselta tekijältä",
 					"search": "Etsi tekijää",
 					"browse": "Selaa aiheeseen liittyviä toimijoita"
 				},
 				"remInappropriate": {
 					"menuTitle": "Se on sopimaton koska",
+					"shortMenuTitle": "Se on asiaton",
 					"privacy": "Se rikkoo kuvassa esiintyvien yksityisyyttä",
 					"violence": "Se kuvaa raakaa väkivaltaa",
 					"sex": "Se kuvaa avoimesti seksiä",
 					"copyvio": "Se rikkoo tekijänoikeutta",
 					"explain": "Jätä selittävä viesti"
 				}
+			},
+			"facetMenu": {
+				"menuTitle": "Ryhmittele kuvia",
+				"menuTooltip": "Ryhmittele kuvia eri tavoilla",
+				"time": "aika",
+				"map": "kartta",
+				"people": "henkilöt",
+				"places": "paikat",
+				"topics": "aiheet",
+				"form": "muoto",
+				"imageSize": "kuvakoko",
+				"large": "suuri",
+				"medium": "keskikokoinen",
+				"small": "pieni",
+				"type": "kuvan tyyppi",
+				"creator": "tekijä",
+				"platform": "alusta",
+				"source": "lähde",
+				"saveSelection": "Tallenna valinnat kokoelmaksi",
+				"clear": "Tyhjennä valinnat"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Sijainti kartalla",
+			"intro": "Aiheen paikka esitetään kartalla. Voit myös näyttää kuvat tai muut tiedot kartalla tai valita historiallisen kartan pohjakartaksi.",
 			"chooseHistoricalBasemapMenuText": "Valitse historiallinen taustakartta tai kartat...",
 			"hideImagesMenuText": "Piilota kuvat",
 			"chooseTimelineMapsMenuText": "Valitse aikajanan kartat...",
@@ -117,6 +147,7 @@
 		},
 		"Works": {
 			"headerTitle": "Teokset",
+			"intro": "Nämä ovat aiheena olevan henkilön, kollektiivin tai organisaation tekemiä teoksia. Klikkaamalla voit näyttää siihen liittyvän sivun. Vain kuvalliset kohteet ovat näkyvissä. Näet kaikki esittämällä teokset listana.",
 			"sortMenuTitle": "Järjestä",
 			"sortMenuTooltip": "Järjestä teokset",
 			"sortMenuOptionTime": "Ajan perusteella",
@@ -125,16 +156,19 @@
 			"sortMenuOptionRev": "Käänteinen järjestys",
 			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
 			"facetMenuTitle": "Ryhmittele",
+			"facetMenuTooltip": "Ryhmittele teoksia eri tavoilla",
 			"facetMenuOptionType": "Tyypin mukaan",
 			"facetMenuOptionColl": "Kokoelman mukaan",
 			"facetMenuOptionCity": "Kunnan mukaan",
 			"displayMenuTitle": "Näytä",
+			"displayMenuTooltip": "Valitse näyttötapa",
 			"displayMenuOptionGallery": "Galleriana",
 			"displayMenuOptionList": "Luettelona",
 			"showAll": "Kaikki"
 		},
 		"People": {
 			"headerTitle": "Aiheeseen liittyvät ihmiset",
+			"intro": "Nämä ovat henkilöitä, jotka liittyvät tämän sivun aiheeseen. Voit näyttää siihen liittyvän sivun klikkaamalla. Voit myös esittää henkilöt luettelona.",
 			"sortMenuTitle": "Järjestä",
 			"sortMenuTooltip": "Muuta järjestystä",
 			"sortMenuOptionBirth": "Syntymäajan mukaan",
@@ -144,6 +178,7 @@
 			"sortMenuOptionRev": "Käänteinen järjestys",
 			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
 			"facetMenuTitle": "Ryhmittele",
+			"facetMenuTooltip": "Ryhmittele henkilöitä eri tavoilla",
 			"facetMenuOptionProfession": "Ammatin mukaan",
 			"facetMenuOptionCountry": "Maan mukaan",
 			"facetMenuOptionCity": "Sukupuolen mukaan"

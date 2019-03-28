@@ -27,7 +27,8 @@
 		"TopicImages": {
 			"actionsMenu": {
 				"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
-				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시"
+				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
+				"arrangeByTime": "시간순으로 이미지 정렬"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "동작",
@@ -37,6 +38,7 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "이미지 제거 이유",
+				"shortMenuTitle": "이미지 제거",
 				"menuTooltip": "이미지 제거",
 				"remDepicted": {
 					"search": "주제 검색",
@@ -46,8 +48,14 @@
 					"search": "만든이 검색"
 				},
 				"remInappropriate": {
-					"menuTitle": "부적절한 이유:"
+					"menuTitle": "부적절한 이유:",
+					"shortMenuTitle": "부적절합니다"
 				}
+			},
+			"facetMenu": {
+				"type": "미디어 유형",
+				"creator": "만든이",
+				"platform": "플랫폼"
 			}
 		},
 		"TopicMap": {
@@ -88,13 +96,50 @@
 			"showBuried": "여기에 묻힘",
 			"showAll": "모두"
 		},
+		"Locations": {
+			"headerTitle": "위치",
+			"sortMenu": {
+				"optionTime": "시간순",
+				"optionAlpha": "알파벳순",
+				"optionDist": "거리순",
+				"optionClear": "정렬 지우기"
+			},
+			"facetMenu": {
+				"optionColl": "만든이",
+				"optionCity": "위치"
+			},
+			"displayMenu": {
+				"title": "표시 이름",
+				"tooltip": "디스플레이 선택",
+				"optionGallery": "갤러리",
+				"optionList": "목록"
+			},
+			"showAll": "모두"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "시간순",
+				"optionAlpha": "알파벳순",
+				"optionClear": "정렬 지우기"
+			},
+			"facetMenu": {
+				"optionColl": "만든이"
+			},
+			"displayMenu": {
+				"tooltip": "디스플레이 선택",
+				"optionGallery": "갤러리",
+				"optionList": "목록"
+			},
+			"showAll": "모두"
+		},
 		"Works": {
 			"sortMenuTitle": "정렬",
 			"sortMenuOptionTime": "시간순",
 			"sortMenuOptionAlpha": "알파벳순",
 			"sortMenuOptionDist": "거리순",
 			"sortMenuOptionClear": "정렬 지우기",
-			"facetMenuOptionCity": "도시",
+			"facetMenuOptionCity": "위치",
+			"displayMenuTooltip": "디스플레이 선택",
 			"displayMenuOptionGallery": "갤러리",
 			"displayMenuOptionList": "목록",
 			"showAll": "모두"

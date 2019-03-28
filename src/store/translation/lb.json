@@ -35,6 +35,14 @@
 			"imagesRemoveMenu": {
 				"menuTitle": "D'Bild ewechhuele well...",
 				"menuTooltip": "D'Bild ewechhuelen"
+			},
+			"facetMenu": {
+				"map": "Kaart",
+				"places": "Plazen",
+				"topics": "Themen",
+				"large": "grouss",
+				"medium": "mëttel",
+				"small": "kleng"
 			}
 		},
 		"TopicMap": {
@@ -75,11 +83,15 @@
 			"showAll": "All"
 		},
 		"Works": {
+			"facetMenuOptionType": "Typ",
 			"facetMenuOptionCity": "Stad",
 			"showAll": "All"
 		},
 		"People": {
-			"sortMenuOptionBirth": "Nom Gebuertsdatum"
+			"sortMenuOptionBirth": "Nom Gebuertsdatum",
+			"facetMenuOptionProfession": "Beruff",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Geschlecht"
 		}
 	},
 	"map_place_match_page": {

@@ -1,0 +1,162 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16",
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Cerca",
+		"searchInputPlaceHolder": "Trovi un soggetto o crede uno nuovo"
+	},
+	"MainPage": {
+		"topicPageName": "Pagina del soggetto",
+		"mapPlaceMatchPageName": "Combinare nomi di luoghi",
+		"mapSearchPageName": "Cercare mappe",
+		"wikiTopicErrorMessage": "Non si ha potuto trovare una pagina di Wikipedia partorisca il soggetto nel linguaggio odierno o ci fu un altro errore inaspettato.",
+		"returnToHomeMessage": "Tornare alla pagina di benvenuto"
+	},
+	"WaitPage": {
+		"waitMessage": "Un momento, per favore... Recuperando dati di Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Sceglie uno o varie mappe storiche di base",
+			"chooseMapHelpNote": "Tip: ctrl+click permette selezionare varie mappe",
+			"yearAbbreviation": "a."
+		},
+		"Header": {
+			"titleEditText": "Modifica il titolo",
+			"titleApproveText": "Approvare questo titolo",
+			"subtitleEditText": "Modifica la descrizione",
+			"subtitleApproveText": "Approvare questa descrizione"
+		},
+		"TopicImages": {
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Mostrare tutte le immagini nella mappa",
+				"showImagesOnTimelineMenuText": "Mostrare tutte le immagini nella linea di meteo"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Azioni",
+				"menuTooltip": "Azioni",
+				"showImageText": "Mostra immagine"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Eliminare l'immagine perché...",
+				"shortMenuTitle": "Rimuovi immagine",
+				"menuTooltip": "Rimuovi immagine",
+				"remDepicted": {
+					"menuTitle": "Descrive questo soggetto invece",
+					"search": "Cercare il soggetto",
+					"browse": "Esplorare l'ha relazionato soggetti"
+				},
+				"remCreator": {
+					"menuTitle": "È per questo creatore invece",
+					"search": "Cercare il creatore",
+					"browse": "Esplorare gli attori riguardanti"
+				},
+				"remInappropriate": {
+					"menuTitle": "È inapropiado perché",
+					"shortMenuTitle": "contrassegna come inappropriato",
+					"privacy": "Viola l'intimità del descritto",
+					"violence": "Mostra violenza estrema",
+					"sex": "Mostra sesso esplicito",
+					"copyvio": "Viola i diritti di autore",
+					"explain": "Lasciare una nota partorisca spiegare"
+				}
+			},
+			"facetMenu": {
+				"time": "tempo",
+				"map": "mappa",
+				"people": "persone",
+				"places": "luoghi",
+				"topics": "argomenti",
+				"form": "modulo",
+				"imageSize": "dimensione immagine",
+				"large": "grande",
+				"medium": "media",
+				"small": "piccola",
+				"type": "tipo immagine",
+				"creator": "autore",
+				"platform": "piattaforma",
+				"source": "fonte"
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Soggetto nella mappa",
+			"chooseHistoricalBasemapMenuText": "Sceglie uno o varie mappe storiche di base",
+			"hideImagesMenuText": "Nascondere immagini",
+			"chooseTimelineMapsMenuText": "Sceglie mappe partorisca la linea di meteo...",
+			"showNearbyPlacesMenuText": "Mostrare luoghi vicini",
+			"hideNearbyPlacesMenuText": "Nascondere luoghi vicini"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Ritagli di diari",
+			"searhTopicFromArchivesMenuText": "Cercare diari nella Biblioteca Nazionale di Finlandia",
+			"addClipFromArchivesMenuText": "Aggiungere ritaglio..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Linea di meteo",
+			"showEventsOnTimelineMenuText": "Mostrare eventi per soggetto nella linea di meteo"
+		},
+		"Wikidata": {
+			"headerTitle": "Dati",
+			"extLink": {
+				"linkTitleWD": "Vedi o modifica in Wikidata"
+			},
+			"noTopicFoundText": "Argomento non trovato"
+		},
+		"Wikipedia": {
+			"headerTitle": "Voce",
+			"missingArticle": "Non c'è alcuna voce su questo argomento in italiano. Vedi se ci sono voci in altre lingue nel menu delle lingue sopra, o crea la voce cliccando nell'icona \"+\".",
+			"extLink": {
+				"linkTitleWP": "Leggi o modifica in Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Crea una voce in Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Leggi la voce in un'altra lingua",
+				"translateArticleText": "Traduci questa voce nella tua lingua",
+				"otherLanguagestext": "Altre lingue"
+			}
+		},
+		"Gallery": {
+			"headerTitle": "Persone legate all'argomento",
+			"menuTitle": "Mostra",
+			"showBorn": "Nato qui",
+			"showDied": "Morto qui",
+			"showBuried": "Sotterrato qui",
+			"showRelated": "Riguardanti di un'altra maniera",
+			"showAll": "Tutti"
+		},
+		"Works": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuTooltip": "Ordina elementi",
+			"sortMenuOptionRev": "Ordinamento inverso",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionCity": "Città",
+			"displayMenuTitle": "Mostra come",
+			"displayMenuOptionGallery": "Galleria",
+			"displayMenuOptionList": "Elenco",
+			"showAll": "Tutto"
+		},
+		"People": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuOptionBirth": "Per data di nascita",
+			"sortMenuOptionDeath": "Per data di morte",
+			"facetMenuOptionCountry": "Stato",
+			"facetMenuOptionCity": "Sesso"
+		}
+	},
+	"general": {
+		"cancel": "Annulla",
+		"menus": {
+			"actionMenuTitle": "Azioni"
+		},
+		"languages": {
+			"sv": "Svedese",
+			"es": "Spagnolo"
+		}
+	}
+}

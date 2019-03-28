@@ -34,41 +34,73 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Images d'archives",
+			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez favoriser une image ou la supprimer de la page si elle n’y appartient pas.",
 			"actionsMenu": {
+				"menuTitle": "Afficher ou arranger les images",
+				"tooltip": "Afficher ou arranger les images",
 				"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
-				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle"
+				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
+				"selectPortraits": "Sélectionner les portraits de bonne qualité de cette personne",
+				"arrangeByTime": "Classer les images selon l'heure",
+				"selectWorks": "Sélectionner les images de travaux"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Actions",
 				"menuTooltip": "Actions",
 				"doGeolocatingText": "Définir l’emplacement…",
-				"showImageText": "Afficher l’image"
+				"showImageText": "Afficher l’image",
+				"selectFeatured": "Choisir comme image d’entête"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Supprimer l’image parce que…",
+				"shortMenuTitle": "Supprimer l’image",
 				"menuTooltip": "Supprimer l’image",
 				"remDepicted": {
 					"menuTitle": "Il représente plutôt le sujet",
+					"shortMenuTitle": "Elle dépeint un autre sujet",
 					"search": "Rechercher le sujet",
 					"browse": "Naviguer dans les sujets associés"
 				},
 				"remCreator": {
 					"menuTitle": "C’est plutôt par ce créateur",
+					"shortMenuTitle": "Elle est d’un autre créateur",
 					"search": "Rechercher le créateur",
 					"browse": "Naviguer parmi les acteurs associés"
 				},
 				"remInappropriate": {
 					"menuTitle": "Ce n’est pas approprié parce que",
+					"shortMenuTitle": "Elle est inappropriée",
 					"privacy": "Cela viole la confidentialité de ce qui est représenté",
 					"violence": "Cela affiche une violence extrême",
 					"sex": "Cela affiche du sexe explicite",
 					"copyvio": "Cela viole le droit d’auteur",
 					"explain": "Laisser une note pour expliquer"
 				}
+			},
+			"facetMenu": {
+				"menuTitle": "Facette de l’image par",
+				"menuTooltip": "Facette des images selon différents critères",
+				"time": "horodatage",
+				"map": "carte",
+				"people": "personnes",
+				"places": "lieux",
+				"topics": "sujets",
+				"form": "formulaire",
+				"imageSize": "taille d’image",
+				"large": "grand",
+				"medium": "moyen",
+				"small": "petit",
+				"type": "type de média",
+				"creator": "créateur",
+				"platform": "plateforme",
+				"source": "source",
+				"saveSelection": "Enregistrer la sélection sous forme de collection",
+				"clear": "Effacer les choix"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Sujet sur la carte",
+			"intro": "L’endroit du sujet est affiché sur la carte. Vous pouvez aussi afficher les images et d’autres données sur la carte ou choisir une carte historique comme couche de base.",
 			"chooseHistoricalBasemapMenuText": "Choisir les cartes de base historiques…",
 			"hideImagesMenuText": "Masquer les images",
 			"chooseTimelineMapsMenuText": "Choisir les cartes de la frise temporelle…",
@@ -94,7 +126,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Article",
-			"missingArticle": "Il n’y a pas d’article sur ce sujet en anglais. Voir s’il y a des articles dans d’autres langues dans le menu de langues ci-dessus, ou créer l’article en cliquant sur l’icône plus.",
+			"missingArticle": "Il n’y a pas d’article sur ce sujet dans votre langue. Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu de langues ci-dessus. Vous pouvez créer l’article dans votre langue en cliquant sur l’icône plus.",
+			"missingArticleFallback": "Il n’y a pas d’article sur ce sujet dans votre langue. Cet article dans une autre langue vous est montré d’après vos préférences de langues en remplacement. Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu des langues ci-dessus. Vous pouvez traduire cet article dans votre langue en choisissant dans le menu des langues.",
+			"missingArticleAuto": "Il n’y a pas d’article sur ce sujet dans aucune langue. Ce texte bref a été créé automatiquement depuis les faits enregistrés. Vous pouvez sauvegarder ce brouillon et commencer la modification de l’article.",
 			"extLink": {
 				"linkTitleWP": "Lire ou modifier dans Wikipédia"
 			},
@@ -116,8 +150,61 @@
 			"showRelated": "Autre relation",
 			"showAll": "Tous"
 		},
+		"Locations": {
+			"headerTitle": "Emplacements",
+			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
+			"sortMenu": {
+				"title": "Trier les emplacements",
+				"tooltip": "Trier les emplacements",
+				"optionTime": "Selon l'heure",
+				"optionAlpha": "Par ordre alphabétique",
+				"optionDist": "Selon la distance",
+				"optionRev": "Inverser le tri",
+				"optionClear": "Ne pas trier"
+			},
+			"facetMenu": {
+				"title": "Facette des emplacements par",
+				"tooltip": "Facette des emplacements selon différents critères",
+				"optionType": "Type",
+				"optionColl": "Créateur",
+				"optionCity": "Emplacement"
+			},
+			"displayMenu": {
+				"title": "Afficher comme",
+				"tooltip": "Choisir l’affichage",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Tous"
+		},
+		"Depicted": {
+			"headerTitle": "Dépeint",
+			"intro": "Ce sujet est dépeint dans ces travaux. Trier les travaux selon divers critères, affichés sous forme de liste pour voir ceux sans image.",
+			"sortMenu": {
+				"title": "Tri activé",
+				"tooltip": "Tri activé",
+				"optionTime": "Selon l'heure",
+				"optionAlpha": "Par ordre alphabétique",
+				"optionRev": "Tri inversé",
+				"optionClear": "Ne pas trier"
+			},
+			"facetMenu": {
+				"title": "Facette des travaux par",
+				"tooltip": "Facette des travaux selon différents critères",
+				"optionType": "Type",
+				"optionColl": "Créateur"
+			},
+			"displayMenu": {
+				"title": "Afficher comme",
+				"tooltip": "Choisir l’affichage",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Tous"
+		},
 		"Works": {
 			"headerTitle": "Works",
+			"intro": "Ce sont les travaux faits par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur le travail en cliquant dessus. Seuls les travaux avec des images sont affichés. Afficher comme une liste pour voir tous les travaux reliés qui ont été stockés.",
 			"sortMenuTitle": "Trier",
 			"sortMenuTooltip": "Trier les éléments",
 			"sortMenuOptionTime": "Selon l'heure",
@@ -126,25 +213,30 @@
 			"sortMenuOptionRev": "Tri inversé",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facet par",
+			"facetMenuTooltip": "Facette de travaux selon différents critères",
 			"facetMenuOptionType": "Type",
 			"facetMenuOptionColl": "Collection",
-			"facetMenuOptionCity": "Ville",
+			"facetMenuOptionCity": "Emplacement",
 			"displayMenuTitle": "Afficher comme",
+			"displayMenuTooltip": "Choisir l’affichage",
 			"displayMenuOptionGallery": "Galerie",
 			"displayMenuOptionList": "Lister",
 			"showAll": "Tout"
 		},
 		"People": {
 			"headerTitle": "Personnes liées au sujet",
+			"intro": "Il y a des gens qui sont liés au sujet sur cette page. Vous pouvez saisir une page collectant toutes les informations sur la personne en cliquant dessus. Vous pouvez afficher les gens aussi sous forme de liste.",
 			"sortMenuTitle": "Trier",
 			"sortMenuTooltip": "Modifier l'ordre de tri",
 			"sortMenuOptionBirth": "Par date de naissance",
 			"sortMenuOptionDeath": "Par date de décès",
+			"sortMenuOptionName": "Par nom",
 			"sortMenuOptionFirst": "Par prénom",
 			"sortMenuOptionLast": "Par nom de famille",
 			"sortMenuOptionRev": "Ordre de tri inverse",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facet par",
+			"facetMenuTooltip": "Facette des gens selon différents aspects",
 			"facetMenuOptionProfession": "Profession",
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"
@@ -182,7 +274,8 @@
 			"actionMenuTitle": "Actions",
 			"actionMenuTooltip": "Actions",
 			"languageMenuTitle": "Choisir la langue",
-			"myLanguagesItem": "Mes langues"
+			"myLanguagesItem": "Mes langues",
+			"languageMenuTranslate": "Traduire cet article"
 		},
 		"languages": {
 			"fi": "Finnois",

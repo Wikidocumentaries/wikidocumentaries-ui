@@ -46,6 +46,7 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Eliminar la imagen porque...",
+				"shortMenuTitle": "Quitar imagen",
 				"menuTooltip": "Eliminar imagen",
 				"remDepicted": {
 					"menuTitle": "Describe este tema en cambio",
@@ -65,6 +66,12 @@
 					"copyvio": "Viola los derechos de autor",
 					"explain": "Dejar una nota para explicar"
 				}
+			},
+			"facetMenu": {
+				"topics": "temas",
+				"imageSize": "tamaño de imagen",
+				"platform": "plataforma",
+				"source": "fuente"
 			}
 		},
 		"TopicMap": {
