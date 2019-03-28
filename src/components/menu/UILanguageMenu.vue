@@ -129,6 +129,45 @@ export default {
             case MENU_ACTIONS.CHANGE_LANGUAGE_ES:
                 language = 'es';
                 break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_AR:
+            //     language = 'ar';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_DA:
+            //     language = 'da';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_DE:
+            //     language = 'de';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_DIQ:
+            //     language = 'diq';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_FR:
+            //     language = 'fr';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_KO:
+            //     language = 'ko';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_LB:
+            //     language = 'lb';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_MK:
+            //     language = 'mk';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_NB:
+            //     language = 'nb';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_PTBR:
+            //     language = 'pt-br';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_SH:
+            //     language = 'sh';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_TR:
+            //     language = 'tr';
+            //     break;
+            // case MENU_ACTIONS.CHANGE_LANGUAGE_ZHHANT:
+            //     language = 'zh-hant';
+            //     break;
             }
             if (language) {
                 this.$i18n.locale = language;
