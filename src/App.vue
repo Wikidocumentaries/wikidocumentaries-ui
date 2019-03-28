@@ -395,10 +395,6 @@ i.wikiglyph {
     height: 100%;
 }
 
-/* .gallery-item:hover * {
-    transition: opacity height 80ms ease-in;
-} */
-
 .gallery-item:hover .gallery-image {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);

@@ -13,6 +13,19 @@ const MENU_ACTIONS = {
     CHANGE_LANGUAGE_EN: 1,
     CHANGE_LANGUAGE_SV: 2,
     CHANGE_LANGUAGE_ES: 3,
+    CHANGE_LANGUAGE_AR: 4,
+    CHANGE_LANGUAGE_DA: 5,
+    CHANGE_LANGUAGE_DE: 5,
+    CHANGE_LANGUAGE_DIQ: 7,
+    CHANGE_LANGUAGE_FR: 8,
+    CHANGE_LANGUAGE_KO: 9,
+    CHANGE_LANGUAGE_LB: 10,
+    CHANGE_LANGUAGE_MK: 11,
+    CHANGE_LANGUAGE_NB: 12,
+    CHANGE_LANGUAGE_PTBR: 13,
+    CHANGE_LANGUAGE_SH: 14,
+    CHANGE_LANGUAGE_TR: 15,
+    CHANGE_LANGUAGE_ZHHANT: 16,
 }
 
 export default {
@@ -38,6 +51,58 @@ export default {
                     id: MENU_ACTIONS.CHANGE_LANGUAGE_ES,
                     text: 'general.languages.es'
                 },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_AR,
+                //     text: 'general.languages.ar'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_DA,
+                //     text: 'general.languages.da'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_DE,
+                //     text: 'general.languages.de'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_DIQ,
+                //     text: 'general.languages.diq'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_FR,
+                //     text: 'general.languages.fr'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_KO,
+                //     text: 'general.languages.ko'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_LB,
+                //     text: 'general.languages.lb'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_MK,
+                //     text: 'general.languages.mk'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_NB,
+                //     text: 'general.languages.nb'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_PTBR,
+                //     text: 'general.languages.pt-br'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_SH,
+                //     text: 'general.languages.sh'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_TR,
+                //     text: 'general.languages.tr'
+                // },
+                // {
+                //     id: MENU_ACTIONS.CHANGE_LANGUAGE_ZHHANT,
+                //     text: 'general.languages.zh-hant'
+                // },
                 /*{
                     id: MENU_ACTIONS.MY_LANGUAGES,
                     text: 'general.menus.myLanguagesItem'

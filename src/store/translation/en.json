@@ -269,7 +269,8 @@
             "actionMenuTitle": "Actions",
             "actionMenuTooltip": "Actions",
             "languageMenuTitle": "Choose language",
-            "myLanguagesItem": "My languages"
+            "myLanguagesItem": "My languages",
+            "languageMenuTranslate": "Translate this article"
         },
         "languages": {
             "fi": "Finnish",
