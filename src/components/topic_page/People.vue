@@ -63,9 +63,7 @@ const DISPLAY_ACTIONS = {
 const MAX_ITEMS_TO_VIEW = 50;
 const DEFAULT_SORT = ["person.label"];
 
-let fullResults;
-let currentSort = DEFAULT_SORT.slice();
-let currentDisplay = DISPLAY_ACTIONS.GALLERY;
+let fullResults, currentSort, currentDisplay;
 
 export default {
     name: 'People',
@@ -102,6 +100,8 @@ export default {
         };
     },
     mounted() {
+				currentSort = DEFAULT_SORT.slice();
+				currentDisplay = DISPLAY_ACTIONS.GALLERY;
         var title = this.$store.state.wikidocumentaries.title;
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
