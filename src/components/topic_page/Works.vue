@@ -3,18 +3,18 @@
 	<div class="gallery-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.Works.headerTitle') }}</div>
-            <DisplayMenu></DisplayMenu>
+						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Works.sortMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Works.sortMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
-        <div v-if="imageitems.length" class="gallery">
+        <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
+            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
                 <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.work.label }}</div>
-                    <div class="thumb-credit">{{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}</div>
+                    <div class="thumb-credit">{{ item.type.label }} {{ item.time }} {{ item.copyrightLabel}}</div>
                 </div>
                 <!--div class="thumb-image-header"-->
                 <div class="thumb-image-header">
@@ -30,7 +30,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.work.value)" >
-            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.creation_year}} {{ item.publishing_year}} {{ item.copyrightLabel}}
+            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.time}} {{ item.copyrightLabel}}
             </a>
             </div>
         </div>
@@ -46,19 +46,25 @@ import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
-const MENU_ACTIONS = {
-    SORT_TIME: 0,
-    SORT_LABEL: 1,
-    SORT_DIST: 2,
-    SORT_REV: 3,
+const SORT_ACTIONS = {
+		BY_LABEL: 0,
+    BY_TIME: 1,
+    // SORT_DIST: 2,
+    SORT_REVERSE: 3,
     SORT_CLEAR: 4
 }
 
+const DISPLAY_ACTIONS = {
+	GALLERY: 0,
+	LIST: 1,
+}
+
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["creation_year", "publishing_year"];
+const DEFAULT_SORT = ["work.label"];
 
 let fullResults;
 let currentSort = DEFAULT_SORT.slice();
+let currentDisplay = DISPLAY_ACTIONS.GALLERY;
 
 export default {
     name: 'Works',
@@ -69,25 +75,26 @@ export default {
     data () {
         return {
             results: [],
+						gallery: true,
             toolbarActionMenuItems: [
+						{
+	              id: SORT_ACTIONS.BY_LABEL,
+	              text: 'topic_page.Works.sortMenuOptionAlpha'
+	          },
             {
-                id: MENU_ACTIONS.SORT_TIME,
+                id: SORT_ACTIONS.BY_TIME,
                 text: 'topic_page.Works.sortMenuOptionTime'
             },
-            {
-                id: MENU_ACTIONS.SORT_LABEL,
-                text: 'topic_page.Works.sortMenuOptionAlpha'
-            },
             // {
-            //     id: MENU_ACTIONS.SORT_DIST,
+            //     id: SORT_ACTIONS.SORT_DIST,
             //     text: 'topic_page.Works.sortMenuOptionDist'
             // },
             {
-                id: MENU_ACTIONS.SORT_REV,
+                id: SORT_ACTIONS.SORT_REVERSE,
                 text: 'topic_page.Works.sortMenuOptionRev'
             },
             {
-                id: MENU_ACTIONS.SORT_CLEAR,
+                id: SORT_ACTIONS.SORT_CLEAR,
                 text: 'topic_page.Works.sortMenuOptionClear'
             },
             ],
@@ -98,7 +105,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
+SELECT ?work ?workLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
     ?work ?p wd:Q216904.
@@ -106,16 +113,15 @@ SELECT ?work ?workLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?
     OPTIONAL { ?work wdt:P973 ?desc_url. }
     OPTIONAL { ?work wdt:P31 ?type. }
     OPTIONAL { ?work wdt:P195 ?collection. }
-    OPTIONAL { ?work wdt:P571 ?creation_date.
-             BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?work wdt:P577 ?publishing_date.
-             BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
+    OPTIONAL { ?work wdt:P571 ?creation_date. }
+    OPTIONAL { ?work wdt:P577 ?publishing_date. }
     OPTIONAL { ?work wdt:P6216 ?copyright. }
     OPTIONAL { ?work wdt:P123 ?publisher. }
     OPTIONAL { ?work wdt:P625 ?coordinates. }
     OPTIONAL { ?work wdt:P6375 ?address. }
     OPTIONAL { ?work wdt:P131* ?municipality.
               ?municipality (wdt:P31/wdt:P279) wd:Q13221722. }
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
 LIMIT 1000
@@ -125,19 +131,15 @@ LIMIT 1000
         axios
             .post(url, body)
             .then(response => {
-							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
-							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+							fullResults = wdk.simplify.sparqlResults(response.data);
+							this.results = selectResults();
+							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
     },
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
-        },
-        imageitems: function() {
-            return this.results.filter(function(u) {
-                return u.image;
-            })
         }
     },
     watch: {
@@ -145,26 +147,36 @@ LIMIT 1000
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case MENU_ACTIONS.SORT_TIME:
-								currentSort = ["creation_year", "publishing_year"];
-                break;
-            case MENU_ACTIONS.SORT_LABEL:
+						case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["work.label"];
+	              break;
+            case SORT_ACTIONS.BY_TIME:
+								currentSort = ["time", "work.label"];
                 break;
-            // case MENU_ACTIONS.SORT_DIST:
+            // case SORT_ACTIONS.SORT_DIST:
             //     break;
-            case MENU_ACTIONS.SORT_REV:
-								for (let i in currentSort) {
-									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
-									else currentSort[i] = '-' + currentSort[i];
-								}
+            case SORT_ACTIONS.SORT_REVERSE:
+								if (currentSort[0].charAt(0)=='-') currentSort[0]=currentSort[0].substr(1);
+								else currentSort[0] = '-' + currentSort[0];
                 break;
-            case MENU_ACTIONS.SORT_CLEAR:
+            case SORT_ACTIONS.SORT_CLEAR:
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
-						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						this.results = selectResults();
         },
+				onDisplayChange (menuItem) {
+					switch (menuItem.id) {
+						case DISPLAY_ACTIONS.GALLERY:
+							currentDisplay = DISPLAY_ACTIONS.GALLERY;
+							break;
+						case DISPLAY_ACTIONS.LIST:
+							currentDisplay = DISPLAY_ACTIONS.LIST;
+							break;
+					}
+					this.results = selectResults();
+					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+				},
         fitTitle (title) {
             var newTitle = title;
             return newTitle;
@@ -191,6 +203,20 @@ LIMIT 1000
         }
     }
 }
+
+const selectResults = () => {
+	let filteredResults = fullResults;
+	if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
+	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+		} else {
+			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+		}
+	}
+	return filteredResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+}
+
 </script>
 
 <style scoped>

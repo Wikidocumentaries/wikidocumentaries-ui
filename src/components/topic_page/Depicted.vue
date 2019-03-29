@@ -3,17 +3,17 @@
 	<div class="gallery-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.Depicted.headerTitle') }}</div>
-            <DisplayMenu></DisplayMenu>
+						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Depicted.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Depicted.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
-        <div v-if="imageitems.length" class="gallery">
-            <router-link tag="div" v-for="item in imageitems" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
+        <div v-if="gallery" class="gallery">
+            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
                 <img :src="item.image" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.depicted.label }}</div>
-                    <div class="thumb-credit">{{ item.depicted.typeLabel }} </div>
+                    <div class="thumb-credit">{{ item.type.label }} {{ item.time }} </div>
                 </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
@@ -28,7 +28,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.depicted.value)" >
-            <span class="thumb-title">{{ item.depicted.label }}</span>
+            <span class="thumb-title">{{ item.depicted.label }} {{ item.time }}</span>
             </a>
             </div>
         </div>
@@ -44,18 +44,24 @@ import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
-const MENU_ACTIONS = {
-    SORT_TIME: 0,
-    SORT_LABEL: 1,
-    SORT_REV: 2,
+const SORT_ACTIONS = {
+		BY_LABEL: 0,
+    BY_TIME: 1,
+    SORT_REVERSE: 2,
     SORT_CLEAR: 3
 }
 
+const DISPLAY_ACTIONS = {
+	GALLERY: 0,
+	LIST: 1,
+}
+
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["creation_year", "publishing_year"];
+const DEFAULT_SORT = ["depicted.label"];
 
 let fullResults;
 let currentSort = DEFAULT_SORT.slice();
+let currentDisplay = DISPLAY_ACTIONS.GALLERY;
 
 export default {
     name: 'Depicted',
@@ -66,21 +72,22 @@ export default {
     data () {
         return {
             results: [],
+						gallery: true,
             toolbarActionMenuItems: [
+						{
+	              id: SORT_ACTIONS.BY_LABEL,
+	              text: 'topic_page.Depicted.sortMenuOptionAlpha'
+	          },
             {
-                id: MENU_ACTIONS.SORT_TIME,
+                id: SORT_ACTIONS.BY_TIME,
                 text: 'topic_page.Depicted.sortMenuOptionTime'
             },
             {
-                id: MENU_ACTIONS.SORT_LABEL,
-                text: 'topic_page.Depicted.sortMenuOptionAlpha'
-            },
-            {
-                id: MENU_ACTIONS.SORT_REV,
+                id: SORT_ACTIONS.SORT_REVERSE,
                 text: 'topic_page.Depicted.sortMenuOptionRev'
             },
             {
-                id: MENU_ACTIONS.SORT_CLEAR,
+                id: SORT_ACTIONS.SORT_CLEAR,
                 text: 'topic_page.Depicted.sortMenuOptionClear'
             },
             ],
@@ -91,39 +98,34 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?depicted ?depictedLabel ?image ?creation_year ?publishing_year ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
+SELECT ?depicted ?depictedLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
     ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
     OPTIONAL { ?depicted wdt:P18 ?image. }
     OPTIONAL { ?depicted wdt:P973 ?desc_url. }
     OPTIONAL { ?depicted wdt:P31 ?type. }
     OPTIONAL { ?depicted wdt:P195 ?collection. }
-    OPTIONAL { ?depicted wdt:P571 ?creation_date.
-             BIND(STR(YEAR(?creation_date)) AS ?creation_year)}
-    OPTIONAL { ?depicted wdt:P577 ?publishing_date.
-             BIND(STR(YEAR(?publishing_date)) AS ?publishing_year)}
+    OPTIONAL { ?depicted wdt:P571 ?creation_date. }
+    OPTIONAL { ?depicted wdt:P577 ?publishing_date. }
     OPTIONAL { ?depicted wdt:P6216 ?copyright. }
     OPTIONAL { ?depicted wdt:P123 ?publisher. }
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
-LIMIT 50
+LIMIT 1000
         `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
             .then(response => {
-							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
-							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+							fullResults = wdk.simplify.sparqlResults(response.data);
+							this.results = selectResults();
+							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
     },
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
-        },
-        imageitems: function() {
-            return this.results.filter(function(u) {
-                return u.image;
-            })
         }
     },
     watch: {
@@ -131,24 +133,34 @@ LIMIT 50
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case MENU_ACTIONS.SORT_TIME:
-								currentSort = ["creation_year", "publishing_year"];
-                break;
-            case MENU_ACTIONS.SORT_LABEL:
+						case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["depicted.label"];
+	              break;
+            case SORT_ACTIONS.BY_TIME:
+								currentSort = ["time"];
                 break;
-            case MENU_ACTIONS.SORT_REV:
-								for (let i in currentSort) {
-									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
-									else currentSort[i] = '-' + currentSort[i];
-								}
+            case SORT_ACTIONS.SORT_REVERSE:
+								if (currentSort[0].charAt(0)=='-') currentSort[0]=currentSort[0].substr(1);
+								else currentSort[0] = '-' + currentSort[0];
                 break;
-            case MENU_ACTIONS.SORT_CLEAR:
+            case SORT_ACTIONS.SORT_CLEAR:
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
 						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
         },
+				onDisplayChange (menuItem) {
+					switch (menuItem.id) {
+						case DISPLAY_ACTIONS.GALLERY:
+							currentDisplay = DISPLAY_ACTIONS.GALLERY;
+							break;
+						case DISPLAY_ACTIONS.LIST:
+							currentDisplay = DISPLAY_ACTIONS.LIST;
+							break;
+					}
+					this.results = selectResults();
+					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+				},
         fitTitle (title) {
             var newTitle = title;
             return newTitle;
@@ -175,6 +187,20 @@ LIMIT 50
         }
     }
 }
+
+const selectResults = () => {
+	let filteredResults = fullResults;
+	if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
+	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+		} else {
+			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+		}
+	}
+	return filteredResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+}
+
 </script>
 
 <style scoped>

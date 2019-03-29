@@ -3,11 +3,12 @@
 	<div class="gallery-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.People.headerTitle') }}</div>
+						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
-        <div class="gallery">
+        <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
                 <img v-if="item.image" :src="item.image" class="gallery-image"/>
@@ -27,6 +28,13 @@
                 </div>
             </router-link>
         </div>
+				<div v-else class="list">
+            <div v-for="item in results" :key="item.id" class="listrow">
+            <a :href="getItemURL(item.person.value)" >
+            	<span class="thumb-title">{{ item.person.label }}</span> {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
+            </a>
+            </div>
+        </div>
 	</div>
 </div>
 </template>
@@ -37,48 +45,57 @@ import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import {sortResults} from '@/common/utils'
 import axios from 'axios'
 import wdk from 'wikidata-sdk'
+import DisplayMenu from '@/components/menu/DisplayMenu'
 
-const MENU_ACTIONS = {
-    SORT_BIRTH: 0,
-    SORT_DEATH: 1,
-    SORT_NAME: 2,
-    SORT_REV: 3,
+const SORT_ACTIONS = {
+		BY_LABEL: 0,
+    BY_BIRTH: 1,
+    BY_DEATH: 2,
+    SORT_REVERSE: 3,
     SORT_CLEAR: 4
 }
 
+const DISPLAY_ACTIONS = {
+	GALLERY: 0,
+	LIST: 1,
+}
+
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["birth_year", "death_year"];
+const DEFAULT_SORT = ["person.label"];
 
 let fullResults;
 let currentSort = DEFAULT_SORT.slice();
+let currentDisplay = DISPLAY_ACTIONS.GALLERY;
 
 export default {
     name: 'People',
     components: {
-        ToolbarMenu
+        ToolbarMenu,
+				DisplayMenu
     },
     data () {
         return {
             results: [],
+						gallery: true,
             toolbarActionMenuItems: [
+						{
+	              id: SORT_ACTIONS.BY_LABEL,
+	              text: 'topic_page.People.sortMenuOptionFirst'
+	          },
             {
-                id: MENU_ACTIONS.SORT_BIRTH,
+                id: SORT_ACTIONS.BY_BIRTH,
                 text: 'topic_page.People.sortMenuOptionBirth'
             },
             {
-                id: MENU_ACTIONS.SORT_DEATH,
+                id: SORT_ACTIONS.BY_DEATH,
                 text: 'topic_page.People.sortMenuOptionDeath'
             },
             {
-                id: MENU_ACTIONS.SORT_NAME,
-                text: 'topic_page.People.sortMenuOptionFirst'
-            },
-            {
-                id: MENU_ACTIONS.SORT_REV,
+                id: SORT_ACTIONS.SORT_REVERSE,
                 text: 'topic_page.People.sortMenuOptionRev'
             },
             {
-                id: MENU_ACTIONS.SORT_CLEAR,
+                id: SORT_ACTIONS.SORT_CLEAR,
                 text: 'topic_page.People.sortMenuOptionClear'
             },
             ],
@@ -119,8 +136,9 @@ LIMIT 1000
         axios
             .post(url, body)
             .then(response => {
-							fullResults = wdk.simplify.sparqlResults(response.data).sort(sortResults(currentSort));
-							this.results = fullResults.slice(0,MAX_ITEMS_TO_VIEW);
+							fullResults = wdk.simplify.sparqlResults(response.data);
+							this.results = selectResults();
+							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
     },
@@ -134,29 +152,39 @@ LIMIT 1000
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case MENU_ACTIONS.SORT_BIRTH:
-								currentSort = ["birth_year"];
-                break;
-            case MENU_ACTIONS.SORT_DEATH:
-								currentSort = ["death_year"];
-                break;
-            case MENU_ACTIONS.SORT_NAME:
+						case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["person.label"];
+	              break;
+            case SORT_ACTIONS.BY_BIRTH:
+								currentSort = ["birth_year", "person.label"];
                 break;
-						case MENU_ACTIONS.SORT_REV:
-								for (let i in currentSort) {
-									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
-									else currentSort[i] = '-' + currentSort[i];
-								}
+            case SORT_ACTIONS.BY_DEATH:
+								currentSort = ["death_year", "person.label"];
+                break;
+						case SORT_ACTIONS.SORT_REVERSE:
+								if (currentSort[0].charAt(0)=='-') currentSort[0]=currentSort[0].substr(1);
+								else currentSort[0] = '-' + currentSort[0];
 		            break;
-            case MENU_ACTIONS.SORT_CLEAR:
+            case SORT_ACTIONS.SORT_CLEAR:
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
-						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						this.results = selectResults();
 						// console.log("currentSort: ", currentSort);
 						// console.log("results: ", this.results);
         },
+				onDisplayChange (menuItem) {
+					switch (menuItem.id) {
+						case DISPLAY_ACTIONS.GALLERY:
+							currentDisplay = DISPLAY_ACTIONS.GALLERY;
+							break;
+						case DISPLAY_ACTIONS.LIST:
+							currentDisplay = DISPLAY_ACTIONS.LIST;
+							break;
+					}
+					this.results = selectResults();
+					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+				},
         fitTitle (title) {
             var newTitle = title;
             return newTitle;
@@ -184,6 +212,19 @@ LIMIT 1000
     }
 }
 
+const selectResults = () => {
+	let filteredResults = fullResults;
+	if (currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
+	if (currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
+	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+		} else {
+			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+		}
+	}
+	return filteredResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+}
 
 </script>
 
@@ -193,6 +234,7 @@ LIMIT 1000
     font-family: barlow condensed;
     text-transform: uppercase;
     font-size: 1.2em;
+		padding-bottom: 2px;
 }
 
 .thumb-title {
@@ -216,6 +258,14 @@ LIMIT 1000
     background: var(--main-blue);
     height: 35vh;
     width: 150px;
+}
+
+.list {
+    columns: 300px 3;
+}
+
+.listrow {
+    margin-left:20px;
 }
 
 </style>

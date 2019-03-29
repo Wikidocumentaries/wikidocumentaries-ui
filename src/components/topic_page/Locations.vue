@@ -47,8 +47,8 @@ import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const SORT_ACTIONS = {
-    BY_TIME: 0,
-    BY_LABEL: 1,
+		BY_LABEL: 0,
+    BY_TIME: 1,
     SORT_REVERSE: 2,
     SORT_CLEAR: 3
 }
@@ -59,7 +59,7 @@ const DISPLAY_ACTIONS = {
 }
 
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["time"];
+const DEFAULT_SORT = ["location.label"];
 
 let fullResults;
 let currentSort = DEFAULT_SORT.slice();
@@ -76,13 +76,13 @@ export default {
             results: [],
 						gallery: true,
             toolbarActionMenuItems: [
+						{
+	              id: SORT_ACTIONS.BY_LABEL,
+	              text: 'topic_page.Locations.sortMenu.optionAlpha'
+	          },
             {
                 id: SORT_ACTIONS.BY_TIME,
                 text: 'topic_page.Locations.sortMenu.optionTime'
-            },
-            {
-                id: SORT_ACTIONS.BY_LABEL,
-                text: 'topic_page.Locations.sortMenu.optionAlpha'
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
@@ -133,11 +133,6 @@ LIMIT 1000
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
-        },
-        imageitems: function() {
-            return this.results.filter(function(u) {
-                return u.image;
-            })
         }
     },
     watch: {
@@ -145,21 +140,19 @@ LIMIT 1000
     methods: {
         onDoMenuItemAction (menuItem) {
             switch (menuItem.id) {
-            case SORT_ACTIONS.BY_TIME:
-								currentSort = ["time"];
-                break;
-            case SORT_ACTIONS.BY_LABEL:
-								currentSort = ["location.label"];
-                break;
-            case SORT_ACTIONS.SORT_REVERSE:
-								for (let i in currentSort) {
-									if (currentSort[i].charAt(0)=='-') currentSort[i]=currentSort[i].substr(1);
-									else currentSort[i] = '-' + currentSort[i];
-								}
-                break;
-            case SORT_ACTIONS.SORT_CLEAR:
-								currentSort = DEFAULT_SORT.slice();
-                break;
+							case SORT_ACTIONS.BY_LABEL:
+									currentSort = ["location.label"];
+	                break;
+            	case SORT_ACTIONS.BY_TIME:
+									currentSort = ["time", "location.label"];
+                	break;
+            	case SORT_ACTIONS.SORT_REVERSE:
+									if (currentSort[0].charAt(0)=='-') currentSort[0]=currentSort[0].substr(1);
+									else currentSort[0] = '-' + currentSort[0];
+                	break;
+            	case SORT_ACTIONS.SORT_CLEAR:
+									currentSort = DEFAULT_SORT.slice();
+                	break;
             }
 						this.results = selectResults();
         },
@@ -203,13 +196,16 @@ LIMIT 1000
 }
 
 const selectResults = () => {
-	let tmpResults = fullResults;
-	if (currentSort[0].includes("time")) tmpResults = tmpResults.filter(x => x.time);
+	let filteredResults = fullResults;
+	if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
 	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
-		tmpResults = tmpResults.filter(x => x.image);
-		if (tmpResults.length < 1) currentDisplay = DISPLAY_ACTIONS.LIST;
+		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+		} else {
+			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+		}
 	}
-	return tmpResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+	return filteredResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
 }
 
 </script>
