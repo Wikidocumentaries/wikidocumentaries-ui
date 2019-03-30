@@ -1,5 +1,5 @@
 <template>
-    <ToolbarMenu v-if="toolbarActionMenuItems.length" icon="wikiglyph-translation" :tooltip="$t('topic_page.Wikipedia.languageMenu.menuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu v-if="toolbarActionMenuItems.length || currentLanguage != i18n.locale" icon="wikiglyph-translation" :tooltip="$t('topic_page.Wikipedia.languageMenu.menuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('topic_page.Wikipedia.languageMenu.menuTitle') }}</div>
         <a slot="menu-link" v-if="currentLanguage != $i18n.locale" :href="translateLink" class="menu-link" target="_blank">{{ $t('general.menus.languageMenuTranslate') }}</a>
     </ToolbarMenu>
