@@ -85,6 +85,7 @@ export default {
     line-height: 1.5;
     color: #333;
     width: auto;
+    height: auto;
 }
 
 /* Links inside the dropdown + Change color of dropdown links on hover */

@@ -2,7 +2,7 @@
   <div class="wikipedia">
     <div class="toolbar">
         <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
-        <ArticleLanguageMenu class="language-menu" @doLanguageChange="onLanguageChange"></ArticleLanguageMenu>
+        <ArticleLanguageMenu class="language-menu" :currentLanguage="language" :translateLink="translateLink" @doLanguageChange="onLanguageChange"></ArticleLanguageMenu>
         <HeaderLink v-if="wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
         <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
     </div>
@@ -40,7 +40,16 @@ export default {
         if (selection) {
           alert(selection);
         }
-      }
+      },
+      translateLink () {
+          const site = this.$store.state.wikidocumentaries.wikidata.sitelinks.filter(sitelink => sitelink.site == this.language + "wiki");
+          if (!site.length) {
+              return null;
+          }
+          const title = site[0].title;
+          const url = "https://" + this.$i18n.locale + ".wikipedia.org/wiki/Special:ContentTranslation?page=" + title + "&from=" + this.language + "&to="+ this.$i18n.locale + "&targettitle=&version=2";
+          return url;
+      },
   },
   data () {
     return {
