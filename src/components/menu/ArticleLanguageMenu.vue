@@ -7,6 +7,8 @@
 
 <script>
 
+import languageTranslations from '@/store/languages'
+
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
 export default {
@@ -25,7 +27,7 @@ export default {
                 const lang = sitelink.site.replace(/wiki/, ""); // enwiki -> en
                 return {
                     id: lang,
-                    text: lang,
+                    text: this.languageNames.get(lang + "wiki") || lang,
                 };
             }).filter(item => item.id != this.currentLanguage);
         },
@@ -41,6 +43,9 @@ export default {
             // good to go
             return true;
         },
+        languageNames() {
+            return new Map(languageTranslations.map(lang => [lang.wiki, lang.local]));
+        }
     },
     components: {
         ToolbarMenu,
