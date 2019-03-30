@@ -1,11 +1,11 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div class="row" :class="toggleExpand">
+    <div class="row" :class="[isExpanded ? 'expanded' : '']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
-      <div @click="toggleExpand()" class="haze"><div class="toolbar-item block">
-        <a class="toolbar-item-a"><i class="wikiglyph wikiglyph-caret-down"></i></a><span class="tooltip">{{ tooltip }}</span>
+      <div class="haze"><div class="toolbar-item block">
+        <a @click='isExpanded = !isExpanded' class="toolbar-item-a"><i class="wikiglyph" :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"></i></a><span class="tooltip">{{ tooltip }}</span>
     </div></div>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
@@ -73,12 +73,6 @@ export default {
             //console.log("HomePage.onShowImagesOnTimeline");
 
             this.$scrollTo("#topicTimeline");
-        },
-        toggleExpand: function(event) {
-            this.isExpanded = !this.isExpanded;
-            return {
-                expanded: isExpanded
-            }
         }
     }
 }

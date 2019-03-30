@@ -173,7 +173,7 @@
             "showAll": "All"
         },
         "Depicted": {
-            "headerTitle": "Depicted",
+            "headerTitle": "Depicted in",
             "intro": "This topic is depicted in these works. Sort the works by different criteria, display as list to see the ones without image.",
             "sortMenu": {
                 "title": "Sort works",

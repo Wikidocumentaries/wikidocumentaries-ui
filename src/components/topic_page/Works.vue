@@ -30,7 +30,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.work.value)" >
-            <span class="thumb-title">{{ item.work.label }}</span> {{ item.type.label }} {{ item.time}} {{ item.copyrightLabel}}
+            <b>{{ item.work.label }}</b> {{ item.type.label }} {{ item.time}} {{ item.copyrightLabel}}
             </a>
             </div>
         </div>

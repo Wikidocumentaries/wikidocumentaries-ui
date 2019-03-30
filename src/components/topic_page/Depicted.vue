@@ -28,7 +28,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.depicted.value)" >
-            <span class="thumb-title">{{ item.depicted.label }} {{ item.time }}</span>
+            <b>{{ item.depicted.label }} {{ item.time }}</b>
             </a>
             </div>
         </div>
