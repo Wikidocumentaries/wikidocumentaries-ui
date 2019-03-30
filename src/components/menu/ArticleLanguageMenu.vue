@@ -1,7 +1,7 @@
 <template>
-    <ToolbarMenu v-if="toolbarActionMenuItems.length || currentLanguage != i18n.locale" icon="wikiglyph-translation" :tooltip="$t('topic_page.Wikipedia.languageMenu.menuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu v-if="toolbarActionMenuItems.length || translateLinkVisible" icon="wikiglyph-translation" :tooltip="$t('topic_page.Wikipedia.languageMenu.menuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('topic_page.Wikipedia.languageMenu.menuTitle') }}</div>
-        <a slot="menu-link" v-if="currentLanguage != $i18n.locale" :href="translateLink" class="menu-link" target="_blank">{{ $t('general.menus.languageMenuTranslate') }}</a>
+        <a slot="menu-link" v-if="translateLinkVisible" :href="translateLink" class="menu-link" target="_blank">{{ $t('general.menus.languageMenuTranslate') }}</a>
     </ToolbarMenu>
 </template>
 
@@ -17,14 +17,29 @@ export default {
         translateLink: String,
     },
     computed: {
-        toolbarActionMenuItems () {
-            return this.$store.state.wikidocumentaries.wikidata.sitelinks.map((sitelink) => {
+        sitelinks() {
+            return this.$store.state.wikidocumentaries.wikidata.sitelinks;
+        },
+        toolbarActionMenuItems() {
+            return this.sitelinks.map(sitelink => {
                 const lang = sitelink.site.replace(/wiki/, ""); // enwiki -> en
                 return {
                     id: lang,
                     text: lang,
                 };
             }).filter(item => item.id != this.currentLanguage);
+        },
+        translateLinkVisible() {
+            if (this.sitelinks.filter(sitelink => sitelink.site == this.$i18n.locale + "wiki").length) {
+                // already available in the UI language
+                return false;
+            }
+            if (!this.sitelinks.filter(sitelink => sitelink.site == this.currentLanguage + "wiki").length) {
+                // not available in the source language
+                return false;
+            }
+            // good to go
+            return true;
         },
     },
     components: {
