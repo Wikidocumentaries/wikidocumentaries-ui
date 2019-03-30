@@ -1,6 +1,9 @@
 <template>
     <ToolbarMenu icon="wikiglyph-translation" :tooltip="$t('general.menus.languageMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('general.menus.languageMenuTitle') }}</div>
+        <!-- Tässä käännöslinkki
+        <a :href="translateLink" slot="menu-link" class="menu-link">{{ $t('general.menus.languageMenuTranslate') }}</a>
+        //-->
     </ToolbarMenu>
 </template>
 
@@ -29,6 +32,9 @@ export default {
                 };
             })
         },
+        // translateLink () {
+        //     return "https://" + 18 + ".wikipedia.org/wiki/Special:ContentTranslation?page=Lenkkimakkara&from="+ article + "&to="+ 18 + "&targettitle=&version=2"
+        // }
     },
     components: {
         ToolbarMenu,
@@ -43,6 +49,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.menu-link {
+    color: var(--main-red);
+    font-weight: bold;
+}
 
+.menu-link:hover {
+    color:white;
+}
 
 </style>

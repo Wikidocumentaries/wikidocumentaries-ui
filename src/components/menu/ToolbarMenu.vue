@@ -5,7 +5,10 @@
             <div class="menu-title">
                 <slot name="menu-title"></slot>
             </div>
+            <div class="options">
             <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
+            </div>
+            <slot name="menu-link"></slot>
             <slot name="custom-menu-item"></slot>
         </div>
     </div>
@@ -90,6 +93,11 @@ export default {
     color: white;
     box-shadow: none;
     outline: none;
+}
+
+.options {
+    max-height: 198px;
+    overflow-y: scroll;
 }
 
 </style>
