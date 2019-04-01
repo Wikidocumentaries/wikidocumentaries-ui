@@ -22,7 +22,7 @@
 	"topic_page": {
 		"BaseMapDialog": {
 			"chooseMapTitle": "選擇歷史性的地圖",
-			"chooseMapHelpNote": "提示：按下 ctrl 鍵 + 點擊能允許選擇多個地圖",
+			"chooseMapHelpNote": "提示：按下 ctrl 鍵和點擊能允許選擇多個地圖",
 			"yearAbbreviation": "年份"
 		},
 		"Header": {
@@ -33,31 +33,42 @@
 		},
 		"TopicImages": {
 			"headerTitle": "來自存檔的圖片",
+			"intro": "這些圖片是從數個來源所集合成的，而它們不一定能準確地反應出主題。您可以將圖片收藏下來，或是在不屬於主題時從頁面上移除。",
 			"actionsMenu": {
+				"menuTitle": "顯示或排列圖片",
+				"tooltip": "顯示或排列圖片",
 				"showImagesOnMapMenuText": "在地圖上秀出所有圖片",
-				"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片"
+				"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片",
+				"selectPortraits": "選擇此人物的優質肖像",
+				"arrangeByTime": "依時間排列圖片",
+				"selectWorks": "選擇圖像作品"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "操作",
 				"menuTooltip": "操作",
 				"doGeolocatingText": "設定位置…",
-				"showImageText": "秀出圖片"
+				"showImageText": "秀出圖片",
+				"selectFeatured": "挑選為標題圖片"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "移除圖片，因為…",
+				"shortMenuTitle": "移除圖片",
 				"menuTooltip": "移除圖片",
 				"remDepicted": {
 					"menuTitle": "描述主題取代",
+					"shortMenuTitle": "描述別的主題",
 					"search": "搜尋主題",
 					"browse": "瀏覽相關主題"
 				},
 				"remCreator": {
 					"menuTitle": "透過創建者取代",
+					"shortMenuTitle": "由其他建立者",
 					"search": "搜尋創建者",
 					"browse": "瀏覽相關行為者"
 				},
 				"remInappropriate": {
 					"menuTitle": "這不合適，因為",
+					"shortMenuTitle": "此為不當",
 					"privacy": "這違反了私隱描述",
 					"violence": "有表現出極端暴力",
 					"sex": "有表現出露骨色情",
@@ -66,19 +77,29 @@
 				}
 			},
 			"facetMenu": {
+				"menuTitle": "分面圖片依",
+				"menuTooltip": "分面圖片依不同標準",
 				"time": "時間",
 				"map": "地圖",
+				"people": "人物",
+				"places": "地點",
 				"topics": "主題",
+				"form": "表單",
 				"imageSize": "圖片大小",
 				"large": "大",
 				"medium": "中",
 				"small": "小",
+				"type": "多媒體類型",
+				"creator": "創建者",
 				"platform": "平台",
-				"source": "來源"
+				"source": "來源",
+				"saveSelection": "保存所選為收藏",
+				"clear": "清除挑選"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "地圖上的主題",
+			"intro": "主題的地點顯示在地圖上，您也可以顯示圖片和其它在地圖上的資料，或是挑選歷史地圖作為底層。",
 			"chooseHistoricalBasemapMenuText": "選擇歷史性的地圖…",
 			"hideImagesMenuText": "隱藏圖片",
 			"chooseTimelineMapsMenuText": "選擇時間軸地圖…",
@@ -104,7 +125,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "條目",
-			"missingArticle": "在英語裡沒有關於此主題的條目。查看上方語言選單是否有該條目的其它語言版本，或是透過點擊加號圖標來建立條目。",
+			"missingArticle": "在您的語言裡沒有關於此主題條目。您可以透過上方語言選單，挑選其它可用語言來閱讀條目。您可以透過點擊加號圖標，來建立您所使用語言的條目。",
+			"missingArticleFallback": "在您的語言裡關於此主題條目，此條目會依據您的語言備用偏好設定，來顯示成該語言版本。您可以透過從上方語言選單，挑選其它可用語言來閱讀條目。您也可以透過在語言選單裡挑選，來翻譯成您所使用語言的條目。",
+			"missingArticleAuto": "在任何語言裡沒有關於此主題的條目，此段短文字是以所記錄下的實情為依據來自動創建出，您可以保存草稿來開始編輯條目。",
 			"extLink": {
 				"linkTitleWP": "在維基百科閱讀或編輯"
 			},
@@ -127,7 +150,11 @@
 			"showAll": "所有"
 		},
 		"Locations": {
+			"headerTitle": "位置",
+			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
 			"sortMenu": {
+				"title": "排序位置",
+				"tooltip": "排序位置",
 				"optionTime": "按時間",
 				"optionAlpha": "按字母順序",
 				"optionDist": "按距離",
@@ -135,30 +162,40 @@
 				"optionClear": "清除排序"
 			},
 			"facetMenu": {
+				"title": "分面位置依",
+				"tooltip": "分面位置依不同標準",
 				"optionType": "類型",
-				"optionColl": "建立者",
-				"optionCity": "地點"
+				"optionColl": "創建者",
+				"optionCity": "位置"
 			},
 			"displayMenu": {
 				"title": "顯示成",
+				"tooltip": "挑選展示",
 				"optionGallery": "圖庫",
 				"optionList": "清單"
 			},
 			"showAll": "所有"
 		},
 		"Depicted": {
+			"headerTitle": "描述",
+			"intro": "此主題被描述在這些作品。排序作品依不同標準，缺少圖片的作品能透過顯示成清單能查看。",
 			"sortMenu": {
+				"title": "排序作品",
+				"tooltip": "排序作品",
 				"optionTime": "按時間",
 				"optionAlpha": "按字母順序",
 				"optionRev": "反向排序",
 				"optionClear": "清除排序"
 			},
 			"facetMenu": {
+				"title": "分面作品依",
+				"tooltip": "分面作品依不同標準",
 				"optionType": "類型",
-				"optionColl": "建立者"
+				"optionColl": "創建者"
 			},
 			"displayMenu": {
 				"title": "顯示成",
+				"tooltip": "挑選展示",
 				"optionGallery": "圖庫",
 				"optionList": "清單"
 			},
@@ -166,6 +203,7 @@
 		},
 		"Works": {
 			"headerTitle": "作品",
+			"intro": "這些是依屬於此頁面主題的人物、集體、或組織分出的作品，您可以透過點擊此來進入收集關於作品資訊的頁面。僅有附帶圖片的作品會秀出，可顯示成清單來查看所有已儲存的相關作品。",
 			"sortMenuTitle": "排序",
 			"sortMenuTooltip": "排序項目",
 			"sortMenuOptionTime": "按時間",
@@ -174,16 +212,19 @@
 			"sortMenuOptionRev": "反向排序",
 			"sortMenuOptionClear": "清除排序",
 			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面作品依不同標準",
 			"facetMenuOptionType": "類型",
 			"facetMenuOptionColl": "收藏",
 			"facetMenuOptionCity": "位置",
 			"displayMenuTitle": "顯示成",
+			"displayMenuTooltip": "挑選展示",
 			"displayMenuOptionGallery": "圖庫",
 			"displayMenuOptionList": "清單",
 			"showAll": "所有"
 		},
 		"People": {
 			"headerTitle": "與主題關聯的人物",
+			"intro": "這些是相關在此頁面主題的人物，您可以透過點擊此來進入收藏關於人物所有資訊的頁面，您也可以將人物顯示成清單。",
 			"sortMenuTitle": "排序",
 			"sortMenuTooltip": "更改排序順序",
 			"sortMenuOptionBirth": "按出生日期",
@@ -194,6 +235,7 @@
 			"sortMenuOptionRev": "反向排序順序",
 			"sortMenuOptionClear": "清除排序",
 			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面人物依不同外貌",
 			"facetMenuOptionProfession": "職業",
 			"facetMenuOptionCountry": "國家",
 			"facetMenuOptionCity": "性別"
@@ -215,7 +257,7 @@
 	"openlayersplugin": {
 		"WikimapsWarperLayer": {
 			"attribution1PrefixText": "關於歷史地圖，請查看製作群與版權",
-			"attribution2PrefixText": "矯正地圖自"
+			"attribution2PrefixText": "矯正地圖從"
 		}
 	},
 	"menu": {

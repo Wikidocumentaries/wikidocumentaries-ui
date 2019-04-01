@@ -39,7 +39,9 @@
 				"tooltip": "Esitä tai järjestele kuvia",
 				"showImagesOnMapMenuText": "Näytä kaikki kuvat kartalla",
 				"showImagesOnTimelineMenuText": "Näytä kaikki kuvat aikajanalla",
-				"selectPortraits": "Valitse hyvälaatuisia muotokuvia tästä henkilöstä"
+				"selectPortraits": "Valitse hyvälaatuisia muotokuvia tästä henkilöstä",
+				"arrangeByTime": "Järjestä kuvat ajan perusteella",
+				"selectWorks": "Valitse teosten kuvia"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Toiminnot",
@@ -87,7 +89,7 @@
 				"large": "suuri",
 				"medium": "keskikokoinen",
 				"small": "pieni",
-				"type": "kuvan tyyppi",
+				"type": "mediatyypin mukaan",
 				"creator": "tekijä",
 				"platform": "alusta",
 				"source": "lähde",
@@ -123,7 +125,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikkeli",
-			"missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Katso ylläolevasta kielivalikosta, onko aiheesta kirjoitettu artikkeleita toisilla kielillä tai luo artikkeli itse klikkaamalla plus-ikonia.",
+			"missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Voit lukea artikkelin toisella kielellä valitsemalla ylläolevasta kielivalikosta. Voit luoda artikkelin itse klikkaamalla plus-ikonia.",
+			"missingArticleFallback": "Tästä aiheesta ei ole artikkelia suomeksi. Tämä muunkielinen artikkeli näytetään sinulle kielivalintojesi perusteella. Voit lukea artikkelin toisella kielellä valitsemalla ylläolevasta kielivalikosta. Voit myös kääntää artikkelin suomeksi valitsemalla kohdan kielivalikosta.",
+			"missingArticleAuto": "Tästä aiheesta ei ole artikkelia millään kielellä. Tämä lyhyt teksti on luotu automaattisesti saatavilla olevasta tiedosta. Voit tallentaa tiedot ja alkaa muokata artikkelia klikkaamalla plus-ikonia.",
 			"extLink": {
 				"linkTitleWP": "Lue tai muokkaa Wikipediassa"
 			},
@@ -145,8 +149,60 @@
 			"showRelated": "Aiheeseen liittyvät",
 			"showAll": "Kaikki"
 		},
+		"Locations": {
+			"headerTitle": "Paikat",
+			"intro": "Tässä näytetään kohteita, jotka sijaitsevat tämän sivun aiheen alueella. Voit näyttää kohteet luettelona, jolloin listataan myös kuvattomat kohteet.",
+			"sortMenu": {
+				"title": "Järjestä paikat",
+				"tooltip": "Järjestä paikat",
+				"optionTime": "Ajan perusteella",
+				"optionAlpha": "Aakkosjärjestykseen",
+				"optionDist": "Etäisyyden mukaan",
+				"optionRev": "Käänteiseen järjestykseen",
+				"optionClear": "Palauta alkuperäinen järjestys"
+			},
+			"facetMenu": {
+				"title": "Ryhmittele paikat",
+				"tooltip": "Ryhmittele paikat eri perusteilla",
+				"optionType": "Paikan lajin mukaan",
+				"optionColl": "Tekijän mukaan",
+				"optionCity": "Sijainnin mukaan"
+			},
+			"displayMenu": {
+				"title": "Näytä",
+				"tooltip": "Valitse esitysmuoto",
+				"optionGallery": "Galleriana",
+				"optionList": "Luettelona"
+			},
+			"showAll": "Kaikki"
+		},
+		"Depicted": {
+			"headerTitle": "Kuvattu teoksessa",
+			"intro": "Tätä aihetta kuvataan näissä teoksissa. Järjestä teokset eri perustein tai näytä luettelona nähdäksesi myös ne, joissa ei ole kuvaa.",
+			"sortMenu": {
+				"title": "Järjestä teokset",
+				"tooltip": "Järjestä teokset",
+				"optionTime": "Ajan perusteella",
+				"optionAlpha": "Aakkosjärjestykseen",
+				"optionRev": "Käänteiseen järjestykseen",
+				"optionClear": "Palauta alkuperäinen järjestys"
+			},
+			"facetMenu": {
+				"title": "Ryhmittele teokset",
+				"tooltip": "Ryhmittele teoksia eri tavoilla",
+				"optionType": "Tyypin mukaan",
+				"optionColl": "Tekijän mukaan"
+			},
+			"displayMenu": {
+				"title": "Näytä",
+				"tooltip": "Valitse esitysmuoto",
+				"optionGallery": "Galleriana",
+				"optionList": "Luettelona"
+			},
+			"showAll": "Kaikki"
+		},
 		"Works": {
-			"headerTitle": "Teokset",
+			"headerTitle": "Teoksia",
 			"intro": "Nämä ovat aiheena olevan henkilön, kollektiivin tai organisaation tekemiä teoksia. Klikkaamalla voit näyttää siihen liittyvän sivun. Vain kuvalliset kohteet ovat näkyvissä. Näet kaikki esittämällä teokset listana.",
 			"sortMenuTitle": "Järjestä",
 			"sortMenuTooltip": "Järjestä teokset",
@@ -159,7 +215,7 @@
 			"facetMenuTooltip": "Ryhmittele teoksia eri tavoilla",
 			"facetMenuOptionType": "Tyypin mukaan",
 			"facetMenuOptionColl": "Kokoelman mukaan",
-			"facetMenuOptionCity": "Kunnan mukaan",
+			"facetMenuOptionCity": "Sijainnin mukaan",
 			"displayMenuTitle": "Näytä",
 			"displayMenuTooltip": "Valitse näyttötapa",
 			"displayMenuOptionGallery": "Galleriana",
@@ -173,6 +229,7 @@
 			"sortMenuTooltip": "Muuta järjestystä",
 			"sortMenuOptionBirth": "Syntymäajan mukaan",
 			"sortMenuOptionDeath": "Kuolinajan mukaan",
+			"sortMenuOptionName": "Nimen mukaan",
 			"sortMenuOptionFirst": "Etunimen mukaan",
 			"sortMenuOptionLast": "Sukunimen mukaan",
 			"sortMenuOptionRev": "Käänteinen järjestys",
@@ -216,7 +273,8 @@
 			"actionMenuTitle": "Toiminnot",
 			"actionMenuTooltip": "Toiminnot",
 			"languageMenuTitle": "Valitse kieli",
-			"myLanguagesItem": "Omat kielet"
+			"myLanguagesItem": "Omat kielet",
+			"languageMenuTranslate": "Käännä tämä artikkeli"
 		},
 		"languages": {
 			"fi": "suomi",

@@ -1,0 +1,127 @@
+{
+	"@metadata": {
+		"authors": [
+			"R-Joe"
+		]
+	},
+	"LandingPage": {
+		"search": "Keresés",
+		"searchInputPlaceHolder": "Keressen egy témát, vagy hozzon létre egy új témát"
+	},
+	"MainPage": {
+		"topicPageName": "Téma lap",
+		"mapPlaceMatchPageName": "Helynevek kombinálása",
+		"mapSearchPageName": "Térképek keresése",
+		"wikiTopicErrorMessage": "A témához tartozó Wikipédia oldalt nem lehet megtalálni az aktuális nyelven, vagy egyéb váratlan hiba történt.",
+		"returnToHomeMessage": "Vissza a nyitóoldalra"
+	},
+	"WaitPage": {
+		"waitMessage": "Egy pillanatot, kérlek ... Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Válasszon történelmi alaptérképe(ke)t",
+			"chooseMapHelpNote": "Tipp: A ctrl + klikk lehetővé teszi több térkép kiválasztását",
+			"yearAbbreviation": "y."
+		},
+		"Header": {
+			"titleEditText": "Leírás szerkesztése",
+			"titleApproveText": "Jóváhagyja ezt a címet",
+			"subtitleEditText": "Leírás szerkesztése",
+			"subtitleApproveText": "Leírás eltávolítása"
+		},
+		"TopicImages": {
+			"headerTitle": "Képek az archivumból",
+			"actionsMenu": {
+				"menuTitle": "Képek megjelenítése vagy rendezése",
+				"showImagesOnMapMenuText": "Összes kép megjelenítése a térképen",
+				"showImagesOnTimelineMenuText": "összes kép megjelenítése az idővonalon",
+				"selectPortraits": "Válasszon jó minőségű portrékat ehhez a személyhez",
+				"arrangeByTime": "Képrendezés idő szerint"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Műveletek",
+				"menuTooltip": "Műveletek",
+				"doGeolocatingText": "Állítsa be a helyet ...",
+				"showImageText": "Kép megjelenítése",
+				"selectFeatured": "Válassza fejlécképként"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Távolítsa el a képet, mert ...",
+				"shortMenuTitle": "Távolítsa el a képet",
+				"menuTooltip": "Távolítsa el a képet",
+				"remDepicted": {
+					"shortMenuTitle": "Egy másik témát ábrázol",
+					"browse": "Keresse meg a kapcsolódó témákat"
+				},
+				"remCreator": {
+					"search": "Keresse meg az alkotót",
+					"browse": "Böngésszen a kapcsolódó szereplők között"
+				},
+				"remInappropriate": {
+					"menuTitle": "Ez nem megfelelő, mert",
+					"shortMenuTitle": "Nem megfelelő",
+					"violence": "Rendkívüli erőszakot mutat",
+					"sex": "Kifejezett szexet mutat",
+					"copyvio": "Sérti a szerzői jogot"
+				}
+			},
+			"facetMenu": {
+				"time": "Idő",
+				"map": "térkép",
+				"people": "Emberek",
+				"places": "Helyek",
+				"topics": "Témák",
+				"form": "űrlap",
+				"imageSize": "Képméret",
+				"large": "nagy",
+				"medium": "közepes",
+				"small": "kicsi",
+				"type": "médiatípus:",
+				"creator": "készítő",
+				"platform": "platform",
+				"source": "forrás",
+				"saveSelection": "Kiválasztás mentése gyűjteményként",
+				"clear": "Tiszta döntések"
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Téma a térképen"
+		},
+		"People": {
+			"sortMenuTitle": "Rendezés",
+			"sortMenuTooltip": "Rendezési sorrend módosítása",
+			"sortMenuOptionBirth": "Születési dátum szerint",
+			"sortMenuOptionDeath": "Elhalálozási dátum szerint",
+			"sortMenuOptionName": "Név szerint",
+			"sortMenuOptionFirst": "Keresztnév szerint",
+			"sortMenuOptionLast": "Családi név szerint",
+			"sortMenuOptionRev": "Rendezési sorrend megfordítása",
+			"sortMenuOptionClear": "Rendezés törlése",
+			"facetMenuOptionProfession": "Szakma",
+			"facetMenuOptionCountry": "Ország",
+			"facetMenuOptionCity": "Nem"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Helynevek kombinálása"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Történelmi térkép keresése",
+			"filterBySourceMenuText": "Szűrés forrás szerint...",
+			"filterByTimeMenuText": "Szűrés idő alapján..."
+		}
+	},
+	"general": {
+		"ok": "Rendben",
+		"languages": {
+			"fi": "Finn",
+			"en": "Angol",
+			"sv": "Svéd",
+			"es": "Spanyol"
+		}
+	}
+}

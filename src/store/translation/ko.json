@@ -147,6 +147,7 @@
 		"People": {
 			"headerTitle": "주제와 관련된 인물",
 			"sortMenuTitle": "정렬",
+			"sortMenuOptionName": "이름순",
 			"sortMenuOptionFirst": "이름순",
 			"sortMenuOptionLast": "성(이름)순",
 			"facetMenuOptionCountry": "국가"
@@ -166,7 +167,8 @@
 			"actionMenuTitle": "동작",
 			"actionMenuTooltip": "동작",
 			"languageMenuTitle": "언어 선택",
-			"myLanguagesItem": "내 언어"
+			"myLanguagesItem": "내 언어",
+			"languageMenuTranslate": "이 문서 번역"
 		},
 		"languages": {
 			"fi": "핀란드어",

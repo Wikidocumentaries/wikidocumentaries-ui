@@ -14,9 +14,12 @@
 	"topic_page": {
 		"Header": {
 			"titleEditText": "Rediger titlen",
-			"subtitleEditText": "Rediger beskrivelsen"
+			"titleApproveText": "Godkend denne titeæ",
+			"subtitleEditText": "Rediger beskrivelsen",
+			"subtitleApproveText": "Godkend denne beskrivelse"
 		},
 		"TopicImages": {
+			"headerTitle": "Billeder fra arkiverne",
 			"imagesActionMenu": {
 				"menuTitle": "Handlinger",
 				"menuTooltip": "Handlinger",
@@ -24,6 +27,7 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Fjern billedet fordi...",
+				"shortMenuTitle": "Fjern billedet",
 				"menuTooltip": "Fjern billedet",
 				"remDepicted": {
 					"search": "Søg efter emnet"
@@ -31,6 +35,13 @@
 				"remCreator": {
 					"search": "Søg efter skaberen"
 				}
+			},
+			"facetMenu": {
+				"time": "tid",
+				"people": "personer",
+				"places": "steder",
+				"imageSize": "Billedestørrelse",
+				"source": "kilde"
 			}
 		},
 		"TopicMap": {
@@ -53,12 +64,47 @@
 			"showBuried": "Begravet her",
 			"showAll": "Alle"
 		},
+		"Locations": {
+			"headerTitle": "Steder",
+			"sortMenu": {
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetisk",
+				"optionDist": "Efter afstand"
+			},
+			"facetMenu": {
+				"optionType": "Type"
+			},
+			"displayMenu": {
+				"optionGallery": "Galleri",
+				"optionList": "Liste"
+			}
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetisk"
+			},
+			"facetMenu": {
+				"optionType": "Type",
+				"optionColl": "Skaber"
+			},
+			"displayMenu": {
+				"title": "Vis som",
+				"optionGallery": "Galleri",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
 		"Works": {
 			"headerTitle": "Værker",
+			"sortMenuTitle": "Sorter",
 			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionAlpha": "Alfabetisk",
 			"sortMenuOptionDist": "Efter afstand",
 			"facetMenuOptionType": "Type",
-			"facetMenuOptionCity": "By",
+			"facetMenuOptionColl": "Samling",
+			"facetMenuOptionCity": "Placering",
+			"displayMenuTitle": "Vis som",
 			"displayMenuOptionGallery": "Galleri",
 			"displayMenuOptionList": "Liste",
 			"showAll": "Alle"
@@ -66,6 +112,8 @@
 		"People": {
 			"sortMenuTitle": "Sortér",
 			"sortMenuOptionBirth": "Efter fødselsdato",
+			"sortMenuOptionDeath": "Efter dødsdato",
+			"sortMenuOptionName": "Efter navn",
 			"sortMenuOptionFirst": "Efter fornavn",
 			"sortMenuOptionLast": "Efter efternavn",
 			"facetMenuOptionCountry": "Land",
@@ -83,7 +131,8 @@
 			"actionMenuTitle": "Handlinger",
 			"actionMenuTooltip": "Handlinger",
 			"languageMenuTitle": "Vælg sprog",
-			"myLanguagesItem": "Mine sprog"
+			"myLanguagesItem": "Mine sprog",
+			"languageMenuTranslate": "Oversæt denne artikel"
 		},
 		"languages": {
 			"fi": "Finsk",

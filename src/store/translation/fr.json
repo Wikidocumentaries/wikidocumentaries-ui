@@ -34,7 +34,7 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Images d'archives",
-			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez favoriser une image ou la supprimer de la page si elle n’y appartient pas.",
+			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez favoriser une image ou la supprimer de la page si elle n’y a pas sa place.",
 			"actionsMenu": {
 				"menuTitle": "Afficher ou arranger les images",
 				"tooltip": "Afficher ou arranger les images",
@@ -178,7 +178,7 @@
 			"showAll": "Tous"
 		},
 		"Depicted": {
-			"headerTitle": "Dépeint",
+			"headerTitle": "Dépeint dans",
 			"intro": "Ce sujet est dépeint dans ces travaux. Trier les travaux selon divers critères, affichés sous forme de liste pour voir ceux sans image.",
 			"sortMenu": {
 				"title": "Tri activé",
@@ -225,7 +225,7 @@
 		},
 		"People": {
 			"headerTitle": "Personnes liées au sujet",
-			"intro": "Il y a des gens qui sont liés au sujet sur cette page. Vous pouvez saisir une page collectant toutes les informations sur la personne en cliquant dessus. Vous pouvez afficher les gens aussi sous forme de liste.",
+			"intro": "Ce sont les personnes liées au sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur la personne en cliquant dessus. Vous pouvez aussi afficher les gens sous forme de liste.",
 			"sortMenuTitle": "Trier",
 			"sortMenuTooltip": "Modifier l'ordre de tri",
 			"sortMenuOptionBirth": "Par date de naissance",

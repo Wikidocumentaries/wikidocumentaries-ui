@@ -55,7 +55,15 @@
 				}
 			},
 			"facetMenu": {
-				"type": "tewrê medya"
+				"time": "wext",
+				"map": "xerita",
+				"form": "form",
+				"large": "gırd",
+				"medium": "miyanên",
+				"small": "werdi",
+				"type": "tewrê medya",
+				"creator": "vıraştoğ",
+				"source": "çıme"
 			}
 		},
 		"TopicMap": {
@@ -96,16 +104,30 @@
 			"showRelated": "Maneyo bin",
 			"showAll": "Pêro"
 		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "Babet",
+				"optionColl": "Vıraştoğ"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeriye",
+				"optionList": "Liste"
+			},
+			"showAll": "Pêro"
+		},
 		"Depicted": {
 			"sortMenu": {
 				"optionAlpha": "Alfabetik"
 			},
 			"facetMenu": {
+				"optionType": "Babet",
 				"optionColl": "Vıraştoğ"
 			},
 			"displayMenu": {
+				"optionGallery": "Galeriye",
 				"optionList": "Liste"
-			}
+			},
+			"showAll": "Pêro"
 		},
 		"Works": {
 			"sortMenuOptionAlpha": "Alfabetik",
