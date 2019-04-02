@@ -122,8 +122,12 @@
         "Wikipedia": {
             "headerTitle": "Article",
             "missingArticle": "There is no article about this topic in your language. You can read the article in another available language by choosing from the language menu above. You can create the article in your language by clicking on the plus icon.",
-            "missingArticleFallback": "There is no article about this topic in your language. This article in another language is shown to you based on your language fallback preferences. You can read the article in another available language by choosing from the language menu above. You can translate the article to your language by choosing it in the language menu.",
-            "missingArticleAuto": "There is no article about this topic in any language. This short text has been automatically created from the recorded facts. You can save this draft and start editing the article.",
+            "missingArticleMissing": "There is no article about this topic in your language.",
+            "missingArticleChoose": "You can read the article in another available language by choosing from the language menu above or you can create the article in your language by clicking on the plus icon.",
+            "missingArticleCreate": "You can create this article in your language by clicking on the plus icon.",
+            "missingArticleFallback": "This article in another language is shown to you based on your language fallback preferences.",
+            "missingArticleTranslate": "You can translate this article to your language by choosing it in the language menu.",
+            "missingArticleAuto": "This short text has been automatically created from the recorded facts. You can save this draft and start editing the article.",
             "extLink": {
                 "linkTitleWP": "Read or edit in Wikipedia"
             },
