@@ -1,11 +1,13 @@
 import _ from 'lodash'
 
-// Return a sorting function to be applied on an array of objects
-//
-// Based on https://stackoverflow.com/a/4760279/5528498
-// props: Array of names of parameters to be sorted. Dot notation ok.
-// For descending add "-" in front of parameter
-export const sortResults = (props) => {
+/**
+ * Return a sorting function to be applied on an array of objects
+ *
+ * @param props An array of names of object properties to be sorted. Dot notation for hierarchical objects supported. For descending add "-" in front of name.
+ * @return the function to apply to the sort method called on an array of objects
+ * @see <a href="https://stackoverflow.com/a/4760279/5528498">Based on input from StackOverflow</a>
+ */
+export const sortResults = (props, currLocale) => {
 	const sortParam = (property) => {
     let sortOrder = 1;
     if(property[0] === '-') {
@@ -13,7 +15,7 @@ export const sortResults = (props) => {
         property = property.substr(1);
     }
     return function (a,b) {
-        let result = (_.get(a, property) < _.get(b, property)) ? -1 : (_.get(a,property) > _.get(b,property)) ? 1 : 0;
+        let result = _.get(a, property).toLocaleLowerCase().localeCompare(_.get(b, property).toLocaleLowerCase(), currLocale, { usage: 'sort' });
         return result * sortOrder;
     }
 	}

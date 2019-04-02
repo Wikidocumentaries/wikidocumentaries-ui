@@ -118,7 +118,7 @@ LIMIT 1000
             .post(url, body)
             .then(response => {
 							fullResults = wdk.simplify.sparqlResults(response.data);
-							this.results = selectResults();
+							this.results = selectResults(this.$i18n.locale);
 							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
@@ -158,7 +158,7 @@ LIMIT 1000
 							currentDisplay = DISPLAY_ACTIONS.LIST;
 							break;
 					}
-					this.results = selectResults();
+					this.results = selectResults(this.$i18n.locale);
 					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 				},
         fitTitle (title) {
@@ -188,7 +188,7 @@ LIMIT 1000
     }
 }
 
-const selectResults = () => {
+const selectResults = (lcl) => {
 	let filteredResults = fullResults;
 	if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
 	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
@@ -198,7 +198,7 @@ const selectResults = () => {
 			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
 		}
 	}
-	return filteredResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+	return filteredResults.sort(sortResults(currentSort, lcl)).slice(0,MAX_ITEMS_TO_VIEW);
 }
 
 </script>
