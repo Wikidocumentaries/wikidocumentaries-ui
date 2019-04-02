@@ -93,7 +93,7 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Madde",
-			"missingArticle": "Bu konuyla ilgili İngilizce yazı bulunmamaktadır. Yukarıdaki dil menüsünde başka dillerde maddeler olup olmadığına bakın veya artı simgesine tıklayarak maddeyi oluşturun.",
+			"missingArticle": "Bu konuyla ilgili dilinizde yazı bulunmamaktadır. Yukarıdaki dil menüsünde başka dillerde maddeler olup olmadığına bakın veya artı simgesine tıklayarak maddeyi oluşturun.",
 			"extLink": {
 				"linkTitleWP": "Vikipedi'de oku veya düzenle"
 			},

@@ -34,16 +34,22 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder från arkiven",
+			"intro": "Dessa bilder samlas från flera källor och de kanske inte alltid representerar ämnet korrekt. Du kan favorera en bild eller ta bort den från sidan om den inte hör till.",
 			"actionsMenu": {
+				"menuTitle": "Visa eller arrangera bilder",
+				"tooltip": "Visa eller arrangera bilder",
 				"showImagesOnMapMenuText": "Visa alla bilder på kartan",
 				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
-				"arrangeByTime": "Arrangera bilder efter tid"
+				"selectPortraits": "Välj god kvalitet porträtt av den här personen",
+				"arrangeByTime": "Arrangera bilder efter tid",
+				"selectWorks": "Välj bilder av verk"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Åtgärder",
 				"menuTooltip": "Åtgärder",
 				"doGeolocatingText": "Ange platsen...",
-				"showImageText": "Visa bilden"
+				"showImageText": "Visa bilden",
+				"selectFeatured": "Välj som en rubrikbild"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Ta bort bilden eftersom...",
@@ -51,16 +57,19 @@
 				"menuTooltip": "Ta bort bilden",
 				"remDepicted": {
 					"menuTitle": "Det visar istället detta ämne",
+					"shortMenuTitle": "Den skildrar ett annat ämne",
 					"search": "Sök efter ämnet",
 					"browse": "Bläddra i relaterade ämnen"
 				},
 				"remCreator": {
 					"menuTitle": "Det är av den här skaparen istället",
+					"shortMenuTitle": "Det är av en annan skapare",
 					"search": "Sök efter skaparen",
 					"browse": "Bläddra i relaterade aktörer"
 				},
 				"remInappropriate": {
 					"menuTitle": "Den är olämplig eftersom",
+					"shortMenuTitle": "Den är olämplig",
 					"privacy": "Den bryter mot den avbildade personens integritet",
 					"violence": "Den visar extremt våld",
 					"sex": "Den visar explicit sex",
@@ -180,10 +189,34 @@
 		"Works": {
 			"headerTitle": "Verk",
 			"sortMenuTitle": "Sortera",
-			"facetMenuOptionCity": "Plats"
+			"sortMenuTooltip": "Sortera objekt",
+			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionAlpha": "Alfabetiskt",
+			"sortMenuOptionDist": "Efter avstånd",
+			"sortMenuOptionRev": "Omvänd sortering",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Samling",
+			"facetMenuOptionCity": "Plats",
+			"displayMenuTitle": "Visa som",
+			"displayMenuOptionGallery": "Galleri",
+			"displayMenuOptionList": "Lista",
+			"showAll": "Alla"
 		},
 		"People": {
-			"sortMenuOptionName": "Efter namn"
+			"headerTitle": "Människor relaterade till ämnet",
+			"sortMenuTitle": "Sortera",
+			"sortMenuTooltip": "Ändra sorteringsordningen",
+			"sortMenuOptionBirth": "Efter födelsedatum",
+			"sortMenuOptionDeath": "Efter dödsdatum",
+			"sortMenuOptionName": "Efter namn",
+			"sortMenuOptionFirst": "Efter förnamn",
+			"sortMenuOptionLast": "Efter efternamn",
+			"sortMenuOptionRev": "Omvänd sorteringsordning",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuOptionProfession": "Yrke",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Kön"
 		}
 	},
 	"map_place_match_page": {
@@ -218,7 +251,8 @@
 			"actionMenuTitle": "Åtgärder",
 			"actionMenuTooltip": "Åtgärder",
 			"languageMenuTitle": "Välj språk",
-			"myLanguagesItem": "Mina språk"
+			"myLanguagesItem": "Mina språk",
+			"languageMenuTranslate": "Översätt denna artikel"
 		},
 		"languages": {
 			"fi": "finska",

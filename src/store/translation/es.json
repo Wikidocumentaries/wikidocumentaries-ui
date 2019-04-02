@@ -36,7 +36,8 @@
 			"headerTitle": "Imágenes de los archivos",
 			"actionsMenu": {
 				"showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
-				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo"
+				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
+				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Acciones",
@@ -68,6 +69,7 @@
 				}
 			},
 			"facetMenu": {
+				"people": "personas",
 				"topics": "temas",
 				"imageSize": "tamaño de imagen",
 				"platform": "plataforma",
@@ -122,6 +124,57 @@
 			"showBuried": "Enterrado aquí",
 			"showRelated": "Relacionados de otra manera",
 			"showAll": "Todas"
+		},
+		"Locations": {
+			"headerTitle": "Ubicaciones",
+			"sortMenu": {
+				"optionDist": "Por distancia"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionCity": "Ubicación"
+			},
+			"displayMenu": {
+				"optionGallery": "Galería",
+				"optionList": "Lista"
+			},
+			"showAll": "Todo"
+		},
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "Tipo"
+			},
+			"displayMenu": {
+				"optionGallery": "Galería",
+				"optionList": "Lista"
+			},
+			"showAll": "Todo"
+		},
+		"Works": {
+			"headerTitle": "Obras",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Ordenar elementos",
+			"sortMenuOptionAlpha": "Por orden alfabético",
+			"sortMenuOptionDist": "Por distancia",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionColl": "Colección",
+			"facetMenuOptionCity": "Ubicación",
+			"displayMenuTitle": "Mostrar como",
+			"displayMenuOptionGallery": "Galería",
+			"displayMenuOptionList": "Lista",
+			"showAll": "Todo"
+		},
+		"People": {
+			"headerTitle": "Personas relacionadas con el tema",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuOptionBirth": "Por fecha de nacimiento",
+			"sortMenuOptionDeath": "Por fecha de defunción",
+			"sortMenuOptionFirst": "Por nombre de pila",
+			"sortMenuOptionLast": "Por apellidos",
+			"sortMenuOptionRev": "Invertir orden",
+			"facetMenuOptionProfession": "Profesión",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Género"
 		}
 	},
 	"map_place_match_page": {
@@ -156,7 +209,8 @@
 			"actionMenuTitle": "Acciones",
 			"actionMenuTooltip": "Acciones",
 			"languageMenuTitle": "Elige un idioma",
-			"myLanguagesItem": "Mis idiomas"
+			"myLanguagesItem": "Mis idiomas",
+			"languageMenuTranslate": "Traducir este artículo"
 		},
 		"languages": {
 			"fi": "Finés",

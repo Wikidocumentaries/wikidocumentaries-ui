@@ -37,12 +37,16 @@
 				"menuTooltip": "D'Bild ewechhuelen"
 			},
 			"facetMenu": {
+				"time": "Zäit",
 				"map": "Kaart",
+				"people": "Leit",
 				"places": "Plazen",
 				"topics": "Themen",
+				"imageSize": "Gréisst vum Bild",
 				"large": "grouss",
 				"medium": "mëttel",
-				"small": "kleng"
+				"small": "kleng",
+				"source": "Quell"
 			}
 		},
 		"TopicMap": {
@@ -82,13 +86,45 @@
 			"showRelated": "An enger anerer Relatioun",
 			"showAll": "All"
 		},
+		"Locations": {
+			"headerTitle": "Plazen",
+			"sortMenu": {
+				"optionDist": "No Distanz"
+			},
+			"facetMenu": {
+				"optionCity": "Plaz"
+			},
+			"showAll": "All"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Wierker zortéieren",
+				"optionTime": "No der Zäit",
+				"optionAlpha": "Alphabetesch"
+			},
+			"facetMenu": {
+				"optionType": "Typ"
+			},
+			"displayMenu": {
+				"optionGallery": "Galerie",
+				"optionList": "Lëscht"
+			}
+		},
 		"Works": {
+			"sortMenuTitle": "Zortéieren",
+			"sortMenuOptionAlpha": "Alphabetesch",
+			"sortMenuOptionDist": "No Distanz",
 			"facetMenuOptionType": "Typ",
-			"facetMenuOptionCity": "Stad",
+			"facetMenuOptionColl": "Sammlung",
+			"facetMenuOptionCity": "Plaz",
 			"showAll": "All"
 		},
 		"People": {
+			"sortMenuTitle": "Zortéieren",
 			"sortMenuOptionBirth": "Nom Gebuertsdatum",
+			"sortMenuOptionDeath": "Nom Doudesdatum",
+			"sortMenuOptionName": "Nom Numm",
+			"sortMenuOptionLast": "Nom Familljennumm",
 			"facetMenuOptionProfession": "Beruff",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Geschlecht"
@@ -114,7 +150,8 @@
 			"actionMenuTitle": "Aktiounen",
 			"actionMenuTooltip": "Aktiounen",
 			"languageMenuTitle": "Sprooch eraussichen",
-			"myLanguagesItem": "Meng Sproochen"
+			"myLanguagesItem": "Meng Sproochen",
+			"languageMenuTranslate": "Dësen Artikel iwwersetzen"
 		},
 		"languages": {
 			"fi": "Finnesch",

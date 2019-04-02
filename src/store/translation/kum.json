@@ -1,0 +1,98 @@
+{
+	"@metadata": {
+		"authors": [
+			"ArslanX"
+		]
+	},
+	"LandingPage": {
+		"search": "Излемек"
+	},
+	"topic_page": {
+		"TopicImages": {
+			"imagesRemoveMenu": {
+				"menuTooltip": "Суратны тайдырмакъ",
+				"remInappropriate": {
+					"shortMenuTitle": "Бу къыйышсыз"
+				}
+			},
+			"facetMenu": {
+				"time": "заман",
+				"map": "харита",
+				"people": "адамлар",
+				"places": "ерлер",
+				"topics": "темалар",
+				"large": "уллу",
+				"medium": "орта",
+				"small": "гиччи",
+				"creator": "ясавчу",
+				"source": "эник"
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "Заман гьыз"
+		},
+		"Gallery": {
+			"menuTitle": "Гёрсетмек",
+			"showDied": "Мунда гечинген",
+			"showBuried": "Мунда гёмюлген",
+			"showAll": "Тюм"
+		},
+		"Locations": {
+			"headerTitle": "Маканлар",
+			"sortMenu": {
+				"optionTime": "Заманына гёре",
+				"optionAlpha": "Алифбалы",
+				"optionDist": "Мезгилине гёре"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа",
+				"optionColl": "Ясавчу",
+				"optionCity": "Макан"
+			},
+			"displayMenu": {
+				"optionList": "Тизме"
+			},
+			"showAll": "Тюм"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Заманына гёре",
+				"optionAlpha": "Алифбалы"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа",
+				"optionColl": "Ясавчу"
+			},
+			"displayMenu": {
+				"optionList": "Тизме"
+			},
+			"showAll": "Тюм"
+		},
+		"Works": {
+			"headerTitle": "Ишлер",
+			"sortMenuOptionTime": "Заманына гёре",
+			"facetMenuOptionType": "Тайпа",
+			"facetMenuOptionCity": "Макан",
+			"displayMenuOptionList": "Тизме",
+			"showAll": "Тюм"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Тувув тархына гёре",
+			"sortMenuOptionDeath": "Оьлюм тархына гёре",
+			"sortMenuOptionName": "Атына гёре",
+			"sortMenuOptionFirst": "Атына гёре",
+			"facetMenuOptionProfession": "Касбу",
+			"facetMenuOptionCity": "Жынс"
+		}
+	},
+	"general": {
+		"cancel": "Гери алмакъ",
+		"helpText": "Кёмек",
+		"menus": {
+			"languageMenuTranslate": "Бу макъаланы таржума этмек"
+		},
+		"languages": {
+			"es": "Испан"
+		}
+	}
+}

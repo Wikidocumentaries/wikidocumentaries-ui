@@ -7,34 +7,34 @@
 	},
 	"LandingPage": {
 		"search": "Cerca",
-		"searchInputPlaceHolder": "Trovi un soggetto o crede uno nuovo"
+		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento"
 	},
 	"MainPage": {
-		"topicPageName": "Pagina del soggetto",
-		"mapPlaceMatchPageName": "Combinare nomi di luoghi",
+		"topicPageName": "Pagina dell'argomento",
+		"mapPlaceMatchPageName": "Combina nomi di luoghi",
 		"mapSearchPageName": "Cercare mappe",
-		"wikiTopicErrorMessage": "Non si ha potuto trovare una pagina di Wikipedia partorisca il soggetto nel linguaggio odierno o ci fu un altro errore inaspettato.",
+		"wikiTopicErrorMessage": "Non è stata trovata alcuna pagina di Wikipedia per l'argomento nella lingua attuale o si è verificato un altro errore imprevisto.",
 		"returnToHomeMessage": "Tornare alla pagina di benvenuto"
 	},
 	"WaitPage": {
-		"waitMessage": "Un momento, per favore... Recuperando dati di Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
-			"chooseMapTitle": "Sceglie uno o varie mappe storiche di base",
-			"chooseMapHelpNote": "Tip: ctrl+click permette selezionare varie mappe",
+			"chooseMapTitle": "Scegli mappa/e storica di base",
+			"chooseMapHelpNote": "Suggerimento: ctrl+click permette selezionare più mappe",
 			"yearAbbreviation": "a."
 		},
 		"Header": {
 			"titleEditText": "Modifica il titolo",
-			"titleApproveText": "Approvare questo titolo",
+			"titleApproveText": "Approva questo titolo",
 			"subtitleEditText": "Modifica la descrizione",
-			"subtitleApproveText": "Approvare questa descrizione"
+			"subtitleApproveText": "Approva questa descrizione"
 		},
 		"TopicImages": {
 			"actionsMenu": {
-				"showImagesOnMapMenuText": "Mostrare tutte le immagini nella mappa",
-				"showImagesOnTimelineMenuText": "Mostrare tutte le immagini nella linea di meteo"
+				"showImagesOnMapMenuText": "Mostra tutte le immagini nella mappa",
+				"showImagesOnTimelineMenuText": "Mostra tutte le immagini nella linea temporale"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Azioni",
@@ -42,27 +42,27 @@
 				"showImageText": "Mostra immagine"
 			},
 			"imagesRemoveMenu": {
-				"menuTitle": "Eliminare l'immagine perché...",
-				"shortMenuTitle": "Rimuovi immagine",
-				"menuTooltip": "Rimuovi immagine",
+				"menuTitle": "Rimuovi l'immagine perché...",
+				"shortMenuTitle": "Rimuovi l'immagine",
+				"menuTooltip": "Rimuovi l'immagine",
 				"remDepicted": {
-					"menuTitle": "Descrive questo soggetto invece",
-					"search": "Cercare il soggetto",
-					"browse": "Esplorare l'ha relazionato soggetti"
+					"menuTitle": "Raffigura questo argomento invece",
+					"search": "Cerca l'argomento",
+					"browse": "Naviga fra gli argomenti correlati"
 				},
 				"remCreator": {
-					"menuTitle": "È per questo creatore invece",
-					"search": "Cercare il creatore",
-					"browse": "Esplorare gli attori riguardanti"
+					"menuTitle": "È di questo autore invece",
+					"search": "Cerca l'autore",
+					"browse": "Naviga fra gli attori correlati"
 				},
 				"remInappropriate": {
-					"menuTitle": "È inapropiado perché",
-					"shortMenuTitle": "contrassegna come inappropriato",
-					"privacy": "Viola l'intimità del descritto",
+					"menuTitle": "È inappropriato perché",
+					"shortMenuTitle": "È inappropriato",
+					"privacy": "Viola la privacy del soggetto raffigurato",
 					"violence": "Mostra violenza estrema",
 					"sex": "Mostra sesso esplicito",
-					"copyvio": "Viola i diritti di autore",
-					"explain": "Lasciare una nota partorisca spiegare"
+					"copyvio": "Viola il copyright",
+					"explain": "Lascia una nota per spiegare"
 				}
 			},
 			"facetMenu": {
@@ -76,28 +76,28 @@
 				"large": "grande",
 				"medium": "media",
 				"small": "piccola",
-				"type": "tipo immagine",
+				"type": "tipo media",
 				"creator": "autore",
 				"platform": "piattaforma",
 				"source": "fonte"
 			}
 		},
 		"TopicMap": {
-			"headerTitle": "Soggetto nella mappa",
-			"chooseHistoricalBasemapMenuText": "Sceglie uno o varie mappe storiche di base",
-			"hideImagesMenuText": "Nascondere immagini",
-			"chooseTimelineMapsMenuText": "Sceglie mappe partorisca la linea di meteo...",
-			"showNearbyPlacesMenuText": "Mostrare luoghi vicini",
-			"hideNearbyPlacesMenuText": "Nascondere luoghi vicini"
+			"headerTitle": "Argomento nella mappa",
+			"chooseHistoricalBasemapMenuText": "Scegli mappa/e storica di base...",
+			"hideImagesMenuText": "Nascondi immagini",
+			"chooseTimelineMapsMenuText": "Scegli le mappe della linea temporale...",
+			"showNearbyPlacesMenuText": "Mostra luoghi nelle vicinanze",
+			"hideNearbyPlacesMenuText": "Nascondi luoghi nelle vicinanze"
 		},
 		"TopicNewspapers": {
-			"headerTitle": "Ritagli di diari",
-			"searhTopicFromArchivesMenuText": "Cercare diari nella Biblioteca Nazionale di Finlandia",
-			"addClipFromArchivesMenuText": "Aggiungere ritaglio..."
+			"headerTitle": "Ritagli di giornale",
+			"searhTopicFromArchivesMenuText": "Cerca dai giornali nella Biblioteca Nazionale di Finlandia",
+			"addClipFromArchivesMenuText": "Aggiungi ritaglio..."
 		},
 		"TopicTimeline": {
-			"headerTitle": "Linea di meteo",
-			"showEventsOnTimelineMenuText": "Mostrare eventi per soggetto nella linea di meteo"
+			"headerTitle": "Linea temporale",
+			"showEventsOnTimelineMenuText": "Mostra eventi dell'argomento nella linea temporale"
 		},
 		"Wikidata": {
 			"headerTitle": "Dati",
@@ -108,7 +108,7 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Voce",
-			"missingArticle": "Non c'è alcuna voce su questo argomento in italiano. Vedi se ci sono voci in altre lingue nel menu delle lingue sopra, o crea la voce cliccando nell'icona \"+\".",
+			"missingArticle": "Non c'è alcuna voce su questo argomento nella tua lingua. Puoi leggere la voce in un'altra lingua disponibile scegliendola dal menu delle lingue sopra. Puoi anche creare la voce nella tua lingua cliccando nell'icona \"+\".",
 			"extLink": {
 				"linkTitleWP": "Leggi o modifica in Wikipedia"
 			},
@@ -130,12 +130,15 @@
 			"showRelated": "Riguardanti di un'altra maniera",
 			"showAll": "Tutti"
 		},
+		"Depicted": {
+			"headerTitle": "Rappresentato in"
+		},
 		"Works": {
 			"sortMenuTitle": "Ordina",
 			"sortMenuTooltip": "Ordina elementi",
 			"sortMenuOptionRev": "Ordinamento inverso",
 			"facetMenuOptionType": "Tipo",
-			"facetMenuOptionCity": "Città",
+			"facetMenuOptionCity": "Località",
 			"displayMenuTitle": "Mostra come",
 			"displayMenuOptionGallery": "Galleria",
 			"displayMenuOptionList": "Elenco",
