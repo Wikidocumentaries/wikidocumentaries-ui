@@ -26,8 +26,8 @@
 					</div>
 					<div class="bottomshade">
 						<div class="titlebox white">
-							<div class="titlebox-title">Kunnallispormestari ja VPK:n puheenjohtaja Elias Öhmanin (s. 28.7.1845, k. 15.3.1908) hautajaissaattue Kanavakadulla 19.3.1908</div>
-							<div class="titlebox-subtitle white">Tuntematon, 1908, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fi">CC BY 4.0</a>. Helsingin kaupunginmuseo / <a href="https://finna.fi/Record/hkm.HKMS000005:0000083f">Finna</a></div>
+							<div v-if="element.title" class="titlebox-title">{{ element.title }}</div>
+							<div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
 						</div>
 					</div>
 				</div>
@@ -40,9 +40,9 @@
 							<div class="grid-icons">
 								<i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
 							</div>
-							<div class="grid-text unedited">
+							<div v-if="element.title" class="grid-text unedited">
 								<div class="grid-item">Title</div>
-								<div class="grid-body">Elias Öhman's cortege in Kanavakatu, Helsinki 19 March 1908</div>
+								<div class="grid-body">{{ element.title }}</div>
 							</div>
 						</div>
 						<div class="grid-row">
@@ -58,19 +58,19 @@
 							<div class="grid-icons">
 								<i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
 							</div>
-							<div class="grid-text">
+							<div v-if="element.authors" class="grid-text">
 								<div class="grid-item">Photographer</div>
 								<div class="grid-body">
-									<div class="data-select linked">Anonymous</div>
+									<div class="data-select linked">{{ element.authors }}</div>
 								</div>
 							</div>
 						</div>
 						<div class="grid-row">
 							<div class="grid-icons"><i class="wikiglyph wikiglyph-clock metadata-glyph"></i></div>
-							<div class="grid-text">
+							<div v-if="element.year" class="grid-text">
 								<div class="grid-item">Date</div>
 								<div class="grid-body">
-									<div class="data-select">19 March 1908</div>
+									<div class="data-select">{{ element.year }}</div>
 								</div>
 							</div>
 						</div>
@@ -118,11 +118,11 @@
 					<div class="columns">
 							<div class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-folder-placeholder metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Publishing platform</div> <a href="#">Finna</a></div>
+								<div class="grid-text"><div class="grid-item">Publishing platform</div> <a href="#">{{ element.source }}</a></div>
 							</div>
 							<div class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-cite metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Image info page</div> <a href="https://finna.fi/Record/hkm.HKMS000005:0000083f">https://finna.fi/Record/hkm.HKMS000005:0000083f</a></div>
+								<div class="grid-text"><div class="grid-item">Image info page</div> <a :href="element.infoURL">{{ element.infoURL }}</a></div>
 							</div>
 							<div class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-image metadata-glyph"></i></div>
@@ -168,7 +168,21 @@ export default {
         },
         hide() {
           this.showModal = false
-        }
+        },
+        getCredits (item) {
+            var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
+            var newYear = (item.year != "" ? (item.year) + ". " : '');
+            var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
+            var newLicense = (item.license != "" ? (item.license + ', ') : '');
+
+            var credits = newAuthors + newYear + newInstitutions + newLicense;
+
+            if (credits.length > 0 && credits.slice(-2) == ", ") {
+                credits = credits.substr(0, credits.length - 2);
+            }
+
+            return credits;
+        },
     }
 }
 </script>
@@ -421,7 +435,7 @@ i {
 }
 
 .contentarea:hover .viewer-contents {
-  opacity: 1;  
+  opacity: 1;
 }
 
 .step-right {
@@ -688,19 +702,19 @@ i {
 
 /* .modal-enter {
  * opacity: 0;
- * } 
+ * }
  */
 
 /* .modal-leave-active {
  * opacity: 0;
- *} 
+ *}
  */
 
 /* .modal-enter .modal-container,
  * .modal-leave-active .modal-container {
  *  -webkit-transform: scale(1.1);
  *  transform: scale(1.1);
- *} 
+ *}
  */
 
 </style>
