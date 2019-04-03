@@ -187,7 +187,9 @@ export default {
 
 .main-content {
   background-color: white;
-  padding: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 5%;
 }
 
 .viewer-image {
