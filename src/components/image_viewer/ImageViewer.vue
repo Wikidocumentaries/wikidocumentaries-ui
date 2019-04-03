@@ -11,7 +11,7 @@
 				<div class="green stroke"></div>
 			</div>
 			<div class="contentarea">
-				<img src="https://finna.fi/Cover/Show?id=hkm.HKMS000005%3A0000083f&index=0&size=master" class="viewer-image"/>
+				<img :src="element.imageURL" class="viewer-image"/>
 				<div class="viewer-contents">
 					<div class="step-right"><i class="wikiglyph wikiglyph-caret-right step-glyph"></i></div>
 					<div class="step-left"><i class="wikiglyph wikiglyph-caret-left step-glyph"></i></div>
@@ -150,7 +150,8 @@ export default {
     name: 'ImageViewer',
     data() {
       return {
-        showModal: false
+        showModal: false,
+        element: {}
       }
     },
     props: {
@@ -162,8 +163,9 @@ export default {
         handleCancel: function () {
             this.$emit('close');
         },
-        show() {
-          this.showModal = true
+        show(element) {
+          this.element = element;
+          this.showModal = true;
         },
         hide() {
           this.showModal = false

@@ -21,6 +21,7 @@ const MENU_ACTIONS = {
 export default {
     name: 'ImagesActionMenu',
     props: {
+      element: {}
     },
     data () {
         return {
@@ -48,8 +49,7 @@ export default {
         onDoMenuItemAction (menuItem) {
           switch (menuItem.id) {
 						case MENU_ACTIONS.SHOW_IMAGE:
-							console.log("Showing Modal Now!");
-              this.$refs.imageviewer.show();
+              this.$refs.imageviewer.show(this.$props.element);
 							break;
 					}
         }

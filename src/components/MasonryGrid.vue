@@ -9,7 +9,7 @@
                 </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
-                        <ImagesActionMenu></ImagesActionMenu>
+                        <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
                             <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
