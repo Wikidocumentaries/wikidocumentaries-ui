@@ -101,7 +101,11 @@
 											<div class="grid-text"><div class="grid-item">Copyright</div> <a href="#">Public Domain</a></div></div>
 						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-plus metadata-glyph"></i></div>
 											<div class="grid-text"><div class="data-select linked">Add data</div></div></div>
-											<div class="grid-row"><div class="metadata-map">Location on the map</div></div>
+						<div v-if="element.geoLocations.length > 0" class="grid-row">
+              <div class="metadata-map">Location on the map
+                <div id="imagemap" class="map-component"></div>
+              </div>
+            </div>
 					</div>
 				</div>
 				<div class="metadata-copy alert">
@@ -145,18 +149,20 @@
 </template>
 
 <script>
+
 export default {
     name: 'ImageViewer',
     data() {
       return {
         showModal: false,
-        element: {}
+        element: {},
+        map: null,
+        topicFeature: null,
+        topicVectorLayer: null
       }
     },
     props: {
         shouldShowDialog: Boolean
-    },
-    computed: {
     },
     methods: {
         handleCancel: function () {
@@ -165,6 +171,9 @@ export default {
         show(element) {
           this.element = element;
           this.showModal = true;
+          this.$nextTick(function () {
+            this.createMap();
+          })
         },
         hide() {
           this.showModal = false
@@ -183,6 +192,200 @@ export default {
 
             return credits;
         },
+        createMap() {
+            var ol = this.$ol;
+
+            var view = null;
+
+            if (this.getFirstGeoLocationAsPoint() != null) {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint()),
+                    zoom: 14
+                })
+            }
+            else {
+                view = new ol.View({
+                    center: ol.proj.fromLonLat([0, 0]),
+                    zoom: 1
+                })
+            }
+
+            this.map = new ol.Map({
+                target: 'imagemap',
+                layers: [
+                    new ol.layer.Tile({
+                        source: new this.$ol.source.OSM()
+                    })
+                ],
+                view: view
+            });
+
+            this.setTopicOnMap();
+            this.map.on('click', this.handleMapClick);
+
+        },
+        setTopicOnMap() {
+            var ol = this.$ol;
+
+            if (this.getFirstGeoLocationAsPoint() != null) {
+                this.topicFeature = new ol.Feature({
+                    geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint())),
+
+                });
+                var iconStyle = new ol.style.Style({
+                    image: new ol.style.Icon({
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
+                        scale: 1.4
+                    })
+                });
+                this.topicFeature.setStyle(iconStyle);
+
+                var vectorSource = new ol.source.Vector({
+                    features: [this.topicFeature]
+                });
+
+                if (this.topicVectorLayer != null) {
+                    this.map.removeLayer(this.topicVectorLayer);
+                    this.topicVectorLayer = null;
+                }
+
+                this.topicVectorLayer = new ol.layer.Vector({
+                    source: vectorSource,
+                    zIndex: 1000,
+                });
+
+                this.map.addLayer(this.topicVectorLayer);
+            }
+        },
+        handleMapClick (event) {
+          console.log("Map clicked: ", event);
+        },
+        getFirstGeoLocationGeomType () {
+            var type = null;
+
+            if (this.element.geoLocations.length > 0) {
+                var wkt = this.element.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) {
+                    type = "point";
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    type = "linestring";
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    type = "polygon";
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    type = "polygon";
+                }
+            }
+            return type;
+        },
+        getFirstGeoLocation() {
+            var geoLocation = null;
+            if (this.element.geoLocations.length > 0) {
+                var wkt = this.element.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) {
+                    // "POINT(24.9600002 60.1796223)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    //console.log(coordPart);
+                    geoLocation = coordPart.split(' ').map(Number);
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    // "LINESTRING(24.9697848 60.1877939,24.9695072 60.1876021)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',');
+                    geoLocation = [];
+                    for (var i = 0; i < pointParts.length; i++) {
+                        geoLocation.push(pointParts[i].split(' ').map(Number));
+                    }
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
+                    geoLocation = [];
+                    var parenthesisPart = wkt.substring(wkt.indexOf('('));
+                    //console.log(parenthesisPart);
+                    var parenthesisPartInner = parenthesisPart.substr(1, parenthesisPart.length - 2);
+                    //console.log(parenthesisPartInner);
+                    var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
+                    //console.log(polygonPartCount);
+                    var parts = parenthesisPartInner.split('(').slice(1);
+                    //console.log(parts);
+                    var partsWithoutParenthesis = [];
+                    for (var i = 0; i < parts.length; i++) {
+                        var part = null;
+                        var trimmed = parts[i].trim();
+                        if (trimmed.substr(trimmed.length - 1, 1) == ',') {
+                            part = trimmed.substr(0, trimmed.length - 1);
+                        }
+                        else {
+                            part = parts[i];
+                        }
+                        partsWithoutParenthesis.push(part.slice(0, -1));
+                    }
+                    //console.log(partsWithoutParenthesis);
+
+                    for (var i = 0; i < partsWithoutParenthesis.length; i++) {
+                        var pointParts = partsWithoutParenthesis[i].split(',');
+                        var polygonPart = [];
+                        for (var j = 0; j < pointParts.length; j++) {
+                            polygonPart.push(pointParts[j].trim().split(' ').map(Number));
+                        }
+                        geoLocation.push(polygonPart);
+                    }
+                    //console.log(geoLocation);
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',').map(Number);
+                    //console.log(pointParts);
+                    var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+                    //console.log(envelopePolygon);
+                    geoLocation = [envelopePolygon];
+                }
+            }
+            return geoLocation;
+        },
+        getFirstGeoLocationAsPoint() {
+            var geoLocation = this.getFirstGeoLocation()
+            if (this.element.geoLocations.length > 0) {
+                var wkt = this.element.geoLocations[0];
+                if (wkt.indexOf("POINT") != -1) {
+                    // "POINT(24.9600002 60.1796223)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    //console.log(coordPart);
+                    geoLocation = coordPart.split(' ').map(Number);
+                }
+                else if (wkt.indexOf("LINESTRING") != -1) {
+                    geoLocation = this.getCentroid(geoLocation);
+                }
+                else if (wkt.indexOf("POLYGON") != -1) {
+                    geoLocation = this.getCentroid(geoLocation[0]); // We do not care of the possible holes in the polygon
+                }
+                else if (wkt.indexOf("ENVELOPE") != -1) {
+                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+                    var coordPart = wkt.split('(')[1].split(')')[0];
+                    var pointParts = coordPart.split(',').map(Number);
+                    //console.log(pointParts);
+                    var lng = (pointParts[0] + pointParts[1]) / 2;
+                    var lat = (pointParts[2] + pointParts[3]) / 2;
+                    //var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+                    //console.log(envelopePolygon);
+                    geoLocation = [lng, lat];
+                }
+            }
+
+            return geoLocation;
+        },
+        getCentroid(coords) {
+            var center = coords.reduce(function (x,y) {
+                return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length];
+            }, [0,0])
+            return center;
+        }
     }
 }
 </script>
@@ -533,9 +736,15 @@ i {
 
 .metadata-map {
   width: 100%;
-  background: var(--main-blue);
+  /* background: var(--main-blue); */
   height: 200px;
 }
+
+/* .map {
+    width: 100%;
+    height: 400px;
+    position: relative;
+} */
 
 .alert {
 	background-color: var(--main-yellow);
@@ -693,6 +902,7 @@ i {
 .cancel:hover {
   border: 1px solid var(--main-blue);
 }
+
 
 /*
  * The following styles are auto-applied to elements with
