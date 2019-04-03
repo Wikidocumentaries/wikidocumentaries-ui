@@ -1118,6 +1118,7 @@ i {
   border: 1px solid var(--main-blue);
 }
 
+
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
