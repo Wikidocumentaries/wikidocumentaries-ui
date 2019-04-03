@@ -1,7 +1,7 @@
 <template>
     <transition name="modal">
-	<div class="image-viewport">
-		<div class="main-content">
+	<div v-if="showModal" class="image-viewport">
+		<div id="modal" class="main-content">
 			<div class="mw stripe">
 				<div class="yellow stroke"></div>
 				<div class="orange stroke"></div>
@@ -114,7 +114,7 @@
 					</div>
 				</div>
 				<div class="metadata-digital">
-					<div class="boxtitle">Digital copy</div> 
+					<div class="boxtitle">Digital copy</div>
 					<div class="columns">
 							<div class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-folder-placeholder metadata-glyph"></i></div>
@@ -139,6 +139,7 @@
 						</div>
 					</div>
 				</div>
+        <button @click="hide">Close</button>
 			</div>
 		</div>
     </transition>
@@ -147,6 +148,11 @@
 <script>
 export default {
     name: 'ImageViewer',
+    data() {
+      return {
+        showModal: false
+      }
+    },
     props: {
         shouldShowDialog: Boolean
     },
@@ -155,7 +161,19 @@ export default {
     methods: {
         handleCancel: function () {
             this.$emit('close');
+        },
+        show() {
+          this.showModal = true
+        },
+        hide() {
+          this.showModal = false
         }
     }
 }
 </script>
+
+<style scoped>
+
+
+
+</style>

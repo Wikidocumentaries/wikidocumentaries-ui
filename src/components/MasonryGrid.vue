@@ -109,7 +109,7 @@ export default {
     width: 30px;
 }
 
-.header-item a {   
+.header-item a {
     height: 100%;
     display: flex;
     align-items: center;
@@ -137,7 +137,7 @@ export default {
     transition: opacity 80ms ease-in;
 }
 
-.grid-item--width2 { 
+.grid-item--width2 {
     width: 400px;
 }
 
