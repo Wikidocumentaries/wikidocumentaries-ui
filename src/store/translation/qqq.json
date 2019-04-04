@@ -165,7 +165,7 @@
 			"facetMenu": {
 				"title": "Menu title of the Facet menu in the Locations section - The menu title and the option form a compound",
 				"tooltip": "The Facet menu tooltip of the Locations section",
-				"optionType": "Option to facet by type of location in the Facet menu of the Locations section - The menu title and the option form a compound",
+				"optionType": "Option to facet by type of location in the Facet menu of the Locations section - The menu title and the option form a compound\n{{Identical|Type}}",
 				"optionColl": "Option to facet by creator in the Facet menu of the Locations section - The menu title and the option form a compound",
 				"optionCity": "Option to facet by location in the Facet menu of the Locations section - The menu title and the option form a compound"
 			},

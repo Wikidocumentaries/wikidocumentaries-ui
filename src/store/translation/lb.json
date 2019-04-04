@@ -92,7 +92,11 @@
 				"optionDist": "No Distanz"
 			},
 			"facetMenu": {
+				"optionType": "Typ",
 				"optionCity": "Plaz"
+			},
+			"displayMenu": {
+				"optionList": "Lëscht"
 			},
 			"showAll": "All"
 		},
@@ -111,12 +115,15 @@
 			}
 		},
 		"Works": {
+			"headerTitle": "Wierker",
 			"sortMenuTitle": "Zortéieren",
+			"sortMenuOptionTime": "No der Zäit",
 			"sortMenuOptionAlpha": "Alphabetesch",
 			"sortMenuOptionDist": "No Distanz",
 			"facetMenuOptionType": "Typ",
 			"facetMenuOptionColl": "Sammlung",
 			"facetMenuOptionCity": "Plaz",
+			"displayMenuOptionGallery": "Galerie",
 			"showAll": "All"
 		},
 		"People": {
@@ -124,6 +131,7 @@
 			"sortMenuOptionBirth": "Nom Gebuertsdatum",
 			"sortMenuOptionDeath": "Nom Doudesdatum",
 			"sortMenuOptionName": "Nom Numm",
+			"sortMenuOptionFirst": "Nom Virnumm",
 			"sortMenuOptionLast": "Nom Familljennumm",
 			"facetMenuOptionProfession": "Beruff",
 			"facetMenuOptionCountry": "Land",

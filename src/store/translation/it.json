@@ -109,6 +109,9 @@
 		"Wikipedia": {
 			"headerTitle": "Voce",
 			"missingArticle": "Non c'è alcuna voce su questo argomento nella tua lingua. Puoi leggere la voce in un'altra lingua disponibile scegliendola dal menu delle lingue sopra. Puoi anche creare la voce nella tua lingua cliccando nell'icona \"+\".",
+			"missingArticleMissing": "Non ci sono voci su questo argomento nella tua lingua.",
+			"missingArticleChoose": "Puoi leggere la voce in un'altra lingua disponibile scegliendola dal menu delle lingue sopra. Puoi anche creare la voce nella tua lingua cliccando nell'icona \"+\".",
+			"missingArticleCreate": "Puoi anche creare questa voce nella tua lingua cliccando nell'icona \"+\".",
 			"extLink": {
 				"linkTitleWP": "Leggi o modifica in Wikipedia"
 			},

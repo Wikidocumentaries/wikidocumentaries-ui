@@ -126,8 +126,12 @@
 		"Wikipedia": {
 			"headerTitle": "Artikel",
 			"missingArticle": "Es gibt keinen Artikel über dieses Thema in deiner Sprache. Du kannst den Artikel in einer anderen verfügbaren Sprache lesen, indem du sie im obigen Sprachmenü auswählst. Du kannst den Artikel in deiner Sprache erstellen, indem du auf das Plus-Symbol klickst.",
-			"missingArticleFallback": "Es gibt keinen Artikel über dieses Thema in deiner Sprache. Dieser Artikel wird dir basierend auf deinen Sprach-Fallback-Einstellungen in einer anderen Sprache angezeigt. Du kannst den Artikel in einer anderen verfügbaren Sprache lesen, indem du diese im obigen Sprachmenü auswählst. Du kannst den Artikel in deine Sprache übersetzen, indem du diese im Sprachmenü auswählst.",
-			"missingArticleAuto": "Es gibt keinen Artikel über dieses Thema in irgendeiner Sprache. Dieser kurze Text wurde automatisch von den aufgezeichneten Fakten erzeugt. Du kannst diesen Entwurf speichern und mit der Bearbeitung des Artikels beginnen.",
+			"missingArticleMissing": "Es gibt keinen Artikel über dieses Thema in deiner Sprache.",
+			"missingArticleChoose": "Du kannst den Artikel in einer anderen verfügbaren Sprache lesen, indem du diese aus dem obigen Sprachmenü auswählst. Du kannst auch den Artikel in deiner Sprache erstellen, indem du auf das Plus-Symbol klickst.",
+			"missingArticleCreate": "Du kannst diesen Artikel in deiner Sprache erstellen, indem du auf das Plus-Symbol klickst.",
+			"missingArticleFallback": "Dieser Artikel in einer anderen Sprache wird dir basierend auf deinen Sprach-Fallback-Einstellungen angezeigt.",
+			"missingArticleTranslate": "Du kannst diesen Artikel in deine Sprache übersetzen, indem du sie im Sprachmenü auswählst.",
+			"missingArticleAuto": "Dieser kurze Text wurde automatisch von den aufgezeichneten Fakten erzeugt. Du kannst diesen Entwurf speichern und mit der Bearbeitung des Artikels beginnen.",
 			"extLink": {
 				"linkTitleWP": "In Wikipedia lesen oder bearbeiten"
 			},
