@@ -11,7 +11,7 @@
 				<div class="green stroke"></div>
 			</div>
 			<div class="contentarea">
-				<img :src="element.imageURL" class="viewer-image"/>
+				<img :src="element.imageURL" ref="viewer-image" v-on:load="onimageload" class="viewer-image"/>
 				<div class="viewer-contents">
 					<div class="step-right"><i class="wikiglyph wikiglyph-caret-right step-glyph"></i></div>
 					<div class="step-left"><i class="wikiglyph wikiglyph-caret-left step-glyph"></i></div>
@@ -128,9 +128,9 @@
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-cite metadata-glyph"></i></div>
 								<div class="grid-text"><div class="grid-item">Image info page</div> <a :href="element.infoURL">{{ element.infoURL }}</a></div>
 							</div>
-							<div class="grid-row">
+							<div v-if="dimension.x > -1" class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-image metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Largest size</div> 3554 X 2487 pixels</div>
+								<div class="grid-text"><div class="grid-item">Largest size</div> {{ dimension.x }} X {{ dimension.y }} pixels</div>
 							</div>
 							<div class="grid-row">
 								<div class="grid-icons"><i class="wikiglyph wikiglyph-cog metadata-glyph"></i></div>
@@ -156,6 +156,7 @@ export default {
       return {
         showModal: false,
         element: {},
+        dimension: { x: -1, y: -1 },
         map: null,
         topicFeature: null,
         topicVectorLayer: null
@@ -177,6 +178,12 @@ export default {
         },
         hide() {
           this.showModal = false
+        },
+        onimageload() {
+          this.$nextTick(function () {
+            this.dimension.x = this.$refs['viewer-image'].naturalWidth;
+            this.dimension.y = this.$refs['viewer-image'].naturalHeight;
+          })
         },
         getCredits (item) {
             var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
