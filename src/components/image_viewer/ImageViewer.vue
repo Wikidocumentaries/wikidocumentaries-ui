@@ -36,12 +36,12 @@
 				<div class="metadata-original">
 					<div class="boxtitle">Photograph</div>
 					<div class="columns">
-						<div class="grid-row">
+						<div v-if="element.title" class="grid-row">
 							<div class="grid-icons">
 								<i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
 							</div>
-							<div v-if="element.title" class="grid-text unedited">
-								<div class="grid-item">Title</div>
+							<div class="grid-text unedited">
+								<div class="grid-item">Caption</div>
 								<div class="grid-body">{{ element.title }}</div>
 							</div>
 						</div>
@@ -50,24 +50,24 @@
 								<i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
 							</div>
 							<div class="grid-text edited">
-								<div class="grid-item">Description</div>
-								<div class="grid-body">Mayor and Volunteer Fire Brigade chairman <span class="ner">Elias Öhman</span>'s cortege in <span class="ner">Kanavakatu</span>, Helsinki 19 March 1908. The man in a fur coat walking on the tram tracks is <span class="ner">Akseli Gallen-Kallela</span>.</div>
+								<div class="grid-item">Long description</div>
+								<div class="grid-body">Mayor and Volunteer Fire Brigade chairman Elias Öhman's cortege in Kanavakatu, Helsinki 19 March 1908. The man in a fur coat walking on the tram tracks is Akseli Gallen-Kallela.</div>
 							</div>
 						</div>
-						<div class="grid-row">
+						<div v-if="element.authors" class="grid-row">
 							<div class="grid-icons">
 								<i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
 							</div>
-							<div v-if="element.authors" class="grid-text">
-								<div class="grid-item">Photographer</div>
+							<div class="grid-text">
+								<div class="grid-item">Creator</div>
 								<div class="grid-body">
-									<div class="data-select linked">{{ element.authors }}</div>
+									<div class="data-select">{{ element.authors }}</div>
 								</div>
 							</div>
 						</div>
-						<div class="grid-row">
+						<div v-if="element.year" class="grid-row">
 							<div class="grid-icons"><i class="wikiglyph wikiglyph-clock metadata-glyph"></i></div>
-							<div v-if="element.year" class="grid-text">
+							<div class="grid-text">
 								<div class="grid-item">Date</div>
 								<div class="grid-body">
 									<div class="data-select">{{ element.year }}</div>
@@ -812,12 +812,12 @@ i {
   color: white;
 }
 
-.unedited::after, .edited::after {
+/* .unedited::after, .edited::after {
   font-family: "WikiFont-Glyphs";
   font-weight: 400;
   content: " \e061";
   font-size: 0.7em;
-}
+} */
 
 .edited {
 }
