@@ -1,404 +1,525 @@
 <template>
-    <transition name="modal">
-	<div v-if="showModal" class="image-viewport">
-		<div id="modal" class="main-content">
-			<div class="mw stripe">
-				<div class="yellow stroke"></div>
-				<div class="orange stroke"></div>
-				<div class="red stroke"></div>
-				<div class="purple stroke"></div>
-				<div class="turquoise stroke"></div>
-				<div class="green stroke"></div>
-			</div>
-			<div class="contentarea">
-				<img :src="element.imageURL" ref="viewer-image" v-on:load="onimageload" class="viewer-image"/>
-				<div class="viewer-contents">
-					<div class="step-right"><i class="wikiglyph wikiglyph-caret-right step-glyph"></i></div>
-					<div class="step-left"><i class="wikiglyph wikiglyph-caret-left step-glyph"></i></div>
-					<div class="main-toolbar-over">
-						<div class="absolute-right">
-							<div class="right-align">
-								<div class="toolbaricon"><i class="wikiglyph wikiglyph-cog"></i></div>
-								<div class="toolbaricon"><i class="wikiglyph wikiglyph-ellipses"></i></div>
-								<div class="toolbaricon" @click="hide"><i class="wikiglyph wikiglyph-cross"></i></div>
-							</div>
-						</div>
-					</div>
-					<div class="bottomshade">
-						<div class="titlebox white">
-							<div v-if="element.title" class="titlebox-title">{{ element.title }}</div>
-							<div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="metadata-area">
-				<div class="metadata-original">
-					<div class="boxtitle">Photograph</div>
-					<div class="columns">
-						<div v-if="element.title" class="grid-row">
-							<div class="grid-icons">
-								<i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
-							</div>
-							<div class="grid-text unedited">
-								<div class="grid-item">Caption</div>
-								<div class="grid-body">{{ element.title }}</div>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="grid-icons">
-								<i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
-							</div>
-							<div class="grid-text edited">
-								<div class="grid-item">Long description</div>
-								<div class="grid-body">Mayor and Volunteer Fire Brigade chairman Elias Öhman's cortege in Kanavakatu, Helsinki 19 March 1908. The man in a fur coat walking on the tram tracks is Akseli Gallen-Kallela.</div>
-							</div>
-						</div>
-						<div v-if="element.authors" class="grid-row">
-							<div class="grid-icons">
-								<i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
-							</div>
-							<div class="grid-text">
-								<div class="grid-item">Creator</div>
-								<div class="grid-body">
-									<div class="data-select">{{ element.authors }}</div>
-								</div>
-							</div>
-						</div>
-						<div v-if="element.year" class="grid-row">
-							<div class="grid-icons"><i class="wikiglyph wikiglyph-clock metadata-glyph"></i></div>
-							<div class="grid-text">
-								<div class="grid-item">Date</div>
-								<div class="grid-body">
-									<div class="data-select">{{ element.year }}</div>
-								</div>
-							</div>
-						</div>
-						<div class="grid-row">
-							<div class="grid-icons">
-								<i class="wikiglyph wikiglyph-image metadata-glyph"></i>
-							</div>
-							<div class="grid-text">
-								<div class="grid-item">Technique</div>
-								<div class="grid-body">
-									<div class="data-select linked">photograph</div>
-								</div>
-							</div>
-						</div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-clip metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Image depicts</div> <div class="data-select">death</div> <div class="data-select">funeral</div> <div class="data-select">grave</div> <div class="data-select">coffin</div> <div class="data-select">Volunteer Fire Brigade</div> <div class="data-select">sorrow</div> <div class="data-select linked">Add topic</div></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Location</div> <div class="data-select linked">Kanavakatu (Helsinki)</div></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Depicted people</div> <div class="data-select linked">Akseli Gallen-Kallela</div> <div class="data-select linked">Add person</div></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-bell-on metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Event</div> <div class="data-select linked">Elias Öhman's funeral</div></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Institution</div> <a href="#">Helsinki City Museum</a></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">ID</div> hkm.HKMS000005:0000083f</div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i></div>
-											<div class="grid-text"><div class="grid-item">Copyright</div> <a href="#">Public Domain</a></div></div>
-						<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-plus metadata-glyph"></i></div>
-											<div class="grid-text"><div class="data-select linked">Add data</div></div></div>
-						<div v-if="element.geoLocations.length > 0" class="grid-row">
-              <div class="metadata-map">Location on the map
-                <div id="imagemap" class="map-component"></div>
+  <transition name="modal">
+    <div v-if="showModal" class="image-viewport">
+      <div id="modal" class="main-content">
+        <div class="mw stripe">
+          <div class="yellow stroke"></div>
+          <div class="orange stroke"></div>
+          <div class="red stroke"></div>
+          <div class="purple stroke"></div>
+          <div class="turquoise stroke"></div>
+          <div class="green stroke"></div>
+        </div>
+        <div class="contentarea">
+          <img
+            :src="element.imageURL"
+            ref="viewer-image"
+            v-on:load="onimageload"
+            class="viewer-image"
+          >
+          <div class="viewer-contents">
+            <div class="step-right">
+              <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
+            </div>
+            <div class="step-left">
+              <i class="wikiglyph wikiglyph-caret-left step-glyph"></i>
+            </div>
+            <div class="main-toolbar-over">
+              <div class="absolute-right">
+                <div class="right-align">
+                  <div class="toolbaricon">
+                    <i class="wikiglyph wikiglyph-cog"></i>
+                  </div>
+                  <div class="toolbaricon">
+                    <i class="wikiglyph wikiglyph-ellipses"></i>
+                  </div>
+                  <div class="toolbaricon" @click="hide">
+                    <i class="wikiglyph wikiglyph-cross"></i>
+                  </div>
+                </div>
               </div>
             </div>
-					</div>
-				</div>
-				<div class="metadata-copy alert">
-					<div class="boxtitle">Photographic copy</div>
-					<div class="columns">
-							<div class="grid-row"><div class="grid-icons"></div>
-												<div class="grid-text">The image is licensed with CC BY, but based on the metadata the image is in Public Domain.</div></div>
-							<div class="grid-row"><div class="grid-icons"><i class="wikiglyph wikiglyph-plus metadata-glyph"></i></div>
-							<div class="grid-text"><a href="#">Add information about the photographic copy</a></div></div>
-					</div>
-				</div>
-				<div class="metadata-digital">
-					<div class="boxtitle">Digital copy</div>
-					<div class="columns">
-							<div class="grid-row">
-								<div class="grid-icons"><i class="wikiglyph wikiglyph-folder-placeholder metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Publishing platform</div> <a href="#">{{ element.source }}</a></div>
-							</div>
-							<div class="grid-row">
-								<div class="grid-icons"><i class="wikiglyph wikiglyph-cite metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Image info page</div> <a :href="element.infoURL">{{ element.infoURL }}</a></div>
-							</div>
-							<div v-if="dimension.x > -1" class="grid-row">
-								<div class="grid-icons"><i class="wikiglyph wikiglyph-image metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Largest size</div> {{ dimension.x }} X {{ dimension.y }} pixels</div>
-							</div>
-							<div class="grid-row">
-								<div class="grid-icons"><i class="wikiglyph wikiglyph-cog metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">File size</div> 2,1 MB</div>
-							</div>
-							<div class="grid-row">
-								<div class="grid-icons"><i class="wikiglyph wikiglyph-cog metadata-glyph"></i></div>
-								<div class="grid-text"><div class="grid-item">Format</div> jpg</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </transition>
+            <div class="bottomshade">
+              <div class="titlebox white">
+                <div v-if="element.title" class="titlebox-title">{{ element.title }}</div>
+                <div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="metadata-area">
+          <div class="metadata-original">
+            <div class="header-title boxtitle">Photograph</div>
+            <div class="columns">
+              <div v-if="element.title" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.caption') }}</div>
+                  <div class="grid-body unedited">{{ element.title }}</div>
+                </div>
+              </div>
+              <div v-if="element.summary" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                </div>
+                <div class="grid-text edited">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
+                  <div class="grid-body">{{ element.summary }}</div>
+                </div>
+              </div>
+              <div v-if="element.authors" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
+                  <div class="grid-body">
+                    <div class="data-select">{{ element.authors }}</div>
+                  </div>
+                </div>
+              </div>
+              <div v-if="element.year" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateDepicted') }}</div>
+                  <div class="grid-body">
+                    <div class="data-select">{{ element.year }}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.technique') }}</div>
+                  <div class="grid-body">
+                    <div class="data-select linked">photograph</div>
+                    <div
+                      class="data-select action"
+                    >{{ $t('imageViewer.imageMetadata.addTechnique') }}</div>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-clip metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicted') }}</div>
+                  <div class="data-select">death</div>
+                  <div class="data-select">funeral</div>
+                  <div class="data-select">grave</div>
+                  <div class="data-select">coffin</div>
+                  <div class="data-select">Volunteer Fire Brigade</div>
+                  <div class="data-select">sorrow</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addTopic') }}</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
+                  <div class="data-select linked">Kanavakatu (Helsinki)</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addLocation') }}</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depictedPeople') }}</div>
+                  <div class="data-select linked">Akseli Gallen-Kallela</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addPerson') }}</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-bell-on metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
+                  <div class="data-select linked">Elias Öhman's funeral</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addEvent') }}</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.institution') }}</div>
+                  <div class="data-select linked">Helsinki City Museum</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.id') }}</div>
+                  <div class="data-text">hkm.HKMS000005:0000083f</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
+                  <a href="#">Public Domain</a>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-plus metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="data-select linked">{{ $t('imageViewer.imageMetadata.addData') }}</div>
+                </div>
+              </div>
+              <div v-if="element.geoLocations.length > 0" class="grid-row">
+                <div class="metadata-map">
+                  {{ $t('imageViewer.imageMetadata.locationMap') }}
+                  <div id="imagemap" class="map-component"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="metadata-copy alert">
+            <div class="header-title boxtitle">{{ $t('imageViewer.imageMetadata.photograph') }}</div>
+            <div class="columns">
+              <div class="grid-row">
+                <div class="grid-icons"></div>
+                <div class="grid-text">{{ $t('imageViewer.imageMetadata.copyrightNotePD') }}</div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-plus metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <a href="#">{{ $t('imageViewer.imageMetadata.addPhotographData') }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="metadata-digital">
+            <div class="header-title boxtitle">{{ $t('imageViewer.imageMetadata.digitalCopy') }}</div>
+            <div class="columns">
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-folder-placeholder metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>
+                  <a href="#">{{ element.source }}</a>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-cite metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
+                  <a :href="element.infoURL">{{ element.infoURL }}</a>
+                </div>
+              </div>
+              <div v-if="dimension.x > -1" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageDimensions') }}</div>
+                  {{ dimension.x }} X {{ dimension.y }} pixels
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileSize') }}</div>2,1 MB
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileFormat') }}</div>jpg
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <script>
-
 export default {
-    name: 'ImageViewer',
-    data() {
-      return {
-        showModal: false,
-        element: {},
-        dimension: { x: -1, y: -1 },
-        map: null,
-        topicFeature: null,
-        topicVectorLayer: null
+  name: "ImageViewer",
+  data() {
+    return {
+      showModal: false,
+      element: {},
+      dimension: { x: -1, y: -1 },
+      map: null,
+      topicFeature: null,
+      topicVectorLayer: null
+    };
+  },
+  props: {
+    shouldShowDialog: Boolean
+  },
+  methods: {
+    handleCancel: function() {
+      this.$emit("close");
+    },
+    show(element) {
+      this.element = element;
+      this.showModal = true;
+      this.$nextTick(function() {
+        this.createMap();
+      });
+    },
+    hide() {
+      this.showModal = false;
+    },
+    onimageload() {
+      this.$nextTick(function() {
+        this.dimension.x = this.$refs["viewer-image"].naturalWidth;
+        this.dimension.y = this.$refs["viewer-image"].naturalHeight;
+      });
+    },
+    getCredits(item) {
+      var newAuthors = item.authors != "" ? item.authors + ", " : "";
+      var newYear = item.year != "" ? item.year + ". " : "";
+      var newInstitutions =
+        item.institutions != "" ? item.institutions + ", " : "";
+      var newLicense = item.license != "" ? item.license + ", " : "";
+
+      var credits = newAuthors + newYear + newInstitutions + newLicense;
+
+      if (credits.length > 0 && credits.slice(-2) == ", ") {
+        credits = credits.substr(0, credits.length - 2);
+      }
+
+      return credits;
+    },
+    createMap() {
+      var ol = this.$ol;
+
+      var view = null;
+
+      if (this.getFirstGeoLocationAsPoint() != null) {
+        view = new ol.View({
+          center: ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint()),
+          zoom: 14
+        });
+      } else {
+        view = new ol.View({
+          center: ol.proj.fromLonLat([0, 0]),
+          zoom: 1
+        });
+      }
+
+      this.map = new ol.Map({
+        target: "imagemap",
+        layers: [
+          new ol.layer.Tile({
+            source: new this.$ol.source.OSM()
+          })
+        ],
+        view: view
+      });
+
+      this.setTopicOnMap();
+      this.map.on("click", this.handleMapClick);
+    },
+    setTopicOnMap() {
+      var ol = this.$ol;
+
+      if (this.getFirstGeoLocationAsPoint() != null) {
+        this.topicFeature = new ol.Feature({
+          geometry: new ol.geom.Point(
+            ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint())
+          )
+        });
+        var iconStyle = new ol.style.Style({
+          image: new ol.style.Icon({
+            anchor: [0.5, 1],
+            anchorXUnits: "fraction",
+            anchorYUnits: "fraction",
+            src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
+            scale: 1.4
+          })
+        });
+        this.topicFeature.setStyle(iconStyle);
+
+        var vectorSource = new ol.source.Vector({
+          features: [this.topicFeature]
+        });
+
+        if (this.topicVectorLayer != null) {
+          this.map.removeLayer(this.topicVectorLayer);
+          this.topicVectorLayer = null;
+        }
+
+        this.topicVectorLayer = new ol.layer.Vector({
+          source: vectorSource,
+          zIndex: 1000
+        });
+
+        this.map.addLayer(this.topicVectorLayer);
       }
     },
-    props: {
-        shouldShowDialog: Boolean
+    handleMapClick(event) {
+      console.log("Map clicked: ", event);
     },
-    methods: {
-        handleCancel: function () {
-            this.$emit('close');
-        },
-        show(element) {
-          this.element = element;
-          this.showModal = true;
-          this.$nextTick(function () {
-            this.createMap();
-          })
-        },
-        hide() {
-          this.showModal = false
-        },
-        onimageload() {
-          this.$nextTick(function () {
-            this.dimension.x = this.$refs['viewer-image'].naturalWidth;
-            this.dimension.y = this.$refs['viewer-image'].naturalHeight;
-          })
-        },
-        getCredits (item) {
-            var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-            var newYear = (item.year != "" ? (item.year) + ". " : '');
-            var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-            var newLicense = (item.license != "" ? (item.license + ', ') : '');
+    getFirstGeoLocationGeomType() {
+      var type = null;
 
-            var credits = newAuthors + newYear + newInstitutions + newLicense;
-
-            if (credits.length > 0 && credits.slice(-2) == ", ") {
-                credits = credits.substr(0, credits.length - 2);
-            }
-
-            return credits;
-        },
-        createMap() {
-            var ol = this.$ol;
-
-            var view = null;
-
-            if (this.getFirstGeoLocationAsPoint() != null) {
-                view = new ol.View({
-                    center: ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint()),
-                    zoom: 14
-                })
-            }
-            else {
-                view = new ol.View({
-                    center: ol.proj.fromLonLat([0, 0]),
-                    zoom: 1
-                })
-            }
-
-            this.map = new ol.Map({
-                target: 'imagemap',
-                layers: [
-                    new ol.layer.Tile({
-                        source: new this.$ol.source.OSM()
-                    })
-                ],
-                view: view
-            });
-
-            this.setTopicOnMap();
-            this.map.on('click', this.handleMapClick);
-
-        },
-        setTopicOnMap() {
-            var ol = this.$ol;
-
-            if (this.getFirstGeoLocationAsPoint() != null) {
-                this.topicFeature = new ol.Feature({
-                    geometry: new ol.geom.Point(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint())),
-
-                });
-                var iconStyle = new ol.style.Style({
-                    image: new ol.style.Icon({
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
-                        scale: 1.4
-                    })
-                });
-                this.topicFeature.setStyle(iconStyle);
-
-                var vectorSource = new ol.source.Vector({
-                    features: [this.topicFeature]
-                });
-
-                if (this.topicVectorLayer != null) {
-                    this.map.removeLayer(this.topicVectorLayer);
-                    this.topicVectorLayer = null;
-                }
-
-                this.topicVectorLayer = new ol.layer.Vector({
-                    source: vectorSource,
-                    zIndex: 1000,
-                });
-
-                this.map.addLayer(this.topicVectorLayer);
-            }
-        },
-        handleMapClick (event) {
-          console.log("Map clicked: ", event);
-        },
-        getFirstGeoLocationGeomType () {
-            var type = null;
-
-            if (this.element.geoLocations.length > 0) {
-                var wkt = this.element.geoLocations[0];
-                if (wkt.indexOf("POINT") != -1) {
-                    type = "point";
-                }
-                else if (wkt.indexOf("LINESTRING") != -1) {
-                    type = "linestring";
-                }
-                else if (wkt.indexOf("POLYGON") != -1) {
-                    type = "polygon";
-                }
-                else if (wkt.indexOf("ENVELOPE") != -1) {
-                    type = "polygon";
-                }
-            }
-            return type;
-        },
-        getFirstGeoLocation() {
-            var geoLocation = null;
-            if (this.element.geoLocations.length > 0) {
-                var wkt = this.element.geoLocations[0];
-                if (wkt.indexOf("POINT") != -1) {
-                    // "POINT(24.9600002 60.1796223)"
-                    var coordPart = wkt.split('(')[1].split(')')[0];
-                    //console.log(coordPart);
-                    geoLocation = coordPart.split(' ').map(Number);
-                }
-                else if (wkt.indexOf("LINESTRING") != -1) {
-                    // "LINESTRING(24.9697848 60.1877939,24.9695072 60.1876021)"
-                    var coordPart = wkt.split('(')[1].split(')')[0];
-                    var pointParts = coordPart.split(',');
-                    geoLocation = [];
-                    for (var i = 0; i < pointParts.length; i++) {
-                        geoLocation.push(pointParts[i].split(' ').map(Number));
-                    }
-                }
-                else if (wkt.indexOf("POLYGON") != -1) {
-                    // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
-                    geoLocation = [];
-                    var parenthesisPart = wkt.substring(wkt.indexOf('('));
-                    //console.log(parenthesisPart);
-                    var parenthesisPartInner = parenthesisPart.substr(1, parenthesisPart.length - 2);
-                    //console.log(parenthesisPartInner);
-                    var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
-                    //console.log(polygonPartCount);
-                    var parts = parenthesisPartInner.split('(').slice(1);
-                    //console.log(parts);
-                    var partsWithoutParenthesis = [];
-                    for (var i = 0; i < parts.length; i++) {
-                        var part = null;
-                        var trimmed = parts[i].trim();
-                        if (trimmed.substr(trimmed.length - 1, 1) == ',') {
-                            part = trimmed.substr(0, trimmed.length - 1);
-                        }
-                        else {
-                            part = parts[i];
-                        }
-                        partsWithoutParenthesis.push(part.slice(0, -1));
-                    }
-                    //console.log(partsWithoutParenthesis);
-
-                    for (var i = 0; i < partsWithoutParenthesis.length; i++) {
-                        var pointParts = partsWithoutParenthesis[i].split(',');
-                        var polygonPart = [];
-                        for (var j = 0; j < pointParts.length; j++) {
-                            polygonPart.push(pointParts[j].trim().split(' ').map(Number));
-                        }
-                        geoLocation.push(polygonPart);
-                    }
-                    //console.log(geoLocation);
-                }
-                else if (wkt.indexOf("ENVELOPE") != -1) {
-                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
-                    var coordPart = wkt.split('(')[1].split(')')[0];
-                    var pointParts = coordPart.split(',').map(Number);
-                    //console.log(pointParts);
-                    var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
-                    //console.log(envelopePolygon);
-                    geoLocation = [envelopePolygon];
-                }
-            }
-            return geoLocation;
-        },
-        getFirstGeoLocationAsPoint() {
-            var geoLocation = this.getFirstGeoLocation()
-            if (this.element.geoLocations.length > 0) {
-                var wkt = this.element.geoLocations[0];
-                if (wkt.indexOf("POINT") != -1) {
-                    // "POINT(24.9600002 60.1796223)"
-                    var coordPart = wkt.split('(')[1].split(')')[0];
-                    //console.log(coordPart);
-                    geoLocation = coordPart.split(' ').map(Number);
-                }
-                else if (wkt.indexOf("LINESTRING") != -1) {
-                    geoLocation = this.getCentroid(geoLocation);
-                }
-                else if (wkt.indexOf("POLYGON") != -1) {
-                    geoLocation = this.getCentroid(geoLocation[0]); // We do not care of the possible holes in the polygon
-                }
-                else if (wkt.indexOf("ENVELOPE") != -1) {
-                    // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
-                    var coordPart = wkt.split('(')[1].split(')')[0];
-                    var pointParts = coordPart.split(',').map(Number);
-                    //console.log(pointParts);
-                    var lng = (pointParts[0] + pointParts[1]) / 2;
-                    var lat = (pointParts[2] + pointParts[3]) / 2;
-                    //var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
-                    //console.log(envelopePolygon);
-                    geoLocation = [lng, lat];
-                }
-            }
-
-            return geoLocation;
-        },
-        getCentroid(coords) {
-            var center = coords.reduce(function (x,y) {
-                return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length];
-            }, [0,0])
-            return center;
+      if (this.element.geoLocations.length > 0) {
+        var wkt = this.element.geoLocations[0];
+        if (wkt.indexOf("POINT") != -1) {
+          type = "point";
+        } else if (wkt.indexOf("LINESTRING") != -1) {
+          type = "linestring";
+        } else if (wkt.indexOf("POLYGON") != -1) {
+          type = "polygon";
+        } else if (wkt.indexOf("ENVELOPE") != -1) {
+          type = "polygon";
         }
+      }
+      return type;
+    },
+    getFirstGeoLocation() {
+      var geoLocation = null;
+      if (this.element.geoLocations.length > 0) {
+        var wkt = this.element.geoLocations[0];
+        if (wkt.indexOf("POINT") != -1) {
+          // "POINT(24.9600002 60.1796223)"
+          var coordPart = wkt.split("(")[1].split(")")[0];
+          //console.log(coordPart);
+          geoLocation = coordPart.split(" ").map(Number);
+        } else if (wkt.indexOf("LINESTRING") != -1) {
+          // "LINESTRING(24.9697848 60.1877939,24.9695072 60.1876021)"
+          var coordPart = wkt.split("(")[1].split(")")[0];
+          var pointParts = coordPart.split(",");
+          geoLocation = [];
+          for (var i = 0; i < pointParts.length; i++) {
+            geoLocation.push(pointParts[i].split(" ").map(Number));
+          }
+        } else if (wkt.indexOf("POLYGON") != -1) {
+          // "POLYGON((24.7828131 60.0999549, 24.8356577 60.130414, 24.8513844 60.2249765, 24.8419098 60.2212043, 24.8347825 60.2585099, 24.8677628 60.2523073, 24.9473908 60.2784652, 24.9731653 60.2643801, 25.0209862 60.2893227, 25.0882105 60.2713417, 25.0823359 60.2496391, 25.1358461 60.2372286, 25.1598757 60.2488133, 25.1425242 60.2697779, 25.2545116 60.2952274, 25.2509121 60.2734979, 25.2273451 60.2611057, 25.240926 60.246305, 25.2014099 60.2181613, 25.2204176 60.1997262, 25.1800446 60.0987408, 25.1693516 59.9434386, 24.9423061 59.922486, 24.7828131 60.0999549))"
+          geoLocation = [];
+          var parenthesisPart = wkt.substring(wkt.indexOf("("));
+          //console.log(parenthesisPart);
+          var parenthesisPartInner = parenthesisPart.substr(
+            1,
+            parenthesisPart.length - 2
+          );
+          //console.log(parenthesisPartInner);
+          var polygonPartCount = parenthesisPartInner.match(/\(/g).length;
+          //console.log(polygonPartCount);
+          var parts = parenthesisPartInner.split("(").slice(1);
+          //console.log(parts);
+          var partsWithoutParenthesis = [];
+          for (var i = 0; i < parts.length; i++) {
+            var part = null;
+            var trimmed = parts[i].trim();
+            if (trimmed.substr(trimmed.length - 1, 1) == ",") {
+              part = trimmed.substr(0, trimmed.length - 1);
+            } else {
+              part = parts[i];
+            }
+            partsWithoutParenthesis.push(part.slice(0, -1));
+          }
+          //console.log(partsWithoutParenthesis);
+
+          for (var i = 0; i < partsWithoutParenthesis.length; i++) {
+            var pointParts = partsWithoutParenthesis[i].split(",");
+            var polygonPart = [];
+            for (var j = 0; j < pointParts.length; j++) {
+              polygonPart.push(
+                pointParts[j]
+                  .trim()
+                  .split(" ")
+                  .map(Number)
+              );
+            }
+            geoLocation.push(polygonPart);
+          }
+          //console.log(geoLocation);
+        } else if (wkt.indexOf("ENVELOPE") != -1) {
+          // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+          var coordPart = wkt.split("(")[1].split(")")[0];
+          var pointParts = coordPart.split(",").map(Number);
+          //console.log(pointParts);
+          var envelopePolygon = [
+            [pointParts[0], pointParts[3]],
+            [pointParts[0], pointParts[2]],
+            [pointParts[1], pointParts[2]],
+            [pointParts[1], pointParts[3]],
+            [pointParts[0], pointParts[3]]
+          ];
+          //console.log(envelopePolygon);
+          geoLocation = [envelopePolygon];
+        }
+      }
+      return geoLocation;
+    },
+    getFirstGeoLocationAsPoint() {
+      var geoLocation = this.getFirstGeoLocation();
+      if (this.element.geoLocations.length > 0) {
+        var wkt = this.element.geoLocations[0];
+        if (wkt.indexOf("POINT") != -1) {
+          // "POINT(24.9600002 60.1796223)"
+          var coordPart = wkt.split("(")[1].split(")")[0];
+          //console.log(coordPart);
+          geoLocation = coordPart.split(" ").map(Number);
+        } else if (wkt.indexOf("LINESTRING") != -1) {
+          geoLocation = this.getCentroid(geoLocation);
+        } else if (wkt.indexOf("POLYGON") != -1) {
+          geoLocation = this.getCentroid(geoLocation[0]); // We do not care of the possible holes in the polygon
+        } else if (wkt.indexOf("ENVELOPE") != -1) {
+          // "ENVELOPE(24.9320989, 24.9512479, 60.1799755, 60.1677043)"
+          var coordPart = wkt.split("(")[1].split(")")[0];
+          var pointParts = coordPart.split(",").map(Number);
+          //console.log(pointParts);
+          var lng = (pointParts[0] + pointParts[1]) / 2;
+          var lat = (pointParts[2] + pointParts[3]) / 2;
+          //var envelopePolygon = [[pointParts[0], pointParts[3]], [pointParts[0], pointParts[2]], [pointParts[1], pointParts[2]], [pointParts[1], pointParts[3]], [pointParts[0], pointParts[3]]];
+          //console.log(envelopePolygon);
+          geoLocation = [lng, lat];
+        }
+      }
+
+      return geoLocation;
+    },
+    getCentroid(coords) {
+      var center = coords.reduce(
+        function(x, y) {
+          return [x[0] + y[0] / coords.length, x[1] + y[1] / coords.length];
+        },
+        [0, 0]
+      );
+      return center;
     }
-}
+  }
+};
 </script>
 
 <style scoped>
-
 .image-viewport {
   position: fixed;
   z-index: 9998;
@@ -407,12 +528,12 @@ export default {
   width: 100%;
   height: 100%;
   overflow: auto;
-	transition: opacity .3s ease;
-	background: white;
+  transition: opacity 0.3s ease;
+  background: white;
 }
 
 i {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .main-content {
@@ -420,7 +541,7 @@ i {
 }
 
 .headline {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   color: #333;
   text-transform: uppercase;
 }
@@ -435,10 +556,14 @@ i {
 }
 
 .main-toolbar-over {
-	position: absolute;
-	color: white;
-	width: 100%;
-	background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+  position: absolute;
+  color: white;
+  width: 100%;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
 }
 
 .tool {
@@ -462,15 +587,15 @@ i {
 }
 
 .toolbaricon:hover {
-    background: white;
-    color: var(--main-txt-color);
+  background: white;
+  color: var(--main-txt-color);
 }
 
 .stripe {
-    flex: 1 0 100%;
-    height: 18px;
-    display: flex;
-    flex-wrap: nowrap;
+  flex: 1 0 100%;
+  height: 18px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .contentarea {
@@ -486,14 +611,14 @@ i {
 }
 
 .left-align {
-    display: flex;
+  display: flex;
 }
 
 .right-align {
-    display: flex;
-    float: right;
-    clear: both;
-    align-items: center;
+  display: flex;
+  float: right;
+  clear: both;
+  align-items: center;
 }
 
 .stroke {
@@ -501,27 +626,27 @@ i {
 }
 
 .mw .yellow {
-    background: hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 100%);
 }
 
 .mw .orange {
-    background: hsl(0, 0%, 80%);
+  background: hsl(0, 0%, 80%);
 }
 
 .mw .red {
-    background: hsl(0, 0%, 60%);
+  background: hsl(0, 0%, 60%);
 }
 
 .mw .purple {
-    background: hsl(0, 0%, 40%);
+  background: hsl(0, 0%, 40%);
 }
 
 .mw .turquoise {
-    background: hsl(0, 0%, 20%);
+  background: hsl(0, 0%, 20%);
 }
 
 .mw .green {
-    background: hsl(0, 0%, 0%);
+  background: hsl(0, 0%, 0%);
 }
 
 .turquoisebar {
@@ -541,11 +666,16 @@ i {
 
 .topshade {
   position: absolute;
-	width: 100%;
-	left: 0px;
-	right: 0px;
-	top: 0px;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0,0,0,0.3) 50%, rgba(0, 0, 0, 0) 100%);
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 .top-info {
   display: flex;
@@ -563,29 +693,34 @@ i {
 
 .info-title {
   font-size: 3vw;
-	font-weight: bold;
-	line-height: 1em;
-	margin-bottom: 5px;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 5px;
 }
 
 .info-subtitle {
   font-size: 1.7vw;
-	font-weight: bold;
-	line-height: 1.5em;
+  font-weight: bold;
+  line-height: 1.5em;
 }
 
 .bottomshade {
-	position: absolute;
-	width: 100%;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0,0,0,0.3) 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
 }
 
 .titlebox {
-	margin-left: 20px;
-	padding: 30px 0 15px;
+  margin-left: 20px;
+  padding: 30px 0 15px;
 }
 
 .white {
@@ -593,16 +728,16 @@ i {
 }
 
 .titlebox-title {
-	font-size: 3.5vw;
-	font-weight: bold;
-	line-height: 1em;
-	margin-bottom: 5px;
+  font-size: 3.5vw;
+  font-weight: bold;
+  line-height: 1em;
+  margin-bottom: 5px;
 }
 
 .titlebox-subtitle {
-	font-size: 2vw;
-	font-weight: bold;
-	line-height: 1.5em;
+  font-size: 2vw;
+  font-weight: bold;
+  line-height: 1.5em;
 }
 
 .titlebox-tool {
@@ -617,7 +752,7 @@ i {
 }
 
 .titlebox-subtitle:first-letter {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .titlebox-tool a {
@@ -630,9 +765,9 @@ i {
 }
 
 .viewer-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .viewer-contents {
@@ -649,29 +784,41 @@ i {
 }
 
 .step-right {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0.2) 50%, rgba(0, 0, 0, 0) 100%);
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .step-left {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0,0,0,0.2) 50%, rgba(0, 0, 0, 0) 100%);
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .step-right:hover {
@@ -690,18 +837,18 @@ i {
 }
 
 .titlebox-subtitle a {
-	color: white;
+  color: white;
 }
 
 .titlebox-subtitle a:hover {
-	color: var(--main-link-color);
-	box-shadow: none;
+  color: var(--main-link-color);
+  box-shadow: none;
 }
 
 .columns {
-	column-width: 373px;
-	column-gap: 1.5em;
-	padding: 10px 20px 15px 20px;
+  column-width: 373px;
+  column-gap: 1.5em;
+  padding: 10px 20px 15px 20px;
 }
 
 .metadata-glyph {
@@ -710,18 +857,15 @@ i {
 }
 
 .grid {
-	display: grid;
-	grid-template-columns: 1fr 15fr;
-	grid-gap: .5em;
-	box-decoration-break: clone;
-	-webkit-box-decoration-break: clone;
+  display: grid;
+  grid-template-columns: 1fr 15fr;
+  grid-gap: 0.5em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .boxtitle {
-	padding: 15px 20px 0 20px;
-	font-weight: 600;
-	font-size: 1.2em;
-	text-transform: uppercase;
+  padding: 15px 20px 0 20px;
 }
 
 .grid-row {
@@ -732,12 +876,12 @@ i {
 .grid-text {
 }
 .grid-icons {
-    flex: 0 0 auto;
-    margin: 0.05em 0.8em 0 0;
+  flex: 0 0 auto;
+  margin: 0.05em 0.8em 0 0;
 }
 .grid-item {
-	font-weight: bold;
-	display: inline;
+  font-weight: bold;
+  display: inline;
   color: var(--main-txt-color);
 }
 
@@ -754,15 +898,15 @@ i {
 } */
 
 .alert {
-	background-color: var(--main-yellow);
+  background-color: var(--main-yellow);
 }
 
 .alert a {
-	color: var(--main-red);
+  color: var(--main-red);
 }
 
 .alert a:hover {
-	color: var(--main-text-color);
+  color: var(--main-text-color);
 }
 
 .ner {
@@ -772,22 +916,21 @@ i {
 }
 
 .data-select {
-    display: inline-block;
-    background: var(--main-red);
-    color: white;
-    padding: 0 7px;
-    border-radius: 1em;
-    line-height: 1.25;
-    cursor: pointer;
-    /* transition: background 80ms ease-in, color 80ms ease-in; */
-
+  display: inline-block;
+  background: var(--main-red);
+  color: white;
+  padding: 0 7px;
+  border-radius: 1em;
+  line-height: 1.25;
+  cursor: pointer;
+  /* transition: background 80ms ease-in, color 80ms ease-in; */
 }
 
 .data-select::after {
-    font-family: "WikiFont-Glyphs";
-    font-weight: 400;
-    content: " \e061";
-    font-size: 0.7em;
+  font-family: "WikiFont-Glyphs";
+  font-weight: 400;
+  content: " \e061";
+  font-size: 0.7em;
 }
 
 .linked {
@@ -795,9 +938,15 @@ i {
   background: white;
 }
 
-.data-select:hover, .ner:hover {
+.action {
+  color: var(--main-text-color);
+  background: white;
+}
+
+.data-select:hover,
+.ner:hover {
   background: black;
-  border-radius: 0;
+  /* border-radius: 0;*/
   color: white;
   box-shadow: none;
 }
@@ -808,7 +957,6 @@ i {
 
 .unedited:hover {
   background: black;
-  border-radius: 0;
   color: white;
 }
 
@@ -845,11 +993,11 @@ i {
 
 .tool-menu-item:hover {
   background: white;
-  color: var(--main-txt-color)
+  color: var(--main-txt-color);
 }
 
 .tool-menu-item-text {
-       padding: 0 15px;
+  padding: 0 15px;
 }
 
 .tool-content {
@@ -910,28 +1058,23 @@ i {
   border: 1px solid var(--main-blue);
 }
 
-
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
  * by Vue.js.
  */
 
-/* .modal-enter {
- * opacity: 0;
- * }
- */
+.modal-enter {
+  opacity: 0;
+}
 
-/* .modal-leave-active {
- * opacity: 0;
- *}
- */
+.modal-leave-active {
+  opacity: 0;
+}
 
-/* .modal-enter .modal-container,
- * .modal-leave-active .modal-container {
- *  -webkit-transform: scale(1.1);
- *  transform: scale(1.1);
- *}
- */
-
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 </style>
