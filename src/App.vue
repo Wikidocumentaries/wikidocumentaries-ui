@@ -346,6 +346,7 @@ i.wikiglyph {
     line-height: 1.2em;
     opacity: 0;
     transition: opacity 80ms ease-in;
+    max-height: 15em;
 }
 
 .thumb-image-info-plain {
