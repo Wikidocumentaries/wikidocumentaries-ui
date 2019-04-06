@@ -320,10 +320,6 @@ i.wikiglyph {
   border-left: 10px solid var(--main-yellow) !important;
 }
 
-.thumb-image {
-    width: 100%;
-}
-
 .thumb-image-header {
     position:absolute;
     display: flex;
