@@ -78,7 +78,7 @@ export default {
 .header {
     position:relative;
     background: var(--main-modal-color);
-    height: 60vh;
+    height: 70vh;
     transition: height 0.5s;
 }
 

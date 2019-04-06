@@ -241,6 +241,56 @@
             "facetMenuOptionCity": "Gender"
         }
     },
+    "imageViewer": {
+        "imageMetadata": {
+            "caption": "Caption",
+            "addCaption": "Add caption",
+            "description": "Description",
+            "addDescription": "Add description",
+            "creator": "Creator",
+            "creatorUnknown": "Unknown",
+            "addCreator": "Add creator",
+            "dateDepicted": "Depicted date",
+            "addDate": "Add depicted date",
+            "datePublished": "Publishing date",
+            "addDatePublished": "Add publishing date",
+            "publisher": "Publisher",
+            "addPublisher": "Add publisher",
+            "technique": "Technique",
+            "addTechnique": "Add technique",
+            "depicted": "Image depicts",
+            "addTopic": "Add topic",
+            "location": "Location",
+            "locationMap": "Location on the map",
+            "addLocation": "Add location",
+            "depictedPeople": "Depicted people",
+            "addPerson": "Add person",
+            "event": "Event",
+            "addEvent": "Add event",
+            "institution": "Institution",
+            "id": "ID",
+            "copyright": "Copyright",
+            "photograph": "Photograph",
+            "photographer": "Photographer",
+            "addPhotographData": "Add information about the photograph",
+            "copyrightNotePD": "The image is licensed with $1, but based on the metadata the image is in Public Domain.",
+            "copyrightNoteSame": "The same image is licensed more openly with $1.",
+            "digitalCopy": "Digital copy",
+            "publishingPlatform": "Publishing platform",
+            "imageInfoPage": "Image info page",
+            "imageDimensions": "Image dimensions",
+            "fileSize": "File size",
+            "fileFormat": "File format"
+        },
+        "imageActions": {
+            "rotateImage": "Rotate image",
+            "clockwise": "clockwise",
+            "counterclockwise": "counterclockwise",
+            "flip": "Flip",
+            "horizontal": "horizontal",
+            "vertical": "vertical"
+        }
+    },
     "map_place_match_page": {
         "PlaceMatchSettings": {
             "headerTitle": "Combine place names"
