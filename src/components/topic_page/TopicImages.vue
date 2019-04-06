@@ -7,14 +7,14 @@
             </ToolbarMenu>
         </div>
         
-        <MasonryGrid class="masonry-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
-        </MasonryGrid>
+        <ImageGrid class="image-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
+        </ImageGrid>
     </div>
 </template>
 
 <script>
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
-import MasonryGrid from '@/components/MasonryGrid'
+import ImageGrid from '@/components/ImageGrid'
 
 export default {
     name: 'TopicImages',
@@ -65,7 +65,7 @@ export default {
     },
     components: {
         ToolbarMenu,
-        MasonryGrid
+        ImageGrid
     }
 }
 </script>
@@ -73,30 +73,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.masonry-grid {
-    width: calc(100% - 1px);
-}
-
-.grid-item {
-    margin-bottom: -5px;
-}
-
-.grid-item--width2 { 
-    width: 400px;
-}
-/*
-.thumb-image {
+.image-grid {
     width: 100%;
-    cursor: zoom-in;
 }
-
-.thumb-image-header {
-    position:absolute;
-    top: 0px;
-    left: 10px;
-    width: 100%; 
-}
-*/
 .thumb-image-glyph {
     color: white;
 }

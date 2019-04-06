@@ -1,8 +1,7 @@
 <template>
     <div class="images-action-menu">
         <IconMenu icon="wikiglyph-ellipses" :items="iconActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-            <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesActionMenu.menuTitle') }}</div>
-        </IconMenu>
+            <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesActionMenu.menuTitle') }}</div></IconMenu>
         <ImageViewer ref="imageviewer"></ImageViewer>
     </div>
 </template>
