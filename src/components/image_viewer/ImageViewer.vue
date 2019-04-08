@@ -275,7 +275,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
-                  <div class="grid-text">hkm.HKMS000005:0000083f</div>
+                  <div class="data-text">hkm.HKMS000005:0000083f</div>
                 </div>
               </div>
               <div class="grid-row">
