@@ -11,6 +11,7 @@
           <div class="green stroke"></div>
         </div>
         <div class="contentarea">
+          <div class="image-area">
           <img
             :src="element.imageURL"
             ref="viewer-image"
@@ -54,6 +55,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <!--div class="tool-area"></div-->
         </div>
         <div class="metadata-area">
           <div class="metadata-original">
@@ -558,7 +561,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: overlay;
   transition: opacity 0.3s ease;
   background: white;
 }
@@ -637,6 +640,8 @@ i {
   height: calc(100vh - 18px);
   background: black;
   position: relative;
+  display: flex;
+  flex: 1 1 auto;
 }
 
 .absolute-right {
@@ -763,15 +768,13 @@ i {
 }
 
 .titlebox-title {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   line-height: 1em;
   margin-bottom: 5px;
 }
 
 .titlebox-subtitle {
-  font-size: 1.8em;
-  font-weight: bold;
   line-height: 1.5em;
 }
 
@@ -1050,13 +1053,12 @@ i {
   flex: 1 1 auto;
 }
 
-.tool-image {
+.image-area {
   flex: 1 1 50%;
   background: black;
-  position: relative;
 }
 
-.toolarea {
+.tool-area {
   flex: 1 1 50%;
   background: var(--main-modal-color);
 }
