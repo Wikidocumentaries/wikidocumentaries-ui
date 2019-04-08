@@ -116,10 +116,20 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.genre') }}</div>
+                  <div class="data-select unlinked">portrait</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addGenre') }}</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-clip metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicted') }}</div>
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicts') }}</div>
                   <div class="data-select">death</div>
                   <div class="data-select">funeral</div>
                   <div class="data-select">grave</div>
@@ -135,8 +145,18 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
-                  <div v-if="element.location" class="data-select">Kanavakatu (Helsinki)</div>
+                  <div v-if="element.location" class="data-select">Katajanokka</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addLocation') }}</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addAddress') }}</div>
+                </div>
+              </div>
+              <div v-if="element.address" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.address') }}</div>
+                  <div class="data-select">Kanavakatu (Helsinki)</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -237,7 +257,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>
-                  <a href="#">{{ element.source }}</a>
+                  <div class="data-text"><a href="#">{{ element.source }}</a></div>
                 </div>
               </div>
               <div class="grid-row">
@@ -246,7 +266,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
-                  <div class="grid-text">hkm.HKMS000005:0000083f</div>
+                  <div class="data-text">hkm.HKMS000005:0000083f</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -264,7 +284,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageDimensions') }}</div>
-                  {{ dimension.x }} X {{ dimension.y }} px
+                  <div class="data-text">{{ dimension.x }} X {{ dimension.y }} px</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -272,7 +292,8 @@
                   <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileSize') }}</div>2,1 MB
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileSize') }}</div>
+                  <div class="data-text">2,1 MB</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -280,7 +301,8 @@
                   <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileFormat') }}</div>jpg
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileFormat') }}</div>
+                  <div class="data-text">jpg</div>
                 </div>
               </div>
             </div>
@@ -561,6 +583,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
   overflow: overlay;
   transition: opacity 0.3s ease;
   background: white;
@@ -911,8 +934,6 @@ i {
   margin-bottom: 0.5em;
 }
 
-.grid-text {
-}
 .grid-icons {
   flex: 0 0 auto;
   margin: 0.05em 0.8em 0 0;
@@ -1009,9 +1030,6 @@ i {
   font-size: 0.7em;
 } */
 
-.edited {
-}
-
 .tool-main {
   display: flex;
   height: calc(100vh - 40px);
@@ -1106,11 +1124,11 @@ i {
  */
 
 .modal-enter {
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .modal-leave-active {
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .modal-enter .modal-container,
