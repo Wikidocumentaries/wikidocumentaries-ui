@@ -27,21 +27,29 @@
             <div class="main-toolbar-over">
               <div class="absolute-right">
                 <div class="right-align">
-                  <div class="toolbaricon">
+                  <div class="toolbar-item">
                     <i class="wikiglyph wikiglyph-cog"></i>
                   </div>
-                  <div class="toolbaricon">
+                  <div class="toolbar-item">
                     <i class="wikiglyph wikiglyph-ellipses"></i>
                   </div>
-                  <div class="toolbaricon" @click="hide">
+                  <HeaderLink
+                    v-if="element.infoURL != undefined"
+                    class="toolbar-item"
+                    :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
+                    :link="element.infoURL"
+                  ></HeaderLink>
+                  <UILanguageMenu class="language-menu"></UILanguageMenu>
+                  <div class="toolbar-item" @click="hide">
                     <i class="wikiglyph wikiglyph-cross"></i>
+                    <span class="tooltip">{{ tooltip }}</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="bottomshade">
               <div class="titlebox white">
-                <div v-if="element.title" class="titlebox-title">{{ element.title }}</div>
+                <div class="titlebox-title">{{ element.title }}</div>
                 <div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
               </div>
             </div>
@@ -49,9 +57,12 @@
         </div>
         <div class="metadata-area">
           <div class="metadata-original">
-            <div class="header-title boxtitle">Photograph</div>
+            <div class="toolbar">
+            <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
+        </div>
+            <!--div class="header-title boxtitle">Photograph</div-->
             <div class="columns">
-              <div v-if="element.title" class="grid-row">
+              <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
                 </div>
@@ -60,35 +71,35 @@
                   <div class="grid-body unedited">{{ element.title }}</div>
                 </div>
               </div>
-              <div v-if="element.summary" class="grid-row">
+              <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
                 </div>
-                <div class="grid-text edited">
+                <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
-                  <div class="grid-body">{{ element.summary }}</div>
+                  <div v-if="element.summary" class="grid-body unedited">{{ element.summary }}</div>
+                  <div v-else class="grid-body action">{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
                 </div>
               </div>
-              <div v-if="element.authors" class="grid-row">
+              <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
-                  <div class="grid-body">
-                    <div class="data-select">{{ element.authors }}</div>
-                  </div>
+                  <div v-if="element.authors" class="data-select">{{ element.authors }}</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
                 </div>
               </div>
-              <div v-if="element.year" class="grid-row">
+              <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateDepicted') }}</div>
-                  <div class="grid-body">
-                    <div class="data-select">{{ element.year }}</div>
-                  </div>
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
+                  <div v-if="element.year" class="data-select">{{ element.year }}</div>
+                  <div v-else class="data-select action">{{ $t('imageViewer.imageMetadata.addDateCreated') }}</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addDateDepicted') }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -97,12 +108,8 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.technique') }}</div>
-                  <div class="grid-body">
-                    <div class="data-select linked">photograph</div>
-                    <div
-                      class="data-select action"
-                    >{{ $t('imageViewer.imageMetadata.addTechnique') }}</div>
-                  </div>
+                  <div class="data-select linked">photograph</div>
+                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addTechnique') }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -126,7 +133,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
-                  <div class="data-select linked">Kanavakatu (Helsinki)</div>
+                  <div v-if="element.location" class="data-select">Kanavakatu (Helsinki)</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addLocation') }}</div>
                 </div>
               </div>
@@ -146,7 +153,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
-                  <div class="data-select linked">Elias Öhman's funeral</div>
+                  <div class="data-select">Elias Öhman's funeral</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addEvent') }}</div>
                 </div>
               </div>
@@ -237,7 +244,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageDimensions') }}</div>
-                  {{ dimension.x }} X {{ dimension.y }} pixels
+                  {{ dimension.x }} X {{ dimension.y }} px
                 </div>
               </div>
               <div class="grid-row">
@@ -265,6 +272,9 @@
 </template>
 
 <script>
+import HeaderLink from "@/components/HeaderLink";
+import UILanguageMenu from "@/components/menu/UILanguageMenu";
+
 export default {
   name: "ImageViewer",
   data() {
@@ -276,6 +286,10 @@ export default {
       topicFeature: null,
       topicVectorLayer: null
     };
+  },
+  components: {
+    HeaderLink,
+    UILanguageMenu
   },
   props: {
     shouldShowDialog: Boolean
@@ -576,17 +590,21 @@ i {
   color: white;
 }
 
-.toolbaricon {
+.toolbar-item {
   height: 100%;
   display: flex;
   align-items: center;
-  width: 40px;
+  width: 45px;
   transition: color 80ms ease-in, background 8ms ease-in;
   justify-content: center;
   cursor: pointer;
 }
 
-.toolbaricon:hover {
+.toolbar-item-a {
+    color: white;
+}
+
+.toolbar-item:hover > a {
   background: white;
   color: var(--main-txt-color);
 }
@@ -728,14 +746,14 @@ i {
 }
 
 .titlebox-title {
-  font-size: 3.5vw;
+  font-size: 3em;
   font-weight: bold;
   line-height: 1em;
   margin-bottom: 5px;
 }
 
 .titlebox-subtitle {
-  font-size: 2vw;
+  font-size: 1.8em;
   font-weight: bold;
   line-height: 1.5em;
 }
@@ -939,7 +957,7 @@ i {
 }
 
 .action {
-  color: var(--main-text-color);
+  color: #999;
   background: white;
 }
 
