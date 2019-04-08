@@ -58,9 +58,8 @@
         <div class="metadata-area">
           <div class="metadata-original">
             <div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
+            <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
         </div>
-            <!--div class="header-title boxtitle">Photograph</div-->
             <div class="columns">
               <div class="grid-row">
                 <div class="grid-icons">
@@ -77,7 +76,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
-                  <div v-if="element.summary" class="grid-body unedited">{{ element.summary }}</div>
+                  <div v-if="element.description" class="grid-body unedited">{{ element.description }}</div>
                   <div v-else class="grid-body action">{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
                 </div>
               </div>
@@ -168,11 +167,20 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.id') }}</div>
-                  <div class="data-text">hkm.HKMS000005:0000083f</div>
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.collection') }}</div>
+                  <div class="data-select linked">Helsinkikuvia</div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.inventoryNumber') }}</div>
+                  <div class="data-text">12345</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -227,6 +235,15 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>
                   <a href="#">{{ element.source }}</a>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
+                  <div class="grid-text">hkm.HKMS000005:0000083f</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -931,6 +948,10 @@ i {
   display: inline;
   box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 var(--main-red);
   cursor: pointer;
+}
+
+.data-text {
+  display: inline-block;
 }
 
 .data-select {
