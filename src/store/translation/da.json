@@ -5,13 +5,18 @@
 		]
 	},
 	"LandingPage": {
-		"search": "Søg"
+		"search": "Søg",
+		"searchInputPlaceHolder": "Find eller opret et nyt emne"
 	},
 	"MainPage": {
+		"topicPageName": "Emneside",
 		"mapPlaceMatchPageName": "Kombiner stednavne",
 		"mapSearchPageName": "Søg kort"
 	},
 	"topic_page": {
+		"BaseMapDialog": {
+			"yearAbbreviation": "år"
+		},
 		"Header": {
 			"titleEditText": "Rediger titlen",
 			"titleApproveText": "Godkend denne titeæ",
@@ -20,6 +25,10 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Billeder fra arkiverne",
+			"actionsMenu": {
+				"arrangeByTime": "Arranger billeder efter tid",
+				"selectWorks": "Vælg billeder af værker"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Handlinger",
 				"menuTooltip": "Handlinger",
@@ -34,14 +43,26 @@
 				},
 				"remCreator": {
 					"search": "Søg efter skaberen"
+				},
+				"remInappropriate": {
+					"menuTitle": "Den er upassende fordi",
+					"shortMenuTitle": "Den er upassende"
 				}
 			},
 			"facetMenu": {
 				"time": "tid",
+				"map": "kort",
 				"people": "personer",
 				"places": "steder",
+				"topics": "emner",
 				"imageSize": "Billedestørrelse",
-				"source": "kilde"
+				"large": "stor",
+				"medium": "mellem",
+				"small": "lille",
+				"creator": "skaber",
+				"platform": "platform",
+				"source": "kilde",
+				"clear": "Ryd valg"
 			}
 		},
 		"TopicMap": {
@@ -50,9 +71,20 @@
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje"
 		},
+		"Wikidata": {
+			"noTopicFoundText": "Emnet blev ikke fundet"
+		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
+			"missingArticleMissing": "Der findes ingen artikler om dette emne på dit sprog.",
+			"extLink": {
+				"linkTitleWP": "Læs eller rediger på Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Opret en artikel på Wikipedia"
+			},
 			"languageMenu": {
+				"menuTitle": "Læs artiklen på et andet sprog",
 				"translateArticleText": "Oversæt denne artikel til dit sprog",
 				"otherLanguagestext": "Andre sprog"
 			}
@@ -69,20 +101,28 @@
 			"sortMenu": {
 				"optionTime": "Efter tid",
 				"optionAlpha": "Alfabetisk",
-				"optionDist": "Efter afstand"
+				"optionDist": "Efter afstand",
+				"optionClear": "Ryd sortering"
 			},
 			"facetMenu": {
-				"optionType": "Type"
+				"optionType": "Type",
+				"optionColl": "Skaber",
+				"optionCity": "Placering"
 			},
 			"displayMenu": {
+				"title": "Vis som",
 				"optionGallery": "Galleri",
 				"optionList": "Liste"
-			}
+			},
+			"showAll": "Alle"
 		},
 		"Depicted": {
 			"sortMenu": {
+				"title": "Sorter værker",
+				"tooltip": "Sorter værker",
 				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetisk"
+				"optionAlpha": "Alfabetisk",
+				"optionClear": "Ryd sortering"
 			},
 			"facetMenu": {
 				"optionType": "Type",
@@ -98,9 +138,11 @@
 		"Works": {
 			"headerTitle": "Værker",
 			"sortMenuTitle": "Sorter",
+			"sortMenuTooltip": "Sorter emner",
 			"sortMenuOptionTime": "Efter tid",
 			"sortMenuOptionAlpha": "Alfabetisk",
 			"sortMenuOptionDist": "Efter afstand",
+			"sortMenuOptionClear": "Ryd sortering",
 			"facetMenuOptionType": "Type",
 			"facetMenuOptionColl": "Samling",
 			"facetMenuOptionCity": "Placering",
@@ -116,6 +158,7 @@
 			"sortMenuOptionName": "Efter navn",
 			"sortMenuOptionFirst": "Efter fornavn",
 			"sortMenuOptionLast": "Efter efternavn",
+			"sortMenuOptionClear": "Ryd sortering",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Køn"
 		}
@@ -126,6 +169,8 @@
 		}
 	},
 	"general": {
+		"ok": "Ok",
+		"cancel": "Annullér",
 		"helpText": "Hjælp",
 		"menus": {
 			"actionMenuTitle": "Handlinger",

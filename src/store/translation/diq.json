@@ -58,13 +58,16 @@
 				"time": "wext",
 				"map": "xerita",
 				"people": "merdumi",
+				"places": "cayi",
 				"topics": "mewzuyi",
 				"form": "form",
+				"imageSize": "ebadê resımi",
 				"large": "gırd",
 				"medium": "miyanên",
 				"small": "werdi",
 				"type": "tewrê medya",
 				"creator": "vıraştoğ",
+				"platform": "platform",
 				"source": "çıme"
 			}
 		},
@@ -107,12 +110,15 @@
 			"showAll": "Pêro"
 		},
 		"Locations": {
+			"headerTitle": "Lokasyoni",
 			"sortMenu": {
-				"optionTime": "Ebe wext ra"
+				"optionTime": "Ebe wext ra",
+				"optionAlpha": "Alfabetik"
 			},
 			"facetMenu": {
 				"optionType": "Babet",
-				"optionColl": "Vıraştoğ"
+				"optionColl": "Vıraştoğ",
+				"optionCity": "Lokasyon"
 			},
 			"displayMenu": {
 				"optionGallery": "Galeriye",
@@ -138,14 +144,17 @@
 		"Works": {
 			"sortMenuOptionAlpha": "Alfabetik",
 			"facetMenuOptionType": "Babet",
-			"facetMenuOptionCity": "Sûke",
+			"facetMenuOptionColl": "Koleksiyon",
+			"facetMenuOptionCity": "Lokasyon",
 			"displayMenuOptionGallery": "Galeriye",
 			"displayMenuOptionList": "Liste",
 			"showAll": "Pêro"
 		},
 		"People": {
 			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
+			"sortMenuTitle": "Weçine",
 			"sortMenuOptionName": "Ebe name ra",
+			"facetMenuOptionProfession": "Mesleg",
 			"facetMenuOptionCountry": "Dewlete",
 			"facetMenuOptionCity": "Cınsiyet"
 		}

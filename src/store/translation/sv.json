@@ -122,6 +122,7 @@
 		"Wikipedia": {
 			"headerTitle": "Artikel",
 			"missingArticle": "Det finns ingen artikel om detta ämne på svenska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
+			"missingArticleTranslate": "Du kan översätta denna artikel till ditt språk genom att välja den i språkmenyn.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
@@ -167,6 +168,7 @@
 			"showAll": "Alla"
 		},
 		"Depicted": {
+			"headerTitle": "Skildras i",
 			"sortMenu": {
 				"title": "Sortera verk",
 				"tooltip": "Sortera verk",

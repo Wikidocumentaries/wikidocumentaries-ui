@@ -89,6 +89,7 @@
 		"Locations": {
 			"headerTitle": "Plazen",
 			"sortMenu": {
+				"optionTime": "No der Zäit",
 				"optionDist": "No Distanz"
 			},
 			"facetMenu": {
@@ -112,7 +113,8 @@
 			"displayMenu": {
 				"optionGallery": "Galerie",
 				"optionList": "Lëscht"
-			}
+			},
+			"showAll": "All"
 		},
 		"Works": {
 			"headerTitle": "Wierker",

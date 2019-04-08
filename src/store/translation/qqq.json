@@ -200,7 +200,7 @@
 				"optionGallery": "Menu option to display as gallery in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound",
 				"optionList": "Menu option to display as list in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound"
 			},
-			"showAll": "Generic menu option to display all in the 'Depicted in' section"
+			"showAll": "Generic menu option to display all in the 'Depicted in' section\n{{Identical|All}}"
 		},
 		"Works": {
 			"headerTitle": "Main title of the Works section",

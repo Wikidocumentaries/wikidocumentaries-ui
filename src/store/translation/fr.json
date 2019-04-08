@@ -78,8 +78,8 @@
 				}
 			},
 			"facetMenu": {
-				"menuTitle": "Facette de l’image par",
-				"menuTooltip": "Facette des images selon différents critères",
+				"menuTitle": "Images Facet par",
+				"menuTooltip": "Images Facet selon différents critères",
 				"time": "horodatage",
 				"map": "carte",
 				"people": "personnes",
@@ -167,8 +167,8 @@
 				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
-				"title": "Facette des emplacements par",
-				"tooltip": "Facette des emplacements selon différents critères",
+				"title": "Emplacements Facet par",
+				"tooltip": "Emplacements Facet selon différents critères",
 				"optionType": "Type",
 				"optionColl": "Créateur",
 				"optionCity": "Emplacement"
@@ -193,8 +193,8 @@
 				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
-				"title": "Facette des travaux par",
-				"tooltip": "Facette des travaux selon différents critères",
+				"title": "Travaux Facet par",
+				"tooltip": "Travaux Facet selon différents critères",
 				"optionType": "Type",
 				"optionColl": "Créateur"
 			},
@@ -217,7 +217,7 @@
 			"sortMenuOptionRev": "Tri inversé",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facet par",
-			"facetMenuTooltip": "Facette de travaux selon différents critères",
+			"facetMenuTooltip": "Travaux Facet selon différents critères",
 			"facetMenuOptionType": "Type",
 			"facetMenuOptionColl": "Collection",
 			"facetMenuOptionCity": "Emplacement",
@@ -240,7 +240,7 @@
 			"sortMenuOptionRev": "Ordre de tri inverse",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facet par",
-			"facetMenuTooltip": "Facette des gens selon différents aspects",
+			"facetMenuTooltip": "Personnes de Facet selon différents aspects",
 			"facetMenuOptionProfession": "Profession",
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"

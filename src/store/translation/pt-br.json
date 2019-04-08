@@ -127,8 +127,12 @@
 		"Wikipedia": {
 			"headerTitle": "Artigo",
 			"missingArticle": "Não há artigo sobre esse tópico em seu idioma. Você pode ler o artigo em outro idioma disponível escolhendo no menu de idiomas acima. Você pode criar o artigo no seu idioma clicando no ícone de mais.",
-			"missingArticleFallback": "Não há artigo sobre esse tópico em seu idioma. Este artigo em outro idioma é mostrado para você com base nas suas preferências de fallback de idioma. Você pode ler o artigo em outro idioma disponível escolhendo no menu de idiomas acima. Você pode traduzir o artigo para o seu idioma, escolhendo-o no menu de idiomas.",
-			"missingArticleAuto": "Não há artigo sobre este tópico em nenhum idioma. Este texto curto foi criado automaticamente a partir dos fatos registrados. Você pode salvar este rascunho e começar a editar o artigo.",
+			"missingArticleMissing": "Não há artigo sobre esse tópico em seu idioma.",
+			"missingArticleChoose": "Você pode ler o artigo em outro idioma disponível escolhendo no menu de idiomas acima ou você pode criar o artigo em seu idioma clicando no ícone de mais.",
+			"missingArticleCreate": "Você pode criar este artigo no seu idioma clicando no ícone de mais.",
+			"missingArticleFallback": "Este artigo em outro idioma é mostrado para você com base nas suas preferências de fallback de idioma.",
+			"missingArticleTranslate": "Você pode traduzir este artigo para o seu idioma, escolhendo-o no menu de idiomas.",
+			"missingArticleAuto": "Este texto curto foi criado automaticamente a partir dos fatos registrados. Você pode salvar este rascunho e começar a editar o artigo.",
 			"extLink": {
 				"linkTitleWP": "Leia ou edite na Wikipedia"
 			},
