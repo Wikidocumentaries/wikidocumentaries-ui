@@ -2,14 +2,14 @@
     <div class="image-grid">
         <div class="grid-items">
             <div class="grid-item" v-for="item in items" :key="item.id">
-                <img :src="item.thumbURL" class="thumb-image" :alt="item.title"/>
+                <img :src="item.thumbURL" class="thumb-image" @click="showImageViewer(item)" :alt="item.title"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
                     <div class="thumb-credit">{{ getCredits(item) }}</div>
                 </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
-                        <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
+                        <!-- <ImagesActionMenu v-bind:element="item"></ImagesActionMenu> -->
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
                             <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
@@ -23,14 +23,16 @@
                 </div>
             </div>
         </div>
+        <ImageViewer ref="imageviewer"></ImageViewer>
         <!--<button type="button" @click="show">Show</button>-->
     </div>
 </template>
 
 <script>
 
-import ImagesActionMenu from '@/components/menu/ImagesActionMenu'
-import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu'
+import ImageViewer from '@/components/image_viewer/ImageViewer'
+// import ImagesActionMenu from '@/components/menu/ImagesActionMenu'
+// import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu'
 
 export default {
     name: 'ImageGrid',
@@ -42,8 +44,9 @@ export default {
         }
     },
     components: {
-        ImagesActionMenu,
-        ImagesRemoveMenu,
+      ImageViewer
+        // ImagesActionMenu,
+        // ImagesRemoveMenu,
     },
     methods: {
         fitTitle (title) {
@@ -66,6 +69,9 @@ export default {
         showItemGeolocation(item) {
             this.$emit('showItemGeolocation', item);
         },
+        showImageViewer (item) {
+          this.$refs.imageviewer.show(item);
+        }
     }
 }
 </script>
