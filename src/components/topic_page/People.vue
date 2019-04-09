@@ -78,7 +78,7 @@ export default {
             toolbarActionMenuItems: [
 						{
 	              id: SORT_ACTIONS.BY_LABEL,
-	              text: 'topic_page.People.sortMenuOptionFirst'
+	              text: 'topic_page.People.sortMenuOptionName'
 	          },
             {
                 id: SORT_ACTIONS.BY_BIRTH,
