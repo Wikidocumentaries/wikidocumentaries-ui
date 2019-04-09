@@ -342,7 +342,7 @@ export default {
     },
     show(element) {
       this.element = element;
-      console.log("Element: ", element);
+      // console.log("Element: ", element);
       this.showModal = true;
       this.$nextTick(function() {
         this.createMap();
