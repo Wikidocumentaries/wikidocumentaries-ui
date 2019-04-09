@@ -264,9 +264,9 @@
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
                 </div>
-                <div class="grid-text">
+                <div v-if="element.id" class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
-                  <div class="data-text">hkm.HKMS000005:0000083f</div>
+                  <div class="data-text">{{ element.id }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -287,7 +287,7 @@
                   <div class="data-text">{{ dimension.x }} X {{ dimension.y }} px</div>
                 </div>
               </div>
-              <div class="grid-row">
+              <!-- <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
                 </div>
@@ -304,7 +304,7 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileFormat') }}</div>
                   <div class="data-text">jpg</div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -342,6 +342,7 @@ export default {
     },
     show(element) {
       this.element = element;
+      console.log("Element: ", element);
       this.showModal = true;
       this.$nextTick(function() {
         this.createMap();
