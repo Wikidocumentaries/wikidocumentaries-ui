@@ -79,7 +79,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
-                  <div v-if="element.description" class="grid-body unedited">{{ element.description }}</div>
+                  <div v-if="element.summary && element.summary.length>0" class="grid-body unedited">{{ element.summary[0] }}</div>
                   <div v-else class="grid-body action">{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
                 </div>
               </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.technique') }}</div>
-                  <div class="data-select linked">photograph</div>
+                  <div v-if="element.formats" class="data-select linked">{{ element.formats }}</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addTechnique') }}</div>
                 </div>
               </div>
@@ -192,9 +192,9 @@
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
                 </div>
-                <div class="grid-text">
+                <div v-if="element.collection" class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.collection') }}</div>
-                  <div class="data-select linked">Helsinkikuvia</div>
+                  <div class="data-select linked">{{ element.collection }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -351,7 +351,7 @@ export default {
     },
     show(element) {
       this.element = element;
-      // console.log("Element: ", element);
+      console.log("Element: ", element);
       this.showModal = true;
       this.$nextTick(function() {
         this.createMap();
