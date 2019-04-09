@@ -1,8 +1,8 @@
 <template> <!-- to use with a data, each item has to have id, imageURL and title. If the item has infoURL, geoLocations, authors, institutions, license they are used. -->
     <div class="image-grid">
         <div class="grid-items">
-            <div class="grid-item" v-for="item in items" :key="item.id">
-                <img :src="item.thumbURL" class="thumb-image" @click="showImageViewer(item)" :alt="item.title"/>
+            <div class="grid-item" v-for="item in items" :key="item.id" @click="showImageViewer(item)">
+                <img :src="item.thumbURL" class="thumb-image" :alt="item.title"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
                     <div class="thumb-credit">{{ getCredits(item) }}</div>
