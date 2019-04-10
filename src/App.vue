@@ -399,4 +399,50 @@ i.wikiglyph {
     filter: grayscale(100%);
     opacity: 0.5;
 }
+
+.data-select {
+  display: inline-block;
+  background: var(--main-red);
+  color: white;
+  padding: 0 7px;
+  border-radius: 1em;
+  line-height: 1.25;
+  cursor: pointer;
+  margin-right: 3px;
+  /* transition: background 80ms ease-in, color 80ms ease-in; */
+}
+
+.data-select::after {
+  font-family: "WikiFont-Glyphs";
+  font-weight: 400;
+  content: " \e061";
+  font-size: 0.7em;
+}
+
+.data-select:hover,
+.ner:hover {
+  background: black;
+  /* border-radius: 0;*/
+  color: white;
+  box-shadow: none;
+}
+
+.unedited {
+  color: var(--main-red);
+}
+
+.unedited:hover {
+  background: black;
+  color: white;
+}
+
+.linked {
+  color: var(--main-link-color);
+  background: white;
+}
+
+.action {
+  color: #999;
+  background: white;
+}
 </style>
