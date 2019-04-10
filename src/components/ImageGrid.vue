@@ -55,7 +55,7 @@ export default {
         },
         getCredits (item) {
             var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-            var newYear = (item.year != "" ? (item.year) + ". " : '');
+            var newYear = (item.year != "" && item.year != null ? (item.year) + ". " : '');
             var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
             var newLicense = (item.license != "" ? (item.license + ', ') : '');
             var credits = newAuthors + newYear + newInstitutions + newLicense;
@@ -108,7 +108,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     /*grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));*/
-    margin-right: -5px;
+    margin-left: 5px;
 }
 
 .grid-item {
