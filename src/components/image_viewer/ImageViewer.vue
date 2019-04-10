@@ -89,6 +89,16 @@
                   >{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
                 </div>
               </div>
+              <div v-if="element.inscriptions" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.inscriptions') }}</div>
+                  <div class="grid-body unedited"
+                  >{{ element.inscriptions }}</div>
+                </div>
+              </div>
               <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
@@ -123,6 +133,16 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.format') }}</div>
                   <div v-if="element.formats" class="data-select">{{ element.formats }}</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addFormat') }}</div>
+                </div>
+              </div>
+              <div v-if="element.measurements" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.measurements') }}</div>
+                  <div class="grid-body unedited"
+                  >{{ element.measurements }}</div>
                 </div>
               </div>
               <div class="grid-row">

@@ -40,7 +40,6 @@ html, body {
 }
 
 .main-page {
-  overflow: auto;
 }
 
 a.external.text {
