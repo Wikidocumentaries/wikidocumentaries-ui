@@ -292,6 +292,8 @@
             "callNumber": "Call number",
             "collection": "Collection",
             "inventoryNumber": "Inventory number",
+            "inscriptions": "Inscriptions",
+            "measurements": "Measurements",
             "copyright": "Copyright",
             "work": "Work",
             "photograph": "Photograph",
