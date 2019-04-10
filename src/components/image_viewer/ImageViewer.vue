@@ -131,7 +131,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.genre') }}</div>
-                  <div class="data-select unlinked">portrait</div>
+                  <div v-if="element.genre" class="data-select unlinked">{{ element.genre}}</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addGenre') }}</div>
                 </div>
               </div>
@@ -181,7 +181,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
-                  <div v-if="element.events" class="data-select">Elias Öhman's funeral</div>
+                  <div v-if="element.eventss" class="data-select">{{ element.events }}</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addEvent') }}</div>
                 </div>
               </div>
@@ -203,22 +203,13 @@
                   <div class="data-select">{{ element.collection }}</div>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.inventoryNumber" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.inventoryNumber') }}</div>
-                  <div class="data-text">12345</div>
-                </div>
-              </div>
-              <div class="grid-row">
-                <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
-                </div>
-                <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
-                  <a href="#">Public Domain</a>
+                  <div class="data-text">{{ element.inventoryNumber }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -237,9 +228,20 @@
               </div>
             </div>
           </div>
-          <div class="metadata-copy alert">
-            <div class="header-title boxtitle">{{ $t('imageViewer.imageMetadata.photograph') }}</div>
+          <div class="metadata-copyright alert">
+            <div class="toolbar">
+              <div class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
+            </div>
             <div class="columns">
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
+                  <div class="data-text"><a href="#">{{ element.license }}</a></div>
+                </div>
+              </div>
               <div class="grid-row">
                 <div class="grid-icons"></div>
                 <div class="grid-text">{{ $t('imageViewer.imageMetadata.copyrightNotePD') }}</div>
@@ -802,7 +804,7 @@ i {
 }
 
 .titlebox {
-  margin-left: 20px;
+  margin: 0 20px;
   padding: 30px 0 15px;
 }
 
