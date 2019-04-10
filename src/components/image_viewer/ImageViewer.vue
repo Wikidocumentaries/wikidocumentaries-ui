@@ -29,10 +29,8 @@
                 <div class="absolute-right">
                   <div class="right-align">
                     <div class="toolbar-item">
-                      <i class="wikiglyph wikiglyph-cog"></i>
-                    </div>
-                    <div class="toolbar-item">
                       <i class="wikiglyph wikiglyph-ellipses"></i>
+                      <span class="tooltip">{{ $t('topic_page.TopicImages.imagesViewExternal') }}</span>
                     </div>
                     <HeaderLink
                       v-if="element.infoURL != undefined"
@@ -40,10 +38,9 @@
                       :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
                       :link="element.infoURL"
                     ></HeaderLink>
-                    <UILanguageMenu class="language-menu"></UILanguageMenu>
                     <div class="toolbar-item" @click="hide">
                       <i class="wikiglyph wikiglyph-cross"></i>
-                      <span class="tooltip">{{ tooltip }}</span>
+                      <span class="tooltip">{{ $t('topic_page.TopicImages.imagesViewExternal') }}</span>
                     </div>
                   </div>
                 </div>
@@ -105,23 +102,22 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
                   <Dataselect class="grid-select" v-if="element.authors" v-bind:term="element.authors"></Dataselect>
-                  <!--div v-if="element.authors" class="data-select">{{ element.authors }}</div-->
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
                 </div>
               </div>
-              <div class="grid-row">
+              <!--div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
-                  <Dataselect class="grid-select" v-if="element.year" v-bind:term="element.year"></Dataselect>
-                  <Dataselect class="grid-select" v-else v-bind:term="t('imageViewer.imageMetadata.addDateCreated')"></Dataselect>
+                  <Dataselect class="grid-select" v-if="element.year && element.year != null" v-bind:term="element.year"></Dataselect>
+                  <Dataselect class="grid-select" v-else v-bind:term="$t('imageViewer.imageMetadata.addDateCreated')"></Dataselect>
                   <div
                     class="data-select action"
                   >{{ $t('imageViewer.imageMetadata.addDateDepicted') }}</div>
                 </div>
-              </div>
+              </div-->
               <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
@@ -359,7 +355,6 @@
 
 <script>
 import HeaderLink from "@/components/HeaderLink";
-import UILanguageMenu from "@/components/menu/UILanguageMenu";
 import Dataselect from "@/components/Dataselect";
 
 export default {
@@ -376,7 +371,6 @@ export default {
   },
   components: {
     HeaderLink,
-    UILanguageMenu,
     Dataselect
   },
   props: {
@@ -404,11 +398,11 @@ export default {
       });
     },
     getCredits(item) {
-      var newAuthors = item.authors != "" ? item.authors + ", " : "";
-      var newYear = item.year != "" ? item.year + ". " : "";
+      var newAuthors = item.authors != "" && item.authors != null ? item.authors + ", " : "";
+      var newYear = item.year != "" && item.year != null ? item.year + ". " : "";
       var newInstitutions =
-        item.institutions != "" ? item.institutions + ", " : "";
-      var newLicense = item.license != "" ? item.license + ", " : "";
+        item.institutions != "" && item.institutions != null ? item.institutions + ", " : "";
+      var newLicense = item.license != "" && item.license != null ? item.license + ", " : "";
 
       var credits = newAuthors + newYear + newInstitutions + newLicense;
 
@@ -631,7 +625,6 @@ export default {
   width: 100%;
   height: 100%;
   overflow: auto;
-  overflow: overlay;
   transition: opacity 0.3s ease;
   background: white;
 }
