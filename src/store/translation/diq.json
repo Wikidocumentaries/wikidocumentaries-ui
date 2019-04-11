@@ -105,7 +105,7 @@
 			"menuTitle": "Bımocne",
 			"showBorn": "Tiya ameyo dınya",
 			"showDied": "Tiya merdo",
-			"showBuried": "Tiya dardo we",
+			"showBuried": "Tiya dariyo we",
 			"showRelated": "Maneyo bin",
 			"showAll": "Pêro"
 		},
@@ -142,6 +142,7 @@
 			"showAll": "Pêro"
 		},
 		"Works": {
+			"sortMenuTitle": "Weçine",
 			"sortMenuOptionAlpha": "Alfabetik",
 			"facetMenuOptionType": "Babet",
 			"facetMenuOptionColl": "Koleksiyon",

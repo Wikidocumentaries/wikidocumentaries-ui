@@ -127,7 +127,11 @@
 		"Wikipedia": {
 			"headerTitle": "Artikkeli",
 			"missingArticle": "Tästä aiheesta ei ole artikkelia suomeksi. Voit lukea artikkelin toisella kielellä valitsemalla ylläolevasta kielivalikosta. Voit luoda artikkelin itse klikkaamalla plus-ikonia.",
+			"missingArticleMissing": "Tästä aiheesta ei ole artikkelia suomeksi.",
+			"missingArticleChoose": "Voit valita artikkelin luettavaksi toisella käytettävissä olevalla kielellä ylläolevasta valikosta. Voit myös luoda artikkelin suomeksi klikkaamalla plus-ikonia.",
+			"missingArticleCreate": "Voit luoda artikkelin suomeksi klikkaamalla plus-ikonia.",
 			"missingArticleFallback": "Tämä muunkielinen artikkeli näytetään sinulle kielivalintojesi perusteella.",
+			"missingArticleTranslate": "Voit kääntää artikkelin suomeksi valitsemalla vaihtoehdon kielivalikosta.",
 			"missingArticleAuto": "Tämä lyhyt teksti on luotu automaattisesti saatavilla olevasta tiedosta. Voit tallentaa tiedot ja alkaa muokata artikkelia klikkaamalla plus-ikonia.",
 			"extLink": {
 				"linkTitleWP": "Lue tai muokkaa Wikipediassa"

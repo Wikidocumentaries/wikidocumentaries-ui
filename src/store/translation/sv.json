@@ -91,11 +91,13 @@
 				"creator": "skapare",
 				"platform": "plattform",
 				"source": "källa",
+				"saveSelection": "Spara valet som en samling",
 				"clear": "Rensa val"
 			}
 		},
 		"TopicMap": {
 			"headerTitle": "Plats på kartan",
+			"intro": "Temaets plats visas på kartan. Du kan också visa bilderna och andra data på kartan eller välja en historisk karta som ett baslager.",
 			"chooseHistoricalBasemapMenuText": "Välj historisk baskarta eller baskartor...",
 			"hideImagesMenuText": "Dölj bilder",
 			"chooseTimelineMapsMenuText": "Välj tidslinjekartor ...",
@@ -122,6 +124,9 @@
 		"Wikipedia": {
 			"headerTitle": "Artikel",
 			"missingArticle": "Det finns ingen artikel om detta ämne på svenska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
+			"missingArticleMissing": "Det finns ingen artikel om detta ämne på svenska.",
+			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja på språkmenyn ovan eller du kan skapa artikeln på svenska genom att klicka på plusikonen.",
+			"missingArticleCreate": "Du kan skapa den här artikeln på svenska genom att klicka på plusikonen.",
 			"missingArticleTranslate": "Du kan översätta denna artikel till ditt språk genom att välja den i språkmenyn.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
