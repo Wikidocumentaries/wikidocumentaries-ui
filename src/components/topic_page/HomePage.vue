@@ -65,9 +65,10 @@ export default {
     },
     methods: {
         onShowImagesOnMap() {
+          this.$nextTick(function() {
             //console.log("HomePage.onShowImagesOnMap");
-
             this.$scrollTo("#topicMap");
+          });
         },
         onShowImagesOnTimeline() {
             //console.log("HomePage.onShowImagesOnTimeline");
