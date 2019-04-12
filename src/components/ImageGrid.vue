@@ -11,7 +11,7 @@
                     <div class="left-align">
                         <!-- <ImagesActionMenu v-bind:element="item"></ImagesActionMenu> -->
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
-                            <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
+                            <a href="#" @click.stop.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
                     </div>
                     <div class="right-align">
