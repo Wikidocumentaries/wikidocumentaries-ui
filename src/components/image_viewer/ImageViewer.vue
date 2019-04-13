@@ -153,7 +153,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicts') }}</div>
-                  <Dataselect 
+                  <Dataselect
                   v-for="subject in element.subjects"
                     class="grid-select"
                     :key="subject.id"
@@ -167,7 +167,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
-                  <Dataselect 
+                  <Dataselect
                     v-for="place in element.places"
                     class="grid-select"
                     :key="place.id"
@@ -191,7 +191,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.depictedPeople') }}</div>
-                  <Dataselect 
+                  <Dataselect
                     v-for="actor in element.actors"
                     class="grid-select"
                     :key="actor.id"
@@ -303,15 +303,6 @@
                   <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
                 </div>
                 <div v-if="element.id" class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
-                  <div class="data-text">{{ element.id }}</div>
-                </div>
-              </div>
-              <div class="grid-row">
-                <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
-                </div>
-                <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
                   <div class="data-text">{{ element.id }}</div>
                 </div>
