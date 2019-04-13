@@ -6,7 +6,7 @@
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
-        
+
         <ImageGrid class="image-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
         </ImageGrid>
     </div>
@@ -15,6 +15,11 @@
 <script>
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import ImageGrid from '@/components/ImageGrid'
+
+const MENU_ACTIONS = {
+    SHOW_IMAGES_ON_MAP: 1,
+    SHOW_IMAGES_ON_TIMELINE: 2,
+}
 
 export default {
     name: 'TopicImages',
@@ -28,10 +33,6 @@ export default {
     mounted: function () {
     },
     data () {
-        const MENU_ACTIONS = {
-            SHOW_IMAGES_ON_MAP: 1,
-            SHOW_IMAGES_ON_TIMELINE: 2,
-        }
         return {
             toolbarActionMenuItems: [
                 {
