@@ -114,6 +114,25 @@
             "showEventsOnTimelineMenuText": "Show topic events on the timeline",
             "centuryText": "C"
         },
+        "Events": {
+            "headerTitle": "Events",
+            "displayMenu": {
+                "menuTitle": "Display options",
+                "menuTooltip": "Display options",
+                "optionShowTimeline": "Show events on a timeline",
+                "optionShowList": "Show events as a list"
+            },
+            "optionsMenu": {
+                "menuTitle": "Options",
+                "menuTooltip": "Select facts to display",
+                "optionWorks": "Show works",
+                "optionRelatedPeople": "Show events of related people",
+                "subRelatedPeopleConf": {
+                    "menuTitle": "Configure"
+                },
+                "optionRelatedTopics": "Show events of related topics"
+            }
+        },
         "Wikidata": {
             "headerTitle": "Facts",
             "extLink": {

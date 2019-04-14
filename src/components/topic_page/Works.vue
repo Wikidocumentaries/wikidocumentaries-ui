@@ -225,7 +225,7 @@ const selectResults = (lcl) => {
     height: 35vh;
     display: flex;
     padding-left: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
 }
 

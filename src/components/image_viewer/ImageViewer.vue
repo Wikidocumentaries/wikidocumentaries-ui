@@ -314,7 +314,7 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
                   <div class="data-text limit">
-                    <a :href="element.infoURL">{{ element.infoURL }}</a>
+                    <a :href="element.infoURL" target="_blank">{{ element.infoURL }}</a>
                   </div>
                 </div>
               </div>
