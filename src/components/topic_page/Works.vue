@@ -11,7 +11,7 @@
         <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
-                <img :src="item.image" class="gallery-image"/>
+                <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.work.label }}</div>
                     <div class="thumb-credit">{{ item.type.label }} {{ item.time }} {{ item.copyrightLabel}}</div>
@@ -200,6 +200,9 @@ LIMIT 1000
         },
         getItemURL(value) {
             return "/" + value + "?language=" + this.$i18n.locale;
+        },
+        getImageLink(value) {
+            return value.replace(/\s/g, _) + '?width=500';
         }
     }
 }
@@ -220,34 +223,6 @@ const selectResults = (lcl) => {
 </script>
 
 <style scoped>
-
-.gallery {
-    height: 35vh;
-    display: flex;
-    padding-left: 10px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.gallery-item {
-    height: 100%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery-item *{
-    opacity:1;
-}
-
-.gallery-item > img {
-    height: 100%;
-}
-
-.gallery-item:hover * {
-    transition: opacity 80ms ease-in;
-}
 
 .thumb-title {
     font-family: barlow condensed;

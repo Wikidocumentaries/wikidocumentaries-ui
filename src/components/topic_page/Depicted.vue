@@ -10,18 +10,10 @@
         </div>
         <div v-if="gallery" class="gallery">
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
-                <img :src="item.image" class="gallery-image"/>
+                <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.depicted.label }}</div>
-                    <div class="thumb-credit">{{ item.type.label }} {{ item.time }} </div>
-                </div>
-                <div class="thumb-image-header">
-                    <div class="left-align">
-                        <!--ImagesActionMenu></ImagesActionMenu-->
-                    </div>
-                    <div class="right-align">
-                        <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-                    </div>
+                    <div class="thumb-credit">{{ item.creatorLabel }} {{ item.time }} </div>
                 </div>
             </router-link>
         </div>
@@ -98,8 +90,9 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?depicted ?depictedLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
+SELECT ?depicted ?depictedLabel ?creatorLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
     ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
+    OPTIONAL { ?depicted wdt:P170 ?creator . }
     OPTIONAL { ?depicted wdt:P18 ?image. }
     OPTIONAL { ?depicted wdt:P973 ?desc_url. }
     OPTIONAL { ?depicted wdt:P31 ?type. }
@@ -184,6 +177,9 @@ LIMIT 1000
         },
         getItemURL(value) {
             return "/" + value + "?language=" + this.$i18n.locale;
+        },
+        getImageLink(value) {
+            return value.replace(/\s/g, _) + '?width=500';
         }
     }
 }

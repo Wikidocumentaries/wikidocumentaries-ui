@@ -11,7 +11,7 @@
         <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.location.value)" class="gallery-item">
-                <img :src="item.image" class="gallery-image"/>
+                <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.location.label }}</div>
                     <div class="thumb-credit">{{ item.location.typeLabel }} {{ item.time}}</div>
@@ -191,6 +191,9 @@ LIMIT 1000
         },
         getItemURL(value) {
             return "/" + value + "?language=" + this.$i18n.locale;
+        },
+        getImageLink(value) {
+            return value.replace(/\s/g, _) + '?width=500';
         }
     }
 }

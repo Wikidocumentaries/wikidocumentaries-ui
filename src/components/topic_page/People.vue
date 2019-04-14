@@ -11,9 +11,11 @@
         <div v-if="gallery" class="gallery">
             <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
-                <img v-if="item.image" :src="item.image" class="gallery-image"/>
+                <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
                 <div v-else class="noimage"></div>
                 <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
+                    <div v-if="item.inLabel" class="thumb-credit disappearing">{{ item.inLabel }}</div>
+                    <div v-else class="thumb-credit disappearing">{{ item.outLabel }}</div>
                     <div class="thumb-title">{{ item.person.label }}</div>
                     <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
                 </div>
@@ -106,13 +108,23 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
-      { ?person ?rel_out wd:Q314595 .}
+      { 
+        ?out wikibase:directClaim ?rel_out .
+        ?person ?rel_out wd:Q314595 .
+        ?out rdfs:label ?outLabel .
+        FILTER(LANG(?outLabel)="fi")
+      }
       UNION
-      { wd:Q314595 ?rel_in ?person .}
+      { 
+        ?in wikibase:directClaim ?rel_in .
+        wd:Q314595 ?rel_in ?person .
+        ?in rdfs:label ?inLabel .
+        FILTER(LANG(?inLabel)="fi")
+      }
     }
     OPTIONAL { ?person wdt:P18 ?image. }
     OPTIONAL { ?person wdt:P569 ?birth.
@@ -208,6 +220,9 @@ LIMIT 1000
         },
         getItemURL(value) {
             return "/" + value + "?language=" + this.$i18n.locale;
+        },
+        getImageLink(value) {
+            return value.replace(/\s/g, _) + '?width=500';
         }
     }
 }
