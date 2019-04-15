@@ -106,7 +106,7 @@ export default {
     text-align: center;
     color: white;
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-size: 6em;
+    font-size: 10vw;
     font-weight: bold;
 }
 
