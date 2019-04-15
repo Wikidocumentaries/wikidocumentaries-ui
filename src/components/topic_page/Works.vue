@@ -224,6 +224,34 @@ const selectResults = (lcl) => {
 
 <style scoped>
 
+.gallery {
+    height: 35vh;
+    display: flex;
+    padding-left: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.gallery-item {
+    height: 100%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item *{
+    opacity:1;
+}
+
+.gallery-item > img {
+    height: 100%;
+}
+
+.gallery-item:hover * {
+    transition: opacity 80ms ease-in;
+}
+
 .thumb-title {
     font-family: barlow condensed;
     text-transform: uppercase;

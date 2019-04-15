@@ -24,29 +24,52 @@ export default {
         }
     },
     mounted: function () {
-        var ol = this.$ol;
-        //console.log(map);
-        var mapOverlay = this.$refs.mapOverlay;
-        this.overlay = new ol.Overlay({
-            element: this.$el.children[0],
-            stopEvent: false,
-            position: ol.proj.fromLonLat(this.position),
-            offset: this.offset,
-            autoPan: this.autoPan,
-            autoPanMargin: this.autoPanMargin
+      this.$nextTick(function() {
+        this.$nextTick(function() {
+          var ol = this.$ol;
+          if (this.map) {
+            // console.log("MapOverlay map:", this.map);
+            // var mapOverlay = this.$refs.mapOverlay; // Unused variable??
+            this.overlay = new ol.Overlay({
+                element: this.$el.children[0],
+                stopEvent: false,
+                position: ol.proj.fromLonLat(this.position),
+                offset: this.offset,
+                autoPan: this.autoPan,
+                autoPanMargin: this.autoPanMargin
+            });
+            this.map.addOverlay(this.overlay);
+            // if (this.autoPan && this.overlay && this.position && ol && ol.proj) { // Keeps erring out!
+            //     this.overlay.setPosition(ol.proj.fromLonLat(this.position));
+            // }
+          }
         });
-        this.map.addOverlay(this.overlay);
-        if (this.autoPan) {
-            this.overlay.setPosition(ol.proj.fromLonLat(this.position));
-        }
+      });
     },
     beforeDestroy: function () {
-        this.overlay.setElement(undefined)
+      if (this.overlay) this.overlay.setElement(undefined);
     },
     watch: {
         offset: function(newOffset, oldOffset) {
-            this.overlay.setOffset(newOffset);
+            if (this.overlay) this.overlay.setOffset(newOffset);
         },
+        // position: function(newPosition, oldPosition) {
+        //   var ol = this.$ol;
+        //   console.log("MapOverlay map:", this.map);
+        //   // var mapOverlay = this.$refs.mapOverlay; // Unused variable??
+        //   this.overlay = new ol.Overlay({
+        //       element: this.$el.children[0],
+        //       stopEvent: false,
+        //       position: ol.proj.fromLonLat(newPosition),
+        //       offset: this.offset,
+        //       autoPan: this.autoPan,
+        //       autoPanMargin: this.autoPanMargin
+        //   });
+        //   this.map.addOverlay(this.overlay);
+        //   if (this.autoPan) {
+        //       this.overlay.setPosition(ol.proj.fromLonLat(newPosition));
+        //   }
+        // },
         overlayGroupItemCount: function(count, oldCount) {
             var ol = this.$ol;
             //console.log(count);
