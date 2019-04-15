@@ -43,6 +43,26 @@
 				"arrangeByTime": "依時間排列圖片",
 				"selectWorks": "選擇圖像作品"
 			},
+			"facetMenu": {
+				"menuTitle": "分面圖片依",
+				"menuTooltip": "分面圖片依不同標準",
+				"time": "時間",
+				"map": "地圖",
+				"people": "人物",
+				"places": "地點",
+				"topics": "主題",
+				"form": "表單",
+				"imageSize": "圖片大小",
+				"large": "大",
+				"medium": "中",
+				"small": "小",
+				"type": "多媒體類型",
+				"creator": "創建者",
+				"platform": "平台",
+				"source": "來源",
+				"saveSelection": "保存所選為收藏",
+				"clear": "清除挑選"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "操作",
 				"menuTooltip": "操作",
@@ -75,26 +95,6 @@
 					"copyvio": "有侵犯版權",
 					"explain": "留下解釋用的註釋"
 				}
-			},
-			"facetMenu": {
-				"menuTitle": "分面圖片依",
-				"menuTooltip": "分面圖片依不同標準",
-				"time": "時間",
-				"map": "地圖",
-				"people": "人物",
-				"places": "地點",
-				"topics": "主題",
-				"form": "表單",
-				"imageSize": "圖片大小",
-				"large": "大",
-				"medium": "中",
-				"small": "小",
-				"type": "多媒體類型",
-				"creator": "創建者",
-				"platform": "平台",
-				"source": "來源",
-				"saveSelection": "保存所選為收藏",
-				"clear": "清除挑選"
 			}
 		},
 		"TopicMap": {
@@ -243,6 +243,30 @@
 			"facetMenuOptionProfession": "職業",
 			"facetMenuOptionCountry": "國家",
 			"facetMenuOptionCity": "性別"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"format": "格式",
+			"addFormat": "新增格式",
+			"removeFormat": "移除格式",
+			"location": "位置",
+			"locationMap": "在地圖上的位置",
+			"addLocation": "新增位置",
+			"removeLocation": "移除位置",
+			"address": "街道地址",
+			"addAddress": "新增街道地址",
+			"removeAddress": "移除街道地址",
+			"addPerson": "新增人物",
+			"removePerson": "移除人物",
+			"measurements": "測量",
+			"copyright": "版權",
+			"photograph": "照片",
+			"photographer": "攝影者",
+			"platformId": "ID",
+			"fileSize": "檔案大小",
+			"fileFormat": "檔案格式",
+			"remove": "移除"
 		}
 	},
 	"map_place_match_page": {

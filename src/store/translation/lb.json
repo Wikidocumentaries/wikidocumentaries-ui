@@ -27,15 +27,6 @@
 				"showImagesOnMapMenuText": "All Biller op der Kaart weisen",
 				"showImagesOnTimelineMenuText": "All Biller op dem Zäitplang weisen"
 			},
-			"imagesActionMenu": {
-				"menuTitle": "Aktiounen",
-				"menuTooltip": "Aktiounen",
-				"showImageText": "Bild weisen"
-			},
-			"imagesRemoveMenu": {
-				"menuTitle": "D'Bild ewechhuele well...",
-				"menuTooltip": "D'Bild ewechhuelen"
-			},
 			"facetMenu": {
 				"time": "Zäit",
 				"map": "Kaart",
@@ -47,6 +38,15 @@
 				"medium": "mëttel",
 				"small": "kleng",
 				"source": "Quell"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Aktiounen",
+				"menuTooltip": "Aktiounen",
+				"showImageText": "Bild weisen"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "D'Bild ewechhuele well...",
+				"menuTooltip": "D'Bild ewechhuelen"
 			}
 		},
 		"TopicMap": {

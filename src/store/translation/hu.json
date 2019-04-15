@@ -39,6 +39,24 @@
 				"selectPortraits": "Válasszon jó minőségű portrékat ehhez a személyhez",
 				"arrangeByTime": "Képrendezés idő szerint"
 			},
+			"facetMenu": {
+				"time": "Idő",
+				"map": "térkép",
+				"people": "Emberek",
+				"places": "Helyek",
+				"topics": "Témák",
+				"form": "űrlap",
+				"imageSize": "Képméret",
+				"large": "nagy",
+				"medium": "közepes",
+				"small": "kicsi",
+				"type": "médiatípus:",
+				"creator": "készítő",
+				"platform": "platform",
+				"source": "forrás",
+				"saveSelection": "Kiválasztás mentése gyűjteményként",
+				"clear": "Tiszta döntések"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Műveletek",
 				"menuTooltip": "Műveletek",
@@ -65,24 +83,6 @@
 					"sex": "Kifejezett szexet mutat",
 					"copyvio": "Sérti a szerzői jogot"
 				}
-			},
-			"facetMenu": {
-				"time": "Idő",
-				"map": "térkép",
-				"people": "Emberek",
-				"places": "Helyek",
-				"topics": "Témák",
-				"form": "űrlap",
-				"imageSize": "Képméret",
-				"large": "nagy",
-				"medium": "közepes",
-				"small": "kicsi",
-				"type": "médiatípus:",
-				"creator": "készítő",
-				"platform": "platform",
-				"source": "forrás",
-				"saveSelection": "Kiválasztás mentése gyűjteményként",
-				"clear": "Tiszta döntések"
 			}
 		},
 		"TopicMap": {

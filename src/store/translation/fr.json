@@ -44,6 +44,26 @@
 				"arrangeByTime": "Classer les images selon l'heure",
 				"selectWorks": "Sélectionner les images de travaux"
 			},
+			"facetMenu": {
+				"menuTitle": "Images Facet par",
+				"menuTooltip": "Images Facet selon différents critères",
+				"time": "horodatage",
+				"map": "carte",
+				"people": "personnes",
+				"places": "lieux",
+				"topics": "sujets",
+				"form": "formulaire",
+				"imageSize": "taille d’image",
+				"large": "grand",
+				"medium": "moyen",
+				"small": "petit",
+				"type": "type de média",
+				"creator": "créateur",
+				"platform": "plateforme",
+				"source": "source",
+				"saveSelection": "Enregistrer la sélection sous forme de collection",
+				"clear": "Effacer les choix"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Actions",
 				"menuTooltip": "Actions",
@@ -77,26 +97,8 @@
 					"explain": "Laisser une note pour expliquer"
 				}
 			},
-			"facetMenu": {
-				"menuTitle": "Images Facet par",
-				"menuTooltip": "Images Facet selon différents critères",
-				"time": "horodatage",
-				"map": "carte",
-				"people": "personnes",
-				"places": "lieux",
-				"topics": "sujets",
-				"form": "formulaire",
-				"imageSize": "taille d’image",
-				"large": "grand",
-				"medium": "moyen",
-				"small": "petit",
-				"type": "type de média",
-				"creator": "créateur",
-				"platform": "plateforme",
-				"source": "source",
-				"saveSelection": "Enregistrer la sélection sous forme de collection",
-				"clear": "Effacer les choix"
-			}
+			"imagesViewExternal": "Afficher l’image d’origine",
+			"imagesViewOnMap": "Afficher l’image sur une carte"
 		},
 		"TopicMap": {
 			"headerTitle": "Sujet sur la carte",
@@ -116,6 +118,25 @@
 			"headerTitle": "Frise temporelle",
 			"showEventsOnTimelineMenuText": "Afficher les événements du sujet sur la frise temporelle",
 			"centuryText": "S"
+		},
+		"Events": {
+			"headerTitle": "Événements",
+			"displayMenu": {
+				"menuTitle": "Options d’affichage",
+				"menuTooltip": "Options d’affichage",
+				"optionShowTimeline": "Afficher les événements sur une frise chronologique",
+				"optionShowList": "Afficher les événements sous forme de liste"
+			},
+			"optionsMenu": {
+				"menuTitle": "Options",
+				"menuTooltip": "Sélectionner les faits à afficher",
+				"optionWorks": "Afficher les travaux",
+				"optionRelatedPeople": "Afficher les événements des personnes associées",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurer"
+				},
+				"optionRelatedTopics": "Afficher les événements des sujets associés"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Faits",
@@ -245,6 +266,85 @@
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Légende",
+			"addCaption": "Ajouter une légende",
+			"description": "Description",
+			"addDescription": "Ajouter une description",
+			"creator": "Créateur",
+			"creatorUnknown": "Inconnu",
+			"addCreator": "Ajouter un créateur",
+			"removeCreator": "Supprimer un créateur",
+			"dateDepicted": "Date dépeinte",
+			"addDateDepicted": "Ajouter une date dépeinte",
+			"removeDateDepicted": "Supprimer une date dépeinte",
+			"dateCreated": "Date de création",
+			"addDateCreated": "Ajouter une date de création",
+			"removeDateCreated": "Supprimer une date de création",
+			"publisher": "Éditeur",
+			"addPublisher": "Ajouter un éditeur",
+			"removePublisher": "Supprimer un éditeur",
+			"format": "Format",
+			"addFormat": "Ajouter un format",
+			"removeFormat": "Supprimer un format",
+			"technique": "Technique",
+			"addTechnique": "Ajouter une technique",
+			"removeTechnique": "Supprimer une technique",
+			"depicted": "L’image dépeint",
+			"genre": "Genre",
+			"addGenre": "Ajouter un genre",
+			"removeGenre": "Supprimer un genre",
+			"depicts": "L’image dépeint",
+			"addTopic": "Ajouter un sujet",
+			"removeTopic": "Supprimer un sujet",
+			"location": "Emplacement",
+			"locationMap": "Emplacement sur la carte",
+			"addLocation": "Ajouter un emplacement",
+			"removeLocation": "Supprimer un emplacement",
+			"address": "Adresse de la rue",
+			"addAddress": "Ajouter l’adresse de la rue",
+			"removeAddress": "Supprimer l’adresse la rue",
+			"depictedPeople": "Personnes décrites",
+			"addPerson": "Ajouter une personne",
+			"removePerson": "Supprimer une personne",
+			"event": "Événement",
+			"addEvent": "Ajouter un événement",
+			"removeEvent": "Supprimer un événement",
+			"institution": "Institution",
+			"callNumber": "Numéro d’appel",
+			"collection": "Collection",
+			"inventoryNumber": "Numéro d’inventaire",
+			"inscriptions": "Inscriptions",
+			"measurements": "Mesures",
+			"copyright": "Droit d’auteur",
+			"work": "Œuvre",
+			"photograph": "Photographie",
+			"photographer": "Photographe",
+			"addPhotographData": "Ajouter des informations sur le photographe",
+			"copyrightNotePD": "L’image est sous licence avec $1, mais d’après ses métadonnées, l’image est dans le domaine public.",
+			"copyrightNoteSame": "La même image est sous une licence plus ouverte avec $1, donc cela s’applique aussi à l’image.",
+			"digitalCopy": "Copie numérique",
+			"publishingPlatform": "Plateforme de publication",
+			"platformId": "ID",
+			"imageInfoPage": "Page d’info de l’image",
+			"imageDimensions": "Dimensions de l’image",
+			"fileSize": "Taille du fichier",
+			"fileFormat": "Format du fichier",
+			"remove": "Supprimer",
+			"moveTo": "Déplacer vers un autre champ",
+			"addData": "Ajouter des données"
+		},
+		"imageActions": {
+			"rotateImage": "Faire pivoter l’image",
+			"clockwise": "sens des aiguilles d’une montre",
+			"counterclockwise": "sens trigonométrique",
+			"flip": "Retourner",
+			"horizontal": "horizontalement",
+			"vertical": "verticalement"
+		},
+		"closeViewer": "Fermer l’afficheur"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

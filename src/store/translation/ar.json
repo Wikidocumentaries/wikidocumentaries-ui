@@ -44,6 +44,26 @@
 				"arrangeByTime": "ترتيب الصور حسب الوقت",
 				"selectWorks": "حدد صور الأعمال"
 			},
+			"facetMenu": {
+				"menuTitle": "صور الوجه حسب",
+				"menuTooltip": "صور الوجه بمعايير مختلفة",
+				"time": "الوقت",
+				"map": "خريطة",
+				"people": "الأشخاص",
+				"places": "الأماكن",
+				"topics": "المواضيع",
+				"form": "النموذج",
+				"imageSize": "حجم الصورة",
+				"large": "كبيرة",
+				"medium": "متوسطة",
+				"small": "صغيرة",
+				"type": "نوع الوسائط",
+				"creator": "المنشئ",
+				"platform": "المنصة",
+				"source": "المصدر",
+				"saveSelection": "حفظ الاختيار كمجموعة",
+				"clear": "مسح الخيارات"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "الأفعال",
 				"menuTooltip": "أفعال",
@@ -76,26 +96,6 @@
 					"copyvio": "ينتهك حقوق الطبع والنشر",
 					"explain": "ترك ملاحظة للشرح"
 				}
-			},
-			"facetMenu": {
-				"menuTitle": "صور الوجه حسب",
-				"menuTooltip": "صور الوجه بمعايير مختلفة",
-				"time": "الوقت",
-				"map": "خريطة",
-				"people": "الأشخاص",
-				"places": "الأماكن",
-				"topics": "المواضيع",
-				"form": "النموذج",
-				"imageSize": "حجم الصورة",
-				"large": "كبيرة",
-				"medium": "متوسطة",
-				"small": "صغيرة",
-				"type": "نوع الوسائط",
-				"creator": "المنشئ",
-				"platform": "المنصة",
-				"source": "المصدر",
-				"saveSelection": "حفظ الاختيار كمجموعة",
-				"clear": "مسح الخيارات"
 			}
 		},
 		"TopicMap": {

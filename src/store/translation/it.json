@@ -36,6 +36,22 @@
 				"showImagesOnMapMenuText": "Mostra tutte le immagini nella mappa",
 				"showImagesOnTimelineMenuText": "Mostra tutte le immagini nella linea temporale"
 			},
+			"facetMenu": {
+				"time": "tempo",
+				"map": "mappa",
+				"people": "persone",
+				"places": "luoghi",
+				"topics": "argomenti",
+				"form": "modulo",
+				"imageSize": "dimensione immagine",
+				"large": "grande",
+				"medium": "media",
+				"small": "piccola",
+				"type": "tipo media",
+				"creator": "autore",
+				"platform": "piattaforma",
+				"source": "fonte"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Azioni",
 				"menuTooltip": "Azioni",
@@ -65,22 +81,7 @@
 					"explain": "Lascia una nota per spiegare"
 				}
 			},
-			"facetMenu": {
-				"time": "tempo",
-				"map": "mappa",
-				"people": "persone",
-				"places": "luoghi",
-				"topics": "argomenti",
-				"form": "modulo",
-				"imageSize": "dimensione immagine",
-				"large": "grande",
-				"medium": "media",
-				"small": "piccola",
-				"type": "tipo media",
-				"creator": "autore",
-				"platform": "piattaforma",
-				"source": "fonte"
-			}
+			"imagesViewExternal": "Vedi l'immagine originale"
 		},
 		"TopicMap": {
 			"headerTitle": "Argomento nella mappa",
@@ -98,6 +99,15 @@
 		"TopicTimeline": {
 			"headerTitle": "Linea temporale",
 			"showEventsOnTimelineMenuText": "Mostra eventi dell'argomento nella linea temporale"
+		},
+		"Events": {
+			"headerTitle": "Eventi",
+			"optionsMenu": {
+				"menuTitle": "Opzioni",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configura"
+				}
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Dati",
@@ -153,6 +163,42 @@
 			"sortMenuOptionDeath": "Per data di morte",
 			"facetMenuOptionCountry": "Stato",
 			"facetMenuOptionCity": "Sesso"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Didascalia",
+			"addCaption": "Aggiungi didascalia",
+			"description": "Descrizione",
+			"addDescription": "Aggiungi descrizione",
+			"creatorUnknown": "Sconosciuto",
+			"dateCreated": "Data di creazione",
+			"format": "Formato",
+			"addFormat": "Aggiungi formato",
+			"technique": "Tecnica",
+			"addTechnique": "Aggiungi tecnica",
+			"addTopic": "Aggiungi argomento",
+			"addPerson": "Aggiungi persona",
+			"removePerson": "Rimuovi persona",
+			"event": "Evento",
+			"addEvent": "Aggiungi evento",
+			"removeEvent": "Rimuovi evento",
+			"institution": "Istituto",
+			"inscriptions": "Iscrizioni",
+			"measurements": "Misurazioni",
+			"photograph": "Fotografia",
+			"photographer": "Fotografo",
+			"addPhotographData": "Aggiungi informazioni sulla fotografia",
+			"digitalCopy": "Copia digitale",
+			"fileSize": "Dimensione del file",
+			"fileFormat": "Formato file",
+			"remove": "Rimuovi"
+		},
+		"imageActions": {
+			"clockwise": "orario",
+			"counterclockwise": "antiorario",
+			"horizontal": "orizzontale",
+			"vertical": "verticale"
 		}
 	},
 	"general": {

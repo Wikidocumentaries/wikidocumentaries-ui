@@ -43,6 +43,26 @@
 				"arrangeByTime": "Bilder nach Zeit anordnen",
 				"selectWorks": "Bilder der Werke auswählen"
 			},
+			"facetMenu": {
+				"menuTitle": "Aspektbilder nach",
+				"menuTooltip": "Aspektbilder nach unterschiedlichen Kriterien",
+				"time": "Zeit",
+				"map": "Karte",
+				"people": "Personen",
+				"places": "Orte",
+				"topics": "Themen",
+				"form": "Form",
+				"imageSize": "Bildgröße",
+				"large": "Groß",
+				"medium": "Mittel",
+				"small": "Klein",
+				"type": "Medientyp",
+				"creator": "Urheber",
+				"platform": "Plattform",
+				"source": "Quelle",
+				"saveSelection": "Auswahl als Sammlung speichern",
+				"clear": "Auswahlen löschen"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Aktionen",
 				"menuTooltip": "Aktionen",
@@ -76,26 +96,8 @@
 					"explain": "Hinterlasse eine Anmerkung zur Erklärung"
 				}
 			},
-			"facetMenu": {
-				"menuTitle": "Aspektbilder nach",
-				"menuTooltip": "Aspektbilder nach unterschiedlichen Kriterien",
-				"time": "Zeit",
-				"map": "Karte",
-				"people": "Personen",
-				"places": "Orte",
-				"topics": "Themen",
-				"form": "Form",
-				"imageSize": "Bildgröße",
-				"large": "Groß",
-				"medium": "Mittel",
-				"small": "Klein",
-				"type": "Medientyp",
-				"creator": "Urheber",
-				"platform": "Plattform",
-				"source": "Quelle",
-				"saveSelection": "Auswahl als Sammlung speichern",
-				"clear": "Auswahlen löschen"
-			}
+			"imagesViewExternal": "Das Originalbild ansehen",
+			"imagesViewOnMap": "Bild auf einer Karte ansehen"
 		},
 		"TopicMap": {
 			"headerTitle": "Thema auf der Karte",
@@ -115,6 +117,25 @@
 			"headerTitle": "Zeitleiste",
 			"showEventsOnTimelineMenuText": "Themenereignisse auf der Zeitleiste anzeigen",
 			"centuryText": "JZ"
+		},
+		"Events": {
+			"headerTitle": "Ereignisse",
+			"displayMenu": {
+				"menuTitle": "Optionen anzeigen",
+				"menuTooltip": "Optionen anzeigen",
+				"optionShowTimeline": "Ereignisse auf einer Zeitleiste anzeigen",
+				"optionShowList": "Ereignisse als Liste anzeigen"
+			},
+			"optionsMenu": {
+				"menuTitle": "Optionen",
+				"menuTooltip": "Anzuzeigende Fakten auswählen",
+				"optionWorks": "Werke anzeigen",
+				"optionRelatedPeople": "Ereignisse verwandter Personen anzeigen",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurieren"
+				},
+				"optionRelatedTopics": "Ereignisse verwandter Themen anzeigen"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Fakten",
@@ -244,6 +265,85 @@
 			"facetMenuOptionCountry": "Staat",
 			"facetMenuOptionCity": "Geschlecht"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Beschriftung",
+			"addCaption": "Beschriftung hinzufügen",
+			"description": "Beschreibung",
+			"addDescription": "Beschreibung hinzufügen",
+			"creator": "Urheber",
+			"creatorUnknown": "Unbekannt",
+			"addCreator": "Urheber hinzufügen",
+			"removeCreator": "Urheber entfernen",
+			"dateDepicted": "Abbildungsdatum",
+			"addDateDepicted": "Abbildungsdatum hinzufügen",
+			"removeDateDepicted": "Abbildungsdatum entfernen",
+			"dateCreated": "Erstellungsdatum",
+			"addDateCreated": "Erstelldatum hinzufügen",
+			"removeDateCreated": "Erstellungsdatum entfernen",
+			"publisher": "Herausgeber",
+			"addPublisher": "Urheber hinzufügen",
+			"removePublisher": "Herausgeber entfernen",
+			"format": "Format",
+			"addFormat": "Format hinzufügen",
+			"removeFormat": "Format entfernen",
+			"technique": "Technik",
+			"addTechnique": "Technik hinzufügen",
+			"removeTechnique": "Technik entfernen",
+			"depicted": "Bild stellt dar",
+			"genre": "Genre",
+			"addGenre": "Genre hinzufügen",
+			"removeGenre": "Genre entfernen",
+			"depicts": "Bild stellt dar",
+			"addTopic": "Thema hinzufügen",
+			"removeTopic": "Thema entfernen",
+			"location": "Standort",
+			"locationMap": "Standort auf der Karte",
+			"addLocation": "Standort hinzufügen",
+			"removeLocation": "Standort entfernen",
+			"address": "Straße",
+			"addAddress": "Straße hinzufügen",
+			"removeAddress": "Straße entfernen",
+			"depictedPeople": "Abgebildete Personen",
+			"addPerson": "Person hinzufügen",
+			"removePerson": "Person entfernen",
+			"event": "Ereignis",
+			"addEvent": "Ereignis hinzufügen",
+			"removeEvent": "Ereignis entfernen",
+			"institution": "Einrichtung",
+			"callNumber": "Rufnummer",
+			"collection": "Sammlung",
+			"inventoryNumber": "Inventarnummer",
+			"inscriptions": "Inschriften",
+			"measurements": "Abmessungen",
+			"copyright": "Urheberrecht",
+			"work": "Werk",
+			"photograph": "Fotografie",
+			"photographer": "Fotograf",
+			"addPhotographData": "Informationen über die Fotografie hinzufügen",
+			"copyrightNotePD": "Das Bild ist mit $1 lizenziert, basiert jedoch auf den Metadaten des gemeinfreien Bildes.",
+			"copyrightNoteSame": "Das gleiche Bild ist offener mit $1 lizenziert. Deswegen wird diese Lizenz auch auf dieses Bild angewendet.",
+			"digitalCopy": "Digitale Kopie",
+			"publishingPlatform": "Veröffentlichungsplattform",
+			"platformId": "Kennung",
+			"imageInfoPage": "Bildinformationsseite",
+			"imageDimensions": "Bildabmessungen",
+			"fileSize": "Dateigröße",
+			"fileFormat": "Dateiformat",
+			"remove": "Entfernen",
+			"moveTo": "In ein anderes Feld verschieben",
+			"addData": "Daten hinzufügen"
+		},
+		"imageActions": {
+			"rotateImage": "Bild drehen",
+			"clockwise": "Im Uhrzeigersinn",
+			"counterclockwise": "Gegen den Uhrzeigersinn",
+			"flip": "Kippen",
+			"horizontal": "Horizontal",
+			"vertical": "Vertikal"
+		},
+		"closeViewer": "Betrachter schließen"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

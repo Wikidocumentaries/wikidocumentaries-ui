@@ -44,6 +44,26 @@
 				"arrangeByTime": "Organizar imagens por hora",
 				"selectWorks": "Selecione imagens de trabalhos"
 			},
+			"facetMenu": {
+				"menuTitle": "Imagens facetadas por",
+				"menuTooltip": "Imagens facetadas por diferentes critérios",
+				"time": "horário",
+				"map": "mapa",
+				"people": "pessoas",
+				"places": "lugares",
+				"topics": "tópicos",
+				"form": "forma",
+				"imageSize": "tamanho da imagem",
+				"large": "grande",
+				"medium": "médio",
+				"small": "pequeno",
+				"type": "tipo de mídia",
+				"creator": "criador",
+				"platform": "plataforma",
+				"source": "fonte",
+				"saveSelection": "Salvar seleção como uma coleção",
+				"clear": "Escolhas claras"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Ações",
 				"menuTooltip": "Ações",
@@ -76,26 +96,6 @@
 					"copyvio": "Viola os direitos autorais",
 					"explain": "Deixe uma nota para explicar"
 				}
-			},
-			"facetMenu": {
-				"menuTitle": "Imagens facetadas por",
-				"menuTooltip": "Imagens facetadas por diferentes critérios",
-				"time": "horário",
-				"map": "mapa",
-				"people": "pessoas",
-				"places": "lugares",
-				"topics": "tópicos",
-				"form": "forma",
-				"imageSize": "tamanho da imagem",
-				"large": "grande",
-				"medium": "médio",
-				"small": "pequeno",
-				"type": "tipo de mídia",
-				"creator": "criador",
-				"platform": "plataforma",
-				"source": "fonte",
-				"saveSelection": "Salvar seleção como uma coleção",
-				"clear": "Escolhas claras"
 			}
 		},
 		"TopicMap": {

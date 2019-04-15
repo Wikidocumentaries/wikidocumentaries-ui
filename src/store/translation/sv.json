@@ -44,6 +44,23 @@
 				"arrangeByTime": "Arrangera bilder efter tid",
 				"selectWorks": "Välj bilder av verk"
 			},
+			"facetMenu": {
+				"time": "tid",
+				"map": "karta",
+				"places": "platser",
+				"topics": "ämnen",
+				"form": "formulär",
+				"imageSize": "bildstorlek",
+				"large": "stor",
+				"medium": "medel",
+				"small": "liten",
+				"type": "mediatyp",
+				"creator": "skapare",
+				"platform": "plattform",
+				"source": "källa",
+				"saveSelection": "Spara valet som en samling",
+				"clear": "Rensa val"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Åtgärder",
 				"menuTooltip": "Åtgärder",
@@ -76,23 +93,6 @@
 					"copyvio": "Den bryter mot upphovsrätten",
 					"explain": "Lämna en anteckning för att förklara"
 				}
-			},
-			"facetMenu": {
-				"time": "tid",
-				"map": "karta",
-				"places": "platser",
-				"topics": "ämnen",
-				"form": "formulär",
-				"imageSize": "bildstorlek",
-				"large": "stor",
-				"medium": "medel",
-				"small": "liten",
-				"type": "mediatyp",
-				"creator": "skapare",
-				"platform": "plattform",
-				"source": "källa",
-				"saveSelection": "Spara valet som en samling",
-				"clear": "Rensa val"
 			}
 		},
 		"TopicMap": {

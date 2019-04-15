@@ -30,6 +30,11 @@
 				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
 				"arrangeByTime": "시간순으로 이미지 정렬"
 			},
+			"facetMenu": {
+				"type": "미디어 유형",
+				"creator": "만든이",
+				"platform": "플랫폼"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "동작",
 				"menuTooltip": "동작",
@@ -51,11 +56,6 @@
 					"menuTitle": "부적절한 이유:",
 					"shortMenuTitle": "부적절합니다"
 				}
-			},
-			"facetMenu": {
-				"type": "미디어 유형",
-				"creator": "만든이",
-				"platform": "플랫폼"
 			}
 		},
 		"TopicMap": {

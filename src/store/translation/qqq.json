@@ -44,6 +44,26 @@
 				"arrangeByTime": "Menu item for arranging images by time",
 				"selectWorks": "Menu item in the Actions menu in the Images section"
 			},
+			"facetMenu": {
+				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
+				"menuTooltip": "Menu tooltip of the Facet menu in the Images section",
+				"time": "Menu option in the Facet menu in the Images section to facet by time - the title and the option form a compound\n{{Identical|Time}}",
+				"map": "Option Map in the Faceting menu",
+				"people": "Menu option in the Facet menu in the Images section to facet by people - the title and the option form a compound",
+				"places": "Option Places inthe Faceting menu",
+				"topics": "Option Topics in the Faceting menu",
+				"form": "Menu option in the Facet menu in the Images section to facet by image form - the title and the option form a compound",
+				"imageSize": "Menu option in the Facet menu in the Images section to facet by image size - the title and the option form a compound",
+				"large": "Option Large in the Image size option in the Faceting menu",
+				"medium": "Option Medium in the Image size option in the Faceting menu",
+				"small": "Option Small in the Image size option in the Faceting menu",
+				"type": "Menu option in the Facet menu in the Images section to facet by image type - the title and the option form a compound",
+				"creator": "Menu option in the Facet menu in the Images section to facet by creator - the title and the option form a compound",
+				"platform": "Menu option in the Facet menu in the Images section to facet by publishing platform - the title and the option form a compound",
+				"source": "Menu option in the Facet menu in the Images section to facet by source - the title and the option form a compound\n{{Identical|Source}}",
+				"saveSelection": "Option in the Facet menu in the Images section to save the choices as a dynamic collection of images",
+				"clear": "Option in the Facet menu in the Images section to clear the choices"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Menu title for the Images Actions menu",
 				"menuTooltip": "Tooltip text for the Actions menu",
@@ -77,26 +97,8 @@
 					"explain": "Menu item for leaving a note in the Inappropriate image menu"
 				}
 			},
-			"facetMenu": {
-				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
-				"menuTooltip": "Menu tooltip of the Facet menu in the Images section",
-				"time": "Menu option in the Facet menu in the Images section to facet by time - the title and the option form a compound\n{{Identical|Time}}",
-				"map": "Option Map in the Faceting menu",
-				"people": "Menu option in the Facet menu in the Images section to facet by people - the title and the option form a compound",
-				"places": "Option Places inthe Faceting menu",
-				"topics": "Option Topics in the Faceting menu",
-				"form": "Menu option in the Facet menu in the Images section to facet by image form - the title and the option form a compound",
-				"imageSize": "Menu option in the Facet menu in the Images section to facet by image size - the title and the option form a compound",
-				"large": "Option Large in the Image size option in the Faceting menu",
-				"medium": "Option Medium in the Image size option in the Faceting menu",
-				"small": "Option Small in the Image size option in the Faceting menu",
-				"type": "Menu option in the Facet menu in the Images section to facet by image type - the title and the option form a compound",
-				"creator": "Menu option in the Facet menu in the Images section to facet by creator - the title and the option form a compound",
-				"platform": "Menu option in the Facet menu in the Images section to facet by publishing platform - the title and the option form a compound",
-				"source": "Menu option in the Facet menu in the Images section to facet by source - the title and the option form a compound\n{{Identical|Source}}",
-				"saveSelection": "Option in the Facet menu in the Images section to save the choices as a dynamic collection of images",
-				"clear": "Option in the Facet menu in the Images section to clear the choices"
-			}
+			"imagesViewExternal": "Link in the image thumbnail to view in the original location",
+			"imagesViewOnMap": "Link in the image thumbnail in the images section to view it on the map"
 		},
 		"TopicMap": {
 			"headerTitle": "Main title in the Map section",
@@ -116,6 +118,25 @@
 			"headerTitle": "Main title in the Timeline section\n{{Identical|Timeline}}",
 			"showEventsOnTimelineMenuText": "Menu item for showing events in the Timeline section",
 			"centuryText": "Abbreviation for showing the Century in the Timeline section"
+		},
+		"Events": {
+			"headerTitle": "Events section header title",
+			"displayMenu": {
+				"menuTitle": "Display options menu title in the Events section",
+				"menuTooltip": "Display menu tooltip in the Events section",
+				"optionShowTimeline": "Display menu option to display as timeline in the Events section",
+				"optionShowList": "Display menu option in the Events section to display as a list"
+			},
+			"optionsMenu": {
+				"menuTitle": "Options menu title in the Events section",
+				"menuTooltip": "Options menu tooltip in the Events section",
+				"optionWorks": "Menu option to Show works as events in the Options menu in the Events section",
+				"optionRelatedPeople": "Menu option to Show events of related people in the Options menu in the Events section",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Submenu title for the Show events of related people option in the Options menu in the Events section"
+				},
+				"optionRelatedTopics": "Menu option to Show events for related topics in the Options menu in the Events section"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Main title in the Data section\n{{Identical|Fact}}",
@@ -245,6 +266,81 @@
 			"facetMenuOptionCountry": "Menu item for faceting by country",
 			"facetMenuOptionCity": "Menu item for faceting by gender"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Field label for the Caption in the Metadata section in the Image viewer",
+			"addCaption": "Button text to Add a caption in the Caption part in the Metadata section in the Image viewer",
+			"description": "Field label for the Description in the Metadata section in the Image viewer",
+			"addDescription": "Button text to Add description in the Description part in the Metadata section in the Image viewer",
+			"creator": "Field label for Creator in the Metadata section in the Image viewer",
+			"creatorUnknown": "Field value for an unknown person Creator field in the Metadata section in the Image viewer",
+			"addCreator": "Button text to Add a creator in the Metadata section in the Image viewer",
+			"removeCreator": "Button text to Remove a creator in the Metadata section in the Image viewer",
+			"dateDepicted": "Field label for Depicted date of an image in the Metadata section in the Image viewer",
+			"addDateDepicted": "Button text to Add the depicted date in the Creation date field in the Metadata section in the Image viewer",
+			"removeDateDepicted": "Button text to Remove a depicted date in the Depicted date field in the Metadata section in the Image viewer",
+			"dateCreated": "Field label for Creation date of an image in the Metadata section in the Image viewer",
+			"addDateCreated": "Button text to Add the creation date in the Creation date field in the Metadata section in the Image viewer",
+			"removeDateCreated": "Button text to Remove the creation date in the Creation date field in the Metadata section in the Image viewer",
+			"publisher": "Field label for the Publisher of an image in the Metadata section in the Image viewer",
+			"addPublisher": "Button text to Add the publisher in the Metadata section in the Image viewer",
+			"removePublisher": "Button text to Remove a publisher in the Metadata section in the Image viewer",
+			"format": "Field label for the Format of an image in the Metadata section in the Image viewer",
+			"addFormat": "Button text to Add the format in the Metadata section in the Image viewer",
+			"removeFormat": "Button text to Remove the format in the Metadata section in the Image viewer",
+			"technique": "Field label for the Technique of an image in the Metadata section in the Image viewer",
+			"addTechnique": "Button text to Add the technique in the Metadata section in the Image viewer",
+			"removeTechnique": "Button text to Remove the technique in the Metadata section in the Image viewer",
+			"depicted": "OBSOLETE, WILL REMOVE",
+			"genre": "Field label for Genre of an image in the Metadata section in the Image viewer",
+			"addGenre": "Button text to Add the genre in the Metadata section in the Image viewer",
+			"removeGenre": "Button text to Remove the genre in the Metadata section in the Image viewer",
+			"depicts": "Field label for Depicted topics of an image in the Metadata section in the Image viewer",
+			"addTopic": "Button text to Add a topic in the Metadata section in the Image viewer",
+			"removeTopic": "Button text to Remove a topic in the Metadata section in the Image viewer",
+			"location": "Field label for the Location of an image in the Metadata section in the Image viewer",
+			"locationMap": "Map title in the Metadata section in the Image viewer",
+			"addLocation": "Button text to Add the location of an image in the Metadata section in the Image viewer",
+			"removeLocation": "Button text to Remove the location of an image in the Metadata section in the Image viewer",
+			"address": "Field label for the Street address of an image in the Metadata section in the Image viewer",
+			"addAddress": "Button text to Add the street address of an image in the Metadata section in the Image viewer",
+			"removeAddress": "Button text to Remove the street address of an image in the Metadata section in the Image viewer",
+			"depictedPeople": "Field label for Depicted people in image in the Metadata section in the Image viewer",
+			"addPerson": "Button text to Add the person in an image in the Metadata section in the Image viewer",
+			"removePerson": "Button text to Remove the person in an image in the Metadata section in the Image viewer",
+			"event": "Field label for the Event of an image in the Metadata section in the Image viewer",
+			"addEvent": "Button text to Add an event of an image in the Metadata section in the Image viewer",
+			"removeEvent": "Button text to Remove an event of an image in the Metadata section in the Image viewer",
+			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer",
+			"callNumber": "obsolete, will remove",
+			"inventoryNumber": "Field label for the Inventory number of an image in the Metadata section in the Image viewer",
+			"inscriptions": "Field label for Inscriptions in an image in the Metadata section in the Image viewer",
+			"measurements": "Field label for the Measurements of an image in the Metadata section in the Image viewer",
+			"copyright": "Field label for the Copyright and licensing information of an image in the Metadata section in the Image viewer",
+			"work": "Section title for Information about the work about an image in the Metadata section in the Image viewer",
+			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer",
+			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer",
+			"digitalCopy": "Section title for the information about the Digital copy of an image in the Metadata section in the Image viewer",
+			"publishingPlatform": "Field label for the Publishing platform of an image in the Metadata section in the Image viewer",
+			"platformId": "Field label for the ID on the publishing platform of an image in the Metadata section in the Image viewer",
+			"imageInfoPage": "Field label for the Image info page of an image in the original platform in the Metadata section in the Image viewer",
+			"imageDimensions": "Field label for Image dimensions of an image in the Metadata section in the Image viewer",
+			"fileSize": "Field label for File size of an image in the Metadata section in the Image viewer",
+			"fileFormat": "Field label for File format of an image in the Metadata section in the Image viewer",
+			"remove": "Menu option to remove a metadata item in the Image viewer",
+			"moveTo": "Menu option to transfer the contents of a metadata field to another field",
+			"addData": "Option to add a new data field in the Metadata section in the Image viewer"
+		},
+		"imageActions": {
+			"rotateImage": "Submenu title to Rotate the image in the Actions menu in the Image viewer",
+			"clockwise": "Submenu option to Rotate the image clockwise in the Actions menu in the Image viewer",
+			"counterclockwise": "Submenu option to Rotate the image counterclockwise in the Actions menu in the Image viewer",
+			"flip": "Submenu title to Flip the image in the Actions menu in the Image viewer",
+			"horizontal": "Submenu option to Horizontally flip an image in the Actions menu in the Image viewer",
+			"vertical": "Submenu option to Vertically flip an image in the Actions menu in the Image viewer"
+		},
+		"closeViewer": "Tooltip for the Close button in the Image viewer"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

@@ -39,6 +39,13 @@
 				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
+			"facetMenu": {
+				"people": "personas",
+				"topics": "temas",
+				"imageSize": "tamaño de imagen",
+				"platform": "plataforma",
+				"source": "fuente"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Acciones",
 				"menuTooltip": "Acciones",
@@ -67,13 +74,6 @@
 					"copyvio": "Viola los derechos de autor",
 					"explain": "Dejar una nota para explicar"
 				}
-			},
-			"facetMenu": {
-				"people": "personas",
-				"topics": "temas",
-				"imageSize": "tamaño de imagen",
-				"platform": "plataforma",
-				"source": "fuente"
 			}
 		},
 		"TopicMap": {

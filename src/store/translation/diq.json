@@ -34,26 +34,6 @@
 				"showImagesOnMapMenuText": "Resıman pêro xerita de bımocne",
 				"showImagesOnTimelineMenuText": "Resıman pêro ustına wexti de bımocne"
 			},
-			"imagesActionMenu": {
-				"menuTitle": "Hereketi",
-				"menuTooltip": "Hereketi",
-				"doGeolocatingText": "Lokasyoni eyar ke...",
-				"showImageText": "Resım bımocne"
-			},
-			"imagesRemoveMenu": {
-				"menuTitle": "Resımi wedare, çıke...",
-				"menuTooltip": "Resımi wedare",
-				"remDepicted": {
-					"search": "Mewzu cı geyre"
-				},
-				"remCreator": {
-					"search": "Vıraştoği cı geyre",
-					"browse": "Çım berze ra aktoranê eleqayınan"
-				},
-				"remInappropriate": {
-					"menuTitle": "Hewl niyo, çıke"
-				}
-			},
 			"facetMenu": {
 				"time": "wext",
 				"map": "xerita",
@@ -69,6 +49,27 @@
 				"creator": "vıraştoğ",
 				"platform": "platform",
 				"source": "çıme"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Hereketi",
+				"menuTooltip": "Hereketi",
+				"doGeolocatingText": "Lokasyoni eyar ke...",
+				"showImageText": "Resım bımocne"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Resımi wedare, çıke...",
+				"shortMenuTitle": "Resımi wedare",
+				"menuTooltip": "Resımi wedare",
+				"remDepicted": {
+					"search": "Mewzu cı geyre"
+				},
+				"remCreator": {
+					"search": "Vıraştoği cı geyre",
+					"browse": "Çım berze ra aktoranê eleqayınan"
+				},
+				"remInappropriate": {
+					"menuTitle": "Hewl niyo, çıke"
+				}
 			}
 		},
 		"TopicMap": {

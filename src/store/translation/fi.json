@@ -44,6 +44,26 @@
 				"arrangeByTime": "Järjestä kuvat ajan perusteella",
 				"selectWorks": "Valitse teosten kuvia"
 			},
+			"facetMenu": {
+				"menuTitle": "Ryhmittele kuvia",
+				"menuTooltip": "Ryhmittele kuvia eri tavoilla",
+				"time": "aika",
+				"map": "kartta",
+				"people": "henkilöt",
+				"places": "paikat",
+				"topics": "aiheet",
+				"form": "muoto",
+				"imageSize": "kuvakoko",
+				"large": "suuri",
+				"medium": "keskikokoinen",
+				"small": "pieni",
+				"type": "mediatyypin mukaan",
+				"creator": "tekijä",
+				"platform": "alusta",
+				"source": "lähde",
+				"saveSelection": "Tallenna valinnat kokoelmaksi",
+				"clear": "Tyhjennä valinnat"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Toiminnot",
 				"menuTooltip": "Toiminnot",
@@ -76,26 +96,6 @@
 					"copyvio": "Se rikkoo tekijänoikeutta",
 					"explain": "Jätä selittävä viesti"
 				}
-			},
-			"facetMenu": {
-				"menuTitle": "Ryhmittele kuvia",
-				"menuTooltip": "Ryhmittele kuvia eri tavoilla",
-				"time": "aika",
-				"map": "kartta",
-				"people": "henkilöt",
-				"places": "paikat",
-				"topics": "aiheet",
-				"form": "muoto",
-				"imageSize": "kuvakoko",
-				"large": "suuri",
-				"medium": "keskikokoinen",
-				"small": "pieni",
-				"type": "mediatyypin mukaan",
-				"creator": "tekijä",
-				"platform": "alusta",
-				"source": "lähde",
-				"saveSelection": "Tallenna valinnat kokoelmaksi",
-				"clear": "Tyhjennä valinnat"
 			}
 		},
 		"TopicMap": {

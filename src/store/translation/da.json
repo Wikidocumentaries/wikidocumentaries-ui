@@ -29,6 +29,21 @@
 				"arrangeByTime": "Arranger billeder efter tid",
 				"selectWorks": "Vælg billeder af værker"
 			},
+			"facetMenu": {
+				"time": "tid",
+				"map": "kort",
+				"people": "personer",
+				"places": "steder",
+				"topics": "emner",
+				"imageSize": "Billedestørrelse",
+				"large": "stor",
+				"medium": "mellem",
+				"small": "lille",
+				"creator": "skaber",
+				"platform": "platform",
+				"source": "kilde",
+				"clear": "Ryd valg"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Handlinger",
 				"menuTooltip": "Handlinger",
@@ -48,21 +63,6 @@
 					"menuTitle": "Den er upassende fordi",
 					"shortMenuTitle": "Den er upassende"
 				}
-			},
-			"facetMenu": {
-				"time": "tid",
-				"map": "kort",
-				"people": "personer",
-				"places": "steder",
-				"topics": "emner",
-				"imageSize": "Billedestørrelse",
-				"large": "stor",
-				"medium": "mellem",
-				"small": "lille",
-				"creator": "skaber",
-				"platform": "platform",
-				"source": "kilde",
-				"clear": "Ryd valg"
 			}
 		},
 		"TopicMap": {
