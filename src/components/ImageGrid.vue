@@ -16,7 +16,7 @@
                     </div>
                     <div class="right-align">
                         <div v-if="item.infoURL != undefined" class="header-item">
-                            <a :href="item.infoURL" target="_blank"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
+                            <a href="#" @click.stop.prevent="openItemInfoURL(item.infoURL)"><i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i></a>
                         </div>
                         <!--ImagesRemoveMenu></ImagesRemoveMenu-->
                     </div>
@@ -71,6 +71,9 @@ export default {
         },
         showImageViewer (item) {
           this.$refs.imageviewer.show(item);
+        },
+        openItemInfoURL(url) {
+            window.open(url, "_blank");
         }
     }
 }
