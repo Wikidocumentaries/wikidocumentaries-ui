@@ -9,7 +9,7 @@
                 </div>
                 <div class="thumb-image-header">
                     <div class="left-align">
-                        <ImagesActionMenu></ImagesActionMenu>
+                        <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
                         <div v-if="item.geoLocations != undefined && item.geoLocations.length > 0" class="header-item">
                             <a href="#" @click.prevent="showItemGeolocation(item)"><i class="wikiglyph wikiglyph-map-pin thumb-image-glyph"></i></a>
                         </div>
@@ -109,7 +109,7 @@ export default {
     width: 30px;
 }
 
-.header-item a {   
+.header-item a {
     height: 100%;
     display: flex;
     align-items: center;
@@ -137,7 +137,7 @@ export default {
     transition: opacity 80ms ease-in;
 }
 
-.grid-item--width2 { 
+.grid-item--width2 {
     width: 400px;
 }
 

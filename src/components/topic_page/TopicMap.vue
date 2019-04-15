@@ -1,5 +1,5 @@
 <template>
-    <div v-if="topicLocation.length" class="map-component">
+    <div v-if="(topicLocation && topicLocation.length) || (shownImages && shownImages.length)" class="map-component">
         <div class="toolbar">
             <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
@@ -8,7 +8,7 @@
             </ToolbarMenu>
         </div>
         <div id="map" class="map">
-            <div ref="topicMapPopup" class="map-popup-container" :class="{ 'topic-popup-hidden': !shouldShowTopicPopup }">
+            <div v-if="(topicLocation && topicLocation.length)" ref="topicMapPopup" class="map-popup-container" :class="{ 'topic-popup-hidden': !shouldShowTopicPopup }">
                 <div class="map-popup">
                 {{ wikidocumentaries.title }}
                 </div>
@@ -17,7 +17,9 @@
                 <MapOverlay v-if="image.geoLocations.length > 0"  :map="map" :position="getFirstGeoLocationAsPoint(image)" :offset=" (shownImagesPopupOffsets['i' + index] == undefined ? [0, 0] : shownImagesPopupOffsets['i' + index] )" :autoPan=" ( shownImages.length > 1 ) ? false  : true " :autoPanMargin="200" :overlayGroupItemCount="shownImages.length">
                     <div class="map-popup-container">
                         <div class="map-popup">
+                          <a :href="image.infoURL">
                             <img :src="image.thumbURL" class="popup-image" v-on:load="onShownImageLoad($event, index)">
+                          </a>
                         </div>
                     </div>
                 </MapOverlay>
@@ -41,6 +43,8 @@
 </template>
 
 <script>
+
+// v-if="(topicLocation && topicLocation.length) || (shownImages && shownImages.length)"
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 import TransparencySliderMenuItem from '@/components/menu/TransparencySliderMenuItem'
@@ -109,7 +113,11 @@ export default {
         WikimapsWarperLayer
     },
     mounted: function () {
-        this.createMap();
+      this.$nextTick(function() {
+        if ((this.topicLocation && this.topicLocation.length) || (this.shownImages && this.shownImages.length)) {
+          if (!this.map) this.createMap();
+        }
+      });
     },
     computed: {
         wikidocumentaries () {
@@ -135,33 +143,47 @@ export default {
     watch: {
         topicLocation: function(newLocation, oldLocation) {
             //console.log("topicLocation", oldLocation, newLocation);
-            this.setTopicOnMap();
-            this.$store.commit('setShouldFitMapToBasemap', true);
-            this.getHistoricalBasemapsforTheArea();
+            this.$nextTick(function() {
+              if (!this.map) this.createMap();
+              this.setTopicOnMap();
+              this.$store.commit('setShouldFitMapToBasemap', true);
+              this.getHistoricalBasemapsforTheArea();
+            });
         },
         shownImages: function(images, oldImages) {
-            var ol = this.$ol;
+          this.$nextTick(function() {
+            if (!this.map) this.createMap();
+            this.$nextTick(function() {
+              this.$nextTick(function() {
+                var ol = this.$ol;
 
-            //console.log("shownImages");
-            this.shouldShowTopicPopup = false;
+                // console.log("shownImages images.length: ", images.length);
+                this.shouldShowTopicPopup = false;
 
-            if (images.length > 1) {
-                var coordinates = [];
-                for (var i = 0; i < images.length; i++) {
-                    if (images[i].geoLocations.length > 0) {
-                        coordinates.push(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(images[i])));
+                if (images.length > 0) {
+                    var coordinates = [];
+                    for (var i = 0; i < images.length; i++) {
+                        if (images[i].geoLocations.length > 0) {
+                            coordinates.push(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(images[i])));
+                        }
+                    }
+                    if (images.length===1 && this.topicPointCoordinates() != null) {
+                      coordinates.push(ol.proj.fromLonLat(this.topicPointCoordinates()));
+                    }
+                    var view = this.map.getView();
+                    if (coordinates.length > 1) {
+                      var extent = ol.extent.boundingExtent(coordinates);
+                      view.fit(extent, {
+                          padding: [150, 50, 50, 50]
+                      });
+                    } else { // Only one image, no topic, use default zoom and center on the image
+                      view.setZoom(12);
+                      view.setCenter(ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint(images[0])));
                     }
                 }
-                var extent = ol.extent.boundingExtent(coordinates);
-
-                var view = this.map.getView();
-                view.fit(extent, {
-                    padding: [150, 50, 50, 50]
-                });
-            }
-            else {
-                
-            }
+              });
+            });
+          });
         },
         nearbyWikiItems: function(items, oldItems) {
             //console.log("watch nearbyWikiItems", items);
@@ -204,7 +226,7 @@ export default {
                 this.$store.commit('setShouldFitMapToBasemap', true);
             }
             this.getHistoricalBasemapsforTheArea();
-            
+
             this.map.on('click', this.handleMapClick);
 
             this.createImageFeatures();
@@ -216,7 +238,7 @@ export default {
             if (this.topicPointCoordinates() != null) {
                 this.topicFeature = new ol.Feature({
                     geometry: new ol.geom.Point(ol.proj.fromLonLat(this.topicPointCoordinates())),
-                    
+
                 });
                 var iconStyle = new ol.style.Style({
                     image: new ol.style.Icon({
@@ -388,7 +410,7 @@ export default {
                 if (this.toolbarActionMenuItems[i].id == id) {
                     this.toolbarActionMenuItems.splice(i, 1);
                     break;
-                } 
+                }
             }
         },
         addMenuItem(item) {
@@ -419,7 +441,7 @@ export default {
             var params = {
                 topic: this.wikidocumentaries.title,
                 language: this.$i18n.locale,
-                lon: lon, 
+                lon: lon,
                 lat: lat,
                 radius: distance,
             }
@@ -450,7 +472,7 @@ export default {
             var geoLocation = null;
             if (image.geoLocations.length > 0) {
                 var wkt = image.geoLocations[0];
-                if (wkt.indexOf("POINT") != -1) { 
+                if (wkt.indexOf("POINT") != -1) {
                     // "POINT(24.9600002 60.1796223)"
                     var coordPart = wkt.split('(')[1].split(')')[0];
                     //console.log(coordPart);
@@ -516,7 +538,7 @@ export default {
             var geoLocation = this.getFirstGeoLocation(image)
             if (image.geoLocations.length > 0) {
                 var wkt = image.geoLocations[0];
-                if (wkt.indexOf("POINT") != -1) { 
+                if (wkt.indexOf("POINT") != -1) {
                     // "POINT(24.9600002 60.1796223)"
                     var coordPart = wkt.split('(')[1].split(')')[0];
                     //console.log(coordPart);
@@ -545,7 +567,7 @@ export default {
         },
         getCentroid(coords) {
             var center = coords.reduce(function (x,y) {
-                return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length]; 
+                return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length];
             }, [0,0])
             return center;
         }
