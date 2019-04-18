@@ -74,7 +74,8 @@
 					"copyvio": "Viola los derechos de autor",
 					"explain": "Dejar una nota para explicar"
 				}
-			}
+			},
+			"imagesViewExternal": "Ver la imagen original"
 		},
 		"TopicMap": {
 			"headerTitle": "Tema en el mapa",
@@ -93,6 +94,25 @@
 			"headerTitle": "Línea de tiempo",
 			"showEventsOnTimelineMenuText": "Mostrar eventos por tema en la línea de tiempo",
 			"centuryText": "C"
+		},
+		"Events": {
+			"headerTitle": "Sucesos",
+			"displayMenu": {
+				"menuTitle": "Opciones de visualización",
+				"menuTooltip": "Opciones de visualización",
+				"optionShowTimeline": "Mostrar sucesos en cronología",
+				"optionShowList": "Mostrar sucesos como lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opciones",
+				"menuTooltip": "Seleccionar datos que mostrar",
+				"optionWorks": "Mostrar obras",
+				"optionRelatedPeople": "Mostrar sucesos de personas relacionadas",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurar"
+				},
+				"optionRelatedTopics": "Mostrar sucesos de temas relacionados"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Datos",
@@ -176,6 +196,59 @@
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Género"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Leyenda",
+			"addCaption": "Añadir leyenda",
+			"description": "Descripción",
+			"addDescription": "Añadir descripción",
+			"creatorUnknown": "Desconocido",
+			"dateCreated": "Fecha de creación",
+			"addDateCreated": "Añadir fecha de creación",
+			"removeDateCreated": "Quitar fecha de creación",
+			"format": "Formato",
+			"addFormat": "Añadir formato",
+			"technique": "Técnica",
+			"addTechnique": "Añadir técnica",
+			"removeTechnique": "Quitar técnica",
+			"genre": "Género",
+			"addGenre": "Añadir género",
+			"removeGenre": "Quitar género",
+			"addTopic": "Añadir tema",
+			"location": "Ubicación",
+			"locationMap": "Ubicación en el mapa",
+			"addLocation": "Añadir ubicación",
+			"removeLocation": "Quitar ubicación",
+			"addPerson": "Añadir persona",
+			"removePerson": "Quitar persona",
+			"event": "Suceso",
+			"addEvent": "Añadir suceso",
+			"removeEvent": "Quitar suceso",
+			"institution": "Institución",
+			"collection": "Colección",
+			"inventoryNumber": "Número de inventario",
+			"measurements": "Medidas",
+			"copyright": "Derechos de autor",
+			"work": "Obra",
+			"photograph": "Fotografía",
+			"digitalCopy": "Copia digitar",
+			"platformId": "Identificador",
+			"imageInfoPage": "Página de información de la imagen",
+			"imageDimensions": "Dimensiones de imagen",
+			"fileSize": "Tamaño de archivo",
+			"fileFormat": "Formato de archivo",
+			"remove": "Quitar",
+			"moveTo": "Mover a otro campo",
+			"addData": "Añadir datos"
+		},
+		"imageActions": {
+			"rotateImage": "Girar imagen",
+			"flip": "Voltear",
+			"horizontal": "horizontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Cerrar visor"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

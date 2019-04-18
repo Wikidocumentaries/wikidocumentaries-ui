@@ -96,7 +96,9 @@
 					"copyvio": "Нарушува авторски права",
 					"explain": "Напишете прибелешка со објаснување"
 				}
-			}
+			},
+			"imagesViewExternal": "Погл. изворната слика",
+			"imagesViewOnMap": "Погл. сликата на карта"
 		},
 		"TopicMap": {
 			"headerTitle": "Тема на картата",
@@ -116,6 +118,25 @@
 			"headerTitle": "Времеслед",
 			"showEventsOnTimelineMenuText": "Прикажи тематски настани во времеследот",
 			"centuryText": "в."
+		},
+		"Events": {
+			"headerTitle": "Настани",
+			"displayMenu": {
+				"menuTitle": "Нагодувања на приказот",
+				"menuTooltip": "Приказни поставки",
+				"optionShowTimeline": "Прикажи настани на времеслед",
+				"optionShowList": "Прикажи настани како список"
+			},
+			"optionsMenu": {
+				"menuTitle": "Поставки",
+				"menuTooltip": "Факти за приказ",
+				"optionWorks": "Прикажи дела",
+				"optionRelatedPeople": "Прикажи настани од поврзани лица",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Нагоди"
+				},
+				"optionRelatedTopics": "Прикажи настани од поврзани теми"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Факти",
@@ -245,6 +266,85 @@
 			"facetMenuOptionCountry": "Земја",
 			"facetMenuOptionCity": "Пол"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Натпис",
+			"addCaption": "Додај натпис",
+			"description": "Опис",
+			"addDescription": "Додај опис",
+			"creator": "Творец",
+			"creatorUnknown": "непознат",
+			"addCreator": "Додај творец",
+			"removeCreator": "Отстрани творец",
+			"dateDepicted": "Прикажан датум",
+			"addDateDepicted": "Додај прикажан датум",
+			"removeDateDepicted": "Отстрани прикажан датум",
+			"dateCreated": "Датум на создавање",
+			"addDateCreated": "Додај датум на создавање",
+			"removeDateCreated": "Отстрани датум на создавање",
+			"publisher": "Издавач",
+			"addPublisher": "Додај издавач",
+			"removePublisher": "Отстрани издавач",
+			"format": "Формат",
+			"addFormat": "Додај формат",
+			"removeFormat": "Отстрани формат",
+			"technique": "Техника",
+			"addTechnique": "Додај техника",
+			"removeTechnique": "Отстрани техника",
+			"depicted": "Сликата прикажува",
+			"genre": "Род",
+			"addGenre": "Додај род",
+			"removeGenre": "Отстрани род",
+			"depicts": "Сликата прикажува",
+			"addTopic": "Додај тема",
+			"removeTopic": "Отстрани тема",
+			"location": "Местоположба",
+			"locationMap": "Местоположба на картата",
+			"addLocation": "Додај местоположба",
+			"removeLocation": "Отстрани местоположба",
+			"address": "Улична адреса",
+			"addAddress": "Додај улична адреса",
+			"removeAddress": "Отстрани улична адреса",
+			"depictedPeople": "Прикажани лица",
+			"addPerson": "Додај лице",
+			"removePerson": "Отстрани лице",
+			"event": "Настан",
+			"addEvent": "Додај настан",
+			"removeEvent": "Отстрани настан",
+			"institution": "Установа",
+			"callNumber": "Упатен број",
+			"collection": "Збирка",
+			"inventoryNumber": "Пописен број",
+			"inscriptions": "Натписи",
+			"measurements": "Димензии",
+			"copyright": "Авторски права",
+			"work": "Дело",
+			"photograph": "Фотографија",
+			"photographer": "Фотограф",
+			"addPhotographData": "Додај информации за фотографијата",
+			"copyrightNotePD": "Сликата се води под лиценцата $1, но метаподатоците укажуваат дека е во јавна сопственост.",
+			"copyrightNoteSame": "Истата слика ја има поотворената лиценца $1, па затоа тоа важи и за оваа слика.",
+			"digitalCopy": "Дигитален примерок",
+			"publishingPlatform": "Средство за објава",
+			"platformId": "Назнака",
+			"imageInfoPage": "Инфостраница на сликата",
+			"imageDimensions": "Димензии на сликата",
+			"fileSize": "Големина на податотеката",
+			"fileFormat": "Формат на податотеката",
+			"remove": "Отстрани",
+			"moveTo": "Премести во друго поле",
+			"addData": "Додај податоци"
+		},
+		"imageActions": {
+			"rotateImage": "Сврти слика",
+			"clockwise": "вдесно",
+			"counterclockwise": "влево",
+			"flip": "Преврти",
+			"horizontal": "хоризонтално",
+			"vertical": "вертикално"
+		},
+		"closeViewer": "Затвори прегледник"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

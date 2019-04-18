@@ -33,6 +33,8 @@
 		},
 		"TopicImages": {
 			"actionsMenu": {
+				"menuTitle": "Mostra o organizza le immagini",
+				"tooltip": "Mostra o organizza le immagini",
 				"showImagesOnMapMenuText": "Mostra tutte le immagini nella mappa",
 				"showImagesOnTimelineMenuText": "Mostra tutte le immagini nella linea temporale"
 			},

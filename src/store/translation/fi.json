@@ -96,7 +96,9 @@
 					"copyvio": "Se rikkoo tekijänoikeutta",
 					"explain": "Jätä selittävä viesti"
 				}
-			}
+			},
+			"imagesViewExternal": "Katso alkuperäistä kuvaa",
+			"imagesViewOnMap": "Katso kuvaa kartalla"
 		},
 		"TopicMap": {
 			"headerTitle": "Sijainti kartalla",
@@ -116,6 +118,25 @@
 			"headerTitle": "Aikajana",
 			"showEventsOnTimelineMenuText": "Näytä tapahtumat aikajanalla",
 			"centuryText": "-luku"
+		},
+		"Events": {
+			"headerTitle": "Tapahtumat",
+			"displayMenu": {
+				"menuTitle": "Esitysvalinnat",
+				"menuTooltip": "Esitysvalinnat",
+				"optionShowTimeline": "Näytä tapahtumat aikajanalla",
+				"optionShowList": "Näytä tapahtumat listana"
+			},
+			"optionsMenu": {
+				"menuTitle": "Asetukset",
+				"menuTooltip": "Valitse näytettävät tiedot",
+				"optionWorks": "Näytä teokset",
+				"optionRelatedPeople": "Näytä liittyvien henkilöiden tapahtumat",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Määritä"
+				},
+				"optionRelatedTopics": "Näytä liittyvien aiheiden tapahtumat"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Tietoja",
@@ -245,6 +266,84 @@
 			"facetMenuOptionCountry": "Maan mukaan",
 			"facetMenuOptionCity": "Sukupuolen mukaan"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Kuvateksti",
+			"addCaption": "Lisää kuvateksti",
+			"description": "Kuvaus",
+			"addDescription": "Lisää kuvaus",
+			"creator": "Tekijä",
+			"creatorUnknown": "Tuntematon",
+			"addCreator": "Lisää tekijä",
+			"removeCreator": "Poista tekijä",
+			"dateDepicted": "Kuvattu ajankohta",
+			"addDateDepicted": "Lisää kuvattu ajankohta",
+			"removeDateDepicted": "Poista kuvattu ajankohta",
+			"dateCreated": "Luontipäivämäärä",
+			"addDateCreated": "Lisää luomtipäivämäärä",
+			"removeDateCreated": "Poista luontipäivämäärä",
+			"publisher": "Julkaisija",
+			"addPublisher": "Lisää julkaisija",
+			"removePublisher": "Poista julkaisija",
+			"format": "Muoto",
+			"addFormat": "Lisää muoto",
+			"removeFormat": "Poista muoto",
+			"technique": "Tekniikka",
+			"addTechnique": "Lisää tekniikka",
+			"removeTechnique": "Poista tekniikka",
+			"depicted": "Kuva esittää",
+			"genre": "Lajityyppi",
+			"addGenre": "Lisää lajityyppi",
+			"removeGenre": "Poista lajityyppi",
+			"depicts": "Kuva esittää",
+			"addTopic": "Lisää aihe",
+			"removeTopic": "Poista aihe",
+			"location": "Sijainti",
+			"locationMap": "Sijainti kartalla",
+			"addLocation": "Lisää sijainti",
+			"removeLocation": "Poista sijainti",
+			"address": "Katuosoite",
+			"addAddress": "Lisää katuosoite",
+			"removeAddress": "Poista katuosoite",
+			"depictedPeople": "Kuvatut henkilöt",
+			"addPerson": "Lisää henkilö",
+			"removePerson": "Poista henkilö",
+			"event": "Tapahtuma",
+			"addEvent": "Lisää tapahtuma",
+			"removeEvent": "Poista tapahtuma",
+			"institution": "Instituutio",
+			"collection": "Kokoelma",
+			"inventoryNumber": "Inventaarionumero",
+			"inscriptions": "Merkinnät",
+			"measurements": "Mitat",
+			"copyright": "Tekijänoikeus",
+			"work": "Teos",
+			"photograph": "Valokuva",
+			"photographer": "Valokuvaaja",
+			"addPhotographData": "Lisää tietoa valokuvasta",
+			"copyrightNotePD": "Tämän kuvan lisenssi on $1, mutta metatietojen perusteella sillä ei ole tekijänoikeussuojaa.",
+			"copyrightNoteSame": "Sama kuva on lisensoitu avoimemmalla $1-lisenssillä, joka koskee silloin myös tätä kuvaa.",
+			"digitalCopy": "Digitaalinen kopio",
+			"publishingPlatform": "Julkaisualusta",
+			"platformId": "Tunniste",
+			"imageInfoPage": "Kuvan tietosivu",
+			"imageDimensions": "Kuvan koko",
+			"fileSize": "Tiedostokoko",
+			"fileFormat": "Tiedostoformaatti",
+			"remove": "Poista",
+			"moveTo": "Siirrä tiedot toiseen kenttään",
+			"addData": "Lisää tieto"
+		},
+		"imageActions": {
+			"rotateImage": "Pyöritä kuvaa",
+			"clockwise": "myötäpäivään",
+			"counterclockwise": "vastapäivään",
+			"flip": "Käännä kuva",
+			"horizontal": "vaakasuunnassa",
+			"vertical": "pystysuunnassa"
+		},
+		"closeViewer": "Sulje kuva"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

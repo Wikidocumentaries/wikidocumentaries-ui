@@ -93,7 +93,9 @@
 					"copyvio": "Den bryter mot upphovsrätten",
 					"explain": "Lämna en anteckning för att förklara"
 				}
-			}
+			},
+			"imagesViewExternal": "Visa originalbilden",
+			"imagesViewOnMap": "Visa bilden på en karta"
 		},
 		"TopicMap": {
 			"headerTitle": "Plats på kartan",
@@ -113,6 +115,25 @@
 			"headerTitle": "Tidslinje",
 			"showEventsOnTimelineMenuText": "Visa händelser i tidslinjen",
 			"centuryText": "s"
+		},
+		"Events": {
+			"headerTitle": "Händelser",
+			"displayMenu": {
+				"menuTitle": "Visningsalternativ",
+				"menuTooltip": "Visningsalternativ",
+				"optionShowTimeline": "Visa händelser på en tidslinje",
+				"optionShowList": "Visa händelser som en lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Inställningar",
+				"menuTooltip": "Välj fakta som ska visas",
+				"optionWorks": "Visa verk",
+				"optionRelatedPeople": "Visa händelser av relaterade personer",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurera"
+				},
+				"optionRelatedTopics": "Visa händelser av relaterade ämnen"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Fakta",
@@ -225,6 +246,81 @@
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Kön"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Bildtext",
+			"addCaption": "Lägg till en bildtext",
+			"description": "Beskrivning",
+			"addDescription": "Lägg till beskrivning",
+			"creator": "Skapare",
+			"creatorUnknown": "Okänd",
+			"addCreator": "Lägg till en skapare",
+			"removeCreator": "Ta bort skaparen",
+			"dateDepicted": "Avbildat datum",
+			"addDateDepicted": "Lägg till avbildat datum",
+			"removeDateDepicted": "Ta bort avbildat datum",
+			"dateCreated": "Skapningsdatum",
+			"addDateCreated": "Lägg till skapningsdatum",
+			"removeDateCreated": "Ta bort skapningsdatum",
+			"publisher": "Utgivare",
+			"addPublisher": "Lägg till en utgivare",
+			"removePublisher": "Ta bort utgivaren",
+			"format": "Format",
+			"addFormat": "Lägg till ett format",
+			"removeFormat": "Ta bort formatet",
+			"technique": "Teknik",
+			"addTechnique": "Lägg till en teknik",
+			"removeTechnique": "Ta bort tekniken",
+			"genre": "Genre",
+			"addGenre": "Lägg till genre",
+			"removeGenre": "Ta bort genre",
+			"depicts": "Bilden avbildar",
+			"addTopic": "Lägg till ett ämne",
+			"removeTopic": "Ta bort ämnet",
+			"location": "Plats",
+			"locationMap": "Plats på kartan",
+			"addLocation": "Lägg till en plats",
+			"removeLocation": "Ta bort platsen",
+			"address": "Gatuadress",
+			"addAddress": "Lägg till gatuadress",
+			"removeAddress": "Ta bort gatuadressen",
+			"depictedPeople": "Avbildade personer",
+			"addPerson": "Lägg till en avbildad person",
+			"removePerson": "Ta bort avbildade personen",
+			"event": "Händelse",
+			"addEvent": "Lägg till en händelse",
+			"removeEvent": "Ta bort händelsen",
+			"institution": "Institution",
+			"collection": "Samling",
+			"inventoryNumber": "Inventarnummer",
+			"inscriptions": "Inskriptioner",
+			"measurements": "Mätningar",
+			"copyright": "Upphovsrätt",
+			"work": "Verk",
+			"photograph": "Fotografi",
+			"photographer": "Fotograf",
+			"addPhotographData": "Lägg till information om fotografiet",
+			"digitalCopy": "Digital kopia",
+			"publishingPlatform": "Plattformen",
+			"platformId": "ID",
+			"imageInfoPage": "Informationssida",
+			"imageDimensions": "Bilddimensioner",
+			"fileSize": "Filstorlek",
+			"fileFormat": "Filformat",
+			"remove": "Ta bort",
+			"moveTo": "Flytta till ett annat fält",
+			"addData": "Lägg till data"
+		},
+		"imageActions": {
+			"rotateImage": "Rotera bilden",
+			"clockwise": "medurs",
+			"counterclockwise": "moturs",
+			"flip": "Vänd",
+			"horizontal": "horisontellt",
+			"vertical": "vertikalt"
+		},
+		"closeViewer": "Stäng bilden"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

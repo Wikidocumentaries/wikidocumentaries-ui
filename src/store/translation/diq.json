@@ -80,6 +80,12 @@
 			"headerTitle": "Wareyê saete",
 			"centuryText": "SS"
 		},
+		"Events": {
+			"headerTitle": "Weqeyi",
+			"optionsMenu": {
+				"menuTitle": "Weçinıteki"
+			}
+		},
 		"Wikidata": {
 			"headerTitle": "Raşti",
 			"extLink": {
@@ -160,6 +166,24 @@
 			"facetMenuOptionCountry": "Dewlete",
 			"facetMenuOptionCity": "Cınsiyet"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Bınnuşte",
+			"description": "Şınasnayış",
+			"creator": "Vıraştoğ",
+			"publisher": "Weşanayoğ",
+			"genre": "Tewır",
+			"location": "Lokasyon",
+			"collection": "Koleksiyon",
+			"copyright": "Heqa telifi",
+			"photograph": "Fotraf",
+			"photographer": "Fotrafkar",
+			"digitalCopy": "Kopyaya dicitale",
+			"fileFormat": "Formatê dosya",
+			"remove": "Wedare"
+		},
+		"closeViewer": "Çımeyi cade"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

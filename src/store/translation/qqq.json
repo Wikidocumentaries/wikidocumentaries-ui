@@ -128,12 +128,12 @@
 				"optionShowList": "Display menu option in the Events section to display as a list"
 			},
 			"optionsMenu": {
-				"menuTitle": "Options menu title in the Events section",
+				"menuTitle": "Options menu title in the Events section\n{{Identical|Option}}",
 				"menuTooltip": "Options menu tooltip in the Events section",
 				"optionWorks": "Menu option to Show works as events in the Options menu in the Events section",
 				"optionRelatedPeople": "Menu option to Show events of related people in the Options menu in the Events section",
 				"subRelatedPeopleConf": {
-					"menuTitle": "Submenu title for the Show events of related people option in the Options menu in the Events section"
+					"menuTitle": "Submenu title for the Show events of related people option in the Options menu in the Events section\n{{Identical|Configure}}"
 				},
 				"optionRelatedTopics": "Menu option to Show events for related topics in the Options menu in the Events section"
 			}
@@ -274,7 +274,7 @@
 			"description": "Field label for the Description in the Metadata section in the Image viewer",
 			"addDescription": "Button text to Add description in the Description part in the Metadata section in the Image viewer",
 			"creator": "Field label for Creator in the Metadata section in the Image viewer",
-			"creatorUnknown": "Field value for an unknown person Creator field in the Metadata section in the Image viewer",
+			"creatorUnknown": "Field value for an unknown person Creator field in the Metadata section in the Image viewer\n{{Identical|Unknown}}",
 			"addCreator": "Button text to Add a creator in the Metadata section in the Image viewer",
 			"removeCreator": "Button text to Remove a creator in the Metadata section in the Image viewer",
 			"dateDepicted": "Field label for Depicted date of an image in the Metadata section in the Image viewer",
@@ -312,15 +312,16 @@
 			"event": "Field label for the Event of an image in the Metadata section in the Image viewer",
 			"addEvent": "Button text to Add an event of an image in the Metadata section in the Image viewer",
 			"removeEvent": "Button text to Remove an event of an image in the Metadata section in the Image viewer",
-			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer",
+			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer\n{{Identical|Institution}}",
 			"callNumber": "obsolete, will remove",
+			"collection": "{{Identical|Collection}}",
 			"inventoryNumber": "Field label for the Inventory number of an image in the Metadata section in the Image viewer",
 			"inscriptions": "Field label for Inscriptions in an image in the Metadata section in the Image viewer",
 			"measurements": "Field label for the Measurements of an image in the Metadata section in the Image viewer",
 			"copyright": "Field label for the Copyright and licensing information of an image in the Metadata section in the Image viewer",
 			"work": "Section title for Information about the work about an image in the Metadata section in the Image viewer",
-			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer",
-			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer",
+			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer\n{{Identical|Photograph}}",
+			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer\n{{Identical|Photographer}}",
 			"digitalCopy": "Section title for the information about the Digital copy of an image in the Metadata section in the Image viewer",
 			"publishingPlatform": "Field label for the Publishing platform of an image in the Metadata section in the Image viewer",
 			"platformId": "Field label for the ID on the publishing platform of an image in the Metadata section in the Image viewer",
@@ -328,7 +329,7 @@
 			"imageDimensions": "Field label for Image dimensions of an image in the Metadata section in the Image viewer",
 			"fileSize": "Field label for File size of an image in the Metadata section in the Image viewer",
 			"fileFormat": "Field label for File format of an image in the Metadata section in the Image viewer",
-			"remove": "Menu option to remove a metadata item in the Image viewer",
+			"remove": "Menu option to remove a metadata item in the Image viewer\n{{Identical|Remove}}",
 			"moveTo": "Menu option to transfer the contents of a metadata field to another field",
 			"addData": "Option to add a new data field in the Metadata section in the Image viewer"
 		},

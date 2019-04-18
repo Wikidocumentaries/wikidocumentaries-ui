@@ -47,7 +47,8 @@
 			"imagesRemoveMenu": {
 				"menuTitle": "D'Bild ewechhuele well...",
 				"menuTooltip": "D'Bild ewechhuelen"
-			}
+			},
+			"imagesViewExternal": "D'Originalbild weisen"
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "Biller verstoppen",
@@ -56,6 +57,20 @@
 		"TopicTimeline": {
 			"headerTitle": "Chronologie",
 			"centuryText": "Jh"
+		},
+		"Events": {
+			"headerTitle": "Evenementer",
+			"displayMenu": {
+				"menuTitle": "Optioune weisen",
+				"menuTooltip": "Optioune weisen"
+			},
+			"optionsMenu": {
+				"menuTitle": "Optiounen",
+				"optionWorks": "Wierker weisen",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Astellen"
+				}
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Fakten",
@@ -139,6 +154,39 @@
 			"facetMenuOptionProfession": "Beruff",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Geschlecht"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Beschreiwung",
+			"addDescription": "Beschreiwung derbäisetzen",
+			"creatorUnknown": "Onbekannt",
+			"format": "Format",
+			"technique": "Technik",
+			"genre": "Genre",
+			"location": "Plaz",
+			"removeLocation": "Plaz ewechhuelen",
+			"addPerson": "Persoun derbäisetzen",
+			"removePerson": "Persoun ewechhuelen",
+			"event": "Evenement",
+			"institution": "Institutioun",
+			"collection": "Sammlung",
+			"inscriptions": "Opschrëften",
+			"measurements": "Dimensiounen",
+			"copyright": "Copyright",
+			"work": "Wierk",
+			"photograph": "Foto",
+			"photographer": "Fotograf",
+			"platformId": "Nummer (ID)",
+			"imageDimensions": "Dimensioune vum Bild",
+			"fileSize": "Gréisst vum Fichier",
+			"remove": "Ewechhuelen"
+		},
+		"imageActions": {
+			"rotateImage": "Bild dréinen",
+			"flip": "Kippen",
+			"horizontal": "horizontal",
+			"vertical": "vertikal"
 		}
 	},
 	"map_place_match_page": {

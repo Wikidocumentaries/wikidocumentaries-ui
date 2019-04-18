@@ -96,7 +96,9 @@
 					"copyvio": "ينتهك حقوق الطبع والنشر",
 					"explain": "ترك ملاحظة للشرح"
 				}
-			}
+			},
+			"imagesViewExternal": "عرض الصورة الأصلية",
+			"imagesViewOnMap": "عرض الصورة على خريطة"
 		},
 		"TopicMap": {
 			"headerTitle": "الموضوع على الخريطة",
@@ -116,6 +118,25 @@
 			"headerTitle": "الجدول الزمني",
 			"showEventsOnTimelineMenuText": "عرض أحداث الموضوع على المخطط الزمني",
 			"centuryText": "ق"
+		},
+		"Events": {
+			"headerTitle": "الأحداث",
+			"displayMenu": {
+				"menuTitle": "خيارات العرض",
+				"menuTooltip": "خيارات العرض",
+				"optionShowTimeline": "عرض الأحداث على جدول زمني",
+				"optionShowList": "عرض الأحداث كقائمة"
+			},
+			"optionsMenu": {
+				"menuTitle": "خيارات",
+				"menuTooltip": "حدد حقائق لعرضها",
+				"optionWorks": "عرض الأعمال",
+				"optionRelatedPeople": "عرض أحداث الأشخاص ذوي الصلة",
+				"subRelatedPeopleConf": {
+					"menuTitle": "تهيئة"
+				},
+				"optionRelatedTopics": "عرض أحداث الموضوعات ذات الصلة"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "حقائق",
@@ -245,6 +266,85 @@
 			"facetMenuOptionCountry": "البلد",
 			"facetMenuOptionCity": "الجنس"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "شرح",
+			"addCaption": "إضافة شرح",
+			"description": "الوصف",
+			"addDescription": "أضف وصفا",
+			"creator": "المنشئ",
+			"creatorUnknown": "غير معروف",
+			"addCreator": "إضافة المنشئ",
+			"removeCreator": "إزالة المنشئ",
+			"dateDepicted": "تاريخ التصوير",
+			"addDateDepicted": "إضافة تاريخ المصور",
+			"removeDateDepicted": "إزالة تاريخ التصوير",
+			"dateCreated": "تاريخ الإنشاء",
+			"addDateCreated": "إضافة تاريخ الإنشاء",
+			"removeDateCreated": "إزالة تاريخ الإنشاء",
+			"publisher": "الناشر",
+			"addPublisher": "إضافة الناشر",
+			"removePublisher": "إزالة الناشر",
+			"format": "الصيغة",
+			"addFormat": "إضافة الصيغة",
+			"removeFormat": "إزالة الصيغة",
+			"technique": "تقنية",
+			"addTechnique": "إضافة تقنية",
+			"removeTechnique": "إزالة التقنية",
+			"depicted": "الصورة تصور",
+			"genre": "النوع",
+			"addGenre": "أضف النوع",
+			"removeGenre": "إزالة النوع",
+			"depicts": "الصورة تصور",
+			"addTopic": "أضف موضوعا",
+			"removeTopic": "إزالة الموضوع",
+			"location": "الموقع",
+			"locationMap": "الموقع على الخريطة",
+			"addLocation": "أضف الموقع",
+			"removeLocation": "إزالة الموقع",
+			"address": "عنوان الشارع",
+			"addAddress": "أضف عنوان الشارع",
+			"removeAddress": "إزالة عنوان الشارع",
+			"depictedPeople": "الناس المصورون",
+			"addPerson": "إضافة شخص",
+			"removePerson": "أزل الشخص",
+			"event": "الحدث",
+			"addEvent": "إضافة حدث",
+			"removeEvent": "إزالة الحدث",
+			"institution": "المؤسسة",
+			"callNumber": "رقم الاتصال",
+			"collection": "المجموعة",
+			"inventoryNumber": "رقم المخزون",
+			"inscriptions": "النقوش",
+			"measurements": "قياسات",
+			"copyright": "حقوق النشر",
+			"work": "العمل",
+			"photograph": "الصورة",
+			"photographer": "المصور",
+			"addPhotographData": "إضافة معلومات حول الصورة",
+			"copyrightNotePD": "تم ترخيص الصورة بـ$1، ولكن استنادا إلى البيانات الوصفية، الصورة في الملكية العامة.",
+			"copyrightNoteSame": "يتم ترخيص الصورة نفسها بشكل أكثر صراحة بـ $1، وبالتالي فهي تنطبق على هذه الصورة أيضا.",
+			"digitalCopy": "نسخة رقمية",
+			"publishingPlatform": "منصة النشر",
+			"platformId": "المعرف",
+			"imageInfoPage": "صفحة معلومات الصورة",
+			"imageDimensions": "أبعاد الصورة",
+			"fileSize": "حجم الملف",
+			"fileFormat": "صيغة الملف",
+			"remove": "إزالة",
+			"moveTo": "الانتقال إلى حقل آخر",
+			"addData": "إضافة بيانات"
+		},
+		"imageActions": {
+			"rotateImage": "تدوير الصورة",
+			"clockwise": "باتجاه عقارب الساعة",
+			"counterclockwise": "عكس عقارب الساعه",
+			"flip": "قلب",
+			"horizontal": "أفقي",
+			"vertical": "رأسي"
+		},
+		"closeViewer": "إغلاق العارض"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

@@ -96,7 +96,9 @@
 					"copyvio": "Viola os direitos autorais",
 					"explain": "Deixe uma nota para explicar"
 				}
-			}
+			},
+			"imagesViewExternal": "Visualizar a imagem original",
+			"imagesViewOnMap": "Ver imagem num mapa"
 		},
 		"TopicMap": {
 			"headerTitle": "Tópico no mapa",
@@ -116,6 +118,25 @@
 			"headerTitle": "Linha do tempo",
 			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha do tempo",
 			"centuryText": "C"
+		},
+		"Events": {
+			"headerTitle": "Eventos",
+			"displayMenu": {
+				"menuTitle": "Opções de exibição",
+				"menuTooltip": "Opções de exibição",
+				"optionShowTimeline": "Mostrar eventos em uma linha do tempo",
+				"optionShowList": "Mostrar eventos como uma lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opções",
+				"menuTooltip": "Selecione fatos para exibir",
+				"optionWorks": "Mostrar trabalhos",
+				"optionRelatedPeople": "Mostrar eventos de pessoas relacionadas",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurar"
+				},
+				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "Fatos",
@@ -245,6 +266,85 @@
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Gênero"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Legenda",
+			"addCaption": "Adicionar legenda",
+			"description": "Descrição",
+			"addDescription": "Adicionar descrição",
+			"creator": "Criador",
+			"creatorUnknown": "Desconhecido",
+			"addCreator": "Adicionar criador",
+			"removeCreator": "Remover criador",
+			"dateDepicted": "Data retratada",
+			"addDateDepicted": "Adicionar data representada",
+			"removeDateDepicted": "Remover a data representada",
+			"dateCreated": "Data de criação",
+			"addDateCreated": "Adicionar data de criação",
+			"removeDateCreated": "Remover data de criação",
+			"publisher": "Editor",
+			"addPublisher": "Adicionar editor",
+			"removePublisher": "Remover editor",
+			"format": "Formato",
+			"addFormat": "Adicionar formato",
+			"removeFormat": "Remover formato",
+			"technique": "Técnica",
+			"addTechnique": "Adicionar técnica",
+			"removeTechnique": "Remover técnica",
+			"depicted": "Imagem retrata",
+			"genre": "Gênero",
+			"addGenre": "Adicionar gênero",
+			"removeGenre": "Remover gênero",
+			"depicts": "Imagem retrata",
+			"addTopic": "Adicionar tópico",
+			"removeTopic": "Remover o tópico",
+			"location": "Localização",
+			"locationMap": "Localização no mapa",
+			"addLocation": "Adicionar local",
+			"removeLocation": "Remover localização",
+			"address": "Rua",
+			"addAddress": "Adicione o endereço da rua",
+			"removeAddress": "Remover endereço",
+			"depictedPeople": "Pessoas retratadas",
+			"addPerson": "Adicionar pessoa",
+			"removePerson": "Remover pessoa",
+			"event": "Evento",
+			"addEvent": "Adicionar evento",
+			"removeEvent": "Remover evento",
+			"institution": "Instituição",
+			"callNumber": "Numero de telefone",
+			"collection": "Coleção",
+			"inventoryNumber": "Número de inventário",
+			"inscriptions": "Inscrições",
+			"measurements": "Medidas",
+			"copyright": "Direitos autorais",
+			"work": "Trabalho",
+			"photograph": "Fotografia",
+			"photographer": "Fotógrafo",
+			"addPhotographData": "Adicionar informações sobre a fotografia",
+			"copyrightNotePD": "A imagem é licenciada com $1, mas com base nos metadados que a imagem está em domínio público.",
+			"copyrightNoteSame": "A mesma imagem é licenciada mais abertamente com $1, portanto, também se aplica a essa imagem.",
+			"digitalCopy": "Copia digital",
+			"publishingPlatform": "Plataforma de publicação",
+			"platformId": "ID",
+			"imageInfoPage": "Página de informações da imagem",
+			"imageDimensions": "Dimensões da imagem",
+			"fileSize": "Tamanho do arquivo",
+			"fileFormat": "Formato de arquivo",
+			"remove": "Remover",
+			"moveTo": "Mover para outro campo",
+			"addData": "Adicionar dados"
+		},
+		"imageActions": {
+			"rotateImage": "Rodar imagem",
+			"clockwise": "sentido horário",
+			"counterclockwise": "sentido anti-horário",
+			"flip": "Virar",
+			"horizontal": "horizontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Fechar visualizador"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {

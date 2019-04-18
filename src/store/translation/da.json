@@ -71,6 +71,12 @@
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje"
 		},
+		"Events": {
+			"headerTitle": "Hændelser",
+			"optionsMenu": {
+				"optionWorks": "Vis værker"
+			}
+		},
 		"Wikidata": {
 			"noTopicFoundText": "Emnet blev ikke fundet"
 		},
@@ -161,6 +167,39 @@
 			"sortMenuOptionClear": "Ryd sortering",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Køn"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Beskrivelse",
+			"addDescription": "Tilføj beskrivelse",
+			"creator": "Ophavsmand",
+			"creatorUnknown": "Ukendt",
+			"publisher": "Udgiver",
+			"addPublisher": "Tilføj udgiver",
+			"format": "Format",
+			"addFormat": "Tilføj format",
+			"removeFormat": "Fjern format",
+			"technique": "Teknik",
+			"removeTechnique": "Fjern teknikken",
+			"genre": "Genre",
+			"addGenre": "Tilføj genre",
+			"removeGenre": "Fjern genre",
+			"locationMap": "Placering på kortet",
+			"addPerson": "Tilføj person",
+			"removePerson": "Fjern person",
+			"collection": "Samling",
+			"copyright": "Ophavsret",
+			"work": "Værk",
+			"digitalCopy": "Digital kopi",
+			"platformId": "ID",
+			"fileSize": "Filstørrelse",
+			"fileFormat": "Filformat",
+			"remove": "Fjern",
+			"addData": "Tilføj data"
+		},
+		"imageActions": {
+			"rotateImage": "Roter billedet"
 		}
 	},
 	"map_search_page": {

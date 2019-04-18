@@ -57,7 +57,7 @@
 				"medium": "中",
 				"small": "小",
 				"type": "多媒體類型",
-				"creator": "創建者",
+				"creator": "創作者",
 				"platform": "平台",
 				"source": "來源",
 				"saveSelection": "保存所選為收藏",
@@ -81,9 +81,9 @@
 					"browse": "瀏覽相關主題"
 				},
 				"remCreator": {
-					"menuTitle": "透過創建者取代",
+					"menuTitle": "透過創作者取代",
 					"shortMenuTitle": "由其他建立者",
-					"search": "搜尋創建者",
+					"search": "搜尋創作者",
 					"browse": "瀏覽相關行為者"
 				},
 				"remInappropriate": {
@@ -95,7 +95,9 @@
 					"copyvio": "有侵犯版權",
 					"explain": "留下解釋用的註釋"
 				}
-			}
+			},
+			"imagesViewExternal": "檢視原始圖片",
+			"imagesViewOnMap": "檢視在地圖上的圖片"
 		},
 		"TopicMap": {
 			"headerTitle": "地圖上的主題",
@@ -115,6 +117,25 @@
 			"headerTitle": "時間軸",
 			"showEventsOnTimelineMenuText": "秀出在時間軸上的主題事件",
 			"centuryText": "世紀"
+		},
+		"Events": {
+			"headerTitle": "事件",
+			"displayMenu": {
+				"menuTitle": "顯示選項",
+				"menuTooltip": "顯示選項",
+				"optionShowTimeline": "在時間軸上秀出事件",
+				"optionShowList": "秀出事件成清單"
+			},
+			"optionsMenu": {
+				"menuTitle": "選項",
+				"menuTooltip": "選擇要顯示的實情",
+				"optionWorks": "秀出作品",
+				"optionRelatedPeople": "秀出與事件相關的人物",
+				"subRelatedPeopleConf": {
+					"menuTitle": "設置"
+				},
+				"optionRelatedTopics": "秀出與事件相關的主題"
+			}
 		},
 		"Wikidata": {
 			"headerTitle": "實情",
@@ -169,7 +190,7 @@
 				"title": "分面位置依",
 				"tooltip": "分面位置依不同標準",
 				"optionType": "類型",
-				"optionColl": "創建者",
+				"optionColl": "創作者",
 				"optionCity": "位置"
 			},
 			"displayMenu": {
@@ -195,7 +216,7 @@
 				"title": "分面作品依",
 				"tooltip": "分面作品依不同標準",
 				"optionType": "類型",
-				"optionColl": "創建者"
+				"optionColl": "創作者"
 			},
 			"displayMenu": {
 				"title": "顯示成",
@@ -247,9 +268,36 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"caption": "說明",
+			"addCaption": "新增說明",
+			"description": "描述",
+			"addDescription": "新增描述",
+			"creator": "創作者",
+			"creatorUnknown": "未知",
+			"addCreator": "新增創作者",
+			"removeCreator": "移除創作者",
+			"dateDepicted": "描述日期",
+			"addDateDepicted": "新增描述日期",
+			"removeDateDepicted": "移除描述日期",
+			"dateCreated": "創作日期",
+			"addDateCreated": "新增創作日期",
+			"removeDateCreated": "移除創作日期",
+			"publisher": "出版",
+			"addPublisher": "新增出版",
+			"removePublisher": "移除出版",
 			"format": "格式",
 			"addFormat": "新增格式",
 			"removeFormat": "移除格式",
+			"technique": "技術",
+			"addTechnique": "新增技術",
+			"removeTechnique": "移除技術",
+			"depicted": "圖片描述",
+			"genre": "類型",
+			"addGenre": "新增類型",
+			"removeGenre": "移除類型",
+			"depicts": "圖片描述",
+			"addTopic": "新增主題",
+			"removeTopic": "移除主題",
 			"location": "位置",
 			"locationMap": "在地圖上的位置",
 			"addLocation": "新增位置",
@@ -257,17 +305,45 @@
 			"address": "街道地址",
 			"addAddress": "新增街道地址",
 			"removeAddress": "移除街道地址",
+			"depictedPeople": "刪除人物",
 			"addPerson": "新增人物",
 			"removePerson": "移除人物",
+			"event": "事件",
+			"addEvent": "新增事件",
+			"removeEvent": "移除事件",
+			"institution": "機構",
+			"callNumber": "電話號碼",
+			"collection": "收藏",
+			"inventoryNumber": "收藏編號",
+			"inscriptions": "題字",
 			"measurements": "測量",
 			"copyright": "版權",
+			"work": "作品",
 			"photograph": "照片",
 			"photographer": "攝影者",
+			"addPhotographData": "新增關於照片的資訊",
+			"copyrightNotePD": "圖片以$1授權，但基於詮釋資料內容該圖片是屬於公眾領域。",
+			"copyrightNoteSame": "相同的圖片採用$1授權更可用在公開上，因此適用於此圖片。",
+			"digitalCopy": "數位複製",
+			"publishingPlatform": "出版平台",
 			"platformId": "ID",
+			"imageInfoPage": "圖片資訊頁面",
+			"imageDimensions": "圖片尺寸",
 			"fileSize": "檔案大小",
 			"fileFormat": "檔案格式",
-			"remove": "移除"
-		}
+			"remove": "移除",
+			"moveTo": "轉移至別的欄位",
+			"addData": "新增資料"
+		},
+		"imageActions": {
+			"rotateImage": "旋轉圖片",
+			"clockwise": "順時針",
+			"counterclockwise": "逆時針",
+			"flip": "翻轉",
+			"horizontal": "水平",
+			"vertical": "垂直"
+		},
+		"closeViewer": "關閉檢視器"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
