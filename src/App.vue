@@ -6,12 +6,11 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
-
 :root {
   --main-txt-color: #333;
   --main-link-color: #00a3cc;
@@ -22,96 +21,104 @@ export default {
   --main-purple: #a74e77;
   --main-blue: #008aad;
   --main-green: #69a656;
-  --main-shadow: 2px 2px 8px 0px rgba(0,0,0,0.3);
+  --main-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
   --main-font-size: 11pt;
   --main-line-height: 1.5;
   --title-font-size: 3.5em;
   --subtitle-font-size: 1.7em;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
 
 #app {
-  height:100%;
+  height: 100%;
 }
 
 .main-page {
 }
 
 a.external.text {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 body {
-	font-family:  'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-	font-size: var(--main-font-size);
-	line-height: var(--main-line-height);
-	color: var(--main-txt-color);
-	font-weight: 400;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+  color: var(--main-txt-color);
+  font-weight: 400;
 }
 
-.menu-title, .header-title {
-  font-family: 'Barlow Condensed', sans-serif;
+.menu-title,
+.header-title {
+  font-family: "Barlow Condensed", sans-serif;
   color: var(--main-txt-color);
   text-transform: uppercase;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: bold;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
   color: var(--main-link-color);
-  transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out,
+    -webkit-box-shadow 130ms ease-in-out;
 }
 
 a:hover {
-	text-decoration: none;
-	color: var(--main-txt-color);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	outline: 0;
+  text-decoration: none;
+  color: var(--main-txt-color);
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+  outline: 0;
 }
 
 .title {
-    font-size: var(--title-font-size);
-    font-weight: bold;
-    line-height: 1em;
-    margin-right: 0.2em;
-    position: relative;
-    /*cursor: pointer;*/
+  font-size: var(--title-font-size);
+  font-weight: bold;
+  line-height: 1em;
+  margin-right: 0.2em;
+  position: relative;
+  /*cursor: pointer;*/
 }
 
 .subtitle {
-    font-size: var(--subtitle-font-size);
-    font-weight: bold;
-    line-height: 1.2em;
-    margin: 3px 0.2em 0 0;
-    position: relative;
-    /*cursor: pointer;*/
+  font-size: var(--subtitle-font-size);
+  font-weight: bold;
+  line-height: 1.2em;
+  margin: 3px 0.2em 0 0;
+  position: relative;
+  /*cursor: pointer;*/
 }
 
-.title::first-letter, .subtitle::first-letter {
+.title::first-letter,
+.subtitle::first-letter {
   text-transform: capitalize;
 }
 
 .left-align {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .right-align {
-    display: flex;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  float: right;
+  clear: both;
 }
 
-.button-ok, .button-cancel {
+.button-ok,
+.button-cancel {
   font-weight: bold;
   min-width: 120px;
   margin-left: 10px;
@@ -128,7 +135,7 @@ a:hover {
   background: var(--main-link-color);
   color: white;
 }
-  
+
 .button-cancel {
   color: var(--main-blue);
   background: white;
@@ -138,35 +145,47 @@ a:hover {
   border: 1px solid var(--main-blue);
 }
 
- .toolbar {
+.toolbar {
   display: flex;
   color: #333;
-  margin-left: 20px;
+  margin: 0 20px;
   height: 45px;
   align-items: center;
 }
 
 .toolbar-item {
-    height: 100%;
-    position: relative;
+  height: 100%;
+  position: relative;
 }
 
 .toolbar-item a {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: color 80ms ease-in, background 80ms ease-in;
-    justify-content: center;
-    cursor: pointer;
-    width: 45px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 80ms ease-in, background 80ms ease-in;
+  justify-content: center;
+  cursor: pointer;
+  width: 45px;
 }
 
 .toolbar-item-a {
   color: #333;
 }
 
+.neg > a > i {
+  color: white;
+}
+
+.neg:hover > a > i {
+  color: var(--main-txt-color);
+}
+
 .toolbar-item:hover {
-    background: var(--main-txt-color);
+  background: var(--main-txt-color);
+}
+
+.neg:hover {
+  background: white;
 }
 
 .toolbar-item:hover .tooltip {
@@ -196,7 +215,7 @@ a:hover {
 .tooltip::after {
   content: " ";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%; /* At the top of the tooltip */
   right: 18px;
   margin-left: -5px;
   border-width: 5px;
@@ -205,12 +224,12 @@ a:hover {
 }
 
 .toolbar-item:hover > a {
-    color: white;
+  color: white;
 }
 
 .toolbar-item-a:hover {
-    box-shadow: none;
-    outline: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .toolbar-link {
@@ -241,38 +260,38 @@ a:hover {
 }
 
 .header-link a:hover {
-    box-shadow: none;
-    outline: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .yellow {
-    background: var(--main-yellow);
-    flex: 1 1 16.67%;
+  background: var(--main-yellow);
+  flex: 1 1 16.67%;
 }
 
 .orange {
-    background: var(--main-orange);
-    flex: 1 1 16.67%;
+  background: var(--main-orange);
+  flex: 1 1 16.67%;
 }
 
 .red {
-    background: var(--main-red);
-    flex: 1 1 16.67%;
+  background: var(--main-red);
+  flex: 1 1 16.67%;
 }
 
 .purple {
-    background: var(--main-purple);
-    flex: 1 1 16.67%;
+  background: var(--main-purple);
+  flex: 1 1 16.67%;
 }
 
 .turquoise {
-    background: var(--main-blue);
-    flex: 1 1 16.67%;
+  background: var(--main-blue);
+  flex: 1 1 16.67%;
 }
 
 .green {
-    background: var(--main-green);
-    flex: 1 1 16.67%;
+  background: var(--main-green);
+  flex: 1 1 16.67%;
 }
 
 .turquoisebar {
@@ -290,17 +309,90 @@ a:hover {
   background-color: var(--main-green);
 }
 
-.neg {
-    background-color: #FFF;
-    color: #333;
+.haze {
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 45px;
 }
 
 .text {
-	padding-left:20px;
+  padding-left: 20px;
+}
+
+@media all and (max-width: 899px) {
+  .column {
+    display: block;
+  }
+  
+.haze {
+    display: none;
+  }
+  .row {
+    position: relative;
+  }
+  .one {
+    max-height: 50vh;
+    overflow-y: hidden;
+  }
+
+  .two {
+    max-height: 50vh;
+    overflow-y: hidden;
+  }
+
+  .data {
+    column-width: 300px;
+    column-gap: 20px;
+  }
+
+  .text {
+    padding-right: 20px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .one {
+    flex: 0 1 auto;
+  }
+
+  .two {
+    flex: 1 1 300px;
+  }
+
+  .row {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    overflow-y: hidden;
+    align-items: start;
+    padding-bottom: 45px;
+    max-height: 50vh;
+  }
+
+  .text {
+    padding-right: 0;
+  }
+  .haze {
+    display: unset;
+  }
+}
+
+.expanded {
+    max-height:unset;
 }
 
 .text p {
-	margin: 12px 0;
+  margin: 12px 0;
 }
 
 .text * ::selection {
@@ -309,7 +401,7 @@ a:hover {
 }
 
 i.wikiglyph {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .noprint {
@@ -323,81 +415,90 @@ i.wikiglyph {
 }
 
 .thumb-image-header {
-    position:absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 0 20px;
-    box-sizing: border-box;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-    opacity:0;
-    transition: opacity 80ms ease-in;
-    align-items: center;
-    justify-content: space-between;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 20px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  opacity: 0;
+  transition: opacity 80ms ease-in;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .thumb-image-info {
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.35) 0%, rgba(0,0,0,0.25) 50%, rgba(0, 0, 0, 0) 100%);
-    color: white;
-    padding: 30px 10px 10px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    line-height: 1.2em;
-    opacity: 0;
-    transition: opacity 80ms ease-in;
-    max-height: 15em;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: white;
+  padding: 30px 10px 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.2em;
+  opacity: 0;
+  transition: opacity 80ms ease-in;
+  max-height: 15em;
 }
 
 .thumb-image-info-plain {
-    position: absolute;
-    bottom: 0;
-    color: white;
-    padding: 30px 10px 10px 10px;
-    width: 100%;
-    box-sizing: border-box;
-    line-height: 1.2em;
-    opacity: 0;
-    transition: opacity 80ms ease-in;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 30px 10px 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.2em;
+  opacity: 0;
+  transition: opacity 80ms ease-in;
 }
 
 .thumb-title {
-    max-height: 11.6em;
-    overflow: hidden;
+  max-height: 11.6em;
+  overflow: hidden;
 }
 
 .gallery {
-    height: 35vh;
-    display: flex;
-    padding-left: 10px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+  height: 35vh;
+  display: flex;
+  padding-left: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .gallery-item {
-    height: 100%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    position: relative;
-    cursor: pointer;
-    background: var(--main-blue);
+  height: 100%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  background: var(--main-blue);
 }
 
 .gallery-item * {
-    opacity:1;
-    transition: opacity 80ms ease-in;
+  opacity: 1;
+  transition: opacity 80ms ease-in;
 }
 
 .gallery-item > img {
-    height: 100%;
+  height: 100%;
 }
 
 .gallery-item:hover .gallery-image {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.5;
 }
 
 .data-select {

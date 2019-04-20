@@ -314,6 +314,7 @@
             "inscriptions": "Inscriptions",
             "measurements": "Measurements",
             "copyright": "Copyright",
+            "license": "Copyright license",
             "work": "Work",
             "photograph": "Photograph",
             "photographer": "Photographer",
@@ -373,8 +374,12 @@
             "actionMenuTitle": "Actions",
             "actionMenuTooltip": "Actions",
             "languageMenuTitle": "Choose language",
+            "languageMenuTooltip": "Choose your language",
             "myLanguagesItem": "My languages",
             "languageMenuTranslate": "Translate this article"
+        },
+        "languageMenu": {
+            "TranslateUI": "Translate to your language"
         },
         "languages": {
             "fi": "Finnish",

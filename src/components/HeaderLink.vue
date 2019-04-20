@@ -1,5 +1,5 @@
 <template>
-    <div class="link">
+    <div>
         <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', link ? 'wikiglyph-new-window' : 'wikiglyph-plus']"></i></a><span class="tooltip">{{ tooltip }}</span>
     </div>
 </template>

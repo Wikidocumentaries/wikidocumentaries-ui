@@ -130,7 +130,6 @@ export default {
 .main-button {
     font-weight: bold;
     font-size: 16pt;
-    margin-left: 20px;
     color: #333;
     cursor: pointer;
 }
@@ -170,6 +169,7 @@ a.main-button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 /*. main-toolbar-buttons {

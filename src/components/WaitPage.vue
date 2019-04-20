@@ -9,7 +9,7 @@
             <div class="turquoise"></div>
             <div class="green"></div>
         </div>
-        <div class="wait-message">{{ $t("WaitPage.waitMessage") }}</div>
+        <div class="main-toolbar">{{ $t("WaitPage.waitMessage") }}</div>
     </div>
 </template>
 

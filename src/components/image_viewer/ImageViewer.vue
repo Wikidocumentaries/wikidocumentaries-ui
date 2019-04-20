@@ -28,19 +28,26 @@
               <div class="main-toolbar-over">
                 <div class="absolute-right">
                   <div class="right-align">
-                    <div class="toolbar-item">
-                      <i class="wikiglyph wikiglyph-ellipses"></i>
-                      <span class="tooltip">{{ $t('topic_page.TopicImages.imagesViewExternal') }}</span>
-                    </div>
+                    <ToolbarMenu
+                      icon="wikiglyph-ellipses"
+                      class="toolbar-item neg"
+                      :tooltip="$t('general.menus.actionMenuTitle')"
+                      :items="toolbarActionMenuItems"
+                      @doMenuItemAction="onDoMenuItemAction"
+                    >
+                      <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+                    </ToolbarMenu>
                     <HeaderLink
                       v-if="element.infoURL != undefined"
-                      class="toolbar-item"
+                      class="toolbar-item neg"
                       :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
                       :link="element.infoURL"
                     ></HeaderLink>
-                    <div class="toolbar-item" @click="hide">
-                      <i class="wikiglyph wikiglyph-cross"></i>
-                      <span class="tooltip">{{ $t('topic_page.TopicImages.imagesViewExternal') }}</span>
+                    <div class="toolbar-item neg" @click="hide">
+                      <a href="#" class="toolbar-item-a">
+                          <i class="wikiglyph wikiglyph-cross"></i>
+                      </a>
+                      <span class="tooltip">{{ tooltip }}</span>  
                     </div>
                   </div>
                 </div>
@@ -101,7 +108,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
-                  <Dataselect class="grid-select" v-if="element.authors" v-bind:term="element.authors"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.authors"
+                    v-bind:term="element.authors"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
                 </div>
               </div>
@@ -124,7 +135,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.format') }}</div>
-                  <Dataselect v-if="element.formats" class="grid-select" v-bind:term="element.formats"></Dataselect>
+                  <Dataselect
+                    v-if="element.formats"
+                    class="grid-select"
+                    v-bind:term="element.formats"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addFormat') }}</div>
                 </div>
               </div>
@@ -154,10 +169,11 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicts') }}</div>
                   <Dataselect
-                  v-for="subject in element.subjects"
+                    v-for="subject in element.subjects"
                     class="grid-select"
                     :key="subject.id"
-                    v-bind:term="subject[0]"></Dataselect>
+                    v-bind:term="subject[0]"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addTopic') }}</div>
                 </div>
               </div>
@@ -171,7 +187,8 @@
                     v-for="place in element.places"
                     class="grid-select"
                     :key="place.id"
-                    v-bind:term="place"></Dataselect>
+                    v-bind:term="place"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addLocation') }}</div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addAddress') }}</div>
                 </div>
@@ -182,7 +199,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.address') }}</div>
-                  <Dataselect class="grid-select" v-if="element.address" v-bind:term="element.address"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.address"
+                    v-bind:term="element.address"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -195,7 +216,8 @@
                     v-for="actor in element.actors"
                     class="grid-select"
                     :key="actor.id"
-                    v-bind:term="actor"></Dataselect>
+                    v-bind:term="actor"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addPerson') }}</div>
                 </div>
               </div>
@@ -205,7 +227,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
-                  <Dataselect class="grid-select" v-if="element.eventss" v-bind:term="element.events"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.eventss"
+                    v-bind:term="element.events"
+                  ></Dataselect>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addEvent') }}</div>
                 </div>
               </div>
@@ -215,7 +241,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.institution') }}</div>
-                  <Dataselect class="grid-select" v-if="element.institutions" v-bind:term="element.institutions"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.institutions"
+                    v-bind:term="element.institutions"
+                  ></Dataselect>
                 </div>
               </div>
               <div v-if="element.collection" class="grid-row">
@@ -224,7 +254,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.collection') }}</div>
-                  <Dataselect class="grid-select" v-if="element.collection" v-bind:term="element.collection"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.collection"
+                    v-bind:term="element.collection"
+                  ></Dataselect>
                 </div>
               </div>
               <div v-if="element.inventoryNumber" class="grid-row">
@@ -262,13 +296,13 @@
                   <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.license') }}</div>
                   <div class="data-text">
                     <a href="#">{{ element.license }}</a>
                   </div>
                 </div>
               </div>
-              <div class="grid-row">
+              <!--div class="grid-row">
                 <div class="grid-icons"></div>
                 <div class="grid-text">{{ $t('imageViewer.imageMetadata.copyrightNotePD') }}</div>
               </div>
@@ -279,7 +313,7 @@
                 <div class="grid-text">
                   <a href="#">{{ $t('imageViewer.imageMetadata.addPhotographData') }}</a>
                 </div>
-              </div>
+              </div-->
             </div>
           </div>
           <div class="metadata-digital">
@@ -356,6 +390,7 @@
 <script>
 import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
+import ToolbarMenu from "@/components/menu/ToolbarMenu";
 
 export default {
   name: "ImageViewer",
@@ -371,7 +406,8 @@ export default {
   },
   components: {
     HeaderLink,
-    Dataselect
+    Dataselect,
+    ToolbarMenu
   },
   props: {
     shouldShowDialog: Boolean
@@ -398,11 +434,16 @@ export default {
       });
     },
     getCredits(item) {
-      var newAuthors = item.authors != "" && item.authors != null ? item.authors + ", " : "";
-      var newYear = item.year != "" && item.year != null ? item.year + ". " : "";
+      var newAuthors =
+        item.authors != "" && item.authors != null ? item.authors + ", " : "";
+      var newYear =
+        item.year != "" && item.year != null ? item.year + ". " : "";
       var newInstitutions =
-        item.institutions != "" && item.institutions != null ? item.institutions + ", " : "";
-      var newLicense = item.license != "" && item.license != null ? item.license + ", " : "";
+        item.institutions != "" && item.institutions != null
+          ? item.institutions + ", "
+          : "";
+      var newLicense =
+        item.license != "" && item.license != null ? item.license + ", " : "";
 
       var credits = newAuthors + newYear + newInstitutions + newLicense;
 
@@ -629,10 +670,6 @@ export default {
   background: white;
 }
 
-i {
-  font-size: 24px;
-}
-
 .main-content {
   height: 100vh;
 }
@@ -643,6 +680,7 @@ i {
   text-transform: uppercase;
 }
 
+/*
 .main-toolbar {
   display: -ms-flexbox;
   height: 40px;
@@ -651,6 +689,7 @@ i {
   justify-content: space-between;
   padding-left: 20px;
 }
+*/
 
 .main-toolbar-over {
   position: absolute;
@@ -661,6 +700,8 @@ i {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.25) 100%
   );
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .tool {
@@ -673,6 +714,7 @@ i {
   color: white;
 }
 
+/*
 .toolbar-item {
   height: 100%;
   display: flex;
@@ -683,14 +725,11 @@ i {
   cursor: pointer;
 }
 
-.toolbar-item-a {
-  color: white;
-}
-
 .toolbar-item:hover > a {
   background: white;
   color: var(--main-txt-color);
 }
+*/
 
 .stripe {
   flex: 1 0 100%;
@@ -715,13 +754,6 @@ i {
 
 .left-align {
   display: flex;
-}
-
-.right-align {
-  display: flex;
-  float: right;
-  clear: both;
-  align-items: center;
 }
 
 .stroke {
@@ -784,10 +816,6 @@ i {
   display: flex;
   margin: 15px;
   justify-content: space-between;
-}
-
-.neg {
-  color: white;
 }
 
 .flex-col {

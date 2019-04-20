@@ -7,7 +7,7 @@
             <HeaderLink class="toolbar-item" :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')" :link="wikidataURL" v-show="wikidocumentaries.wikidata != undefined"></HeaderLink>
         </div>
         <div class="item-instance-title">{{ title }}</div>
-        <div v-if="wikidocumentaries.wikidata != undefined"> 
+        <div v-if="wikidocumentaries.wikidata != undefined" class="data"> 
             <ul class="statements">
                 <li class="statement-list-item" v-for="statement in shownLeadingStatements" :key="statement.id">
                     <div class="statement-label">{{ statement.label }}</div>
@@ -324,7 +324,7 @@ ul.statement-values {
 }
 
 .qualifier {
-    font-size: 10pt;
+  word-break: break-word;
 }
 
 .expander {
