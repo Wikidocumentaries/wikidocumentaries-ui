@@ -42,7 +42,7 @@
 				"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
 				"selectPortraits": "Menu item in the Actions menu in the Images section",
 				"arrangeByTime": "Menu item for arranging images by time",
-				"selectWorks": "Menu item in the Actions menu in the Images section"
+				"selectWorks": "Menu item in the Actions menu for the Images section"
 			},
 			"facetMenu": {
 				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
@@ -152,7 +152,7 @@
 			"missingArticleChoose": "Extended message about a missing article, prompt to read another language article.",
 			"missingArticleCreate": "Extended message about a missing article, prompt to create a new article.",
 			"missingArticleFallback": "Notice text in the Article section explaining the article shown is in a fallback language",
-			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article.",
+			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article. Use the name of your language in the message.",
 			"missingArticleAuto": "Notice text in the Article section explaining the article shown is automatically generated",
 			"extLink": {
 				"linkTitleWP": "Tooltip message for viewing an article in the Article section"
@@ -162,18 +162,9 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Menu title for the Article Language menu",
-				"translateArticleText": "Menu item for translating the article in the Article Language menu",
+				"translateArticleText": "Menu item for translating the article in the Article Language menu. Use the name of your language in the message.",
 				"otherLanguagestext": "Menu item for reading the article in another language in the Article Language menu"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Main title for the Gallery section",
-			"menuTitle": "Menu title for the Gallery menu\n{{Identical|Show}}",
-			"showBorn": "Menu item for people born in a place in the Gallery menu",
-			"showDied": "Menu item for people died in a place in the Gallery menu",
-			"showBuried": "Menu item for people buried in a place in the Gallery menu",
-			"showRelated": "Menu item for people related to a place in the Gallery menu",
-			"showAll": "All\n{{Identical|all}}"
 		},
 		"Locations": {
 			"headerTitle": "Header title in the Locations section",
@@ -269,7 +260,7 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
-			"caption": "Field label for the Caption in the Metadata section in the Image viewer",
+			"caption": "Field label for the Caption in the Metadata section in the Image viewer\n{{Identical|Caption}}",
 			"addCaption": "Button text to Add a caption in the Caption part in the Metadata section in the Image viewer",
 			"description": "Field label for the Description in the Metadata section in the Image viewer",
 			"addDescription": "Button text to Add description in the Description part in the Metadata section in the Image viewer",
@@ -313,13 +304,12 @@
 			"addEvent": "Button text to Add an event of an image in the Metadata section in the Image viewer",
 			"removeEvent": "Button text to Remove an event of an image in the Metadata section in the Image viewer",
 			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer\n{{Identical|Institution}}",
-			"callNumber": "obsolete, will remove",
 			"collection": "{{Identical|Collection}}",
 			"inventoryNumber": "Field label for the Inventory number of an image in the Metadata section in the Image viewer",
 			"inscriptions": "Field label for Inscriptions in an image in the Metadata section in the Image viewer",
 			"measurements": "Field label for the Measurements of an image in the Metadata section in the Image viewer",
 			"copyright": "Field label for the Copyright and licensing information of an image in the Metadata section in the Image viewer",
-			"work": "Section title for Information about the work about an image in the Metadata section in the Image viewer",
+			"work": "Section title for Information about the artwork represented in the image in the Metadata section in the Image viewer",
 			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer\n{{Identical|Photograph}}",
 			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer\n{{Identical|Photographer}}",
 			"digitalCopy": "Section title for the information about the Digital copy of an image in the Metadata section in the Image viewer",
@@ -377,6 +367,9 @@
 			"languageMenuTitle": "Menu title for the Language menu",
 			"myLanguagesItem": "Menu item for the My languages menu",
 			"languageMenuTranslate": "Option to translate the article in the Languages menu"
+		},
+		"languageMenu": {
+			"TranslateUI": "Use the name of your language in place of <your language>"
 		},
 		"languages": {
 			"fi": "Finnish language option",

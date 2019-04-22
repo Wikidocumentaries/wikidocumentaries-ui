@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Metalhead64",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -161,21 +162,12 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Den Artikel in einer anderen Sprache lesen",
-				"translateArticleText": "Diesen Artikel in deine Sprache übersetzen",
+				"translateArticleText": "Diesen Artikel in Deutsch übersetzen",
 				"otherLanguagestext": "Andere Sprachen"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "Ähnliche Personen zum Thema",
-			"menuTitle": "Anzeigen",
-			"showBorn": "Hier geboren",
-			"showDied": "Hier gestorben",
-			"showBuried": "Hier beerdigt",
-			"showRelated": "Anderweitig verwandt",
-			"showAll": "Alle"
-		},
 		"Locations": {
-			"headerTitle": "Standorte",
+			"headerTitle": "In diesem Standort",
 			"intro": "Hier siehst du alles, was im Thema dieser Seite angesiedelt ist. Als Liste anzeigen, um alle Standorte anzusehen, die gespeichert wurden.",
 			"sortMenu": {
 				"title": "Standorte sortieren",
@@ -312,14 +304,15 @@
 			"addEvent": "Ereignis hinzufügen",
 			"removeEvent": "Ereignis entfernen",
 			"institution": "Einrichtung",
-			"callNumber": "Rufnummer",
 			"collection": "Sammlung",
 			"inventoryNumber": "Inventarnummer",
 			"inscriptions": "Inschriften",
 			"measurements": "Abmessungen",
 			"copyright": "Urheberrecht",
-			"work": "Werk",
+			"license": "Urheberrechts-Lizenz",
+			"work": "Im Bild dargestelltes Werk",
 			"photograph": "Fotografie",
+			"image": "Bild",
 			"photographer": "Fotograf",
 			"addPhotographData": "Informationen über die Fotografie hinzufügen",
 			"copyrightNotePD": "Das Bild ist mit $1 lizenziert, basiert jedoch auf den Metadaten des gemeinfreien Bildes.",
@@ -333,7 +326,9 @@
 			"fileFormat": "Dateiformat",
 			"remove": "Entfernen",
 			"moveTo": "In ein anderes Feld verschieben",
-			"addData": "Daten hinzufügen"
+			"addData": "Daten hinzufügen",
+			"uploader": "Uploader",
+			"uploaderLink": "Uploader-Link"
 		},
 		"imageActions": {
 			"rotateImage": "Bild drehen",
@@ -373,12 +368,18 @@
 		"ok": "Okay",
 		"cancel": "Abbrechen",
 		"helpText": "Hilfe",
+		"expand": "Diesen Abschnitt ausklappen",
+		"collapse": "Diesen Abschnitt einklappen",
 		"menus": {
 			"actionMenuTitle": "Aktionen",
 			"actionMenuTooltip": "Aktionen",
 			"languageMenuTitle": "Sprache auswählen",
+			"languageMenuTooltip": "Wähle deine Sprache aus",
 			"myLanguagesItem": "Meine Sprachen",
-			"languageMenuTranslate": "Diesen Artikel übersetzen"
+			"languageMenuTranslate": "Diesen Artikel auf Deutsch übersetzen"
+		},
+		"languageMenu": {
+			"TranslateUI": "In deine Sprache übersetzen"
 		},
 		"languages": {
 			"fi": "Finnisch",

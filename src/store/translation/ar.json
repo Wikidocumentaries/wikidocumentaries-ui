@@ -166,15 +166,6 @@
 				"otherLanguagestext": "لغات أخرى"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "الناس المرتبطون بالموضوع",
-			"menuTitle": "أظهر",
-			"showBorn": "وُلِد هنا",
-			"showDied": "تُوفِّي هنا",
-			"showBuried": "دُفِن هنا",
-			"showRelated": "ذو صلة خلاف ذلك",
-			"showAll": "الكل"
-		},
 		"Locations": {
 			"headerTitle": "المواقع",
 			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
@@ -313,12 +304,12 @@
 			"addEvent": "إضافة حدث",
 			"removeEvent": "إزالة الحدث",
 			"institution": "المؤسسة",
-			"callNumber": "رقم الاتصال",
 			"collection": "المجموعة",
 			"inventoryNumber": "رقم المخزون",
 			"inscriptions": "النقوش",
 			"measurements": "قياسات",
 			"copyright": "حقوق النشر",
+			"license": "رخصة حقوق النسخ",
 			"work": "العمل",
 			"photograph": "الصورة",
 			"photographer": "المصور",
@@ -378,8 +369,12 @@
 			"actionMenuTitle": "أفعال",
 			"actionMenuTooltip": "أفعال",
 			"languageMenuTitle": "اختر اللغة",
+			"languageMenuTooltip": "اختر لغتك",
 			"myLanguagesItem": "لغتي",
 			"languageMenuTranslate": "ترجمة هذه المقالة"
+		},
+		"languageMenu": {
+			"TranslateUI": "ترجم للغتك"
 		},
 		"languages": {
 			"fi": "الفنلندية",

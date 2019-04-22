@@ -105,15 +105,6 @@
 				"translateArticleText": "Bu maddeyi diline çevir",
 				"otherLanguagestext": "Diğer diller"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Konu ile ilgili kişiler",
-			"menuTitle": "Göster",
-			"showBorn": "Burada doğdu",
-			"showDied": "Burada öldü",
-			"showBuried": "Buraya gömüldü",
-			"showRelated": "Bunun dışında ilgili",
-			"showAll": "Hepsi"
 		}
 	},
 	"map_place_match_page": {

@@ -25,10 +25,20 @@
 				"remInappropriate": {
 					"shortMenuTitle": "မသင့်လျော်ပါ"
 				}
-			}
+			},
+			"imagesViewExternal": "မူရင်းပုံကို ကြည့်ရန်"
 		},
 		"TopicTimeline": {
 			"headerTitle": "အချိန်လိုင်း"
+		},
+		"Events": {
+			"headerTitle": "ဖြစ်ရပ်များ",
+			"optionsMenu": {
+				"menuTitle": "ရွေးပိုင်ခွင့်",
+				"subRelatedPeopleConf": {
+					"menuTitle": "ချိန်ညှိရန်"
+				}
+			}
 		},
 		"Wikidata": {
 			"extLink": {
@@ -40,9 +50,6 @@
 			"languageMenu": {
 				"otherLanguagestext": "အခြားဘာသာစကားများ"
 			}
-		},
-		"Gallery": {
-			"showAll": "အားလုံး"
 		},
 		"Locations": {
 			"headerTitle": "တည်နေရာများ",
@@ -71,7 +78,8 @@
 				"optionColl": "ဖန်တီးသူ"
 			},
 			"displayMenu": {
-				"optionGallery": "ပြခန်း"
+				"optionGallery": "ပြခန်း",
+				"optionList": "စာရင်း"
 			},
 			"showAll": "အားလုံး"
 		},
@@ -99,6 +107,19 @@
 			"facetMenuOptionCity": "ကျား/မ -"
 		}
 	},
+	"imageViewer": {
+		"imageMetadata": {
+			"addDescription": "ဖော်ပြချက်ထည့်သွင်းပါ",
+			"creatorUnknown": "အမည်မသိ",
+			"publisher": "ထုတ်ဝေသူ",
+			"location": "တည်နေရာ",
+			"removeLocation": "တည်နေရာကို ဖယ်ရှားရန်",
+			"event": "ဖြစ်ရပ်",
+			"copyright": "မူပိုင်ခွင့်",
+			"license": "မူပိုင်ခွင့် လိုင်စင်",
+			"remove": "ဖယ်ရှားရန်"
+		}
+	},
 	"general": {
 		"ok": "အိုကေ",
 		"cancel": "မလုပ်တော့ပါ",
@@ -107,8 +128,12 @@
 			"actionMenuTitle": "ဆောင်ရွက်ချက်များ",
 			"actionMenuTooltip": "ဆောင်ရွက်ချက်များ",
 			"languageMenuTitle": "ဘာသာစကားရွေးချယ်ရန်",
+			"languageMenuTooltip": "သင်၏ ဘာသာစကားရွေးချယ်ရန်",
 			"myLanguagesItem": "ကျွန်ုပ်၏ ဘာသာစကားများ",
 			"languageMenuTranslate": "ဤဆောင်းပါးကို ဘာသာပြန်ရန်"
+		},
+		"languageMenu": {
+			"TranslateUI": "သင်၏ဘာသာစကားသို့ ဘာသာပြန်ပါ"
 		},
 		"languages": {
 			"fi": "ပြင်သစ်",

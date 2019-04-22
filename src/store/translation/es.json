@@ -35,8 +35,11 @@
 		"TopicImages": {
 			"headerTitle": "Imágenes de los archivos",
 			"actionsMenu": {
+				"tooltip": "Mostrar o organizar imágenes",
 				"showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
 				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
+				"selectPortraits": "Seleccionar retratos de buena calidad de esta persona",
+				"arrangeByTime": "Organiza imágenes por tiempo",
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"facetMenu": {
@@ -44,13 +47,15 @@
 				"topics": "temas",
 				"imageSize": "tamaño de imagen",
 				"platform": "plataforma",
-				"source": "fuente"
+				"source": "fuente",
+				"saveSelection": "Guardar selección como una colección"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Acciones",
 				"menuTooltip": "Acciones",
 				"doGeolocatingText": "Set the location...",
-				"showImageText": "Mostrar imágen"
+				"showImageText": "Mostrar imágen",
+				"selectFeatured": "Elige como imagen de cabecera"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Eliminar la imagen porque...",
@@ -123,7 +128,8 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artículo",
-			"missingArticle": "No hay ningún artículo sobre este tema en español. Ver si hay artículos en otras lenguas en la carta de lengua encima, o crear el artículo por clicking en el plus-icono.",
+			"missingArticle": "No hay ningún artículo sobre este tema en español. Ver si hay artículos en otras lenguas en la carta de lengua encima. Puedes crear el artículo en español por clicking en el plus-icono.",
+			"missingArticleMissing": "No hay ningún artículo sobre este tema en español.",
 			"extLink": {
 				"linkTitleWP": "Leer o editar en Wikipedia"
 			},
@@ -132,39 +138,46 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leer el artículo en otra lengua",
-				"translateArticleText": "Traducir este artículo a vuestra lengua",
+				"translateArticleText": "Traducir este artículo a español",
 				"otherLanguagestext": "Otros idiomas"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Personas relacionadas al tema",
-			"menuTitle": "Mostrar",
-			"showBorn": "Nacido aquí",
-			"showDied": "Muerto aquí",
-			"showBuried": "Enterrado aquí",
-			"showRelated": "Relacionados de otra manera",
-			"showAll": "Todas"
 		},
 		"Locations": {
 			"headerTitle": "Ubicaciones",
 			"sortMenu": {
-				"optionDist": "Por distancia"
+				"title": "Ordenar ubicaciones",
+				"tooltip": "Ordenar ubicaciones",
+				"optionTime": "Por tiempo",
+				"optionAlpha": "Por orden alfabético",
+				"optionDist": "Por distancia",
+				"optionRev": "Ordenación inversa"
 			},
 			"facetMenu": {
 				"optionType": "Tipo",
+				"optionColl": "Creador",
 				"optionCity": "Ubicación"
 			},
 			"displayMenu": {
+				"title": "Muestra como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
 			"showAll": "Todo"
 		},
 		"Depicted": {
+			"sortMenu": {
+				"title": "Ordenar trabajos",
+				"tooltip": "Ordenar trabajos",
+				"optionTime": "Por tiempo",
+				"optionAlpha": "Por orden alfabético",
+				"optionRev": "Ordenación inversa"
+			},
 			"facetMenu": {
-				"optionType": "Tipo"
+				"optionType": "Tipo",
+				"optionColl": "Creador"
 			},
 			"displayMenu": {
+				"title": "Muestra como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
@@ -174,8 +187,10 @@
 			"headerTitle": "Obras",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Ordenar elementos",
+			"sortMenuOptionTime": "Por tiempo",
 			"sortMenuOptionAlpha": "Por orden alfabético",
 			"sortMenuOptionDist": "Por distancia",
+			"sortMenuOptionRev": "Ordenación inversa",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Colección",
 			"facetMenuOptionCity": "Ubicación",
@@ -203,10 +218,14 @@
 			"addCaption": "Añadir leyenda",
 			"description": "Descripción",
 			"addDescription": "Añadir descripción",
+			"creator": "Creador",
 			"creatorUnknown": "Desconocido",
+			"addCreator": "Añade creador",
 			"dateCreated": "Fecha de creación",
 			"addDateCreated": "Añadir fecha de creación",
 			"removeDateCreated": "Quitar fecha de creación",
+			"publisher": "Publicador",
+			"addPublisher": "Añade publicador",
 			"format": "Formato",
 			"addFormat": "Añadir formato",
 			"technique": "Técnica",

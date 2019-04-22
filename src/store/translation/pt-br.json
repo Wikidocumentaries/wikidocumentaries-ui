@@ -166,15 +166,6 @@
 				"otherLanguagestext": "Outros idiomas"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "Pessoas relacionadas ao tópico",
-			"menuTitle": "Mostrar",
-			"showBorn": "Nascido aqui",
-			"showDied": "Morreu aqui",
-			"showBuried": "Enterrado aqui",
-			"showRelated": "Relacionado de outra forma",
-			"showAll": "Todos"
-		},
 		"Locations": {
 			"headerTitle": "Localizações",
 			"intro": "Aqui você vê tudo o que está localizado no tópico desta página. Exibir como lista para ver todos os locais que foram armazenados.",
@@ -313,12 +304,12 @@
 			"addEvent": "Adicionar evento",
 			"removeEvent": "Remover evento",
 			"institution": "Instituição",
-			"callNumber": "Numero de telefone",
 			"collection": "Coleção",
 			"inventoryNumber": "Número de inventário",
 			"inscriptions": "Inscrições",
 			"measurements": "Medidas",
 			"copyright": "Direitos autorais",
+			"license": "Licença de direitos autorais",
 			"work": "Trabalho",
 			"photograph": "Fotografia",
 			"photographer": "Fotógrafo",
@@ -378,8 +369,12 @@
 			"actionMenuTitle": "Ações",
 			"actionMenuTooltip": "Ações",
 			"languageMenuTitle": "Escolher idioma",
+			"languageMenuTooltip": "Escolha seu idioma",
 			"myLanguagesItem": "Meus idiomas",
 			"languageMenuTranslate": "Traduzir este artigo"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduzir para o seu idioma"
 		},
 		"languages": {
 			"fi": "Finlandês",

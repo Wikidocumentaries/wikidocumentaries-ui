@@ -165,15 +165,6 @@
 				"otherLanguagestext": "其它語言"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "與主題關聯的人物",
-			"menuTitle": "秀出",
-			"showBorn": "出生於此",
-			"showDied": "逝世於此",
-			"showBuried": "埋葬於此",
-			"showRelated": "否則相關",
-			"showAll": "所有"
-		},
 		"Locations": {
 			"headerTitle": "位置",
 			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
@@ -312,12 +303,12 @@
 			"addEvent": "新增事件",
 			"removeEvent": "移除事件",
 			"institution": "機構",
-			"callNumber": "電話號碼",
 			"collection": "收藏",
 			"inventoryNumber": "收藏編號",
 			"inscriptions": "題字",
 			"measurements": "測量",
 			"copyright": "版權",
+			"license": "版權許可",
 			"work": "作品",
 			"photograph": "照片",
 			"photographer": "攝影者",
@@ -377,8 +368,12 @@
 			"actionMenuTitle": "操作",
 			"actionMenuTooltip": "操作",
 			"languageMenuTitle": "選擇語言",
+			"languageMenuTooltip": "選擇您的語言",
 			"myLanguagesItem": "我的語言",
 			"languageMenuTranslate": "翻譯此條目"
+		},
+		"languageMenu": {
+			"TranslateUI": "翻譯成您使用的語言"
 		},
 		"languages": {
 			"fi": "芬蘭語",

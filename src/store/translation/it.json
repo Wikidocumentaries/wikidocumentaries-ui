@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"Susannaanas"
+			"Susannaanas",
+			"Senpremì"
 		]
 	},
 	"LandingPage": {
@@ -136,15 +137,6 @@
 				"otherLanguagestext": "Altre lingue"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "Persone legate all'argomento",
-			"menuTitle": "Mostra",
-			"showBorn": "Nato qui",
-			"showDied": "Morto qui",
-			"showBuried": "Sotterrato qui",
-			"showRelated": "Riguardanti di un'altra maniera",
-			"showAll": "Tutti"
-		},
 		"Depicted": {
 			"headerTitle": "Rappresentato in"
 		},
@@ -185,9 +177,10 @@
 			"event": "Evento",
 			"addEvent": "Aggiungi evento",
 			"removeEvent": "Rimuovi evento",
-			"institution": "Istituto",
+			"institution": "Istituzione",
 			"inscriptions": "Iscrizioni",
-			"measurements": "Misurazioni",
+			"measurements": "Misure",
+			"license": "Copyright e licenza:",
 			"photograph": "Fotografia",
 			"photographer": "Fotografo",
 			"addPhotographData": "Aggiungi informazioni sulla fotografia",
@@ -197,8 +190,8 @@
 			"remove": "Rimuovi"
 		},
 		"imageActions": {
-			"clockwise": "orario",
-			"counterclockwise": "antiorario",
+			"clockwise": "in senso orario",
+			"counterclockwise": "in senso antiorario",
 			"horizontal": "orizzontale",
 			"vertical": "verticale"
 		}
@@ -206,7 +199,11 @@
 	"general": {
 		"cancel": "Annulla",
 		"menus": {
-			"actionMenuTitle": "Azioni"
+			"actionMenuTitle": "Azioni",
+			"languageMenuTooltip": "Scegli la lingua"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduci nella tua lingua"
 		},
 		"languages": {
 			"sv": "Svedese",

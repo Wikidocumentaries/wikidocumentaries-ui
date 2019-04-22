@@ -95,13 +95,6 @@
 				"otherLanguagestext": "Andre sprog"
 			}
 		},
-		"Gallery": {
-			"menuTitle": "Vis",
-			"showBorn": "Født her",
-			"showDied": "Døde her",
-			"showBuried": "Begravet her",
-			"showAll": "Alle"
-		},
 		"Locations": {
 			"headerTitle": "Steder",
 			"sortMenu": {

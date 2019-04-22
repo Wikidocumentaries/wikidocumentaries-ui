@@ -105,15 +105,6 @@
 				"translateArticleText": "Prevedite članak na svoj jezik",
 				"otherLanguagestext": "Drugi jezici"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Osobe povezane s ovom temom",
-			"menuTitle": "Prikaži",
-			"showBorn": "Rođeni ovdje",
-			"showDied": "Umrli su ovdje",
-			"showBuried": "Sahranjeni ovdje",
-			"showRelated": "Inače povezani",
-			"showAll": "Sve"
 		}
 	},
 	"map_place_match_page": {

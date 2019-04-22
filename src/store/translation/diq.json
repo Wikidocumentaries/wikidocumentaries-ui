@@ -83,7 +83,10 @@
 		"Events": {
 			"headerTitle": "Weqeyi",
 			"optionsMenu": {
-				"menuTitle": "Weçinıteki"
+				"menuTitle": "Weçinıteki",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Awan ke"
+				}
 			}
 		},
 		"Wikidata": {
@@ -106,15 +109,6 @@
 				"translateArticleText": "Nê meqaleyi bıçarne ra zıwanê xo",
 				"otherLanguagestext": "Zıwanê bini"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
-			"menuTitle": "Bımocne",
-			"showBorn": "Tiya ameyo dınya",
-			"showDied": "Tiya merdo",
-			"showBuried": "Tiya dariyo we",
-			"showRelated": "Maneyo bin",
-			"showAll": "Pêro"
 		},
 		"Locations": {
 			"headerTitle": "Lokasyoni",
@@ -175,11 +169,16 @@
 			"publisher": "Weşanayoğ",
 			"genre": "Tewır",
 			"location": "Lokasyon",
+			"address": "Adresa kuçeyi",
+			"addPerson": "Merdum cı ke",
 			"collection": "Koleksiyon",
+			"measurements": "Pêmeyi",
 			"copyright": "Heqa telifi",
+			"license": "Lisansê heqa telifi",
 			"photograph": "Fotraf",
 			"photographer": "Fotrafkar",
 			"digitalCopy": "Kopyaya dicitale",
+			"platformId": "Kamiye",
 			"fileFormat": "Formatê dosya",
 			"remove": "Wedare"
 		},
@@ -211,8 +210,12 @@
 			"actionMenuTitle": "Hereketi",
 			"actionMenuTooltip": "Hereketi",
 			"languageMenuTitle": "Zıwan weçine",
+			"languageMenuTooltip": "Zıwane xo weçine",
 			"myLanguagesItem": "Zıwanê mı",
 			"languageMenuTranslate": "Enê meqaleyi açarne"
+		},
+		"languageMenu": {
+			"TranslateUI": "Êra zıwanê xo çarne"
 		},
 		"languages": {
 			"fi": "Finki",

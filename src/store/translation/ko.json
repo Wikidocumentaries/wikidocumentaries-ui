@@ -74,6 +74,7 @@
 			"headerTitle": "이벤트",
 			"displayMenu": {
 				"menuTitle": "표시 옵션",
+				"menuTooltip": "표시 옵션",
 				"optionShowTimeline": "타임라인의 이벤트 표시",
 				"optionShowList": "이벤트를 목록으로 표시"
 			},
@@ -105,14 +106,6 @@
 				"translateArticleText": "이 문서를 내 언어로 번역하기",
 				"otherLanguagestext": "다른 언어"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "주제와 관련된 인물",
-			"menuTitle": "보기",
-			"showBorn": "여기서 태어남",
-			"showDied": "여기서 죽음",
-			"showBuried": "여기에 묻힘",
-			"showAll": "모두"
 		},
 		"Locations": {
 			"headerTitle": "위치",
@@ -210,6 +203,7 @@
 			"institution": "기관",
 			"measurements": "측정",
 			"copyright": "저작권",
+			"license": "저작권 라이선스",
 			"work": "작품",
 			"photograph": "사진",
 			"photographer": "촬영자",
@@ -243,8 +237,12 @@
 			"actionMenuTitle": "동작",
 			"actionMenuTooltip": "동작",
 			"languageMenuTitle": "언어 선택",
+			"languageMenuTooltip": "내 언어 선택",
 			"myLanguagesItem": "내 언어",
 			"languageMenuTranslate": "이 문서 번역"
+		},
+		"languageMenu": {
+			"TranslateUI": "내 언어로 번역하기"
 		},
 		"languages": {
 			"fi": "핀란드어",

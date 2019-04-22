@@ -166,15 +166,6 @@
 				"otherLanguagestext": "Autres langues"
 			}
 		},
-		"Gallery": {
-			"headerTitle": "Personnes liées au sujet",
-			"menuTitle": "Afficher",
-			"showBorn": "Né ici",
-			"showDied": "Décédé ici",
-			"showBuried": "Enterré ici",
-			"showRelated": "Autre relation",
-			"showAll": "Tous"
-		},
 		"Locations": {
 			"headerTitle": "Emplacements",
 			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
@@ -303,9 +294,9 @@
 			"locationMap": "Emplacement sur la carte",
 			"addLocation": "Ajouter un emplacement",
 			"removeLocation": "Supprimer un emplacement",
-			"address": "Adresse de la rue",
-			"addAddress": "Ajouter l’adresse de la rue",
-			"removeAddress": "Supprimer l’adresse la rue",
+			"address": "Rue de l'adresse",
+			"addAddress": "Ajouter la rue dans l’adresse",
+			"removeAddress": "Supprimer la rue de l’adresse",
 			"depictedPeople": "Personnes décrites",
 			"addPerson": "Ajouter une personne",
 			"removePerson": "Supprimer une personne",
@@ -313,12 +304,12 @@
 			"addEvent": "Ajouter un événement",
 			"removeEvent": "Supprimer un événement",
 			"institution": "Institution",
-			"callNumber": "Numéro d’appel",
 			"collection": "Collection",
 			"inventoryNumber": "Numéro d’inventaire",
 			"inscriptions": "Inscriptions",
 			"measurements": "Mesures",
 			"copyright": "Droits d’auteur",
+			"license": "Licence de droits d'auteur",
 			"work": "Œuvre",
 			"photograph": "Photographie",
 			"photographer": "Photographe",
@@ -378,8 +369,12 @@
 			"actionMenuTitle": "Actions",
 			"actionMenuTooltip": "Actions",
 			"languageMenuTitle": "Choisir la langue",
+			"languageMenuTooltip": "Choisissez votre langue",
 			"myLanguagesItem": "Mes langues",
 			"languageMenuTranslate": "Traduire cet article"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduisez dans votre langue"
 		},
 		"languages": {
 			"fi": "Finnois",

@@ -48,7 +48,8 @@
 				"menuTitle": "D'Bild ewechhuele well...",
 				"menuTooltip": "D'Bild ewechhuelen"
 			},
-			"imagesViewExternal": "D'Originalbild weisen"
+			"imagesViewExternal": "D'Originalbild weisen",
+			"imagesViewOnMap": "Bild op enger Kaart weisen"
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "Biller verstoppen",
@@ -92,14 +93,6 @@
 				"translateArticleText": "Iwwersetzt dësen Artikel an Är Sprooch",
 				"otherLanguagestext": "Aner Sproochen"
 			}
-		},
-		"Gallery": {
-			"menuTitle": "Weisen",
-			"showBorn": "Hei gebuer",
-			"showDied": "Hei gestuerwen",
-			"showBuried": "Hei begruewen",
-			"showRelated": "An enger anerer Relatioun",
-			"showAll": "All"
 		},
 		"Locations": {
 			"headerTitle": "Plazen",
@@ -158,14 +151,24 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"caption": "Beschreiwung",
+			"addCaption": "Beschreiwung derbäisetzen",
 			"description": "Beschreiwung",
 			"addDescription": "Beschreiwung derbäisetzen",
 			"creatorUnknown": "Onbekannt",
+			"dateCreated": "Datum vun der Kreatioun",
 			"format": "Format",
+			"addFormat": "Format dobäisetzen",
+			"removeFormat": "Format ewechhuelen",
 			"technique": "Technik",
 			"genre": "Genre",
+			"removeGenre": "Genre ewechhuelen",
+			"addTopic": "Thema dobäisetzen",
+			"removeTopic": "Thema ewechhuelen",
 			"location": "Plaz",
+			"addLocation": "Plaz derbäisetzen",
 			"removeLocation": "Plaz ewechhuelen",
+			"address": "Adress mat Strooss",
 			"addPerson": "Persoun derbäisetzen",
 			"removePerson": "Persoun ewechhuelen",
 			"event": "Evenement",
@@ -177,9 +180,12 @@
 			"work": "Wierk",
 			"photograph": "Foto",
 			"photographer": "Fotograf",
+			"addPhotographData": "Informatioun iwwer d'Foto derbäisetzen",
+			"digitalCopy": "Digital Kopie",
 			"platformId": "Nummer (ID)",
 			"imageDimensions": "Dimensioune vum Bild",
 			"fileSize": "Gréisst vum Fichier",
+			"fileFormat": "Format vum Fichier",
 			"remove": "Ewechhuelen"
 		},
 		"imageActions": {
@@ -209,8 +215,12 @@
 			"actionMenuTitle": "Aktiounen",
 			"actionMenuTooltip": "Aktiounen",
 			"languageMenuTitle": "Sprooch eraussichen",
+			"languageMenuTooltip": "Sicht Är Sprooch eraus",
 			"myLanguagesItem": "Meng Sproochen",
 			"languageMenuTranslate": "Dësen Artikel iwwersetzen"
+		},
+		"languageMenu": {
+			"TranslateUI": "Iwwersetzt an Är Sprooch"
 		},
 		"languages": {
 			"fi": "Finnesch",

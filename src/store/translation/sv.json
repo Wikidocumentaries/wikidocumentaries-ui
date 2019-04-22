@@ -148,7 +148,7 @@
 			"missingArticleMissing": "Det finns ingen artikel om detta ämne på svenska.",
 			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja på språkmenyn ovan eller du kan skapa artikeln på svenska genom att klicka på plusikonen.",
 			"missingArticleCreate": "Du kan skapa den här artikeln på svenska genom att klicka på plusikonen.",
-			"missingArticleTranslate": "Du kan översätta denna artikel till ditt språk genom att välja den i språkmenyn.",
+			"missingArticleTranslate": "Du kan översätta denna artikel till svenska genom att välja den i språkmenyn.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
@@ -157,18 +157,9 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Läs artikeln på ett annat språk",
-				"translateArticleText": "Översätt denna artikel till ditt språk",
+				"translateArticleText": "Översätt denna artikel till svenska",
 				"otherLanguagestext": "Andra språk"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Människor relaterade till ämnet",
-			"menuTitle": "Visa",
-			"showBorn": "Född här",
-			"showDied": "Död här",
-			"showBuried": "Begravd här",
-			"showRelated": "Relaterat annars",
-			"showAll": "Alla"
 		},
 		"Locations": {
 			"headerTitle": "Platser",
@@ -297,6 +288,7 @@
 			"inscriptions": "Inskriptioner",
 			"measurements": "Mätningar",
 			"copyright": "Upphovsrätt",
+			"license": "Upphovsrättslicens",
 			"work": "Verk",
 			"photograph": "Fotografi",
 			"photographer": "Fotograf",
@@ -354,8 +346,12 @@
 			"actionMenuTitle": "Åtgärder",
 			"actionMenuTooltip": "Åtgärder",
 			"languageMenuTitle": "Välj språk",
+			"languageMenuTooltip": "Välj ditt språk",
 			"myLanguagesItem": "Mina språk",
 			"languageMenuTranslate": "Översätt denna artikel"
+		},
+		"languageMenu": {
+			"TranslateUI": "Översätt till ditt språk"
 		},
 		"languages": {
 			"fi": "finska",
