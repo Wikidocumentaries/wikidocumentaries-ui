@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="data-select" @click="FindTopics(term)">{{ term }}</div>
-        <div class="search-results">
+        <div class="data-select" :class="[shouldShowMenu ? 'active-term' : '']" @click="openSearch">{{ term }}</div>
+        <div class="search-results" @mouseleave="hideMenu">
             <div :class="[shouldShowMenu ? showClass : hideClass]">
                 <input id="findTopicInput" @input="debounceFindTopics" class="input-drop" v-model="topicInputValue" type="text">
                 <div class="drop-option" v-for="topic in topics" :key="topic.wikidata"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></div>
@@ -53,19 +53,20 @@ export default {
                 if (summary.indexOf(',') == 0) {
                     summary = summary.substr(1);
                 }
-                //if (summary.length > this.maxSummaryLengthInChars) {
-                //    summary = summary.substr(0, this.maxSummaryLengthInChars - 3) + "...";
-                //}
                 return summary;
             }
             else {
                 return topic.summary;
             }
         },
+        openSearch: function () {
+            this.topicInputValue = this.term;
+            this.debounceFindTopics();
+        },
         findTopics: function () {
             //console.log("findTopics");
             if (this.topicInputValue.length >= 3) {
-                this.searchFromWikipedia(this.topicInputValue);
+                this.searchFromWikidata(this.topicInputValue);
             }
             else {
                 this.hideMenu();
@@ -75,14 +76,14 @@ export default {
         getTopicURL: function(topic) {
             return "/" + topic.wikidata + "?language=" + this.$i18n.locale;
         },
-        searchFromWikipedia: function(topicInputValue) {
-            //console.log("searchFromWikipedia");
+        searchFromWikidata: function(topicInputValue) {
+            //console.log("searchFromWikidata");
 
-            var url = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=opensearch&search=" +
-                topicInputValue +
-                "&limit=20&namespace=0&redirects=resolve"
-                "&format=json" +
-                "&callback=callback";
+            // var url = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=opensearch&search=" +
+            //     topicInputValue +
+            //     "&limit=20&namespace=0&redirects=resolve"
+            //     "&format=json" +
+            //     "&callback=callback";
 
             var url = "https://www.wikidata.org/w/api.php?" +
                 "action=wbsearchentities" +
@@ -152,12 +153,11 @@ export default {
                                 //     }
                                 // });
                             }
-
-                            this.showMenu();
                         }
                         else {
                             // TODO let user know
                         }
+                        this.showMenu();
 
                     }
             });
@@ -170,9 +170,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.topic-search-box {
-}
 
 .search-items {
     position: relative;
