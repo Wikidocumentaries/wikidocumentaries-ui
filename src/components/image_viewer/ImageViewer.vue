@@ -18,7 +18,7 @@
               v-on:load="onimageload"
               class="viewer-image"
             >
-            <div class="viewer-contents">
+            <div class="viewer-contents" v-show="showLinks">
               <div class="step-right">
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
@@ -43,11 +43,11 @@
                       :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
                       :link="element.infoURL"
                     ></HeaderLink>
-                    <div class="toolbar-item neg" @click="hide">
+                    <div class="toolbar-item neg" @click.prevent="hide">
                       <a href="#" class="toolbar-item-a">
-                          <i class="wikiglyph wikiglyph-cross"></i>
+                        <i class="wikiglyph wikiglyph-cross"></i>
                       </a>
-                      <span class="tooltip">{{ tooltip }}</span>  
+                      <span class="tooltip">{{ $t('imageViewer.closeViewer') }}</span>
                     </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
         <div class="metadata-area">
           <div class="metadata-original">
             <div class="toolbar">
-              <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
+              <div class="header-title">{{ $t('imageViewer.imageMetadata.image') }}</div>
             </div>
             <div class="columns">
               <div class="grid-row">
@@ -116,19 +116,27 @@
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
                 </div>
               </div>
-              <!--div class="grid-row">
+              <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
-                  <Dataselect class="grid-select" v-if="element.year && element.year != null" v-bind:term="element.year"></Dataselect>
-                  <Dataselect class="grid-select" v-else v-bind:term="$t('imageViewer.imageMetadata.addDateCreated')"></Dataselect>
+                  <Dataselect
+                    class="grid-select"
+                    v-if="element.year && element.year != null"
+                    v-bind:term="element.year"
+                  ></Dataselect>
+                  <Dataselect
+                    class="grid-select action"
+                    v-else
+                    v-bind:term="$t('imageViewer.imageMetadata.addDateCreated')"
+                  ></Dataselect>
                   <div
                     class="data-select action"
                   >{{ $t('imageViewer.imageMetadata.addDateDepicted') }}</div>
                 </div>
-              </div-->
+              </div>
               <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
@@ -286,6 +294,11 @@
               </div>
             </div>
           </div>
+          <div class="metadata-original">
+            <div class="toolbar">
+              <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
+            </div>
+          </div>
           <div class="metadata-copyright alert">
             <div class="toolbar">
               <div class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
@@ -392,6 +405,12 @@ import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
 
+const MENU_ACTIONS = {
+  SELECT_HEADER: 0
+  // GEOLOCATE: 0,
+  // ADD_TO_COLLECTION: 0,
+};
+
 export default {
   name: "ImageViewer",
   data() {
@@ -401,7 +420,18 @@ export default {
       dimension: { x: -1, y: -1 },
       map: null,
       topicFeature: null,
-      topicVectorLayer: null
+      topicVectorLayer: null,
+      showLinks: true,
+      toolbarActionMenuItems: [
+        {
+          id: MENU_ACTIONS.SELECT_HEADER,
+          text: "topic_page.TopicImages.imagesActionMenu.selectFeatured"
+        }
+        // {
+        //   id: MENU_ACTIONS.GEOLOCATE,
+        //   text: "topic_page.Works.sortMenuOptionAlpha"
+        // },
+      ]
     };
   },
   components: {
@@ -411,6 +441,13 @@ export default {
   },
   props: {
     shouldShowDialog: Boolean
+  },
+  mounted() {
+    this.$el.addEventListener("mousemove", () => {
+      setTimeout(() => {
+        this.showLinks = false;
+      }, 3000);
+    });
   },
   methods: {
     handleCancel: function() {
@@ -452,6 +489,14 @@ export default {
       }
 
       return credits;
+    },
+    onDoMenuItemAction(menuItem) {
+      switch (menuItem.id) {
+        // case MENU_ACTIONS.GEOLOCATE:
+        //     ;
+        //     break;
+        case MENU_ACTIONS.SELECT_HEADER:
+      }
     },
     createMap() {
       var ol = this.$ol;
@@ -875,9 +920,6 @@ export default {
 
 .titlebox-tool-title {
   margin-bottom: 0.2em;
-}
-
-.titlebox-tool-subtitle {
 }
 
 .titlebox-subtitle:first-letter {
