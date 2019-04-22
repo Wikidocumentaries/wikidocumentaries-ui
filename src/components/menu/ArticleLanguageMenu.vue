@@ -1,7 +1,7 @@
 <template>
     <ToolbarMenu v-if="toolbarActionMenuItems.length || translateLinkVisible" icon="wikiglyph-translation" :tooltip="$t('topic_page.Wikipedia.languageMenu.menuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('topic_page.Wikipedia.languageMenu.menuTitle') }}</div>
-        <a slot="menu-link" v-if="translateLinkVisible" :href="translateLink" class="menu-link" target="_blank">{{ $t('general.menus.languageMenuTranslate') }}</a>
+        <a slot="menu-link" v-if="translateLinkVisible" :href="translateLink" class="menu-link" target="_blank">{{ $t('topic_page.Wikipedia.languageMenu.translateArticleText') }}</a>
     </ToolbarMenu>
 </template>
 

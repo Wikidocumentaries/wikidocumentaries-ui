@@ -1,9 +1,9 @@
 <template>
 <div>
   <div v-if="results.length">
-    <div class="toolbar"><div class="header-title">Tapahtumat</div></div>
+    <div class="toolbar"><div class="header-title">{{ $t('topic_page.Events.headerTitle') }}</div></div>
     <ul>
-      <li v-for="item in results">
+      <li v-for="item in results" :key="item.id">
         <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
           (<a :href="item.ref1">1</a><span v-if="item.ref2">, <a :href="item.ref2">2</a></span>)
       </li>

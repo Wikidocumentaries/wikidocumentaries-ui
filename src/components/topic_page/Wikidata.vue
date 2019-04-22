@@ -291,7 +291,7 @@ export default {
 .statement-list-item {
     padding-bottom: 6px;
     display: flex;
-    flex-direction: column;
+/*    flex-direction: column; */
 }
 
 .statement-label {

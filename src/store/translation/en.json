@@ -161,17 +161,8 @@
                 "otherLanguagestext": "Other languages"
             }
         },
-        "Gallery": {
-            "headerTitle": "People related to the topic",
-            "menuTitle": "Show",
-            "showBorn": "Born here",
-            "showDied": "Died here",
-            "showBuried": "Buried here",
-            "showRelated": "Related otherwise",
-            "showAll": "All"
-        },
         "Locations": {
-            "headerTitle": "Locations",
+            "headerTitle": "In this location",
             "intro": "Here you see anything that is located in the topic of this page. Display as list to see all locations that have been stored.",
             "sortMenu": {
                 "title": "Sort locations",
@@ -308,15 +299,15 @@
             "addEvent": "Add event",
             "removeEvent": "Remove event",
             "institution": "Institution",
-            "callNumber": "Call number",
             "collection": "Collection",
             "inventoryNumber": "Inventory number",
             "inscriptions": "Inscriptions",
             "measurements": "Measurements",
             "copyright": "Copyright",
             "license": "Copyright license",
-            "work": "Work",
+            "work": "Work represented in the image",
             "photograph": "Photograph",
+            "image": "Image",
             "photographer": "Photographer",
             "addPhotographData": "Add information about the photograph",
             "copyrightNotePD": "The image is licensed with $1, but based on the metadata the image is in Public Domain.",
@@ -330,7 +321,9 @@
             "fileFormat": "File format",
             "remove": "Remove",
             "moveTo": "Move to another field",
-            "addData": "Add data"
+            "addData": "Add data",
+            "uploader": "Uploader",
+            "uploaderLink": "Uploader link"
         },
         "imageActions": {
             "rotateImage": "Rotate image",
@@ -370,13 +363,15 @@
         "ok": "OK",
         "cancel": "Cancel",
         "helpText": "Help",
+        "expand": "Expand this section",
+        "collapse": "Collapse this section",
         "menus": {
             "actionMenuTitle": "Actions",
             "actionMenuTooltip": "Actions",
             "languageMenuTitle": "Choose language",
             "languageMenuTooltip": "Choose your language",
             "myLanguagesItem": "My languages",
-            "languageMenuTranslate": "Translate this article"
+            "languageMenuTranslate": "Translate this article to English"
         },
         "languageMenu": {
             "TranslateUI": "Translate to your language"

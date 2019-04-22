@@ -14,7 +14,7 @@
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ item.work.label }}</div>
-                    <div class="thumb-credit">{{ item.type.label }} {{ item.time }} {{ item.copyrightLabel}}</div>
+                    <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{ item.copyrightLabel}}</div>
                 </div>
                 <!--div class="thumb-image-header"-->
                 <div class="thumb-image-header">
@@ -30,7 +30,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.work.value)" >
-            <b>{{ item.work.label }}</b> {{ item.type.label }} {{ item.time}} {{ item.copyrightLabel}}
+            <b>{{ item.work.label }}</b> {{ item.typeLabel }} {{ item.time}} {{ item.copyrightLabel}}
             </a>
             </div>
         </div>
@@ -105,18 +105,25 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel ?coordinates ?address ?municipality WHERE {
+SELECT ?work ?workLabel (SAMPLE(?image) as ?image) ?time (GROUP_CONCAT(?typeLabel) as ?typeLabel) (GROUP_CONCAT(?collectionLabel) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address) as ?address) (GROUP_CONCAT(?municipalityLabel) as ?municipalityLabel) WHERE {
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
     ?work ?p wd:Q216904.
     OPTIONAL { ?work wdt:P18 ?image. }
-    OPTIONAL { ?work wdt:P973 ?desc_url. }
-    OPTIONAL { ?work wdt:P31 ?type. }
-    OPTIONAL { ?work wdt:P195 ?collection. }
+    OPTIONAL { ?work wdt:P31 ?type. 
+             ?type rdfs:label ?typeLabel .
+              FILTER(LANG(?typeLabel)="fi") }
+    OPTIONAL { ?work wdt:P195 ?collection. 
+             ?collection rdfs:label ?collectionLabel .
+              FILTER(LANG(?collectionLabel)="fi") }
     OPTIONAL { ?work wdt:P571 ?creation_date. }
     OPTIONAL { ?work wdt:P577 ?publishing_date. }
-    OPTIONAL { ?work wdt:P6216 ?copyright. }
-    OPTIONAL { ?work wdt:P123 ?publisher. }
+    OPTIONAL { ?work wdt:P6216 ?copyright.
+             ?copyright rdfs:label ?copyrightLabel .
+              FILTER(LANG(?copyrightLabel)="fi") }
+    OPTIONAL { ?work wdt:P123 ?publisher. 
+             ?publisher rdfs:label ?publisherLabel .
+              FILTER(LANG(?publisherLabel)="fi") }
     OPTIONAL { ?work wdt:P625 ?coordinates. }
     OPTIONAL { ?work wdt:P6375 ?address. }
     OPTIONAL { ?work wdt:P131* ?municipality.
@@ -124,6 +131,7 @@ SELECT ?work ?workLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?cop
 		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
+GROUP BY ?work ?workLabel ?time
 LIMIT 1000
         `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
@@ -266,7 +274,7 @@ const selectResults = (lcl) => {
 }
 
 .list {
-    columns: 300px 3;
+   columns: 350px;
 }
 
 .listrow {

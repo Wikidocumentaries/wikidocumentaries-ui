@@ -47,7 +47,7 @@ import wdk from 'wikidata-sdk'
 import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const SORT_ACTIONS = {
-		BY_LABEL: 0,
+    BY_LABEL: 0,
     BY_TIME: 1,
     SORT_REVERSE: 2,
     SORT_CLEAR: 3

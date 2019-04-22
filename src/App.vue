@@ -148,7 +148,7 @@ a:hover {
 .toolbar {
   display: flex;
   color: #333;
-  margin: 0 20px;
+  padding: 0 20px;
   height: 45px;
   align-items: center;
 }
@@ -324,12 +324,12 @@ a:hover {
   padding-left: 20px;
 }
 
-@media all and (max-width: 899px) {
+@media all and (max-width: 979px) {
   .column {
     display: block;
   }
   
-.haze {
+  .haze {
     display: none;
   }
   .row {
@@ -346,7 +346,7 @@ a:hover {
   }
 
   .data {
-    column-width: 300px;
+    column-width: 350px;
     column-gap: 20px;
   }
 
@@ -355,18 +355,19 @@ a:hover {
   }
 }
 
-@media all and (min-width: 900px) {
+@media all and (min-width: 980px) {
   .column {
     display: flex;
     flex-direction: column;
   }
 
   .one {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
   }
 
   .two {
-    flex: 1 1 300px;
+    flex: 0 0 auto;
+    width: 380px;
   }
 
   .row {
@@ -545,5 +546,14 @@ i.wikiglyph {
 .action {
   color: #999;
   background: white;
+}
+
+.footer {
+    height: 45px;
+    background: var(--main-txt-color);
+}
+
+.active-term {
+  background: var(--main-txt-color);
 }
 </style>

@@ -33,7 +33,7 @@
 				<div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.person.value)" >
-            	<b>{{ item.person.label }}</b> ({{ item.outLabel }}) {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
+            	<b>{{ item.person.label }}</b> ({{ item.inLabel }}) {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
             </a>
             </div>
         </div>
@@ -270,7 +270,7 @@ const selectResults = (lcl) => {
 }
 
 .list {
-    columns: 300px 3;
+    columns: 350px;
 }
 
 .listrow {

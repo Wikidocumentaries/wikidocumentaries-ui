@@ -12,7 +12,7 @@
               :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"
             ></i>
           </a>
-          <span class="tooltip">{{ tooltip }}</span>
+          <span v-if="isExpanded == false" class="tooltip">{{ $t('general.expand') }}</span><span v-else class="tooltip">{{ $t('general.collapse') }}</span>
         </div>
       </div>
     </div>
@@ -29,6 +29,7 @@
     ></TopicImages>
     <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
     <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
+    <div class="footer"></div>
   </div>
 </template>
 
