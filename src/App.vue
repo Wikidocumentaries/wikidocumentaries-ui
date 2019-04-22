@@ -555,5 +555,6 @@ i.wikiglyph {
 
 .active-term {
   background: var(--main-txt-color);
+  border-radius: 0;
 }
 </style>
