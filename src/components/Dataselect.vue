@@ -91,12 +91,6 @@ export default {
     searchFromWikidata: function(topicInputValue) {
       //console.log("searchFromWikidata");
 
-      // var url = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=opensearch&search=" +
-      //     topicInputValue +
-      //     "&limit=20&namespace=0&redirects=resolve"
-      //     "&format=json" +
-      //     "&callback=callback";
-
       var url =
         "https://www.wikidata.org/w/api.php?" +
         "action=wbsearchentities" +
