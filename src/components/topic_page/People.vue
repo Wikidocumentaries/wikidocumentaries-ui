@@ -65,7 +65,7 @@ const DISPLAY_ACTIONS = {
 const MAX_ITEMS_TO_VIEW = 50;
 const DEFAULT_SORT = ["person.label"];
 
-let fullResults, currentSort, currentDisplay;
+// let fullResults, currentSort, currentDisplay;
 
 export default {
     name: 'People',
@@ -75,51 +75,55 @@ export default {
     },
     data () {
         return {
-            results: [],
-						gallery: true,
+            // results: [],
+						// gallery: true,
+						fullResults: [],
+						currentSort: DEFAULT_SORT.slice(),
+						currentDisplay: DISPLAY_ACTIONS.GALLERY,
+						sortCounter: 0,
             toolbarActionMenuItems: [
-						{
-	              id: SORT_ACTIONS.BY_LABEL,
-	              text: 'topic_page.People.sortMenuOptionName'
-	          },
-            {
-                id: SORT_ACTIONS.BY_BIRTH,
-                text: 'topic_page.People.sortMenuOptionBirth'
-            },
-            {
-                id: SORT_ACTIONS.BY_DEATH,
-                text: 'topic_page.People.sortMenuOptionDeath'
-            },
-            {
-                id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.People.sortMenuOptionRev'
-            },
-            {
-                id: SORT_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.People.sortMenuOptionClear'
-            },
+							{
+		              id: SORT_ACTIONS.BY_LABEL,
+		              text: 'topic_page.People.sortMenuOptionName'
+		          },
+	            {
+	                id: SORT_ACTIONS.BY_BIRTH,
+	                text: 'topic_page.People.sortMenuOptionBirth'
+	            },
+	            {
+	                id: SORT_ACTIONS.BY_DEATH,
+	                text: 'topic_page.People.sortMenuOptionDeath'
+	            },
+	            {
+	                id: SORT_ACTIONS.SORT_REVERSE,
+	                text: 'topic_page.People.sortMenuOptionRev'
+	            },
+	            {
+	                id: SORT_ACTIONS.SORT_CLEAR,
+	                text: 'topic_page.People.sortMenuOptionClear'
+	            },
             ],
         };
     },
     mounted() {
-				currentSort = DEFAULT_SORT.slice();
-				currentDisplay = DISPLAY_ACTIONS.GALLERY;
-        var title = this.$store.state.wikidocumentaries.title;
-        const statements = this.$store.state.wikidocumentaries.wikidata.statements;
-        let sparql;
-        sparql = `
+				// currentSort = DEFAULT_SORT.slice();
+				// currentDisplay = DISPLAY_ACTIONS.GALLERY;
+        // var title = this.$store.state.wikidocumentaries.title;
+        // const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+        // let sparql;
+        let sparql = `
 SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
-      { 
+      {
         ?out wikibase:directClaim ?rel_out .
         ?person ?rel_out wd:Q314595 .
         ?out rdfs:label ?outLabel .
         FILTER(LANG(?outLabel)="fi")
       }
       UNION
-      { 
+      {
         ?in wikibase:directClaim ?rel_in .
         wd:Q314595 ?rel_in ?person .
         ?in rdfs:label ?inLabel .
@@ -148,98 +152,123 @@ LIMIT 1000
         axios
             .post(url, body)
             .then(response => {
-							fullResults = wdk.simplify.sparqlResults(response.data);
-							this.results = selectResults(this.$i18n.locale);
-							this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+							this.fullResults = wdk.simplify.sparqlResults(response.data);
+							// this.results = selectResults(this.$i18n.locale);
+							// this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
 						})
             .catch(error => console.log(error));
     },
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
+        },
+				results () {
+					this.sortCounter; // Force update...
+					if (this.fullResults.length > 0) {
+						let filteredResults = this.fullResults;
+						if (this.currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
+						if (this.currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
+						if (this.currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+							if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+								filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+							} else {
+								this.currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+							}
+						}
+						return filteredResults.sort(sortResults(this.currentSort, this.$i18n.locale)).slice(0,MAX_ITEMS_TO_VIEW);
+					} else {
+						return [];
+					}
+        },
+				gallery () {
+					return (this.currentDisplay === DISPLAY_ACTIONS.GALLERY);
         }
     },
     watch: {
     },
     methods: {
-        onDoMenuItemAction (menuItem) {
-            switch (menuItem.id) {
-						case SORT_ACTIONS.BY_LABEL:
-								currentSort = ["person.label"];
-	              break;
-            case SORT_ACTIONS.BY_BIRTH:
-								currentSort = ["birth_year", "person.label"];
-                break;
-            case SORT_ACTIONS.BY_DEATH:
-								currentSort = ["death_year", "person.label"];
-                break;
-						case SORT_ACTIONS.SORT_REVERSE:
-								if (currentSort[0].charAt(0)=='-') currentSort[0]=currentSort[0].substr(1);
-								else currentSort[0] = '-' + currentSort[0];
-		            break;
-            case SORT_ACTIONS.SORT_CLEAR:
-								currentSort = DEFAULT_SORT.slice();
-                break;
-            }
-						this.results = selectResults(this.$i18n.locale);
-						// console.log("currentSort: ", currentSort);
-						// console.log("results: ", this.results);
-        },
-				onDisplayChange (menuItem) {
+			runSort() {
+				this.sortCounter++;
+			},
+			onDoMenuItemAction (menuItem) {
 					switch (menuItem.id) {
-						case DISPLAY_ACTIONS.GALLERY:
-							currentDisplay = DISPLAY_ACTIONS.GALLERY;
-							break;
-						case DISPLAY_ACTIONS.LIST:
-							currentDisplay = DISPLAY_ACTIONS.LIST;
-							break;
+						case SORT_ACTIONS.BY_LABEL:
+								this.currentSort = ["person.label"];
+								break;
+						case SORT_ACTIONS.BY_BIRTH:
+								this.currentSort = ["birth_year", "person.label"];
+								break;
+						case SORT_ACTIONS.BY_DEATH:
+								this.currentSort = ["death_year", "person.label"];
+								break;
+						case SORT_ACTIONS.SORT_REVERSE:
+								if (this.currentSort[0].charAt(0)=='-') this.currentSort[0]=this.currentSort[0].substr(1);
+								else this.currentSort[0] = '-' + this.currentSort[0];
+								break;
+						case SORT_ACTIONS.SORT_CLEAR:
+								this.currentSort = DEFAULT_SORT.slice();
+								break;
 					}
-					this.results = selectResults(this.$i18n.locale);
-					this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
-				},
-        fitTitle (title) {
-            var newTitle = title;
-            return newTitle;
-        },
-        // getCredits (item) {
-        //     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-        //     var newYear = (item.year != "" ? (item.year) + ". " : '');
-        //     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-        //     var newLicense = (item.license != "" ? (item.license + ', ') : '');
+					this.runSort();
+					// this.results = selectResults(this.$i18n.locale);
+					// console.log("currentSort: ", currentSort);
+					// console.log("results: ", this.results);
+			},
+			onDisplayChange (menuItem) {
+				switch (menuItem.id) {
+					case DISPLAY_ACTIONS.GALLERY:
+						this.currentDisplay = DISPLAY_ACTIONS.GALLERY;
+						break;
+					case DISPLAY_ACTIONS.LIST:
+						this.currentDisplay = DISPLAY_ACTIONS.LIST;
+						break;
+				}
+				// this.results = selectResults(this.$i18n.locale);
+				// this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+			},
+			// fitTitle (title) {
+			//     var newTitle = title;
+			//     return newTitle;
+			// },
+			// getCredits (item) {
+			//     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
+			//     var newYear = (item.year != "" ? (item.year) + ". " : '');
+			//     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
+			//     var newLicense = (item.license != "" ? (item.license + ', ') : '');
 
-        //     var credits = newAuthors + newYear + newInstitutions + newLicense;
+			//     var credits = newAuthors + newYear + newInstitutions + newLicense;
 
-        //     if (credits.length > 0 && credits.slice(-2) == ", ") {
-        //         credits = credits.substr(0, credits.length - 2);
-        //     }
+			//     if (credits.length > 0 && credits.slice(-2) == ", ") {
+			//         credits = credits.substr(0, credits.length - 2);
+			//     }
 
-        //     return credits;
-        // },
-        navigate(target) {
-            this.$router.push({ target });
-        },
-        getItemURL(value) {
-            return "/" + value + "?language=" + this.$i18n.locale;
-        },
-        getImageLink(value) {
-            return value.replace(/\s/g, _) + '?width=500';
-        }
+			//     return credits;
+			// },
+			navigate(target) {
+					this.$router.push({ target });
+			},
+			getItemURL(value) {
+					return "/" + value + "?language=" + this.$i18n.locale;
+			},
+			getImageLink(value) {
+					return value.replace(/\s/g, _) + '?width=500';
+			}
     }
 }
 
-const selectResults = (lcl) => {
-	let filteredResults = fullResults;
-	if (currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
-	if (currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
-	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
-		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
-			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
-		} else {
-			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
-		}
-	}
-	return filteredResults.sort(sortResults(currentSort, lcl)).slice(0,MAX_ITEMS_TO_VIEW);
-}
+// const selectResults = (lcl) => {
+// 	let filteredResults = fullResults;
+// 	if (currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
+// 	if (currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
+// 	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+// 		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
+// 			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+// 		} else {
+// 			currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
+// 		}
+// 	}
+// 	return filteredResults.sort(sortResults(currentSort, lcl)).slice(0,MAX_ITEMS_TO_VIEW);
+// }
 
 </script>
 
