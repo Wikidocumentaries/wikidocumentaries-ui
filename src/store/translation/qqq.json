@@ -311,6 +311,7 @@
 			"copyright": "Field label for the Copyright and licensing information of an image in the Metadata section in the Image viewer",
 			"work": "Section title for Information about the artwork represented in the image in the Metadata section in the Image viewer",
 			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer\n{{Identical|Photograph}}",
+			"image": "{{Identical|Image}}",
 			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer\n{{Identical|Photographer}}",
 			"digitalCopy": "Section title for the information about the Digital copy of an image in the Metadata section in the Image viewer",
 			"publishingPlatform": "Field label for the Publishing platform of an image in the Metadata section in the Image viewer",
@@ -366,7 +367,7 @@
 			"actionMenuTooltip": "Tooltip text for the Actions menu\n{{Identical|Action}}",
 			"languageMenuTitle": "Menu title for the Language menu",
 			"myLanguagesItem": "Menu item for the My languages menu",
-			"languageMenuTranslate": "Option to translate the article in the Languages menu"
+			"languageMenuTranslate": "Option to translate the article in the Languages menu. Use the name of your language instead of English"
 		},
 		"languageMenu": {
 			"TranslateUI": "Use the name of your language in place of <your language>"

@@ -180,14 +180,16 @@
 			"institution": "Istituzione",
 			"inscriptions": "Iscrizioni",
 			"measurements": "Misure",
-			"license": "Copyright e licenza:",
+			"license": "Copyright e licenza",
 			"photograph": "Fotografia",
+			"image": "Immagine",
 			"photographer": "Fotografo",
 			"addPhotographData": "Aggiungi informazioni sulla fotografia",
 			"digitalCopy": "Copia digitale",
 			"fileSize": "Dimensione del file",
 			"fileFormat": "Formato file",
-			"remove": "Rimuovi"
+			"remove": "Rimuovi",
+			"uploader": "Caricato da"
 		},
 		"imageActions": {
 			"clockwise": "in senso orario",
@@ -198,9 +200,12 @@
 	},
 	"general": {
 		"cancel": "Annulla",
+		"expand": "Espandi questa sezione",
+		"collapse": "Comprimi questa sezione",
 		"menus": {
 			"actionMenuTitle": "Azioni",
-			"languageMenuTooltip": "Scegli la lingua"
+			"languageMenuTooltip": "Scegli la tua lingua",
+			"languageMenuTranslate": "Traduci questa voce in italiano"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traduci nella tua lingua"

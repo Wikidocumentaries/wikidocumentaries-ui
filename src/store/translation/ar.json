@@ -167,7 +167,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "المواقع",
+			"headerTitle": "في هذا الموقع",
 			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
 			"sortMenu": {
 				"title": "فرز المواقع",
@@ -310,8 +310,9 @@
 			"measurements": "قياسات",
 			"copyright": "حقوق النشر",
 			"license": "رخصة حقوق النسخ",
-			"work": "العمل",
+			"work": "العمل ممثل في الصورة",
 			"photograph": "الصورة",
+			"image": "صورة",
 			"photographer": "المصور",
 			"addPhotographData": "إضافة معلومات حول الصورة",
 			"copyrightNotePD": "تم ترخيص الصورة بـ$1، ولكن استنادا إلى البيانات الوصفية، الصورة في الملكية العامة.",
@@ -325,7 +326,8 @@
 			"fileFormat": "صيغة الملف",
 			"remove": "إزالة",
 			"moveTo": "الانتقال إلى حقل آخر",
-			"addData": "إضافة بيانات"
+			"addData": "إضافة بيانات",
+			"uploader": "الرافع"
 		},
 		"imageActions": {
 			"rotateImage": "تدوير الصورة",
@@ -365,13 +367,15 @@
 		"ok": "موافق",
 		"cancel": "إلغاء",
 		"helpText": "مساعدة",
+		"expand": "توسيع هذا القسم",
+		"collapse": "طي هذا القسم",
 		"menus": {
 			"actionMenuTitle": "أفعال",
 			"actionMenuTooltip": "أفعال",
 			"languageMenuTitle": "اختر اللغة",
 			"languageMenuTooltip": "اختر لغتك",
 			"myLanguagesItem": "لغتي",
-			"languageMenuTranslate": "ترجمة هذه المقالة"
+			"languageMenuTranslate": "ترجمة هذه المقالة إلى العربية"
 		},
 		"languageMenu": {
 			"TranslateUI": "ترجم للغتك"

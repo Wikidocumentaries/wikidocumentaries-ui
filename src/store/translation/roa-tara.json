@@ -47,7 +47,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Luèche",
+			"headerTitle": "Jndr'à stu luèche",
 			"sortMenu": {
 				"optionRev": "Ordenamende a smerse"
 			},
@@ -102,13 +102,15 @@
 			"measurements": "Mesure",
 			"copyright": "Copyright",
 			"photograph": "Fotografije",
+			"image": "Immaggine",
 			"photographer": "Fotografe",
 			"addPhotographData": "Aggiunge 'mbormaziune sus 'a fotografije",
 			"copyrightNotePD": "L'immaggine jè licenziate cu $1, ma 'ndrucanne le metadate l'immaggine jè de Pubbleche Dominie.",
 			"digitalCopy": "Copie digitale",
 			"publishingPlatform": "Stoche a pubbleche 'a piattaforme",
 			"fileFormat": "Formate d'u file",
-			"remove": "Live"
+			"remove": "Live",
+			"uploader": "Carecatore"
 		},
 		"imageActions": {
 			"clockwise": "orarie",
@@ -117,5 +119,12 @@
 			"horizontal": "orizzondale"
 		},
 		"closeViewer": "Chiude 'u 'ndrucatore"
+	},
+	"general": {
+		"expand": "Spanne sta sezione",
+		"collapse": "Scunne sta sezione",
+		"menus": {
+			"languageMenuTranslate": "Traduce sta vôsce jndr'à 'u 'nglese"
+		}
 	}
 }

@@ -111,7 +111,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Lokasyoni",
+			"headerTitle": "Naca de",
 			"sortMenu": {
 				"optionTime": "Ebe wext ra",
 				"optionAlpha": "Alfabetik"
@@ -176,11 +176,13 @@
 			"copyright": "Heqa telifi",
 			"license": "Lisansê heqa telifi",
 			"photograph": "Fotraf",
+			"image": "Resım",
 			"photographer": "Fotrafkar",
 			"digitalCopy": "Kopyaya dicitale",
 			"platformId": "Kamiye",
 			"fileFormat": "Formatê dosya",
-			"remove": "Wedare"
+			"remove": "Wedare",
+			"uploader": "Barkerdoğ"
 		},
 		"closeViewer": "Çımeyi cade"
 	},
@@ -212,7 +214,7 @@
 			"languageMenuTitle": "Zıwan weçine",
 			"languageMenuTooltip": "Zıwane xo weçine",
 			"myLanguagesItem": "Zıwanê mı",
-			"languageMenuTranslate": "Enê meqaleyi açarne"
+			"languageMenuTranslate": "Enê meqaleyi bıçarne era Zazaki"
 		},
 		"languageMenu": {
 			"TranslateUI": "Êra zıwanê xo çarne"

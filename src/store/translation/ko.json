@@ -108,7 +108,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "위치",
+			"headerTitle": "이 위치에서",
 			"sortMenu": {
 				"optionTime": "시간순",
 				"optionAlpha": "알파벳순",
@@ -206,6 +206,7 @@
 			"license": "저작권 라이선스",
 			"work": "작품",
 			"photograph": "사진",
+			"image": "이미지",
 			"photographer": "촬영자",
 			"platformId": "ID",
 			"imageInfoPage": "이미지 정보 페이지",
@@ -214,7 +215,8 @@
 			"fileFormat": "파일 형식",
 			"remove": "제거",
 			"moveTo": "다른 필드로 이동",
-			"addData": "데이터 추가"
+			"addData": "데이터 추가",
+			"uploader": "올린이"
 		},
 		"imageActions": {
 			"rotateImage": "이미지 회전",
@@ -233,13 +235,14 @@
 		"ok": "확인",
 		"cancel": "취소",
 		"helpText": "도움말",
+		"expand": "이 문단 펼치기",
 		"menus": {
 			"actionMenuTitle": "동작",
 			"actionMenuTooltip": "동작",
 			"languageMenuTitle": "언어 선택",
 			"languageMenuTooltip": "내 언어 선택",
 			"myLanguagesItem": "내 언어",
-			"languageMenuTranslate": "이 문서 번역"
+			"languageMenuTranslate": "이 문서를 영어로 번역"
 		},
 		"languageMenu": {
 			"TranslateUI": "내 언어로 번역하기"

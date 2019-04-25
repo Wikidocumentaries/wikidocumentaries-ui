@@ -167,7 +167,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Paikat",
+			"headerTitle": "Tässä paikassa",
 			"intro": "Tässä näytetään kohteita, jotka sijaitsevat tämän sivun aiheen alueella. Voit näyttää kohteet luettelona, jolloin listataan myös kuvattomat kohteet.",
 			"sortMenu": {
 				"title": "Järjestä paikat",
@@ -312,6 +312,7 @@
 			"license": "Tekijänoikeuslisenssi",
 			"work": "Kuvan esittämä teos",
 			"photograph": "Valokuva",
+			"image": "Kuva",
 			"photographer": "Valokuvaaja",
 			"addPhotographData": "Lisää tietoa valokuvasta",
 			"copyrightNotePD": "Tämän kuvan lisenssi on $1, mutta metatietojen perusteella sillä ei ole tekijänoikeussuojaa.",
@@ -325,7 +326,8 @@
 			"fileFormat": "Tiedostoformaatti",
 			"remove": "Poista",
 			"moveTo": "Siirrä tiedot toiseen kenttään",
-			"addData": "Lisää tieto"
+			"addData": "Lisää tieto",
+			"uploader": "Tallentaja"
 		},
 		"imageActions": {
 			"rotateImage": "Pyöritä kuvaa",
@@ -365,13 +367,15 @@
 		"ok": "OK",
 		"cancel": "Peruuta",
 		"helpText": "Ohje",
+		"expand": "Laajenna osio",
+		"collapse": "Kutista osio",
 		"menus": {
 			"actionMenuTitle": "Toiminnot",
 			"actionMenuTooltip": "Toiminnot",
 			"languageMenuTitle": "Valitse kieli",
 			"languageMenuTooltip": "Valitse kielesi",
 			"myLanguagesItem": "Omat kielet",
-			"languageMenuTranslate": "Käännä tämä artikkeli"
+			"languageMenuTranslate": "Käännä tämä artikkeli suomeksi"
 		},
 		"languageMenu": {
 			"TranslateUI": "Käännä suomeksi"

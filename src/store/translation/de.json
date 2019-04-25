@@ -327,8 +327,7 @@
 			"remove": "Entfernen",
 			"moveTo": "In ein anderes Feld verschieben",
 			"addData": "Daten hinzufügen",
-			"uploader": "Uploader",
-			"uploaderLink": "Uploader-Link"
+			"uploader": "Uploader"
 		},
 		"imageActions": {
 			"rotateImage": "Bild drehen",

@@ -166,7 +166,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "位置",
+			"headerTitle": "在此位置",
 			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
 			"sortMenu": {
 				"title": "排序位置",
@@ -309,8 +309,9 @@
 			"measurements": "測量",
 			"copyright": "版權",
 			"license": "版權許可",
-			"work": "作品",
+			"work": "在圖片裡呈現出的作品",
 			"photograph": "照片",
+			"image": "圖片",
 			"photographer": "攝影者",
 			"addPhotographData": "新增關於照片的資訊",
 			"copyrightNotePD": "圖片以$1授權，但基於詮釋資料內容該圖片是屬於公眾領域。",
@@ -324,7 +325,8 @@
 			"fileFormat": "檔案格式",
 			"remove": "移除",
 			"moveTo": "轉移至別的欄位",
-			"addData": "新增資料"
+			"addData": "新增資料",
+			"uploader": "上傳者"
 		},
 		"imageActions": {
 			"rotateImage": "旋轉圖片",
@@ -364,13 +366,15 @@
 		"ok": "好",
 		"cancel": "取消",
 		"helpText": "說明",
+		"expand": "展開此段落",
+		"collapse": "摺疊此段落",
 		"menus": {
 			"actionMenuTitle": "操作",
 			"actionMenuTooltip": "操作",
 			"languageMenuTitle": "選擇語言",
 			"languageMenuTooltip": "選擇您的語言",
 			"myLanguagesItem": "我的語言",
-			"languageMenuTranslate": "翻譯此條目"
+			"languageMenuTranslate": "翻譯此條目成英語"
 		},
 		"languageMenu": {
 			"TranslateUI": "翻譯成您使用的語言"
