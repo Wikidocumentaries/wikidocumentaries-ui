@@ -157,7 +157,7 @@
             },
             "languageMenu": {
                 "menuTitle": "Read the article in another language",
-                "translateArticleText": "Translate this article to your language",
+                "translateArticleText": "Translate this article to English",
                 "otherLanguagestext": "Other languages"
             }
         },
@@ -322,8 +322,7 @@
             "remove": "Remove",
             "moveTo": "Move to another field",
             "addData": "Add data",
-            "uploader": "Uploader",
-            "uploaderLink": "Uploader link"
+            "uploader": "Uploader"
         },
         "imageActions": {
             "rotateImage": "Rotate image",

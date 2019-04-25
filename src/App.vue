@@ -324,25 +324,20 @@ a:hover {
   padding-left: 20px;
 }
 
+.one {
+  position: relative;
+}
+
 @media all and (max-width: 979px) {
   .column {
     display: block;
   }
-  
-  .haze {
+
+  #wiki {
     display: none;
   }
   .row {
     position: relative;
-  }
-  .one {
-    max-height: 50vh;
-    overflow-y: hidden;
-  }
-
-  .two {
-    max-height: 50vh;
-    overflow-y: hidden;
   }
 
   .data {
@@ -352,6 +347,10 @@ a:hover {
 
   .text {
     padding-right: 20px;
+  }
+
+  .text-container {
+    max-height: 50vh;
   }
 }
 
@@ -383,13 +382,28 @@ a:hover {
   .text {
     padding-right: 0;
   }
-  .haze {
+
+  #wiki {
     display: unset;
   }
+
+  #wp, #wd {
+    display:none;
+  }
+
+  .text-container {
+    max-height: unset;
+  }
+
+}
+
+.text-container {
+  overflow: hidden;
+  padding-bottom: 45px;
 }
 
 .expanded {
-    max-height:unset;
+  max-height: unset;
 }
 
 .text p {
@@ -549,12 +563,16 @@ i.wikiglyph {
 }
 
 .footer {
-    height: 45px;
-    background: var(--main-txt-color);
+  height: 45px;
+  background: var(--main-txt-color);
 }
 
 .active-term {
   background: var(--main-txt-color);
   border-radius: 0;
+}
+
+.block {
+  display: inline-block;
 }
 </style>

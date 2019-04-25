@@ -1,71 +1,111 @@
 <template>
   <div class="wikipedia">
     <div class="toolbar">
-        <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
-        <ArticleLanguageMenu class="language-menu" :currentLanguage="language" :translateLink="translateLink" @doLanguageChange="onLanguageChange"></ArticleLanguageMenu>
-        <HeaderLink v-if="wikipedia.wikipediaURL" class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
-        <HeaderLink v-else class="toolbar-item" :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')" :link="wikipedia.wikipediaURL"></HeaderLink>
+      <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
+      <ArticleLanguageMenu
+        class="language-menu"
+        :currentLanguage="language"
+        :translateLink="translateLink"
+        @doLanguageChange="onLanguageChange"
+      ></ArticleLanguageMenu>
+      <HeaderLink
+        v-if="wikipedia.wikipediaURL"
+        class="toolbar-item"
+        :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')"
+        :link="wikipedia.wikipediaURL"
+      ></HeaderLink>
+      <HeaderLink
+        v-else
+        class="toolbar-item"
+        :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')"
+        :link="wikipedia.wikipediaURL"
+      ></HeaderLink>
     </div>
-    <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
-      <span v-html="wikipedia.excerptHTML"></span>
-      <span v-html="wikipedia.remainingHTML"></span>
+    <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
+      <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
+        <span v-html="wikipedia.excerptHTML"></span>
+        <span v-html="wikipedia.remainingHTML"></span>
+      </div>
+      <div v-else class="text wiki-html">
+        <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
+      </div>
     </div>
-    <div v-else class="text wiki-html">
-      <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
+    <div class="haze" id="wp">
+      <div class="toolbar-item block">
+        <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
+          <i
+            class="wikiglyph"
+            :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"
+          ></i>
+        </a>
+        <span v-if="isExpanded == false" class="tooltip">{{ $t('general.expand') }}</span>
+        <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import HeaderLink from '@/components/HeaderLink'
-import ArticleLanguageMenu from '@/components/menu/ArticleLanguageMenu'
+import axios from "axios";
+import HeaderLink from "@/components/HeaderLink";
+import ArticleLanguageMenu from "@/components/menu/ArticleLanguageMenu";
 export default {
-  name: 'WikipediaArticle',
-  props: {
-  },
+  name: "WikipediaArticle",
+  props: {},
   computed: {
-      getSelected () {
-        if(window.getSelection) { return window.getSelection(); }
-        else if(document.getSelection) { return document.getSelection(); }
-        else {
-          var selection = document.selection && document.selection.createRange();
-          if(selection.text) { return selection.text; }
-          return false;
+    getSelected() {
+      if (window.getSelection) {
+        return window.getSelection();
+      } else if (document.getSelection) {
+        return document.getSelection();
+      } else {
+        var selection = document.selection && document.selection.createRange();
+        if (selection.text) {
+          return selection.text;
         }
         return false;
-      },
-      doSelection () {
-        var selection = getSelected();
-        if (selection) {
-          alert(selection);
-        }
-      },
-      translateLink () {
-          const site = this.$store.state.wikidocumentaries.wikidata.sitelinks.filter(sitelink => sitelink.site == this.language + "wiki");
-          if (!site.length) {
-              return null;
-          }
-          const title = site[0].title;
-          const url = "https://" + this.$i18n.locale + ".wikipedia.org/wiki/Special:ContentTranslation?page=" + title + "&from=" + this.language + "&to="+ this.$i18n.locale + "&targettitle=&version=2";
-          return url;
-      },
-  },
-  data () {
-    return {
-      expanded: false,
-      language: this.$i18n.locale,
-      wikipedia: this.$store.state.wikidocumentaries.wikipedia,
+      }
+      return false;
+    },
+    doSelection() {
+      var selection = getSelected();
+      if (selection) {
+        alert(selection);
+      }
+    },
+    translateLink() {
+      const site = this.$store.state.wikidocumentaries.wikidata.sitelinks.filter(
+        sitelink => sitelink.site == this.language + "wiki"
+      );
+      if (!site.length) {
+        return null;
+      }
+      const title = site[0].title;
+      const url =
+        "https://" +
+        this.$i18n.locale +
+        ".wikipedia.org/wiki/Special:ContentTranslation?page=" +
+        title +
+        "&from=" +
+        this.language +
+        "&to=" +
+        this.$i18n.locale +
+        "&targettitle=&version=2";
+      return url;
     }
+  },
+  data() {
+    return {
+      isExpanded: false,
+      language: this.$i18n.locale,
+      wikipedia: this.$store.state.wikidocumentaries.wikipedia
+    };
   },
   components: {
     HeaderLink,
     ArticleLanguageMenu
   },
   methods: {
-    switchExpand(event) {
-      this.expanded = !this.expanded;
-    },
     onLanguageChange(language) {
       this.language = language;
 
@@ -75,30 +115,33 @@ export default {
         method: "get",
         params: {
           wikidata: this.$store.state.wikidocumentaries.wikidataId,
-          language: language,
+          language: language
         }
       };
       axios.request(requestConfig).then(response => {
-        if (response.data.wikidata == null ) {
+        if (response.data.wikidata == null) {
           console.log("response.data.wikipedia == null");
-          context.commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
+          context.commit(
+            "setWikidocumentariesDataState",
+            WIKI.STATES.FAIL_WIKI_EXTERNAL
+          );
         } else {
           this.wikipedia.excerptHTML = response.data.wikipediaExcerptHTML;
           this.wikipedia.remainingHTML = response.data.wikipediaRemainingHTML;
-          this.wikipedia.wikipediaURL = response.data.wikipedia.content_urls.desktop.page;
+          this.wikipedia.wikipediaURL =
+            response.data.wikipedia.content_urls.desktop.page;
         }
       });
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .expander {
   width: 100%;
-  padding-top: 0; 
+  padding-top: 0;
   padding-right: 12px;
   margin-top: -10px;
   text-align: right;
@@ -146,6 +189,6 @@ export default {
 }
 
 .wiki-html >>> span > p:nth-child(1) {
-  margin-top:0;
+  margin-top: 0;
 }
 </style>

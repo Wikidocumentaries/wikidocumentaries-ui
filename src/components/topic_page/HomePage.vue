@@ -4,7 +4,7 @@
     <div class="row" :class="[isExpanded ? 'expanded' : '']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
-      <div class="haze">
+      <div class="haze" id="wiki">
         <div class="toolbar-item block">
           <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
             <i
@@ -98,9 +98,5 @@ export default {
   width: 1px;
   margin: 6px 0;
   background: rgb(0, 0, 0);
-}
-
-.block {
-  display: inline-block;
 }
 </style>
