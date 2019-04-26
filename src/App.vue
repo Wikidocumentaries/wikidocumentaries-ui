@@ -14,7 +14,7 @@ export default {
 :root {
   --main-txt-color: #333;
   --main-link-color: #00a3cc;
-  --main-modal-color: #dadada;
+  --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
   --main-red: #ce492a;
@@ -129,6 +129,8 @@ a:hover {
   border-radius: 2px;
   cursor: pointer;
   box-sizing: border-box;
+  font-size: 0.85em;
+  border-color: var(--main-link-color);
 }
 
 .button-ok {
@@ -314,7 +316,7 @@ a:hover {
   bottom: 0px;
   height: 45px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   text-align: center;
   vertical-align: middle;
   line-height: 45px;
@@ -326,6 +328,14 @@ a:hover {
 
 .one {
   position: relative;
+}
+
+.two {
+  background: var(--main-modal-color);
+}
+
+.text {
+  padding-right: 20px;
 }
 
 @media all and (max-width: 979px) {
@@ -345,10 +355,6 @@ a:hover {
     column-gap: 20px;
   }
 
-  .text {
-    padding-right: 20px;
-  }
-
   .text-container {
     max-height: 50vh;
   }
@@ -356,7 +362,6 @@ a:hover {
 
 @media all and (min-width: 980px) {
   .column {
-    display: flex;
     flex-direction: column;
   }
 
@@ -374,27 +379,22 @@ a:hover {
     position: relative;
     flex-direction: row;
     overflow-y: hidden;
-    align-items: start;
     padding-bottom: 45px;
     max-height: 50vh;
-  }
-
-  .text {
-    padding-right: 0;
   }
 
   #wiki {
     display: unset;
   }
 
-  #wp, #wd {
-    display:none;
+  #wp,
+  #wd {
+    display: none;
   }
 
   .text-container {
     max-height: unset;
   }
-
 }
 
 .text-container {
@@ -402,8 +402,16 @@ a:hover {
   padding-bottom: 45px;
 }
 
+.dark {
+  background: var(--main-modal-color);
+}
+
 .expanded {
   max-height: unset;
+}
+
+.expanded + .haze {
+  background: unset;
 }
 
 .text p {
@@ -488,7 +496,7 @@ i.wikiglyph {
   height: 35vh;
   display: flex;
   padding-left: 10px;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 }
 
@@ -514,6 +522,20 @@ i.wikiglyph {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: 0.5;
+}
+
+.gallery-item:hover * {
+  transition: opacity 80ms ease-in;
+}
+
+.list {
+  columns: 350px;
+  padding: 20px 0;
+  background: var(--main-modal-color);
+}
+
+.listrow {
+  margin-left: 20px;
 }
 
 .data-select {

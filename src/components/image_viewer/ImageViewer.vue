@@ -299,7 +299,7 @@
               <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
             </div>
           </div>
-          <div class="metadata-copyright alert">
+          <div class="metadata-copyright">
             <div class="toolbar">
               <div class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
             </div>
@@ -1080,7 +1080,9 @@ export default {
     height: 400px;
     position: relative;
 } */
-
+.metadata-copyright {
+  background: var(--main-modal-color);
+}
 .alert {
   background-color: var(--main-yellow);
 }

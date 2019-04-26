@@ -268,13 +268,4 @@ const selectResults = (lcl) => {
     height: 35vh;
     width: 150px;
 }
-
-.list {
-    columns: 350px;
-}
-
-.listrow {
-    margin-left:20px;
-}
-
 </style>

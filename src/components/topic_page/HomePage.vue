@@ -12,7 +12,8 @@
               :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"
             ></i>
           </a>
-          <span v-if="isExpanded == false" class="tooltip">{{ $t('general.expand') }}</span><span v-else class="tooltip">{{ $t('general.collapse') }}</span>
+          <span v-if="isExpanded == false" class="tooltip">{{ $t('general.expand') }}</span>
+          <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
         </div>
       </div>
     </div>

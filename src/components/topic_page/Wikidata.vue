@@ -9,13 +9,13 @@
         v-show="wikidocumentaries.wikidata != undefined"
       ></HeaderLink>
     </div>
-    <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
+    <div :class="[isExpanded ? 'expanded' : '']" class="text-container dark">
       <div class="item-instance-title">{{ title }}</div>
       <div v-if="wikidocumentaries.wikidata != undefined" class="data">
         <ul class="statements">
           <li
             class="statement-list-item"
-            v-for="statement in shownLeadingStatements"
+            v-for="statement in shownStatements"
             :key="statement.id"
           >
             <div class="statement-label">{{ statement.label }}</div>
@@ -31,7 +31,7 @@
                       v-if="getTarget(value) != '_self'"
                       :href="getStatementURL(value)"
                       :target="getTarget(value)"
-                      :style="getStyle(value)"
+                      :class="getClass(value)"
                     >{{ getValue(value) }}</a>
                     <router-link
                       v-if="getTarget(value) == '_self'"
@@ -145,48 +145,47 @@ export default {
     wikidocumentaries() {
       return this.$store.state.wikidocumentaries;
     },
-    shownLeadingStatements() {
-      this.shownRemainingStaments = [];
+    shownStatements() {
+    //   this.shownRemainingStaments = [];
 
       var statements = this.wikidocumentaries.wikidata.statements;
-      var shownLeadingStatements = [];
+      var shownStatements = [];
 
+        //properties that are not displayed (displayed in some other form)
       const removableProperties = [
-        "P18",
-        "P1472",
-        "P41",
-        "P94",
-        "P158",
-        "P242",
-        "P948",
-        "P443",
-        "P910",
-        "P2959",
-        "P109",
-        "P3896",
-        "P1464",
-        "P1465",
-        "P1791",
-        "P1792",
-        "P1740"
+        "P18", //image
+        "P1472", //Commons Creator page
+        "P41", //flag image (P41)
+        "P94", //shield image (P4004) > In the header
+        "P158", //seal image (P158)
+        "P242", //locator map image (P242)
+        "P948", //page banner (P948)
+        "P2959", //permanent duplicated item (P2959)
+        "P109", //signature (P109)
+        "P3896", //geoshape (P3896)
+        "P1464", //category for people born here (P1464)
+        "P1465", //category for people who died here (P1465)
+        "P1791", //category of people buried here (P1791)
+        "P1792", //category of associated people (P1792)
+        "P1740" //category for films shot at this location (P1740)
       ];
 
       var totalValuesCount = 0;
-      const maxLeadingStatementsCount = 6;
+    //   const maxLeadingStatementsCount = 6;
 
       for (var i = 0; i < statements.length; i++) {
         var statement = statements[i];
 
         //console.log(statement);
         if (
-          statement.id == "P31" &&
+          statement.id == "P31" && //instance of
           statement.values.length == 1 &&
           (statement.values[0].qualifiers == undefined ||
             statement.values[0].qualifiers.length == 0)
         ) {
           continue;
         } else if (statement.id == "P998") {
-          // Value may be very long
+          // DMOZ ID (P998), Value may be very long
 
           var modifiedStatement = Object.assign({}, statement);
 
@@ -210,17 +209,17 @@ export default {
             modifiedStatement.values[j].value = newValue;
           }
 
-          //if (totalValuesCount < maxLeadingStatementsCount) {
-          shownLeadingStatements.push(modifiedStatement);
-          //}
-          //else {
-          //    this.shownRemainingStaments.push(modifiedStatement);
-          //}
+        //   if (totalValuesCount < maxLeadingStatementsCount) {
+        //   shownStatements.push(modifiedStatement);
+        //   //}
+        //   //else {
+        //   //    this.shownRemainingStaments.push(modifiedStatement);
+        //   //}
 
-          totalValuesCount += statement.values.length;
+        //   totalValuesCount += statement.values.length;
         } else if (removableProperties.indexOf(statement.id) == -1) {
           //if (totalValuesCount < maxLeadingStatementsCount) {
-          shownLeadingStatements.push(statement);
+          shownStatements.push(statement);
           //}
           //else {
           //    this.shownRemainingStaments.push(statement);
@@ -230,7 +229,7 @@ export default {
         }
       }
 
-      return shownLeadingStatements;
+      return shownStatements;
     },
     wikidataURL: function() {
       //console.log(this.wikidocumentaries);
@@ -274,18 +273,18 @@ export default {
         return "_blank";
       }
     },
-    getStyle(value) {
+    getClass(value) {
       if (value.sitelinks != undefined) {
         if (value.sitelinks[this.$i18n.locale + "wiki"] != undefined) {
           return "";
         } else if (value.sitelinks.enwiki != undefined) {
           return "";
         } else {
-          var style = "color: #52758b;";
+          var style = "external";
           return style;
         }
       } else {
-        var style = "color: #52758b;";
+        var style = "external";
         return style;
       }
     },
@@ -438,5 +437,11 @@ ul.statement-values {
 .top-exander {
   margin-bottom: -10px;
   padding-right: 0px;
+}
+
+.external:after {
+  font-family: "WikiFont-Glyphs";
+  font-weight: 400;
+  content: " \e030";
 }
 </style>

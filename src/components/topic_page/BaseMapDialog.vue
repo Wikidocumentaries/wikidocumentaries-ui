@@ -210,14 +210,10 @@ export default {
 }
 
 .modal-header {
-    padding: 6px 12px;
     flex-wrap: wrap;
-    font-family: 'Barlow Condensed', sans-serif;
-    color: #8e8e8e;
 }
 
 .modal-header-h3 {
-    text-transform: uppercase;
     font-size: 1.4em;
     font-weight: bold;
 }
@@ -281,7 +277,7 @@ export default {
 .thumb-image {
     width: 100%;
     cursor: pointer;
-    border: 6px solid #353535;
+    border: 2px solid #333;
 }
 
 .thumb-image-selected {
