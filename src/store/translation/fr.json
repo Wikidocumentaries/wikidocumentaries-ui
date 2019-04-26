@@ -167,7 +167,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Emplacements",
+			"headerTitle": "À cet endroit",
 			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
 			"sortMenu": {
 				"title": "Trier les emplacements",
@@ -310,8 +310,9 @@
 			"measurements": "Mesures",
 			"copyright": "Droits d’auteur",
 			"license": "Licence de droits d'auteur",
-			"work": "Œuvre",
+			"work": "Travail représenté dans cette image",
 			"photograph": "Photographie",
+			"image": "Image",
 			"photographer": "Photographe",
 			"addPhotographData": "Ajouter des informations sur le photographe",
 			"copyrightNotePD": "L’image est sous licence avec $1, mais d’après ses métadonnées, l’image est dans le domaine public.",
@@ -325,7 +326,8 @@
 			"fileFormat": "Format du fichier",
 			"remove": "Supprimer",
 			"moveTo": "Déplacer vers un autre champ",
-			"addData": "Ajouter des données"
+			"addData": "Ajouter des données",
+			"uploader": "Téléverseur"
 		},
 		"imageActions": {
 			"rotateImage": "Faire pivoter l’image",
@@ -365,13 +367,15 @@
 		"ok": "OK",
 		"cancel": "Annuler",
 		"helpText": "Aide",
+		"expand": "Développer cette section",
+		"collapse": "Replier cette section",
 		"menus": {
 			"actionMenuTitle": "Actions",
 			"actionMenuTooltip": "Actions",
 			"languageMenuTitle": "Choisir la langue",
 			"languageMenuTooltip": "Choisissez votre langue",
 			"myLanguagesItem": "Mes langues",
-			"languageMenuTranslate": "Traduire cet article"
+			"languageMenuTranslate": "Traduire cet article en anglais"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traduisez dans votre langue"

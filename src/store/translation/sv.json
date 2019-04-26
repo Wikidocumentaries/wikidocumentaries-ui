@@ -162,7 +162,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Platser",
+			"headerTitle": "På denna plats",
 			"sortMenu": {
 				"title": "Sortera platser",
 				"tooltip": "Sortera platser",
@@ -291,6 +291,7 @@
 			"license": "Upphovsrättslicens",
 			"work": "Verk",
 			"photograph": "Fotografi",
+			"image": "Bild",
 			"photographer": "Fotograf",
 			"addPhotographData": "Lägg till information om fotografiet",
 			"digitalCopy": "Digital kopia",
@@ -302,7 +303,8 @@
 			"fileFormat": "Filformat",
 			"remove": "Ta bort",
 			"moveTo": "Flytta till ett annat fält",
-			"addData": "Lägg till data"
+			"addData": "Lägg till data",
+			"uploader": "Uppladdare"
 		},
 		"imageActions": {
 			"rotateImage": "Rotera bilden",
@@ -342,13 +344,15 @@
 		"ok": "OK",
 		"cancel": "Avbryt",
 		"helpText": "Hjälp",
+		"expand": "Expandera avsnittet",
+		"collapse": "Stäng detta avsnitt",
 		"menus": {
 			"actionMenuTitle": "Åtgärder",
 			"actionMenuTooltip": "Åtgärder",
 			"languageMenuTitle": "Välj språk",
 			"languageMenuTooltip": "Välj ditt språk",
 			"myLanguagesItem": "Mina språk",
-			"languageMenuTranslate": "Översätt denna artikel"
+			"languageMenuTranslate": "Översätt denna artikel till svenska"
 		},
 		"languageMenu": {
 			"TranslateUI": "Översätt till ditt språk"

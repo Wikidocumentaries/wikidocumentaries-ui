@@ -167,7 +167,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Места",
+			"headerTitle": "На ова место",
 			"intro": "Тука го гледате сето она што е сместено во темата на оваа страница. Прикажете список за да ги видите сите места кајшто е складирана.",
 			"sortMenu": {
 				"title": "Подреди места",
@@ -310,8 +310,9 @@
 			"measurements": "Димензии",
 			"copyright": "Авторски права",
 			"license": "Авторскоправна лиценца",
-			"work": "Дело",
+			"work": "Дело претставено на сликата",
 			"photograph": "Фотографија",
+			"image": "Слика",
 			"photographer": "Фотограф",
 			"addPhotographData": "Додај информации за фотографијата",
 			"copyrightNotePD": "Сликата се води под лиценцата $1, но метаподатоците укажуваат дека е во јавна сопственост.",
@@ -325,7 +326,8 @@
 			"fileFormat": "Формат на податотеката",
 			"remove": "Отстрани",
 			"moveTo": "Премести во друго поле",
-			"addData": "Додај податоци"
+			"addData": "Додај податоци",
+			"uploader": "Подигач"
 		},
 		"imageActions": {
 			"rotateImage": "Сврти слика",
@@ -365,13 +367,15 @@
 		"ok": "ОК",
 		"cancel": "Откажи",
 		"helpText": "Помош",
+		"expand": "Расклопи го одделов",
+		"collapse": "Склопи го одделов",
 		"menus": {
 			"actionMenuTitle": "Дејства",
 			"actionMenuTooltip": "Дејства",
 			"languageMenuTitle": "Изберете јазик",
 			"languageMenuTooltip": "Изберете јазик",
 			"myLanguagesItem": "Мои јазици",
-			"languageMenuTranslate": "Преведи ја статијава"
+			"languageMenuTranslate": "Преведи ја статијава на македонски"
 		},
 		"languageMenu": {
 			"TranslateUI": "Преведете на вашиот јазик"
