@@ -11,6 +11,7 @@ Vue.use(VueI18n)
 import * as messages from './store/messages.js'
 const i18n = new VueI18n({
   locale: 'en', // set locale
+  fallbackLocale: 'en',
   messages // set locale messages
 })
 
