@@ -99,7 +99,16 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.inscriptions') }}</div>
-                  <div class="grid-body unedited">{{ element.inscriptions }}</div>
+                  <div
+                    class="grid-body unedited"
+                    v-for="item in element.inscriptions"
+                    :key="item.id"
+                  >
+                    <div v-for="block in item" :key="block.id">
+                      <div class="key">{{ block.type }}:</div>
+                      <div class="value">{{ block.content }}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="grid-row">
@@ -1175,30 +1184,6 @@ export default {
   font-weight: bold;
 }
 
-.button {
-  font-weight: bold;
-  min-width: 120px;
-  background: var(--main-link-color);
-  margin-left: 10px;
-  min-height: 35px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-
-.cancel {
-  color: var(--main-blue);
-  background: white;
-}
-
-.cancel:hover {
-  border: 1px solid var(--main-blue);
-}
-
 /*
  * The following styles are auto-applied to elements with
  * transition="modal" when their visibility is toggled
@@ -1211,6 +1196,14 @@ export default {
 
 .modal-leave-active {
   /*opacity: 0;*/
+}
+
+.key {
+  display: inline-block;
+}
+
+.value {
+  display: inline;
 }
 
 .modal-enter .modal-container,
