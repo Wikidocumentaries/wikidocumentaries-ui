@@ -20,9 +20,10 @@
     <!-- <SampoGallery></SampoGallery> -->
     <Locations id="locations"></Locations>
     <Works id="works"></Works>
-    <Depicted id="locations"></Depicted>
+    <Depicts id="depicts"></Depicts>
+    <Depicted id="depicted"></Depicted>
     <People id="people"></People>
-    <EventList></EventList>
+    <EventList id="events"></EventList>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
@@ -47,6 +48,7 @@ import Works from "@/components/topic_page/Works";
 import People from "@/components/topic_page/People";
 import Locations from "@/components/topic_page/Locations";
 import Depicted from "@/components/topic_page/Depicted";
+import Depicts from "@/components/topic_page/Depicts";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -69,7 +71,8 @@ export default {
     Works,
     People,
     Locations,
-    Depicted
+    Depicted,
+    Depicts
     //TopicNewspapers
   },
   computed: {},

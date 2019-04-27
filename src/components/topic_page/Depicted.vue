@@ -91,7 +91,17 @@ export default {
         let sparql;
         sparql = `
 SELECT ?depicted ?depictedLabel ?creatorLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
-    ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
+  {
+      { 
+        ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
+      }
+      UNION
+      { 
+        wd:Q1757 wdt:P1343 ?depicted .
+      }
+    }
+  ?depicted rdfs:label ?depictedLabel .
+    FILTER(LANG(?depictedLabel)="fi")
     OPTIONAL { ?depicted wdt:P170 ?creator . }
     OPTIONAL { ?depicted wdt:P18 ?image. }
     OPTIONAL { ?depicted wdt:P973 ?desc_url. }

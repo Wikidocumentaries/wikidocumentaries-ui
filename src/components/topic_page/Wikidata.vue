@@ -13,11 +13,7 @@
       <div class="item-instance-title">{{ title }}</div>
       <div v-if="wikidocumentaries.wikidata != undefined" class="data">
         <ul class="statements">
-          <li
-            class="statement-list-item"
-            v-for="statement in shownStatements"
-            :key="statement.id"
-          >
+          <li class="statement-list-item" v-for="statement in shownStatements" :key="statement.id">
             <div class="statement-label">{{ statement.label }}</div>
             <ul class="statement-values">
               <li
@@ -37,18 +33,18 @@
                       v-if="getTarget(value) == '_self'"
                       :to="getStatementURL(value)"
                     >{{ getValue(value) }}</router-link>
-                    <div 
-                    v-for="q in value.qualifiers"
-                    :key="q.id"
-                    class="qualifier"
+                    <div
+                      v-for="q in value.qualifiers"
+                      :key="q.id"
+                      class="qualifier"
                     >{{ q.label }}: {{ q.value }}</div>
                   </div>
                   <div v-else>
                     <div>{{ getValue(value) }}</div>
-                    <div 
-                    v-for="q in value.qualifiers"
-                    :key="q.id"
-                    class="qualifier"
+                    <div
+                      v-for="q in value.qualifiers"
+                      :key="q.id"
+                      class="qualifier"
                     >{{ q.label }}: {{ q.value }}</div>
                   </div>
                 </div>
@@ -109,7 +105,7 @@
         <button class="expander" v-if="shownRemainingStaments.length > 0" @click="switchExpand()">
           <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
           <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-        </button> -->
+        </button>-->
       </div>
     </div>
     <div class="haze" id="wd">
@@ -146,12 +142,12 @@ export default {
       return this.$store.state.wikidocumentaries;
     },
     shownStatements() {
-    //   this.shownRemainingStaments = [];
+      //   this.shownRemainingStaments = [];
 
       var statements = this.wikidocumentaries.wikidata.statements;
       var shownStatements = [];
 
-        //properties that are not displayed (displayed in some other form)
+      //properties that are not displayed (displayed in some other form)
       const removableProperties = [
         "P18", //image
         "P1472", //Commons Creator page
@@ -171,7 +167,7 @@ export default {
       ];
 
       var totalValuesCount = 0;
-    //   const maxLeadingStatementsCount = 6;
+      //   const maxLeadingStatementsCount = 6;
 
       for (var i = 0; i < statements.length; i++) {
         var statement = statements[i];
@@ -209,14 +205,14 @@ export default {
             modifiedStatement.values[j].value = newValue;
           }
 
-        //   if (totalValuesCount < maxLeadingStatementsCount) {
-        //   shownStatements.push(modifiedStatement);
-        //   //}
-        //   //else {
-        //   //    this.shownRemainingStaments.push(modifiedStatement);
-        //   //}
+          //   if (totalValuesCount < maxLeadingStatementsCount) {
+          //   shownStatements.push(modifiedStatement);
+          //   //}
+          //   //else {
+          //   //    this.shownRemainingStaments.push(modifiedStatement);
+          //   //}
 
-        //   totalValuesCount += statement.values.length;
+          //   totalValuesCount += statement.values.length;
         } else if (removableProperties.indexOf(statement.id) == -1) {
           //if (totalValuesCount < maxLeadingStatementsCount) {
           shownStatements.push(statement);
@@ -340,9 +336,7 @@ export default {
         //console.log("value.qualifiers != undefined");
         // text += " (";
         value.qualifiers.forEach(qualifier => {
-          text += qualifier.label + ": " + qualifier.value
-            + ",  "
-           ;
+          text += qualifier.label + ": " + qualifier.value + ",  ";
         });
         text = text.substring(0, text.length - 2);
         // text += ")";
@@ -375,7 +369,7 @@ export default {
 }
 
 .statement-list-item {
-  padding-bottom: 6px;
+  /* padding-bottom: 5px; */
   display: flex;
   /*    flex-direction: column; */
 }
@@ -383,6 +377,7 @@ export default {
 .statement-label {
   flex: 0 0 40%;
   font-weight: bold;
+  padding-bottom: 5px;
 }
 
 .statement-label::first-letter {
@@ -402,7 +397,7 @@ export default {
 
 .statement-value {
   flex: 1 1 66%;
-  padding-left: 6px;
+  padding-bottom: 5px;
 }
 
 ul.statement-values {

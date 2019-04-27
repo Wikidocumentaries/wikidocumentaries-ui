@@ -13,6 +13,7 @@ export default {
 <style>
 :root {
   --main-txt-color: #333;
+  --main-dimmed: #777;
   --main-link-color: #00a3cc;
   --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
@@ -532,6 +533,7 @@ i.wikiglyph {
   columns: 350px;
   padding: 20px 0;
   background: var(--main-modal-color);
+  font-size: 0.9em;
 }
 
 .listrow {
@@ -596,5 +598,10 @@ i.wikiglyph {
 
 .block {
   display: inline-block;
+}
+
+.intro {
+  padding: 0 20px 10px 20px;
+  color: var(--main-dimmed);
 }
 </style>

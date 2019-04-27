@@ -213,6 +213,10 @@
             },
             "showAll": "All"
         },
+        "Depicts": {
+            "headerTitle": "Depicts",
+            "intro": "This work depicts these topics. You can sort them by time and name. Note that to see all topics, including the ones without an image, you must view the topics as a list."
+        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",
@@ -236,7 +240,7 @@
         },
         "People": {
             "headerTitle": "People related to the topic",
-            "intro": "These are people who are related to the topic of this page. You can enter a page collecting all the information about the person by clicking on it. You can display the people also as a list.",
+            "intro": "These people are associated to the topic of this page. You can choose to display them as list, which shows also people without images. They can be sorted by dates or names. Note that only those who have that information will be shown.",
             "sortMenuTitle": "Sort",
             "sortMenuTooltip": "Change the sort order",
             "sortMenuOptionBirth": "By birth date",
@@ -356,6 +360,32 @@
     "menu": {
         "TransparencySliderMenuItem": {
             "transparencyLabel": "Transparency of the historical base map:"
+        }
+    },
+    "menus": {
+        "sortMenu": {
+            "title": "Sort topics",
+            "tooltip": "Sort topics",
+            "optionTime": "By time",
+            "optionAlpha": "Alphabetically",
+            "optionTitleAlpha": "By title alphabetically",
+            "optionCreatorAlpha": "By creator alphabetically",
+            "optionDist": "By distance",
+            "optionRev": "Reverse sort",
+            "optionClear": "Clear sort"
+        },
+        "facetMenu": {
+            "title": "Facet by",
+            "tooltip": "Facet topics by different criteria",
+            "optionType": "Type",
+            "optionColl": "Creator",
+            "optionCity": "Location"
+        },
+        "displayMenu": {
+            "title": "Display as",
+            "tooltip": "Choose the display",
+            "optionGallery": "Gallery",
+            "optionList": "List"
         }
     },
     "general": {
