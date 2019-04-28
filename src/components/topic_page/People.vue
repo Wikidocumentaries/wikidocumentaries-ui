@@ -34,7 +34,7 @@
 				<div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.person.value)" >
-            	<b>{{ item.person.label }}</b> ({{ item.inLabel }}) {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
+            	<b>{{ item.person.label }}</b> (<span v-if="item.inLabel">{{ item.inLabel }}</span><span v-else><i>{{ item.outLabel }}</i></span>) {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
             </a>
             </div>
         </div>
@@ -109,7 +109,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel ?lastnameLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
@@ -128,6 +128,9 @@ SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP
       }
     }
     OPTIONAL { ?person wdt:P18 ?image. }
+    OPTIONAL { ?person wdt:P734 ?lastname. 
+              ?lastname rdfs:label ?lastnameLabel .
+              FILTER(LANG(?lastnameLabel)="fi") }
     OPTIONAL { ?person wdt:P569 ?birth.
               BIND(STR(YEAR(?birth)) AS ?birth_year)}
     OPTIONAL { ?person wdt:P570 ?death.
@@ -141,7 +144,7 @@ SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
-GROUP BY ?person ?personLabel
+GROUP BY ?person ?personLabel ?lastnameLabel
 LIMIT 1000
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);

@@ -588,7 +588,9 @@ i.wikiglyph {
 
 .footer {
   height: 45px;
-  background: var(--main-txt-color);
+  background: white;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 
 .active-term {

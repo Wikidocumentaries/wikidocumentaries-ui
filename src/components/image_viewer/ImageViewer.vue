@@ -166,7 +166,8 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.measurements') }}</div>
-                  <div class="grid-body unedited">{{ element.measurements }}</div>
+                  <div class="grid-body unedited" v-for="measurement in element.measurements"
+                    :key="measurement.id">{{ measurement }}</div>
                 </div>
               </div>
               <div class="grid-row">

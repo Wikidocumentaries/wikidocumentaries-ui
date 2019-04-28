@@ -31,7 +31,7 @@
     ></TopicImages>
     <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
     <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
-    <div class="footer"></div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -49,6 +49,7 @@ import People from "@/components/topic_page/People";
 import Locations from "@/components/topic_page/Locations";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
+import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -72,7 +73,8 @@ export default {
     People,
     Locations,
     Depicted,
-    Depicts
+    Depicts,
+    Footer
     //TopicNewspapers
   },
   computed: {},

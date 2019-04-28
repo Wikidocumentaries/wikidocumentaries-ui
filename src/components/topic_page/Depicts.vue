@@ -13,6 +13,7 @@
           <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
+      <div class="intro">{{ $t('topic_page.Depicts.intro') }}</div>
       <div v-if="gallery" class="gallery">
         <router-link
           tag="div"

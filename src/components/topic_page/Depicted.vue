@@ -8,6 +8,7 @@
                 <div slot="menu-title">{{ $t('topic_page.Depicted.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
+        <div class="intro">{{ $t('topic_page.Depicted.intro') }}</div>
         <div v-if="gallery" class="gallery">
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
