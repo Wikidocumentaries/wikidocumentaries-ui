@@ -253,12 +253,4 @@ const selectResults = (lcl) => {
     width: 150px;
 }
 
-.list {
-    columns: 300px 3;
-}
-
-.listrow {
-    margin-left:20px;
-}
-
 </style>

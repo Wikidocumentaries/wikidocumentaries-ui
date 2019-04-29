@@ -6,7 +6,7 @@
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>
         </div>
-
+        <div class="intro">{{ $t('topic_page.TopicImages.intro') }}</div>
         <ImageGrid class="image-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
         </ImageGrid>
     </div>

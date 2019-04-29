@@ -380,7 +380,7 @@ a:hover {
     position: relative;
     flex-direction: row;
     overflow-y: hidden;
-    padding-bottom: 45px;
+    /* padding-bottom: 45px; */
     max-height: 50vh;
   }
 
@@ -531,13 +531,14 @@ i.wikiglyph {
 
 .list {
   columns: 350px;
-  padding: 20px 0;
+  margin: 0 10px 0;
   background: var(--main-modal-color);
   font-size: 0.9em;
+  padding: 15px 10px;
 }
 
 .listrow {
-  margin-left: 20px;
+  padding-bottom: 3px;
 }
 
 .data-select {

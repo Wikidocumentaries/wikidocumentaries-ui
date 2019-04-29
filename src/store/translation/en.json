@@ -29,7 +29,7 @@
         },
         "TopicImages": {
             "headerTitle": "Images from the archives",
-            "intro": "These images are gathered from several sources and they might not always represent to topic accurately. You can favourite an image or remove it from the page if it does not belong.",
+            "intro": "These images are gathered from several sources and they might not always represent to topic accurately. You can view the original image and you can place the image a map if it has a location pin.",
             "actionsMenu": {
                 "menuTitle": "Display or arrange images",
                 "tooltip": "Display or arrange images",

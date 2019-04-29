@@ -166,8 +166,11 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.measurements') }}</div>
-                  <div class="grid-body unedited" v-for="measurement in element.measurements"
-                    :key="measurement.id">{{ measurement }}</div>
+                  <div
+                    class="grid-body unedited"
+                    v-for="measurement in element.measurements"
+                    :key="measurement.id"
+                  >{{ measurement }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -370,7 +373,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
-                  <div class="data-text limit">
+                  <div class="data-text">
                     <a :href="element.infoURL" target="_blank">{{ element.infoURL }}</a>
                   </div>
                 </div>
@@ -405,6 +408,7 @@
             </div>
           </div>
         </div>
+        <Footer></Footer>
       </div>
     </div>
   </transition>
@@ -414,6 +418,7 @@
 import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
+import Footer from "@/components/Footer";
 
 const MENU_ACTIONS = {
   SELECT_HEADER: 0
@@ -447,7 +452,8 @@ export default {
   components: {
     HeaderLink,
     Dataselect,
-    ToolbarMenu
+    ToolbarMenu,
+    Footer
   },
   props: {
     shouldShowDialog: Boolean
@@ -1072,12 +1078,12 @@ export default {
   display: inline-block;
 }
 
-.limit {
+/* .limit {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 350px;
-}
+} */
 
 .metadata-map {
   width: 100%;
@@ -1113,6 +1119,7 @@ export default {
 
 .data-text {
   display: inline-block;
+  word-break: break-all;
 }
 
 /* .unedited::after, .edited::after {

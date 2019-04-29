@@ -23,7 +23,7 @@
     <Depicts id="depicts"></Depicts>
     <Depicted id="depicted"></Depicted>
     <People id="people"></People>
-    <EventList id="events"></EventList>
+    <!--EventList id="events"></EventList-->
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"

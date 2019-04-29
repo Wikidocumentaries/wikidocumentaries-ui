@@ -9,7 +9,7 @@
         v-show="wikidocumentaries.wikidata != undefined"
       ></HeaderLink>
     </div>
-    <div :class="[isExpanded ? 'expanded' : '']" class="text-container dark">
+    <div :class="[isExpanded ? 'expanded' : '']" class="text-container dark" ref="datasection">
       <div class="item-instance-title">{{ title }}</div>
       <div v-if="wikidocumentaries.wikidata != undefined" class="data">
         <ul class="statements">
@@ -131,13 +131,26 @@ export default {
   data() {
     return {
       isExpanded: false,
-      shownRemainingStaments: []
+      shownRemainingStaments: [],
+      bigenough: true,
+      datasection: ''
     };
   },
   components: {
     HeaderLink
   },
   computed: {
+    isBigEnough() {
+        console.log (this.$refs.datasection.clientHeight);
+        // if (
+        //     this.$refs.datasection.clientHeight
+        // ) {
+        //     this.bigenough = true
+        // } else {
+        //     this.bigenough = false;
+        // }
+        // return bigenough;
+    },
     wikidocumentaries() {
       return this.$store.state.wikidocumentaries;
     },
@@ -252,9 +265,9 @@ export default {
     }
   },
   methods: {
-    switchExpand(event) {
-      this.expanded = !this.expanded;
-    },
+    // switchExpand(event) {
+    //   this.expanded = !this.expanded;
+    // },
     getStatementURL(value) {
       if (value.id) {
         return "/" + value.id + "?language=" + this.$i18n.locale;

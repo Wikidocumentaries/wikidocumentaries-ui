@@ -1,7 +1,7 @@
 <template>
     <div :class="( wikidocumentaries.headerImageURL ? 'header' : 'header-compact')">
         <img :src="coatOfArms" class="header-coa" />
-        <img :src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
+        <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
         <div class="header-contents">
         <div id="shade" :class="(wikidocumentaries.headerImageURL ? 'bottomshade' : 'noshade')">
@@ -54,8 +54,24 @@ export default {
                 return false;
             }
         },
+        headerImage () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let imageid;
+            let imageurl;
+            for (var index in statements) {
+                if (statements[index].id == 'P18') {
+                    imageid = statements[index].values[0].value;
+                }
+            }
+            if (imageid) {
+                imageurl = "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+imageid;
+            } else {
+                imageurl = this.$store.state.wikidocumentaries.headerImageURL;
+            }
+            return imageurl;
+        },
         coatOfArms () {
-            const statements = this.$store.state.wikidocumentaries.wikidata.statements
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
             let coaid;
             for (var index in statements) {
                 if (statements[index].id == 'P94') {
