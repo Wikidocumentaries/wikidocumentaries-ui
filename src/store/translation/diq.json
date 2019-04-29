@@ -106,7 +106,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Meqaleyi yewna zıwan de bıwane",
-				"translateArticleText": "Nê meqaleyi bıçarne ra zıwanê xo",
+				"translateArticleText": "Enê meqaleyi bıçarne era Zazaki",
 				"otherLanguagestext": "Zıwanê bini"
 			}
 		},
@@ -202,6 +202,22 @@
 	"openlayersplugin": {
 		"WikimapsWarperLayer": {
 			"attribution2PrefixText": "Xeritaya rektifiye"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Mewzuyan abırne",
+			"tooltip": "Mewzuyan abırne",
+			"optionAlpha": "Alfabetik"
+		},
+		"facetMenu": {
+			"optionType": "Babet",
+			"optionColl": "Vıraştoğ",
+			"optionCity": "Herune"
+		},
+		"displayMenu": {
+			"optionGallery": "Galeriye",
+			"optionList": "Liste"
 		}
 	},
 	"general": {

@@ -34,7 +34,7 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder von den Archiven",
-			"intro": "Diese Bilder wurden von mehreren Quellen gesammelt und könnten das Thema nicht immer exakt darstellen. Du kannst ein Bild favorisieren oder es von der Seite entfernen, falls es nicht dort hingehört.",
+			"intro": "Diese Bilder wurden von mehreren Quellen gesammelt und könnten das Thema nicht immer exakt darstellen. Du kannst das Originalbild ansehen und das Bild auf einer Karte platzieren, falls es einen Standortpin hat.",
 			"actionsMenu": {
 				"menuTitle": "Bilder anzeigen oder anordnen",
 				"tooltip": "Bilder anzeigen oder anordnen",
@@ -162,7 +162,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Den Artikel in einer anderen Sprache lesen",
-				"translateArticleText": "Diesen Artikel in Deutsch übersetzen",
+				"translateArticleText": "Diesen Artikel auf Deutsch übersetzen",
 				"otherLanguagestext": "Andere Sprachen"
 			}
 		},
@@ -218,6 +218,10 @@
 			},
 			"showAll": "Alle"
 		},
+		"Depicts": {
+			"headerTitle": "Stellt dar",
+			"intro": "Dieses Werk bildet diese Themen ab. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
+		},
 		"Works": {
 			"headerTitle": "Werke",
 			"intro": "Dies sind Werke von der Person, dem Kollektiv oder der Organisation, die Thema dieser Seite ist. Du kannst eine Seite eingeben, die alle Informationen über das Werk sammelt, indem du auf sie klickst. Es werden nur Werke mit Bildern angezeigt. Als Liste anzeigen, um alle verwandten Werke anzusehen, die gespeichert wurden.",
@@ -241,7 +245,7 @@
 		},
 		"People": {
 			"headerTitle": "Personen bezüglich zum Thema",
-			"intro": "Dies sind Personen, die mit dem Thema dieser Seite verwandt sind. Du kannst eine Seite eingeben, die alle Informationen über die Person sammelt, indem du sie anklickst. Du kannst die Personen auch als Liste anzeigen.",
+			"intro": "Diese Personen sind mit dem Thema dieser Seite verknüpft. Du kannst sie als Liste anzeigen, was auch Personen ohne Bilder anzeigt. Sie können nach Datum oder Namen sortiert werden. Beachte, dass nur solche angezeigt werden, die diese Informationen haben.",
 			"sortMenuTitle": "Sortieren",
 			"sortMenuTooltip": "Die Sortierreihenfolge ändern",
 			"sortMenuOptionBirth": "Nach Geburtsdatum",
@@ -361,6 +365,32 @@
 	"menu": {
 		"TransparencySliderMenuItem": {
 			"transparencyLabel": "Transparenz der historischen Basiskarte:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Themen sortieren",
+			"tooltip": "Themen sortieren",
+			"optionTime": "Nach Zeit",
+			"optionAlpha": "Alphabetisch",
+			"optionTitleAlpha": "Nach Titel alphabetisch",
+			"optionCreatorAlpha": "Nach Urheber alphabetisch",
+			"optionDist": "Nach Entfernung",
+			"optionRev": "Umgekehrte Sortierung",
+			"optionClear": "Sortierung löschen"
+		},
+		"facetMenu": {
+			"title": "Aspekt nach",
+			"tooltip": "Aspektthemen nach unterschiedlichen Kriterien",
+			"optionType": "Typ",
+			"optionColl": "Urheber",
+			"optionCity": "Standort"
+		},
+		"displayMenu": {
+			"title": "Anzeigen als",
+			"tooltip": "Die Anzeige auswählen",
+			"optionGallery": "Galerie",
+			"optionList": "Liste"
 		}
 	},
 	"general": {
