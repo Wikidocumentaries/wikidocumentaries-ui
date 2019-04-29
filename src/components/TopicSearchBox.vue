@@ -1,7 +1,7 @@
 <template>
     <div class="topic-search-box">
         <div class="search-items">
-            <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
+            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
             <a href="#" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass"></i></a>
             <!--button @click="findTopics" class="button-find"><span>{{ $t('LandingPage.search') }}</span></button-->
         </div>
@@ -90,9 +90,9 @@ export default {
             var url = "https://www.wikidata.org/w/api.php?" +
                 "action=wbsearchentities" +
                 "&search=" + encodeURIComponent(topicInputValue) +
-                "&language=" + this.$i18n.locale + 
-                "&uselang=" + this.$i18n.locale + 
-                "&format=json" + 
+                "&language=" + this.$i18n.locale +
+                "&uselang=" + this.$i18n.locale +
+                "&format=json" +
                 "&type=item";
                 "&callback=callback";
 
@@ -107,10 +107,10 @@ export default {
                         //console.log(data);
 
                         if (data.search.length > 0) {
-                            
-                            var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?" + 
+
+                            var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?" +
                                     "action=query&prop=pageprops&ppprop=wikibase_item&redirects=resolve&titles=";
-                                    
+
                             for (var i = 0; i < data.search.length; i++) {
                                 var item=data.search[i];
                                 var topic = {
@@ -145,7 +145,7 @@ export default {
                                 //                 for (var j = 0; j < topics.length; j++) {
                                 //                     if (topics[j].wikipage == pages[i].title && pages[i].pageprops != undefined) {
                                 //                         topics[j].wikidata = pages[i].pageprops.wikibase_item;
-                                //                         topics[j].wikidatalink = "https://www.wikidata.org/wiki/" + 
+                                //                         topics[j].wikidatalink = "https://www.wikidata.org/wiki/" +
                                 //                     pages[i].pageprops.wikibase_item;
                                 //                     break;
                                 //                     }
