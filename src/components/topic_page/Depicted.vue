@@ -93,11 +93,11 @@ export default {
         sparql = `
 SELECT ?depicted ?depictedLabel ?creatorLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
   {
-      { 
+      {
         ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
       }
       UNION
-      { 
+      {
         wd:Q1757 wdt:P1343 ?depicted .
       }
     }
@@ -151,7 +151,7 @@ LIMIT 1000
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
-						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						this.results = selectResults(this.$i18n.locale);
         },
 				onDisplayChange (menuItem) {
 					switch (menuItem.id) {
