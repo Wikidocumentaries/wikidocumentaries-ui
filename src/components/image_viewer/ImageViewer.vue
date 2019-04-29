@@ -19,10 +19,10 @@
               class="viewer-image"
             >
             <div class="viewer-contents" v-show="showLinks">
-              <div class="step-right">
+              <div v-if="index < items.length-1" @click="stepRight" class="step-right">
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
-              <div class="step-left">
+              <div v-if="index > 0" @click="stepLeft" class="step-left">
                 <i class="wikiglyph wikiglyph-caret-left step-glyph"></i>
               </div>
               <div class="main-toolbar-over">
@@ -431,6 +431,8 @@ export default {
   data() {
     return {
       showModal: false,
+      items: [],
+      index: 0,
       element: {},
       dimension: { x: -1, y: -1 },
       map: null,
@@ -469,9 +471,11 @@ export default {
     handleCancel: function() {
       this.$emit("close");
     },
-    show(element) {
-      this.element = element;
-      console.log("Element: ", element);
+    show(items, index) {
+      this.items = items;
+      this.index = index;
+      this.element = items[index];
+      // console.log("Element: ", this.element);
       this.showModal = true;
       this.$nextTick(function() {
         this.createMap();
@@ -479,6 +483,14 @@ export default {
     },
     hide() {
       this.showModal = false;
+    },
+    stepLeft() {
+      this.index--;
+      this.element = this.items[this.index];
+    },
+    stepRight() {
+      this.index++;
+      this.element = this.items[this.index];
     },
     onimageload() {
       this.$nextTick(function() {
@@ -582,7 +594,7 @@ export default {
       }
     },
     handleMapClick(event) {
-      console.log("Map clicked: ", event);
+      // console.log("Map clicked: ", event);
     },
     getFirstGeoLocationGeomType() {
       var type = null;

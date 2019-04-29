@@ -1,7 +1,7 @@
 <template> <!-- to use with a data, each item has to have id, imageURL and title. If the item has infoURL, geoLocations, authors, institutions, license they are used. -->
     <div class="image-grid">
         <div class="grid-items">
-            <div class="grid-item" v-for="item in items" :key="item.id" @click="showImageViewer(item)">
+            <div class="grid-item" v-for="(item, index) in items" :key="item.id" @click="showImageViewer(index)">
                 <img :src="item.thumbURL" class="thumb-image" :alt="item.title"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
@@ -69,8 +69,8 @@ export default {
         showItemGeolocation(item) {
             this.$emit('showItemGeolocation', item);
         },
-        showImageViewer (item) {
-          this.$refs.imageviewer.show(item);
+        showImageViewer (index) {
+          this.$refs.imageviewer.show(this.items, index);
         },
         openItemInfoURL(url) {
             window.open(url, "_blank");
