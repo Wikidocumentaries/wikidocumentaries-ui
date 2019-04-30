@@ -7,6 +7,7 @@
     >{{ term }}</div>
     <div class="search-results" :style="styleObject" @mouseleave="hideMenu">
       <div :class="[shouldShowMenu ? showClass : hideClass]">
+        <div v-show="topicInputValue.split(' ').length > 1" class="data-button" @click="reverseTerm">Reverse</div>
         <input
           id="findTopicInput"
           @input="debounceFindTopics"
@@ -42,7 +43,7 @@ export default {
       topics: [],
       maxSummaryLengthInChars: 50,
       styleObject: {
-          //left: 0
+        //left: 0
       }
     };
   },
@@ -74,6 +75,10 @@ export default {
     },
     openSearch: function() {
       this.topicInputValue = this.term;
+      this.debounceFindTopics();
+    },
+    reverseTerm: function() {
+      this.topicInputValue = this.topicInputValue.split(' ').reverse().join(' ');
       this.debounceFindTopics();
     },
     findTopics: function() {
@@ -195,6 +200,7 @@ export default {
   box-sizing: border-box;
   border: 2px #333 solid;
   width: -webkit-fill-available;
+  width: -moz-available;
 }
 
 .input-drop:focus {

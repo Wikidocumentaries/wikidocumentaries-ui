@@ -554,6 +554,19 @@ i.wikiglyph {
   /* transition: background 80ms ease-in, color 80ms ease-in; */
 }
 
+.data-button {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 7px;
+  background: var(--main-dimmed);
+  color: white;
+  padding: 0 7px;
+  border-radius: 1em;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
 .data-select::after {
   font-family: "WikiFont-Glyphs";
   font-weight: 400;
@@ -562,7 +575,7 @@ i.wikiglyph {
 }
 
 .data-select:hover,
-.ner:hover {
+.ner:hover, .data-button:hover {
   background: black;
   /* border-radius: 0;*/
   color: white;
