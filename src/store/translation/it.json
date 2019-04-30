@@ -133,7 +133,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leggi la voce in un'altra lingua",
-				"translateArticleText": "Traduci questa voce nella tua lingua",
+				"translateArticleText": "Traduci questa voce in italiano",
 				"otherLanguagestext": "Altre lingue"
 			}
 		},
@@ -196,6 +196,17 @@
 			"counterclockwise": "in senso antiorario",
 			"horizontal": "orizzontale",
 			"vertical": "verticale"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionRev": "Ordinamento inverso"
+		},
+		"facetMenu": {
+			"optionType": "Tipo"
+		},
+		"displayMenu": {
+			"title": "Mostra come"
 		}
 	},
 	"general": {

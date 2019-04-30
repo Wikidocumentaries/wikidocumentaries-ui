@@ -91,7 +91,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Læs artiklen på et andet sprog",
-				"translateArticleText": "Oversæt denne artikel til dit sprog",
+				"translateArticleText": "Oversæt denne artikel til engelsk",
 				"otherLanguagestext": "Andre sprog"
 			}
 		},
@@ -198,6 +198,25 @@
 	"map_search_page": {
 		"HistoricalMapsSearch": {
 			"filterBySourceMenuText": "Filtrer efter kilde..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"tooltip": "Sorter emner",
+			"optionTime": "Efter tid",
+			"optionAlpha": "Alfabetisk",
+			"optionTitleAlpha": "Efter titel alfabetisk",
+			"optionDist": "Efter afstand",
+			"optionClear": "Ryd sortering"
+		},
+		"facetMenu": {
+			"optionType": "Type",
+			"optionCity": "Sted"
+		},
+		"displayMenu": {
+			"title": "Vis som",
+			"optionGallery": "Galleri",
+			"optionList": "Liste"
 		}
 	},
 	"general": {

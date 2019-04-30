@@ -103,7 +103,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "다른 언어로 문서 읽기",
-				"translateArticleText": "이 문서를 내 언어로 번역하기",
+				"translateArticleText": "이 문서를 영어로 번역하기",
 				"otherLanguagestext": "다른 언어"
 			}
 		},
@@ -208,6 +208,7 @@
 			"photograph": "사진",
 			"image": "이미지",
 			"photographer": "촬영자",
+			"addPhotographData": "사진에 관한 정보 추가",
 			"platformId": "ID",
 			"imageInfoPage": "이미지 정보 페이지",
 			"imageDimensions": "이미지 크기",
@@ -221,6 +222,7 @@
 		"imageActions": {
 			"rotateImage": "이미지 회전",
 			"clockwise": "시계 방향",
+			"counterclockwise": "시계 반대방향",
 			"horizontal": "수평",
 			"vertical": "수직"
 		}
@@ -229,6 +231,29 @@
 		"HistoricalMapsSearch": {
 			"headerTitle": "역사적 지도 검색",
 			"filterByMapMenuText": "맵을 통해 필터..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "주제 정렬",
+			"tooltip": "주제 정렬",
+			"optionTime": "시간순",
+			"optionAlpha": "알파벳순",
+			"optionTitleAlpha": "제목 알파벳순",
+			"optionCreatorAlpha": "만든이 알파벳순",
+			"optionDist": "거리순",
+			"optionRev": "역순 정렬",
+			"optionClear": "정렬 지우기"
+		},
+		"facetMenu": {
+			"optionType": "유형",
+			"optionColl": "만든이",
+			"optionCity": "위치"
+		},
+		"displayMenu": {
+			"title": "표시 이름",
+			"tooltip": "디스플레이 선택",
+			"optionGallery": "갤러리"
 		}
 	},
 	"general": {

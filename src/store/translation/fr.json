@@ -162,7 +162,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Lire l’article dans une autre langue",
-				"translateArticleText": "Traduire cet article dans votre langue",
+				"translateArticleText": "Traduire cet article en anglais",
 				"otherLanguagestext": "Autres langues"
 			}
 		},
@@ -218,6 +218,10 @@
 			},
 			"showAll": "Tous"
 		},
+		"Depicts": {
+			"headerTitle": "Dépeint",
+			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
 		"Works": {
 			"headerTitle": "Works",
 			"intro": "Ce sont les travaux faits par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur le travail en cliquant dessus. Seuls les travaux avec des images sont affichés. Afficher comme une liste pour voir tous les travaux reliés qui ont été stockés.",
@@ -241,7 +245,7 @@
 		},
 		"People": {
 			"headerTitle": "Personnes liées au sujet",
-			"intro": "Ce sont les personnes liées au sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur la personne en cliquant dessus. Vous pouvez aussi afficher les gens sous forme de liste.",
+			"intro": "Ces personnes sont associées au sujet de cette page. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les personnes sans image. Elles peuvent être triées par date ou nom. Notez que seuls ceux qui ont cette information seront affichés.",
 			"sortMenuTitle": "Trier",
 			"sortMenuTooltip": "Modifier l'ordre de tri",
 			"sortMenuOptionBirth": "Par date de naissance",
@@ -361,6 +365,32 @@
 	"menu": {
 		"TransparencySliderMenuItem": {
 			"transparencyLabel": "Transparence de la carte de base historique :"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Trier les sujets",
+			"tooltip": "Trier les sujets",
+			"optionTime": "Selon l'heure",
+			"optionAlpha": "Par ordre alphabétique",
+			"optionTitleAlpha": "Alphabétiquement, par titre",
+			"optionCreatorAlpha": "Par créateur dans l’ordre alphabétique",
+			"optionDist": "Selon la distance",
+			"optionRev": "Tri inversé",
+			"optionClear": "Effacer le tri"
+		},
+		"facetMenu": {
+			"title": "Facette par",
+			"tooltip": "Sujets de facette selon divers critères",
+			"optionType": "Type",
+			"optionColl": "Créateur",
+			"optionCity": "Emplacement"
+		},
+		"displayMenu": {
+			"title": "Afficher comme",
+			"tooltip": "Choisir l’affichage",
+			"optionGallery": "Galerie",
+			"optionList": "Liste"
 		}
 	},
 	"general": {

@@ -95,7 +95,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Plazen",
+			"headerTitle": "Op dëser Plaz",
 			"sortMenu": {
 				"optionTime": "No der Zäit",
 				"optionDist": "No Distanz"
@@ -212,6 +212,7 @@
 		"ok": "OK",
 		"cancel": "Ofbriechen",
 		"helpText": "Hëllef",
+		"collapse": "Dësen Abschnitt zesummeklappen",
 		"menus": {
 			"actionMenuTitle": "Aktiounen",
 			"actionMenuTooltip": "Aktiounen",

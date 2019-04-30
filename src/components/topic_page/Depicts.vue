@@ -24,15 +24,15 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="thumb-title">{{ item.depictedLabel }}</div>
-            <div class="thumb-credit">{{ item.creatorLabel }} {{ item.time }}</div>
+            <div class="thumb-title">{{ item.depicted.label }}</div>
+            <div class="thumb-credit">{{ item.time }}</div>
           </div>
         </router-link>
       </div>
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.depicted.value)">
-            <b>{{ item.depictedLabel }} {{ item.time }}</b>
+            <b>{{ item.depicted.label }} {{ item.time }}</b>
           </a>
         </div>
       </div>
@@ -60,7 +60,7 @@ const DISPLAY_ACTIONS = {
 };
 
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["depictedLabel"];
+const DEFAULT_SORT = ["depicted.label"];
 
 let fullResults, currentSort, currentDisplay;
 
@@ -103,11 +103,11 @@ export default {
     sparql = `
 SELECT ?depicted ?depictedLabel (SAMPLE(?image) AS ?image) (GROUP_CONCAT(?typeLabel; separator=", ") as ?type) ?time WHERE {
   {
-      { 
+      {
         wd:Q1757 wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 ?depicted .
       }
       UNION
-      { 
+      {
         ?depicted wdt:P1343 wd:Q1757 .
       }
     }
@@ -145,23 +145,20 @@ LIMIT 1000
     onDoMenuItemAction(menuItem) {
       switch (menuItem.id) {
         case SORT_ACTIONS.BY_LABEL:
-          currentSort = ["depictedLabel"];
+          currentSort = ["depicted.label"];
           break;
         case SORT_ACTIONS.BY_TIME:
           currentSort = ["time"];
           break;
         case SORT_ACTIONS.SORT_REVERSE:
-          if (currentSort[0].charAt(0) == "-")
-            currentSort[0] = currentSort[0].substr(1);
+          if (currentSort[0].charAt(0) == '-') currentSort[0] = currentSort[0].substr(1);
           else currentSort[0] = "-" + currentSort[0];
           break;
         case SORT_ACTIONS.SORT_CLEAR:
           currentSort = DEFAULT_SORT.slice();
           break;
       }
-      this.results = fullResults
-        .sort(sortResults(currentSort))
-        .slice(0, MAX_ITEMS_TO_VIEW);
+      this.results = selectResults(this.$i18n.locale);
     },
     onDisplayChange(menuItem) {
       switch (menuItem.id) {
@@ -173,7 +170,7 @@ LIMIT 1000
           break;
       }
       this.results = selectResults(this.$i18n.locale);
-      this.gallery = currentDisplay === DISPLAY_ACTIONS.GALLERY;
+      this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
     },
     fitTitle(title) {
       var newTitle = title;
@@ -205,10 +202,9 @@ LIMIT 1000
   }
 };
 
-const selectResults = lcl => {
+const selectResults = (lcl) => {
   let filteredResults = fullResults;
-  if (currentSort[0].includes("time"))
-    filteredResults = filteredResults.filter(x => x.time);
+  if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
   if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
     if (filteredResults.find(x => x.image)) {
       // If GALLERY and at least one image
@@ -217,10 +213,9 @@ const selectResults = lcl => {
       currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
     }
   }
-  return filteredResults
-    .sort(sortResults(currentSort, lcl))
-    .slice(0, MAX_ITEMS_TO_VIEW);
+  return filteredResults.sort(sortResults(currentSort, lcl)).slice(0, MAX_ITEMS_TO_VIEW);
 };
+
 </script>
 
 <style scoped>

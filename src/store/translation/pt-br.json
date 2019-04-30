@@ -162,7 +162,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leia o artigo em outro idioma",
-				"translateArticleText": "Traduzir este artigo para o seu idioma",
+				"translateArticleText": "Traduzir este artigo para Português brasileiro",
 				"otherLanguagestext": "Outros idiomas"
 			}
 		},
@@ -218,6 +218,10 @@
 			},
 			"showAll": "Todos"
 		},
+		"Depicts": {
+			"headerTitle": "Descreve",
+			"intro": "Este trabalho descreve esses tópicos. Você pode classificá-los por hora e nome. Observe que para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
+		},
 		"Works": {
 			"headerTitle": "Trabalho",
 			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",
@@ -241,7 +245,7 @@
 		},
 		"People": {
 			"headerTitle": "Pessoas relacionadas ao tópico",
-			"intro": "Estas são pessoas relacionadas ao tópico desta página. Você pode inserir uma página coletando todas as informações sobre a pessoa clicando nela. Você pode exibir as pessoas também como uma lista.",
+			"intro": "Essas pessoas estão associadas ao tópico desta página. Você pode optar por exibi-las como lista, o que também mostra pessoas sem imagens. Eles podem ser classificados por datas ou nomes. Observe que somente aqueles que tiverem essa informação serão mostrados.",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Alterar a ordem de classificação",
 			"sortMenuOptionBirth": "Por data de nascimento",
@@ -361,6 +365,32 @@
 	"menu": {
 		"TransparencySliderMenuItem": {
 			"transparencyLabel": "Transparência do mapa base histórico:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Ordenar tópicos",
+			"tooltip": "Ordenar tópicos",
+			"optionTime": "Por tempo",
+			"optionAlpha": "Alfabeticamente",
+			"optionTitleAlpha": "Por título em ordem alfabética",
+			"optionCreatorAlpha": "Por criador em ordem alfabética",
+			"optionDist": "Pela distância",
+			"optionRev": "Ordenação reversa",
+			"optionClear": "Tipo claro"
+		},
+		"facetMenu": {
+			"title": "Faceta por",
+			"tooltip": "Tópicos de faceta por diferentes critérios",
+			"optionType": "Tipo",
+			"optionColl": "Criador",
+			"optionCity": "Localização"
+		},
+		"displayMenu": {
+			"title": "Mostrar como",
+			"tooltip": "Escolha a exibição",
+			"optionGallery": "Galeria",
+			"optionList": "Lista"
 		}
 	},
 	"general": {
