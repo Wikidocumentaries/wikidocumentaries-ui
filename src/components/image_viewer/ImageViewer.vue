@@ -387,6 +387,15 @@
                   <div class="data-text">{{ dimension.x }} X {{ dimension.y }} px</div>
                 </div>
               </div>
+              <div v-if="element.uploader" class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.uploader') }}</div>
+                  <div class="data-text">{{ element.uploader }}</div>
+                </div>
+              </div>
               <!-- <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
