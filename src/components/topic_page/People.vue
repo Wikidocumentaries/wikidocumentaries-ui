@@ -109,7 +109,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel ?lastnameLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
@@ -144,7 +144,7 @@ SELECT ?person ?personLabel ?lastnameLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
-GROUP BY ?person ?personLabel ?lastnameLabel
+GROUP BY ?person ?personLabel
 LIMIT 1000
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);

@@ -93,7 +93,7 @@ export default {
 
 .header {
     position:relative;
-    background: var(--main-modal-color);
+    background: var(--main-txt-color);
     height: 70vh;
     transition: height 0.5s;
 }

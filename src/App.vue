@@ -159,6 +159,7 @@ a:hover {
 .toolbar-item {
   height: 100%;
   position: relative;
+  text-align: left;
 }
 
 .toolbar-item a {
@@ -494,7 +495,7 @@ i.wikiglyph {
 }
 
 .gallery {
-  height: 35vh;
+  height: 40vh;
   display: flex;
   padding-left: 10px;
   overflow-x: auto;
