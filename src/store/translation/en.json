@@ -326,7 +326,8 @@
             "remove": "Remove",
             "moveTo": "Move to another field",
             "addData": "Add data",
-            "uploader": "Uploader"
+            "uploader": "Uploader",
+            "rotate": "Rotate"
         },
         "imageActions": {
             "rotateImage": "Rotate image",

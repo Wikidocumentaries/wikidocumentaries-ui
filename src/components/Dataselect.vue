@@ -7,7 +7,7 @@
     >{{ term }}</div>
     <div class="search-results" :style="styleObject" @mouseleave="hideMenu">
       <div :class="[shouldShowMenu ? showClass : hideClass]">
-        <div v-show="topicInputValue.split(' ').length > 1" class="data-button" @click="reverseTerm">Reverse</div>
+        <div v-show="topicInputValue.split(' ').length > 1" class="data-button" @click="rotateTerm">{{ $t('imageViewer.imageMetadata.rotate') }}</div>
         <input
           id="findTopicInput"
           @input="debounceFindTopics"
@@ -77,8 +77,11 @@ export default {
       this.topicInputValue = this.term;
       this.debounceFindTopics();
     },
-    reverseTerm: function() {
-      this.topicInputValue = this.topicInputValue.split(' ').reverse().join(' ');
+    rotateTerm: function() {
+      let rotated;
+      rotated = this.topicInputValue.replace(",","").split(' ');
+      rotated.push(rotated.shift());
+      this.topicInputValue = rotated.join(' ');
       this.debounceFindTopics();
     },
     findTopics: function() {
