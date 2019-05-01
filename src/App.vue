@@ -575,7 +575,8 @@ i.wikiglyph {
 }
 
 .data-select:hover,
-.ner:hover, .data-button:hover {
+.ner:hover,
+.data-button:hover {
   background: black;
   /* border-radius: 0;*/
   color: white;
@@ -620,5 +621,25 @@ i.wikiglyph {
 .intro {
   padding: 0 20px 10px 20px;
   color: var(--main-dimmed);
+}
+
+.key > .data-select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background: var(--main-dimmed);
+  margin-right: 1px;
+}
+
+.key > .data-select:hover {
+  background: var(--main-txt-color);
+}
+
+.value > .data-select {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.compound {
+  display: inline-flex;
 }
 </style>

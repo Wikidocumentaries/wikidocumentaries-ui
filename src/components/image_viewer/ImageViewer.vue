@@ -93,9 +93,9 @@
                   >{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
                 </div>
               </div>
-              <div v-if="element.inscriptions" class="grid-row">
+              <div v-show="element.inscriptions" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-signature metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.inscriptions') }}</div>
@@ -105,8 +105,8 @@
                     :key="item.id"
                   >
                     <div v-for="block in item" :key="block.id">
-                      <div class="key">{{ block.type }}:</div>
-                      <div class="value">{{ block.content }}</div>
+                      <div>{{ block.type }}:</div>
+                      <div>{{ block.content }}</div>
                     </div>
                   </div>
                 </div>
@@ -117,11 +117,10 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
-                  <Dataselect
-                    class="grid-select"
-                    v-if="element.authors"
-                    v-bind:term="element.authors"
-                  ></Dataselect>
+                  <div class="compound" v-for="creator in element.creators" :key="creator.id">
+                      <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
+                      <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
+                  </div>
                   <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
                 </div>
               </div>
@@ -349,7 +348,7 @@
             <div class="columns">
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-folder-placeholder metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-photo-gallery metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>

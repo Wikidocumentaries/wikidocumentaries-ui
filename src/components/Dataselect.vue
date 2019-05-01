@@ -5,9 +5,14 @@
       :class="[shouldShowMenu ? 'active-term' : '']"
       @click="openSearch"
     >{{ term }}</div>
-    <div class="search-results" :style="styleObject" @mouseleave="hideMenu">
-      <div :class="[shouldShowMenu ? showClass : hideClass]">
-        <div v-show="topicInputValue.split(' ').length > 1" class="data-button" @click="rotateTerm">{{ $t('imageViewer.imageMetadata.rotate') }}</div>
+    <!--:style="{ left: leftedge + 'px' }"-->
+    <div class="search-results" @mouseleave="hideMenu">
+      <div id="drop" :class="[shouldShowMenu ? showClass : hideClass]">
+        <div
+          v-show="topicInputValue.split(' ').length > 1"
+          class="data-button"
+          @click="rotateTerm"
+        >{{ $t('imageViewer.imageMetadata.rotate') }}</div>
         <input
           id="findTopicInput"
           @input="debounceFindTopics"
@@ -42,9 +47,7 @@ export default {
       hideClass: "dropdown-content-hide",
       topics: [],
       maxSummaryLengthInChars: 50,
-      styleObject: {
-        //left: 0
-      }
+      leftedge: 0
     };
   },
   created: function() {
@@ -73,15 +76,18 @@ export default {
         return topic.summary;
       }
     },
-    openSearch: function() {
+    openSearch: function(el) {
+      //const rect = el.getBoundingClientRect(); // get the element coordinates
+      //const left = rect.left; // get its X position in relation to the entire window
+      //console.log(rect, left);
       this.topicInputValue = this.term;
       this.debounceFindTopics();
     },
     rotateTerm: function() {
       let rotated;
-      rotated = this.topicInputValue.replace(",","").split(' ');
+      rotated = this.topicInputValue.replace(",", "").split(" ");
       rotated.push(rotated.shift());
-      this.topicInputValue = rotated.join(' ');
+      this.topicInputValue = rotated.join(" ");
       this.debounceFindTopics();
     },
     findTopics: function() {
