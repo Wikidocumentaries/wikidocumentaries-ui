@@ -34,7 +34,7 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Imagens dos arquivos",
-			"intro": "Essas imagens são coletadas de várias fontes e nem sempre representam o tópico com precisão. Você pode favoritar uma imagem ou removê-la da página, se ela não pertencer.",
+			"intro": "Essas imagens são coletadas de várias fontes e nem sempre representam o tópico com precisão. Você pode ver a imagem original e pode colocar a imagem em um mapa se tiver um pino de localização.",
 			"actionsMenu": {
 				"menuTitle": "Exibir ou organizar imagens",
 				"tooltip": "Exibir ou organizar imagens",
@@ -331,7 +331,8 @@
 			"remove": "Remover",
 			"moveTo": "Mover para outro campo",
 			"addData": "Adicionar dados",
-			"uploader": "Carregador"
+			"uploader": "Carregador",
+			"rotate": "Girar"
 		},
 		"imageActions": {
 			"rotateImage": "Rodar imagem",

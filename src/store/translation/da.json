@@ -189,7 +189,8 @@
 			"fileSize": "Filstørrelse",
 			"fileFormat": "Filformat",
 			"remove": "Fjern",
-			"addData": "Tilføj data"
+			"addData": "Tilføj data",
+			"rotate": "Roter"
 		},
 		"imageActions": {
 			"rotateImage": "Roter billedet"

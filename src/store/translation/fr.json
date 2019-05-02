@@ -34,7 +34,7 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Images d'archives",
-			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez favoriser une image ou la supprimer de la page si elle n’y a pas sa place.",
+			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez afficher l'image originale et placer l'image sur une carte si elle possède un identifiant de lieu.",
 			"actionsMenu": {
 				"menuTitle": "Afficher ou arranger les images",
 				"tooltip": "Afficher ou arranger les images",
@@ -220,7 +220,7 @@
 		},
 		"Depicts": {
 			"headerTitle": "Dépeint",
-			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Works": {
 			"headerTitle": "Works",
@@ -331,7 +331,8 @@
 			"remove": "Supprimer",
 			"moveTo": "Déplacer vers un autre champ",
 			"addData": "Ajouter des données",
-			"uploader": "Téléverseur"
+			"uploader": "Téléverseur",
+			"rotate": "Pivoter"
 		},
 		"imageActions": {
 			"rotateImage": "Faire pivoter l’image",

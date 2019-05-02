@@ -1,0 +1,147 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elroy",
+			"Optilete",
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Zoeken"
+	},
+	"MainPage": {
+		"topicPageName": "Onderwerp pagina",
+		"mapPlaceMatchPageName": "Combineer plaatsnamen",
+		"mapSearchPageName": "Doorzoek kaarten",
+		"returnToHomeMessage": "Terug naar de startpagina"
+	},
+	"topic_page": {
+		"Header": {
+			"titleEditText": "Bewerk de titel",
+			"titleApproveText": "Bevestig deze titel",
+			"subtitleEditText": "De beschrijving bewerken",
+			"subtitleApproveText": "Deze beschrijving goedkeuren"
+		},
+		"TopicImages": {
+			"actionsMenu": {
+				"arrangeByTime": "Sorteer beelden op tijd"
+			},
+			"facetMenu": {
+				"time": "tijd",
+				"map": "kaart",
+				"people": "personen",
+				"places": "plaatsen",
+				"topics": "onderwerpen",
+				"form": "formulier",
+				"imageSize": "afbeeldingsgrootte",
+				"large": "groot",
+				"medium": "medium",
+				"small": "klein",
+				"type": "mediatype",
+				"creator": "auteur",
+				"platform": "platform",
+				"source": "bron"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Handelingen",
+				"menuTooltip": "Acties",
+				"showImageText": "Toon afbeelding"
+			},
+			"imagesRemoveMenu": {
+				"shortMenuTitle": "Afbeelding verwijderen",
+				"remDepicted": {
+					"search": "Zoeken naar het onderwerp"
+				},
+				"remInappropriate": {
+					"shortMenuTitle": "Het is ongepast"
+				}
+			}
+		},
+		"TopicMap": {
+			"showNearbyPlacesMenuText": "Toon plaatsen in de buurt",
+			"hideNearbyPlacesMenuText": "Verberg plaatsen in de buurt"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Tijdlijn"
+		},
+		"Events": {
+			"headerTitle": "Evenementen",
+			"displayMenu": {
+				"menuTitle": "Weergaveopties",
+				"menuTooltip": "Weergaveopties"
+			},
+			"optionsMenu": {
+				"menuTitle": "Instellingen",
+				"optionWorks": "Werk weergeven"
+			}
+		},
+		"Depicts": {
+			"headerTitle": "Verwijzingen"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"addCaption": "Bijschrift toevoegen",
+			"creatorUnknown": "Onbekend",
+			"addDateDepicted": "Weergavedatum toevoegen",
+			"removeDateCreated": "Maakdatum verwijderen",
+			"format": "Indeling",
+			"addFormat": "Indeling toevoegen",
+			"technique": "Techniek",
+			"removeTechnique": "Techniek verwijderen",
+			"addGenre": "Soort toevoegen",
+			"addTopic": "Onderwerp toevoegen",
+			"removeTopic": "Onderwerp verwijderen",
+			"location": "Locatie",
+			"locationMap": "Plek op de kaart",
+			"addLocation": "Locatie toevoegen",
+			"address": "Straat",
+			"addPerson": "Persoon toevoegen",
+			"removePerson": "Persoon verwijderen",
+			"event": "Gebeurtenis",
+			"addEvent": "Gebeurtenis toevoegen",
+			"institution": "Instelling",
+			"collection": "Verzameling",
+			"inscriptions": "Beschriften",
+			"measurements": "Metingen",
+			"copyright": "Auteursrecht",
+			"license": "Auteursrechtvergunning",
+			"photograph": "Fotograaf",
+			"digitalCopy": "Digitaal kopiëren",
+			"platformId": "Nummer",
+			"fileFormat": "Bestandsindeling",
+			"remove": "Verwijderen",
+			"addData": "Gegevens toevoegen"
+		},
+		"imageActions": {
+			"horizontal": "horizontaal"
+		},
+		"closeViewer": "Weergaveprogramma sluiten"
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Onderwerpen rangschikken",
+			"optionTime": "Op tijd",
+			"optionAlpha": "Alfabetisch",
+			"optionRev": "Rangschikking omkeren"
+		},
+		"facetMenu": {
+			"title": "Onder ogen gezien door",
+			"optionType": "Soort",
+			"optionColl": "Maker",
+			"optionCity": "Locatie"
+		},
+		"displayMenu": {
+			"title": "Weergeven als",
+			"optionGallery": "Galerie"
+		}
+	},
+	"general": {
+		"menus": {
+			"languageMenuTooltip": "Uw taal kiezen"
+		},
+		"languageMenu": {
+			"TranslateUI": "Naar uw taal vertalen"
+		}
+	}
+}

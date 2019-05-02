@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Mirzali"
 		]
 	},
 	"LandingPage": {
@@ -105,6 +106,11 @@
 				"translateArticleText": "Bu maddeyi diline çevir",
 				"otherLanguagestext": "Diğer diller"
 			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"rotate": "Döndür"
 		}
 	},
 	"map_place_match_page": {

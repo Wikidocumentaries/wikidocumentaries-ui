@@ -208,6 +208,16 @@
 			"filterByMapMenuText": "No der Kaart filteren..."
 		}
 	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "Typ",
+			"optionCity": "Plaz"
+		},
+		"displayMenu": {
+			"optionGallery": "Galerie",
+			"optionList": "Lëscht"
+		}
+	},
 	"general": {
 		"ok": "OK",
 		"cancel": "Ofbriechen",
