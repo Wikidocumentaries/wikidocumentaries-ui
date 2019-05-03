@@ -3,7 +3,8 @@
 		"authors": [
 			"Susannaanas",
 			"Fitoschido",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Jbar82"
 		]
 	},
 	"LandingPage": {
@@ -35,11 +36,11 @@
 		"TopicImages": {
 			"headerTitle": "Imágenes de los archivos",
 			"actionsMenu": {
-				"tooltip": "Mostrar o organizar imágenes",
+				"tooltip": "Mostrar u organizar imágenes",
 				"showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
 				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
 				"selectPortraits": "Seleccionar retratos de buena calidad de esta persona",
-				"arrangeByTime": "Organiza imágenes por tiempo",
+				"arrangeByTime": "Organizar imágenes por tiempo",
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"facetMenu": {
@@ -55,7 +56,7 @@
 				"menuTooltip": "Acciones",
 				"doGeolocatingText": "Set the location...",
 				"showImageText": "Mostrar imágen",
-				"selectFeatured": "Elige como imagen de cabecera"
+				"selectFeatured": "Seleccionar como imagen de cabecera"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Eliminar la imagen porque...",
@@ -128,8 +129,8 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artículo",
-			"missingArticle": "No hay ningún artículo sobre este tema en español. Ver si hay artículos en otras lenguas en la carta de lengua encima. Puedes crear el artículo en español por clicking en el plus-icono.",
-			"missingArticleMissing": "No hay ningún artículo sobre este tema en español.",
+			"missingArticle": "No hay ningún artículo sobre este tema en tu idioma. Puedes leer este artículo en otro idioma disponible, seleccionándolo desde el menú de idioma arriba. Puedes crear el artículo en tu idioma haciendo clic en el ícono del signo más (+).",
+			"missingArticleMissing": "No hay ningún artículo sobre este tema en tu idioma.",
 			"extLink": {
 				"linkTitleWP": "Leer o editar en Wikipedia"
 			},
@@ -148,9 +149,9 @@
 				"title": "Ordenar ubicaciones",
 				"tooltip": "Ordenar ubicaciones",
 				"optionTime": "Por tiempo",
-				"optionAlpha": "Por orden alfabético",
+				"optionAlpha": "Alfabéticamente",
 				"optionDist": "Por distancia",
-				"optionRev": "Ordenación inversa"
+				"optionRev": "Orden inverso"
 			},
 			"facetMenu": {
 				"optionType": "Tipo",
@@ -158,7 +159,7 @@
 				"optionCity": "Ubicación"
 			},
 			"displayMenu": {
-				"title": "Muestra como",
+				"title": "Mostrar como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
@@ -169,15 +170,15 @@
 				"title": "Ordenar trabajos",
 				"tooltip": "Ordenar trabajos",
 				"optionTime": "Por tiempo",
-				"optionAlpha": "Por orden alfabético",
-				"optionRev": "Ordenación inversa"
+				"optionAlpha": "Alfabéticamente",
+				"optionRev": "Orden inverso"
 			},
 			"facetMenu": {
 				"optionType": "Tipo",
 				"optionColl": "Creador"
 			},
 			"displayMenu": {
-				"title": "Muestra como",
+				"title": "Mostrar como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
@@ -190,7 +191,7 @@
 			"sortMenuOptionTime": "Por tiempo",
 			"sortMenuOptionAlpha": "Por orden alfabético",
 			"sortMenuOptionDist": "Por distancia",
-			"sortMenuOptionRev": "Ordenación inversa",
+			"sortMenuOptionRev": "Orden inverso",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Colección",
 			"facetMenuOptionCity": "Ubicación",
@@ -220,12 +221,12 @@
 			"addDescription": "Añadir descripción",
 			"creator": "Creador",
 			"creatorUnknown": "Desconocido",
-			"addCreator": "Añade creador",
+			"addCreator": "Agregar creador",
 			"dateCreated": "Fecha de creación",
 			"addDateCreated": "Añadir fecha de creación",
 			"removeDateCreated": "Quitar fecha de creación",
-			"publisher": "Publicador",
-			"addPublisher": "Añade publicador",
+			"publisher": "Editor",
+			"addPublisher": "Agregar editor",
 			"format": "Formato",
 			"addFormat": "Añadir formato",
 			"technique": "Técnica",

@@ -358,6 +358,15 @@
 			"transparencyLabel": "Menu item for Transparency of the historical base map"
 		}
 	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "{{Identical|Type}}",
+			"optionCity": "{{Identical|Location]}"
+		},
+		"displayMenu": {
+			"optionList": "{{Identical|List}}"
+		}
+	},
 	"general": {
 		"ok": "OK - general button text\n{{Identical|OK}}",
 		"cancel": "Cancel - general button text\n{{Identical|Cancel}}",

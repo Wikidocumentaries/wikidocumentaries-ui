@@ -189,7 +189,8 @@
 			"fileSize": "Dimensione del file",
 			"fileFormat": "Formato file",
 			"remove": "Rimuovi",
-			"uploader": "Caricato da"
+			"uploader": "Caricato da",
+			"rotate": "Ruota"
 		},
 		"imageActions": {
 			"clockwise": "in senso orario",
