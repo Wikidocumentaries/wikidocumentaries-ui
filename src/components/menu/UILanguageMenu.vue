@@ -12,6 +12,7 @@
 
 <script>
 
+import languageTranslations from '@/store/languages'
 import * as locales from '@/store/messages'
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
@@ -21,11 +22,14 @@ export default {
     props: {
     },
     computed: {
+        languageNames() {
+            return new Map(languageTranslations.map(lang => [lang.wiki, lang.local]));
+        },
         toolbarActionMenuItems() {
             return Object.keys(locales).map(lang => {
                 return {
                     id: lang,
-                    text: lang,
+                    text: this.languageNames.get(lang + "wiki") || lang,
                 };
             });
         },
