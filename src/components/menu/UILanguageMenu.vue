@@ -1,5 +1,11 @@
 <template>
-    <ToolbarMenu icon="wikiglyph-translation" :tooltip="$t('general.menus.languageMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu
+        icon="wikiglyph-translation"
+        :tooltip="$t('general.menus.languageMenuTitle')"
+        :translateItems="false"
+        :items="toolbarActionMenuItems"
+        @doMenuItemAction="onDoMenuItemAction"
+    >
         <div slot="menu-title">{{ $t('general.menus.languageMenuTitle') }}</div>
     </ToolbarMenu>
 </template>
