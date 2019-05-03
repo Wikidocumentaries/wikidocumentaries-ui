@@ -12,21 +12,23 @@
 
 <script>
 
+import * as locales from '@/store/messages'
+
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
 export default {
     name: 'UILanguageMenu',
     props: {
     },
-    data () {
-        return {
-            toolbarActionMenuItems: "fi en sv es ar da de diq fr ko lb mk nb pt_br sh tr zh_hant".split(" ").map(lang => {
+    computed: {
+        toolbarActionMenuItems() {
+            return Object.keys(locales).map(lang => {
                 return {
                     id: lang,
                     text: lang,
                 };
-            }),
-        }
+            });
+        },
     },
     components: {
         ToolbarMenu,
