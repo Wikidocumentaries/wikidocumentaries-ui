@@ -1,10 +1,10 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div class="row" :class="[isExpanded ? 'expanded' : '']">
+    <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : '']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
-      <div class="haze" id="wiki">
+      <div class="haze" id="wiki" v-show="big">
         <div class="toolbar-item block">
           <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
             <i
@@ -12,12 +12,12 @@
               :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"
             ></i>
           </a>
-          <span v-if="isExpanded == false" class="tooltip">{{ $t('general.expand') }}</span>
-          <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
+          <span class="tooltip">{{ isExpanded ? $t('general.collapse') : $t('general.expand') }}</span>
         </div>
       </div>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
+    <Parts id="parts"></Parts>
     <Locations id="locations"></Locations>
     <Works id="works"></Works>
     <Depicts id="depicts"></Depicts>
@@ -49,6 +49,7 @@ import People from "@/components/topic_page/People";
 import Locations from "@/components/topic_page/Locations";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
+import Parts from "@/components/topic_page/Parts";
 import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
@@ -57,7 +58,8 @@ export default {
   props: {},
   data() {
     return {
-      isExpanded: false
+      isExpanded: false,
+      big: true
     };
   },
   components: {
@@ -74,10 +76,18 @@ export default {
     Locations,
     Depicted,
     Depicts,
-    Footer
+    Footer,
+    Parts
     //TopicNewspapers
   },
   computed: {},
+  mounted: {
+    bigenough () {
+      this.$refs.wikirow.clientHeight < document.documentElement.clientHeight * 0.5 ?
+        big = false :
+        big = true;
+    }
+  },
   methods: {
     onShowImagesOnMap() {
       this.$nextTick(function() {
@@ -96,9 +106,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* .home-page {
-    width: calc(100% - 5px);
-} */
 
 .divider {
   width: 1px;

@@ -1,9 +1,8 @@
 <template>
     <div class="topic-search-box">
         <div class="search-items">
-            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
+            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputSearchOnly')">
             <a href="#" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass"></i></a>
-            <!--button @click="findTopics" class="button-find"><span>{{ $t('LandingPage.search') }}</span></button-->
         </div>
         <div class="search-results">
             <div :class="[shouldShowMenu ? showClass : hideClass]">

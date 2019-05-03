@@ -18,7 +18,7 @@
               v-on:load="onimageload"
               class="viewer-image"
             >
-            <div class="viewer-contents" v-show="showLinks">
+            <div class="viewer-contents" :class="showLinks ? 'show-links' : ''">
               <div v-if="index < items.length-1" @click="stepRight" class="step-right">
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
@@ -105,7 +105,7 @@
                     :key="item.id"
                   >
                     <div v-for="block in item" :key="block.id">
-                      <div>{{ block.type }}:</div>
+                      <div v-if="block.type">{{ block.type }}:</div>
                       <div>{{ block.content }}</div>
                     </div>
                   </div>
@@ -121,7 +121,10 @@
                       <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
                       <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
                   </div>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addCreator') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addCreator')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -132,17 +135,17 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
                   <Dataselect
                     class="grid-select"
-                    v-if="element.year && element.year != null"
-                    v-bind:term="element.year"
+                    v-if="dateCreated"
+                    v-bind:term="getDateCreated"
                   ></Dataselect>
                   <Dataselect
                     class="grid-select action"
-                    v-else
-                    v-bind:term="$t('imageViewer.imageMetadata.addDateCreated')"
+                    v-bind:title="$t('imageViewer.imageMetadata.addDateCreated')"
                   ></Dataselect>
-                  <div
-                    class="data-select action"
-                  >{{ $t('imageViewer.imageMetadata.addDateDepicted') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addDateDepicted')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -156,7 +159,10 @@
                     class="grid-select"
                     v-bind:term="element.formats"
                   ></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addFormat') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addFormat')"
+                  ></Dataselect>
                 </div>
               </div>
               <div v-if="element.measurements" class="grid-row">
@@ -179,7 +185,10 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.genre') }}</div>
                   <Dataselect v-if="element.genre" class="grid-select" v-bind:term="element.genre"></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addGenre') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addGenre')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -194,7 +203,10 @@
                     :key="subject.id"
                     v-bind:term="subject[0]"
                   ></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addTopic') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addTopic')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -209,8 +221,10 @@
                     :key="place.id"
                     v-bind:term="place"
                   ></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addLocation') }}</div>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addAddress') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addLocation')"
+                  ></Dataselect>
                 </div>
               </div>
               <div v-if="element.address" class="grid-row">
@@ -238,7 +252,10 @@
                     :key="actor.id"
                     v-bind:term="actor"
                   ></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addPerson') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addPerson')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -249,10 +266,13 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
                   <Dataselect
                     class="grid-select"
-                    v-if="element.eventss"
+                    v-if="element.events"
                     v-bind:term="element.events"
                   ></Dataselect>
-                  <div class="data-select action">{{ $t('imageViewer.imageMetadata.addEvent') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addEvent')"
+                  ></Dataselect>
                 </div>
               </div>
               <div class="grid-row">
@@ -416,7 +436,6 @@
             </div>
           </div>
         </div>
-        <Footer></Footer>
       </div>
     </div>
   </transition>
@@ -471,7 +490,7 @@ export default {
   mounted() {
     this.$el.addEventListener("mousemove", () => {
       setTimeout(() => {
-        this.showLinks = false;
+        showLinks = false;
       }, 3000);
     });
   },
@@ -986,7 +1005,7 @@ export default {
   transition: opacity 500ms;
 }
 
-.contentarea:hover .viewer-contents {
+.contentarea:hover .viewer-contents, .show-links {
   opacity: 1;
 }
 

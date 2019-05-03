@@ -106,7 +106,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel (SAMPLE(?image) as ?image) ?time (GROUP_CONCAT(?typeLabel) as ?typeLabel) (GROUP_CONCAT(?collectionLabel) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address) as ?address) (GROUP_CONCAT(?municipalityLabel) as ?municipalityLabel) WHERE {
+SELECT ?work ?workLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel) as ?municipalityLabel) WHERE {
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
     ?work ?p wd:Q216904.

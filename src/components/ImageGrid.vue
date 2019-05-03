@@ -111,14 +111,14 @@ export default {
     display: flex;
     flex-wrap: wrap;
     /*grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));*/
-    margin-left: 5px;
+    margin: 0 7px 0 10px;
 }
 
 .grid-item {
     cursor: pointer;
     position: relative;
     max-height: 15em;
-    margin: 0 5px 5px 0;
+    margin: 0 3px 3px 0;
     flex: auto;
     display: flex;
     flex-direction: column;

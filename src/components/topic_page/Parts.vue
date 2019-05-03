@@ -2,30 +2,30 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <div class="header-title">{{ $t('topic_page.Locations.headerTitle') }}</div>
+        <div class="header-title">{{ $t('topic_page.Parts.headerTitle') }}</div>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-funnel"
-          :tooltip="$t('topic_page.Locations.sortMenu.tooltip')"
+          :tooltip="$t('menus.sortMenu.tooltip')"
           :items="toolbarActionMenuItems"
           @doMenuItemAction="onDoMenuItemAction"
         >
-          <div slot="menu-title">{{ $t('topic_page.Locations.sortMenu.title') }}</div>
+          <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
-      <div class="intro">{{ $t('topic_page.Locations.intro') }}</div>
+      <div class="intro">{{ $t('topic_page.Parts.intro') }}</div>
       <div v-if="gallery" class="gallery">
         <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
         <router-link
           tag="div"
           v-for="item in results"
           :key="item.id"
-          :to="getItemURL(item.location.value)"
+          :to="getItemURL(item.item.value)"
           class="gallery-item"
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="thumb-title">{{ item.location.label }}</div>
+            <div class="thumb-title">{{ item.item.label }}</div>
             <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
           </div>
           <!--div class="thumb-image-header"-->
@@ -41,8 +41,8 @@
       </div>
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
-          <a :href="getItemURL(item.location.value)">
-            <b>{{ item.location.label }}</b>
+          <a :href="getItemURL(item.item.value)">
+            <b>{{ item.item.label }}</b>
             {{ item.typeLabel }} {{ item.time}}
           </a>
         </div>
@@ -71,12 +71,12 @@ const DISPLAY_ACTIONS = {
 };
 
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["location.label"];
+const DEFAULT_SORT = ["item.label"];
 
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Locations",
+  name: "Parts",
   components: {
     ToolbarMenu,
     DisplayMenu
@@ -88,19 +88,19 @@ export default {
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
-          text: "topic_page.Locations.sortMenu.optionAlpha"
+          text: "menus.sortMenu.optionAlpha"
         },
         {
           id: SORT_ACTIONS.BY_TIME,
-          text: "topic_page.Locations.sortMenu.optionTime"
+          text: "menus.sortMenu.optionTime"
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
-          text: "topic_page.Locations.sortMenu.optionRev"
+          text: "menus.sortMenu.optionRev"
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
-          text: "topic_page.Locations.sortMenu.optionClear"
+          text: "menus.sortMenu.optionClear"
         }
       ]
     };
@@ -112,26 +112,32 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?typeLabel; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=", ") as ?creatorLabel) WHERE {
-  ?pi wdt:P1647* wd:P276 .
-  ?pi wikibase:directClaim ?p .
-  ?location ?p wd:Q1772186.
-  OPTIONAL { ?location wdt:P31 ?type .
+SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?typeLabel; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=", ") as ?creatorLabel) WHERE {
+  {
+    {
+      wd:Q407542 wdt:P527 ?item.
+    }
+    UNION
+    {
+      ?item wdt:P361 wd:Q407542.
+    }
+  }
+  OPTIONAL { ?item wdt:P31 ?type .
             ?type rdfs:label ?typeLabel .
               FILTER(LANG(?typeLabel)="fi") }
-  OPTIONAL { ?location wdt:P18 ?image. }
-  OPTIONAL { ?location wdt:P6375 ?address. }
-  OPTIONAL { ?location wdt:P571 ?date.
+  OPTIONAL { ?item wdt:P18 ?image. }
+  OPTIONAL { ?item wdt:P6375 ?address. }
+  OPTIONAL { ?item wdt:P571 ?date.
            BIND(STR(YEAR(?date)) AS ?dated)}
-  OPTIONAL { ?location wdt:P170|wdt:P84 ?creator.
+  OPTIONAL { ?item wdt:P170|wdt:P84 ?creator.
            ?creator rdfs:label ?creatorLabel.
            FILTER(LANG(?creatorLabel)="fi")}
-  MINUS { ?location wdt:P31 wd:Q5 .}
+  MINUS { ?item wdt:P31 wd:Q5 .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
 }
-GROUP BY ?location ?locationLabel
+GROUP BY ?item ?itemLabel
 LIMIT 1000
-        `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q407542/g, this.$store.state.wikidocumentaries.wikidataId);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)
@@ -152,10 +158,10 @@ LIMIT 1000
     onDoMenuItemAction(menuItem) {
       switch (menuItem.id) {
         case SORT_ACTIONS.BY_LABEL:
-          currentSort = ["location.label"];
+          currentSort = ["item.label"];
           break;
         case SORT_ACTIONS.BY_TIME:
-          currentSort = ["time", "location.label"];
+          currentSort = ["time", "item.label"];
           break;
         case SORT_ACTIONS.SORT_REVERSE:
           if (currentSort[0].charAt(0) == "-")

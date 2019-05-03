@@ -1,7 +1,8 @@
 {
     "LandingPage": {
         "search": "Search",
-        "searchInputPlaceHolder": "Find a topic or create a new topic"
+        "searchInputPlaceHolder": "Find a topic or create a new topic",
+        "searchInputSearchOnly": "Find a topic"
     },
     "MainPage": {
         "topicPageName": "Topic page",
@@ -216,6 +217,10 @@
         "Depicts": {
             "headerTitle": "Depicts",
             "intro": "This work depicts these topics. You can sort them by time and name. Note that to see all topics, including the ones without an image, you must view the topics as a list."
+        },
+        "Parts": {
+            "headerTitle": "Parts",
+            "intro": "These parts belong to this topic. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Works": {
             "headerTitle": "Works",

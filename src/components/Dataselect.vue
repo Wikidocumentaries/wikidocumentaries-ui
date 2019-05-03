@@ -4,7 +4,7 @@
       class="data-select"
       :class="[shouldShowMenu ? 'active-term' : '']"
       @click="openSearch"
-    >{{ term }}</div>
+    >{{ term ? term : title }}</div>
     <!--:style="{ left: leftedge + 'px' }"-->
     <div class="search-results" @mouseleave="hideMenu">
       <div id="drop" :class="[shouldShowMenu ? showClass : hideClass]">
@@ -37,7 +37,8 @@ import jsonp from "jsonp";
 export default {
   name: "Dataselect",
   props: {
-    term: String
+    term: String,
+    title: String
   },
   data() {
     return {
@@ -80,7 +81,7 @@ export default {
       //const rect = el.getBoundingClientRect(); // get the element coordinates
       //const left = rect.left; // get its X position in relation to the entire window
       //console.log(rect, left);
-      this.topicInputValue = this.term;
+      this.term ? this.topicInputValue = this.term : this.topicInputValue = 'testing';
       this.debounceFindTopics();
     },
     rotateTerm: function() {
@@ -94,9 +95,7 @@ export default {
       //console.log("findTopics");
       if (this.topicInputValue.length >= 3) {
         this.searchFromWikidata(this.topicInputValue);
-      } else {
-        this.hideMenu();
-      }
+      } 
       //this.$router.push('/Vapaamuurarin_hauta');
     },
     getTopicURL: function(topic) {

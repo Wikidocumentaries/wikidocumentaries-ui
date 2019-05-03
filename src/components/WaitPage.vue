@@ -10,6 +10,7 @@
             <div class="green"></div>
         </div>
         <div class="main-toolbar">{{ $t("WaitPage.waitMessage") }}</div>
+        <div class="lds-heart"><div></div></div>
     </div>
 </template>
 
