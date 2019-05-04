@@ -17,15 +17,6 @@
                     <div class="thumb-title">{{ item.work.label }}</div>
                     <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{ item.copyrightLabel}}</div>
                 </div>
-                <!--div class="thumb-image-header"-->
-                <div class="thumb-image-header">
-                    <div class="left-align">
-                        <!--ImagesActionMenu></ImagesActionMenu-->
-                    </div>
-                    <div class="right-align">
-                        <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-                    </div>
-                </div>
             </router-link>
         </div>
         <div v-else class="list">

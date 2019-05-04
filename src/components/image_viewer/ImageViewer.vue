@@ -104,9 +104,9 @@
                     v-for="item in element.inscriptions"
                     :key="item.id"
                   >
-                    <div v-for="block in item" :key="block.id">
-                      <div v-if="block.type">{{ block.type }}:</div>
-                      <div>{{ block.content }}</div>
+                    <div class="line" v-for="block in item" :key="block.id">
+                      <div class="line-type" v-if="block.type">{{ block.type }}:</div>
+                      <div class="line-content">{{ block.content }}</div>
                     </div>
                   </div>
                 </div>

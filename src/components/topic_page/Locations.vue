@@ -229,24 +229,4 @@ const selectResults = lcl => {
 </script>
 
 <style scoped>
-.thumb-title {
-  font-family: barlow condensed;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  padding-bottom: 2px;
-}
-
-.noimage {
-  background: var(--main-modal-color);
-  height: 35vh;
-  width: 150px;
-}
-
-.list {
-  columns: 300px 3;
-}
-
-.listrow {
-  margin-left: 20px;
-}
 </style>

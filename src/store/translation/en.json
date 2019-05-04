@@ -2,7 +2,44 @@
     "LandingPage": {
         "search": "Search",
         "searchInputPlaceHolder": "Find a topic or create a new topic",
-        "searchInputSearchOnly": "Find a topic"
+        "searchInputSearchOnly": "Find a topic",
+        "intro": "Wikidocumentaries is a wiki for small history - a place to pull together traces of history and reassemble stories with them. Start by searching for a topic of interest!",
+        "titleDescription": "What is Wikidocumentaries?",
+        "description": "Wikidocumentaries is a maker space for citizen historians. It combines information about topics – people, places, buildings, events and more. You can navigate between the topics by following any recorded connection such as family relations, locations, creators and creations or affiliation. A topic is illustrated with images and maps from connected museums, archives and libraries. In Wikidocumentaries, it will be possible to correct existing information and add new topics, bring in your own images and recollections, and use all the material for your own purposes.",
+        "titleStatus": "Status",
+        "status": "The site is in demo phase. Many important features are not yet available and the site may not perform as well as expected.",
+        "moreBelow": "Read more below",
+        "more": "Read more",
+        "moreLink": "Read more in",
+        "titleTopics": "Topics",
+        "statusTopics": "Topics are read from Wikidata. New topics may later be created also locally with the richness of describing with Wikidata. Current articles are from Wikipedia, whereas an article for a local topic may later be created locally.",
+        "titleMedia": "Media",
+        "statusMedia": "Media is currently read from Finna.fi, Flickr and Wikimedia Commons. We are working on finding images more accurately and displaying more and better metadata from each of the sources. New media sources are welcome!",
+        "titleTools": "Tools",
+        "statusTools": "Wikidocumentaries has tasks and tools for working with the content. Articles can already be translated between languages with ContentTranslate. Keywording with Wikidata and geotagging an image location are being prepared. New fun and useful tools for can be created or integrated.",
+        "titleLanguages": "Languages",
+        "statusLanguages": "Wikidocumentaries can be navigated in any language available in Wikidata. This is a great opportunity for small languages. Translations are done in TranslateWiki.",
+        "titleTechnology": "Technology",
+        "statusTechnology": "Wikidocumentaries reads the core data from Wikidata. In addition, Wikidocumentaries will have it's own Wikibase for topics that are out of scope for Wikidata. Wikidata and Wikidocumentaries are expected to sync as federated Wikibases. Secondly, image metadata is linked to Wikidata items, and this data can sync with the Structured Data on Wikimedia Commons. The site is built with Vue.js and it is hosted at Wikimedia Cloud Services.",
+        "titleCreators": "Creators",
+        "titleTeam": "Team",
+        "titleThanks": "With special thanks to",
+        "titlePartners": "Partners",
+        "titleFunding": "With kind support from",
+        "titleBy": "Project by",
+        "getInvolved": "Get involved!",
+        "titleTranslate": "Translate",
+        "joinTranslate": "Come and bring your language to Wikidocumentaries. Join the volunteer translation team and see the connected cultural heritage come to life in your language.",
+        "titleContent": "Add your content",
+        "joinContent": "If you have a photo, media, document, map or data collection that you would like to see here, let's have a look together if it can already connect though one of the existing channels or if we can create new connecting methods. We are also looking forward to arranging workshops for recording historical knowledge with communities of interest.",
+        "titleDevelop": "Create tools and crowdsourcing tasks.",
+        "joinDevelop": "We like to add more tools and create new crowdsourcing tasks in collaboration with organisations and tool-builders. Let's join forces for the next cool crowdsourcing app!",
+        "titleContact": "Get in contact!",
+        "facebook": "Facebook group",
+        "wiki": "Wikidocumentaries wiki",
+        "blog": "Blog",
+        "email": "Email",
+        "github": "Github repository"
     },
     "MainPage": {
         "topicPageName": "Topic page",
@@ -12,7 +49,7 @@
         "returnToHomeMessage": "Back to landing page"
     },
     "WaitPage": {
-        "waitMessage": "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+        "waitMessage": "A moment, please... Retrieving data from Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
     },
     "topic_page": {
         "BaseMapDialog": {

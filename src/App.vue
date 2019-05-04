@@ -25,8 +25,9 @@ export default {
   --main-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
   --main-font-size: 11pt;
   --main-line-height: 1.5;
-  --title-font-size: 3.5em;
-  --subtitle-font-size: 1.7em;
+  --title-font-size: 3.5rem;
+  --subtitle-font-size: 1.7rem;
+  --subsubtitle-font-size: 1.3rem;
 }
 
 html,
@@ -97,6 +98,11 @@ a:hover {
   margin: 3px 0.2em 0 0;
   position: relative;
   /*cursor: pointer;*/
+}
+
+.sub {
+  font-size: var(--subsubtitle-font-size);
+  padding-top: 1em;
 }
 
 .title::first-letter,
@@ -412,7 +418,8 @@ a:hover {
   max-height: unset;
 }
 
-.expanded + .haze, .expanded > .haze {
+.expanded + .haze,
+.expanded > .haze {
   background: unset;
 }
 
@@ -599,7 +606,8 @@ i.wikiglyph {
   background: white;
 }
 
-.action, .action > .data-select {
+.action,
+.action > .data-select {
   color: #999;
   background: white;
 }
@@ -700,5 +708,61 @@ i.wikiglyph {
   100% {
     transform: scale(0.9);
   }
+}
+
+.header-coa {
+  position: absolute;
+  right: 0;
+  height: 35%;
+  margin: 20px;
+}
+
+.bottomshade {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.17) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding-top: 35px;
+}
+
+.noshade {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 35px;
+}
+
+.titlebox {
+  position: relative;
+  color: #fff;
+  margin: 0 20px;
+  bottom: 20px;
+}
+
+.line {
+  display: flex;
+}
+
+.line-type {
+  margin-right: 3px;
+}
+
+.info-cubes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.info-cube {
+  flex: 1 1 300px;
+  margin-right: 20px;
 }
 </style>

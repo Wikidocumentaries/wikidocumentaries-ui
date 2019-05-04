@@ -110,8 +110,7 @@ export default {
 .grid-items {
     display: flex;
     flex-wrap: wrap;
-    /*grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));*/
-    margin: 0 7px 0 10px;
+    margin-left: 3px;
 }
 
 .grid-item {

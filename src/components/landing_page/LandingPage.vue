@@ -1,137 +1,263 @@
 <template>
-    <div class="landing-page">
-        <MainToolBar></MainToolBar>
-        <div class="cover">
-            <img v-bind:src="photoOfTheDay" class="cover-image"/>
-            <div class="cover-title">Wikidocumentaries</div>
+  <div class="landing-page">
+    <MainToolBar></MainToolBar>
+    <div class="cover">
+      <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
+      <!-- https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg -->
+      <img
+        src="https://live.staticflickr.com/1719/26111035175_4240706b19_h.jpg"
+        class="cover-image"
+      >
+      <div class="bottomshade">
+        <div class="titlebox">
+          <div class="title cover-title">Wikidocumentaries</div>
+          <div class="subtitle cover-subtitle">{{ $t('LandingPage.intro') }}</div>
         </div>
+      </div>
     </div>
+    <div class="site-info">
+      <div class="subtitle">{{ $t('LandingPage.titleDescription') }}</div>
+      <div class="description">{{ $t('LandingPage.description') }}</div>
+      <div class="subtitle topic">{{ $t('LandingPage.titleStatus') }}</div>
+      <div class="status">{{ $t('LandingPage.status') }}</div>
+      <div class="info-cubes">
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleTopics') }}</div>
+          <div class="status">{{ $t('LandingPage.statusTopics') }}</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleMedia') }}</div>
+          <div class="status">{{ $t('LandingPage.statusMedia') }}</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleTools') }}</div>
+          <div class="status">{{ $t('LandingPage.statusTools') }}</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleLanguages') }}</div>
+          <div class="status">{{ $t('LandingPage.statusLanguages') }}</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleTechnology') }}</div>
+          <div class="status">{{ $t('LandingPage.statusTechnology') }}</div>
+        </div>
+      </div>
+      <div class="subtitle topic">{{ $t('LandingPage.getInvolved') }}</div>
+      <div class="info-cubes">
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleTranslate') }}</div>
+          <div class="status">
+            {{ $t('LandingPage.joinTranslate') }}
+            <a
+              href="https://translatewiki.net/wiki/Translating:Wikidocumentaries"
+              target="_blank"
+            >TranslateWiki: Wikidocumentaries</a>
+          </div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleContent') }}</div>
+          <div class="status">{{ $t('LandingPage.joinContent') }}</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleDevelop') }}</div>
+          <div class="status">{{ $t('LandingPage.joinDevelop') }}</div>
+        </div>
+      </div>
+      <div class="subtitle topic">{{ $t('LandingPage.titleCreators') }}</div>
+      <div class="info-cubes">
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleTeam') }}</div>
+          <div class="status">Erno Mäkinen, Tuukka Hastrup, Mikko Rinne, Susanna Ånäs</div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleThanks') }}</div>
+          <div
+            class="status"
+          >Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen</div>
+        </div>
+      </div>
+      <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
+      <div class="status">
+        Semantic Computing Research Group
+        Ajapaik, Albumit Auki!, Creative Commons Finland, Gallen-Kallela Museum, HELDIG, Candidate program in history Helsinki University, ICARUS, South-Eastern Finland University of Applied Sciences XAMK, Kansalaismuisti, National Archives of Finland, Digitalia, Finna, Language Bank of Finland / FIN_CLARIN, Institute for the Languages of Finland, Finnish Local Heritage Federation, Association of Cultural Heritage Education in Finland, Lokalhistoriewiki.no, National Land Survey of Finland, Nagu Hembygdsförening r.f.. Pori Art Museum
+        Genealogical Society of Finland, Tilaushistoriakeskus, Department of Archaeology University of Turku, Cultural Production and Landscape Studies University of Turku, ALM Uppsala University,Wikimedia Finland, Yle Archives, Åbo Akademi University, Master program on Cultural Heritage Helsinki University, Lusto - The Finnish Forest Museum, Savonlinna Provincial Museum, Rauma Museum
+      </div>
+      <div class="info-cubes">
+        <div class="info-cube">
+      <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>
+          <div class="logogrid">
+            <img
+              class="logo"
+              src="https://wikidocumentaries.wmflabs.org/w/images/f/f2/OK_LG_LOGO_FINLAND_RGB.png"
+            >
+          </div>
+        </div>
+        <div class="info-cube">
+          <div class="subtitle sub">{{ $t('LandingPage.titleFunding') }}</div>
+          <div class="logogrid">
+            <img
+              class="logo"
+              src="https://wikidocumentaries.wmflabs.org/w/images/5/5b/Kone_logo.jpeg"
+            >
+            <img
+              class="logo"
+              src="https://wikidocumentaries.wmflabs.org/w/images/a/a4/EYCH2018_Logos_Yellow-EN-300.png"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="subtitle topic">{{ $t('LandingPage.titleContact') }}</div>
+      <div class="info-cubes">
+        <div class="info-cube">
+          <div class="status">
+            <ul>
+              <li>
+                <a
+                  href="https://www.facebook.com/groups/wikidocumentaries/"
+                  target="_blank"
+                >{{ $t('LandingPage.facebook') }}</a>
+              </li>
+              <li>
+                <a
+                  href="https://wikidocumentaries.wmflabs.org"
+                  target="_blank"
+                >{{ $t('LandingPage.wiki') }}</a>
+              </li>
+              <li>
+                <a
+                  href="http://blog.wikidocumentaries.io/en/"
+                  target="_blank"
+                >{{ $t('LandingPage.blog') }}</a>
+              </li>
+              <li>
+                <a href="mailto:wikidocumentaries@gmail.com">{{ $t('LandingPage.email') }}</a>
+              </li>
+              <li>
+                <a href="https://translatewiki.net/wiki/Translating:Wikidocumentaries">TranslateWiki</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="intro"
+    >Valokuva: Talvikylä. Vastasyntyneet karitsat pidetään tuvassa. 1930-luku. Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo.</div>
+    <div
+      class="intro"
+    >Photo: Winter Village. Newborn lambs are kept indoors. 1930's. Silver gelatin print. The Finnish Museum of Photography.</div>
+  </div>
 </template>
 
 <script>
-
-import LanguageBar from '@/components/LanguageBar'
-import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
-import TopicSearchBox from '@/components/TopicSearchBox'
-import MainToolBar from '@/components/menu/MainToolbar'
+import LanguageBar from "@/components/LanguageBar";
+// import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
+import TopicSearchBox from "@/components/TopicSearchBox";
+import MainToolBar from "@/components/menu/MainToolbar";
 
 export default {
-    name: 'LandingPage',
-    props: {
-    },
-    data: function () {
-        return {
-            map: null,
-        }
-    },
-    computed: {
-        wikidocumentaries () {
-            return this.$store.state.wikidocumentaries;
-        },
-        selectedBasemaps() {
-            return this.$store.state.selectedBasemaps;
-        },
-        photoOfTheDay () {
-            return this.$store.state.photoOfTheDay;
-        },
-        mapOfTheDay () {
-            return this.$store.state.mapOfTheDay;
-        },
-    },
-    components: {
-        LanguageBar,
-        TopicSearchBox,
-        WikimapsWarperLayer,
-        MainToolBar
-    },
-    mounted: function () {
-        this.$store.commit('resetState');
-        this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
-
-        this.createMap();
-    },
-    methods: {
-        createMap() {
-            var ol = this.$ol;
-
-            this.map = new ol.Map({
-                target: 'map',
-                layers: [
-                    new ol.layer.Tile({
-                        source: new this.$ol.source.OSM()
-                    })
-                ],
-                view: new ol.View({
-                    center: ol.proj.fromLonLat(this.mapOfTheDay.coordinates),
-                    zoom: 15
-                })
-            });
-        },
+  name: "LandingPage",
+  props: {},
+  data: function() {
+    return {
+      // map: null,
+    };
+  },
+  computed: {
+    //     wikidocumentaries () {
+    //         return this.$store.state.wikidocumentaries;
+    //     },
+    //     selectedBasemaps() {
+    //         return this.$store.state.selectedBasemaps;
+    //     },
+    photoOfTheDay() {
+      return this.$store.state.photoOfTheDay;
     }
-}
+    //     mapOfTheDay () {
+    //         return this.$store.state.mapOfTheDay;
+    //     },
+  },
+  components: {
+    LanguageBar,
+    TopicSearchBox,
+    // WikimapsWarperLayer,
+    MainToolBar
+  },
+  mounted: function() {
+    this.$store.commit("resetState");
+    // this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
+
+    // this.createMap();
+  }
+  // methods: {
+  //     createMap() {
+  //         var ol = this.$ol;
+
+  //         this.map = new ol.Map({
+  //             target: 'map',
+  //             layers: [
+  //                 new ol.layer.Tile({
+  //                     source: new this.$ol.source.OSM()
+  //                 })
+  //             ],
+  //             view: new ol.View({
+  //                 center: ol.proj.fromLonLat(this.mapOfTheDay.coordinates),
+  //                 zoom: 15
+  //             })
+  //         });
+  //     },
+  // }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .landing-page {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .cover {
-    width: 100%;
-    height: calc(100% - 63px);
+  width: 100%;
+  height: calc(100vh - 63px);
 }
 
 .cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.header-language-bar {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgb(0, 0, 0); /* fallback color */
-    background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cover-title {
-    position:absolute;
-    bottom: 60px;
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-size: 10vw;
-    font-weight: bold;
+  text-align: center;
+  font-size: 10vw;
 }
 
-/*
-.horizonal-divider {
-    flex: 1 1 100%;
-    height: 20px;
+.site-info {
+  margin: 20px;
 }
 
-.search-area {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.topic {
+  padding-top: 0.5em;
 }
 
-.search-box {
-    display: inline-block;
+@media all and (max-width: 600px) {
+  .cover-subtitle {
+    font-size: var(--subsubtitle-font-size);
+  }
 }
 
-.map-area {
-    flex: 1 1 100%;
-    position: relative;
+.logogrid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-*/
+
+.logo {
+  max-width: 350px;
+  max-height: 150px;
+  object-fit: contain;
+}
 </style>

@@ -118,39 +118,6 @@ export default {
     object-fit: contain;
 }
 
-.header-coa {
-    position: absolute;
-    right: 0;
-    height: 35%;
-    margin: 20px;
-}
-
-.bottomshade {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.17) 50%, rgba(0, 0, 0, 0) 100%);
-    padding-top: 35px;
-}
-
-.noshade {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    padding-top: 35px;
-}
-
-.titlebox {
-    position:relative;
-    color: #fff;
-    margin: 0 20px;
-    bottom: 20px;
-}
-
 .titlecont, .subtitlecont {
     display: flex;
 }
