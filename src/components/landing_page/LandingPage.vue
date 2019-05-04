@@ -42,7 +42,9 @@
           <div class="status">{{ $t('LandingPage.statusTechnology') }}</div>
         </div>
       </div>
-      <div class="subtitle topic">{{ $t('LandingPage.getInvolved') }}</div>
+    </div>
+    <div class="site-info grey">
+      <div class="subtitle">{{ $t('LandingPage.getInvolved') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleTranslate') }}</div>
@@ -63,7 +65,9 @@
           <div class="status">{{ $t('LandingPage.joinDevelop') }}</div>
         </div>
       </div>
-      <div class="subtitle topic">{{ $t('LandingPage.titleCreators') }}</div>
+    </div>
+    <div class="site-info">
+      <div class="subtitle">{{ $t('LandingPage.titleCreators') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleTeam') }}</div>
@@ -84,7 +88,7 @@
       </div>
       <div class="info-cubes">
         <div class="info-cube">
-      <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>
+          <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>
           <div class="logogrid">
             <img
               class="logo"
@@ -106,7 +110,9 @@
           </div>
         </div>
       </div>
-      <div class="subtitle topic">{{ $t('LandingPage.titleContact') }}</div>
+    </div>
+    <div class="site-info grey">
+      <div class="subtitle">{{ $t('LandingPage.titleContact') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="status">
@@ -235,7 +241,7 @@ export default {
 }
 
 .site-info {
-  margin: 20px;
+  padding: 20px;
 }
 
 .topic {
@@ -252,12 +258,17 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .logo {
   max-width: 350px;
   max-height: 150px;
   object-fit: contain;
+  padding: 20px 0;
+}
+
+.grey {
+  background: var(--main-modal-color);
 }
 </style>
