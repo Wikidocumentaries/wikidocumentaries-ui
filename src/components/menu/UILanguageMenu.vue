@@ -1,10 +1,19 @@
 <template>
-    <ToolbarMenu icon="wikiglyph-translation" :tooltip="$t('general.menus.languageMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu
+        icon="wikiglyph-translation"
+        :tooltip="$t('general.menus.languageMenuTitle')"
+        :translateItems="false"
+        :items="toolbarActionMenuItems"
+        @doMenuItemAction="onDoMenuItemAction"
+    >
         <div slot="menu-title">{{ $t('general.menus.languageMenuTitle') }}</div>
     </ToolbarMenu>
 </template>
 
 <script>
+
+import languageTranslations from '@/store/languages'
+import * as locales from '@/store/messages'
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
@@ -12,15 +21,18 @@ export default {
     name: 'UILanguageMenu',
     props: {
     },
-    data () {
-        return {
-            toolbarActionMenuItems: "fi en sv es ar da de diq fr ko lb mk nb pt_br sh tr zh_hant".split(" ").map(lang => {
+    computed: {
+        languageNames() {
+            return new Map(languageTranslations.map(lang => [lang.wiki, lang.local]));
+        },
+        toolbarActionMenuItems() {
+            return Object.keys(locales).map(lang => {
                 return {
                     id: lang,
-                    text: lang,
+                    text: this.languageNames.get(lang + "wiki") || lang,
                 };
-            }),
-        }
+            });
+        },
     },
     components: {
         ToolbarMenu,
