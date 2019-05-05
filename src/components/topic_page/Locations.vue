@@ -25,17 +25,8 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="thumb-title">{{ item.location.label }}</div>
+            <div class="gallery-title">{{ item.location.label }}</div>
             <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
-          </div>
-          <!--div class="thumb-image-header"-->
-          <div>
-            <div class="left-align">
-              <!--ImagesActionMenu></ImagesActionMenu-->
-            </div>
-            <div class="right-align">
-              <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-            </div>
           </div>
         </router-link>
       </div>

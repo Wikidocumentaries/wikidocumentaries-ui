@@ -18,7 +18,8 @@
               v-on:load="onimageload"
               class="viewer-image"
             >
-            <div class="viewer-contents" :class="showLinks ? 'show-links' : ''">
+            <div class="viewer-contents">
+            <!-- <div class="viewer-contents" :class="showLinks ? 'show-links' : ''"> -->
               <div v-if="index < items.length-1" @click="stepRight" class="step-right">
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
@@ -127,17 +128,16 @@
                   ></Dataselect>
                 </div>
               </div>
-              <div class="grid-row">
+              <div class="grid-row" v-if="element.datecreated">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
-                  <Dataselect
+                  <!-- <Dataselect v-for="item in element.datecreated" :key="item.id"
                     class="grid-select"
-                    v-if="dateCreated"
-                    v-bind:term="getDateCreated"
-                  ></Dataselect>
+                    v-bind:term="item"
+                  ></Dataselect> -->
                   <Dataselect
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addDateCreated')"
@@ -465,7 +465,7 @@ export default {
       map: null,
       topicFeature: null,
       topicVectorLayer: null,
-      showLinks: true,
+      // showLinks: true,
       toolbarActionMenuItems: [
         {
           id: MENU_ACTIONS.SELECT_HEADER,
@@ -488,11 +488,11 @@ export default {
     shouldShowDialog: Boolean
   },
   mounted() {
-    this.$el.addEventListener("mousemove", () => {
-      setTimeout(() => {
-        showLinks = false;
-      }, 3000);
-    });
+    // this.$el.addEventListener("mousemove", () => {
+    //   setTimeout(() => {
+    //     showLinks = false;
+    //   }, 3000);
+    // });
   },
   methods: {
     handleCancel: function() {

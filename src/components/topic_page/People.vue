@@ -17,7 +17,7 @@
                 <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
                     <div v-if="item.inLabel" class="thumb-credit disappearing">{{ item.inLabel }}</div>
                     <div v-else class="thumb-credit disappearing">{{ item.outLabel }}</div>
-                    <div class="thumb-title">{{ item.person.label }}</div>
+                    <div class="gallery-title">{{ item.person.label }}</div>
                     <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
                 </div>
                 <!--div class="thumb-image-header"-->
@@ -248,28 +248,4 @@ const selectResults = (lcl) => {
 </script>
 
 <style scoped>
-
-.thumb-title {
-    font-family: barlow condensed;
-    text-transform: uppercase;
-    font-size: 1.2em;
-	padding-bottom: 2px;
-}
-
-.appearing {
-    height: 0;
-    opacity: 0;
-    transition: height 80ms ease-in;
-}
-
-.gallery-item:hover .appearing {
-    height:unset;
-    opacity: 1;
-}
-
-.noimage {
-    background: var(--main-blue);
-    height: 35vh;
-    width: 150px;
-}
 </style>

@@ -259,6 +259,10 @@
             "headerTitle": "Parts",
             "intro": "These parts belong to this topic. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
+        "Affiliations": {
+            "headerTitle": "Affiliations",
+            "intro": "Organisations that this person on organisation has an affiliation with."
+        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",

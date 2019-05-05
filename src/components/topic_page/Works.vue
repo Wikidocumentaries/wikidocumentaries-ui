@@ -14,7 +14,7 @@
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
-                    <div class="thumb-title">{{ item.work.label }}</div>
+                    <div class="gallery-title">{{ item.work.label }}</div>
                     <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{ item.copyrightLabel}}</div>
                 </div>
             </router-link>
@@ -223,12 +223,4 @@ const selectResults = (lcl) => {
 </script>
 
 <style scoped>
-
-.thumb-title {
-    font-family: barlow condensed;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    padding-bottom: 2px;
-}
-
 </style>

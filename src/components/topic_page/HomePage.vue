@@ -23,6 +23,7 @@
     <Depicts id="depicts"></Depicts>
     <Depicted id="depicted"></Depicted>
     <People id="people"></People>
+    <Affiliations id="affiliations"></Affiliations>
     <!--EventList id="events"></EventList-->
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages
@@ -50,6 +51,7 @@ import Locations from "@/components/topic_page/Locations";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Parts from "@/components/topic_page/Parts";
+import Affiliations from "@/components/topic_page/Affiliations";
 import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
@@ -76,7 +78,8 @@ export default {
     Depicted,
     Depicts,
     Footer,
-    Parts
+    Parts,
+    Affiliations
     //TopicNewspapers
   },
   computed: {},

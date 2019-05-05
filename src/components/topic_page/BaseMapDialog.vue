@@ -20,7 +20,7 @@
                                     </div>
                                 </div>
                                 <div class="thumb-image-info">
-                                    <div class="thumb-title">{{ fitTitle(item.title) }}</div>
+                                    <div class="gallery-title">{{ fitTitle(item.title) }}</div>
                                     <!-- <div class="thumb-credit">{{ getCredits(item) }}</div> -->
                                 </div>
                             </div>

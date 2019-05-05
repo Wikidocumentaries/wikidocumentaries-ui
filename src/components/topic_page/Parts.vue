@@ -25,7 +25,7 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="thumb-title">{{ item.item.label }}</div>
+            <div class="gallery-title">{{ item.item.label }}</div>
             <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
           </div>
           <!--div class="thumb-image-header"-->
@@ -235,24 +235,4 @@ const selectResults = lcl => {
 </script>
 
 <style scoped>
-.thumb-title {
-  font-family: barlow condensed;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  padding-bottom: 2px;
-}
-
-.noimage {
-  background: var(--main-modal-color);
-  height: 35vh;
-  width: 150px;
-}
-
-.list {
-  columns: 300px 3;
-}
-
-.listrow {
-  margin-left: 20px;
-}
 </style>

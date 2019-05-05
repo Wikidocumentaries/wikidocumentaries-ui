@@ -501,6 +501,13 @@ i.wikiglyph {
   overflow: hidden;
 }
 
+.gallery-title {
+  font-family: barlow condensed;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding-bottom: 2px;
+}
+
 .gallery {
   height: 40vh;
   display: flex;
