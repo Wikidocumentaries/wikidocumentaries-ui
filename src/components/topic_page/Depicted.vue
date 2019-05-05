@@ -101,8 +101,6 @@ SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=
         wd:Q72 wdt:P1343 ?depicted .
       }
     }
-  ?depicted rdfs:label ?depictedLabel .
-    FILTER(LANG(?depictedLabel)="fi")
     OPTIONAL { ?pi wdt:P1647* wd:P170 .
               ?pi wikibase:directClaim ?p .
               ?depicted ?p ?creator. 

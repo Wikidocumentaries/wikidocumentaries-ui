@@ -949,11 +949,6 @@ export default {
   );
 }
 
-.titlebox {
-  margin: 0 20px;
-  padding: 30px 0 15px;
-}
-
 .white {
   color: white;
 }

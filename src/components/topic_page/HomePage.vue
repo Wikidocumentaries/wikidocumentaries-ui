@@ -4,7 +4,7 @@
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : '']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
-      <div class="haze" id="wiki" v-show="big">
+      <div class="haze" id="wiki">
         <div class="toolbar-item block">
           <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
             <i
@@ -58,8 +58,7 @@ export default {
   props: {},
   data() {
     return {
-      isExpanded: false,
-      big: true
+      isExpanded: false
     };
   },
   components: {
@@ -82,11 +81,6 @@ export default {
   },
   computed: {},
   mounted: {
-    bigenough () {
-      this.$refs.wikirow.clientHeight < document.documentElement.clientHeight * 0.5 ?
-        big = false :
-        big = true;
-    }
   },
   methods: {
     onShowImagesOnMap() {
@@ -106,10 +100,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.divider {
-  width: 1px;
-  margin: 6px 0;
-  background: rgb(0, 0, 0);
-}
 </style>

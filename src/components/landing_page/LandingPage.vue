@@ -81,11 +81,9 @@
         </div>
       </div>
       <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
-      <div class="status">
-        Semantic Computing Research Group
-        Ajapaik, Albumit Auki!, Creative Commons Finland, Gallen-Kallela Museum, HELDIG, Candidate program in history Helsinki University, ICARUS, South-Eastern Finland University of Applied Sciences XAMK, Kansalaismuisti, National Archives of Finland, Digitalia, Finna, Language Bank of Finland / FIN_CLARIN, Institute for the Languages of Finland, Finnish Local Heritage Federation, Association of Cultural Heritage Education in Finland, Lokalhistoriewiki.no, National Land Survey of Finland, Nagu Hembygdsförening r.f.. Pori Art Museum
-        Genealogical Society of Finland, Tilaushistoriakeskus, Department of Archaeology University of Turku, Cultural Production and Landscape Studies University of Turku, ALM Uppsala University,Wikimedia Finland, Yle Archives, Åbo Akademi University, Master program on Cultural Heritage Helsinki University, Lusto - The Finnish Forest Museum, Savonlinna Provincial Museum, Rauma Museum
-      </div>
+      <div
+        class="status"
+      >Finna, Gallen-Kallela Museum, Lusto - The Finnish Forest Museum, Savonlinna Provincial Museum, Rauma Museum, Wikimedia Finland, Candidate program in history Helsinki University, Semantic Computing Research Group, Ajapaik, Albumit Auki!, Creative Commons Finland, HELDIG Helsinki University, ICARUS, South-Eastern Finland University of Applied Sciences XAMK, Kansalaismuisti, National Archives of Finland, Digitalia, Language Bank of Finland / FIN_CLARIN, Institute for the Languages of Finland, Finnish Local Heritage Federation, Association of Cultural Heritage Education in Finland, Lokalhistoriewiki.no, National Land Survey of Finland, Nagu Hembygdsförening r.f., Pori Art Museum, Genealogical Society of Finland, Tilaushistoriakeskus, Department of Archaeology University of Turku, Cultural Production and Landscape Studies University of Turku, ALM Uppsala University, Yle Archives, Åbo Akademi University, Master program on Cultural Heritage Helsinki University,</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>
@@ -136,10 +134,16 @@
                 >{{ $t('LandingPage.blog') }}</a>
               </li>
               <li>
-                <a href="mailto:wikidocumentaries@gmail.com">{{ $t('LandingPage.email') }}</a>
+                <a
+                  href="mailto:wikidocumentaries@gmail.com"
+                  target="_blank"
+                >{{ $t('LandingPage.email') }}</a>
               </li>
               <li>
-                <a href="https://translatewiki.net/wiki/Translating:Wikidocumentaries">TranslateWiki</a>
+                <a
+                  href="https://translatewiki.net/wiki/Translating:Wikidocumentaries"
+                  target="_blank"
+                >{{ $t('LandingPage.titleTranslate') }}</a>
               </li>
             </ul>
           </div>
@@ -148,10 +152,12 @@
     </div>
     <div
       class="intro"
-    >Valokuva: Talvikylä. Vastasyntyneet karitsat pidetään tuvassa. 1930-luku. Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo.</div>
+      style="padding-top:10px;"
+    >Valokuva: <a href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/" target="_blank">Talvikylä. Vastasyntyneet karitsat pidetään tuvassa. Eino Mäkinen, 1930-luku.</a> Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo. Ei tunnettuja tekijänoikeusrajoitteita.</div>
     <div
       class="intro"
-    >Photo: Winter Village. Newborn lambs are kept indoors. 1930's. Silver gelatin print. The Finnish Museum of Photography.</div>
+      style="padding-bottom:10px;"
+    >Photo: <a href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/" target="_blank">Winter Village. Newborn lambs are kept indoors.</a> Eino Mäkinen, 1930's. Silver gelatin print. The Finnish Museum of Photography. No known copyright restrictions.</div>
   </div>
 </template>
 
@@ -258,7 +264,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo {
