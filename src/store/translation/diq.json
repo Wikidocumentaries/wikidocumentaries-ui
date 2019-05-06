@@ -8,7 +8,18 @@
 	},
 	"LandingPage": {
 		"search": "Cı geyre",
-		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze"
+		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze",
+		"titleStatus": "Weziyet",
+		"more": "Tayêna bıwane",
+		"titleTopics": "Mewzuyi",
+		"titleMedia": "Medya",
+		"titleTools": "Haceti",
+		"titleLanguages": "Zıwani",
+		"titleTechnology": "Teknolociye",
+		"titleCreators": "Vıraştoği",
+		"titleTeam": "Taxım",
+		"titleTranslate": "Açarnayış",
+		"email": "E-poste"
 	},
 	"MainPage": {
 		"topicPageName": "Pela mewzuyi",
@@ -209,6 +220,7 @@
 		"sortMenu": {
 			"title": "Mewzuyan abırne",
 			"tooltip": "Mewzuyan abırne",
+			"optionTime": "Ebe wext ra",
 			"optionAlpha": "Alfabetik"
 		},
 		"facetMenu": {

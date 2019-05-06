@@ -7,7 +7,8 @@
 	},
 	"LandingPage": {
 		"search": "검색",
-		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기"
+		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기",
+		"searchInputSearchOnly": "주제 찾기"
 	},
 	"MainPage": {
 		"topicPageName": "주제 문서",
@@ -217,7 +218,8 @@
 			"remove": "제거",
 			"moveTo": "다른 필드로 이동",
 			"addData": "데이터 추가",
-			"uploader": "올린이"
+			"uploader": "올린이",
+			"rotate": "회전"
 		},
 		"imageActions": {
 			"rotateImage": "이미지 회전",

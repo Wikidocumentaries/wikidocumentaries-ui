@@ -8,7 +8,14 @@
 	},
 	"LandingPage": {
 		"search": "Cerca",
-		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento"
+		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento",
+		"titleStatus": "Stato",
+		"titleTools": "Strumenti",
+		"titleLanguages": "Lingue",
+		"titlePartners": "Partner",
+		"getInvolved": "Partecipa!",
+		"titleContent": "Aggiungi il tuo contenuto",
+		"blog": "Blog"
 	},
 	"MainPage": {
 		"topicPageName": "Pagina dell'argomento",
@@ -18,7 +25,7 @@
 		"returnToHomeMessage": "Tornare alla pagina di benvenuto"
 	},
 	"WaitPage": {
-		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {

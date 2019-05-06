@@ -8,7 +8,8 @@
 	},
 	"LandingPage": {
 		"search": "Search button text, currently not in use\n{{Identical|Search}}",
-		"searchInputPlaceHolder": "Search input field placeholder text"
+		"searchInputPlaceHolder": "Search input field placeholder text",
+		"titleLanguages": "{{Identical|Language}}"
 	},
 	"MainPage": {
 		"topicPageName": "Topic tab name, currently not in use",

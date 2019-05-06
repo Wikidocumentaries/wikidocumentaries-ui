@@ -1,0 +1,198 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"LandingPage": {
+		"search": "Serĉi",
+		"searchInputPlaceHolder": "Trovi temon aŭ krei novan temon",
+		"searchInputSearchOnly": "Trovi temon",
+		"titleStatus": "Stato",
+		"more": "Legi pli",
+		"moreLink": "Legi pli en",
+		"titleTopics": "Temoj",
+		"titleTools": "Iloj",
+		"titleLanguages": "Lingvoj",
+		"titleTechnology": "Teknologio",
+		"titleCreators": "Kreintoj",
+		"titleTeam": "Teamo",
+		"titlePartners": "Partneroj",
+		"titleBy": "Projekto far",
+		"getInvolved": "Partoprenu!",
+		"titleTranslate": "Traduki",
+		"email": "Retpoŝto",
+		"github": "Github-deponejo"
+	},
+	"MainPage": {
+		"topicPageName": "Paĝo pri temo",
+		"mapSearchPageName": "Serĉi mapojn"
+	},
+	"topic_page": {
+		"TopicImages": {
+			"facetMenu": {
+				"time": "tempo",
+				"map": "mapo",
+				"people": "homoj",
+				"places": "lokoj",
+				"topics": "temoj",
+				"form": "formo",
+				"imageSize": "grando de bildo",
+				"large": "granda",
+				"medium": "meza",
+				"small": "malgranda",
+				"creator": "kreinto",
+				"source": "fonto"
+			}
+		},
+		"Events": {
+			"headerTitle": "Eventoj",
+			"optionsMenu": {
+				"subRelatedPeopleConf": {
+					"menuTitle": "Agordi"
+				}
+			}
+		},
+		"Wikidata": {
+			"headerTitle": "Faktoj"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikolo",
+			"extLink": {
+				"linkTitleWP": "Legi aŭ redakti ĉe Vikipedio"
+			},
+			"addLink": {
+				"linkTitleWP": "Krei artikolon ĉe Vikipedio"
+			},
+			"languageMenu": {
+				"menuTitle": "Legi artikolon en alia lingvo",
+				"translateArticleText": "Traduki ĉi-artikolon anglen",
+				"otherLanguagestext": "Aliaj lingvoj"
+			}
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "Laŭ tempo",
+				"optionAlpha": "Alfabete"
+			},
+			"facetMenu": {
+				"optionType": "Speco",
+				"optionColl": "Kreinto",
+				"optionCity": "Loko"
+			},
+			"displayMenu": {
+				"title": "Prezenti kiel",
+				"optionGallery": "Galerio",
+				"optionList": "Listo"
+			},
+			"showAll": "Ĉiuj"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Laŭ tempo",
+				"optionAlpha": "Alfabete"
+			},
+			"facetMenu": {
+				"optionType": "Speco",
+				"optionColl": "Kreinto"
+			},
+			"displayMenu": {
+				"title": "Prezenti kiel",
+				"optionGallery": "Galerio",
+				"optionList": "Listo"
+			},
+			"showAll": "Ĉiuj"
+		},
+		"Depicts": {
+			"headerTitle": "Prezentas"
+		},
+		"Parts": {
+			"headerTitle": "Partoj"
+		},
+		"Works": {
+			"headerTitle": "Verkoj",
+			"sortMenuTitle": "Ordigi",
+			"facetMenuOptionType": "Speco",
+			"displayMenuOptionGallery": "Galerio"
+		},
+		"People": {
+			"sortMenuTitle": "Ordigi",
+			"facetMenuOptionCountry": "Lando"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Priskribo",
+			"addDescription": "Aldoni priskribon",
+			"creator": "Kreinto",
+			"publisher": "Eldonejo",
+			"addPublisher": "Aldoni eldonejon",
+			"removePublisher": "Forigi eldonejon",
+			"technique": "Tekniko",
+			"addTechnique": "Aldoni teknikon",
+			"removeTechnique": "Forigi teknikon",
+			"depicted": "Bildo prezentas",
+			"genre": "Ĝenro",
+			"addGenre": "Aldoni ĝenron",
+			"removeGenre": "Forigi ĝenron",
+			"depicts": "Bildo prezentas",
+			"addTopic": "Aldoni temon",
+			"removeTopic": "Forigi temon",
+			"location": "Loko",
+			"event": "Evento",
+			"copyright": "Kopirajto",
+			"photograph": "Fotografaĵo",
+			"image": "Bildo",
+			"platformId": "Identigilo",
+			"fileSize": "Grando de dosiero",
+			"fileFormat": "Dosieraranĝo",
+			"remove": "Forigi",
+			"addData": "Aldoni datenon",
+			"uploader": "Alŝutinto"
+		},
+		"imageActions": {
+			"clockwise": "Dekstrume",
+			"counterclockwise": "Maldekstrume",
+			"horizontal": "horizonte",
+			"vertical": "vertikale"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "Laŭ tempo",
+			"optionAlpha": "Alfabete",
+			"optionTitleAlpha": "Laŭ titolo alfabete",
+			"optionCreatorAlpha": "Laŭ kreinto alfabete"
+		},
+		"facetMenu": {
+			"optionType": "Speco",
+			"optionColl": "Kreito",
+			"optionCity": "Loko"
+		},
+		"displayMenu": {
+			"title": "Prezenti kiel",
+			"optionGallery": "Galerio",
+			"optionList": "Listo"
+		}
+	},
+	"general": {
+		"ok": "Bone",
+		"cancel": "Nuligi",
+		"helpText": "Helpo",
+		"menus": {
+			"languageMenuTitle": "Elekti lingvon",
+			"languageMenuTooltip": "Elekti vian lingvon",
+			"myLanguagesItem": "Miaj lingvoj",
+			"languageMenuTranslate": "Traduki anglen"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduki al via lingvo"
+		},
+		"languages": {
+			"fi": "Finna",
+			"en": "Angla",
+			"sv": "Sveda",
+			"es": "Hispana"
+		}
+	}
+}

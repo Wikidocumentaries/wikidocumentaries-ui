@@ -3,11 +3,13 @@
 		"authors": [
 			"Elroy",
 			"Optilete",
-			"Susannaanas"
+			"Susannaanas",
+			"Rots61"
 		]
 	},
 	"LandingPage": {
-		"search": "Zoeken"
+		"search": "Zoeken",
+		"searchInputSearchOnly": "Zoek een onderwerp"
 	},
 	"MainPage": {
 		"topicPageName": "Onderwerp pagina",
@@ -16,6 +18,9 @@
 		"returnToHomeMessage": "Terug naar de startpagina"
 	},
 	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Kies historische basiskaart(en)"
+		},
 		"Header": {
 			"titleEditText": "Bewerk de titel",
 			"titleApproveText": "Bevestig deze titel",
@@ -77,6 +82,9 @@
 		},
 		"Depicts": {
 			"headerTitle": "Verwijzingen"
+		},
+		"Parts": {
+			"headerTitle": "Gedeelte"
 		}
 	},
 	"imageViewer": {
@@ -133,7 +141,8 @@
 		},
 		"displayMenu": {
 			"title": "Weergeven als",
-			"optionGallery": "Galerie"
+			"optionGallery": "Galerie",
+			"optionList": "Lijst"
 		}
 	},
 	"general": {

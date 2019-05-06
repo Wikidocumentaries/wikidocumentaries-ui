@@ -6,7 +6,26 @@
 	},
 	"LandingPage": {
 		"search": "Søg",
-		"searchInputPlaceHolder": "Find eller opret et nyt emne"
+		"searchInputPlaceHolder": "Find eller opret et nyt emne",
+		"searchInputSearchOnly": "Find et emne",
+		"titleDescription": "Hvad er Wikidocumentaries?",
+		"titleStatus": "Status",
+		"moreBelow": "Læs mere forneden",
+		"more": "Læs mere",
+		"titleTopics": "Emner",
+		"titleMedia": "Medier",
+		"titleTools": "Værktøjer",
+		"titleLanguages": "Sprog",
+		"titleTechnology": "Teknologi",
+		"titleCreators": "Skabere",
+		"titlePartners": "Partnere",
+		"titleBy": "Projekt af",
+		"getInvolved": "Deltag!",
+		"titleTranslate": "Oversæt",
+		"titleContent": "Tilføj dit indhold",
+		"titleContact": "Kom i kontakt!",
+		"facebook": "Facebookgruppe",
+		"blog": "Blog"
 	},
 	"MainPage": {
 		"topicPageName": "Emneside",
@@ -26,6 +45,10 @@
 		"TopicImages": {
 			"headerTitle": "Billeder fra arkiverne",
 			"actionsMenu": {
+				"menuTitle": "Vis eller arrangere billeder",
+				"tooltip": "Vis eller arrangere billeder",
+				"showImagesOnMapMenuText": "Vis alle billederne på kortet",
+				"showImagesOnTimelineMenuText": "Vis alle billeder på tidslinjen",
 				"arrangeByTime": "Arranger billeder efter tid",
 				"selectWorks": "Vælg billeder af værker"
 			},
@@ -39,6 +62,7 @@
 				"large": "stor",
 				"medium": "mellem",
 				"small": "lille",
+				"type": "medietype",
 				"creator": "skaber",
 				"platform": "platform",
 				"source": "kilde",
@@ -63,10 +87,17 @@
 					"menuTitle": "Den er upassende fordi",
 					"shortMenuTitle": "Den er upassende"
 				}
-			}
+			},
+			"imagesViewExternal": "Vis originalbilledet"
 		},
 		"TopicMap": {
-			"hideImagesMenuText": "Skjul billeder"
+			"hideImagesMenuText": "Skjul billeder",
+			"showNearbyPlacesMenuText": "Vis steder i nærheden",
+			"hideNearbyPlacesMenuText": "Skjul steder i nærheden"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Avisudklip",
+			"addClipFromArchivesMenuText": "Tilføj udklip..."
 		},
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje"
@@ -96,7 +127,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Steder",
+			"headerTitle": "På denne plads",
 			"sortMenu": {
 				"optionTime": "Efter tid",
 				"optionAlpha": "Alfabetisk",
@@ -133,6 +164,9 @@
 				"optionList": "Liste"
 			},
 			"showAll": "Alle"
+		},
+		"Parts": {
+			"headerTitle": "Dele"
 		},
 		"Works": {
 			"headerTitle": "Værker",
@@ -178,17 +212,24 @@
 			"genre": "Genre",
 			"addGenre": "Tilføj genre",
 			"removeGenre": "Fjern genre",
+			"addTopic": "Tilføj emne",
+			"removeTopic": "Fjern emne",
 			"locationMap": "Placering på kortet",
 			"addPerson": "Tilføj person",
 			"removePerson": "Fjern person",
 			"collection": "Samling",
 			"copyright": "Ophavsret",
-			"work": "Værk",
+			"work": "Værk repræsenteret i billedet",
+			"photograph": "Fotografi",
+			"image": "Billede",
+			"photographer": "Fotograf",
+			"addPhotographData": "Tilføj information om fotografet",
 			"digitalCopy": "Digital kopi",
 			"platformId": "ID",
 			"fileSize": "Filstørrelse",
 			"fileFormat": "Filformat",
 			"remove": "Fjern",
+			"moveTo": "Flyt til et andet felt",
 			"addData": "Tilføj data",
 			"rotate": "Roter"
 		},
@@ -207,6 +248,7 @@
 			"optionTime": "Efter tid",
 			"optionAlpha": "Alfabetisk",
 			"optionTitleAlpha": "Efter titel alfabetisk",
+			"optionCreatorAlpha": "Efter skaber alfabetisk",
 			"optionDist": "Efter afstand",
 			"optionClear": "Ryd sortering"
 		},
@@ -224,12 +266,18 @@
 		"ok": "Ok",
 		"cancel": "Annullér",
 		"helpText": "Hjælp",
+		"expand": "Udvid afsnittet",
+		"collapse": "Fold afsnittet",
 		"menus": {
 			"actionMenuTitle": "Handlinger",
 			"actionMenuTooltip": "Handlinger",
 			"languageMenuTitle": "Vælg sprog",
+			"languageMenuTooltip": "Vælg dit sprog",
 			"myLanguagesItem": "Mine sprog",
-			"languageMenuTranslate": "Oversæt denne artikel"
+			"languageMenuTranslate": "Oversæt denne artikel til dansk"
+		},
+		"languageMenu": {
+			"TranslateUI": "Oversæt til dit sprog"
 		},
 		"languages": {
 			"fi": "Finsk",
