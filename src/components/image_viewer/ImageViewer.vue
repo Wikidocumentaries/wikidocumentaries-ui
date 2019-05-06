@@ -19,7 +19,7 @@
               class="viewer-image"
             >
             <div class="viewer-contents">
-            <!-- <div class="viewer-contents" :class="showLinks ? 'show-links' : ''"> -->
+              <!-- <div class="viewer-contents" :class="showLinks ? 'show-links' : ''"> -->
               <div v-if="index < items.length-1" @click="stepRight" class="step-right">
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
@@ -119,8 +119,8 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
                   <div class="compound" v-for="creator in element.creators" :key="creator.id">
-                      <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
-                      <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
+                    <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
+                    <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
                   </div>
                   <Dataselect
                     class="grid-select action"
@@ -137,7 +137,7 @@
                   <!-- <Dataselect v-for="item in element.datecreated" :key="item.id"
                     class="grid-select"
                     v-bind:term="item"
-                  ></Dataselect> -->
+                  ></Dataselect>-->
                   <Dataselect
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addDateCreated')"
@@ -1000,7 +1000,8 @@ export default {
   transition: opacity 500ms;
 }
 
-.contentarea:hover .viewer-contents, .show-links {
+.contentarea:hover .viewer-contents,
+.show-links {
   opacity: 1;
 }
 
@@ -1121,8 +1122,8 @@ export default {
 
 .metadata-map {
   width: 100%;
-  /* background: var(--main-blue); */
   height: 200px;
+  z-index: -9999;
 }
 
 /* .map {

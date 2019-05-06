@@ -111,6 +111,7 @@ SELECT ?aff ?affLabel (SAMPLE(?image) AS ?image) WHERE {
   {
     wd:Q29021 wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
   }
+  MINUS { ?aff wdt:P31 wd:Q5 .}
   OPTIONAL {?aff wdt:P18 ?image .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en". }
   }

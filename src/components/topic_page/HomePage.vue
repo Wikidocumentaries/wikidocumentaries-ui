@@ -17,16 +17,16 @@
       </div>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
-    <Parts id="parts"></Parts>
     <Locations id="locations"></Locations>
+    <Parts id="parts"></Parts>
     <Works id="works"></Works>
     <Depicts id="depicts"></Depicts>
     <People id="people"></People>
     <Affiliations id="affiliations"></Affiliations>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
-    <Depicted id="depicted"></Depicted>
     <EventList id="events"></EventList>
     <TopicMap id="topicMap"></TopicMap>
+    <Depicted id="depicted"></Depicted>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"

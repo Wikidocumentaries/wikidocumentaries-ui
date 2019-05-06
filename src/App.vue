@@ -365,7 +365,7 @@ a:hover {
   }
 
   .text-container {
-    max-height: 350px;
+    max-height: 260px;
   }
 }
 
@@ -570,7 +570,7 @@ i.wikiglyph {
 }
 
 .data-select {
-  display: inline-block;
+  display: block;
   background: var(--main-red);
   color: white;
   padding: 0 7px;
