@@ -7,7 +7,37 @@
 	},
 	"LandingPage": {
 		"search": "搜尋",
-		"searchInputPlaceHolder": "尋找主題或建立新的主題"
+		"searchInputPlaceHolder": "尋找主題或建立新的主題",
+		"searchInputSearchOnly": "尋找主題",
+		"intro": "Wikidocumentaries 是微歷史方面的 wiki 網站 - 一個將歷史追蹤給集合在一起，並轉換成敘述內容的地方。歡迎透過搜尋您所感興趣的主題來開始！",
+		"titleDescription": "什麼是 Wikidocumentaries？",
+		"titleStatus": "狀態",
+		"status": "網站處於展示階段，許多重要功能還不可用，並且在表現上可能尚未符合預期。",
+		"moreBelow": "閱讀以下更多",
+		"more": "閱讀更多",
+		"moreLink": "閱讀更多於",
+		"titleTopics": "主題",
+		"titleMedia": "多媒體",
+		"titleTools": "工具",
+		"titleLanguages": "語言",
+		"statusLanguages": "Wikidocumentaries 可被在維基數據裡任何可用語言給引導。對於小眾語言會是一個很好的機會。翻譯是在 TranslateWiki 網站裡完成。",
+		"titleTechnology": "技術",
+		"titleCreators": "創作者",
+		"titleTeam": "團隊",
+		"titleThanks": "特別致謝",
+		"titlePartners": "合作夥伴",
+		"titleFunding": "友善支援來自",
+		"titleBy": "專案出自",
+		"getInvolved": "參與！",
+		"titleTranslate": "翻譯",
+		"titleContent": "新增您的內容",
+		"titleDevelop": "建立工具與群眾外包任務。",
+		"titleContact": "取得聯繫！",
+		"facebook": "臉書群組",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "部落格",
+		"email": "電子郵件",
+		"github": "Github 版本庫"
 	},
 	"MainPage": {
 		"topicPageName": "主題頁面",
@@ -17,7 +47,7 @@
 		"returnToHomeMessage": "返回到達頁面"
 	},
 	"WaitPage": {
-		"waitMessage": "請稍等…正在從維基百科、維基數據、維基共享資源、Map Warper、Finna、Flickr 檢索資料…"
+		"waitMessage": "請稍等…正在從維基百科、維基數據、維基共享資源、MapWarper、Finna、Flickr 檢索資料…"
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -128,7 +158,7 @@
 			},
 			"optionsMenu": {
 				"menuTitle": "選項",
-				"menuTooltip": "選擇要顯示的實情",
+				"menuTooltip": "選擇要顯示的實際內容",
 				"optionWorks": "秀出作品",
 				"optionRelatedPeople": "秀出與事件相關的人物",
 				"subRelatedPeopleConf": {
@@ -138,7 +168,7 @@
 			}
 		},
 		"Wikidata": {
-			"headerTitle": "實情",
+			"headerTitle": "實際內容",
 			"extLink": {
 				"linkTitleWD": "在維基數據檢視或編輯"
 			},
@@ -152,7 +182,7 @@
 			"missingArticleCreate": "您可以透過點擊加號圖標，來以您所使用語言建立此條目。",
 			"missingArticleFallback": "會依據您的語言備用偏好設定來顯示此條目別種語言版本。",
 			"missingArticleTranslate": "您可以透過在語言選單裡挑選，來翻譯此條目成您使用的語言。",
-			"missingArticleAuto": "此段短文字是以所記錄下的實情為依據來自動創建出，您可以保存草稿來開始編輯條目。",
+			"missingArticleAuto": "此段短文字是以所記錄下的實際內容為依據來自動創建出，您可以保存草稿來開始編輯條目。",
 			"extLink": {
 				"linkTitleWP": "在維基百科閱讀或編輯"
 			},
@@ -220,6 +250,13 @@
 		"Depicts": {
 			"headerTitle": "描述",
 			"intro": "此作品描述出這些主題，您可以按時間和名稱來排序。請注意要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
+		},
+		"Parts": {
+			"headerTitle": "部份",
+			"intro": "這些部份屬於這些主題，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
+		},
+		"Affiliations": {
+			"headerTitle": "機構單位"
 		},
 		"Works": {
 			"headerTitle": "作品",

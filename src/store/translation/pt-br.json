@@ -8,7 +8,45 @@
 	},
 	"LandingPage": {
 		"search": "Pesquisar",
-		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico"
+		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico",
+		"searchInputSearchOnly": "Encontre um tópico",
+		"intro": "Wikidocumentários é uma wiki para uma pequena história - um lugar para juntar traços de história e transformá-los em histórias. Comece procurando por um tópico de interesse!",
+		"titleDescription": "O que são Wikidocumentários?",
+		"description": "Wikidocumentários é um espaço criador de historiadores cidadãos. Ele combina informações sobre tópicos - pessoas, lugares, edifícios, eventos e muito mais. Você pode navegar entre os tópicos seguindo qualquer conexão registrada, como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conectados. Nos Wikidocumentários, será possível corrigir as informações existentes e adicionar novos tópicos, trazer suas próprias imagens e lembranças e usar todo o material para seus próprios propósitos.",
+		"titleStatus": "Status",
+		"status": "O site está em fase de demonstração. Muitos recursos importantes ainda não estão disponíveis e o site pode não ter o desempenho esperado.",
+		"moreBelow": "Leia mais abaixo",
+		"more": "Leia mais",
+		"moreLink": "Leia mais em",
+		"titleTopics": "Tópicos",
+		"statusTopics": "Os tópicos são lidos no Wikidata. Novos tópicos podem ser criados também localmente com a riqueza de descrição com o Wikidata. Os artigos atuais são da Wikipedia, enquanto um artigo para um tópico local pode ser criado localmente.",
+		"titleMedia": "Mídia",
+		"statusMedia": "A mídia é lida atualmente no Finna.fi, Flickr e Wikimedia Commons. Estamos trabalhando para encontrar imagens com mais precisão e exibir mais e melhores metadados de cada uma das fontes. Novas fontes de mídia são bem vindas!",
+		"titleTools": "Ferramentas",
+		"statusTools": "Wikidocumentários tem tarefas e ferramentas para trabalhar com o conteúdo. Os artigos já podem ser traduzidos entre idiomas com o Tradutor de conteúdo. Keywording com Wikidata e geotagging um local de imagem estão sendo preparados. Novas ferramentas divertidas e úteis podem ser criadas ou integradas.",
+		"titleLanguages": "Idiomas",
+		"statusLanguages": "Wikidocumentários podem ser navegados em qualquer idioma disponível no Wikidata. Esta é uma ótima oportunidade para pequenos idiomas. As traduções são feitas no TranslateWiki.",
+		"titleTechnology": "Tecnologia",
+		"statusTechnology": "Wikidocumentários lê os dados principais do Wikidata. Além disso, os Wikidocumentários terão seu próprio Wikibase para tópicos que estão fora do escopo do Wikidata. Os Wikidata e os Wikidocumentários devem ser sincronizados como Wikibases federados. Em segundo lugar, os metadados da imagem são vinculados a itens do Wikidata, e esses dados podem ser sincronizados com os dados estruturados no Wikimedia Commons. O site é construído com o Vue.js e está hospedado no Serviços de nuvem da Wikimedia.",
+		"titleCreators": "Criadores",
+		"titleTeam": "Equipe",
+		"titleThanks": "Com um agradecimento especial a",
+		"titlePartners": "Parceiros",
+		"titleFunding": "Com o apoio gentil de",
+		"titleBy": "Projeto por",
+		"getInvolved": "Envolver-se!",
+		"titleTranslate": "Traduzir",
+		"joinTranslate": "Venha e traga sua linguagem para os Wikidocumentaries. Junte-se à equipe de tradução de voluntários e veja o patrimônio cultural conectado ganhar vida em seu idioma.",
+		"titleContent": "Adicione seu conteúdo",
+		"joinContent": "Se você tem uma foto, mídia, documento, mapa ou coleção de dados que gostaria de ver aqui, vamos dar uma olhada juntos se já pudermos nos conectar através de um dos canais existentes ou se pudermos criar novos métodos de conexão. Também estamos ansiosos para organizar workshops para registrar conhecimento histórico com comunidades de interesse.",
+		"titleDevelop": "Crie ferramentas e tarefas de crowdsourcing.",
+		"joinDevelop": "Gostamos de adicionar mais ferramentas e criar novas tarefas de crowdsourcing em colaboração com organizações e construtores de ferramentas. Vamos unir forças para o próximo aplicativo legal de crowdsourcing!",
+		"titleContact": "Entre em contato!",
+		"facebook": "Grupo do Facebook",
+		"wiki": "Wikidocumentários wiki",
+		"blog": "Blog",
+		"email": "E-mail",
+		"github": "Repositório no Github"
 	},
 	"MainPage": {
 		"topicPageName": "Página do tópico",
@@ -18,7 +56,7 @@
 		"returnToHomeMessage": "Voltar para a página de destino"
 	},
 	"WaitPage": {
-		"waitMessage": "Um momento, por favor... Recuperando dados da Wikipedia, Wikidata, Wikimedia Commons, Mapa Warper, Finna, Flickr ..."
+		"waitMessage": "Um momento, por favor... Recuperando dados da Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr"
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -221,6 +259,14 @@
 		"Depicts": {
 			"headerTitle": "Descreve",
 			"intro": "Este trabalho descreve esses tópicos. Você pode classificá-los por hora e nome. Observe que para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
+		},
+		"Parts": {
+			"headerTitle": "Partes",
+			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
+		},
+		"Affiliations": {
+			"headerTitle": "Afiliações",
+			"intro": "Organizações nas quais essa pessoa da organização tem uma afiliação com"
 		},
 		"Works": {
 			"headerTitle": "Trabalho",

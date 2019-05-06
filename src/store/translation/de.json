@@ -8,7 +8,45 @@
 	},
 	"LandingPage": {
 		"search": "Suchen",
-		"searchInputPlaceHolder": "Ein Thema finden oder ein neues erstellen"
+		"searchInputPlaceHolder": "Ein Thema finden oder ein neues erstellen",
+		"searchInputSearchOnly": "Ein Thema finden",
+		"intro": "Wikidocumentaries ist ein Wiki für kleine Geschichte – ein Ort zum Zusammenziehen von Geschichtsspuren und zur Verwandlung dieser in Erzählungen. Beginne durch die Suche nach einem Thema der Interesse!",
+		"titleDescription": "Was ist Wikidocumentaries?",
+		"description": "Wikidocumentaries ist ein Herstellraum für bürgerliche Historiker. Es kombiniert Informationen über Themen – Personen, Orte, Gebäude, Ereignisse und mehr. Du kannst zwischen den Themen navigieren, indem du einer aufgezeichneten Verbindung wie Familienbeziehungen, Standorte, Urheber und Erstellungen oder Verbindungen folgst. Ein Thema wird mit Bildern und Karten von verbundenen Museen, Archiven und Bibliotheken illustriert. In Wikidocumentaries wird es möglich sein, vorhandene Informationen zu korrigieren und neue Themen zu ergänzen, deine eigenen Bilder und Erinnerungen einzubringen und das gesamte Material für deine eigenen Zwecke zu nutzen.",
+		"titleStatus": "Status",
+		"status": "Die Website befindet sich in der Demophase. Viele wichtige Funktionen sind noch nicht verfügbar und die Website könnte nicht so gut funktionieren wie erwartet.",
+		"moreBelow": "Mehr unten lesen",
+		"more": "Mehr lesen",
+		"moreLink": "Mehr lesen in",
+		"titleTopics": "Themen",
+		"statusTopics": "Die Themen werden von Wikidata gelesen. Neue Themen können später auch lokal mit der Anreicherung von Beschreibungen mit Wikidata erstellt werden. Aktuelle Artikel sind von Wikipedia, während ein Artikel für ein lokales Thema später lokal erstellt werden kann.",
+		"titleMedia": "Medien",
+		"statusMedia": "Die Medien werden derzeit von Finna.fi, Flickr und Wikimedia Commons gelesen. Wir arbeiten am genaueren Auffinden von Bildern und an der Anzeige von weiteren und besseren Metadaten von jeder der Quellen. Neue Medienquellen sind willkommen!",
+		"titleTools": "Werkzeuge",
+		"statusTools": "Wikidocumentaries hat Aufgaben und Werkzeuge zum Arbeiten mit dem Inhalt. Artikel können bereits zwischen den Sprachen mit ContentTranslate übersetzt werden. Bestichwortungen mit Wikidata und Georeferenzierungen von Bildstandorten werden vorbereitet. Neuer Spaß und nützliche Werkzeuge können erstellt oder integriert werden.",
+		"titleLanguages": "Sprachen",
+		"statusLanguages": "Wikidocumentaries kann in jeder in Wikidata verfügbaren Sprache navigiert werden. Dies ist eine tolle Gelegenheit für kleine Sprachen. Die Übersetzungen werden auf TranslateWiki durchgeführt.",
+		"titleTechnology": "Technologie",
+		"statusTechnology": "Wikidocumentaries liest die Kerndaten von Wikidata. Zusätzlich hat Wikidocumentaries seine eigene Wikibase für Themen, die für Wikidata außerhalb des Geltungsbereichs sind. Es wird erwartet, dass Wikidata und Wikidocumentaries als föderierte Wikibases synchronisiert werden. Zweitens sind Bild-Metadaten mit Wikidata-Objekten verlinkt und diese Daten können mit den strukturierten Daten auf Wikimedia Commons synchronisiert. Die Website wurde mit Vue.js erstellt und wird auf Wikimedia Cloud Services gehostet.",
+		"titleCreators": "Urheber",
+		"titleTeam": "Team",
+		"titleThanks": "Mit speziellem Dank an",
+		"titlePartners": "Partner",
+		"titleFunding": "Mit freundlicher Unterstützung von",
+		"titleBy": "Projekt von",
+		"getInvolved": "Mitmachen!",
+		"titleTranslate": "Übersetzen",
+		"joinTranslate": "Komm und bring deine Sprache in Wikidocumentaries ein. Trete dem freiwilligen Übersetzungsteam bei und sieh, wie das verbundene Kulturerbe in deiner Sprache zum Leben erweckt wird.",
+		"titleContent": "Ergänze deinen Inhalt",
+		"joinContent": "Falls du ein Foto, Medium, Dokument, eine Karte oder Datensammlung hast, die du hier sehen möchtest, schau, ob es bereits verbunden werden kann, obwohl einer der vorhandenen Kanäle oder ob wir neue Verbindungsmethoden erstellen können. Wir arrangieren auch Workshops zur Aufnahme historischen Wissens mit Interessensgemeinschaften.",
+		"titleDevelop": "Erstelle Werkzeuge und Crowdsourcing-Aufgaben.",
+		"joinDevelop": "Wir möchten weitere Werkzeuge ergänzen und neue Crowdsourcing-Aufgaben in Zusammenarbeit mit Organisationen und Werkzeugentwicklern erstellen. Bring Kräfte für die nächste coole Crowdsourcing-App ein!",
+		"titleContact": "In Kontakt treten!",
+		"facebook": "Facebook-Gruppe",
+		"wiki": "Wikidocumentaries-Wiki",
+		"blog": "Blog",
+		"email": "E-Mail",
+		"github": "Github-Repositorium"
 	},
 	"MainPage": {
 		"topicPageName": "Themenseite",
@@ -18,7 +56,7 @@
 		"returnToHomeMessage": "Zurück zur Startseite"
 	},
 	"WaitPage": {
-		"waitMessage": "Einen Moment, bitte. Es werden Daten abgerufen von Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr …"
+		"waitMessage": "Einen Moment, bitte. Es werden Daten abgerufen von Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr …"
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -221,6 +259,14 @@
 		"Depicts": {
 			"headerTitle": "Stellt dar",
 			"intro": "Dieses Werk bildet diese Themen ab. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
+		},
+		"Parts": {
+			"headerTitle": "Teile",
+			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
+		},
+		"Affiliations": {
+			"headerTitle": "Verbindungen",
+			"intro": "Organisationen, mit denen diese Person in der Organisation eine Verbindung hat."
 		},
 		"Works": {
 			"headerTitle": "Werke",

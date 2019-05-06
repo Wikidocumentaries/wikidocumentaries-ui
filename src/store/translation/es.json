@@ -260,7 +260,8 @@
 			"fileFormat": "Formato de archivo",
 			"remove": "Quitar",
 			"moveTo": "Mover a otro campo",
-			"addData": "Añadir datos"
+			"addData": "Añadir datos",
+			"rotate": "Girar"
 		},
 		"imageActions": {
 			"rotateImage": "Girar imagen",

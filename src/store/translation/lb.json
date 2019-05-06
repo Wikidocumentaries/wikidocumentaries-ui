@@ -6,7 +6,14 @@
 		]
 	},
 	"LandingPage": {
-		"search": "Sichen"
+		"search": "Sichen",
+		"more": "Liest méi",
+		"titleTools": "Geschirkëscht",
+		"titleLanguages": "Sproochen",
+		"titleTeam": "Equipe",
+		"titlePartners": "Partner",
+		"getInvolved": "Maacht mat!",
+		"titleTranslate": "Iwwersetzen"
 	},
 	"MainPage": {
 		"mapSearchPageName": "Kaarten duerchsichen"
@@ -187,7 +194,8 @@
 			"imageDimensions": "Dimensioune vum Bild",
 			"fileSize": "Gréisst vum Fichier",
 			"fileFormat": "Format vum Fichier",
-			"remove": "Ewechhuelen"
+			"remove": "Ewechhuelen",
+			"rotate": "Dréinen"
 		},
 		"imageActions": {
 			"rotateImage": "Bild dréinen",
@@ -209,6 +217,11 @@
 		}
 	},
 	"menus": {
+		"sortMenu": {
+			"optionTime": "No der Zäit",
+			"optionAlpha": "Alphabetesch",
+			"optionDist": "No Distanz"
+		},
 		"facetMenu": {
 			"optionType": "Typ",
 			"optionCity": "Plaz"
@@ -222,6 +235,7 @@
 		"ok": "OK",
 		"cancel": "Ofbriechen",
 		"helpText": "Hëllef",
+		"expand": "Dësen Abschnitt opklappen",
 		"collapse": "Dësen Abschnitt zesummeklappen",
 		"menus": {
 			"actionMenuTitle": "Aktiounen",

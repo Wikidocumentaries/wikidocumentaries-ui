@@ -5,7 +5,21 @@
 		]
 	},
 	"LandingPage": {
-		"search": "Cirche"
+		"search": "Cirche",
+		"titleStatus": "State",
+		"more": "Ligge de cchiù",
+		"titleMedia": "Media",
+		"titleTools": "Struminde",
+		"titleLanguages": "Lènghe",
+		"titleCreators": "Ccrejature",
+		"titlePartners": "Partner",
+		"getInvolved": "Pigghie parte!",
+		"titleContent": "Aggiunge 'u condenute tune",
+		"facebook": "Gruppe Feisbuc",
+		"github": "Archivije GitHub"
+	},
+	"WaitPage": {
+		"waitMessage": "Aspitte 'nu mumende... stoche a recupere date da Uicchipèdie, Uicchidate, Uicchimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -77,6 +91,9 @@
 			},
 			"showAll": "Tutte"
 		},
+		"Affiliations": {
+			"headerTitle": "Affigliazziune"
+		},
 		"Works": {
 			"facetMenuOptionCity": "Luèche"
 		}
@@ -110,7 +127,8 @@
 			"publishingPlatform": "Stoche a pubbleche 'a piattaforme",
 			"fileFormat": "Formate d'u file",
 			"remove": "Live",
-			"uploader": "Carecatore"
+			"uploader": "Carecatore",
+			"rotate": "Gire"
 		},
 		"imageActions": {
 			"clockwise": "orarie",
