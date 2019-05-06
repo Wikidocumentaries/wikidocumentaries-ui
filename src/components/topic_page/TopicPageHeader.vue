@@ -1,10 +1,10 @@
 <template>
-    <div :class="( wikidocumentaries.headerImageURL ? 'header' : 'header-compact')">
+    <div :class="( headerImage ? 'header' : 'header-compact')">
         <img :src="coatOfArms" class="header-coa" />
         <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
         <div class="header-contents">
-        <div id="shade" :class="(wikidocumentaries.headerImageURL ? 'bottomshade' : 'noshade')">
+        <div id="shade" :class="(headerImage ? 'bottomshade' : 'noshade')">
             <div class="titlebox">
                 <div class="titlecont">
                     <div class="title">{{ wikidocumentaries.title }}</div>
@@ -66,7 +66,7 @@ export default {
             if (imageid) {
                 imageurl = "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+imageid;
             } else {
-                imageurl = this.$store.state.wikidocumentaries.headerImageURL;
+                imageurl = wikidocumentaries.headerImageURL;
             }
             return imageurl;
         },

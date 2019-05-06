@@ -21,16 +21,16 @@
     <Locations id="locations"></Locations>
     <Works id="works"></Works>
     <Depicts id="depicts"></Depicts>
-    <Depicted id="depicted"></Depicted>
     <People id="people"></People>
     <Affiliations id="affiliations"></Affiliations>
-    <!--EventList id="events"></EventList-->
+    <TopicTimeline id="topicTimeline"></TopicTimeline>
+    <Depicted id="depicted"></Depicted>
+    <EventList id="events"></EventList>
     <TopicMap id="topicMap"></TopicMap>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
     ></TopicImages>
-    <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
     <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
     <Footer></Footer>
   </div>

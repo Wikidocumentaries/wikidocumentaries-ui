@@ -14,6 +14,7 @@ export default {
 :root {
   --main-txt-color: #333;
   --main-dimmed: #777;
+  --main-dark: #555;
   --main-link-color: #00a3cc;
   --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
@@ -532,6 +533,7 @@ i.wikiglyph {
 
 .gallery-item > img {
   height: 100%;
+  max-width: fit-content;
 }
 
 .gallery-item:hover .gallery-image {
@@ -542,6 +544,17 @@ i.wikiglyph {
 
 .gallery-item:hover * {
   transition: opacity 80ms ease-in;
+}
+
+.appearing {
+  height: 0;
+  opacity: 0;
+  transition: height 80ms ease-in;
+}
+
+.gallery-item:hover .appearing {
+  height: unset;
+  opacity: 1;
 }
 
 .list {

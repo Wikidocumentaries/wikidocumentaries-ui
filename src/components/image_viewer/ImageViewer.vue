@@ -85,9 +85,9 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
                   <div
-                    v-if="element.summary && element.summary.length>0"
+                    v-if="element.description && element.description.length>0"
                     class="grid-body unedited"
-                  >{{ element.summary[0] }}</div>
+                  >{{ element.description[0] }}</div>
                   <div
                     v-else
                     class="grid-body action"
@@ -201,7 +201,7 @@
                     v-for="subject in element.subjects"
                     class="grid-select"
                     :key="subject.id"
-                    v-bind:term="subject[0]"
+                    v-bind:term="subject"
                   ></Dataselect>
                   <Dataselect
                     class="grid-select action"

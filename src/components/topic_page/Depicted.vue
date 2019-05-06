@@ -117,7 +117,8 @@ SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=
 }
 GROUP BY ?depicted ?depictedLabel
 LIMIT 1000
-        `.replace(/Q72/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q72/g, this.$store.state.wikidocumentaries.wikidataId)
+        .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)

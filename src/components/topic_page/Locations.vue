@@ -122,7 +122,8 @@ SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?typeLabel; separator=", 
 }
 GROUP BY ?location ?locationLabel
 LIMIT 1000
-        `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId)
+         .replace(/fi/g, this.$i18n.locale);;
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)

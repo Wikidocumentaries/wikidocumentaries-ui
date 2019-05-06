@@ -20,15 +20,6 @@
                     <div class="gallery-title">{{ item.person.label }}</div>
                     <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
                 </div>
-                <!--div class="thumb-image-header"-->
-                <div>
-                    <div class="left-align">
-                        <!--ImagesActionMenu></ImagesActionMenu-->
-                    </div>
-                    <div class="right-align">
-                        <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-                    </div>
-                </div>
             </router-link>
         </div>
 				<div v-else class="list">

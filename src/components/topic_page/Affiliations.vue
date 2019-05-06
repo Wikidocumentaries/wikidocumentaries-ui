@@ -115,7 +115,8 @@ SELECT ?aff ?affLabel (SAMPLE(?image) AS ?image) WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en". }
   }
 GROUP BY ?aff ?affLabel
-        `.replace(/Q29021/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q29021/g, this.$store.state.wikidocumentaries.wikidataId)
+         .replace(/fi/g, this.$i18n.locale);;
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)
