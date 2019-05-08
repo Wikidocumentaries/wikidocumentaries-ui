@@ -315,7 +315,10 @@
                   <i class="wikiglyph wikiglyph-plus metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="data-select linked">{{ $t('imageViewer.imageMetadata.addData') }}</div>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addData')"
+                  ></Dataselect>
                 </div>
               </div>
               <div v-if="element.geoLocations.length > 0" class="grid-row">

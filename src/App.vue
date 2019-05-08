@@ -103,7 +103,7 @@ a:hover {
 
 .sub {
   font-size: var(--subsubtitle-font-size);
-  padding-top: 1em;
+  margin-top: 1em;
 }
 
 .title::first-letter,
@@ -777,12 +777,14 @@ i.wikiglyph {
 }
 
 .info-cubes {
-  display: flex;
-  flex-wrap: wrap;
+  column-width: 300px;
+  margin-top: 1em;
+  column-gap: 20px;
 }
 
-.info-cube {
-  flex: 1 1 300px;
-  margin-right: 20px;
+.subfirst {
+  padding-top: 0;
+  font-size: var(--subsubtitle-font-size);
+  margin: 0;
 }
 </style>

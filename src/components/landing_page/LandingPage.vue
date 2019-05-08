@@ -22,24 +22,60 @@
       <div class="status">{{ $t('LandingPage.status') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
-          <div class="subtitle sub">{{ $t('LandingPage.titleTopics') }}</div>
+          <div class="subtitle subfirst">{{ $t('LandingPage.titleTopics') }}</div>
           <div class="status">{{ $t('LandingPage.statusTopics') }}</div>
+          <ul>
+            <li>
+              <a href="https://www.wikidata.org/">Wikidata</a>
+            </li>
+          </ul>
         </div>
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleMedia') }}</div>
           <div class="status">{{ $t('LandingPage.statusMedia') }}</div>
+          <ul>
+            <li>
+              <a href="https://finna.fi/">Finna</a>
+            </li>
+
+            <li>
+              <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>
+            </li>
+
+            <li>
+              <a href="https://www.flickr.com/">Flickr</a>
+            </li>
+          </ul>
         </div>
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleTools') }}</div>
           <div class="status">{{ $t('LandingPage.statusTools') }}</div>
+          <ul>
+            <li>
+              <a href="https://www.mediawiki.org/wiki/Content_translation">Content Translation</a>
+            </li>
+            </ul>
         </div>
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleLanguages') }}</div>
           <div class="status">{{ $t('LandingPage.statusLanguages') }}</div>
+          <ul>
+            <li>
+              <a href="https://translatewiki.net/wiki/Translating:Wikidocumentaries">Wikidocumentaries in TranslateWiki</a>
+            </li>
+            </ul>
         </div>
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleTechnology') }}</div>
           <div class="status">{{ $t('LandingPage.statusTechnology') }}</div>
+          <ul>
+            <li>
+              <a href="http://wikiba.se/">Wikibase</a>
+            </li>
+            <li>
+              <a href="https://commons.wikimedia.org/wiki/Commons:Structured_data">Structured Data on Wikimedia Commons</a>
+            </li>
+            </ul>
         </div>
       </div>
     </div>
@@ -47,7 +83,7 @@
       <div class="subtitle">{{ $t('LandingPage.getInvolved') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
-          <div class="subtitle sub">{{ $t('LandingPage.titleTranslate') }}</div>
+          <div class="subtitle subfirst">{{ $t('LandingPage.titleTranslate') }}</div>
           <div class="status">
             {{ $t('LandingPage.joinTranslate') }}
             <a
@@ -70,14 +106,14 @@
       <div class="subtitle">{{ $t('LandingPage.titleCreators') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
-          <div class="subtitle sub">{{ $t('LandingPage.titleTeam') }}</div>
+          <div class="subtitle subfirst">{{ $t('LandingPage.titleTeam') }}</div>
           <div class="status">Erno Mäkinen, Tuukka Hastrup, Mikko Rinne, Susanna Ånäs</div>
         </div>
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleThanks') }}</div>
           <div
             class="status"
-          >Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen</div>
+          >Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen, Mari Viita-aho, Nuutti Kanerva, Jari Sorjonen</div>
         </div>
       </div>
       <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
@@ -150,14 +186,20 @@
         </div>
       </div>
     </div>
-    <div
-      class="intro"
-      style="padding-top:10px;"
-    >Valokuva: <a href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/" target="_blank">Talvikylä. Vastasyntyneet karitsat pidetään tuvassa. Eino Mäkinen, 1930-luku.</a> Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo. Ei tunnettuja tekijänoikeusrajoitteita.</div>
-    <div
-      class="intro"
-      style="padding-bottom:10px;"
-    >Photo: <a href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/" target="_blank">Winter Village. Newborn lambs are kept indoors.</a> Eino Mäkinen, 1930's. Silver gelatin print. The Finnish Museum of Photography. No known copyright restrictions.</div>
+    <div class="intro" style="padding-top:10px;">
+      Valokuva:
+      <a
+        href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/"
+        target="_blank"
+      >Talvikylä. Vastasyntyneet karitsat pidetään tuvassa.</a> Kuvassa O'nddri Gauriloff ja hänen tyttärensä Maria. Eino Mäkinen, 1930-luku. Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo. Ei tunnettuja tekijänoikeusrajoitteita.
+    </div>
+    <div class="intro" style="padding-bottom:10px;">
+      Photo:
+      <a
+        href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/"
+        target="_blank"
+      >Winter Village. Newborn lambs are kept indoors.</a> Depicting O'nddri Gauriloff and his daughter Maria. Eino Mäkinen, 1930's. Suenjel (Suonikylä), Petsamo. Silver gelatin print. The Finnish Museum of Photography. No known copyright restrictions.
+    </div>
   </div>
 </template>
 
