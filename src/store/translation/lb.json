@@ -7,13 +7,19 @@
 	},
 	"LandingPage": {
 		"search": "Sichen",
+		"searchInputSearchOnly": "En Thema fannen",
+		"moreBelow": "Liest méi hei drënner",
 		"more": "Liest méi",
 		"titleTools": "Geschirkëscht",
 		"titleLanguages": "Sproochen",
 		"titleTeam": "Equipe",
 		"titlePartners": "Partner",
 		"getInvolved": "Maacht mat!",
-		"titleTranslate": "Iwwersetzen"
+		"titleTranslate": "Iwwersetzen",
+		"titleContent": "Setzt Ären Inhalt derbäi",
+		"titleContact": "Kontakt ophuelen!",
+		"facebook": "Facebook-Grupp",
+		"email": "E-Mail"
 	},
 	"MainPage": {
 		"mapSearchPageName": "Kaarten duerchsichen"
@@ -97,7 +103,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Den Artikel an enger anerer Sprooch liesen",
-				"translateArticleText": "Iwwersetzt dësen Artikel an Är Sprooch",
+				"translateArticleText": "Dësen Artikel op Lëtzebuergesch iwwersetzen",
 				"otherLanguagestext": "Aner Sproochen"
 			}
 		},
@@ -130,6 +136,12 @@
 				"optionList": "Lëscht"
 			},
 			"showAll": "All"
+		},
+		"Parts": {
+			"headerTitle": "Deeler"
+		},
+		"Affiliations": {
+			"headerTitle": "Affiliatiounen"
 		},
 		"Works": {
 			"headerTitle": "Wierker",
@@ -243,7 +255,7 @@
 			"languageMenuTitle": "Sprooch eraussichen",
 			"languageMenuTooltip": "Sicht Är Sprooch eraus",
 			"myLanguagesItem": "Meng Sproochen",
-			"languageMenuTranslate": "Dësen Artikel iwwersetzen"
+			"languageMenuTranslate": "Dësen Artikel op Lëtzebuergesch iwwersetzen"
 		},
 		"languageMenu": {
 			"TranslateUI": "Iwwersetzt an Är Sprooch"
