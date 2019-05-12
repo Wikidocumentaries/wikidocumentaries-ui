@@ -105,7 +105,7 @@ export default {
     sparql = `
 SELECT ?aff ?affLabel (SAMPLE(?image) AS ?image) WHERE {
   {
-    ?aff wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P361 wd:Q29021 .
+    ?aff wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6 wd:Q29021 .
     }
   UNION
   {
@@ -117,7 +117,7 @@ SELECT ?aff ?affLabel (SAMPLE(?image) AS ?image) WHERE {
   }
 GROUP BY ?aff ?affLabel
         `.replace(/Q29021/g, this.$store.state.wikidocumentaries.wikidataId)
-         .replace(/fi/g, this.$i18n.locale);;
+         .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)

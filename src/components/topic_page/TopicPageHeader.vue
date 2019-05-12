@@ -66,7 +66,7 @@ export default {
             if (imageid) {
                 imageurl = "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+imageid;
             } else {
-                imageurl = wikidocumentaries.headerImageURL;
+                imageurl = this.wikidocumentaries.headerImageURL;
             }
             return imageurl;
         },

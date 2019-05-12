@@ -436,6 +436,7 @@
         }
     },
     "general": {
+        "wikidocumentaries": "Wikidocumentaries",
         "ok": "OK",
         "cancel": "Cancel",
         "helpText": "Help",

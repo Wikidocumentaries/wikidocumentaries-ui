@@ -124,7 +124,8 @@ SELECT ?depicted ?depictedLabel (SAMPLE(?image) AS ?image) (GROUP_CONCAT(?typeLa
 }
 GROUP BY ?depicted ?depictedLabel ?time
 LIMIT 1000
-        `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId)
+        .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)

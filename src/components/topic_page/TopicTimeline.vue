@@ -527,7 +527,7 @@ export default {
       //console.log(textWidth);
 
       var left = 0;
-      var pad = 10;
+      var pad = 6;
 
       if (this.sortedTimelineItems[index].pos > 0) {
         left =
@@ -539,7 +539,7 @@ export default {
       //   if (left + pad + textWidth > this.$refs.timelineBar.clientWidth) {
       //     pos = left - textWidth;
       //   }
-      var rpad = this.$refs.timelineBar.clientWidth - pos + 15;
+      var rpad = this.$refs.timelineBar.clientWidth - pos + 10;
       if (left > this.$refs.timelineBar.clientWidth / 2) {
         style =
           "text-align: right; padding-right: " +
@@ -665,7 +665,7 @@ function getTextWidth(text, font) {
   padding: 9px 10px 9px 2px;
   background: transparent;
   color: white;
-  z-index: 6;
+  z-index: 11;
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -703,7 +703,7 @@ function getTextWidth(text, font) {
   padding: 9px 2px 9px 10px;
   background: transparent;
   color: white;
-  z-index: 6;
+  z-index: 10;
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;

@@ -452,7 +452,7 @@ import Footer from "@/components/Footer";
 
 const MENU_ACTIONS = {
   SELECT_HEADER: 0
-  // GEOLOCATE: 0,
+  // GEOLOCATE: 1,
   // ADD_TO_COLLECTION: 0,
 };
 
@@ -473,11 +473,11 @@ export default {
         {
           id: MENU_ACTIONS.SELECT_HEADER,
           text: "topic_page.TopicImages.imagesActionMenu.selectFeatured"
-        }
-        // {
-        //   id: MENU_ACTIONS.GEOLOCATE,
-        //   text: "topic_page.Works.sortMenuOptionAlpha"
-        // },
+        },
+        {
+          id: MENU_ACTIONS.GEOLOCATE,
+          text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
+        },
       ]
     };
   },
