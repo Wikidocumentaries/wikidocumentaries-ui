@@ -9,7 +9,15 @@
 	"LandingPage": {
 		"search": "Пребарај",
 		"searchInputPlaceHolder": "Најдете тема или создадете нова",
-		"searchInputSearchOnly": "Најди тема"
+		"searchInputSearchOnly": "Најди тема",
+		"titleDescription": "Што се Викидокументарците?",
+		"titleStatus": "Статус",
+		"titleContact": "Стапете во контакт!",
+		"facebook": "Група на Facebook",
+		"wiki": "Вики на Викидокументарците",
+		"blog": "Блог",
+		"email": "Е-пошта",
+		"github": "Скалдиште Github"
 	},
 	"MainPage": {
 		"topicPageName": "Тематска страница",
@@ -19,7 +27,7 @@
 		"returnToHomeMessage": "Назад на почетната страница"
 	},
 	"WaitPage": {
-		"waitMessage": "Почекајте... Преземам податоци од Википедија, Википодатоци, Ризницата, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Почекајте... Преземам податоци од Википедија, Википодатоци, Ризницата, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -226,6 +234,9 @@
 		"Parts": {
 			"headerTitle": "Делови",
 			"intro": "Овие делови ѝ припаѓаат на темава. Можете да ги подредувате по време или назив. За да ги видите сите теми, вклучувајќи ги оние без слики, ќе треба да зададете да ви се прикажат како список."
+		},
+		"Affiliations": {
+			"headerTitle": "Припадност"
 		},
 		"Works": {
 			"headerTitle": "Дела",

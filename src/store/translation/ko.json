@@ -8,7 +8,24 @@
 	"LandingPage": {
 		"search": "검색",
 		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기",
-		"searchInputSearchOnly": "주제 찾기"
+		"searchInputSearchOnly": "주제 찾기",
+		"titleStatus": "상태",
+		"more": "더 읽어보기",
+		"titleTopics": "주제",
+		"titleMedia": "미디어",
+		"titleTools": "도구",
+		"titleLanguages": "언어",
+		"titleTechnology": "기술",
+		"titleCreators": "만든이",
+		"titleTeam": "팀",
+		"titlePartners": "파트너",
+		"getInvolved": "참여하기!",
+		"titleTranslate": "번역하기",
+		"titleContact": "연락하기!",
+		"facebook": "페이스북 그룹",
+		"blog": "블로그",
+		"email": "이메일",
+		"github": "GitHub 저장소"
 	},
 	"MainPage": {
 		"topicPageName": "주제 문서",

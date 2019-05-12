@@ -9,19 +9,24 @@
 		"search": "搜尋",
 		"searchInputPlaceHolder": "尋找主題或建立新的主題",
 		"searchInputSearchOnly": "尋找主題",
-		"intro": "Wikidocumentaries 是微歷史方面的 wiki 網站 - 一個將歷史追蹤給集合在一起，並轉換成敘述內容的地方。歡迎透過搜尋您所感興趣的主題來開始！",
+		"intro": "Wikidocumentaries 是微歷史方面的 wiki 網站 — 一個將歷史追蹤給集合在一起，並轉換成敘述內容的地方。歡迎透過搜尋您所感興趣的主題來開始！",
 		"titleDescription": "什麼是 Wikidocumentaries？",
+		"description": "Wikidocumentaries 是個讓公眾史學家利用的創作空間。它結合了有關主題的資訊 — 人物、地點、建築、事件等等。您可以透過以下任何紀錄連接來在主題之間穿越，例如家族關係、創作者、創作內容或是隸屬。主題會以圖片以及來自於關聯博物館、存檔、或圖書館的地圖來說明。在 Wikidocumentaries 裡，可做出糾正現有資訊與添加新主題、帶入您個人持有的圖片和記事，以及使用所有素材在您個人的目的上。",
 		"titleStatus": "狀態",
-		"status": "網站處於展示階段，許多重要功能還不可用，並且在表現上可能尚未符合預期。",
+		"status": "網站目前處於展示階段，許多重要功能還不可用，並且在表現上可能尚未符合預期。",
 		"moreBelow": "閱讀以下更多",
 		"more": "閱讀更多",
 		"moreLink": "閱讀更多於",
 		"titleTopics": "主題",
+		"statusTopics": "主題內容讀取自維基數據。往後可能會有以維基數據的豐富描述來建立的本地新主題。目前的條目內容則來自於維基百科，而適用於本地主題的條目往後也有可能被建立出。",
 		"titleMedia": "多媒體",
+		"statusMedia": "多媒體內容目前讀取自 Finna.fi、Flickr、與維基共享資源。我們致力於更精準地找尋圖片，以及從各來源展示出更多與更好的詮釋資料。另外我們也歡迎新的多媒體來源！",
 		"titleTools": "工具",
+		"statusTools": "Wikidocumentaries 擁有用於內容處理上的任務與工具。條目能以 ContentTranslate 在語言之間翻譯。維基數據關鍵詞與地理標記圖片位置正籌備中。新的有趣和有用的工具則可被建立或整合。",
 		"titleLanguages": "語言",
-		"statusLanguages": "Wikidocumentaries 可被在維基數據裡任何可用語言給引導。對於小眾語言會是一個很好的機會。翻譯是在 TranslateWiki 網站裡完成。",
+		"statusLanguages": "Wikidocumentaries 可被在維基數據裡任何可用的語言來引導內容，對於小眾語言來說會是一個很好的機會。Wikidocumentaries 使用介面上的翻譯則是在 TranslateWiki 網站裡完成。",
 		"titleTechnology": "技術",
+		"statusTechnology": "Wikidocumentaries 讀取來自維基數據的核心資料。除此之外，Wikidocumentaries 也將會有用於維基數據以外範圍主題的自用 Wikibase。維基數據與 Wikidocumentaries 預期會同步為聯合的 Wikibases。其次，圖片詮釋資料是連結到維基數據的項目上，該資料會與維基共享資源上的結構化資料同步。本網站是以 Vue.js 框架建置，並託管於維基多媒體雲端服務上。",
 		"titleCreators": "創作者",
 		"titleTeam": "團隊",
 		"titleThanks": "特別致謝",
@@ -30,8 +35,11 @@
 		"titleBy": "專案出自",
 		"getInvolved": "參與！",
 		"titleTranslate": "翻譯",
+		"joinTranslate": "將您使用的語言帶到 Wikidocumentaries 裡。加入翻譯志工團隊，來讓查看關聯的文化資產時，能以您的語言生動描述。",
 		"titleContent": "新增您的內容",
+		"joinContent": "如果您有照片、多媒體、文件、地圖、或是資料收集，那您會很高興來到這裡，讓我們一起來觀看透過現有方式連結出的內容，或是我們可以來建立新的關聯方式。我們也期望安排出與感興趣的社群一同記錄歷史知識的討論會。",
 		"titleDevelop": "建立工具與群眾外包任務。",
+		"joinDevelop": "我們期許新增更多工具，並與組織和工具建置方一起建立新的群眾外包任務。讓我們一起推出下一個更酷的群眾外包應用吧！",
 		"titleContact": "取得聯繫！",
 		"facebook": "臉書群組",
 		"wiki": "Wikidocumentaries wiki",
@@ -68,7 +76,7 @@
 				"menuTitle": "顯示或排列圖片",
 				"tooltip": "顯示或排列圖片",
 				"showImagesOnMapMenuText": "在地圖上秀出所有圖片",
-				"showImagesOnTimelineMenuText": "在時間軸上秀出所有圖片",
+				"showImagesOnTimelineMenuText": "在時間表上秀出所有圖片",
 				"selectPortraits": "選擇此人物的優質肖像",
 				"arrangeByTime": "依時間排列圖片",
 				"selectWorks": "選擇圖像作品"
@@ -134,7 +142,7 @@
 			"intro": "主題的地點顯示在地圖上，您也可以顯示圖片和其它在地圖上的資料，或是挑選歷史地圖作為底層。",
 			"chooseHistoricalBasemapMenuText": "選擇歷史性的地圖…",
 			"hideImagesMenuText": "隱藏圖片",
-			"chooseTimelineMapsMenuText": "選擇時間軸地圖…",
+			"chooseTimelineMapsMenuText": "選擇時間表地圖…",
 			"showNearbyPlacesMenuText": "秀出附近地點",
 			"hideNearbyPlacesMenuText": "隱藏附近地點"
 		},
@@ -144,8 +152,8 @@
 			"addClipFromArchivesMenuText": "新增剪報…"
 		},
 		"TopicTimeline": {
-			"headerTitle": "時間軸",
-			"showEventsOnTimelineMenuText": "秀出在時間軸上的主題事件",
+			"headerTitle": "時間表",
+			"showEventsOnTimelineMenuText": "秀出在時間表上的主題事件",
 			"centuryText": "世紀"
 		},
 		"Events": {
@@ -153,12 +161,12 @@
 			"displayMenu": {
 				"menuTitle": "顯示選項",
 				"menuTooltip": "顯示選項",
-				"optionShowTimeline": "在時間軸上秀出事件",
+				"optionShowTimeline": "在時間表上秀出事件",
 				"optionShowList": "秀出事件成清單"
 			},
 			"optionsMenu": {
 				"menuTitle": "選項",
-				"menuTooltip": "選擇要顯示的實際內容",
+				"menuTooltip": "選擇要顯示的詳情內容",
 				"optionWorks": "秀出作品",
 				"optionRelatedPeople": "秀出與事件相關的人物",
 				"subRelatedPeopleConf": {
@@ -168,7 +176,7 @@
 			}
 		},
 		"Wikidata": {
-			"headerTitle": "實際內容",
+			"headerTitle": "詳情",
 			"extLink": {
 				"linkTitleWD": "在維基數據檢視或編輯"
 			},
@@ -256,7 +264,8 @@
 			"intro": "這些部份屬於這些主題，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
 		},
 		"Affiliations": {
-			"headerTitle": "機構單位"
+			"headerTitle": "隸屬",
+			"intro": "在組織的此人有所聯繫的組織。"
 		},
 		"Works": {
 			"headerTitle": "作品",

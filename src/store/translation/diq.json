@@ -9,6 +9,7 @@
 	"LandingPage": {
 		"search": "Cı geyre",
 		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze",
+		"searchInputSearchOnly": "Yew mewzu bıvêne",
 		"titleStatus": "Weziyet",
 		"more": "Tayêna bıwane",
 		"titleTopics": "Mewzuyi",
@@ -19,6 +20,7 @@
 		"titleCreators": "Vıraştoği",
 		"titleTeam": "Taxım",
 		"titleTranslate": "Açarnayış",
+		"blog": "Qeyd",
 		"email": "E-poste"
 	},
 	"MainPage": {
@@ -81,7 +83,8 @@
 				"remInappropriate": {
 					"menuTitle": "Hewl niyo, çıke"
 				}
-			}
+			},
+			"imagesViewExternal": "Resımo oricinal bıvêne"
 		},
 		"TopicMap": {
 			"chooseHistoricalBasemapMenuText": "Xeritanê tarixiyê bıngehınan weçine",
