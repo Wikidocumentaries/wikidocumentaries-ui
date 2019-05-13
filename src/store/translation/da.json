@@ -263,6 +263,7 @@
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "Ok",
 		"cancel": "Annullér",
 		"helpText": "Hjælp",

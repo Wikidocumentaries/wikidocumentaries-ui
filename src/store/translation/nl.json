@@ -4,12 +4,41 @@
 			"Elroy",
 			"Optilete",
 			"Susannaanas",
-			"Rots61"
+			"Rots61",
+			"Spinster"
 		]
 	},
 	"LandingPage": {
 		"search": "Zoeken",
-		"searchInputSearchOnly": "Zoek een onderwerp"
+		"searchInputPlaceHolder": "Vind een onderwerp, of maak een nieuw onderwerp aan",
+		"searchInputSearchOnly": "Zoek een onderwerp",
+		"intro": "Wikidocumentaries is een wiki voor geschiedschrijving - een plaats om sporen en bronnen te verzamelen, en om verhalen te schrijven. Om te beginnen: zoek een onderwerp dat je interesseert!",
+		"titleDescription": "Wat is Wikidocumentaries?",
+		"titleStatus": "Status",
+		"status": "Deze site is nog in een demofase. Veel belangrijke functies zijn nog niet beschikbaar, en de site kan mogelijks niet helemaal naar verwachting werken.",
+		"moreBelow": "Lees hieronder meer",
+		"more": "Meer lezen",
+		"moreLink": "Meer lezen",
+		"titleTopics": "Onderwerpen",
+		"titleMedia": "Media",
+		"titleTools": "Tools",
+		"titleLanguages": "Talen",
+		"titleTechnology": "Technologie",
+		"titleCreators": "Makers",
+		"titleTeam": "Team",
+		"titleThanks": "Speciale dank aan:",
+		"titlePartners": "Partners",
+		"titleFunding": "Ondersteund door",
+		"titleBy": "Project door",
+		"getInvolved": "Doe mee!",
+		"titleTranslate": "Vertaal",
+		"titleContent": "Voeg je inhoud toe",
+		"titleContact": "Neem contact op!",
+		"facebook": "Facebook-groep",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "Blog",
+		"email": "E-mail",
+		"github": "Github repository"
 	},
 	"MainPage": {
 		"topicPageName": "Onderwerp pagina",
@@ -17,9 +46,14 @@
 		"mapSearchPageName": "Doorzoek kaarten",
 		"returnToHomeMessage": "Terug naar de startpagina"
 	},
+	"WaitPage": {
+		"waitMessage": "Een ogenblik... Data wordt opgehaald van Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
+	},
 	"topic_page": {
 		"BaseMapDialog": {
-			"chooseMapTitle": "Kies historische basiskaart(en)"
+			"chooseMapTitle": "Kies historische basiskaart(en)",
+			"chooseMapHelpNote": "Tip: met ctrl+klikken kan je meerdere kaarten selecteren",
+			"yearAbbreviation": "y."
 		},
 		"Header": {
 			"titleEditText": "Bewerk de titel",
@@ -28,8 +62,15 @@
 			"subtitleApproveText": "Deze beschrijving goedkeuren"
 		},
 		"TopicImages": {
+			"headerTitle": "Beelden uit archieven",
 			"actionsMenu": {
-				"arrangeByTime": "Sorteer beelden op tijd"
+				"menuTitle": "Toon of rangschik afbeeldingen",
+				"tooltip": "Toon of rangschik afbeeldingen",
+				"showImagesOnMapMenuText": "Toon alle afbeeldingen op de kaart",
+				"showImagesOnTimelineMenuText": "Toon alle afbeeldingen op de tijdlijn",
+				"selectPortraits": "Kies één of meer goed(e) portret(ten) van deze persoon",
+				"arrangeByTime": "Sorteer beelden op tijd",
+				"selectWorks": "Selecteer afbeeldingen van werken"
 			},
 			"facetMenu": {
 				"time": "tijd",
@@ -45,7 +86,8 @@
 				"type": "mediatype",
 				"creator": "auteur",
 				"platform": "platform",
-				"source": "bron"
+				"source": "bron",
+				"saveSelection": "Bewaar deze selectie als een collectie"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Handelingen",

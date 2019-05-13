@@ -441,6 +441,7 @@
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "Okay",
 		"cancel": "Abbrechen",
 		"helpText": "Hilfe",

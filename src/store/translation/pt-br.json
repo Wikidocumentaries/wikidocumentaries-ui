@@ -19,11 +19,11 @@
 		"more": "Leia mais",
 		"moreLink": "Leia mais em",
 		"titleTopics": "Tópicos",
-		"statusTopics": "Os tópicos são lidos no Wikidata. Novos tópicos podem ser criados também localmente com a riqueza de descrição com o Wikidata. Os artigos atuais são da Wikipedia, enquanto um artigo para um tópico local pode ser criado localmente.",
+		"statusTopics": "Os tópicos são lidos no Wikidata. Novos tópicos podem ser criados mais tarde em Wikidocumentários, se o conteúdo estiver fora do escopo do Wikidata. Ainda será possível descrever o tópico com as ricas opções do Wikidata. Os artigos atuais são da Wikipedia, enquanto artigos podem ser criados localmente para tópicos que existem apenas em Wikidocumentários.",
 		"titleMedia": "Mídia",
 		"statusMedia": "A mídia é lida atualmente no Finna.fi, Flickr e Wikimedia Commons. Estamos trabalhando para encontrar imagens com mais precisão e exibir mais e melhores metadados de cada uma das fontes. Novas fontes de mídia são bem vindas!",
 		"titleTools": "Ferramentas",
-		"statusTools": "Wikidocumentários tem tarefas e ferramentas para trabalhar com o conteúdo. Os artigos já podem ser traduzidos entre idiomas com o Tradutor de conteúdo. Keywording com Wikidata e geotagging um local de imagem estão sendo preparados. Novas ferramentas divertidas e úteis podem ser criadas ou integradas.",
+		"statusTools": "Wikidocumentários tem tarefas e ferramentas para trabalhar com o conteúdo. Os artigos já podem ser traduzidos entre idiomas com a ferramenta de tradução de conteúdo. Estamos preparando palavras-chave com o Wikidata e uma ferramenta de marcação geográfica para localizações de imagens. Novas ferramentas divertidas e úteis podem ser criadas ou integradas.",
 		"titleLanguages": "Idiomas",
 		"statusLanguages": "Wikidocumentários podem ser navegados em qualquer idioma disponível no Wikidata. Esta é uma ótima oportunidade para pequenos idiomas. As traduções são feitas no TranslateWiki.",
 		"titleTechnology": "Tecnologia",
@@ -441,6 +441,7 @@
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentários",
 		"ok": "OK",
 		"cancel": "Cancelar",
 		"helpText": "Ajuda",

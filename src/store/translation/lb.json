@@ -10,15 +10,21 @@
 		"searchInputSearchOnly": "En Thema fannen",
 		"moreBelow": "Liest méi hei drënner",
 		"more": "Liest méi",
+		"moreLink": "Liest méi op",
+		"titleTopics": "Themen",
+		"titleMedia": "Medien",
 		"titleTools": "Geschirkëscht",
 		"titleLanguages": "Sproochen",
+		"titleTechnology": "Technologie",
 		"titleTeam": "Equipe",
 		"titlePartners": "Partner",
+		"titleBy": "Projet vum",
 		"getInvolved": "Maacht mat!",
 		"titleTranslate": "Iwwersetzen",
 		"titleContent": "Setzt Ären Inhalt derbäi",
 		"titleContact": "Kontakt ophuelen!",
 		"facebook": "Facebook-Grupp",
+		"blog": "Blog",
 		"email": "E-Mail"
 	},
 	"MainPage": {
@@ -232,6 +238,7 @@
 		"sortMenu": {
 			"optionTime": "No der Zäit",
 			"optionAlpha": "Alphabetesch",
+			"optionTitleAlpha": "Alphabetesch nom Titel",
 			"optionDist": "No Distanz"
 		},
 		"facetMenu": {
