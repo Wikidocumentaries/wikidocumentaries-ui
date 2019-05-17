@@ -156,6 +156,9 @@
 			},
 			"showAll": "Pêro"
 		},
+		"Parts": {
+			"headerTitle": "Leteyi"
+		},
 		"Works": {
 			"sortMenuTitle": "Weçine",
 			"sortMenuOptionAlpha": "Alfabetik",
