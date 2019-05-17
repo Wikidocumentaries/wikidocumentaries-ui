@@ -502,11 +502,15 @@ i.wikiglyph {
   overflow: hidden;
 }
 
+.thumb-credit {
+  line-height: 1em;
+  padding-bottom: 0.2em;
+}
+
 .gallery-title {
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;
-  padding-bottom: 2px;
 }
 
 .gallery {
@@ -550,11 +554,13 @@ i.wikiglyph {
   height: 0;
   opacity: 0;
   transition: height 80ms ease-in;
+  padding-bottom: 0;
 }
 
 .gallery-item:hover .appearing {
   height: unset;
   opacity: 1;
+  padding: 3px 0 0 0;
 }
 
 .list {

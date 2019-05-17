@@ -25,6 +25,7 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
+            <div class="thumb-credit">{{ item.relcLabel }}</div>
             <div class="gallery-title">{{ item.aff.label }}</div>
             <!-- <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div> -->
           </div>
@@ -103,13 +104,21 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?aff ?affLabel (SAMPLE(?image) AS ?image) WHERE {
+SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?relcLabel; separator=", ") as ?relcLabel) (SAMPLE(?image) AS ?image) WHERE {
   {
     ?aff wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6 wd:Q29021 .
+    ?aff ?rel wd:Q29021 .
+    ?relc wikibase:directClaim ?rel .
+    OPTIONAL { ?relc rdfs:label ?relcLabel .
+    FILTER(LANG(?relcLabel)="fi")  }
     }
   UNION
   {
     wd:Q29021 wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
+    wd:Q29021 ?rel ?aff .
+    ?relc wikibase:directClaim ?rel .
+    OPTIONAL { ?relc rdfs:label ?relcLabel .
+    FILTER(LANG(?relcLabel)="fi")  }
   }
   MINUS { ?aff wdt:P31 wd:Q5 .}
   OPTIONAL {?aff wdt:P18 ?image .}

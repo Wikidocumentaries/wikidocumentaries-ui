@@ -544,7 +544,7 @@ export default {
         style =
           "text-align: right; padding-right: " +
           rpad +
-          "px; padding-left: 0; width: " +
+          "px; padding-left: 6px; width: " +
           bar +
           "px;";
       } else {
