@@ -1,0 +1,466 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pebaryan"
+		]
+	},
+	"LandingPage": {
+		"search": "Pencarian",
+		"searchInputPlaceHolder": "Cari topik atau buat topik baru",
+		"searchInputSearchOnly": "Cari topik",
+		"intro": "Wikidocumentaries adalah wiki untuk sejarah - tempat mengumpulkan jejak-jejak sejarah dan membuatnya menjadi cerita. Mulai dengan mencari topik yang menarik!",
+		"titleDescription": "Apa itu Wikidocumentaries?",
+		"description": "Wikidocumentaries adalah ruang bagi para sejarawan warga. Ia menggabungkan informasi tentang topik-topik – tokoh, tempat, bangunan, peristiwa, dan hal lainnya. Anda dapat menavigasikan antara topik-topik dengan mengikuti keterhubungan yang tersimpan seperti hubungan keluarga, lokasi, pembuat dan karya atau afiliasi. Suatu topik diilustrasikan dengan gambar dan peta dari museum, arsip, dan perpustakaan yang terhubung. Di Wikidocumentaries memungkinkan untuk mengoreksi informasi yang ada dan menambahkan topik-topik baru. Bawa gambar dan rekaman Anda dan gunakan semua material untuk keperluan Anda.",
+		"titleStatus": "Status",
+		"status": "Situs ini sedang dalam fase demo. Banyak fitur penting yang belum tersedia dan situs ini mungkin tidak bekerja sebagaimana mestinya.",
+		"moreBelow": "Baca lebih lanjut di bawah",
+		"more": "Baca lebih lanjut",
+		"moreLink": "Baca lebih lanjut di",
+		"titleTopics": "Topik",
+		"statusTopics": "Topik-topik dibaca dari Wikidata. Topik-topik baru juga dapat ditambahkan kemudian di Wikidocumentaries jika konten tersebut berada di luar cakupan Wikidata. Sebaliknya juga dimungkinkan untuk mendeskripsikan suatu topik dengan opsi pengayaan dari Wikidata. Artikel saat ini berasal dari Wikipedia, namun artikel juga dapat dibuat secara lokal untuk topik yang hanya ada di Wikidocumentaries.",
+		"titleMedia": "Media",
+		"statusMedia": "Saat ini media berasal dari Finna.fi, Flickr, dan Wikimedia Commons. Kami sedang mengerjakan pencarian gambar dengan lebih akurat dan menampilkan metadata yang lebih baik dari tiap sumber. Kami juga terbuka jika ada sumber-sumber media baru.",
+		"titleTools": "Perkakas",
+		"statusTools": "Wikidocmentaries memiliki tugas dan kakas untuk bekerja dengan konten. Artikel dapat langsung diterjemahkan lintas bahasa menggunakan kakas Penerjemahan Konten. Kami sedang menyiapkan kakas penanda kata kunci dengan Wikidata dan penandaan geo untuk lokasi gambar. Kakas baru yang menarik dan berguna dapat dikembangkan dan diintegrasikan.",
+		"titleLanguages": "Bahasa",
+		"statusLanguages": "Wikidocumentaries dapat dinavigasikan dalam berbagai bahasa yang tersedia di Wikidata. Hal ini merupakan peluang bagi bahasa dengan sedikit penurut. Penerjemahan dilakukan di TranslateWiki.",
+		"titleTechnology": "Teknologi",
+		"statusTechnology": "Wikidocumentaries membaca data utama dari Wikidata. Sebagai tambahan, Wikidocumentaries akan memiliki Wikibase tersendiri untuk topik-topik di luar cakupan Wikidata. Wikidata dan Wikidocumentaries diharapkan untuk sinkron sebagai Wikibase terfederasi. Selanjutnya, metadata gambar ditautkan ke butir Wikidata dan data ini akan disinkronkan dengan Data Terstruktur di Wikimedia Commons. Situs ini dibuat menggunakan Vue.js dan dihos di Layanan Cloud Wikimedia.",
+		"titleCreators": "Pencipta",
+		"titleTeam": "Tim",
+		"titleThanks": "Ucapan terima kasih kepada",
+		"titlePartners": "Mitra",
+		"titleFunding": "atas dukungan dari",
+		"titleBy": "Proyek oleh",
+		"getInvolved": "Ayo ikut terlibat!",
+		"titleTranslate": "Terjemahkan",
+		"joinTranslate": "Mari bawa bahasa Anda ke Wikidocumentaries. Gabung dengan tim relawan penerjemahan dan lihat keterhubungan warisan budaya hidup dalam bahasa Anda.",
+		"titleContent": "Tambahkan konten",
+		"joinContent": "Jika Anda memiliki foto, media, dokumen, peta, atau koleksi data yang ingin anda lihat di sini, mari lihat bersama jika itu dapat langsung dihubungkan melalui salah satu kanal yang tersedia atau jika kami dapat membuat metode penghubungan baru. Kami juga berniat menyelenggarakan lokakarya untuk merekam pengetahuan tentang sejarah dengan komunitas terkait.",
+		"titleDevelop": "Kembangkan kakas dan tugas-tugas urun daya.",
+		"joinDevelop": "Kami akan menambahkan kakas-kakas lagi dan membuat tugas urun daya baru dengan kolaborasi dengan organisasi dan para pembuat kakas. Mari gabungkan tenaga untuk aplikasi urun daya keren berikutnya!",
+		"titleContact": "Kontak!",
+		"facebook": "Grup Facebook",
+		"wiki": "Wiki Wikidocumentaries",
+		"blog": "Blog",
+		"email": "Surel",
+		"github": "Repositori Github"
+	},
+	"MainPage": {
+		"topicPageName": "Halaman topik",
+		"mapPlaceMatchPageName": "Gabungkan nama-nama tempat",
+		"mapSearchPageName": "Cari peta",
+		"wikiTopicErrorMessage": "Suatu halaman Wikipedia untuk topik tersebut tidak ditemukan di bahasa yang saat ini digunakan atau terjadi kesalahan yang tak terduga.",
+		"returnToHomeMessage": "Kembali ke halaman depan"
+	},
+	"WaitPage": {
+		"waitMessage": "Harap tunggu sebentar... memuat data dari Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Pilih peta dasar historis",
+			"chooseMapHelpNote": "Tips: Ctrl+klik untuk memilih lebih dari satu peta",
+			"yearAbbreviation": "thn."
+		},
+		"Header": {
+			"titleEditText": "Sunting judul",
+			"titleApproveText": "Setujui judul ini",
+			"subtitleEditText": "Sunting deskripsi",
+			"subtitleApproveText": "Setujui deskripsi ini"
+		},
+		"TopicImages": {
+			"headerTitle": "Gambar dari arsip",
+			"intro": "Gambar ini dikumpulkan dari berbagai sumber dan mungkin tidak selalu merepresentasikan topik secara akurat. Anda dapat melihat gambar asli dan Anda dapat menempatkan gambar pada peta jika ada pin lokasi.",
+			"actionsMenu": {
+				"menuTitle": "Tampilkan atau atur gambar",
+				"tooltip": "Tampilkan atau atur gambar",
+				"showImagesOnMapMenuText": "Tampilkan semua gambar di peta",
+				"showImagesOnTimelineMenuText": "Tampilkan semua gambar di linimasa",
+				"selectPortraits": "Pilih foto berkualitas baik untuk orang ini",
+				"arrangeByTime": "Atur gambar berdasarkan waktu",
+				"selectWorks": "Pilih gambar dari karya"
+			},
+			"facetMenu": {
+				"menuTitle": "Kelompokkan gambar berdasarkan",
+				"menuTooltip": "Kelompokkan gambar berdasarkan kriteria lainnya",
+				"time": "waktu",
+				"map": "peta",
+				"people": "tokoh",
+				"places": "tempat",
+				"topics": "topik",
+				"form": "Formulir",
+				"imageSize": "ukuran gambar",
+				"large": "besar",
+				"medium": "sedang",
+				"small": "kecil",
+				"type": "tipe media",
+				"creator": "pembuat",
+				"platform": "platform",
+				"source": "sumber",
+				"saveSelection": "Simpan pilihan sebagai koleksi",
+				"clear": "Kosongkan pilihan"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Tindakan",
+				"menuTooltip": "Tindakan",
+				"doGeolocatingText": "Mengatur lokasi...",
+				"showImageText": "Tampilkan gambar",
+				"selectFeatured": "Pilih sebagai gambar judul"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Hapus gambar karena...",
+				"shortMenuTitle": "Hapus gambar",
+				"menuTooltip": "Hapus gambar",
+				"remDepicted": {
+					"menuTitle": "semestinya menggambarkan topik ini",
+					"shortMenuTitle": "menggambarkan ke topik lain",
+					"search": "Cari topik",
+					"browse": "Telusuri topik terkait"
+				},
+				"remCreator": {
+					"menuTitle": "seharusnya berasal dari pembuat ini",
+					"shortMenuTitle": "Berasal dari pembuat lain",
+					"search": "Cari pembuat",
+					"browse": "Telusuri aktor-aktor terkait"
+				},
+				"remInappropriate": {
+					"menuTitle": "Hal itu tidak pantas karena",
+					"shortMenuTitle": "Hal itu tidak pantas",
+					"privacy": "Hal itu melanggar privasi pihak yang digambarkan",
+					"violence": "Hal itu menampilkan kekerasan yang ekstrim",
+					"sex": "Hal itu menampilkan seks eksplisit",
+					"copyvio": "Hal itu melanggar hak cipta",
+					"explain": "Tinggalkan catatan penjelasan"
+				}
+			},
+			"imagesViewExternal": "Lihat gambar asli",
+			"imagesViewOnMap": "Lihat gambar di peta"
+		},
+		"TopicMap": {
+			"headerTitle": "Topik di peta",
+			"intro": "Tempat topik ditampilkan di peta. Anda juga dapat menampilkan gambar dan data lainnya di peta atau memilih peta historis sebagai peta dasar.",
+			"chooseHistoricalBasemapMenuText": "Pilih peta dasar historis...",
+			"hideImagesMenuText": "Sembunyikan gambar",
+			"chooseTimelineMapsMenuText": "Pilih peta linnimasa...",
+			"showNearbyPlacesMenuText": "Tampilkan tempat sekitar",
+			"hideNearbyPlacesMenuText": "Sembunyikan tempat sekitar"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Kliping surat kabar",
+			"searhTopicFromArchivesMenuText": "Cari dari surat kabar di Perpustakaan Nasional Finlandia",
+			"addClipFromArchivesMenuText": "Tambahkan kliping..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Linimasa",
+			"showEventsOnTimelineMenuText": "Tampilkan topik peristiwa di linimasa",
+			"centuryText": "abad"
+		},
+		"Events": {
+			"headerTitle": "Peristiwa",
+			"displayMenu": {
+				"menuTitle": "Opsi tampilan",
+				"menuTooltip": "Opsi tampilan",
+				"optionShowTimeline": "Tampilkan peristiwa di linimasa",
+				"optionShowList": "Tampilkan peristiwa sebagai daftar"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opsi",
+				"menuTooltip": "Pilih fakta untuk ditampilkan",
+				"optionWorks": "Tampilkan karya",
+				"optionRelatedPeople": "Tampilkan peristiwa dari tokoh terkait",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Pengaturan"
+				},
+				"optionRelatedTopics": "Tampilkan peristiwa dari topik terkait"
+			}
+		},
+		"Wikidata": {
+			"headerTitle": "Fakta",
+			"extLink": {
+				"linkTitleWD": "Lihat atau sunting di Wikidata"
+			},
+			"noTopicFoundText": "Topik tidak ditemukan"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikel",
+			"missingArticle": "Artikel tentang topik ini tidak tersedia dalam bahasa Anda. Anda dapat membaca artikel dalam bahasa lainnya yang tersedia dengan memilih menu bahasa di atas. Anda dapat membuat artikel pada bahasa Anda dengan meng-klik ikon plus.",
+			"missingArticleMissing": "Tidak ada artikel tentang topik ini di Bahasa yang Anda gunakan.",
+			"missingArticleChoose": "Anda dapat membaca artikel dalam bahasa lainnya yang tersedia dengan memilih dari menu bahasa di atas atau Anda dapat membuat artikel dalam bahasa Anda dengan meng-klik ikon plus.",
+			"missingArticleCreate": "Anda dapat membuat artikel ini di bahasa Anda dengan klik pada ikon plus.",
+			"missingArticleFallback": "Artikel dalam bahasa lain ini ditampilkan kepada Anda berdasarkan pengaturan bahasa.",
+			"missingArticleTranslate": "Anda dapat menerjemahkan artikel ini dalam bahasa Anda dengan memilih pada menu bahasa.",
+			"missingArticleAuto": "Teks pendek ini tellah dibuat secara otomatis berdasarkan fakta yang tersimpan. Anda dapat menyimpan rekaan dan mulai menyunting artikel ini.",
+			"extLink": {
+				"linkTitleWP": "Baca atau edit di Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Buat sebuah artikel di Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Baca artikel di bahasa lain",
+				"translateArticleText": "Terjemahkan artikel ini ke bahasa Inggris",
+				"otherLanguagestext": "Bahasa lainnya"
+			}
+		},
+		"Locations": {
+			"headerTitle": "Di lokasi ini",
+			"intro": "Di sini Anda dapat melihat semua hal yang berlokasi di topik halaman ini. Tampilkan sebagai daftar untuk melihat semua lokasi yang telah disimpan.",
+			"sortMenu": {
+				"title": "Urutkan lokasi",
+				"tooltip": "Urutkan lokasi",
+				"optionTime": "Berdasarkan waktu",
+				"optionAlpha": "Alfabetis",
+				"optionDist": "Berdasarkan jarak",
+				"optionRev": "Balikkan urutan",
+				"optionClear": "Abaikan urutan"
+			},
+			"facetMenu": {
+				"title": "Kelompokkan lokasi berdasarkan",
+				"tooltip": "Kelompokkan lokasi berdasarkan kriteria lainnya",
+				"optionType": "Tipe",
+				"optionColl": "Pembuat",
+				"optionCity": "Lokasi"
+			},
+			"displayMenu": {
+				"title": "Tampilkan sebagai",
+				"tooltip": "Pilih tampilan",
+				"optionGallery": "Galeri",
+				"optionList": "Daftar"
+			},
+			"showAll": "Semua"
+		},
+		"Depicted": {
+			"headerTitle": "Digambarkan di",
+			"intro": "Topik ini digambarkan dalam karya berikut. Urutkan karya berdasarkan berbagai kriteria, tampilkan sebagai daftar untuk melihat tanpa gambar.",
+			"sortMenu": {
+				"title": "Urutkan karya",
+				"tooltip": "Urutkan karya",
+				"optionTime": "Berdasarkan waktu",
+				"optionAlpha": "Alfabetis",
+				"optionRev": "Balikkan urutan",
+				"optionClear": "Abaikan urutan"
+			},
+			"facetMenu": {
+				"title": "Kelompokkan karya berdasarkan",
+				"tooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
+				"optionType": "Tipe",
+				"optionColl": "Pembuat"
+			},
+			"displayMenu": {
+				"title": "Tampilkan sebagai",
+				"tooltip": "Pilih tampilan",
+				"optionGallery": "Galeri",
+				"optionList": "Daftar"
+			},
+			"showAll": "Semua"
+		},
+		"Depicts": {
+			"headerTitle": "Menggambarkan",
+			"intro": "Karya ini menggambarkan topik-topik berikut. Anda dapat mengurutkannya berdasarkan waktu dan nama. Perlu diingat bahwa untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Parts": {
+			"headerTitle": "Potongan",
+			"intro": "Potongan ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Affiliations": {
+			"headerTitle": "Afiliasi",
+			"intro": "Organisasi yang berafiliasi dengan tokoh atau organisasi ini."
+		},
+		"Works": {
+			"headerTitle": "Karya",
+			"intro": "Berikut ini adalah karya oleh tokoh, kolektif, atau organisasi yang menjadi topik halaman ini. Anda dapat memasuki halaman berisi semua informasi tentang karya tersebut dengan meng-klik-nya. Hanya karya yang disertai oleh gambar yang ditampilkan. Tampilkan sebagai daftar untuk melihat semua karya terkait yang telah tersimpan.",
+			"sortMenuTitle": "Urutkan",
+			"sortMenuTooltip": "Urutkan butir",
+			"sortMenuOptionTime": "Berdasarkan waktu",
+			"sortMenuOptionAlpha": "Alfabetis",
+			"sortMenuOptionDist": "Berdasarkan jarak",
+			"sortMenuOptionRev": "Balikkan urutan",
+			"sortMenuOptionClear": "Abaikan urutan",
+			"facetMenuTitle": "Kelompokkan berdasarkan",
+			"facetMenuTooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
+			"facetMenuOptionType": "Tipe",
+			"facetMenuOptionColl": "Koleksi",
+			"facetMenuOptionCity": "Lokasi",
+			"displayMenuTitle": "Tampilkan sebagai",
+			"displayMenuTooltip": "Pilih tampilan",
+			"displayMenuOptionGallery": "Galeri",
+			"displayMenuOptionList": "Daftar",
+			"showAll": "Semua"
+		},
+		"People": {
+			"headerTitle": "Tokoh yang terkait dengan topik",
+			"intro": "Tokoh-tokoh berikut terkait dengan topik pada halaman ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan.",
+			"sortMenuTitle": "Urutkan",
+			"sortMenuTooltip": "Ubah pengurutan",
+			"sortMenuOptionBirth": "Berdasarkan tanggal kelahiran",
+			"sortMenuOptionDeath": "Berdasarkan tanggal kematian",
+			"sortMenuOptionName": "Berdasarkan nama",
+			"sortMenuOptionFirst": "Berdasarkan nama depan",
+			"sortMenuOptionLast": "Berdasarkan nama belakang",
+			"sortMenuOptionRev": "Balikkan urutan",
+			"sortMenuOptionClear": "Abaikan urutan",
+			"facetMenuTitle": "Kelompokkan berdasarkan",
+			"facetMenuTooltip": "Kelompokkan tokoh berdasarkan aspek lainnya",
+			"facetMenuOptionProfession": "Profesi",
+			"facetMenuOptionCountry": "Negara",
+			"facetMenuOptionCity": "Gender"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Takarir",
+			"addCaption": "Tambah takarir",
+			"description": "Deskripsi",
+			"addDescription": "Tambahkan deskripsi",
+			"creator": "Pembuat",
+			"creatorUnknown": "Tidak diketahui",
+			"addCreator": "Tambahkan pembuat",
+			"removeCreator": "Hapus pembuat",
+			"dateDepicted": "Tanggal penggambaran",
+			"addDateDepicted": "Tambahkan tanggak penggambaran",
+			"removeDateDepicted": "Hapus tanggal penggambaran",
+			"dateCreated": "Tanggal dibuat",
+			"addDateCreated": "Tambahkan tanggal pembuatan",
+			"removeDateCreated": "Hapus tanggal pembuatan",
+			"publisher": "Penerbit",
+			"addPublisher": "Tambahkan penerbit",
+			"removePublisher": "Hapus penerbit",
+			"format": "Format",
+			"addFormat": "Tambahkan format",
+			"removeFormat": "Hapus format",
+			"technique": "Teknik",
+			"addTechnique": "Tambahkan teknik",
+			"removeTechnique": "Hapus teknik",
+			"depicted": "Gambar mengandung",
+			"genre": "Genre",
+			"addGenre": "Tambahkan genre",
+			"removeGenre": "Hapus genre",
+			"depicts": "Gambar mengandung",
+			"addTopic": "Tambahkan topik",
+			"removeTopic": "Hapus topik",
+			"location": "Lokasi",
+			"locationMap": "Lokasi di peta",
+			"addLocation": "Tambahkan lokasi",
+			"removeLocation": "Hapus lokasi",
+			"address": "Alamat jalan",
+			"addAddress": "Tambahkan alamat jalan",
+			"removeAddress": "Hapus alamat jalan",
+			"depictedPeople": "Tokoh yang digambarkan",
+			"addPerson": "Tambahkan tokoh",
+			"removePerson": "Hapus tokoh",
+			"event": "Peristiwa",
+			"addEvent": "Tambahkan peristiwa",
+			"removeEvent": "Hapus peristiwa",
+			"institution": "Lembaga",
+			"collection": "Koleksi",
+			"inventoryNumber": "Nomor inventori",
+			"inscriptions": "Prasasti",
+			"measurements": "Pengukuran",
+			"copyright": "Hak Cipta",
+			"license": "Lisensi hak cipta",
+			"work": "Karya direpresentasikan dalam gambar",
+			"photograph": "Foto",
+			"image": "Gambar",
+			"photographer": "Fotografer",
+			"addPhotographData": "Tambahkan informasi tentang foto",
+			"copyrightNotePD": "Gambar ini berlisensi $1, namun lisensi berdasarkan metadata gambar adalah Domain Publik",
+			"copyrightNoteSame": "Gambar yang sama berlisensi lebih terbuka dengan $1, oleh sebab itu berlaku terhadap gambar ini juga.",
+			"digitalCopy": "Salinan digital",
+			"publishingPlatform": "Platform penerbitan",
+			"platformId": "Penanda",
+			"imageInfoPage": "Halaman info gambar",
+			"imageDimensions": "Dimensi gambar",
+			"fileSize": "Ukuran berkas",
+			"fileFormat": "Format berkas",
+			"remove": "Hapus",
+			"moveTo": "Pindah ke kolom lain",
+			"addData": "Tambahkan data",
+			"uploader": "Pengunggah",
+			"rotate": "Putar"
+		},
+		"imageActions": {
+			"rotateImage": "Putar gambar",
+			"clockwise": "searah putaran jarum jam",
+			"counterclockwise": "berlawanan arah putaran jarum jam",
+			"flip": "Balik",
+			"horizontal": "horizontal",
+			"vertical": "vertikal"
+		},
+		"closeViewer": "Hapus penampil"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Gabungkan nama tempat"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Cari peta historis",
+			"filterBySourceMenuText": "Tapis berdasarkan sumber...",
+			"filterByTimeMenuText": "Tapis berdasarkan waktu...",
+			"filterByMapMenuText": "Tapis menggunakan peta..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Untuk peta dasar historis, lihat kredit dan hak cipta dari",
+			"attribution2PrefixText": "Penegakkan peta dari"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparansi peta dasar historis:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Urutkan topik",
+			"tooltip": "Urutkan topik",
+			"optionTime": "Berdasarkan waktu",
+			"optionAlpha": "Alfabetis",
+			"optionTitleAlpha": "Berdasarkan judul secara alfabetis",
+			"optionCreatorAlpha": "Berdasarkan pembuat secara alfabetis",
+			"optionDist": "Berdasarkan jarak",
+			"optionRev": "Balikkan urutan",
+			"optionClear": "Abaikan urutan"
+		},
+		"facetMenu": {
+			"title": "Kelompokkan berdasarkan",
+			"tooltip": "Kelompokkan topik berdasarkan kriteria lainnya",
+			"optionType": "Tipe",
+			"optionColl": "Pembuat",
+			"optionCity": "Lokasi"
+		},
+		"displayMenu": {
+			"title": "Tampilkan sebagai",
+			"tooltip": "Pilih tampilan",
+			"optionGallery": "Galeri",
+			"optionList": "Daftar"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
+		"ok": "Oke",
+		"cancel": "Batal",
+		"helpText": "Bantuan",
+		"expand": "Kembangkan bagian ini",
+		"collapse": "Kempiskan bagian ini",
+		"menus": {
+			"actionMenuTitle": "Tindakan",
+			"actionMenuTooltip": "Tindakan",
+			"languageMenuTitle": "Pilih bahasa",
+			"languageMenuTooltip": "Pilih bahasa",
+			"myLanguagesItem": "Bahasa saya",
+			"languageMenuTranslate": "Terjemahkan artikel ini ke bahasa Inggris"
+		},
+		"languageMenu": {
+			"TranslateUI": "Terjemahkan ke bahasa Anda"
+		},
+		"languages": {
+			"fi": "Finnish",
+			"en": "English",
+			"sv": "Swedish",
+			"es": "Spanish"
+		}
+	}
+}
