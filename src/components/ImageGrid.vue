@@ -54,7 +54,12 @@ export default {
             return newTitle;
         },
         getCredits (item) {
-            var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
+            let newAuthors;
+            if (item.source == "Finna") {
+                newAuthors = item.creators[0].name + ", ";
+            } else {
+                newAuthors = item.creators + ", ";
+            }
             var newYear = (item.year != "" && item.year != null ? (item.year) + ". " : '');
             var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
             var newLicense = (item.license != "" ? (item.license + ', ') : '');

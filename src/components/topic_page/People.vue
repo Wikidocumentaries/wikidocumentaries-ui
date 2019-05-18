@@ -15,8 +15,8 @@
                 <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
                 <div v-else class="noimage"></div>
                 <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
-                    <div v-if="item.inLabel" class="thumb-credit disappearing">{{ item.inLabel }}</div>
-                    <div v-else class="thumb-credit disappearing">{{ item.outLabel }}</div>
+                    <div v-if="item.inLabel" class="thumb-credit disappearing over">{{ item.inLabel }}</div>
+                    <div v-else class="thumb-credit disappearing over">{{ item.outLabel }}</div>
                     <div class="gallery-title">{{ item.person.label }}</div>
                     <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
                 </div>

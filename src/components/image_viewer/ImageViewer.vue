@@ -529,8 +529,12 @@ export default {
       });
     },
     getCredits(item) {
-      var newAuthors =
-        item.authors != "" && item.authors != null ? item.authors + ", " : "";
+      let newAuthors;
+      if (item.source == "Finna") {
+          newAuthors = item.creators[0].name + ", ";
+      } else {
+          newAuthors = item.creators + ", ";
+      }
       var newYear =
         item.year != "" && item.year != null ? item.year + ". " : "";
       var newInstitutions =

@@ -191,7 +191,7 @@ export default {
         return a.year - b.year;
       });
 
-      console.log(timeLineItems);
+      // console.log(timeLineItems);
       //console.log(timeLineItems.length);
       return timeLineItems;
     }
@@ -311,7 +311,7 @@ export default {
             element.style.cssText = style;
           }
           var marker = this.$refs["timelineExplanationMarker" + i][0];
-          console.log(marker);
+          // console.log(marker);
           if (marker != undefined) {
             var markerstyle = this.timelineExplanationMarkerStyle(i);
             //console.log(style);

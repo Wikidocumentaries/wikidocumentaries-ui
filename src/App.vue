@@ -498,12 +498,16 @@ i.wikiglyph {
 }
 
 .thumb-title {
+  line-height: 1.1rem;
   max-height: 11.6em;
   overflow: hidden;
 }
 
 .thumb-credit {
-  line-height: 1em;
+  line-height: 1.1rem;
+}
+
+.over {
   padding-bottom: 0.2em;
 }
 
