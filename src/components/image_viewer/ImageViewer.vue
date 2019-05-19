@@ -477,7 +477,7 @@ export default {
         {
           id: MENU_ACTIONS.GEOLOCATE,
           text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
-        },
+        }
       ]
     };
   },
@@ -531,9 +531,9 @@ export default {
     getCredits(item) {
       let newAuthors;
       if (item.source == "Finna") {
-          newAuthors = item.creators[0].name + ", ";
+        newAuthors = item.creators[0].name + ", ";
       } else {
-          newAuthors = item.creators + ", ";
+        newAuthors = item.creators + ", ";
       }
       var newYear =
         item.year != "" && item.year != null ? item.year + ". " : "";
@@ -963,8 +963,10 @@ export default {
 .titlebox-title {
   font-size: 2em;
   font-weight: bold;
-  line-height: 1em;
+  line-height: 1.2em;
   margin-bottom: 5px;
+  max-height: 34vh;
+  overflow: hidden;
 }
 
 .titlebox-subtitle {

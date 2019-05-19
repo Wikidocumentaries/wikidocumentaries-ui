@@ -121,7 +121,7 @@ export default {
 .grid-item {
     cursor: pointer;
     position: relative;
-    max-height: 15em;
+    max-height: 10rem;
     margin: 0 3px 3px 0;
     flex: auto;
     display: flex;
@@ -134,7 +134,7 @@ export default {
 }
 
 .thumb-image {
-    max-height: 15em;
+    height: 10rem;
     object-fit: cover;
 }
 
