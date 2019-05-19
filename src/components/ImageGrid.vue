@@ -2,7 +2,7 @@
     <div class="image-grid">
         <div class="grid-items">
             <div class="grid-item" v-for="(item, index) in items" :key="item.id" @click="showImageViewer(index)">
-                <img :src="item.thumbURL" class="thumb-image" :alt="item.title"/>
+                <img :src="[item.thumbURL ? item.thumbURL : item.imageURL]" class="thumb-image" :alt="item.title"/>
                 <div class="thumb-image-info">
                     <div class="thumb-title">{{ fitTitle(item.title) }}</div>
                     <div class="thumb-credit">{{ getCredits(item) }}</div>
@@ -121,7 +121,7 @@ export default {
 .grid-item {
     cursor: pointer;
     position: relative;
-    max-height: 10rem;
+    max-height: 12rem;
     margin: 0 3px 3px 0;
     flex: auto;
     display: flex;
@@ -134,7 +134,7 @@ export default {
 }
 
 .thumb-image {
-    height: 10rem;
+    height: 12em;
     object-fit: cover;
 }
 
