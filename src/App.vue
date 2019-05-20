@@ -790,6 +790,11 @@ i.wikiglyph {
   column-width: 300px;
   margin-top: 1em;
   column-gap: 20px;
+  display: flex;
+}
+
+.info-cube {
+
 }
 
 .subfirst {

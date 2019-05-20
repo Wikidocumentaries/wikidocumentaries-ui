@@ -118,10 +118,15 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
-                  <div class="compound" v-for="creator in element.creators" :key="creator.id">
-                    <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
-                    <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
-                  </div>
+                  <template v-if="element.source == 'Finna'">
+                    <div class="compound" v-for="creator in element.creators" :key="creator.id">
+                      <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
+                      <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
+                    </div>
+                  </template>
+                  <template v-else>
+                    <Dataselect class="grid-select" v-bind:term="element.creators"></Dataselect>
+                  </template>
                   <Dataselect
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addCreator')"
