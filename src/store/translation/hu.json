@@ -1,12 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"R-Joe"
+			"R-Joe",
+			"Misibacsi"
 		]
 	},
 	"LandingPage": {
 		"search": "Keresés",
-		"searchInputPlaceHolder": "Keressen egy témát, vagy hozzon létre egy új témát"
+		"searchInputPlaceHolder": "Keressen egy témát, vagy hozzon létre egy új témát",
+		"searchInputSearchOnly": "Téma keresése",
+		"titleStatus": "Állapot",
+		"more": "Olvass tovább",
+		"titleTopics": "Témák",
+		"titleTools": "Eszközök",
+		"titleLanguages": "Nyelvek",
+		"titleTechnology": "Technológia",
+		"titleTeam": "Csapat",
+		"titlePartners": "Partnerek",
+		"getInvolved": "Kapcsolódj be!",
+		"titleTranslate": "Fordítás",
+		"facebook": "Facebook csoport",
+		"blog": "Blog",
+		"email": "E-mail"
 	},
 	"MainPage": {
 		"topicPageName": "Téma lap",
@@ -16,7 +31,7 @@
 		"returnToHomeMessage": "Vissza a nyitóoldalra"
 	},
 	"WaitPage": {
-		"waitMessage": "Egy pillanatot, kérlek ... Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
+		"waitMessage": "Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -88,6 +103,11 @@
 		"TopicMap": {
 			"headerTitle": "Téma a térképen"
 		},
+		"Wikipedia": {
+			"languageMenu": {
+				"translateArticleText": "Szócikk lefordítása angol nyelvre"
+			}
+		},
 		"People": {
 			"sortMenuTitle": "Rendezés",
 			"sortMenuTooltip": "Rendezési sorrend módosítása",
@@ -103,6 +123,12 @@
 			"facetMenuOptionCity": "Nem"
 		}
 	},
+	"imageViewer": {
+		"imageMetadata": {
+			"image": "Kép",
+			"uploader": "Feltöltő"
+		}
+	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
 			"headerTitle": "Helynevek kombinálása"
@@ -113,6 +139,23 @@
 			"headerTitle": "Történelmi térkép keresése",
 			"filterBySourceMenuText": "Szűrés forrás szerint...",
 			"filterByTimeMenuText": "Szűrés idő alapján..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"tooltip": "Témák rendezése",
+			"optionAlpha": "Betűrendben",
+			"optionDist": "Távolság szerint",
+			"optionRev": "Fordított sorrend",
+			"optionClear": "Rendezés törlése"
+		},
+		"facetMenu": {
+			"optionType": "Típus",
+			"optionColl": "Készítő",
+			"optionCity": "Hely"
+		},
+		"displayMenu": {
+			"optionGallery": "Galéria"
 		}
 	},
 	"general": {

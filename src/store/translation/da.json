@@ -81,11 +81,16 @@
 					"search": "Søg efter emnet"
 				},
 				"remCreator": {
+					"menuTitle": "Det er af denne skaber istedet",
+					"shortMenuTitle": "Det er af en anden skaber",
 					"search": "Søg efter skaberen"
 				},
 				"remInappropriate": {
 					"menuTitle": "Den er upassende fordi",
-					"shortMenuTitle": "Den er upassende"
+					"shortMenuTitle": "Den er upassende",
+					"violence": "Det viser ekstrem vold",
+					"sex": "Den viser eksplicit sex",
+					"copyvio": "Det overtræder ophavsret"
 				}
 			},
 			"imagesViewExternal": "Vis originalbilledet"
@@ -105,7 +110,10 @@
 		"Events": {
 			"headerTitle": "Hændelser",
 			"optionsMenu": {
-				"optionWorks": "Vis værker"
+				"optionWorks": "Vis værker",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurér"
+				}
 			}
 		},
 		"Wikidata": {
@@ -202,12 +210,17 @@
 			"addDescription": "Tilføj beskrivelse",
 			"creator": "Ophavsmand",
 			"creatorUnknown": "Ukendt",
+			"addCreator": "Tilføj skaber",
+			"removeCreator": "Fjern skaber",
+			"addDateCreated": "Tilføj skabelsesdato",
+			"removeDateCreated": "Fjern skabelsesdato",
 			"publisher": "Udgiver",
 			"addPublisher": "Tilføj udgiver",
 			"format": "Format",
 			"addFormat": "Tilføj format",
 			"removeFormat": "Fjern format",
 			"technique": "Teknik",
+			"addTechnique": "Tilføj teknik",
 			"removeTechnique": "Fjern teknikken",
 			"genre": "Genre",
 			"addGenre": "Tilføj genre",
@@ -254,6 +267,7 @@
 		},
 		"facetMenu": {
 			"optionType": "Type",
+			"optionColl": "Skaber",
 			"optionCity": "Sted"
 		},
 		"displayMenu": {

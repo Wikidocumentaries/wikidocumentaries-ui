@@ -267,7 +267,7 @@
 		},
 		"Affiliations": {
 			"headerTitle": "Affiliations",
-			"intro": "Organisations avec lesquelles cette personne dans l’organisation est affiliée."
+			"intro": "Organisations avec lesquelles cette personne ou cette organisation sont affiliées."
 		},
 		"Works": {
 			"headerTitle": "Works",

@@ -4,12 +4,41 @@
 			"Susannaanas",
 			"Fitoschido",
 			"Abijeet Patro",
-			"Jbar82"
+			"Jbar82",
+			"Ryo567"
 		]
 	},
 	"LandingPage": {
 		"search": "Buscar",
-		"searchInputPlaceHolder": "Encuentre un tema o cree uno nuevo"
+		"searchInputPlaceHolder": "Encuentre un tema o cree uno nuevo",
+		"searchInputSearchOnly": "Buscar un tema",
+		"intro": "Wikidocumentales es una wiki con poca historia; un lugar donde tomar unos pequeños trazos de historia y convertirlos en cuentos. ¡Empieza por buscar un tema de interés!",
+		"titleDescription": "¿Qué es Wikidocumentales?",
+		"titleStatus": "Estado",
+		"moreBelow": "Leer más abajo",
+		"more": "Leer más",
+		"moreLink": "Seguir leyendo",
+		"titleTopics": "Temas",
+		"titleMedia": "Multimedia",
+		"titleTools": "Herramientas",
+		"titleLanguages": "Idiomas",
+		"statusLanguages": "Wikidocumentales está disponible en cualquier idioma disponible en Wikipedia. Es una gran oportunidad para los idiomas minoritarios. Las traducciones se realizan en TranslateWiki.",
+		"titleTechnology": "Tecnología",
+		"titleCreators": "Creadores",
+		"titleTeam": "Equipo",
+		"titleThanks": "Con agradecimientos especiales a",
+		"titlePartners": "Socios",
+		"titleFunding": "Con la gran ayuda de",
+		"titleBy": "Proyecto de",
+		"getInvolved": "¡Involúcrate!",
+		"titleTranslate": "Traducir",
+		"titleContent": "Añade tu contenido",
+		"titleContact": "¡Ponte en contacto!",
+		"facebook": "Grupo de Facebook",
+		"wiki": "Wikidocumentales",
+		"blog": "Blog",
+		"email": "Email",
+		"github": "Repositorio Github"
 	},
 	"MainPage": {
 		"topicPageName": "Página del tema",
@@ -44,9 +73,18 @@
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"facetMenu": {
+				"time": "tiempo",
+				"map": "mapa",
 				"people": "personas",
+				"places": "lugares",
 				"topics": "temas",
+				"form": "formulario",
 				"imageSize": "tamaño de imagen",
+				"large": "grande",
+				"medium": "mediano",
+				"small": "pequeño",
+				"type": "tipo de multimedia",
+				"creator": "creador",
 				"platform": "plataforma",
 				"source": "fuente",
 				"saveSelection": "Guardar selección como una colección"
@@ -295,16 +333,34 @@
 			"transparencyLabel": "Transparencia del mapa histórico base:"
 		}
 	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "Tipo",
+			"optionColl": "Creador",
+			"optionCity": "Ubicación"
+		},
+		"displayMenu": {
+			"optionGallery": "Galería",
+			"optionList": "Lista"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentales",
 		"ok": "Aceptar",
 		"cancel": "Cancelar",
 		"helpText": "Ayuda",
+		"expand": "Desplegar esta sección",
+		"collapse": "Contraer esta sección",
 		"menus": {
 			"actionMenuTitle": "Acciones",
 			"actionMenuTooltip": "Acciones",
 			"languageMenuTitle": "Elige un idioma",
+			"languageMenuTooltip": "Elige tu idioma",
 			"myLanguagesItem": "Mis idiomas",
-			"languageMenuTranslate": "Traducir este artículo"
+			"languageMenuTranslate": "Traducir este artículo a inglés"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traducir a tu idioma"
 		},
 		"languages": {
 			"fi": "Finés",
