@@ -3,16 +3,17 @@
 		"authors": [
 			"Eduardo Addad de Oliveira",
 			"Fitoschido",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Chicocvenancio"
 		]
 	},
 	"LandingPage": {
 		"search": "Pesquisar",
 		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico",
 		"searchInputSearchOnly": "Encontre um tópico",
-		"intro": "Wikidocumentários é uma wiki para uma pequena história - um lugar para juntar traços de história e transformá-los em histórias. Comece procurando por um tópico de interesse!",
+		"intro": "Wikidocumentários é uma wiki para a pequena história - um lugar para juntar traços de história e transformá-los em histórias. Comece procurando por um tópico de interesse!",
 		"titleDescription": "O que são Wikidocumentários?",
-		"description": "Wikidocumentários é um espaço criador de historiadores cidadãos. Ele combina informações sobre tópicos - pessoas, lugares, edifícios, eventos e muito mais. Você pode navegar entre os tópicos seguindo qualquer conexão registrada, como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conectados. Nos Wikidocumentários, será possível corrigir as informações existentes e adicionar novos tópicos, trazer suas próprias imagens e lembranças e usar todo o material para seus próprios propósitos.",
+		"description": "Wikidocumentários é um espaço de criação para historiadores cidadãos. Ele combina informações sobre tópicos - pessoas, lugares, edifícios, eventos e muito mais. Você pode navegar entre os tópicos seguindo qualquer conexão registrada, como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conectados. Nos Wikidocumentários, será possível corrigir as informações existentes e adicionar novos tópicos, trazer suas próprias imagens e lembranças e usar todo o material para seus próprios propósitos.",
 		"titleStatus": "Status",
 		"status": "O site está em fase de demonstração. Muitos recursos importantes ainda não estão disponíveis e o site pode não ter o desempenho esperado.",
 		"moreBelow": "Leia mais abaixo",
