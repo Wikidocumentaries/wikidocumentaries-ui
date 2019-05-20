@@ -13,6 +13,7 @@
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
+                    <div class="thumb-credit over">{{ item.typeLabel }}</div>
                     <div class="gallery-title">{{ item.depicted.label }}</div>
                     <div class="thumb-credit">{{ item.creatorLabel }} {{ item.time }} </div>
                 </div>
@@ -67,19 +68,19 @@ export default {
             toolbarActionMenuItems: [
 						{
 	              id: SORT_ACTIONS.BY_LABEL,
-	              text: 'topic_page.Depicted.sortMenuOptionAlpha'
+	              text: 'topic_page.Depicted.sortMenu.optionAlpha'
 	          },
             {
                 id: SORT_ACTIONS.BY_TIME,
-                text: 'topic_page.Depicted.sortMenuOptionTime'
+                text: 'topic_page.Depicted.sortMenu.optionTime'
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.Depicted.sortMenuOptionRev'
+                text: 'topic_page.Depicted.sortMenu.optionRev'
             },
             {
                 id: SORT_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.Depicted.sortMenuOptionClear'
+                text: 'topic_page.Depicted.sortMenu.optionClear'
             },
             ],
         };
