@@ -11,8 +11,8 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
-//const BASE_URL = "http://localhost:3000/"
+//const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+const BASE_URL = "http://localhost:3000/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
@@ -1074,9 +1074,12 @@ export default new Vuex.Store({
                         if (statements[i].id == "P373") {
                             // Pass on Commons category, if any
                             requestConfig.params.commons_category = statements[i].values[0].value;
-                        } else if (statements[i].id == "P131") {
-                            // Add administrative territorial entity to topic, if any
-                            requestConfig.params.topic += ", " + statements[i].values[0].value;
+                        // } else if (statements[i].id == "P131") {
+                        //     // Add administrative territorial entity to topic, if any
+                        //     requestConfig.params.topic += ", " + statements[i].values[0].value;
+                        } else if (statements[i].id == "P1705") {
+                            // Add name in original language with OR
+                            requestConfig.params.topic += " OR " + statements[i].values[0].value;
                         }
                     }
                 }
