@@ -22,7 +22,7 @@
       <div class="status">{{ $t('LandingPage.status') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
-          <div class="subtitle subfirst">{{ $t('LandingPage.titleTopics') }}</div>
+          <div class="subtitle sub">{{ $t('LandingPage.titleTopics') }}</div>
           <div class="status">{{ $t('LandingPage.statusTopics') }}</div>
           <ul>
             <li>
@@ -83,7 +83,7 @@
       <div class="subtitle">{{ $t('LandingPage.getInvolved') }}</div>
       <div class="info-cubes">
         <div class="info-cube">
-          <div class="subtitle subfirst">{{ $t('LandingPage.titleTranslate') }}</div>
+          <div class="subtitle sub">{{ $t('LandingPage.titleTranslate') }}</div>
           <div class="status">
             {{ $t('LandingPage.joinTranslate') }}
             <a

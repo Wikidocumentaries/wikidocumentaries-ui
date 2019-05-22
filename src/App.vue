@@ -787,14 +787,16 @@ i.wikiglyph {
 }
 
 .info-cubes {
-  column-width: 300px;
   margin-top: 1em;
-  column-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .info-cube {
-
+  flex: 1 1 300px;
+  padding-right: 1rem;
 }
 
 .subfirst {
