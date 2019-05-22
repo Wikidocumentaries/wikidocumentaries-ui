@@ -139,10 +139,12 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
-                  <!-- <Dataselect v-for="item in element.datecreated" :key="item.id"
+                  <Dataselect
+                    v-for="item in element.datecreated"
+                    :key="item.id"
                     class="grid-select"
                     v-bind:term="item"
-                  ></Dataselect>-->
+                  ></Dataselect>
                   <Dataselect
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addDateCreated')"
@@ -534,10 +536,12 @@ export default {
       });
     },
     getCredits(item) {
-      let newAuthors;
-      if (item.source == "Finna") {
-        newAuthors = item.creators[0].name + ", ";
-      } else {
+      let newAuthors = [];
+      if (item.source != undefined && item.source == "Finna") {
+        for (let author of item.creators) {
+          newAuthors.push(author.name + ", ");
+        }
+      } else if (item.source != undefined) {
         newAuthors = item.creators + ", ";
       }
       var newYear =

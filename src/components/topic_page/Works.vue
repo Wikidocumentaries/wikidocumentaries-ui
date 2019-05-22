@@ -181,20 +181,6 @@ LIMIT 1000
             var newTitle = title;
             return newTitle;
         },
-        // getCredits (item) {
-        //     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-        //     var newYear = (item.year != "" ? (item.year) + ". " : '');
-        //     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-        //     var newLicense = (item.license != "" ? (item.license + ', ') : '');
-
-        //     var credits = newAuthors + newYear + newInstitutions + newLicense;
-
-        //     if (credits.length > 0 && credits.slice(-2) == ", ") {
-        //         credits = credits.substr(0, credits.length - 2);
-        //     }
-
-        //     return credits;
-        // },
         navigate(target) {
             this.$router.push({ target });
         },
