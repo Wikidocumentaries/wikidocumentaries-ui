@@ -5,7 +5,8 @@
 			"Fitoschido",
 			"Abijeet Patro",
 			"Jbar82",
-			"Ryo567"
+			"Ryo567",
+			"Harvest"
 		]
 	},
 	"LandingPage": {
@@ -28,7 +29,7 @@
 		"titleTeam": "Equipo",
 		"titleThanks": "Con agradecimientos especiales a",
 		"titlePartners": "Socios",
-		"titleFunding": "Con la gran ayuda de",
+		"titleFunding": "Con el apoyo de",
 		"titleBy": "Proyecto de",
 		"getInvolved": "¡Involúcrate!",
 		"titleTranslate": "Traducir",
@@ -357,7 +358,7 @@
 			"languageMenuTitle": "Elige un idioma",
 			"languageMenuTooltip": "Elige tu idioma",
 			"myLanguagesItem": "Mis idiomas",
-			"languageMenuTranslate": "Traducir este artículo a inglés"
+			"languageMenuTranslate": "Traducir este artículo al inglés"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traducir a tu idioma"
