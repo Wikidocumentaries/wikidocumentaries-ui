@@ -11,7 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+//const BASE_URL = "http://localhost:3000/"
 const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
 
 const wikidocumentaries = {
@@ -1078,7 +1078,7 @@ export default new Vuex.Store({
                             //     requestConfig.params.topic += ", " + statements[i].values[0].value;
                         } else if (statements[i].id == "P1705") {
                             // Add name in original language with OR
-                            requestConfig.params.topic += " OR " + statements[i].values[0].value;
+                            requestConfig.params.topic += ' OR "' + statements[i].values[0].value + '"';
                         }
                     }
                 }

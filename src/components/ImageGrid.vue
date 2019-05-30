@@ -14,7 +14,7 @@
           :alt="item.title"
         >
         <div class="thumb-image-info">
-          <div class="thumb-title">{{ fitTitle(item.title) }}</div>
+          <div v-for="title in item.title" :key="title.id" class="thumb-title">{{ title }}</div>
           <div class="thumb-credit">{{ getCredits(item) }}</div>
         </div>
         <div class="thumb-image-header">
@@ -64,10 +64,6 @@ export default {
     // ImagesRemoveMenu,
   },
   methods: {
-    fitTitle(title) {
-      var newTitle = title;
-      return newTitle;
-    },
     getCredits(item) {
       let newAuthors = [];
       if (item.source != undefined && item.source == "Finna") {
@@ -152,7 +148,7 @@ export default {
 }
 
 .thumb-image {
-  height: 12em;
+  height: 13em;
   object-fit: cover;
 }
 </style>

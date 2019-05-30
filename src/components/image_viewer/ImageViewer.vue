@@ -55,7 +55,7 @@
               </div>
               <div class="bottomshade">
                 <div class="titlebox white">
-                  <div class="titlebox-title">{{ element.title }}</div>
+                  <div v-for="title in element.title" :key="title.id" class="titlebox-title">{{ title }}</div>
                   <div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
                 </div>
               </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.caption') }}</div>
-                  <div class="grid-body unedited">{{ element.title }}</div>
+                  <div v-for="title in element.title" :key="title.id" class="grid-body unedited">{{ title }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -125,7 +125,7 @@
                     </div>
                   </template>
                   <template v-else>
-                    <Dataselect class="grid-select" v-bind:term="element.creators"></Dataselect>
+                    <Dataselect class="grid-select" v-for="creator in element.creators" :key="creator.id" v-bind:term="creator"></Dataselect>
                   </template>
                   <Dataselect
                     class="grid-select action"
@@ -288,10 +288,10 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.institution') }}</div>
-                  <Dataselect
+                  <Dataselect v-for="institution in element.institutions"
+                    :key="institution.id"
                     class="grid-select"
-                    v-if="element.institutions"
-                    v-bind:term="element.institutions"
+                    v-bind:term="institution"
                   ></Dataselect>
                 </div>
               </div>
