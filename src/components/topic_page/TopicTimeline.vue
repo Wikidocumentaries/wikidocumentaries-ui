@@ -155,7 +155,7 @@ export default {
         ) {
           title = basemapItem.basemap.title;
         } else {
-          title = "ID: " + basemapItem.basemap.id;
+          title = 'ID: ' + basemapItem.basemap.id;
         }
 
         var timeLineItem = {
@@ -173,7 +173,7 @@ export default {
         var imageItem = this.timelineImageItems[i];
         //console.log(imageItem);
 
-        var title = "";
+        var title = '';
         if (imageItem.image.title != null && imageItem.image.title.length > 0) {
           title = imageItem.image.title[0];
         } else {
