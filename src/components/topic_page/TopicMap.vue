@@ -218,9 +218,20 @@ export default {
                         source: new this.$ol.source.OSM()
                     })
                 ],
+                // interactions: ol.interaction.defaults({
+                //   doubleClickZoom :false,
+                //   dragAndDrop: false,
+                //   keyboardPan: false,
+                //   keyboardZoom: false,
+                //   mouseWheelZoom: false,
+                //   pointer: false,
+                //   select: true
+                // }),
                 view: view
             });
-
+            this.map.getInteractions().forEach(function(interaction) {
+              interaction.setActive(false);
+            }, this);
             this.setTopicOnMap();
             if (this.topicLocation != null) {
                 this.$store.commit('setShouldFitMapToBasemap', true);
@@ -340,14 +351,17 @@ export default {
             this.map.addLayer(this.imageFeaturesLayer);
         },
         handleMapClick (event) {
-            var me = this;
-            this.map.forEachFeatureAtPixel(event.pixel,
-                function(feature) {
-                    if (feature == me.topicFeature) {
-                        me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
-                    }
-                }
-            );
+          this.map.getInteractions().forEach(function(interaction) {
+            interaction.setActive(true);
+          }, this);
+          var me = this;
+          this.map.forEachFeatureAtPixel(event.pixel,
+              function(feature) {
+                  if (feature == me.topicFeature) {
+                      me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
+                  }
+              }
+          );
         },
         topicPointCoordinates () {
             var coords = null;
