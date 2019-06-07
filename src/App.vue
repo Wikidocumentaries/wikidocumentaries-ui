@@ -23,6 +23,9 @@ export default {
   --main-purple: #a74e77;
   --main-blue: #008aad;
   --main-green: #69a656;
+  --main-red-dim: #e6cbc6;
+  --main-blue-dim: #c0d9df;
+  --main-yellow-dim: #f1e8d3;
   --main-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
   --main-font-size: 11pt;
   --main-line-height: 1.5;

@@ -2,9 +2,9 @@
   <div class="timeline-component">
     <div class="toolbar">
       <div class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</div>
-      <!-- <ToolbarMenu icon="wikiglyph-plus" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+      <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-      </ToolbarMenu>-->
+      </ToolbarMenu>
     </div>
       <div ref="timelineBar" class="timeline">
         <div class="timeline-start"></div>
@@ -130,6 +130,7 @@ export default {
       //console.log(temp);
       var timeLineItems = [];
 
+      //prepare wikidata event
       for (var i = 0; i < this.timelineEventItems.length; i++) {
         var eventItem = this.timelineEventItems[i];
         var timeLineItem = {
@@ -141,7 +142,8 @@ export default {
         };
         timeLineItems.push(timeLineItem);
       }
-
+      
+      //prepare basemaps
       for (var i = 0; i < this.timeLineBasemapItems.length; i++) {
         var basemapItem = this.timeLineBasemapItems[i];
         //console.log(basemapItem);
@@ -166,13 +168,14 @@ export default {
         timeLineItems.push(timeLineItem);
       }
 
+      //prepare images
       for (var i = 0; i < this.timelineImageItems.length; i++) {
         var imageItem = this.timelineImageItems[i];
         //console.log(imageItem);
 
         var title = "";
         if (imageItem.image.title != null && imageItem.image.title.length > 0) {
-          title = imageItem.image.title;
+          title = imageItem.image.title[0];
         } else {
           title = imageItem.image.id;
         }
@@ -561,7 +564,7 @@ export default {
         left = this.$refs.timelineBar.clientWidth * item.pos;
       }
       //console.log(left);
-      var style = "left: " + left + "px;";
+      var style = 'left: ' + left + 'px;';
 
       //   var containerHeight = this.$refs.timelineExplanations.clientHeight;
       //console.log(containerHeight);
@@ -571,17 +574,17 @@ export default {
       var height = 20 * (index + 1);
       // (containerHeight / this.sortedTimelineItems.length) * (index + 1);
       //console.log(height);
-      style += "height: " + height + "px;";
+      style += 'height: ' + height + 'px;';
 
       switch (item.type) {
         case ITEM_TYPES.IMAGE:
-          style += "background: #c2dce4;z-index: 7;";
+          style += 'background: var(--main-blue-dim); z-index: 7;';
           break;
         case ITEM_TYPES.EVENT:
-          style += "background: #dbc1be;z-index: 9;";
+          style += 'background: var(--main-red-dim); z-index: 9;';
           break;
         case ITEM_TYPES.BASEMAP:
-          style += "background: #d8c697;z-index: 8;";
+          style += 'background: var(--main-yellow-dim); z-index: 8;';
           break;
       }
       return style;
