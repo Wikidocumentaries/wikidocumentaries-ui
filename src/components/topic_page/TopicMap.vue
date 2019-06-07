@@ -431,13 +431,19 @@ export default {
             //console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
             var heightLength = turf_distance(bottomLeftLonLat, topLeftLonLat);
             var widthLength = turf_distance(bottomLeftLonLat, bottomRightLonLat);
-            var lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
-            var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
-            //console.log("lon: ", lon);
-            //console.log("lat: ", lat);
             var distance = heightLength > widthLength ? heightLength : widthLength * 1000 / 2;
-            //console.log(distance);
+            // console.log(distance);
             distance = distance < 10000 ? distance: 10000;
+            var lon, lat
+            if (this.topicLocation) {
+              lon = this.topicLocation.split('(')[1].split(' ')[0];
+              lat = this.topicLocation.split(' ')[1].split(')')[0];
+            } else {
+              lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
+              lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
+            }
+            // console.log("lon: ", lon);
+            // console.log("lat: ", lat);
             var params = {
                 topic: this.wikidocumentaries.title,
                 language: this.$i18n.locale,
