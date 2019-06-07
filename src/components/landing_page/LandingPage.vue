@@ -37,13 +37,17 @@
             <li>
               <a href="https://finna.fi/">Finna</a>
             </li>
-
             <li>
               <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>
             </li>
-
             <li>
               <a href="https://www.flickr.com/">Flickr</a>
+            </li>
+            <li>
+              <a href="https://ccsearch.creativecommons.org/">Creative Commons Search</a>
+            </li>
+            <li>
+              <a href="https://www.europeana.eu">Europeana</a>
             </li>
           </ul>
         </div>
