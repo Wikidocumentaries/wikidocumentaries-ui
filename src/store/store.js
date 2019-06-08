@@ -1069,18 +1069,36 @@ export default new Vuex.Store({
 
                 if (params.wiki.wikidata != null) {
                     var statements = params.wiki.wikidata.statements;
+                    const terms = new Set([requestConfig.params.topic]);
                     for (var i = 0; i < statements.length; i++) {
-                        if (statements[i].id == "P373") {
-                            // Pass on Commons category, if any
-                            requestConfig.params.commons_category = statements[i].values[0].value;
-                            // } else if (statements[i].id == "P131") {
-                            //     // Add administrative territorial entity to topic, if any
-                            //     requestConfig.params.topic += ", " + statements[i].values[0].value;
-                        } else if (statements[i].id == "P1705") {
-                            // Add name in original language with OR
-                            requestConfig.params.topic += ' OR "' + statements[i].values[0].value + '"';
+                        switch (statements[i].id) {
+                            case 'P373':
+                                requestConfig.params.commons_category = statements[i].values[0].value;
+                            case 'P1705': //nimi alkuperäiskielellä
+                            case 'P1559': //nimi äidinkielellä
+                            case 'P2561': //nimi
+                            case 'P1477': //syntymänimi
+                            case 'P2562': //married name
+                            case 'P742': //salanimi
+                            case 'P1448': //virallinen nimi
+                            case 'P1449': //lempinimi
+                            case 'P1635': //religious name
+                            case 'P1782': //courtesy name
+                            case 'P1785': //temple name
+                            case 'P1786': //posthumous name
+                            case 'P1787': //art-name
+                            case 'P1810': //named as
+                            case 'P1813': //lyhyt nimi
+                            case 'P4970': //vaihtoehtoiset nimet
+                            // case 'P5056': //henkilön patronyymi tai matronyymi
+                                for (let statement of statements[i].values) {
+                                    terms.add(statement.value);
+                                }
+                                break;
                         }
                     }
+                    requestConfig.params.topic = '"' + Array.from(terms).join('" OR "') + '"';
+                    // console.log('pööh', requestConfig);
                 }
 
                 // pass on coordinates from wikidata or wikipedia, if any
