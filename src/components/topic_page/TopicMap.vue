@@ -218,15 +218,6 @@ export default {
                         source: new this.$ol.source.OSM()
                     })
                 ],
-                // interactions: ol.interaction.defaults({
-                //   doubleClickZoom :false,
-                //   dragAndDrop: false,
-                //   keyboardPan: false,
-                //   keyboardZoom: false,
-                //   mouseWheelZoom: false,
-                //   pointer: false,
-                //   select: true
-                // }),
                 view: view
             });
             this.map.getInteractions().forEach(function(interaction) {
