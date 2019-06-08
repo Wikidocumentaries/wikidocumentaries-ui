@@ -630,8 +630,8 @@ i.wikiglyph {
 }
 
 .unedited:hover {
-  background: black;
-  color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .linked {

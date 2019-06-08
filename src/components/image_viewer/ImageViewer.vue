@@ -86,8 +86,8 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
                   <div
                     v-if="element.description && element.description.length>0"
-                    class="grid-body unedited"
-                  >{{ element.description[0] }}</div>
+                    class="grid-body unedited" v-html="element.description[0]"
+                  ></div>
                   <div
                     v-else
                     class="grid-body action"

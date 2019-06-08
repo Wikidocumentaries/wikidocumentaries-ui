@@ -2,61 +2,65 @@
   <div class="timeline-component">
     <div class="toolbar">
       <div class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</div>
-      <ToolbarMenu icon="wikiglyph-ellipses" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+      <ToolbarMenu
+        icon="wikiglyph-ellipses"
+        :items="toolbarActionMenuItems"
+        @doMenuItemAction="onDoMenuItemAction"
+      >
+        <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
       </ToolbarMenu>
     </div>
-      <div ref="timelineBar" class="timeline">
-        <div class="timeline-start"></div>
+    <div ref="timelineBar" class="timeline">
+      <div class="timeline-start"></div>
+      <div
+        class="timeline-start-year"
+        :class="{ 'year-included': startYearIncluded }"
+      >{{ startYear }} -</div>
+      <div ref="timelineCenturies" class="timeline-centuries">
         <div
-          class="timeline-start-year"
-          :class="{ 'year-included': startYearIncluded }"
-        >{{ startYear }} -</div>
-        <div ref="timelineCenturies" class="timeline-centuries">
-          <div
-            v-for="(century, index) in timelineCenturies"
-            :key="century.year"
-            class="timeline-century"
-            :style="centuryStyle(index)"
-          >{{ getCenturyText(index) }}</div>
-        </div>
-        <div
-          class="timeline-item"
-          v-for="(item, index) in sortedTimelineItems"
-          :key="item.id"
-          :style="timelineItemStyle(index)"
-        ></div>
-        <div
-          class="timeline-end-year"
-          :class="{ 'year-included': endYearIncluded, 'year-background-odd': oddCenturies, 'year-background-even': !oddCenturies }"
-        >- {{ endYear }}</div>
-        <div class="timeline-end"></div>
+          v-for="(century, index) in timelineCenturies"
+          :key="century.year"
+          class="timeline-century"
+          :style="centuryStyle(index)"
+        >{{ getCenturyText(index) }}</div>
       </div>
-      <div ref="timelineExplanations" class="timeline-explanations">
+      <div
+        class="timeline-item"
+        v-for="(item, index) in sortedTimelineItems"
+        :key="item.id"
+        :style="timelineItemStyle(index)"
+      ></div>
+      <div
+        class="timeline-end-year"
+        :class="{ 'year-included': endYearIncluded, 'year-background-odd': oddCenturies, 'year-background-even': !oddCenturies }"
+      >- {{ endYear }}</div>
+      <div class="timeline-end"></div>
+    </div>
+    <div ref="timelineExplanations" class="timeline-explanations">
+      <div
+        class="timeline-explanation"
+        v-for="(item, index) in sortedTimelineItems"
+        :key="item.id + item.title"
+        :style="timelineItemExplanationStyle(index, item)"
+      >
         <div
-          class="timeline-explanation"
-          v-for="(item, index) in sortedTimelineItems"
-          :key="item.id + item.title"
-          :style="timelineItemExplanationStyle(index, item)"
-        >
-          <div
-            class="timeline-explanation-box"
-            :style="timelineExplanationBoxStyle(index)"
-          >{{ getDate(index) }} {{ getItemExplanation(index) }}</div>
-        </div>
-        <div
-          :ref="'timelineExplanations' + index"
-          v-for="(item, index) in sortedTimelineItems"
-          :key="item.id + item.title + item.pos"
-          class="timeline-explanation-connector"
-        ></div>
-        <div
-          :ref="'timelineExplanationMarker' + index"
-          v-for="(item, index) in sortedTimelineItems"
-          :key="item.id + item.title + item.pos"
-          class="timeline-explanation-connector marker"
-        ></div>
+          class="timeline-explanation-box"
+          :style="timelineExplanationBoxStyle(index)"
+        >{{ getItemExplanation(index) }}</div>
       </div>
+      <div
+        :ref="'timelineExplanations' + index"
+        v-for="(item, index) in sortedTimelineItems"
+        :key="item.id + item.title + item.pos"
+        class="timeline-explanation-connector"
+      ></div>
+      <div
+        :ref="'timelineExplanationMarker' + index"
+        v-for="(item, index) in sortedTimelineItems"
+        :key="item.id + item.title + item.pos"
+        class="timeline-explanation-connector marker"
+      ></div>
+    </div>
   </div>
 </template>
 
@@ -142,7 +146,7 @@ export default {
         };
         timeLineItems.push(timeLineItem);
       }
-      
+
       //prepare basemaps
       for (var i = 0; i < this.timeLineBasemapItems.length; i++) {
         var basemapItem = this.timeLineBasemapItems[i];
@@ -155,7 +159,7 @@ export default {
         ) {
           title = basemapItem.basemap.title;
         } else {
-          title = 'ID: ' + basemapItem.basemap.id;
+          title = "ID: " + basemapItem.basemap.id;
         }
 
         var timeLineItem = {
@@ -173,7 +177,7 @@ export default {
         var imageItem = this.timelineImageItems[i];
         //console.log(imageItem);
 
-        var title = '';
+        var title = "";
         if (imageItem.image.title != null && imageItem.image.title.length > 0) {
           title = imageItem.image.title[0];
         } else {
@@ -433,11 +437,9 @@ export default {
           style =
             "left: " +
             left +
-            "px; " +
-            "width: " +
+            "px; width: " +
             width +
-            "px; " +
-            "background: " +
+            "px; background: " +
             backgroundColor +
             ";";
         } else {
@@ -445,9 +447,7 @@ export default {
           style =
             "left: " +
             left +
-            "px; " +
-            "right: 0; " +
-            "background: " +
+            "px; right: 0; background: " +
             backgroundColor +
             ";";
         }
@@ -480,13 +480,13 @@ export default {
       var style = "left: " + left + "px;";
       switch (item.type) {
         case ITEM_TYPES.IMAGE:
-          style += "background: var(--main-blue);z-index: 10;";
+          style += "background: var(--main-blue);z-index: 5;";
           break;
         case ITEM_TYPES.EVENT:
-          style += "background: var(--main-red);z-index: 12;";
+          style += "background: var(--main-red);z-index: 5;";
           break;
         case ITEM_TYPES.BASEMAP:
-          style += "background: var(--main-yellow);z-index: 11;";
+          style += "background: var(--main-yellow);z-index: 5;";
           break;
       }
       return style;
@@ -511,7 +511,10 @@ export default {
       return "";
     },
     getItemExplanation(index) {
-      var newTitle = this.sortedTimelineItems[index].title;
+      var newTitle =
+        this.sortedTimelineItems[index].year +
+        " " +
+        this.sortedTimelineItems[index].title;
       return newTitle;
     },
     getDate(index) {
@@ -519,72 +522,79 @@ export default {
       return newDate;
     },
     timelineExplanationBoxStyle(index) {
-      var style = "";
+      let style = "";
 
       //console.log(this.$refs.timelineExplanations.style.font);
 
-      var textWidth = getTextWidth(
+      let textWidth = getTextWidth(
         this.getItemExplanation(index),
-        "italic 11pt Arial"
+        "11pt Arial"
       );
       //console.log(textWidth);
 
-      var left = 0;
-      var pad = 6;
+      let left = 0;
+      let bar = this.$refs.timelineBar.clientWidth;
 
       if (this.sortedTimelineItems[index].pos > 0) {
-        left =
-          this.$refs.timelineBar.clientWidth *
-          this.sortedTimelineItems[index].pos;
+        left = bar * this.sortedTimelineItems[index].pos;
       }
-      var bar = this.$refs.timelineBar.clientWidth;
-      var pos = left + pad;
-      //   if (left + pad + textWidth > this.$refs.timelineBar.clientWidth) {
-      //     pos = left - textWidth;
-      //   }
-      var rpad = this.$refs.timelineBar.clientWidth - pos + 10;
-      if (left > this.$refs.timelineBar.clientWidth / 2) {
+
+      left += 3;
+      textWidth += 6;
+      let rmargin = bar - left;
+      let lmargin = left - textWidth - 3;
+
+      if (left > bar / 2) {
+        // late events, right align
+        if (left - textWidth < 0) {
+          // cut long text
+          textWidth = left - 3;
+          lmargin = 0;
+        }
         style =
-          "text-align: right; padding-right: " +
-          rpad +
-          "px; padding-left: 6px; width: " +
-          bar +
+          "text-align: left; margin-left: " +
+          lmargin +
+          "px; margin-right: " +
+          rmargin +
+          "px;padding: 0 3px; width: " +
+          textWidth +
           "px;";
       } else {
-        style = "padding-left: " + pos + "px; width: " + bar + "px;";
+        // left align
+        if (left + textWidth > bar) {
+          //cut text
+          textWidth = bar - left;
+        }
+        style =
+          "text-align: left; margin-left: " +
+          left +
+          "px; width: " +
+          textWidth +
+          "px; padding: 0 3px";
       }
-      //console.log(style);
       return style;
     },
     timelineExplanationConnectorStyle(index) {
-      var item = this.sortedTimelineItems[index];
+      let item = this.sortedTimelineItems[index];
+      let left = 0;
 
-      var left = 0;
       if (item.pos > 0) {
         left = this.$refs.timelineBar.clientWidth * item.pos;
       }
-      //console.log(left);
-      var style = 'left: ' + left + 'px;';
 
-      //   var containerHeight = this.$refs.timelineExplanations.clientHeight;
-      //console.log(containerHeight);
-      //console.log(this.sortedTimelineItems.length);
-      //console.log(index);
-      //console.log(this.sortedTimelineItems[index].id);
-      var height = 20 * (index + 1);
-      // (containerHeight / this.sortedTimelineItems.length) * (index + 1);
-      //console.log(height);
-      style += 'height: ' + height + 'px;';
+      let style = "left: " + left + "px;";
+      let height = 20 * (index + 1);
+      style += "height: " + height + "px;";
 
       switch (item.type) {
         case ITEM_TYPES.IMAGE:
-          style += 'background: var(--main-blue-dim); z-index: 7;';
+          style += "background: var(--main-blue-dim); z-index: 5;";
           break;
         case ITEM_TYPES.EVENT:
-          style += 'background: var(--main-red-dim); z-index: 9;';
+          style += "background: var(--main-red-dim); z-index: 5;";
           break;
         case ITEM_TYPES.BASEMAP:
-          style += 'background: var(--main-yellow-dim); z-index: 8;';
+          style += "background: var(--main-yellow-dim); z-index: 5;";
           break;
       }
       return style;
@@ -605,13 +615,13 @@ export default {
 
       switch (item.type) {
         case ITEM_TYPES.IMAGE:
-          style += "background: var(--main-blue);z-index: 7;";
+          style += "background: var(--main-blue);z-index: 5;";
           break;
         case ITEM_TYPES.EVENT:
-          style += "background: var(--main-red);z-index: 9;";
+          style += "background: var(--main-red);z-index: 5;";
           break;
         case ITEM_TYPES.BASEMAP:
-          style += "background: var(--main-yellow);z-index: 8;";
+          style += "background: var(--main-yellow);z-index: 5;";
           break;
       }
       return style;
@@ -657,24 +667,18 @@ function getTextWidth(text, font) {
   background: black;
   color: #8e8e8e;
   opacity: 0;
-  z-index: 5;
+  z-index: 2;
 }
 
 .timeline-start-year {
   position: absolute;
-  left: 5px;
-  text-align: left;
-  /* height: 100%; */
-  padding: 9px 10px 9px 2px;
+  padding-left: 10px;
   background: transparent;
   color: white;
-  z-index: 11;
+  z-index: 6;
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;
-  overflow: hidden;
-  vertical-align: middle;
-  line-height: 40px;
 }
 
 .year-included {
@@ -696,23 +700,19 @@ function getTextWidth(text, font) {
   padding: 9px 10px 9px 10px;
   color: #8e8e8e;
   opacity: 0;
-  z-index: 5;
+  z-index: 4;
 }
 
 .timeline-end-year {
   position: absolute;
-  right: 5px;
-  text-align: right;
-  padding: 9px 2px 9px 10px;
+  right: 0px;
+  padding-right: 10px;
   background: transparent;
   color: white;
-  z-index: 10;
+  z-index: 6;
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;
-  overflow: hidden;
-  vertical-align: middle;
-  line-height: 40px;
 }
 
 .timeline-centuries {
@@ -720,7 +720,6 @@ function getTextWidth(text, font) {
   width: 100%;
   height: 100%;
   text-align: center;
-
   color: #8e8e8e;
 }
 
@@ -728,7 +727,6 @@ function getTextWidth(text, font) {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 4;
   font-family: barlow condensed;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -758,13 +756,13 @@ function getTextWidth(text, font) {
   max-width: 100%;
   max-height: 40vh;
   overflow: scroll;
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .timeline-explanation {
   flex: 1 0 100%;
   position: relative;
-  z-index: 10;
+  z-index: 6;
 }
 
 .timeline-explanation-box {
@@ -774,6 +772,12 @@ overflow-x: hidden;
   text-overflow: ellipsis;
   box-sizing: border-box;
   line-height: 20px;
+  padding: 0;
+}
+
+.timeline-explanation-box:hover {
+  background: white;
+  cursor: pointer;
 }
 
 .div-width-minus3 {
