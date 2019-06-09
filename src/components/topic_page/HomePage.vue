@@ -1,9 +1,11 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
+    <Toc class="toc"
+    @scrollTo="onScrollTo"></Toc>
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : '']">
-      <WikipediaArticle class="column one"></WikipediaArticle>
-      <WikidataItem class="column two"></WikidataItem>
+      <WikipediaArticle id="article" class="column one"></WikipediaArticle>
+      <WikidataItem id="facts" class="column two"></WikidataItem>
       <div class="haze" id="wiki">
         <div class="toolbar-item block">
           <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
@@ -17,17 +19,17 @@
       </div>
     </div>
     <!-- <SampoGallery></SampoGallery> -->
-    <Locations id="locations"></Locations>
-    <Parts id="parts"></Parts>
     <Works id="works"></Works>
     <Depicts id="depicts"></Depicts>
+    <Parts id="parts"></Parts>
     <People id="people"></People>
     <Affiliations id="affiliations"></Affiliations>
+    <Locations id="locations"></Locations>
+    <TopicMap id="topicMap"></TopicMap>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
     <EventList id="events"></EventList>
-    <TopicMap id="topicMap"></TopicMap>
     <Depicted id="depicted"></Depicted>
-    <TopicImages
+    <TopicImages id="images"
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
     ></TopicImages>
@@ -38,6 +40,7 @@
 
 <script>
 import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
+import Toc from "@/components/topic_page/Toc";
 import WikipediaArticle from "@/components/topic_page/Wikipedia";
 import WikidataItem from "@/components/topic_page/Wikidata";
 import TopicMap from "@/components/topic_page/TopicMap";
@@ -65,6 +68,7 @@ export default {
   },
   components: {
     TopicPageHeader,
+    Toc,
     WikipediaArticle,
     WikidataItem,
     TopicMap,
@@ -96,6 +100,9 @@ export default {
       //console.log("HomePage.onShowImagesOnTimeline");
 
       this.$scrollTo("#topicTimeline");
+    },
+    onScrollTo(id) {
+      this.$scrollTo(id);
     }
   }
 };

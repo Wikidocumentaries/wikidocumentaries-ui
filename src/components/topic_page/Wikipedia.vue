@@ -1,11 +1,5 @@
 <template>
   <div class="wikipedia">
-    <!-- <div class="toolbar">
-      <div class="header-title">Sisältö</div>
-    </div>
-    <div class="toc">
-
-    </div> -->
     <div class="toolbar">
       <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
       <ArticleLanguageMenu

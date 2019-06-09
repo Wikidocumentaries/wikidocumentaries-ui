@@ -547,6 +547,36 @@ i.wikiglyph {
   max-width: fit-content;
 }
 
+.toc {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.toc-item {
+  position: relative;
+  cursor: pointer;
+  flex: 1 1 150px;
+  height: 35px;
+  background: var(--main-dimmed);
+  transition: background 80ms ease-in;
+}
+
+.toc-item:hover {
+  background: var(--main-blue);
+}
+
+.toc-info {
+  bottom: 0;
+  color: white;
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 35px;
+}
+
 .gallery-item:hover .gallery-image {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
