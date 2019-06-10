@@ -1,0 +1,246 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amirsara",
+			"FarsiNevis"
+		]
+	},
+	"LandingPage": {
+		"search": "جستجو",
+		"titleStatus": "وضعیت",
+		"moreBelow": "ادامه را بخوانید",
+		"more": "بیشتر بخوانید",
+		"moreLink": "بیشتر بخوانید در",
+		"titleTopics": "مباحث",
+		"titleMedia": "رسانه‌ها",
+		"titleTools": "ابزارها",
+		"titleLanguages": "زبان‌ها",
+		"titleCreators": "ایجادکنندگان",
+		"titleTeam": "گروه",
+		"titleTranslate": "ترجمه",
+		"facebook": "گروه فیس‌بوک",
+		"blog": "وبلاگ",
+		"email": "ایمیل"
+	},
+	"MainPage": {
+		"topicPageName": "صفحهٔ مبحث",
+		"mapSearchPageName": "جستجوی نقشه‌ها",
+		"returnToHomeMessage": "بازگشت به صفحهٔ نخست"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"yearAbbreviation": "س."
+		},
+		"Header": {
+			"titleEditText": "عنوان را ویرایش کنید",
+			"titleApproveText": "این عنوان را تأیید کنید"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "زمان",
+				"map": "نقشه",
+				"people": "افراد",
+				"places": "مکان‌ها",
+				"topics": "مباحث",
+				"imageSize": "اندازهٔ تصویر",
+				"large": "بزرگ",
+				"medium": "متوسط",
+				"small": "کوچک",
+				"type": "نوع رسانه",
+				"creator": "ایجادکننده",
+				"source": "منبع"
+			},
+			"imagesRemoveMenu": {
+				"shortMenuTitle": "حذف تصویر",
+				"menuTooltip": "حذف تصویر",
+				"remCreator": {
+					"search": "جستجوی ایجادکننده"
+				},
+				"remInappropriate": {
+					"shortMenuTitle": "نامناسب است"
+				}
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "پنهان‌سازی تصویرها"
+		},
+		"TopicTimeline": {
+			"centuryText": "ق"
+		},
+		"Events": {
+			"headerTitle": "رویدادها",
+			"displayMenu": {
+				"menuTitle": "گزینه‌های نمایش",
+				"menuTooltip": "گزینه‌های نمایش"
+			},
+			"optionsMenu": {
+				"menuTitle": "گزینه‌ها"
+			}
+		},
+		"Wikipedia": {
+			"headerTitle": "مقاله",
+			"extLink": {
+				"linkTitleWP": "مطالعه یا ویرایش در ویکی‌پدیا"
+			},
+			"addLink": {
+				"linkTitleWP": "مقاله‌ای در ویکی‌پدیا ایجاد کنید"
+			},
+			"languageMenu": {
+				"menuTitle": "مقاله را به زبان دیگری بخوانید",
+				"translateArticleText": "این مقاله را به انگلیسی ترجمه کنید",
+				"otherLanguagestext": "زبان‌های دیگر"
+			}
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionClear": "پاک کردن مرتب‌سازی"
+			},
+			"facetMenu": {
+				"optionType": "نوع",
+				"optionColl": "ایجادکننده"
+			},
+			"displayMenu": {
+				"optionList": "فهرست"
+			},
+			"showAll": "همه"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionAlpha": "الفبایی",
+				"optionRev": "مرتب‌سازی برعکس",
+				"optionClear": "پاک کردن مرتب‌سازی"
+			},
+			"facetMenu": {
+				"optionType": "نوع",
+				"optionColl": "ایجادکننده"
+			},
+			"displayMenu": {
+				"title": "نمایش به‌صورت",
+				"optionGallery": "نگارخانه",
+				"optionList": "فهرست"
+			},
+			"showAll": "همه"
+		},
+		"Parts": {
+			"headerTitle": "اجزا"
+		},
+		"Works": {
+			"headerTitle": "آثار",
+			"sortMenuTitle": "مرتب‌سازی",
+			"sortMenuOptionTime": "بر اساس زمان",
+			"sortMenuOptionDist": "بر اساس فاصله",
+			"sortMenuOptionRev": "مرتب‌سازی برعکس",
+			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
+			"facetMenuOptionType": "نوع",
+			"facetMenuOptionColl": "مجموعه",
+			"displayMenuTitle": "نمایش به‌صورت",
+			"displayMenuOptionGallery": "نگارخانه",
+			"displayMenuOptionList": "فهرست",
+			"showAll": "همه"
+		},
+		"People": {
+			"sortMenuTitle": "مرتب‌سازی",
+			"sortMenuTooltip": "تغییر ترتیب مرتب‌سازی",
+			"sortMenuOptionBirth": "بر اساس زادروز",
+			"sortMenuOptionDeath": "بر اساس زمان مرگ",
+			"sortMenuOptionName": "بر اساس نام",
+			"sortMenuOptionFirst": "بر اساس نام کوچک",
+			"sortMenuOptionLast": "بر اساس نام خانوادگی",
+			"sortMenuOptionRev": "برعکس کردن ترتیب مرتب‌سازی",
+			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
+			"facetMenuOptionProfession": "حرفه",
+			"facetMenuOptionCountry": "کشور",
+			"facetMenuOptionCity": "جنسیت"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"creator": "ایجادکننده",
+			"addCreator": "افزودن ایجادکننده",
+			"removeCreator": "حذف ایجادکننده",
+			"dateCreated": "روز ایجاد",
+			"addDateCreated": "افزودن روز ایجاد",
+			"removeDateCreated": "حذف روز ایجاد",
+			"publisher": "ناشر",
+			"addPublisher": "افزودن ناشر",
+			"removePublisher": "حذف ناشر",
+			"format": "قالب",
+			"addFormat": "افزودن قالب",
+			"removeFormat": "حذف قالب",
+			"locationMap": "موقعیت بر روی نقشه",
+			"addLocation": "افزودن موقعیت",
+			"removeLocation": "حذف موقعیت",
+			"address": "نشانی",
+			"addAddress": "افزودن نشانی",
+			"removeAddress": "حذف نشانی",
+			"event": "رویداد",
+			"addEvent": "افزودن رویداد",
+			"removeEvent": "حذف رویداد",
+			"collection": "مجموعه",
+			"photograph": "عکس",
+			"image": "تصویر",
+			"photographer": "عکاس",
+			"addPhotographData": "افزودن اطلاعات در بارهٔ عکس",
+			"platformId": "شناسه",
+			"imageInfoPage": "صفحهٔ اطلاعات تصویر",
+			"imageDimensions": "ابعاد تصویر",
+			"fileSize": "اندازهٔ پرونده",
+			"fileFormat": "قالب پرونده",
+			"remove": "حذف",
+			"addData": "افزودن داده",
+			"uploader": "بارگذار",
+			"rotate": "چرخاندن"
+		},
+		"imageActions": {
+			"rotateImage": "چرخاندن تصویر",
+			"clockwise": "در جهت حرکت عقربه‌های ساعت",
+			"counterclockwise": "در خلاف جهت حرکت عقربه‌های ساعت",
+			"horizontal": "افقی",
+			"vertical": "عمودی"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "جستجوی نقشه‌های تاریخی"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "بر اساس زمان",
+			"optionAlpha": "الفبایی",
+			"optionTitleAlpha": "الفبایی بر اساس عنوان",
+			"optionCreatorAlpha": "الفبایی بر اساس ایجادکننده",
+			"optionDist": "بر اساس فاصله",
+			"optionRev": "مرتب‌سازی برعکس",
+			"optionClear": "پاک کردن مرتب‌سازی"
+		},
+		"facetMenu": {
+			"optionType": "نوع",
+			"optionColl": "ایجادکننده"
+		},
+		"displayMenu": {
+			"title": "نمایش به‌صورت",
+			"optionGallery": "نگارخانه",
+			"optionList": "فهرست"
+		}
+	},
+	"general": {
+		"cancel": "لغو",
+		"helpText": "راهنما",
+		"menus": {
+			"languageMenuTitle": "انتخاب زبان",
+			"languageMenuTooltip": "زبان خود را انتخاب کنید",
+			"myLanguagesItem": "زبان‌های من",
+			"languageMenuTranslate": "این مقاله را به انگلیسی ترجمه کنید"
+		},
+		"languageMenu": {
+			"TranslateUI": "ترجمه به زبان خودتان"
+		},
+		"languages": {
+			"fi": "فنلاندی",
+			"en": "انگلیسی",
+			"sv": "سوئدی",
+			"es": "اسپانیایی"
+		}
+	}
+}
