@@ -807,4 +807,8 @@ i.wikiglyph {
   font-size: var(--subsubtitle-font-size);
   margin: 0;
 }
+
+.icon {
+    width: 20px;
+}
 </style>

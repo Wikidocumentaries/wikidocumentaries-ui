@@ -95,7 +95,6 @@ export default {
       timelineEventItems: [],
       timeLineBasemapItems: [],
       timelineCenturies: [],
-      maxTitleLengthInChars: 55,
       oddCenturies: false
     };
   },

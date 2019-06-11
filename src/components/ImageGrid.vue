@@ -9,13 +9,14 @@
         @click="showImageViewer(index)"
       >
         <img
-          :src="[item.thumbURL ? item.thumbURL : item.imageURL]"
+          :src="[item.thumbURL ? item.thumbURL : placeholder]"
           class="thumb-image"
           :alt="item.title"
         >
         <div class="thumb-image-info">
           <div v-for="title in item.title" :key="title.id" class="thumb-title">{{ title }}</div>
-          <div class="thumb-credit">{{ getCredits(item) }}</div>
+          <div class="thumb-credit"><img class="icon" :src="getIcon(item)" align="right">{{ getCredits(item) }}</div>
+          
         </div>
         <div class="thumb-image-header">
           <div class="left-align">
@@ -56,7 +57,9 @@ export default {
     items: Array
   },
   data() {
-    return {};
+    return {
+      placeholder: "../../static/pngs/imageplaceholder.png"
+    }
   },
   components: {
     ImageViewer
@@ -66,11 +69,11 @@ export default {
   methods: {
     getCredits(item) {
       let newAuthors = [];
-      if (item.source != undefined && item.source == "Finna") {
+      if (item.source == "Finna") {
         for (let author of item.creators) {
           newAuthors.push(author.name + ", ");
         }
-      } else if (item.source != undefined) {
+      } else if (!!item.creators && item.creators.length > 0) {
         newAuthors = item.creators + ", ";
       }
       var newYear =
@@ -85,6 +88,27 @@ export default {
       }
 
       return credits;
+    },
+    getIcon(item) {
+      let icon = '';
+      switch (item.source) {
+        case 'Finna':
+          icon = '../../static/icons/finna-mini.png';
+          break;
+        case 'Flickr':
+          icon = '../../static/icons/flickr-mini.png';
+          break;
+        case 'Wikimedia Commons':
+          icon = '../../static/icons/commons-mini.png';
+          break;
+        case 'CC Search':
+          icon = '../../static/icons/cc-mini.png';
+          break;
+        case 'Europeana':
+          icon = '../../static/icons/europeana-mini.png';
+          break;
+        }
+        return icon;
     },
     showItemGeolocation(item) {
       this.$emit("showItemGeolocation", item);
