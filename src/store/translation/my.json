@@ -5,7 +5,18 @@
 		]
 	},
 	"LandingPage": {
-		"search": "ရှာဖွေရန်"
+		"search": "ရှာဖွေရန်",
+		"titleStatus": "အခြေအနေ",
+		"more": "ပိုမို ဖတ်ရန်",
+		"titleMedia": "မီဒီယာ",
+		"titleTools": "ကိရိယာများ",
+		"titleLanguages": "ဘာသာစကားများ",
+		"titleTechnology": "နည်းပညာ",
+		"titleCreators": "ဖန်တီးသူများ",
+		"titleTranslate": "ဘာသာပြန်ပါ",
+		"facebook": "ဖေ့ဘုတ် အုပ်စု",
+		"blog": "ဘလော့",
+		"email": "အီးမေးလ်"
 	},
 	"MainPage": {
 		"mapSearchPageName": "မြေပုံများ ရှာဖွေရန်"
@@ -52,7 +63,7 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "တည်နေရာများ",
+			"headerTitle": "ဤတည်နေရာထဲတွင်",
 			"sortMenu": {
 				"optionTime": "အချိန်အလိုက်",
 				"optionAlpha": "အက္ခရာစဉ်အတိုင်း",
@@ -109,7 +120,9 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"description": "ဖော်ပြချက်",
 			"addDescription": "ဖော်ပြချက်ထည့်သွင်းပါ",
+			"creator": "ဖန်တီးသူ",
 			"creatorUnknown": "အမည်မသိ",
 			"publisher": "ထုတ်ဝေသူ",
 			"location": "တည်နေရာ",
@@ -117,7 +130,33 @@
 			"event": "ဖြစ်ရပ်",
 			"copyright": "မူပိုင်ခွင့်",
 			"license": "မူပိုင်ခွင့် လိုင်စင်",
-			"remove": "ဖယ်ရှားရန်"
+			"image": "ရုပ်ပုံ",
+			"photographer": "ဓါတ်ပုံဆရာ",
+			"digitalCopy": "ဒယ်ဂျစ်တယ် မိတ္တူ",
+			"platformId": "အိုင်ဒီ",
+			"fileSize": "ဖိုင် အရွယ်အစား",
+			"remove": "ဖယ်ရှားရန်",
+			"rotate": "လှည့်ရန်"
+		},
+		"imageActions": {
+			"horizontal": "အလျားလိုက်",
+			"vertical": "ဒေါင်လိုက်"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "အချိန်အလိုက်",
+			"optionAlpha": "အက္ခရာစဉ်အတိုင်း",
+			"optionDist": "အကွာအဝေးအတိုင်း"
+		},
+		"facetMenu": {
+			"optionType": "အမျိုးအစား",
+			"optionColl": "ဖန်တီးသူ",
+			"optionCity": "တည်နေရာ"
+		},
+		"displayMenu": {
+			"optionGallery": "ပြခန်း",
+			"optionList": "စာရင်း"
 		}
 	},
 	"general": {
