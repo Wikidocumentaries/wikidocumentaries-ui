@@ -13,6 +13,7 @@
 		"titleLanguages": "ဘာသာစကားများ",
 		"titleTechnology": "နည်းပညာ",
 		"titleCreators": "ဖန်တီးသူများ",
+		"titleTeam": "အသင်း",
 		"titleTranslate": "ဘာသာပြန်ပါ",
 		"facebook": "ဖေ့ဘုတ် အုပ်စု",
 		"blog": "ဘလော့",
@@ -169,7 +170,7 @@
 			"languageMenuTitle": "ဘာသာစကားရွေးချယ်ရန်",
 			"languageMenuTooltip": "သင်၏ ဘာသာစကားရွေးချယ်ရန်",
 			"myLanguagesItem": "ကျွန်ုပ်၏ ဘာသာစကားများ",
-			"languageMenuTranslate": "ဤဆောင်းပါးကို ဘာသာပြန်ရန်"
+			"languageMenuTranslate": "ဤဆောင်းပါးကို အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ရန်"
 		},
 		"languageMenu": {
 			"TranslateUI": "သင်၏ဘာသာစကားသို့ ဘာသာပြန်ပါ"
