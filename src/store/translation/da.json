@@ -12,6 +12,7 @@
 		"titleStatus": "Status",
 		"moreBelow": "Læs mere forneden",
 		"more": "Læs mere",
+		"moreLink": "Læs mere på",
 		"titleTopics": "Emner",
 		"titleMedia": "Medier",
 		"titleTools": "Værktøjer",
@@ -49,6 +50,7 @@
 				"tooltip": "Vis eller arrangere billeder",
 				"showImagesOnMapMenuText": "Vis alle billederne på kortet",
 				"showImagesOnTimelineMenuText": "Vis alle billeder på tidslinjen",
+				"selectPortraits": "Vælg portratter af denne person af god kvalitet",
 				"arrangeByTime": "Arranger billeder efter tid",
 				"selectWorks": "Vælg billeder af værker"
 			},
@@ -78,7 +80,8 @@
 				"shortMenuTitle": "Fjern billedet",
 				"menuTooltip": "Fjern billedet",
 				"remDepicted": {
-					"search": "Søg efter emnet"
+					"search": "Søg efter emnet",
+					"browse": "Gennemse relaterede emner"
 				},
 				"remCreator": {
 					"menuTitle": "Det er af denne skaber istedet",
@@ -117,11 +120,17 @@
 			}
 		},
 		"Wikidata": {
+			"headerTitle": "Fakta",
+			"extLink": {
+				"linkTitleWD": "Se eller rediger på Wikidata"
+			},
 			"noTopicFoundText": "Emnet blev ikke fundet"
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
 			"missingArticleMissing": "Der findes ingen artikler om dette emne på dit sprog.",
+			"missingArticleCreate": "Du kan oprette denne artikel på dit sprog ved at trykke på plusikonet.",
+			"missingArticleTranslate": "Du kan oversætte denne artikel til dit sprog ved at vælge det i sprogmenuen.",
 			"extLink": {
 				"linkTitleWP": "Læs eller rediger på Wikipedia"
 			},
@@ -149,6 +158,7 @@
 			},
 			"displayMenu": {
 				"title": "Vis som",
+				"tooltip": "Vælg visningen",
 				"optionGallery": "Galleri",
 				"optionList": "Liste"
 			},
@@ -168,6 +178,7 @@
 			},
 			"displayMenu": {
 				"title": "Vis som",
+				"tooltip": "Vælg visningen",
 				"optionGallery": "Galleri",
 				"optionList": "Liste"
 			},
@@ -188,6 +199,7 @@
 			"facetMenuOptionColl": "Samling",
 			"facetMenuOptionCity": "Placering",
 			"displayMenuTitle": "Vis som",
+			"displayMenuTooltip": "Vælg visningen",
 			"displayMenuOptionGallery": "Galleri",
 			"displayMenuOptionList": "Liste",
 			"showAll": "Alle"
@@ -212,10 +224,12 @@
 			"creatorUnknown": "Ukendt",
 			"addCreator": "Tilføj skaber",
 			"removeCreator": "Fjern skaber",
+			"dateCreated": "Oprettelsesdato",
 			"addDateCreated": "Tilføj skabelsesdato",
 			"removeDateCreated": "Fjern skabelsesdato",
 			"publisher": "Udgiver",
 			"addPublisher": "Tilføj udgiver",
+			"removePublisher": "Fjern udgiver",
 			"format": "Format",
 			"addFormat": "Tilføj format",
 			"removeFormat": "Fjern format",
@@ -230,6 +244,9 @@
 			"locationMap": "Placering på kortet",
 			"addPerson": "Tilføj person",
 			"removePerson": "Fjern person",
+			"event": "Begivenhed",
+			"addEvent": "Tilføj begivenhed",
+			"removeEvent": "Fjern begivenhed",
 			"collection": "Samling",
 			"copyright": "Ophavsret",
 			"work": "Værk repræsenteret i billedet",
@@ -247,7 +264,9 @@
 			"rotate": "Roter"
 		},
 		"imageActions": {
-			"rotateImage": "Roter billedet"
+			"rotateImage": "Roter billedet",
+			"clockwise": "med uret",
+			"counterclockwise": "mod uret"
 		}
 	},
 	"map_search_page": {
@@ -272,6 +291,7 @@
 		},
 		"displayMenu": {
 			"title": "Vis som",
+			"tooltip": "Vælg visningen",
 			"optionGallery": "Galleri",
 			"optionList": "Liste"
 		}
