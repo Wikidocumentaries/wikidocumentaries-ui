@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Saederup92"
+			"Saederup92",
+			"Tinamalmgren"
 		]
 	},
 	"LandingPage": {
@@ -50,7 +51,7 @@
 				"tooltip": "Vis eller arrangere billeder",
 				"showImagesOnMapMenuText": "Vis alle billederne på kortet",
 				"showImagesOnTimelineMenuText": "Vis alle billeder på tidslinjen",
-				"selectPortraits": "Vælg portratter af denne person af god kvalitet",
+				"selectPortraits": "Vælg portrætter af denne person i god kvalitet",
 				"arrangeByTime": "Arranger billeder efter tid",
 				"selectWorks": "Vælg billeder af værker"
 			},
@@ -122,7 +123,7 @@
 		"Wikidata": {
 			"headerTitle": "Fakta",
 			"extLink": {
-				"linkTitleWD": "Se eller rediger på Wikidata"
+				"linkTitleWD": "Se eller redigér på Wikidata"
 			},
 			"noTopicFoundText": "Emnet blev ikke fundet"
 		},
