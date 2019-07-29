@@ -21,9 +21,16 @@
 		"titleTechnology": "Teknolociye",
 		"titleCreators": "Vıraştoği",
 		"titleTeam": "Taxım",
+		"titlePartners": "Partneri",
+		"titleBy": "Proceyê êdê",
+		"getInvolved": "Tewr bê!",
 		"titleTranslate": "Açarnayış",
+		"titleContent": "Zerrekê ho dekerê",
+		"facebook": "Gruba Facebooki",
+		"wiki": "Wikidocumentaries wiki",
 		"blog": "Qeyd",
-		"email": "E-poste"
+		"email": "E-poste",
+		"github": "Depoyê Githubi"
 	},
 	"MainPage": {
 		"topicPageName": "Pela mewzuyi",
@@ -161,6 +168,9 @@
 		"Parts": {
 			"headerTitle": "Leteyi"
 		},
+		"Affiliations": {
+			"headerTitle": "Aleqerın"
+		},
 		"Works": {
 			"sortMenuTitle": "Weçine",
 			"sortMenuOptionAlpha": "Alfabetik",
@@ -203,6 +213,10 @@
 			"remove": "Wedare",
 			"uploader": "Barkerdoğ",
 			"rotate": "Bıçerexne"
+		},
+		"imageActions": {
+			"horizontal": "horizontal",
+			"vertical": "Vertikal"
 		},
 		"closeViewer": "Çımeyi cade"
 	},
