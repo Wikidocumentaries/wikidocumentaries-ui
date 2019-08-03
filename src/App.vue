@@ -645,19 +645,6 @@ i.wikiglyph {
   background: white;
 }
 
-.footer {
-  height: 45px;
-  background: white;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer a {
-  color: var(--main-dimmed);
-}
-
 .active-term {
   background: var(--main-txt-color);
   border-radius: 0;
