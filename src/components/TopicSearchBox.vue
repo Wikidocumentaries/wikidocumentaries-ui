@@ -1,7 +1,7 @@
 <template>
     <div class="topic-search-box">
         <form class="search-items">
-            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" @keydown.down="onArrowDown" @keydown.up="onArrowUp" @keydown.enter="pickResult" @blur="showMenu(false)" class="input-find" v-model="topicInputValue" type="search" :placeholder="$t('LandingPage.searchInputSearchOnly')">
+            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" @keydown.down="onArrowDown" @keydown.up="onArrowUp" @keydown.enter="pickResult" class="input-find" v-model="topicInputValue" type="search" :placeholder="$t('LandingPage.searchInputSearchOnly')">
             <button title="Search" @click.prevent="focusInput(e)" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass" aria-hidden></i></button>
 
             <div class="search-results">
