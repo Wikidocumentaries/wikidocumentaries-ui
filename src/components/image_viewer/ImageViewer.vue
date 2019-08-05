@@ -455,7 +455,6 @@
 import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
-import Footer from "@/components/Footer";
 
 const MENU_ACTIONS = {
   SELECT_HEADER: 0
@@ -492,7 +491,6 @@ export default {
     HeaderLink,
     Dataselect,
     ToolbarMenu,
-    Footer
   },
   props: {
     shouldShowDialog: Boolean
