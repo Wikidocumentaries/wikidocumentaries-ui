@@ -6,7 +6,19 @@
 
 <script>
 export default {
-  name: "App"
+    name: "App",
+    created () {
+        //console.log(window.location);
+        var langParam = null;
+        var langParamIndex = window.location.search.indexOf('language');
+        if (langParamIndex != -1) {
+            langParam = window.location.search.substr(langParamIndex + 9, 2);
+        }
+        //console.log/(langParam);
+
+        var language = (langParam != null ? langParam : this.$i18n.locale);
+        this.$i18n.locale = language;
+    },
 };
 </script>
 
