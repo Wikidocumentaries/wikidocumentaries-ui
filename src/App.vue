@@ -8,16 +8,12 @@
 export default {
     name: "App",
     created () {
-        //console.log(window.location);
-        var langParam = null;
-        var langParamIndex = window.location.search.indexOf('language');
-        if (langParamIndex != -1) {
-            langParam = window.location.search.substr(langParamIndex + 9, 2);
-        }
-        //console.log/(langParam);
+        var langParamMatch = window.location.search.match(/(\?|&)language=([^&]*)/);
+        var langParam = langParamMatch && langParamMatch[2] && decodeURIComponent(langParamMatch[2].replace(/\+/g, ' '));
 
-        var language = (langParam != null ? langParam : this.$i18n.locale);
-        this.$i18n.locale = language;
+        if (langParam) {
+            this.$i18n.locale = langParam.split('-')[0];
+        }
     },
 };
 </script>
