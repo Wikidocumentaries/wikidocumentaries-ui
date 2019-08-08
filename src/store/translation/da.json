@@ -113,6 +113,10 @@
 		},
 		"Events": {
 			"headerTitle": "Hændelser",
+			"displayMenu": {
+				"optionShowTimeline": "Vis begivenheder på en tidslinje",
+				"optionShowList": "Vis begivenheder som en liste"
+			},
 			"optionsMenu": {
 				"optionWorks": "Vis værker",
 				"subRelatedPeopleConf": {
