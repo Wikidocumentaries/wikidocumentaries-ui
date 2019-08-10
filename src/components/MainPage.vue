@@ -1,23 +1,7 @@
 <template>
      <div class="main-page">
+         <MainToolBar></MainToolBar>
          <div v-if="wikidocumentariesDataState == WIKI.STATES.READY || wikidocumentariesDataState == WIKI.STATES.LOADING_IMAGES_EXTERNAL" class="main-content">
-            <div class="stripe">
-                <div class="yellow"></div>
-                <div class="orange"></div>
-                <div class="red"></div>
-                <div class="purple"></div>
-                <div class="turquoise"></div>
-                <div class="green"></div>
-            </div>
-             <div id="main-toolbar" class="main-toolbar">
-                <div class="left-align">
-                    <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
-                </div>
-                <div class="right-align">
-                    <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <UILanguageMenu class="language-menu"></UILanguageMenu>
-                </div>
-            </div>
           <component
               v-bind:is="currentTabComponentName"
               class="tab">
@@ -38,11 +22,10 @@ import store from '@/store/store'
 import WIKI from '../store/constants'
 
 import TopicPage from '@/components/topic_page/HomePage'
+import MainToolBar from '@/components/menu/MainToolbar'
 import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
 import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
-import TopicSearchBox from '@/components/TopicSearchBox'
-import UILanguageMenu from '@/components/menu/UILanguageMenu'
 
 export default {
     name: 'MainPage',
@@ -70,8 +53,7 @@ export default {
         MapPlaceMatchPage,
         MapSearchPage,
         WaitPage,
-        UILanguageMenu,
-        TopicSearchBox
+        MainToolBar
     },
     beforeRouteEnter (to, from, next) {
         //console.log(to);
@@ -108,13 +90,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.stripe {
-    flex: 1 0 100%;
-    height: 18px;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 .main-button {
     font-weight: bold;
     font-size: 16pt;
@@ -150,36 +125,4 @@ a.main-button:hover {
     /*border: 1px solid #ccc;*/
     padding: 0px;
 }
-
-.main-toolbar {
-    display: -ms-flexbox;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-/*. main-toolbar-buttons {
-     flex: 1 1 60%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 60%;
-    -ms-flex-item-align: end;
-    margin-left: 25px;
-   font-size: 22px;
-    font-weight: bold;
-} */
-
-.topic-search-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.language-bar {
-    flex: 1 1 180px;
-    margin-left: 20px;
-    align-self: flex-end;
-    background-color: gray;
-}
-
 </style>
