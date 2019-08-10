@@ -38,8 +38,6 @@ import store from '@/store/store'
 import WIKI from '../store/constants'
 
 import TopicPage from '@/components/topic_page/HomePage'
-import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
-import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import TopicSearchBox from '@/components/TopicSearchBox'
 import UILanguageMenu from '@/components/menu/UILanguageMenu'
@@ -67,8 +65,6 @@ export default {
     },
     components: {
         TopicPage,
-        MapPlaceMatchPage,
-        MapSearchPage,
         WaitPage,
         UILanguageMenu,
         TopicSearchBox
