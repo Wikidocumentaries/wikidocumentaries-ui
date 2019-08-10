@@ -279,6 +279,7 @@ export default {
 .cover {
   width: 100%;
   height: calc(100vh - 63px);
+  position: relative;
 }
 
 .cover-image {
