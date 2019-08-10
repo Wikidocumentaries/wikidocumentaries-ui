@@ -306,4 +306,70 @@ a.search-icon:hover {
   background: var(--main-txt-color);
   color: white;
 }
+
+.data-select {
+  display: block;
+  background: var(--main-red);
+  color: white;
+  padding: 0 7px;
+  border-radius: 1em;
+  line-height: 1.25;
+  cursor: pointer;
+  margin-right: 3px;
+  /* transition: background 80ms ease-in, color 80ms ease-in; */
+}
+
+.data-button {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 7px;
+  background: var(--main-dimmed);
+  color: white;
+  padding: 0 7px;
+  border-radius: 1em;
+  line-height: 1.25;
+  cursor: pointer;
+}
+
+.data-select::after {
+  font-family: "WikiFont-Glyphs";
+  font-weight: 400;
+  content: " \e061";
+  font-size: 0.7em;
+}
+
+.data-select:hover,
+.ner:hover,
+.data-button:hover,
+.key > .data-select:hover,
+.action > .data-select:hover {
+  background: black;
+  /* border-radius: 0;*/
+  color: white;
+  box-shadow: none;
+}
+
+.active-term {
+  background: var(--main-txt-color);
+  border-radius: 0;
+}
+
+.action,
+.action > .data-select {
+  color: #999;
+  background: white;
+}
+
+.key > .data-select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  background: var(--main-dimmed);
+  margin-right: 1px;
+}
+
+.value > .data-select {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
 </style>

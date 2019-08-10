@@ -53,9 +53,6 @@ body {
   height: 100%;
 }
 
-.main-page {
-}
-
 a.external.text {
   padding-left: 0px;
 }
@@ -110,11 +107,6 @@ a:hover {
   margin: 3px 0.2em 0 0;
   position: relative;
   /*cursor: pointer;*/
-}
-
-.sub {
-  font-size: var(--subsubtitle-font-size);
-  margin-top: 1em;
 }
 
 .title::first-letter,
@@ -194,20 +186,8 @@ a:hover {
   color: #333;
 }
 
-.neg > a > i {
-  color: white;
-}
-
-.neg:hover > a > i {
-  color: var(--main-txt-color);
-}
-
 .toolbar-item:hover {
   background: var(--main-txt-color);
-}
-
-.neg:hover {
-  background: white;
 }
 
 .toolbar-item:hover .tooltip {
@@ -254,11 +234,6 @@ a:hover {
   outline: none;
 }
 
-.toolbar-link {
-  flex-grow: 10;
-  text-align: right;
-}
-
 .header {
   display: flex;
 }
@@ -267,23 +242,6 @@ a:hover {
   flex-grow: 90;
   font-size: 1.5em;
   text-transform: uppercase;
-}
-
-.header-link {
-  flex-grow: 10;
-  text-align: right;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.header-link a {
-  color: var(--main-txt-color);
-}
-
-.header-link a:hover {
-  box-shadow: none;
-  outline: none;
 }
 
 .yellow {
@@ -448,16 +406,6 @@ i.wikiglyph {
   font-size: 24px;
 }
 
-.noprint {
-  background-color: white !important;
-  color: #333;
-  font-size: 95%;
-  padding-left: 10px !important;
-  margin-bottom: 1em !important;
-  border: none !important;
-  border-left: 10px solid var(--main-yellow) !important;
-}
-
 .thumb-image-header {
   position: absolute;
   display: flex;
@@ -590,159 +538,13 @@ i.wikiglyph {
   padding-bottom: 3px;
 }
 
-.data-select {
-  display: block;
-  background: var(--main-red);
-  color: white;
-  padding: 0 7px;
-  border-radius: 1em;
-  line-height: 1.25;
-  cursor: pointer;
-  margin-right: 3px;
-  /* transition: background 80ms ease-in, color 80ms ease-in; */
-}
-
-.data-button {
-  display: inline-block;
-  position: absolute;
-  right: 0;
-  margin: 7px;
-  background: var(--main-dimmed);
-  color: white;
-  padding: 0 7px;
-  border-radius: 1em;
-  line-height: 1.25;
-  cursor: pointer;
-}
-
-.data-select::after {
-  font-family: "WikiFont-Glyphs";
-  font-weight: 400;
-  content: " \e061";
-  font-size: 0.7em;
-}
-
-.data-select:hover,
-.ner:hover,
-.data-button:hover,
-.key > .data-select:hover,
-.action > .data-select:hover {
-  background: black;
-  /* border-radius: 0;*/
-  color: white;
-  box-shadow: none;
-}
-
-.unedited {
-  color: var(--main-red);
-}
-
-.unedited:hover {
-  color: black;
-  cursor: pointer;
-}
-
-.linked {
-  color: var(--main-link-color);
-  background: white;
-}
-
-.action,
-.action > .data-select {
-  color: #999;
-  background: white;
-}
-
-.active-term {
-  background: var(--main-txt-color);
-  border-radius: 0;
-}
-
-.block {
-  display: inline-block;
-}
-
 .intro {
   padding: 0 20px 10px 20px;
   color: var(--main-dimmed);
 }
 
-.key > .data-select {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  background: var(--main-dimmed);
-  margin-right: 1px;
-}
-
-.value > .data-select {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
 .compound {
   display: inline-flex;
-}
-
-.lds-heart {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  transform: rotate(45deg);
-  transform-origin: 32px 32px;
-}
-.lds-heart div {
-  top: 23px;
-  left: 19px;
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  background: var(--main-red);
-  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-.lds-heart div:after,
-.lds-heart div:before {
-  content: " ";
-  position: absolute;
-  display: block;
-  width: 26px;
-  height: 26px;
-  background: var(--main-red);
-}
-.lds-heart div:before {
-  left: -17px;
-  border-radius: 50% 0 0 50%;
-}
-.lds-heart div:after {
-  top: -17px;
-  border-radius: 50% 50% 0 0;
-}
-@keyframes lds-heart {
-  0% {
-    transform: scale(0.95);
-  }
-  5% {
-    transform: scale(1.1);
-  }
-  39% {
-    transform: scale(0.85);
-  }
-  45% {
-    transform: scale(1);
-  }
-  60% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
-
-.header-coa {
-  position: absolute;
-  right: 0;
-  height: 35%;
-  margin: 20px;
 }
 
 .bottomshade {
@@ -760,28 +562,11 @@ i.wikiglyph {
   padding-top: 35px;
 }
 
-.noshade {
-  position: absolute;
-  width: 100%;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  padding-top: 35px;
-}
-
 .titlebox {
   position: relative;
   color: #fff;
   margin: 0 20px;
   bottom: 20px;
-}
-
-.line {
-  display: flex;
-}
-
-.line-type {
-  margin-right: 3px;
 }
 
 .info-cubes {
