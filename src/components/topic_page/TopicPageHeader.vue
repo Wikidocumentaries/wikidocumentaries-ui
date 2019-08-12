@@ -176,4 +176,20 @@ export default {
     font-size: 1.7em;
     margin-left: 0.1em;
 }
+
+.noshade {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-top: 35px;
+}
+
+.header-coa {
+  position: absolute;
+  right: 0;
+  height: 35%;
+  margin: 20px;
+}
 </style>
