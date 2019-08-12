@@ -208,7 +208,6 @@
 </template>
 
 <script>
-import LanguageBar from "@/components/LanguageBar";
 // import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 import MainToolBar from "@/components/menu/MainToolbar";
 
@@ -235,7 +234,7 @@ export default {
     //     },
   },
   components: {
-    LanguageBar,
+    TopicSearchBox,
     // WikimapsWarperLayer,
     MainToolBar
   },
@@ -277,6 +276,7 @@ export default {
 .cover {
   width: 100%;
   height: calc(100vh - 63px);
+  position: relative;
 }
 
 .cover-image {
@@ -320,5 +320,10 @@ export default {
 
 .grey {
   background: var(--main-modal-color);
+}
+
+.sub {
+  font-size: var(--subsubtitle-font-size);
+  margin-top: 1em;
 }
 </style>

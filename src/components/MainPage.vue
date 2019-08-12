@@ -22,9 +22,6 @@ import store from '@/store/store'
 import WIKI from '../store/constants'
 
 import TopicPage from '@/components/topic_page/HomePage'
-import MainToolBar from '@/components/menu/MainToolbar'
-import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
-import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 
 export default {
@@ -50,8 +47,6 @@ export default {
     },
     components: {
         TopicPage,
-        MapPlaceMatchPage,
-        MapSearchPage,
         WaitPage,
         MainToolBar
     },

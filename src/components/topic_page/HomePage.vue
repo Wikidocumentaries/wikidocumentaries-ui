@@ -16,7 +16,6 @@
         </div>
       </div>
     </div>
-    <!-- <SampoGallery></SampoGallery> -->
     <Locations id="locations"></Locations>
     <Parts id="parts"></Parts>
     <Works id="works"></Works>
@@ -31,7 +30,6 @@
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
     ></TopicImages>
-    <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
     <Footer></Footer>
   </div>
 </template>
@@ -43,7 +41,6 @@ import WikidataItem from "@/components/topic_page/Wikidata";
 import TopicMap from "@/components/topic_page/TopicMap";
 import TopicImages from "@/components/topic_page/TopicImages";
 import TopicTimeline from "@/components/topic_page/TopicTimeline";
-// import SampoGallery from '@/components/topic_page/SampoGallery'
 import EventList from "@/components/topic_page/EventList";
 import Works from "@/components/topic_page/Works";
 import People from "@/components/topic_page/People";
@@ -70,7 +67,6 @@ export default {
     TopicMap,
     TopicImages,
     TopicTimeline,
-    // SampoGallery,
     EventList,
     Works,
     People,
@@ -80,7 +76,6 @@ export default {
     Footer,
     Parts,
     Affiliations
-    //TopicNewspapers
   },
   computed: {},
   mounted: {
