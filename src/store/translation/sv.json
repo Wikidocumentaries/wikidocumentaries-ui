@@ -3,12 +3,36 @@
 		"authors": [
 			"Susannaanas",
 			"Abijeet Patro",
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Abbe98"
 		]
 	},
 	"LandingPage": {
 		"search": "Sök",
-		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne"
+		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne",
+		"searchInputSearchOnly": "Finn ett ämne",
+		"titleDescription": "Vad är Wikidocumentaries?",
+		"titleStatus": "Status",
+		"moreBelow": "Läs mer nedan",
+		"more": "Läs mer",
+		"moreLink": "Läs mer i",
+		"titleTopics": "Ämnen",
+		"titleMedia": "Media",
+		"titleTools": "Verktyg",
+		"titleLanguages": "Språk",
+		"titleTechnology": "Teknik",
+		"titleCreators": "Skapare",
+		"titleTeam": "Team",
+		"titlePartners": "Partners",
+		"titleBy": "Projekt av",
+		"getInvolved": "Engagera dig!",
+		"titleTranslate": "Översätt",
+		"titleContent": "Lägg till ditt innehåll",
+		"titleContact": "Kom i kontakt!",
+		"facebook": "Facebookgrupp",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "Blogg",
+		"email": "E-post"
 	},
 	"MainPage": {
 		"topicPageName": "Ämnesida",
@@ -47,6 +71,7 @@
 			"facetMenu": {
 				"time": "tid",
 				"map": "karta",
+				"people": "personer",
 				"places": "platser",
 				"topics": "ämnen",
 				"form": "formulär",
@@ -208,6 +233,12 @@
 		"Depicts": {
 			"headerTitle": "Skildrar"
 		},
+		"Parts": {
+			"headerTitle": "Delar"
+		},
+		"Affiliations": {
+			"headerTitle": "Anknytning"
+		},
 		"Works": {
 			"headerTitle": "Verk",
 			"sortMenuTitle": "Sortera",
@@ -266,6 +297,7 @@
 			"technique": "Teknik",
 			"addTechnique": "Lägg till en teknik",
 			"removeTechnique": "Ta bort tekniken",
+			"depicted": "Bilden avbildar",
 			"genre": "Genre",
 			"addGenre": "Lägg till genre",
 			"removeGenre": "Ta bort genre",
@@ -292,7 +324,7 @@
 			"measurements": "Mätningar",
 			"copyright": "Upphovsrätt",
 			"license": "Upphovsrättslicens",
-			"work": "Verk",
+			"work": "Verk representerat i bilden",
 			"photograph": "Fotografi",
 			"image": "Bild",
 			"photographer": "Fotograf",
@@ -368,6 +400,7 @@
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "OK",
 		"cancel": "Avbryt",
 		"helpText": "Hjälp",
