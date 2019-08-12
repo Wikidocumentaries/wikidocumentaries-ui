@@ -57,7 +57,7 @@
       <div
         :ref="'timelineExplanationMarker' + index"
         v-for="(item, index) in sortedTimelineItems"
-        :key="item.id + item.title + item.pos"
+        :key="item.id + item.title + item.pos + '-2'"
         class="timeline-explanation-connector marker"
       ></div>
     </div>
