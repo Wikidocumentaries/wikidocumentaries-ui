@@ -830,7 +830,7 @@ export default new Vuex.Store({
             state.shownImages = images;
         },
         setImagesShownOnTimeline(state, images) {
-            //console.log(images);
+            //console.log("setImagesShownOnTimeline");
             state.timelineImages = images;
         },
         setHistoricalMapSearchPageMap(state, map) {
@@ -996,7 +996,7 @@ export default new Vuex.Store({
                             context.commit('setWikidata', response.data.wikidata);
                             context.commit('setWikidocumentariesTopicTitle', response.data.wikidata.title);
                             context.commit('setWikidocumentariesTopicDescription', response.data.wikidata.description);
-                            console.log(response.data.wikidata.alternativeNames);
+                            //console.log(response.data.wikidata.statements);
                             var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
                             context.commit('setTopicStartYear', startYear);
 
@@ -1067,7 +1067,6 @@ export default new Vuex.Store({
                     }
                 };
 
-                //create search term, combine multiple with OR
                 if (params.wiki.wikidata != null) {
                     var statements = params.wiki.wikidata.statements;
                     const terms = new Set([requestConfig.params.topic]);
