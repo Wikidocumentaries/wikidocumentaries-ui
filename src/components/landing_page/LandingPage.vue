@@ -282,7 +282,7 @@ export default {
 
 .cover-image {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 63px);
   object-fit: cover;
 }
 
