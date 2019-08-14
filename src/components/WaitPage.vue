@@ -1,14 +1,5 @@
 <template>
   <div class="wait-page">
-    <!--div class="wait-image"><img src="/static/svgs/testimage.svg"></div-->
-    <div class="bars">
-      <div class="yellow"></div>
-      <div class="orange"></div>
-      <div class="red"></div>
-      <div class="purple"></div>
-      <div class="turquoise"></div>
-      <div class="green"></div>
-    </div>
     <div class="wait">
       <div class="lds-heart">
         <div></div>

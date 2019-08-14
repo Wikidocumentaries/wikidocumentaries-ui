@@ -209,7 +209,6 @@
 
 <script>
 // import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
-import TopicSearchBox from "@/components/TopicSearchBox";
 import MainToolBar from "@/components/menu/MainToolbar";
 
 export default {
