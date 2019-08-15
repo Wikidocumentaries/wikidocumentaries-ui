@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mirin"
+			"Mirin",
+			"Fitoschido"
 		]
 	},
 	"LandingPage": {
@@ -183,7 +184,7 @@
 			"languageMenuTitle": "Elekti lingvon",
 			"languageMenuTooltip": "Elekti vian lingvon",
 			"myLanguagesItem": "Miaj lingvoj",
-			"languageMenuTranslate": "Traduki anglen"
+			"languageMenuTranslate": "Traduki Esperanten"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traduki al via lingvo"

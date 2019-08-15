@@ -1,0 +1,182 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"LandingPage": {
+		"search": "Cerca",
+		"searchInputPlaceHolder": "Trobeu un tema o creeu-ne un de nou",
+		"searchInputSearchOnly": "Trobeu un tema",
+		"titleStatus": "Estat",
+		"titleMedia": "Multimèdia",
+		"titleTools": "Eines",
+		"titleLanguages": "Llengües",
+		"titleTechnology": "Tecnologia",
+		"titleCreators": "Creadors",
+		"titleTeam": "Equip",
+		"titleContact": "Poseu-vos en contacte!",
+		"facebook": "Grup al Facebook",
+		"blog": "Blog",
+		"email": "Correu electrònic",
+		"github": "Repositori al GitHub"
+	},
+	"topic_page": {
+		"TopicImages": {
+			"facetMenu": {
+				"people": "persones",
+				"places": "llocs",
+				"topics": "temes",
+				"imageSize": "mida de la imatge",
+				"type": "tipus de fitxer multimèdia",
+				"platform": "plataforma",
+				"source": "font"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Accions",
+				"menuTooltip": "Accions"
+			},
+			"imagesViewExternal": "Mostra la imatge original"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Línia temporal"
+		},
+		"Events": {
+			"headerTitle": "Esdeveniments",
+			"displayMenu": {
+				"menuTitle": "Opcions de visualització",
+				"menuTooltip": "Opcions de visualització",
+				"optionShowList": "Mostra els esdeveniments com a llista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opcions",
+				"optionWorks": "Mostra les obres",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configura"
+				},
+				"optionRelatedTopics": "Mostra els esdeveniments de temes relacionats"
+			}
+		},
+		"Wikidata": {
+			"headerTitle": "Dades",
+			"noTopicFoundText": "No s’ha trobat el tema"
+		},
+		"Wikipedia": {
+			"headerTitle": "Article"
+		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "Tipus",
+				"optionCity": "Ubicació"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeria",
+				"optionList": "Llista"
+			},
+			"showAll": "Tot"
+		},
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "Tipus"
+			},
+			"displayMenu": {
+				"tooltip": "Trieu la visualització",
+				"optionGallery": "Galeria",
+				"optionList": "Llista"
+			},
+			"showAll": "Tot"
+		},
+		"Parts": {
+			"headerTitle": "Parts"
+		},
+		"Works": {
+			"sortMenuTooltip": "Ordena els elements",
+			"sortMenuOptionAlpha": "Per ordre alfabètic",
+			"sortMenuOptionDist": "Per distància",
+			"facetMenuOptionType": "Tipus",
+			"facetMenuOptionColl": "Col·lecció",
+			"facetMenuOptionCity": "Ubicació",
+			"displayMenuTitle": "Mostra com a",
+			"displayMenuOptionGallery": "Galeria",
+			"displayMenuOptionList": "Llista",
+			"showAll": "Tot"
+		},
+		"People": {
+			"sortMenuTitle": "Ordena",
+			"sortMenuOptionBirth": "Per data de naixement",
+			"sortMenuOptionDeath": "Per data de defunció",
+			"sortMenuOptionLast": "Per cognom",
+			"facetMenuOptionProfession": "Professió",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Gènere"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Descripció",
+			"addDescription": "Afegeix una descripció",
+			"creatorUnknown": "Desconegut",
+			"dateCreated": "Data de creació",
+			"addDateCreated": "Afegeix la data de creació",
+			"format": "Format",
+			"addFormat": "Afegeix un format",
+			"technique": "Tècnica",
+			"addTechnique": "Afegeix una tècnica",
+			"genre": "Gènere",
+			"addGenre": "Afegeix un gènere",
+			"location": "Ubicació",
+			"locationMap": "Ubicació al mapa",
+			"addLocation": "Afegeix la ubicació",
+			"addPerson": "Afegeix una persona",
+			"event": "Esdeveniment",
+			"addEvent": "Afegeix un esdeveniment",
+			"institution": "Institució",
+			"collection": "Col·lecció",
+			"inventoryNumber": "Número d’inventari",
+			"inscriptions": "Inscripcions",
+			"measurements": "Mesures",
+			"copyright": "Drets d’autor",
+			"work": "Obra",
+			"photograph": "Fotografia",
+			"image": "Imatge",
+			"digitalCopy": "Còpia digital",
+			"platformId": "Identificador",
+			"imageDimensions": "Dimensions de la imatge",
+			"fileSize": "Mida del fitxer",
+			"fileFormat": "Format de fitxer",
+			"addData": "Afegeix dades"
+		},
+		"imageActions": {
+			"horizontal": "horitzontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Tanca el visualitzador"
+	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "Tipus",
+			"optionCity": "Ubicació"
+		},
+		"displayMenu": {
+			"optionGallery": "Galeria",
+			"optionList": "Llista"
+		}
+	},
+	"general": {
+		"ok": "D’acord",
+		"cancel": "Cancel·la",
+		"helpText": "Ajuda",
+		"menus": {
+			"actionMenuTitle": "Accions",
+			"actionMenuTooltip": "Accions",
+			"myLanguagesItem": "Les meves llengües",
+			"languageMenuTranslate": "Tradueix aquest article al català"
+		},
+		"languages": {
+			"fi": "Finès",
+			"en": "Anglès",
+			"sv": "Suec",
+			"es": "Castellà"
+		}
+	}
+}
