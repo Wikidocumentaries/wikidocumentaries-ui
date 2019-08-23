@@ -3,13 +3,15 @@
 		"authors": [
 			"Mirzali",
 			"Orbot707",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"1917 Ekim Devrimi"
 		]
 	},
 	"LandingPage": {
 		"search": "Cı geyre",
 		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze",
 		"searchInputSearchOnly": "Yew mewzu bıvêne",
+		"titleDescription": "Wikidocumentaries çıçiya?",
 		"titleStatus": "Weziyet",
 		"moreBelow": "Cêr tayêna bıwane",
 		"more": "Tayêna bıwane",
@@ -21,11 +23,14 @@
 		"titleTechnology": "Teknolociye",
 		"titleCreators": "Vıraştoği",
 		"titleTeam": "Taxım",
+		"titleThanks": "Pê teşekur xısusi ya",
 		"titlePartners": "Partneri",
+		"titleFunding": "Tewrê destegi ra",
 		"titleBy": "Proceyê êdê",
 		"getInvolved": "Tewr bê!",
 		"titleTranslate": "Açarnayış",
 		"titleContent": "Zerrekê ho dekerê",
+		"titleContact": "Şo irtibat",
 		"facebook": "Gruba Facebooki",
 		"wiki": "Wikidocumentaries wiki",
 		"blog": "Qeyd",
@@ -173,7 +178,9 @@
 		},
 		"Works": {
 			"sortMenuTitle": "Weçine",
+			"sortMenuOptionTime": "Gorey demi",
 			"sortMenuOptionAlpha": "Alfabetik",
+			"sortMenuOptionDist": "Gorey mesafey",
 			"facetMenuOptionType": "Babet",
 			"facetMenuOptionColl": "Koleksiyon",
 			"facetMenuOptionCity": "Lokasyon",
@@ -184,7 +191,11 @@
 		"People": {
 			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
 			"sortMenuTitle": "Weçine",
+			"sortMenuOptionBirth": "Gorey bıyayışi",
+			"sortMenuOptionDeath": "Gorey merdışi",
 			"sortMenuOptionName": "Ebe name ra",
+			"sortMenuOptionFirst": "Gorey namey",
+			"sortMenuOptionLast": "Gorey peynamey",
 			"facetMenuOptionProfession": "Mesleg",
 			"facetMenuOptionCountry": "Dewlete",
 			"facetMenuOptionCity": "Cınsiyet"
@@ -195,6 +206,9 @@
 			"caption": "Bınnuşte",
 			"description": "Şınasnayış",
 			"creator": "Vıraştoğ",
+			"creatorUnknown": "Nêzanaye",
+			"addCreator": "Vıraştoğ dekere",
+			"removeCreator": "Vıraştoği wedarne",
 			"publisher": "Weşanayoğ",
 			"genre": "Tewır",
 			"location": "Lokasyon",
