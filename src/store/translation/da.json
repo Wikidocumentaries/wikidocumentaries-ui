@@ -246,7 +246,10 @@
 			"removeGenre": "Fjern genre",
 			"addTopic": "Tilføj emne",
 			"removeTopic": "Fjern emne",
+			"location": "Placering",
 			"locationMap": "Placering på kortet",
+			"addLocation": "Tilføj placering",
+			"removeLocation": "Fjern placering",
 			"addPerson": "Tilføj person",
 			"removePerson": "Fjern person",
 			"event": "Begivenhed",
@@ -281,6 +284,7 @@
 	},
 	"menus": {
 		"sortMenu": {
+			"title": "Sorter emner",
 			"tooltip": "Sorter emner",
 			"optionTime": "Efter tid",
 			"optionAlpha": "Alfabetisk",
