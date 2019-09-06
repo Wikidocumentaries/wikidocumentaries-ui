@@ -39,7 +39,7 @@
 		"wiki": "Wikidocumentales",
 		"blog": "Blog",
 		"email": "Email",
-		"github": "Repositorio Github"
+		"github": "Repositorio de GitHub"
 	},
 	"MainPage": {
 		"topicPageName": "Página del tema",
@@ -54,7 +54,7 @@
 	"topic_page": {
 		"BaseMapDialog": {
 			"chooseMapTitle": "Elige uno o varios mapas históricos de base",
-			"chooseMapHelpNote": "Tip: ctrl+click permite seleccionar varios mapas",
+			"chooseMapHelpNote": "Consejo: Ctrl + clic permite seleccionar varios mapas",
 			"yearAbbreviation": "a."
 		},
 		"Header": {
@@ -93,7 +93,7 @@
 			"imagesActionMenu": {
 				"menuTitle": "Acciones",
 				"menuTooltip": "Acciones",
-				"doGeolocatingText": "Set the location...",
+				"doGeolocatingText": "Establecer la ubicación…",
 				"showImageText": "Mostrar imágen",
 				"selectFeatured": "Seleccionar como imagen de cabecera"
 			},
@@ -178,12 +178,12 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leer el artículo en otra lengua",
-				"translateArticleText": "Traducir este artículo a español",
+				"translateArticleText": "Traducir este artículo al español",
 				"otherLanguagestext": "Otros idiomas"
 			}
 		},
 		"Locations": {
-			"headerTitle": "Ubicaciones",
+			"headerTitle": "En esta ubicación",
 			"sortMenu": {
 				"title": "Ordenar ubicaciones",
 				"tooltip": "Ordenar ubicaciones",
@@ -289,7 +289,7 @@
 			"inventoryNumber": "Número de inventario",
 			"measurements": "Medidas",
 			"copyright": "Derechos de autor",
-			"work": "Obra",
+			"work": "Obra representada en la imagen",
 			"photograph": "Fotografía",
 			"digitalCopy": "Copia digitar",
 			"platformId": "Identificador",
@@ -320,7 +320,7 @@
 			"headerTitle": "Buscar mapas históricos",
 			"filterBySourceMenuText": "Filtrar por fuente...",
 			"filterByTimeMenuText": "Filtrar por fecha...",
-			"filterByMapMenuText": "Filtrar por mapa..."
+			"filterByMapMenuText": "Filtrar mediante mapa…"
 		}
 	},
 	"openlayersplugin": {
