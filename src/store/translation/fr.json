@@ -5,7 +5,8 @@
 			"Wladek92",
 			"Abijeet Patro",
 			"Trizek (WMF)",
-			"VIGNERON"
+			"VIGNERON",
+			"Urhixidur"
 		]
 	},
 	"LandingPage": {
@@ -25,7 +26,7 @@
 		"titleMedia": "Média",
 		"statusMedia": "Le média est actuellement lu depuis Finna.fi, Flickr et Wikimédia Commons. Nous travaillons pour trouver des images plus précises et afficher plus de métadonnées, et des meilleures, depuis chaque source. De nouvelles sources de médias sont les bienvenues !",
 		"titleTools": "Outils",
-		"statusTools": "Wikidocumentaries a des tâches et des outils pour travailler sur le contenu. Les articles peuvent être déjà traduits en diverses langues avec l'outil de traduction. Nous préparons un système de mots-clés basé sur Wikidata et un outil de balisage géographique pour les images. De nouveaux outils amusants et utiles peuvent être créés ou intégrés.",
+		"statusTools": "Wikidocumentaries a des tâches et des outils pour travailler sur le contenu. Les articles peuvent être déjà traduits en diverses langues avec l’outil de traduction. Nous préparons un système de mots-clés basé sur Wikidata et un outil de géolocalisation pour les images. De nouveaux outils amusants et utiles peuvent être créés ou intégrés.",
 		"titleLanguages": "Langues",
 		"statusLanguages": "Wikidocumentaries peut être parcouru dans toute langue disponible sur Wikidata. C’est une grande opportunité pour les langues plus rares. Les traductions sont faites dans TranslateWiki.",
 		"titleTechnology": "Technologie",
