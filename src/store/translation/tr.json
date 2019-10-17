@@ -4,7 +4,8 @@
 			"Hedda",
 			"Abijeet Patro",
 			"Mirzali",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Grkn gll"
 		]
 	},
 	"LandingPage": {
@@ -62,7 +63,7 @@
 	"topic_page": {
 		"BaseMapDialog": {
 			"chooseMapTitle": "Tarihsel harita seç",
-			"chooseMapHelpNote": "İpucu: ctrl+click birçok harita seçmenize izin verir",
+			"chooseMapHelpNote": "İpucu: ctrl+tıklama birçok harita seçmenize izin verir",
 			"yearAbbreviation": "y."
 		},
 		"Header": {
@@ -89,8 +90,8 @@
 				"time": "zaman",
 				"map": "harita",
 				"people": "İnsanlar",
-				"places": "Yerler",
-				"topics": "Konular",
+				"places": "yerler",
+				"topics": "konular",
 				"form": "form",
 				"imageSize": "resim boyutu",
 				"large": "büyük",
