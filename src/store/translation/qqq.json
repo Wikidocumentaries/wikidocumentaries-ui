@@ -9,7 +9,18 @@
 	"LandingPage": {
 		"search": "Search button text, currently not in use\n{{Identical|Search}}",
 		"searchInputPlaceHolder": "Search input field placeholder text",
+		"searchInputSearchOnly": "Placeholder text in the search box",
+		"intro": "The subtitle of the front page",
+		"titleDescription": "Subheading in the introductory section",
+		"description": "The text under the subheading \"What is Wikidocumentaries?\" in the introductory section",
+		"titleStatus": "Subheading in the introductory section",
+		"status": "The text under the subheading \"Status\" in the introductory section",
+		"titleTopics": "Subheading in the subsection \"Status\" in the introductory section",
+		"statusTopics": "The text under the subheading \"Topics\" in the subsection \"Status\" in the introductory section",
+		"titleMedia": "Subheading in the subsection \"Status\" in the introductory section",
+		"titleTools": "Subheading in the subsection \"Status\" in the introductory section",
 		"titleLanguages": "{{Identical|Language}}",
+		"titleTechnology": "Subheading in the subsection \"Status\" in the introductory section",
 		"email": "{{Identical|Email}}"
 	},
 	"MainPage": {

@@ -83,7 +83,7 @@
 				"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
 				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
 				"selectPortraits": "Sélectionner les portraits de bonne qualité de cette personne",
-				"arrangeByTime": "Classer les images selon l’heure",
+				"arrangeByTime": "Classer les images chronologiquement",
 				"selectWorks": "Sélectionner les images de travaux"
 			},
 			"facetMenu": {
