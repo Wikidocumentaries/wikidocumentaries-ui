@@ -14,7 +14,7 @@
         "titleTopics": "Topics",
         "statusTopics": "Topics are read from Wikidata. New topics may later be created in Wikidocumentaries instead, if the content is out of scope for Wikidata. It will still be equally possible to describe the topic with the rich options of Wikidata. Current articles are from Wikipedia, whereas articles can later be created locally for topics that exist in Wikidocumentaries only.",
         "titleMedia": "Media",
-        "statusMedia": "Media is currently read from Finna.fi, Flickr and Wikimedia Commons. We are working on finding images more accurately and displaying more and better metadata from each of the sources. New media sources are welcome!",
+        "statusMedia": "Media is read from a growing number of media repositories serving openly licensed media files. We are working on finding images more accurately and displaying more and better metadata from each of the sources. New media sources are welcome!",
         "titleTools": "Tools",
         "statusTools": "Wikidocumentaries has tasks and tools for working with the content. Articles can already be translated between languages with the Content Translation tool. We are preparing keywording with Wikidata and a geotagging tool for image locations. New fun and useful tools can be created or integrated.",
         "titleLanguages": "Languages",

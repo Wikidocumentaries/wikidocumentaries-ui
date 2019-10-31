@@ -3,6 +3,7 @@ export {default as fi} from './translation/fi.json';
 export {default as sv} from './translation/sv.json';
 export {default as es} from './translation/es.json';
 export {default as ar} from './translation/ar.json';
+export {default as bn} from './translation/bn.json';
 export {default as da} from './translation/da.json';
 export {default as de} from './translation/de.json';
 export {default as diq} from './translation/diq.json';
