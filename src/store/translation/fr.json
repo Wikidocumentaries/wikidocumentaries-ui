@@ -25,7 +25,7 @@
 		"titleTopics": "Sujets",
 		"statusTopics": "Les sujets sont lus depuis Wikidata. De nouveaux sujets pourront être créés ultérieurement plutôt dans Wikidocumentaries, si le contenu sort du périmètre de Wikidata. Il sera aussi possible de décrire le sujet avec la richesse d’options de Wikidata. Les articles actuels viennent de Wikidata, bien que des articles puissent plus tard être créés localement pour des sujets qui n’existent que dans Wikidocumentaries.",
 		"titleMedia": "Média",
-		"statusMedia": "Le média est actuellement lu depuis Finna.fi, Flickr et Wikimédia Commons. Nous travaillons pour trouver des images plus précises et afficher des métadonnées meilleures et plus nombreuses, depuis chacune des sources. De nouvelles sources de médias sont les bienvenues !",
+		"statusMedia": "Le média est lu depuis un nombre croissant de dépôts qui diffusent des fichiers média sous licence ouverte. Nous travaillons pour trouver des images plus précises et afficher des métadonnées meilleures et plus nombreuses, depuis chacune des sources. De nouvelles sources de médias sont les bienvenues !",
 		"titleTools": "Outils",
 		"statusTools": "Wikidocumentaries a des tâches et des outils pour travailler sur le contenu. Les articles peuvent être déjà traduits en diverses langues avec l’outil de traduction. Nous préparons un système de mots-clés basé sur Wikidata et un outil de géolocalisation pour les images. De nouveaux outils amusants et utiles peuvent être créés ou intégrés.",
 		"titleLanguages": "Langues",
