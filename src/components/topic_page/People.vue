@@ -100,22 +100,22 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
       { 
         ?out wikibase:directClaim ?rel_out .
         ?person ?rel_out wd:Q314595 .
-        ?out rdfs:label ?outLabel .
-        FILTER(LANG(?outLabel)="fi")
+        ?out rdfs:label ?outLabel_ .
+        FILTER(LANG(?outLabel_)="fi")
       }
       UNION
       { 
         ?in wikibase:directClaim ?rel_in .
         wd:Q314595 ?rel_in ?person .
-        ?in rdfs:label ?inLabel .
-        FILTER(LANG(?inLabel)="fi")
+        ?in rdfs:label ?inLabel_ .
+        FILTER(LANG(?inLabel_)="fi")
       }
     }
     OPTIONAL { ?person wdt:P18 ?image. }
@@ -127,8 +127,8 @@ SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CO
     OPTIONAL { ?person wdt:P570 ?death.
               BIND(STR(YEAR(?death)) AS ?death_year)}
     OPTIONAL { ?person wdt:P106 ?profession.
-              ?profession rdfs:label ?professionLabel .
-              FILTER(LANG(?professionLabel)="fi") }
+              ?profession rdfs:label ?professionLabel_ .
+              FILTER(LANG(?professionLabel_)="fi") }
     OPTIONAL { ?person wdt:P27 ?country.
               ?country wdt:P1549 ?nationality .
               FILTER(LANG(?nationality)="fi") }
