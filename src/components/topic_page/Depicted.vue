@@ -92,7 +92,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=", ") as ?creatorLabel) (sample(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time; separator="/") AS ?time) (GROUP_CONCAT(DISTINCT ?typeLabel; separator=", ") as ?typeLabel) WHERE {
+SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) (sample(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") AS ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) WHERE {
   {
       {
         ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q72 .
@@ -105,15 +105,15 @@ SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=
     OPTIONAL { ?pi wdt:P1647* wd:P170 .
               ?pi wikibase:directClaim ?p .
               ?depicted ?p ?creator. 
-              ?creator rdfs:label ?creatorLabel .
-              FILTER(LANG(?creatorLabel)="fi") }
+              ?creator rdfs:label ?creatorLabel_ .
+              FILTER(LANG(?creatorLabel_)="fi") }
     OPTIONAL { ?depicted wdt:P18 ?image. }
     OPTIONAL { ?depicted wdt:P31 ?type.  
-             ?type rdfs:label ?typeLabel .
-              FILTER(LANG(?typeLabel)="fi") }
+             ?type rdfs:label ?typeLabel_ .
+              FILTER(LANG(?typeLabel_)="fi") }
     OPTIONAL { ?depicted wdt:P571 ?creation_date. }
     OPTIONAL { ?depicted wdt:P577 ?publishing_date. }
-		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time_)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
 GROUP BY ?depicted ?depictedLabel

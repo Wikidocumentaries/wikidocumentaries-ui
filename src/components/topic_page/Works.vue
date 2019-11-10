@@ -97,17 +97,17 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel) as ?municipalityLabel) WHERE {
+SELECT ?work ?workLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel_) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address_) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel_) as ?municipalityLabel) WHERE {
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
     ?work ?p wd:Q216904.
     OPTIONAL { ?work wdt:P18 ?image. }
     OPTIONAL { ?work wdt:P31 ?type. 
-             ?type rdfs:label ?typeLabel .
-              FILTER(LANG(?typeLabel)="fi") }
+             ?type rdfs:label ?typeLabel_ .
+              FILTER(LANG(?typeLabel_)="fi") }
     OPTIONAL { ?work wdt:P195 ?collection. 
-             ?collection rdfs:label ?collectionLabel .
-              FILTER(LANG(?collectionLabel)="fi") }
+             ?collection rdfs:label ?collectionLabel_ .
+              FILTER(LANG(?collectionLabel_)="fi") }
     OPTIONAL { ?work wdt:P571 ?creation_date. }
     OPTIONAL { ?work wdt:P577 ?publishing_date. }
     OPTIONAL { ?work wdt:P6216 ?copyright.
@@ -117,13 +117,15 @@ SELECT ?work ?workLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time;
              ?publisher rdfs:label ?publisherLabel .
               FILTER(LANG(?publisherLabel)="fi") }
     OPTIONAL { ?work wdt:P625 ?coordinates. }
-    OPTIONAL { ?work wdt:P6375 ?address. }
+    OPTIONAL { ?work wdt:P6375 ?address_. }
     OPTIONAL { ?work wdt:P131* ?municipality.
-              ?municipality (wdt:P31/wdt:P279) wd:Q13221722. }
-		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
+              ?municipality (wdt:P31/wdt:P279) wd:Q13221722. 
+              ?municipality rdfs:label ?municipalityLabel_ .
+              FILTER(LANG(?municipalityLabel)="fi") }
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time_)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
 }
-GROUP BY ?work ?workLabel ?time
+GROUP BY ?work ?workLabel
 LIMIT 1000
         `.replace(/Q216904/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);

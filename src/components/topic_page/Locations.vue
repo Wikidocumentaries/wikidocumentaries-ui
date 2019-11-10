@@ -103,20 +103,20 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?typeLabel; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel; separator=", ") as ?creatorLabel) WHERE {
+SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   ?pi wdt:P1647* wd:P276 .
   ?pi wikibase:directClaim ?p .
   ?location ?p wd:Q1772186.
   OPTIONAL { ?location wdt:P31 ?type .
-            ?type rdfs:label ?typeLabel .
-              FILTER(LANG(?typeLabel)="fi") }
+            ?type rdfs:label ?typeLabel_ .
+              FILTER(LANG(?typeLabel_)="fi") }
   OPTIONAL { ?location wdt:P18 ?image. }
   OPTIONAL { ?location wdt:P6375 ?address. }
   OPTIONAL { ?location wdt:P571 ?date.
            BIND(STR(YEAR(?date)) AS ?dated)}
   OPTIONAL { ?location wdt:P170|wdt:P84 ?creator.
-           ?creator rdfs:label ?creatorLabel.
-           FILTER(LANG(?creatorLabel)="fi")}
+           ?creator rdfs:label ?creatorLabel_ .
+           FILTER(LANG(?creatorLabel_)="fi")}
   MINUS { ?location wdt:P31 wd:Q5 .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
 }
