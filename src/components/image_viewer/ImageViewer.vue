@@ -1180,15 +1180,6 @@ export default {
   font-size: 0.7em;
 } */
 
-.unedited {
-  color: var(--main-red);
-}
-
-.unedited:hover {
-  color: black;
-  cursor: pointer;
-}
-
 .tool-main {
   display: flex;
   height: calc(100vh - 40px);
@@ -1278,25 +1269,5 @@ export default {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
-
-.line {
-  display: flex;
-}
-
-.line-type {
-  margin-right: 3px;
-}
-
-.neg > a > i {
-  color: white;
-}
-
-.neg:hover > a > i {
-  color: var(--main-txt-color);
-}
-
-.neg:hover {
-  background: white;
 }
 </style>

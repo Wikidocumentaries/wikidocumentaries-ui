@@ -322,9 +322,4 @@ export default {
 .grey {
   background: var(--main-modal-color);
 }
-
-.sub {
-  font-size: var(--subsubtitle-font-size);
-  margin-top: 1em;
-}
 </style>
