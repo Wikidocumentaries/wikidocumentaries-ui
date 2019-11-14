@@ -1,0 +1,150 @@
+{
+	"@metadata": {
+		"authors": [
+			"A Chinese Wikipedian",
+			"A Retired User",
+			"沈澄心",
+			"科劳"
+		]
+	},
+	"LandingPage": {
+		"search": "搜索",
+		"searchInputSearchOnly": "寻找主题",
+		"titleDescription": "什么是维基纪录片？",
+		"titleStatus": "状态",
+		"status": "本站点尚在试运行。请注意，某些功能暂时不可用，页面可能无法正常运行。",
+		"more": "阅读更多",
+		"titleTopics": "主题",
+		"titleMedia": "媒体",
+		"titleTools": "工具",
+		"titleLanguages": "语言",
+		"titleTechnology": "技术",
+		"titleCreators": "创建者",
+		"titleTeam": "学期",
+		"titlePartners": "合作伙伴",
+		"getInvolved": "参与！",
+		"titleTranslate": "翻译",
+		"facebook": "脸谱组",
+		"blog": "博客",
+		"email": "邮箱",
+		"github": "Github代码池"
+	},
+	"MainPage": {
+		"wikiTopicErrorMessage": "在当前语言中找不到该主题的维基百科页面，或者发生了其他意外错误。"
+	},
+	"WaitPage": {
+		"waitMessage": "请稍等；五湖四海的数据正鱼贯而出维基百科、维基数据、维基媒体公共领域、MapWarper，Finna，Flickr……"
+	},
+	"topic_page": {
+		"TopicImages": {
+			"facetMenu": {
+				"time": "时间",
+				"map": "地图",
+				"people": "人物",
+				"places": "地区",
+				"topics": "主题",
+				"form": "型",
+				"imageSize": "图像大小",
+				"large": "大",
+				"medium": "中等",
+				"small": "小号",
+				"type": "媒体类型",
+				"creator": "内容作者",
+				"platform": "车站",
+				"source": "源"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "选项",
+				"menuTooltip": "选项"
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "时间轴"
+		},
+		"Events": {
+			"headerTitle": "重要事件",
+			"displayMenu": {
+				"menuTitle": "显示选项",
+				"menuTooltip": "显示选项"
+			},
+			"optionsMenu": {
+				"menuTitle": "选择"
+			}
+		},
+		"Wikipedia": {
+			"missingArticleChoose": "您可以从上面的“语言”菜单中选择另一种可用语言阅读文章，或者单击加号图标以您的语言创建文章。",
+			"missingArticleCreate": "您可以点击加号图标用您的语言创建这篇文章。",
+			"languageMenu": {
+				"otherLanguagestext": "其他语言"
+			}
+		},
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "样式"
+			},
+			"displayMenu": {
+				"optionGallery": "略图排列",
+				"optionList": "列表"
+			}
+		},
+		"Works": {
+			"facetMenuOptionCity": "地方",
+			"displayMenuTitle": "显示到",
+			"displayMenuTooltip": "选择显示器"
+		},
+		"People": {
+			"facetMenuOptionProfession": "职业",
+			"facetMenuOptionCountry": "国家",
+			"facetMenuOptionCity": "性别"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "说明文字",
+			"addCaption": "添加说明文字",
+			"description": "描述",
+			"addDescription": "添加描述",
+			"creatorUnknown": "未知",
+			"publisher": "发布者",
+			"format": "格式",
+			"event": "事件",
+			"institution": "学院",
+			"collection": "收藏",
+			"copyright": "版权所有",
+			"photograph": "照片",
+			"image": "图片",
+			"photographer": "摄影师",
+			"platformId": "编号",
+			"remove": "删除"
+		},
+		"imageActions": {
+			"flip": "翻转",
+			"horizontal": "水平",
+			"vertical": "垂直"
+		},
+		"closeViewer": "关闭绘画器"
+	},
+	"menus": {
+		"sortMenu": {
+			"tooltip": "排序主题",
+			"optionTitleAlpha": "标题按字母顺序排列",
+			"optionClear": "清晰排序"
+		},
+		"facetMenu": {
+			"tooltip": "按不同标准划分主题"
+		},
+		"displayMenu": {
+			"tooltip": "选择显示器"
+		}
+	},
+	"general": {
+		"cancel": "取消",
+		"helpText": "帮助",
+		"languages": {
+			"fi": "芬兰语",
+			"en": "英语",
+			"sv": "瑞典语",
+			"es": "西班牙语"
+		}
+	}
+}
