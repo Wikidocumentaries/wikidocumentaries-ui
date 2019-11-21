@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Les Meloures"
 		]
 	},
 	"LandingPage": {
@@ -270,7 +271,7 @@
 		"languages": {
 			"fi": "Finnesch",
 			"en": "Englesch",
-			"sv": "Schwedesch",
+			"sv": "Schweedesch",
 			"es": "Spuenesch"
 		}
 	}
