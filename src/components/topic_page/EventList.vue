@@ -58,10 +58,10 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 SELECT ?time ?event ?relation ?description ?ref1 ?ref2
 WHERE { { SERVICE wikidata: {
-SELECT (GROUP_CONCAT(DISTINCT ?time;separator="-") AS ?time) ?event
-(SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?description;separator="; ") AS ?description)
+SELECT (GROUP_CONCAT(DISTINCT ?tm;separator="-") AS ?time) ?event
+(SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?descr;separator="; ") AS ?description)
 (SAMPLE(?ref1) AS ?ref1) WHERE {
-SELECT DISTINCT ?time ?event ?relation ?description ?ref1 WHERE {
+SELECT DISTINCT ?tm ?event ?relation ?descr ?ref1 WHERE {
 wd:Q170068 ?p ?event .
 BIND(wd:Q170068 AS ?ref1)
 ?wd wikibase:claim ?p .
@@ -72,13 +72,13 @@ OPTIONAL { ?wd rdfs:label ?rd . FILTER(LANG(?rd)="") }
 ?wd rdfs:label ?ra .
 BIND(COALESCE(?rf,?rd,?re,?rs,?ra) AS ?relation)
 ?event ?p2 [ wikibase:timeValue ?tval ] ; ?p3 ?o1 .
-BIND(substr(str(?tval),1,4) AS ?time)
+BIND(substr(str(?tval),1,4) AS ?tm)
 OPTIONAL { ?o1 rdfs:label ?lf . FILTER(LANG(?lf)="fi") }
 OPTIONAL { ?o1 rdfs:label ?ls . FILTER(LANG(?ls)="sv") }
 OPTIONAL { ?o1 rdfs:label ?le . FILTER(LANG(?le)="en") }
 OPTIONAL { ?o1 rdfs:label ?ld . FILTER(LANG(?ld)="") }
 ?o1 rdfs:label ?la .
-BIND(COALESCE(?lf,?ld,?le,?ls,?la) AS ?description)
+BIND(COALESCE(?lf,?ld,?le,?ls,?la) AS ?descr)
 } ORDER BY ?time } GROUP BY ?event }
 } UNION {
 SERVICE ldfhis: {
@@ -115,10 +115,10 @@ PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
 SELECT ?time ?event ?relation ?description ?ref1 ?ref2
 WHERE { {
 SERVICE wikidata: {
-SELECT (GROUP_CONCAT(DISTINCT ?time;separator="-") AS ?time) ?event
-(SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?description;separator="; ") AS ?description)
+SELECT (GROUP_CONCAT(DISTINCT ?tm;separator="-") AS ?time) ?event
+(SAMPLE(?relation) AS ?relation) (GROUP_CONCAT(DISTINCT ?descr;separator="; ") AS ?description)
 (SAMPLE(?ref1) AS ?ref1) WHERE {
-SELECT DISTINCT ?time ?event ?relation ?description ?ref1 WHERE {
+SELECT DISTINCT ?tm ?event ?relation ?descr ?ref1 WHERE {
 wd:Q1757 ?p ?event .
 BIND(wd:Q1757 AS ?ref1)
 ?wd wikibase:claim ?p .
@@ -130,14 +130,14 @@ OPTIONAL { ?wd rdfs:label ?ra }
 BIND(COALESCE(?rf,?rd,?re,?rs,?ra) AS ?relation)
 FILTER(bound(?relation))
 ?event ?p2 [ wikibase:timeValue ?tval ] ; ?p3 ?o1 .
-BIND(substr(str(?tval),1,4) AS ?time)
+BIND(substr(str(?tval),1,4) AS ?tm)
 OPTIONAL { ?o1 rdfs:label ?lf . FILTER(LANG(?lf)="fi") }
 OPTIONAL { ?o1 rdfs:label ?ls . FILTER(LANG(?ls)="sv") }
 OPTIONAL { ?o1 rdfs:label ?le . FILTER(LANG(?le)="en") }
 OPTIONAL { ?o1 rdfs:label ?ld . FILTER(LANG(?ld)="") }
 OPTIONAL { ?o1 rdfs:label ?la }
-BIND(COALESCE(?lf,?ld,?le,?ls,?la) AS ?description)
-FILTER(bound(?description))
+BIND(COALESCE(?lf,?ld,?le,?ls,?la) AS ?descr)
+FILTER(bound(?descr))
 } ORDER BY ?time } GROUP BY ?event }
 } UNION {
 SERVICE ldfhis: { {
