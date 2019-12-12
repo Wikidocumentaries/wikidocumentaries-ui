@@ -20,7 +20,7 @@
 		"titleTopics": "主題",
 		"statusTopics": "主題內容讀取自維基數據。若內容不在維基數據的範圍內，能後續在 Wikidocumentaries 上建立該內容的新主題。主題的描述方面，可以透過在維基數據上的豐富選項。目前的條目內容來自於維基百科，可事後建立出存在 Wikidocumentaries 上主題的本地化條目。",
 		"titleMedia": "多媒體",
-		"statusMedia": "多媒體內容目前讀取自 Finna.fi、Flickr、與維基共享資源。我們致力於更精準地找尋圖片，以及從各來源展示出更多與更好的詮釋資料。另外我們也歡迎新的多媒體來源！",
+		"statusMedia": "多媒體內容讀取自現今越來越多提供開放許可媒體檔案的媒體儲存庫。我們致力於更精準地找尋圖片，以及從各來源展示出更多與更好的詮釋資料。另外我們也歡迎新的多媒體來源！",
 		"titleTools": "工具",
 		"statusTools": "Wikidocumentaries 擁有用於內容處理上的任務與工具。條目能以 Content Translation 工具在語言之間翻譯。我們正籌備著以維基數據關鍵詞與地理標記工具來用於圖片位置上。會建立或整合出新的有趣、有用的工具。",
 		"titleLanguages": "語言",
@@ -265,7 +265,7 @@
 		},
 		"Affiliations": {
 			"headerTitle": "隸屬",
-			"intro": "在組織的此人有所聯繫的組織。"
+			"intro": "此人或該組織有所聯繫的組織。"
 		},
 		"Works": {
 			"headerTitle": "作品",
