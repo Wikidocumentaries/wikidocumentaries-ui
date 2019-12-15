@@ -34,8 +34,7 @@
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.aff.value)">
-            <b>{{ item.aff.label }}</b>
-            <!-- {{ item.typeLabel }} {{ item.time}} -->
+            <b>{{ item.aff.label }}</b> {{ item.relcLabel }}
           </a>
         </div>
       </div>
@@ -106,7 +105,7 @@ export default {
     sparql = `
 SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?relcLabel_; separator=", ") as ?relcLabel) (SAMPLE(?image) AS ?image) WHERE {
   {
-    ?aff wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6 wd:Q29021 .
+    ?aff wdt:P361|wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
     ?aff ?rel wd:Q29021 .
     ?relc wikibase:directClaim ?rel .
     OPTIONAL { ?relc rdfs:label ?relcLabel_ .
@@ -114,7 +113,7 @@ SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?relcLabel_; separator=", ") as ?re
     }
   UNION
   {
-    wd:Q29021 wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
+    wd:Q29021 wdt:P527|wdt:P84|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
     wd:Q29021 ?rel ?aff .
     ?relc wikibase:directClaim ?rel .
     OPTIONAL { ?relc rdfs:label ?relcLabel_ .

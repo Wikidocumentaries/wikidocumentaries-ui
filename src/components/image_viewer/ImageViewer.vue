@@ -336,11 +336,11 @@
               </div>
             </div>
           </div>
-          <div class="metadata-original">
+          <!--div class="metadata-original">
             <div class="toolbar">
               <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
             </div>
-          </div>
+          </div-->
           <div class="metadata-copyright">
             <div class="toolbar">
               <div class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
@@ -398,7 +398,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-cite metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>

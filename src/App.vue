@@ -531,7 +531,7 @@ i.wikiglyph {
 .gallery {
   height: 40vh;
   display: flex;
-  padding-left: 10px;
+  padding: 0 0 10px 10px;
   overflow-x: auto;
   overflow-y: hidden;
 }
