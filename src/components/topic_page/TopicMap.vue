@@ -648,7 +648,7 @@ export default {
 .map-popup-nearby-place-container a {
     color: #333;
     box-shadow: none;
-    text-shadow: -1px 0 #ffffff80, 0 1px #ffffff80, 1px 0 #ffffff80, 0 -1px #ffffff80;
+    text-shadow: -1px 1px 0px #ffffffdb, 1px 1px 0px #ffffffdb, -1px -1px 0px #ffffffdb, 1px -1px 0px #ffffffdb, 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
 }
 
 .map-popup-nearby-place-container:hover {
@@ -656,7 +656,7 @@ export default {
 }
 
 .map-popup-nearby-place-container a:hover {
-    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    text-shadow: -1px 1px 0px #ffffffdb, 1px 1px 0px #ffffffdb, -1px -1px 0px #ffffffdb, 1px -1px 0px #ffffffdb, 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
     color: var(--main-link-color);
 }
 
