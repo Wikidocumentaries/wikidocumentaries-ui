@@ -519,7 +519,7 @@ i.wikiglyph {
 }
 
 .over {
-  padding-bottom: 0.2em;
+  padding-bottom: 0.1em;
 }
 
 .gallery-title {
@@ -805,5 +805,57 @@ i.wikiglyph {
 
 .icon {
     width: 20px;
+}
+
+/* Image grid styles used in ImageGrid and BaseMapDialog */
+
+.header-item {
+  line-height: 1;
+  height: 30px;
+  width: 30px;
+}
+
+.header-item a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 80ms ease-in, background 80ms ease-in;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: none;
+  color: white;
+}
+
+.header-item:hover {
+  background: white;
+}
+
+.header-item:hover a {
+  color: var(--main-txt-color);
+}
+
+.grid-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3px;
+}
+
+.grid-item {
+  cursor: pointer;
+  position: relative;
+  margin: 0 3px 3px 0;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-item:hover * {
+  opacity: 1;
+  transition: opacity 80ms ease-in;
+}
+
+.thumb-image {
+  height: 13rem;
+  object-fit: cover;
 }
 </style>

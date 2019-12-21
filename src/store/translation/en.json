@@ -259,6 +259,10 @@
             "headerTitle": "Parts",
             "intro": "These parts belong to this topic. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
+        "Partof": {
+            "headerTitle": "Part of",
+            "intro": "This topic is part of the following topics in some way. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
+        },
         "Affiliations": {
             "headerTitle": "Affiliations",
             "intro": "Organisations that this person or organisation has an affiliation with."

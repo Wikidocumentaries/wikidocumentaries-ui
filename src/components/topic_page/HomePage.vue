@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <!--LocatedIn id="locatedIn"></LocatedIn-->
+    <Partof id="partof"></Partof>
     <Locations id="locations"></Locations>
     <!--Parts id="parts"></Parts-->
     <Works id="works"></Works>
@@ -46,7 +46,7 @@ import EventList from "@/components/topic_page/EventList";
 import Works from "@/components/topic_page/Works";
 import People from "@/components/topic_page/People";
 import Locations from "@/components/topic_page/Locations";
-//import LocatedIn from "@/components/topic_page/LocatedIn";
+import Partof from "@/components/topic_page/Partof";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Parts from "@/components/topic_page/Parts";
@@ -72,7 +72,7 @@ export default {
     EventList,
     Works,
     People,
-//    LocatedIn,
+    Partof,
     Locations,
     Depicted,
     Depicts,
