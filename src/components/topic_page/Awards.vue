@@ -2,7 +2,7 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <div class="header-title">{{ $t('topic_page.Affiliations.headerTitle') }}</div>
+        <div class="header-title">{{ $t('topic_page.Awards.headerTitle') }}</div>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-funnel"
@@ -13,28 +13,38 @@
           <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
-      <div class="intro">{{ $t('topic_page.Affiliations.intro') }}</div>
+      <div class="intro">{{ $t('topic_page.Awards.intro') }}</div>
       <div v-if="gallery" class="gallery">
         <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
         <router-link
           tag="div"
           v-for="item in results"
           :key="item.id"
-          :to="getItemURL(item.aff.value)"
+          :to="getItemURL(item.item.value)"
           class="gallery-item"
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="thumb-credit over">{{ item.relcLabel }}</div>
-            <div class="gallery-title">{{ item.aff.label }}</div>
-            <!-- <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div> -->
+            <div class="thumb-credit over">{{ item.relation }}</div>
+            <div class="gallery-title">{{ item.item.label }}</div>
+            <div class="thumb-credit">{{ item.typeLabel }}</div>
+          </div>
+          <!--div class="thumb-image-header"-->
+          <div>
+            <div class="left-align">
+              <!--ImagesActionMenu></ImagesActionMenu-->
+            </div>
+            <div class="right-align">
+              <!--ImagesRemoveMenu></ImagesRemoveMenu-->
+            </div>
           </div>
         </router-link>
       </div>
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
-          <a :href="getItemURL(item.aff.value)">
-            <span v-if="item.relcLabel">{{ item.relcLabel }} </span><b>{{ item.aff.label }}</b>
+          <a :href="getItemURL(item.item.value)">
+            <span v-if="item.relation">{{ item.relation }} </span><b>{{ item.item.label }}</b> 
+            {{ item.typeLabel }}
           </a>
         </div>
       </div>
@@ -62,12 +72,12 @@ const DISPLAY_ACTIONS = {
 };
 
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["aff.label"];
+const DEFAULT_SORT = ["item.label"];
 
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Affiliations",
+  name: "Awards",
   components: {
     ToolbarMenu,
     DisplayMenu
@@ -79,19 +89,19 @@ export default {
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
-          text: "topic_page.Locations.sortMenu.optionAlpha"
+          text: "menus.sortMenu.optionAlpha"
         },
         {
           id: SORT_ACTIONS.BY_TIME,
-          text: "topic_page.Locations.sortMenu.optionTime"
+          text: "menus.sortMenu.optionTime"
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
-          text: "topic_page.Locations.sortMenu.optionRev"
+          text: "menus.sortMenu.optionRev"
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
-          text: "topic_page.Locations.sortMenu.optionClear"
+          text: "menus.sortMenu.optionClear"
         }
       ]
     };
@@ -103,29 +113,30 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?relcLabel_; separator=", ") as ?relcLabel) (SAMPLE(?image) AS ?image) WHERE {
+SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   {
-    ?aff wdt:P361|wdt:P991|wdt:P112|wdt:P169|wdt:P127|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
-    ?aff ?rel wd:Q29021 .
-    ?relc wikibase:directClaim ?rel .
-    OPTIONAL { ?relc rdfs:label ?relcLabel_ .
-    FILTER(LANG(?relcLabel_)="fi")  }
-    }
-  UNION
-  {
-    wd:Q29021 wdt:P527|wdt:P84|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
-    wd:Q29021 ?rel ?aff .
-    ?relc wikibase:directClaim ?rel .
-    OPTIONAL { ?relc rdfs:label ?relcLabel_ .
-    FILTER(LANG(?relcLabel_)="fi")  }
+    { ?pi wdt:P1647* wd:P1411. }
   }
-  MINUS { ?aff wdt:P31 wd:Q5 .}
-  OPTIONAL {?aff wdt:P18 ?image .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en". }
-  }
-GROUP BY ?aff ?affLabel
-        `.replace(/Q29021/g, this.$store.state.wikidocumentaries.wikidataId)
-         .replace(/fi/g, this.$i18n.locale);
+  ?pi wikibase:directClaim ?p .
+  ?pi rdfs:label ?piLabel .
+  FILTER(LANG(?piLabel)="fi") .
+  wd:Q490622 ?p ?item .
+  OPTIONAL { ?item wdt:P31 ?type .
+            ?type rdfs:label ?typeLabel_ .
+              FILTER(LANG(?typeLabel_)="fi") }
+  OPTIONAL { ?item wdt:P18 ?image. }
+  OPTIONAL { ?item wdt:P571 ?date.
+           BIND(STR(YEAR(?date)) AS ?dated)}
+  OPTIONAL { ?item wdt:P170|wdt:P84 ?creator.
+           ?creator rdfs:label ?creatorLabel_ .
+           FILTER(LANG(?creatorLabel_)="fi")}
+  MINUS { ?item wdt:P31 wd:Q5 .}
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
+}
+GROUP BY ?item ?itemLabel
+LIMIT 1000
+        `.replace(/Q490622/g, this.$store.state.wikidocumentaries.wikidataId)
+        .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)
@@ -146,11 +157,11 @@ GROUP BY ?aff ?affLabel
     onDoMenuItemAction(menuItem) {
       switch (menuItem.id) {
         case SORT_ACTIONS.BY_LABEL:
-          currentSort = ["aff.label"];
+          currentSort = ["item.label"];
           break;
-        // case SORT_ACTIONS.BY_TIME:
-        //   currentSort = ["time", "aff.label"];
-        //   break;
+        case SORT_ACTIONS.BY_TIME:
+          currentSort = ["time", "item.label"];
+          break;
         case SORT_ACTIONS.SORT_REVERSE:
           if (currentSort[0].charAt(0) == "-")
             currentSort[0] = currentSort[0].substr(1);
@@ -192,8 +203,8 @@ GROUP BY ?aff ?affLabel
 
 const selectResults = lcl => {
   let filteredResults = fullResults;
-  // if (currentSort[0].includes("time"))
-  //   filteredResults = filteredResults.filter(x => x.time);
+  if (currentSort[0].includes("time"))
+    filteredResults = filteredResults.filter(x => x.time);
   if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
     if (filteredResults.find(x => x.image)) {
       // If GALLERY and at least one image

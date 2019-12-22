@@ -113,15 +113,9 @@ export default {
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
-  {
-    {
-      wd:Q407542 wdt:P527 ?item.
-    }
-    UNION
-    {
-      ?item wdt:P361 wd:Q407542.
-    }
-  }
+  wd:Q407542 wdt:P527|wdt:P150 ?item.
+  ?item rdfs:label ?itemLabel .
+  FILTER(LANG(?itemLabel)="fi")
   OPTIONAL { ?item wdt:P31 ?type .
             ?type rdfs:label ?typeLabel_ .
               FILTER(LANG(?typeLabel_)="fi") }

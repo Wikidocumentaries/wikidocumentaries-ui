@@ -14,6 +14,7 @@
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.work.value)" class="gallery-item">
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
+                    <div class="thumb-credit over">{{ item.relation }}</div>
                     <div class="gallery-title">{{ item.work.label }}</div>
                     <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{ item.copyrightLabel}}</div>
                 </div>
@@ -22,7 +23,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.work.value)" >
-            <b>{{ item.work.label }}</b> {{ item.typeLabel }} {{ item.time}} {{ item.copyrightLabel}}
+            <span v-if="item.relation">{{ item.relation }} </span><b>{{ item.work.label }}</b> {{ item.typeLabel }} {{ item.time}} {{ item.copyrightLabel}}
             </a>
             </div>
         </div>
@@ -97,9 +98,11 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?work ?workLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel_) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address_) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel_) as ?municipalityLabel) WHERE {
+SELECT ?work ?workLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel_) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address_) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel_) as ?municipalityLabel) WHERE {
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
+  ?pi rdfs:label ?piLabel .
+  FILTER(LANG(?piLabel)="fi") .
     ?work ?p wd:Q216904.
     OPTIONAL { ?work wdt:P18 ?image. }
     OPTIONAL { ?work wdt:P31 ?type. 

@@ -43,8 +43,8 @@
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
-            <b>{{ item.item.label }}</b>
-            {{ item.typeLabel }} {{ item.time}}
+            <span v-if="item.relation">{{ item.relation }} </span><b>{{ item.item.label }}</b> 
+            {{ item.typeLabel }}
           </a>
         </div>
       </div>
@@ -120,6 +120,12 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
     { ?pi wdt:P1647* wd:P361 . }
     UNION
     { ?pi wdt:P1647* wd:P279 . }
+    UNION
+    { ?pi wdt:P1647* wd:P47 . }
+    MINUS
+    { ?pi wdt:P1647* wd:P1416 . }
+    MINUS
+    { ?pi wdt:P1647* wd:P1344 . }
   }
   ?pi wikibase:directClaim ?p .
   ?pi rdfs:label ?piLabel .

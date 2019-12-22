@@ -103,9 +103,12 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
+SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   ?pi wdt:P1647* wd:P276 .
   ?pi wikibase:directClaim ?p .
+  OPTIONAL { ?pi wdt:P7087 ?rel . 
+  ?rel rdfs:label ?relLabel . 
+  FILTER(LANG(?relLabel)="fi") . }
   ?location ?p wd:Q1772186.
   OPTIONAL { ?location wdt:P31 ?type .
             ?type rdfs:label ?typeLabel_ .

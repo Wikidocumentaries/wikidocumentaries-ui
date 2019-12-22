@@ -15,8 +15,8 @@
         >
         <div class="thumb-image-info">
           <div v-for="title in item.title" :key="title.id" class="thumb-title">{{ title }}</div>
-          <div class="thumb-credit"><img class="icon" :src="getIcon(item)" align="right">{{ getCredits(item) }}</div>
-          
+          <div class="thumb-credit">{{ getCredits(item) }}</div>
+          <img class="icon" :src="getIcon(item)" align="right">
         </div>
         <div class="thumb-image-header">
           <div class="left-align">
@@ -125,7 +125,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header-item {
+/* .header-item {
   line-height: 1;
   height: 30px;
   width: 30px;
@@ -148,9 +148,9 @@ export default {
 
 .header-item:hover a {
   color: var(--main-txt-color);
-}
+} */
 
-.grid-items {
+/* .grid-items {
   display: flex;
   flex-wrap: wrap;
   margin-left: 3px;
@@ -159,7 +159,6 @@ export default {
 .grid-item {
   cursor: pointer;
   position: relative;
-  max-height: 13rem;
   margin: 0 3px 3px 0;
   flex: auto;
   display: flex;
@@ -169,10 +168,10 @@ export default {
 .grid-item:hover * {
   opacity: 1;
   transition: opacity 80ms ease-in;
-}
+} */
 
-.thumb-image {
+/* .thumb-image {
   height: 13rem;
   object-fit: cover;
-}
+} */
 </style>

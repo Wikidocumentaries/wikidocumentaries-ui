@@ -17,16 +17,17 @@
       </div>
     </div>
     <Partof id="partof"></Partof>
+    <Parts id="parts"></Parts>
     <Locations id="locations"></Locations>
-    <!--Parts id="parts"></Parts-->
     <Works id="works"></Works>
+    <Awards id="awards"></Awards>
     <Depicts id="depicts"></Depicts>
     <People id="people"></People>
     <Affiliations id="affiliations"></Affiliations>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
     <EventList id="events"></EventList>
-    <TopicMap id="topicMap"></TopicMap>
     <Depicted id="depicted"></Depicted>
+    <TopicMap id="topicMap"></TopicMap>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
@@ -44,6 +45,7 @@ import TopicImages from "@/components/topic_page/TopicImages";
 import TopicTimeline from "@/components/topic_page/TopicTimeline";
 import EventList from "@/components/topic_page/EventList";
 import Works from "@/components/topic_page/Works";
+import Awards from "@/components/topic_page/Awards";
 import People from "@/components/topic_page/People";
 import Locations from "@/components/topic_page/Locations";
 import Partof from "@/components/topic_page/Partof";
@@ -71,13 +73,14 @@ export default {
     TopicTimeline,
     EventList,
     Works,
+    Awards,
     People,
+    Parts,
     Partof,
     Locations,
     Depicted,
     Depicts,
     Footer,
-    Parts,
     Affiliations
   },
   computed: {},

@@ -1,6 +1,6 @@
 <template>
     <div :class="( headerImage ? 'header' : 'header-compact')">
-        <img :src="coatOfArms" class="header-coa" />
+        <a :href="getCoaURL"><img :src="coatOfArms" class="header-coa" /></a>
         <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
         <div class="header-contents">
@@ -77,6 +77,16 @@ export default {
                 if (statements[index].id == 'P94') {
                     coaid = statements[index].values[0].value;
                     return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+coaid;
+                }
+            }
+        },
+        getCoaURL() {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let coaartid;
+            for (var index in statements) {
+                if (statements[index].id == 'P237') {
+                    coaartid = statements[index].values[0].id;
+                    return "/" + coaartid + "?language=" + this.$i18n.locale;
                 }
             }
         }
