@@ -91,8 +91,14 @@
 			},
 			"showAll": "Tutte"
 		},
+		"Partof": {
+			"headerTitle": "Condeste"
+		},
 		"Affiliations": {
 			"headerTitle": "Affigliazziune"
+		},
+		"Awards": {
+			"headerTitle": "Premie"
 		},
 		"Works": {
 			"facetMenuOptionCity": "Luèche"

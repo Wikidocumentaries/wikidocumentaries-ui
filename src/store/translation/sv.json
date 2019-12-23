@@ -236,6 +236,9 @@
 		"Parts": {
 			"headerTitle": "Delar"
 		},
+		"Partof": {
+			"headerTitle": "Del av"
+		},
 		"Affiliations": {
 			"headerTitle": "Anknytning"
 		},

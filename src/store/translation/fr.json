@@ -268,9 +268,17 @@
 			"headerTitle": "Parties",
 			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
 		},
+		"Partof": {
+			"headerTitle": "Contexte",
+			"intro": "Ce sujet fait partie des sujets suivants d’une certaine façon. Vous pouvez les trier par horodatage et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
 		"Affiliations": {
 			"headerTitle": "Affiliations",
 			"intro": "Organisations avec lesquelles cette personne ou cette organisation sont affiliées."
+		},
+		"Awards": {
+			"headerTitle": "Récompenses",
+			"intro": "Nominations et récompenses du sujet de cette page."
 		},
 		"Works": {
 			"headerTitle": "Works",

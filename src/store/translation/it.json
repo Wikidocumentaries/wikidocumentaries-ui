@@ -147,6 +147,12 @@
 		"Depicted": {
 			"headerTitle": "Rappresentato in"
 		},
+		"Partof": {
+			"headerTitle": "Contesto"
+		},
+		"Awards": {
+			"headerTitle": "Premi"
+		},
 		"Works": {
 			"sortMenuTitle": "Ordina",
 			"sortMenuTooltip": "Ordina elementi",

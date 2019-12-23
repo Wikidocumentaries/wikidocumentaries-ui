@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Ykhwong",
-			"Abijeet Patro"
+			"Abijeet Patro",
+			"Gongsoonyee"
 		]
 	},
 	"LandingPage": {
@@ -160,6 +161,9 @@
 				"optionList": "목록"
 			},
 			"showAll": "모두"
+		},
+		"Partof": {
+			"headerTitle": "다음의 일부:"
 		},
 		"Works": {
 			"sortMenuTitle": "정렬",

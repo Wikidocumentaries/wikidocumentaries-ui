@@ -265,6 +265,10 @@
 			"headerTitle": "Partes",
 			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
 		},
+		"Partof": {
+			"headerTitle": "Parte de",
+			"intro": "Este tópico faz parte dos seguintes tópicos, de alguma forma. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+		},
 		"Affiliations": {
 			"headerTitle": "Afiliações",
 			"intro": "Organizações com as quais essa pessoa ou organização tem uma afiliação."

@@ -4,7 +4,8 @@
 			"DmitTrix",
 			"Kareyac",
 			"Movses",
-			"Putnik"
+			"Putnik",
+			"Okras"
 		]
 	},
 	"LandingPage": {
@@ -268,6 +269,9 @@
 		"Affiliations": {
 			"headerTitle": "Принадлежность",
 			"intro": "Организации, с которыми связан этот человек или организация."
+		},
+		"Awards": {
+			"headerTitle": "Награды"
 		},
 		"Works": {
 			"headerTitle": "Работы",

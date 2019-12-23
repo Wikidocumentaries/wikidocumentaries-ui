@@ -21,7 +21,7 @@
 		"titleTopics": "Aiheet",
 		"statusTopics": "Aiheet luetaan Wikidatasta. Uusia aiheita voi myöhemmin luoda myös paikallisesti, jos aihe ei ole Wikidataan sopiva ja käyttää silti Wikidatan monipuolisia kuvailumahdollisuuksia. Tämänhetkiset artikkelit tulevat Wikipediasta, ja myöhemmin voi luoda Wikidocumentariesin aiheille artikkeleita paikallisesti.",
 		"titleMedia": "Media",
-		"statusMedia": "Kuvia luetaan palveluista Finna.fi, Flickr ja Wikimedia Commons. Pyrimme parantamaan osumatarkkuutta ja näyttämään enemmän ja parempaa metatietoa kustakin lähteestä. Toivotamme uudet lähteet tervetulleiksi!",
+		"statusMedia": "Kuvia luetaan yhä useammista palveluista, jotka tarjoavat avoimesti lisensoituja mediatiedostoja. Pyrimme parantamaan osumatarkkuutta ja näyttämään enemmän ja parempaa metatietoa kustakin lähteestä. Toivotamme uudet lähteet tervetulleiksi!",
 		"titleTools": "Työkalut",
 		"statusTools": "Wikidocumentariesissa on tehtäviä ja työkaluja sisällön parantamiseen. Nyt voi jo kääntää artikkeleita eri kielien välillä Content Translation -työkalun avulla. Wikidatan avulla asiasanoittaminen ja kuvien paikannus ovat työn alla. Uusia hauskoja ja hyödyllisiä työkaluja voidaan luoda tai liittää palveluun.",
 		"titleLanguages": "Kielet",
@@ -265,8 +265,8 @@
 			"intro": "Tämä aihe jakautuu näihin osiin. Voit järjestää niitä ajan ja nimen perusteella. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
 		},
 		"Affiliations": {
-			"headerTitle": "Organisaatiot",
-			"intro": "Organisaatiot ja muut aiheet, joihin tällä taholla on suhde."
+			"headerTitle": "Yhteydet",
+			"intro": "Organisaatiot ja muut aiheet, joihin tällä taholla on yhteys."
 		},
 		"Works": {
 			"headerTitle": "Teoksia",
