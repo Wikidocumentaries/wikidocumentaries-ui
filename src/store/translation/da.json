@@ -193,6 +193,9 @@
 		"Parts": {
 			"headerTitle": "Dele"
 		},
+		"Partof": {
+			"headerTitle": "Kontekst"
+		},
 		"Works": {
 			"headerTitle": "Værker",
 			"sortMenuTitle": "Sorter",

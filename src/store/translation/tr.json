@@ -266,9 +266,17 @@
 			"headerTitle": "Parçalar",
 			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
 		},
+		"Partof": {
+			"headerTitle": "Bağlam",
+			"intro": "Bu konu, bir şekilde aşağıdaki konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+		},
 		"Affiliations": {
 			"headerTitle": "Bağlantılar",
 			"intro": "Bu kişi veya kuruluşun bağlı olduğu kuruluşlar."
+		},
+		"Awards": {
+			"headerTitle": "Ödüller",
+			"intro": "Bu sayfanın konusunun adaylıkları ve ödülleri."
 		},
 		"Works": {
 			"headerTitle": "Çalışanlar",

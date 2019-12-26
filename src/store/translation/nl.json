@@ -127,6 +127,13 @@
 		},
 		"Parts": {
 			"headerTitle": "Gedeelte"
+		},
+		"Partof": {
+			"headerTitle": "Verband"
+		},
+		"Awards": {
+			"headerTitle": "Onderscheidingen",
+			"intro": "Benoemingen en onderscheidingen van het onderwerp van deze pagina."
 		}
 	},
 	"imageViewer": {

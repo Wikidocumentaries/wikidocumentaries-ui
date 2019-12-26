@@ -42,12 +42,12 @@
 		"returnToHomeMessage": "Voltar à página inicial"
 	},
 	"WaitPage": {
-		"waitMessage": "Um momento, por favor... A recuperar os dados da Wikipédia, Wikidados, Wikimedia Commons, MapWarper, Finna, Flickr..."
+		"waitMessage": "Um momento, por favor... A obter dados da Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
-			"chooseMapTitle": "Escolha o(s) mapa(s) base(s) histórico(s)",
-			"chooseMapHelpNote": "Dica: ctrl+click permite selecionar muitos mapas",
+			"chooseMapTitle": "Escolher um ou mais mapas de base históricos",
+			"chooseMapHelpNote": "Dica: ctrl+clique permite selecionar muitos mapas",
 			"yearAbbreviation": "a."
 		},
 		"Header": {
@@ -59,13 +59,13 @@
 		"TopicImages": {
 			"headerTitle": "Imagens dos arquivos",
 			"actionsMenu": {
-				"menuTitle": "Exibir ou organizar imagens",
-				"tooltip": "Exibir ou organizar imagens",
+				"menuTitle": "Apresentar ou organizar imagens",
+				"tooltip": "Apresentar ou organizar imagens",
 				"showImagesOnMapMenuText": "Mostrar todas as imagens no mapa",
-				"showImagesOnTimelineMenuText": "Mostrar todas as imagens na cronologia",
-				"selectPortraits": "Seleccionar imagens de boa qualidade desta pessoa",
+				"showImagesOnTimelineMenuText": "Mostrar todas as imagens na linha cronológica",
+				"selectPortraits": "Selecionar retratos de boa qualidade desta pessoa",
 				"arrangeByTime": "Organizar imagens por data",
-				"selectWorks": "Seleccionar imagens das obras"
+				"selectWorks": "Selecionar imagens de obras"
 			},
 			"facetMenu": {
 				"time": "hora",
@@ -89,15 +89,15 @@
 				"menuTooltip": "Ações",
 				"doGeolocatingText": "Definir a localização…",
 				"showImageText": "Mostrar imagem",
-				"selectFeatured": "Escolher como uma imagem de cabçalho"
+				"selectFeatured": "Escolher como uma imagem de cabeçalho"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Remover a imagem porque...",
 				"shortMenuTitle": "Remover a imagem",
 				"menuTooltip": "Remover a imagem",
 				"remDepicted": {
-					"menuTitle": "Este descreve este tópico",
-					"shortMenuTitle": "Este descreve outro tópico",
+					"menuTitle": "Representa antes este tópico",
+					"shortMenuTitle": "Representa outro tópico",
 					"search": "Pesquisar pelo tópico",
 					"browse": "Explorar os tópicos relacionados"
 				},
@@ -108,13 +108,13 @@
 					"browse": "Explorar os atores relacionados"
 				},
 				"remInappropriate": {
-					"menuTitle": "É inapropiado porque",
-					"shortMenuTitle": "É inapropiado",
-					"privacy": "Este viola a privacidade do descrito",
-					"violence": "Este exibe violência extrema",
-					"sex": "Este exibe sexo explícito",
-					"copyvio": "Este viola os direitos de autor",
-					"explain": "Deixe uma nota a explicar"
+					"menuTitle": "É inapropriado porque",
+					"shortMenuTitle": "É inapropriado",
+					"privacy": "Viola a privacidade dos retratados",
+					"violence": "Apresenta violência extrema",
+					"sex": "Mostra sexo explícito",
+					"copyvio": "Viola os direitos de autor",
+					"explain": "Deixar uma nota a explicar"
 				}
 			},
 			"imagesViewExternal": "Ver a imagem original",
@@ -127,16 +127,16 @@
 			"hideNearbyPlacesMenuText": "Ocultar locais próximos"
 		},
 		"TopicTimeline": {
-			"headerTitle": "Barra Cronológica",
-			"showEventsOnTimelineMenuText": "Mostrar eventos por tópico na barra cronológica",
+			"headerTitle": "Linha cronológica",
+			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha cronológica",
 			"centuryText": "S"
 		},
 		"Events": {
 			"headerTitle": "Eventos",
 			"displayMenu": {
-				"menuTitle": "Opções de exibição",
-				"menuTooltip": "Opções de exibição",
-				"optionShowTimeline": "Mostrar eventos numa barra cronológica",
+				"menuTitle": "Opções de apresentação",
+				"menuTooltip": "Opções de apresentação",
+				"optionShowTimeline": "Mostrar eventos numa linha cronológica",
 				"optionShowList": "Mostrar eventos como uma lista"
 			},
 			"optionsMenu": {
@@ -146,13 +146,13 @@
 				"subRelatedPeopleConf": {
 					"menuTitle": "Configurar"
 				},
-				"optionRelatedTopics": "Mostra eventos de tópicos relacionados"
+				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
 			}
 		},
 		"Wikidata": {
 			"headerTitle": "Factos",
 			"extLink": {
-				"linkTitleWD": "Ver ou editar na Wikidados"
+				"linkTitleWD": "Ver ou editar na wiki Wikidata"
 			},
 			"noTopicFoundText": "Tópico não encontrado"
 		},
@@ -169,9 +169,9 @@
 				"title": "Ordenar localizações",
 				"tooltip": "Ordenar localizações",
 				"optionTime": "Por hora",
-				"optionAlpha": "Alfabeticamente",
+				"optionAlpha": "Por ordem alfabética",
 				"optionDist": "Por distância",
-				"optionRev": "Ordem inversa",
+				"optionRev": "Inverter ordenação",
 				"optionClear": "Limpar ordenação"
 			},
 			"facetMenu": {
@@ -180,20 +180,20 @@
 				"optionCity": "Localização"
 			},
 			"displayMenu": {
-				"title": "Exibir como",
-				"tooltip": "Escolher exibição",
+				"title": "Apresentar como",
+				"tooltip": "Escolher a apresentação",
 				"optionGallery": "Galeria",
 				"optionList": "Lista"
 			},
-			"showAll": "Tudo"
+			"showAll": "Todas"
 		},
 		"Depicted": {
 			"sortMenu": {
 				"title": "Ordenar obras",
 				"tooltip": "Ordenar obras",
 				"optionTime": "Por hora",
-				"optionAlpha": "Alfabeticamente",
-				"optionRev": "Ordem inversa",
+				"optionAlpha": "Por ordem alfabética",
+				"optionRev": "Inverter ordenação",
 				"optionClear": "Limpar ordenação"
 			},
 			"facetMenu": {
@@ -201,8 +201,8 @@
 				"optionColl": "Criador"
 			},
 			"displayMenu": {
-				"title": "Exibir como",
-				"tooltip": "Escolher exibição",
+				"title": "Apresentar como",
+				"tooltip": "Escolher apresentação",
 				"optionGallery": "Galeria",
 				"optionList": "Lista"
 			},
@@ -216,35 +216,35 @@
 		},
 		"Works": {
 			"headerTitle": "Obras",
-			"sortMenuTitle": "Ordenar",
-			"sortMenuTooltip": "Ordena itens",
+			"sortMenuTitle": "Ordenação",
+			"sortMenuTooltip": "Ordenar elementos",
 			"sortMenuOptionTime": "Por hora",
-			"sortMenuOptionAlpha": "Alfabeticamente",
+			"sortMenuOptionAlpha": "Por ordem alfabética",
 			"sortMenuOptionDist": "Por distância",
-			"sortMenuOptionRev": "Ordem inversa",
+			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Coleção",
 			"facetMenuOptionCity": "Localização",
-			"displayMenuTitle": "Exibir como",
-			"displayMenuTooltip": "Escolher a exibição",
+			"displayMenuTitle": "Apresentar como",
+			"displayMenuTooltip": "Escolher a apresentação",
 			"displayMenuOptionGallery": "Galeria",
 			"displayMenuOptionList": "Lista",
-			"showAll": "Tudo"
+			"showAll": "Todos"
 		},
 		"People": {
 			"headerTitle": "Pessoas relacionadas com o tópico",
 			"sortMenuTitle": "Ordenar",
-			"sortMenuTooltip": "Alterar a ordem de ordenação",
+			"sortMenuTooltip": "Alterar a ordenação",
 			"sortMenuOptionBirth": "Por data de nascimento",
-			"sortMenuOptionDeath": "Por data de óbito",
+			"sortMenuOptionDeath": "Por data de falecimento",
 			"sortMenuOptionName": "Por nome",
-			"sortMenuOptionFirst": "Pelo primeiro nome",
-			"sortMenuOptionLast": "Pelo sobrenome",
-			"sortMenuOptionRev": "Reverter ordem da ordenação",
+			"sortMenuOptionFirst": "Por primeiro nome",
+			"sortMenuOptionLast": "Por sobrenome",
+			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
 			"facetMenuOptionProfession": "Profissão",
-			"facetMenuOptionCity": "Género"
+			"facetMenuOptionCity": "Sexo"
 		}
 	},
 	"imageViewer": {
