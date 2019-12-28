@@ -99,7 +99,7 @@ SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator
       }
       UNION
       {
-        wd:Q72 wdt:P1343 ?depicted .
+        wd:Q72 wdt:P1343|wdt:P1441 ?depicted .
       }
     }
     OPTIONAL { ?pi wdt:P1647* wd:P170 .

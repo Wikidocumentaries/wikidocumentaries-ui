@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : '']">
+    <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
       <div class="haze" id="wiki">
@@ -18,16 +18,17 @@
     </div>
     <Partof id="partof"></Partof>
     <Parts id="parts"></Parts>
+    <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
     <Works id="works"></Works>
     <Awards id="awards"></Awards>
     <Depicts id="depicts"></Depicts>
     <People id="people"></People>
     <Affiliations id="affiliations"></Affiliations>
-    <TopicTimeline id="topicTimeline"></TopicTimeline>
-    <EventList id="events"></EventList>
     <Depicted id="depicted"></Depicted>
     <TopicMap id="topicMap"></TopicMap>
+    <TopicTimeline id="topicTimeline"></TopicTimeline>
+    <EventList id="events"></EventList>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
@@ -52,6 +53,7 @@ import Partof from "@/components/topic_page/Partof";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Parts from "@/components/topic_page/Parts";
+import Twins from "@/components/topic_page/Twins";
 import Affiliations from "@/components/topic_page/Affiliations";
 import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
@@ -80,6 +82,7 @@ export default {
     Locations,
     Depicted,
     Depicts,
+    Twins,
     Footer,
     Affiliations
   },

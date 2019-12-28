@@ -67,13 +67,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.menu-link {
-    color: var(--main-red) !important;
-    font-weight: bold;
-}
-
-.menu-link:hover {
-    color:white !important;
-}
 
 </style>

@@ -26,7 +26,7 @@
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
             <div class="thumb-credit over">{{ item.relation }}</div>
-            <div class="gallery-title">{{ item.item.label }}</div>
+            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="startdate || enddate">–</span>{{ item.enddate }}</div>
             <div class="thumb-credit">{{ item.typeLabel }}</div>
           </div>
           <!--div class="thumb-image-header"-->
@@ -113,7 +113,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
+SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(DISTINCT ?startdate) as ?startdate) (SAMPLE(DISTINCT ?enddate) as ?enddate) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   {
     { ?pi wdt:P1647* wd:P276. }
     UNION
@@ -135,8 +135,10 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
             ?type rdfs:label ?typeLabel_ .
               FILTER(LANG(?typeLabel_)="fi") }
   OPTIONAL { ?item wdt:P18 ?image. }
-  OPTIONAL { ?item wdt:P571 ?date.
-           BIND(STR(YEAR(?date)) AS ?dated)}
+  OPTIONAL { ?item wdt:P580 ?date.
+           BIND(STR(YEAR(?startdate)) AS ?startdate) .}
+  OPTIONAL { ?item wdt:P582 ?date.
+           BIND(STR(YEAR(?enddate)) AS ?enddate) .}
   OPTIONAL { ?item wdt:P170|wdt:P84 ?creator.
            ?creator rdfs:label ?creatorLabel_ .
            FILTER(LANG(?creatorLabel_)="fi")}

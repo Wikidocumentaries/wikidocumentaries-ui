@@ -104,7 +104,7 @@ export default {
 .header {
     position:relative;
     background: var(--main-txt-color);
-    height: 70vh;
+    height: calc(100vh - 170px);
     transition: height 0.5s;
 }
 

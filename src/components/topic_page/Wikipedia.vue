@@ -29,8 +29,8 @@
     </div>
     <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
       <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
-        <span v-html="wikipedia.excerptHTML"></span>
-        <span v-html="wikipedia.remainingHTML"></span>
+        <div class="excerpt" v-html="wikipedia.excerptHTML"></div>
+        <div class="remain" v-html="wikipedia.remainingHTML"></div>
       </div>
       <div v-else class="text wiki-html">
         <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
@@ -174,27 +174,35 @@ export default {
 }
 
 .wiki-html >>> .h2 {
-  font-size: 14pt;
+  font-size: 2em;
 }
 
-.wiki-html >>> .h3 {
-  font-size: 11pt;
-  font-weight: bold;
+.wiki-html >>> .h3, caption {
+  font-size: 1.5em;
 }
 
 .wiki-html >>> .h4 {
-  font-size: 11pt;
-  font-weight: normal;
-  font-style: italic;
+  font-size: 1.25em;
 }
 
 .wiki-html >>> .h5 {
-  font-size: 10pt;
-  font-weight: normal;
-  font-style: italic;
+  font-size: 1em;
 }
 
 .wiki-html >>> span > p:nth-child(1) {
   margin-top: 0;
 }
+
+.expanded .excerpt {
+  font-size: 1.2em;
+}
+
+.remain {
+  display:none;
+}
+
+.expanded .remain {
+  display:initial;
+}
+
 </style>

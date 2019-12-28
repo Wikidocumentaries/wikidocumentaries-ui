@@ -358,6 +358,21 @@ a:hover {
   padding-right: 20px;
 }
 
+.notexpanded figure {
+  display:none;
+}
+
+@media all and (max-width: 499px) {
+  figure {
+    margin: 1em 0;
+  }
+
+  figure > a > img {
+  width: 100%;
+  height: auto;
+  }
+}
+
 @media all and (max-width: 979px) {
   .column {
     display: block;
@@ -366,6 +381,7 @@ a:hover {
   #wiki {
     display: none;
   }
+
   .row {
     position: relative;
   }
@@ -385,6 +401,56 @@ a:hover {
     flex-direction: column;
   }
 
+  .row {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    overflow-y: hidden;
+    /* padding-bottom: 45px; */
+    max-height: 350px;
+  }
+
+  .row.expanded {
+    flex-direction: column;
+  }
+
+  .expanded .text-container {
+    overflow:visible;
+  }
+
+  .expanded .wikipedia {
+    width: 800px;
+    margin: auto;
+    overflow:visible;
+  }
+
+  .expanded .data {
+    column-width: 350px;
+    column-gap: 20px;
+  }
+
+  .expanded > figure, .expanded > figure-inline {
+    display:initial;
+  }
+
+  figure > a > img {
+    width: 400px;
+    height: auto;
+  }
+
+  .excerpt figure > a > img {
+    width: 200px;
+    height: auto;
+  }
+
+  figure {
+    margin-right: 50px;
+    margin-left: -100px;
+    float: left;
+    width: min-content;
+    clear: both;
+  }
+
   .one {
     flex: 1 1 auto;
   }
@@ -394,13 +460,8 @@ a:hover {
     width: 380px;
   }
 
-  .row {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    overflow-y: hidden;
-    /* padding-bottom: 45px; */
-    max-height: 350px;
+  .expanded .two {
+    width:unset;
   }
 
   #wiki {
@@ -415,6 +476,38 @@ a:hover {
   .text-container {
     max-height: unset;
   }
+}
+
+figure > a:hover, figure-inline > a:hover {
+  box-shadow: none;
+}
+
+figcaption {
+  font-size: 0.85em;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+tr {
+  background: none;
+  border-bottom: 1px solid var(--main-modal-color);
+}
+
+td {
+  padding: 5px;
+}
+
+.excerpt table {
+  display:none;
 }
 
 .text-container {
@@ -581,7 +674,7 @@ i.wikiglyph {
 .list {
   columns: 350px;
   margin: 0 10px 0;
-  background: var(--main-modal-color);
+  /*background: var(--main-modal-color);*/
   font-size: 0.9em;
   padding: 15px 10px;
 }
@@ -857,5 +950,14 @@ i.wikiglyph {
 .thumb-image {
   height: 13rem;
   object-fit: cover;
+}
+
+.menu-link {
+    color: var(--main-red) !important;
+    font-weight: bold;
+}
+
+.menu-link:hover {
+    color:white !important;
 }
 </style>

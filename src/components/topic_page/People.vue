@@ -25,7 +25,7 @@
 				<div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.person.value)" >
-            	<span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b> <span v-if="item.outLabel"><i>{{ item.outLabel }}</i></span> {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
+            	<span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
             </a>
             </div>
         </div>

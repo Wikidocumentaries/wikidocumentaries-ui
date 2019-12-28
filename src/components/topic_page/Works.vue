@@ -99,11 +99,18 @@ export default {
         let sparql;
         sparql = `
 SELECT ?work ?workLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; SEPARATOR=", ") as ?typeLabel) (GROUP_CONCAT(?collectionLabel_) as ?collectionLabel) (SAMPLE(?copyrightLabel) as ?copyrightLabel) (SAMPLE(?publisherLabel) as ?publisherLabel) (SAMPLE(?coordinates) as ?coordinates) (GROUP_CONCAT(?address_) as ?address) (GROUP_CONCAT(DISTINCT ?municipalityLabel_) as ?municipalityLabel) WHERE {
+{
+  {
+    ?work ?p wd:Q216904.
     ?pi wdt:P1647* wd:P170 .
     ?pi wikibase:directClaim ?p .
-  ?pi rdfs:label ?piLabel .
+    ?pi rdfs:label ?piLabel .
+   }
+  UNION
+  { wd:Q216904 wdt:P800 ?work .
+    }
+  }
   FILTER(LANG(?piLabel)="fi") .
-    ?work ?p wd:Q216904.
     OPTIONAL { ?work wdt:P18 ?image. }
     OPTIONAL { ?work wdt:P31 ?type. 
              ?type rdfs:label ?typeLabel_ .

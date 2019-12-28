@@ -7,6 +7,8 @@
             <div class="search-results">
                 <div :class="[shouldShowMenu ? 'dropdown-content' : 'dropdown-content-hide']">
                     <router-link v-for="(topic, i) in topics" :key="topic.localId" :class="{ 'is-active': i === arrowCounter }" :to="topic.internalLink"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></router-link>
+                    <!--a slot="menu-link" :href="showMoreLink" class="menu-link" target="_blank">{{ $t('LandingPage.showMore') }}</a-->
+                    <a slot="menu-link" :href="newLink" class="menu-link" target="_blank">{{ $t('LandingPage.createNew') }}</a>
                 </div>
             </div>
         </form>
@@ -34,6 +36,12 @@ export default {
     },
     created: function () {
         this.debounceFindTopics = debounce(this.findTopics, 500);
+    },
+    computed: {
+        newLink() {
+            let url="https://www.wikidata.org/w/index.php?title=Special:NewItem&uselang=" + this.$i18n.locale;
+            return url;
+        }
     },
     methods: {
         showMenu(boolean) {

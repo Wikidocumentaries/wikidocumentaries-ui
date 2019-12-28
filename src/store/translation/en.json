@@ -3,6 +3,8 @@
         "search": "Search",
         "searchInputPlaceHolder": "Find a topic or create a new topic",
         "searchInputSearchOnly": "Find a topic",
+        "showMore": "Show more items",
+        "createNew": "Create new item",
         "intro": "Wikidocumentaries is a wiki for small history - a place to pull together traces of history and turn them into stories. Start by searching for a topic of interest!",
         "titleDescription": "What is Wikidocumentaries?",
         "description": "Wikidocumentaries is a maker space for citizen historians. It combines information about topics – people, places, buildings, events and more. You can navigate between the topics by following any recorded connection such as family relations, locations, creators and creations or affiliation. A topic is illustrated with images and maps from connected museums, archives and libraries. In Wikidocumentaries, it will be possible to correct existing information and add new topics, bring in your own images and recollections, and use all the material for your own purposes.",
@@ -261,7 +263,11 @@
         },
         "Partof": {
             "headerTitle": "Context",
-            "intro": "This topic is part of the following topics in some way. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
+            "intro": "This topic is part of or adjoining the following topics. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
+        },
+        "Twins": {
+            "headerTitle": "Twin cities",
+            "intro": "Twin towns, sister cities, twinned municipalities and other localities that have a partnership or cooperative agreement, either legally or informally acknowledged by their governments. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Affiliations": {
             "headerTitle": "Affiliations",
@@ -373,6 +379,7 @@
             "digitalCopy": "Digital copy",
             "publishingPlatform": "Publishing platform",
             "platformId": "ID",
+            "provider": "Content provider",
             "imageInfoPage": "Image info page",
             "imageDimensions": "Image dimensions",
             "fileSize": "File size",
