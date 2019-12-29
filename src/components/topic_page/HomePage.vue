@@ -29,6 +29,7 @@
     <TopicMap id="topicMap"></TopicMap>
     <TopicTimeline id="topicTimeline"></TopicTimeline>
     <EventList id="events"></EventList>
+    <Similar id="similar"></Similar>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
@@ -55,6 +56,7 @@ import Depicts from "@/components/topic_page/Depicts";
 import Parts from "@/components/topic_page/Parts";
 import Twins from "@/components/topic_page/Twins";
 import Affiliations from "@/components/topic_page/Affiliations";
+import Similar from "@/components/topic_page/Similar";
 import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
@@ -84,7 +86,8 @@ export default {
     Depicts,
     Twins,
     Footer,
-    Affiliations
+    Affiliations,
+    Similar
   },
   computed: {},
   mounted: {

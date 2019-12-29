@@ -702,8 +702,6 @@ i.wikiglyph {
 .list {
   columns: 350px;
   margin: 0 10px 0;
-  /*background: var(--main-modal-color);*/
-  font-size: 0.9em;
   padding: 15px 10px;
 }
 

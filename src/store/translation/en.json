@@ -277,6 +277,10 @@
             "headerTitle": "Awards",
             "intro": "Nominations and awards of the topic of this page."
         },
+        "Similar": {
+            "headerTitle": "Similat topics",
+            "intro": "Find topics that have some common key characteristics with this topic.."
+        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",
