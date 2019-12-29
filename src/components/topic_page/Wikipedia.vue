@@ -177,7 +177,7 @@ export default {
   font-size: 2em;
 }
 
-.wiki-html >>> .h3, caption {
+.wiki-html >>> .h3 {
   font-size: 1.5em;
 }
 

@@ -362,18 +362,7 @@ a:hover {
   display:none;
 }
 
-@media all and (max-width: 499px) {
-  figure {
-    margin: 1em 0;
-  }
-
-  figure > a > img {
-  width: 100%;
-  height: auto;
-  }
-}
-
-@media all and (max-width: 979px) {
+@media all and (max-width: 992px) {
   .column {
     display: block;
   }
@@ -393,6 +382,26 @@ a:hover {
 
   .text-container {
     max-height: 260px;
+  }
+
+  figure {
+    margin-right: 40px;
+    margin-left: 20px;
+    float: left;
+    width: min-content;
+    clear: both;
+  }
+}
+
+@media all and (max-width: 600px) {
+  figure {
+    margin: 1em 0;
+    width: 100%;
+  }
+
+  figure > a > img {
+  width: 100%;
+  height: auto;
   }
 }
 
@@ -487,6 +496,8 @@ figcaption {
 }
 
 table {
+  background: none !important;
+  border:0 !important;
   border-spacing: 0;
   width: 100%;
   border-collapse: collapse;
@@ -498,12 +509,23 @@ caption {
 }
 
 tr {
-  background: none;
+  background: none !important;
   border-bottom: 1px solid var(--main-modal-color);
 }
 
-td {
+td, th {
+  background: none !important;
   padding: 5px;
+}
+
+td figure {
+  margin-right:0;
+  margin-left:0;
+}
+
+td figure > a > img {
+  width: initial;
+  height: auto;
 }
 
 .excerpt table {
@@ -513,6 +535,11 @@ td {
 .text-container {
   overflow: hidden;
   padding-bottom: 45px;
+}
+
+.mw-reflink-text {
+  font-size: 70%;
+  vertical-align: top;
 }
 
 .dark {
@@ -646,6 +673,7 @@ i.wikiglyph {
 .gallery-item > img {
   height: 100%;
   max-width: fit-content;
+  background: white;
 }
 
 .gallery-item:hover .gallery-image {
@@ -831,11 +859,32 @@ i.wikiglyph {
   }
 }
 
-.header-coa {
+.header-marks {
   position: absolute;
   right: 0;
-  height: 35%;
-  margin: 20px;
+  display: flex;
+  align-items: start;
+  margin: 20px 20px 0 0;
+}
+
+.header-coa {
+  max-height: 35vh;
+  max-width: 200px;
+  margin-left: 20px;
+}
+
+.header-neg {
+  filter: invert(100%);
+  max-height: 35vh;
+  max-width: 200px;
+  margin-left: 20px;
+}
+
+.header-logo {
+  filter: drop-shadow(0 0 15px rgba(255,255,255,1)) drop-shadow(0 0 20px rgba(255,255,255,1)) drop-shadow(0 0 40px rgba(255,255,255,1));
+  max-height: 35vh;
+  max-width: 200px;
+  margin-left: 20px;
 }
 
 .bottomshade {

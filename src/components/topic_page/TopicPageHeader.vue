@@ -1,31 +1,34 @@
 <template>
     <div :class="( headerImage ? 'header' : 'header-compact')">
-        <a :href="getCoaURL"><img :src="coatOfArms" class="header-coa" /></a>
         <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
-        <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
         <div class="header-contents">
-        <div id="shade" :class="(headerImage ? 'bottomshade' : 'noshade')">
-            <div class="titlebox">
-                <div class="titlecont">
-                    <div class="title">{{ wikidocumentaries.title }}</div>
-                    <!--span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-check wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleApproveText') }}</span>
+            <div id="marks" class="header-marks">
+                <img :src="logoImage" class="header-logo" />
+                <img :src="signature" class="header-neg" />
+                <a :href="getCoaURL"><img :src="coatOfArms" class="header-coa" /></a>
+            </div>
+            <div id="shade" :class="(headerImage ? 'bottomshade' : 'noshade')">
+                <div class="titlebox">
+                    <div class="titlecont">
+                        <div class="title">{{ wikidocumentaries.title }}</div>
+                        <!--span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-check wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleApproveText') }}</span>
+                        </div>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-edit wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                        </div-->
                     </div>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-edit wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
-                    </div-->
-                </div>
-                <div class="subtitlecont">
-                    <div class="subtitle">{{ wikidocumentaries.description }}</div>
-                    <!--span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-check wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleApproveText') }}</span>
+                    <div class="subtitlecont">
+                        <div class="subtitle">{{ wikidocumentaries.description }}</div>
+                        <!--span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-check wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleApproveText') }}</span>
+                        </div>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-edit wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                        </div-->
                     </div>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-edit wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
-                    </div-->
-                </div>
                 </div>
             </div>
         </div>
@@ -87,6 +90,26 @@ export default {
                 if (statements[index].id == 'P237') {
                     coaartid = statements[index].values[0].id;
                     return "/" + coaartid + "?language=" + this.$i18n.locale;
+                }
+            }
+        },
+        logoImage () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let logoImg;
+            for (var index in statements) {
+                if (statements[index].id == 'P154') {
+                    logoImg = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+logoImg;
+                }
+            }
+        },
+        signature () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let signature;
+            for (var index in statements) {
+                if (statements[index].id == 'P109') {
+                    signature = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+signature;
                 }
             }
         }
