@@ -24,7 +24,7 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="startdate || enddate">–</span>{{ item.enddate }}</div>
+            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="item.startdate || item.enddate">–</span>{{ item.enddate }}</div>
           </div>
           <div>
             <div class="left-align">
@@ -120,12 +120,14 @@ SELECT ?item ?itemLabel ?startdate ?enddate (SAMPLE(?image) AS ?image) WHERE {
   VALUES ?type { wd:Q23413 } .
   VALUES ?country { wd:Q191 } .
   OPTIONAL { 
-    ?item ?start ?startdate .
+    ?item ?start ?startd .
     VALUES ?start { wdt:P580 wdt:P571 wdt:P580 wdt:P569 } .
+    BIND(STR(YEAR(?startd)) AS ?startdate) .
   }
   OPTIONAL { 
-    ?item ?end ?enddate 
+    ?item ?end ?endd . 
     VALUES ?end { wdt:P582 wdt:P576 wdt:P2669 wdt:P570} .
+    BIND(STR(YEAR(?endd)) AS ?enddate) .
   }
   OPTIONAL { 
     ?item wdt:P18 ?image .
