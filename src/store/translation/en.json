@@ -433,6 +433,8 @@
             "title": "Sort topics",
             "tooltip": "Sort topics",
             "optionTime": "By time",
+            "optionStart": "By start time",
+            "optionEnd": "By end time",
             "optionAlpha": "Alphabetically",
             "optionTitleAlpha": "By title alphabetically",
             "optionCreatorAlpha": "By creator alphabetically",

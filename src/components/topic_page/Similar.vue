@@ -22,15 +22,16 @@
           :to="getItemURL(item.item.value)"
           class="gallery-item"
         >
-          <img :src="getImageLink(item.image)" class="gallery-image">
+          <img :src="getImageLink(item.image)" class="gallery-image" />
           <div class="thumb-image-info">
-            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="item.startdate || item.enddate">–</span>{{ item.enddate }}</div>
+            <div class="gallery-title">{{ item.item.label }}</div>
+            <div class="thumb-credit">
+              {{ item.item.description}} {{ item.startdate }}<span v-if="item.startdate || item.enddate">–</span>{{ item.enddate }}
+            </div>
           </div>
           <div>
-            <div class="left-align">
-            </div>
-            <div class="right-align">
-            </div>
+            <div class="left-align"></div>
+            <div class="right-align"></div>
           </div>
         </router-link>
       </div>
@@ -85,8 +86,12 @@ export default {
           text: "menus.sortMenu.optionAlpha"
         },
         {
-          id: SORT_ACTIONS.BY_TIME,
-          text: "menus.sortMenu.optionTime"
+          id: SORT_ACTIONS.BY_START,
+          text: "menus.sortMenu.optionStart"
+        },
+        {
+          id: SORT_ACTIONS.BY_END,
+          text: "menus.sortMenu.optionEnd"
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
@@ -106,15 +111,28 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let countryid;
     let typeid = this.$store.state.wikidocumentaries.wikidata.instance_of.id;
+    let countryvar = "P17";
+    let typevar = "P31";
     for (var index in statements) {
-      if (statements[index].id == 'P17') {
+      if (typeid == "Q5") {
+        typevar = "P106";
+        countryvar = "P27";
+        if (statements[index].id == typevar) {
+          typeid = statements[index].values[0].id;
+        }
+        if (statements[index].id == countryvar) {
           countryid = statements[index].values[0].id;
+        }
+      } else {
+        if (statements[index].id == countryvar) {
+          countryid = statements[index].values[0].id;
+        }
       }
     }
     console.log(countryid, typeid);
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?startdate ?enddate (SAMPLE(?image) AS ?image) WHERE {
+SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?startdate) AS ?startdate) (SAMPLE(?enddate) AS ?enddate) (SAMPLE(?image) AS ?image) WHERE {
   ?item wdt:P31 ?type .
   ?item wdt:P17 ?country .
   VALUES ?type { wd:Q23413 } .
@@ -140,10 +158,12 @@ SELECT ?item ?itemLabel ?startdate ?enddate (SAMPLE(?image) AS ?image) WHERE {
   #VALUES ?profession { wdt:Q23413 } .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi". }
 }
-GROUP BY ?item ?itemLabel ?startdate ?enddate
+GROUP BY ?item ?itemLabel ?itemDescription
         `
       .replace(/Q23413/g, typeid)
       .replace(/Q191/g, countryid)
+      .replace(/P31/g, typevar)
+      .replace(/P17/g, countryvar)
       .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
@@ -167,8 +187,11 @@ GROUP BY ?item ?itemLabel ?startdate ?enddate
         case SORT_ACTIONS.BY_LABEL:
           currentSort = ["item.label"];
           break;
-        case SORT_ACTIONS.BY_TIME:
-          currentSort = ["time", "item.label"];
+        case SORT_ACTIONS.BY_START:
+          currentSort = ["startdate", "item.label"];
+          break;
+        case SORT_ACTIONS.BY_END:
+          currentSort = ["enddate", "item.label"];
           break;
         case SORT_ACTIONS.SORT_REVERSE:
           if (currentSort[0].charAt(0) == "-")
@@ -211,8 +234,8 @@ GROUP BY ?item ?itemLabel ?startdate ?enddate
 
 const selectResults = lcl => {
   let filteredResults = fullResults;
-  if (currentSort[0].includes("time"))
-    filteredResults = filteredResults.filter(x => x.time);
+	if (currentSort[0].includes("startdate")) filteredResults = filteredResults.filter(x => x.startdate);
+	if (currentSort[0].includes("enddate")) filteredResults = filteredResults.filter(x => x.enddate);
   if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
     if (filteredResults.find(x => x.image)) {
       // If GALLERY and at least one image

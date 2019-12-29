@@ -79,19 +79,19 @@ export default {
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
-          text: "topic_page.Locations.sortMenu.optionAlpha"
+          text: "menus.sortMenu.optionAlpha"
         },
         {
           id: SORT_ACTIONS.BY_TIME,
-          text: "topic_page.Locations.sortMenu.optionTime"
+          text: "menus.sortMenu.optionTime"
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
-          text: "topic_page.Locations.sortMenu.optionRev"
+          text: "menus.sortMenu.optionRev"
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
-          text: "topic_page.Locations.sortMenu.optionClear"
+          text: "menus.sortMenu.optionClear"
         }
       ]
     };
