@@ -26,7 +26,7 @@
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
             <div class="thumb-credit over">{{ item.relation }}</div>
-            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="startdate || enddate">–</span>{{ item.enddate }}</div>
+            <div class="gallery-title">{{ item.item.label }} {{ item.startdate }}<span v-if="item.startdate || item.enddate">–</span>{{ item.enddate }}</div>
             <div class="thumb-credit">{{ item.typeLabel }}</div>
           </div>
           <!--div class="thumb-image-header"-->
