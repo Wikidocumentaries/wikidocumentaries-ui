@@ -110,15 +110,21 @@ export default {
     var title = this.$store.state.wikidocumentaries.title;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let countryid;
-    let typeid = this.$store.state.wikidocumentaries.wikidata.instance_of.id;
+    let typeid = "wd:" + this.$store.state.wikidocumentaries.wikidata.instance_of.id;
     let countryvar = "P17";
     let typevar = "P31";
     for (var index in statements) {
-      if (typeid == "Q5") {
+      if (typeid == "wd:Q5") {
         typevar = "P106";
         countryvar = "P27";
         if (statements[index].id == typevar) {
-          typeid = statements[index].values[0].id;
+          typeid = "";
+          let values = statements[index].values;
+          for (var value in values) {
+            typeid += "wd:" + values[value].id + " ";
+
+          }
+/*           typeid = statements[index].values[0].id; */
         }
         if (statements[index].id == countryvar) {
           countryid = statements[index].values[0].id;
@@ -129,7 +135,6 @@ export default {
         }
       }
     }
-    console.log(countryid, typeid);
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?startdate) AS ?startdate) (SAMPLE(?enddate) AS ?enddate) (SAMPLE(?image) AS ?image) WHERE {
@@ -153,18 +158,16 @@ SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?startdate) AS ?startdate) (SAM
   #?item wdt:P131 ?administrative .
   #?item wdt:P27 ?nationality .
   #?item wdt:P106 ?profession .
-  #VALUES ?administrative { wdt:Q23413 } .
-  #VALUES ?nationality { wdt:Q23413 } .
-  #VALUES ?profession { wdt:Q23413 } .
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi". }
 }
 GROUP BY ?item ?itemLabel ?itemDescription
         `
-      .replace(/Q23413/g, typeid)
+      .replace(/wd:Q23413/g, typeid)
       .replace(/Q191/g, countryid)
       .replace(/P31/g, typevar)
       .replace(/P17/g, countryvar)
       .replace(/fi/g, this.$i18n.locale);
+/*     console.log(sparql); */
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)

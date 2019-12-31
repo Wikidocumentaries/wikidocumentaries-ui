@@ -658,6 +658,7 @@ i.wikiglyph {
 
 .gallery-item {
   height: 100%;
+  width: fit-content;
   margin-right: 10px;
   box-sizing: border-box;
   position: relative;
