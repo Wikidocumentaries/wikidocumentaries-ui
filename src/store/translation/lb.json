@@ -147,8 +147,14 @@
 		"Parts": {
 			"headerTitle": "Deeler"
 		},
+		"Partof": {
+			"headerTitle": "Kontext"
+		},
 		"Affiliations": {
 			"headerTitle": "Affiliatiounen"
+		},
+		"Awards": {
+			"headerTitle": "Auszeechnungen"
 		},
 		"Works": {
 			"headerTitle": "Wierker",

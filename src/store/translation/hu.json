@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"R-Joe",
-			"Misibacsi"
+			"Misibacsi",
+			"Csega"
 		]
 	},
 	"LandingPage": {
@@ -107,6 +108,9 @@
 			"languageMenu": {
 				"translateArticleText": "Szócikk lefordítása angol nyelvre"
 			}
+		},
+		"Awards": {
+			"headerTitle": "Díjak"
 		},
 		"People": {
 			"sortMenuTitle": "Rendezés",

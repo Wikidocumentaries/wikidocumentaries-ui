@@ -11,6 +11,8 @@
 		"search": "Pesquisar",
 		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico",
 		"searchInputSearchOnly": "Encontre um tópico",
+		"showMore": "Mostrar mais itens",
+		"createNew": "Criar um novo item",
 		"intro": "Wikidocumentários é uma wiki para a pequena história - um lugar para juntar traços de história e transformá-los em histórias. Comece procurando por um tópico de interesse!",
 		"titleDescription": "O que são Wikidocumentários?",
 		"description": "Wikidocumentários é um espaço de criação para historiadores cidadãos. Ele combina informações sobre tópicos - pessoas, lugares, edifícios, eventos e muito mais. Você pode navegar entre os tópicos seguindo qualquer conexão registrada, como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conectados. Nos Wikidocumentários, será possível corrigir as informações existentes e adicionar novos tópicos, trazer suas próprias imagens e lembranças e usar todo o material para seus próprios propósitos.",
@@ -267,7 +269,11 @@
 		},
 		"Partof": {
 			"headerTitle": "Contexto",
-			"intro": "Este tópico faz parte dos seguintes tópicos, de alguma forma. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+			"intro": "Este tópico faz parte ou é adjacente aos seguintes tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+		},
+		"Twins": {
+			"headerTitle": "Cidades gêmeas",
+			"intro": "Cidades gêmeas, cidades irmãs, municípios geminados e outras localidades que tenham um acordo de parceria ou cooperação, reconhecido legal ou informalmente por seus governos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
 		},
 		"Affiliations": {
 			"headerTitle": "Afiliações",
@@ -276,6 +282,10 @@
 		"Awards": {
 			"headerTitle": "Prémios",
 			"intro": "Nomeações e prêmios do tópico desta página."
+		},
+		"Similar": {
+			"headerTitle": "Tópicos similares",
+			"intro": "Encontre tópicos que possuem algumas características-chave comuns com este tópico."
 		},
 		"Works": {
 			"headerTitle": "Trabalho",
@@ -379,6 +389,7 @@
 			"digitalCopy": "Copia digital",
 			"publishingPlatform": "Plataforma de publicação",
 			"platformId": "ID",
+			"provider": "Provedor de conteúdos",
 			"imageInfoPage": "Página de informações da imagem",
 			"imageDimensions": "Dimensões da imagem",
 			"fileSize": "Tamanho do arquivo",
@@ -428,6 +439,8 @@
 			"title": "Ordenar tópicos",
 			"tooltip": "Ordenar tópicos",
 			"optionTime": "Por tempo",
+			"optionStart": "Por hora de início",
+			"optionEnd": "Por hora de término",
 			"optionAlpha": "Alfabeticamente",
 			"optionTitleAlpha": "Por título em ordem alfabética",
 			"optionCreatorAlpha": "Por criador em ordem alfabética",

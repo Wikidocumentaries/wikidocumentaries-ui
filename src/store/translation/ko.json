@@ -10,6 +10,8 @@
 		"search": "검색",
 		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기",
 		"searchInputSearchOnly": "주제 찾기",
+		"showMore": "항목 더 보기",
+		"createNew": "새 항목 만들기",
 		"titleStatus": "상태",
 		"more": "더 읽어보기",
 		"titleTopics": "주제",
@@ -165,6 +167,9 @@
 		"Partof": {
 			"headerTitle": "다음의 일부:"
 		},
+		"Similar": {
+			"headerTitle": "비슷한 주제"
+		},
 		"Works": {
 			"sortMenuTitle": "정렬",
 			"sortMenuOptionTime": "시간순",
@@ -232,6 +237,7 @@
 			"photographer": "촬영자",
 			"addPhotographData": "사진에 관한 정보 추가",
 			"platformId": "ID",
+			"provider": "콘텐츠 제공자",
 			"imageInfoPage": "이미지 정보 페이지",
 			"imageDimensions": "이미지 크기",
 			"fileSize": "파일 크기",

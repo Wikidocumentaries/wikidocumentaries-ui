@@ -223,6 +223,8 @@
 			"sortMenuOptionDist": "Por distância",
 			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
+			"facetMenuTitle": "Dividir por",
+			"facetMenuTooltip": "Dividir as obras por diferentes critérios",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Coleção",
 			"facetMenuOptionCity": "Localização",
@@ -243,12 +245,16 @@
 			"sortMenuOptionLast": "Por sobrenome",
 			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
+			"facetMenuTitle": "Dividir por",
+			"facetMenuTooltip": "Dividir as pessoas por aspetos diferentes",
 			"facetMenuOptionProfession": "Profissão",
+			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Sexo"
 		}
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"caption": "Legenda",
 			"addCaption": "Adicionar legenda",
 			"description": "Descrição",
 			"addDescription": "Adicionar descrição",
@@ -256,6 +262,9 @@
 			"creatorUnknown": "Desconhecido",
 			"addCreator": "Adicionar criador",
 			"removeCreator": "Remover criador",
+			"dateDepicted": "Data de retrato",
+			"addDateDepicted": "Adicionar data de retrato",
+			"removeDateDepicted": "Remover data de retrato",
 			"dateCreated": "Data de criação",
 			"addDateCreated": "Adicionar data de criação",
 			"removeDateCreated": "Remover data de criação",
@@ -289,10 +298,18 @@
 	"general": {
 		"menus": {
 			"languageMenuTitle": "Escolher língua",
-			"myLanguagesItem": "As minhas línguas"
+			"languageMenuTooltip": "Escolher a sua língua",
+			"myLanguagesItem": "As minhas línguas",
+			"languageMenuTranslate": "Traduzir este artigo para português"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traduzir para português"
+		},
+		"languages": {
+			"fi": "Finlandês",
+			"en": "Inglês",
+			"sv": "Sueco",
+			"es": "Espanhol"
 		}
 	}
 }

@@ -9,6 +9,8 @@
 		"search": "搜尋",
 		"searchInputPlaceHolder": "尋找主題或建立新的主題",
 		"searchInputSearchOnly": "尋找主題",
+		"showMore": "顯示更多項目",
+		"createNew": "建立新項目",
 		"intro": "Wikidocumentaries 是微歷史方面的 wiki 網站 — 一個將歷史追蹤給集合在一起，並轉換成敘述內容的地方。歡迎透過搜尋您所感興趣的主題來開始！",
 		"titleDescription": "什麼是 Wikidocumentaries？",
 		"description": "Wikidocumentaries 是個讓公眾史學家利用的創作空間。它結合了有關主題的資訊 — 人物、地點、建築、事件等等。您可以透過以下任何紀錄連接來在主題之間穿越，例如家族關係、創作者、創作內容或是隸屬。主題會以圖片以及來自於關聯博物館、存檔、或圖書館的地圖來說明。在 Wikidocumentaries 裡，可做出糾正現有資訊與添加新主題、帶入您個人持有的圖片和記事，以及使用所有素材在您個人的目的上。",
@@ -265,7 +267,11 @@
 		},
 		"Partof": {
 			"headerTitle": "語境",
-			"intro": "此主題在某些方式是以下主題的部份，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視主題。"
+			"intro": "此主題是以下主題的部份、或與其主題相關，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視主題。"
+		},
+		"Twins": {
+			"headerTitle": "孿生城市",
+			"intro": "被政府合法或是非正式承認具有合夥或是合作協議的孿生城鎮、姊妹市、孿生自治市、其它地區。您可以按時間、或是名稱來排序它們。要查看全部、且包含不帶有圖片的主題，您必須以清單方式來檢視主題。"
 		},
 		"Affiliations": {
 			"headerTitle": "隸屬",
@@ -274,6 +280,10 @@
 		"Awards": {
 			"headerTitle": "獎項",
 			"intro": "此頁面主題的提名與獎項。"
+		},
+		"Similar": {
+			"headerTitle": "相似主題",
+			"intro": "查找包含有與此主題一些共同關鍵特徵的主題。"
 		},
 		"Works": {
 			"headerTitle": "作品",
@@ -377,6 +387,7 @@
 			"digitalCopy": "數位複製",
 			"publishingPlatform": "出版平台",
 			"platformId": "ID",
+			"provider": "內容提供者",
 			"imageInfoPage": "圖片資訊頁面",
 			"imageDimensions": "圖片尺寸",
 			"fileSize": "檔案大小",
@@ -426,6 +437,8 @@
 			"title": "排序主題",
 			"tooltip": "排序主題",
 			"optionTime": "按時間",
+			"optionStart": "按開始時間",
+			"optionEnd": "按結束時間",
 			"optionAlpha": "按字母順序",
 			"optionTitleAlpha": "按標題字母順序",
 			"optionCreatorAlpha": "按創作者名稱字母順序",

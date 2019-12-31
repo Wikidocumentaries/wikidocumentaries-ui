@@ -13,6 +13,8 @@
 		"search": "Buscar",
 		"searchInputPlaceHolder": "Encuentre un tema o cree uno nuevo",
 		"searchInputSearchOnly": "Buscar un tema",
+		"showMore": "Mostrar más elementos",
+		"createNew": "Crear un elemento nuevo",
 		"intro": "Wikidocumentales es una wiki con poca historia; un lugar donde tomar unos pequeños trazos de historia y convertirlos en cuentos. ¡Empieza por buscar un tema de interés!",
 		"titleDescription": "¿Qué es Wikidocumentales?",
 		"titleStatus": "Estado",
@@ -223,6 +225,15 @@
 			},
 			"showAll": "Todo"
 		},
+		"Partof": {
+			"headerTitle": "Contexto"
+		},
+		"Awards": {
+			"headerTitle": "Premios"
+		},
+		"Similar": {
+			"headerTitle": "Temas similares"
+		},
 		"Works": {
 			"headerTitle": "Obras",
 			"sortMenuTitle": "Ordenar",
@@ -293,6 +304,7 @@
 			"photograph": "Fotografía",
 			"digitalCopy": "Copia digitar",
 			"platformId": "Identificador",
+			"provider": "Proveedor de contenidos",
 			"imageInfoPage": "Página de información de la imagen",
 			"imageDimensions": "Dimensiones de imagen",
 			"fileSize": "Tamaño de archivo",

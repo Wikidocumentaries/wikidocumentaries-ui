@@ -12,6 +12,8 @@
 		"search": "Ara",
 		"searchInputPlaceHolder": "Bir konu bul veya yeni bir konu oluştur",
 		"searchInputSearchOnly": "Konu bul",
+		"showMore": "Daha fazla öğe göster",
+		"createNew": "Yeni öğe oluştur",
 		"intro": "Wikidocumentaries, küçük tarih için bir wikidir - tarihin izlerini bir araya getirip hikayelere dönüştürmek için bir yer. Bir ilgi konusu arayarak başlayın!",
 		"titleDescription": "Wikidocumentaries nedir?",
 		"description": "Wikidocumentaries, vatandaş tarihçiler için yapıcı bir alandır. İnsanlar, yerler, binalar, etkinlikler ve daha fazlası - konular hakkındaki bilgileri birleştirir. Aile ilişkileri, konumlar, yaratıcılar ve kreasyonlar veya bağlılıklar gibi kayıtlı bağlantıları izleyerek konular arasında gezinebilirsiniz. Bağlantılı müzelerden, arşivlerden ve kütüphanelerden görüntüler ve haritalar içeren bir konu gösterilmektedir. Wikidocumentaries'de mevcut bilgileri düzeltmek ve yeni konular eklemek, kendi resimlerinizi ve hatırlamalarınızı getirmek ve tüm materyalleri kendi amaçlarınız için kullanmak mümkün olacak.",
@@ -268,7 +270,11 @@
 		},
 		"Partof": {
 			"headerTitle": "Bağlam",
-			"intro": "Bu konu, bir şekilde aşağıdaki konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+			"intro": "Bu konu, aşağıdaki konuların bir parçası veya bitişiğidir. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+		},
+		"Twins": {
+			"headerTitle": "İkiz şehirler",
+			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükümetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
 		},
 		"Affiliations": {
 			"headerTitle": "Bağlantılar",
@@ -277,6 +283,10 @@
 		"Awards": {
 			"headerTitle": "Ödüller",
 			"intro": "Bu sayfanın konusunun adaylıkları ve ödülleri."
+		},
+		"Similar": {
+			"headerTitle": "Benzer konular",
+			"intro": "Bu konuyla ilgili bazı ortak anahtar özelliklere sahip konuları bulun."
 		},
 		"Works": {
 			"headerTitle": "Çalışanlar",
@@ -380,6 +390,7 @@
 			"digitalCopy": "Dijital kopya",
 			"publishingPlatform": "Platform yayınlıyor",
 			"platformId": "Kimlik",
+			"provider": "İçerik sağlayıcı",
 			"imageInfoPage": "Resim bilgisi sayfası",
 			"imageDimensions": "Görüntü boyutları",
 			"fileSize": "Dosya boyutu",
@@ -429,6 +440,8 @@
 			"title": "Konuları sırala",
 			"tooltip": "Konuları sırala",
 			"optionTime": "Saat olarak",
+			"optionStart": "Başlangıç zamanına göre",
+			"optionEnd": "Bitiş zamanına göre",
 			"optionAlpha": "Alfabetik olarak",
 			"optionTitleAlpha": "Alfabetik olarak başlığa göre",
 			"optionCreatorAlpha": "Yaratıcı tarafından alfabetik olarak",
