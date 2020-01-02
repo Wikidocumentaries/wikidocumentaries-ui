@@ -11,6 +11,7 @@
 		"search": "Sök",
 		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne",
 		"searchInputSearchOnly": "Finn ett ämne",
+		"createNew": "Skapa nytt objekt",
 		"titleDescription": "Vad är Wikidocumentaries?",
 		"titleStatus": "Status",
 		"moreBelow": "Läs mer nedan",
@@ -237,10 +238,16 @@
 			"headerTitle": "Delar"
 		},
 		"Partof": {
-			"headerTitle": "Del av"
+			"headerTitle": "Sammanhang"
 		},
 		"Affiliations": {
 			"headerTitle": "Anknytning"
+		},
+		"Awards": {
+			"headerTitle": "Utmärkelser"
+		},
+		"Similar": {
+			"headerTitle": "Liknande ämnen"
 		},
 		"Works": {
 			"headerTitle": "Verk",

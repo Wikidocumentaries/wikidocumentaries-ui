@@ -196,6 +196,9 @@
 		"Partof": {
 			"headerTitle": "Kontekst"
 		},
+		"Similar": {
+			"headerTitle": "Lignende emner"
+		},
 		"Works": {
 			"headerTitle": "Værker",
 			"sortMenuTitle": "Sorter",
@@ -291,6 +294,8 @@
 			"title": "Sorter emner",
 			"tooltip": "Sorter emner",
 			"optionTime": "Efter tid",
+			"optionStart": "Efter starttidspunkt",
+			"optionEnd": "Efter sluttidspunkt",
 			"optionAlpha": "Alfabetisk",
 			"optionTitleAlpha": "Efter titel alfabetisk",
 			"optionCreatorAlpha": "Efter skaber alfabetisk",
