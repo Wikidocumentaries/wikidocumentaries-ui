@@ -1,13 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Qllach"
 		]
 	},
 	"LandingPage": {
 		"search": "Cerca",
 		"searchInputPlaceHolder": "Trobeu un tema o creeu-ne un de nou",
 		"searchInputSearchOnly": "Trobeu un tema",
+		"showMore": "Mostra més elements",
+		"createNew": "Crea un element nou",
 		"titleStatus": "Estat",
 		"titleTopics": "Temes",
 		"titleMedia": "Multimèdia",
@@ -92,6 +95,9 @@
 		"Parts": {
 			"headerTitle": "Parts"
 		},
+		"Similar": {
+			"headerTitle": "Temes similars"
+		},
 		"Works": {
 			"sortMenuTooltip": "Ordena els elements",
 			"sortMenuOptionAlpha": "Per ordre alfabètic",
@@ -139,11 +145,12 @@
 			"inscriptions": "Inscripcions",
 			"measurements": "Mesures",
 			"copyright": "Drets d’autor",
-			"work": "Obra",
+			"work": "Obra representada en la imatge",
 			"photograph": "Fotografia",
 			"image": "Imatge",
 			"digitalCopy": "Còpia digital",
 			"platformId": "Identificador",
+			"provider": "Proveïdor de continguts",
 			"imageDimensions": "Dimensions de la imatge",
 			"fileSize": "Mida del fitxer",
 			"fileFormat": "Format de fitxer",

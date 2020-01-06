@@ -10,6 +10,8 @@
 		"search": "Pesquisar",
 		"searchInputPlaceHolder": "Encontrar um tópico ou criar um tópico novo",
 		"searchInputSearchOnly": "Encontrar um tópico",
+		"showMore": "Mostrar mais elementos",
+		"createNew": "Criar um elemento novo",
 		"intro": "Wikidocumentários é uma wiki para a pequena história - um local para reunir vestígios históricos e transformá-los em histórias. Comece por procurar um tema de interesse!",
 		"titleDescription": "O que são Wikidocumentários?",
 		"titleStatus": "Estado",
@@ -211,8 +213,20 @@
 		"Parts": {
 			"headerTitle": "Partes"
 		},
+		"Partof": {
+			"headerTitle": "Contexto"
+		},
+		"Twins": {
+			"headerTitle": "Cidades geminadas"
+		},
 		"Affiliations": {
 			"headerTitle": "Afiliações"
+		},
+		"Awards": {
+			"headerTitle": "Prémios"
+		},
+		"Similar": {
+			"headerTitle": "Tópicos semelhantes"
 		},
 		"Works": {
 			"headerTitle": "Obras",
@@ -282,7 +296,9 @@
 			"removeGenre": "Remover género",
 			"addTopic": "Adicionar tópico",
 			"removeTopic": "Remover tópico",
-			"locationMap": "Localização no mapa"
+			"locationMap": "Localização no mapa",
+			"publishingPlatform": "Plataforma de publicação",
+			"provider": "Fornecedor de conteúdos"
 		}
 	},
 	"map_search_page": {
