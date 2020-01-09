@@ -8,7 +8,8 @@
 			"VIGNERON",
 			"Urhixidur",
 			"Verdy p",
-			"Eneelk"
+			"Eneelk",
+			"Pols12"
 		]
 	},
 	"LandingPage": {
@@ -273,7 +274,7 @@
 		},
 		"Partof": {
 			"headerTitle": "Contexte",
-			"intro": "Ce sujet fait partie ou rejoint les sujets suivants. Vous pouvez les trier par horodatage et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"intro": "Ce sujet fait partie ou rejoint les sujets suivants. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Twins": {
 			"headerTitle": "Villes jumelées",
