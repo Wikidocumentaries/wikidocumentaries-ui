@@ -124,16 +124,15 @@ export default {
             typeid += "wd:" + values[value].id + " ";
 
           }
-/*           typeid = statements[index].values[0].id; */
         }
-        if (statements[index].id == countryvar) {
-          countryid = statements[index].values[0].id;
-        }
-      } else {
-        if (statements[index].id == countryvar) {
-          countryid = statements[index].values[0].id;
-        }
+      } 
+      if (statements[index].id == 'P17') {
+        countryid = statements[index].values[0].id;
+      } else if (statements[index].id == 'P131') {
+        countryvar = 'P131';
+        countryid = statements[index].values[0].id;
       }
+      console.log(countryvar, countryid, typevar, typeid);
     }
     let sparql;
     sparql = `
@@ -155,10 +154,7 @@ SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?startdate) AS ?startdate) (SAM
   OPTIONAL { 
     ?item wdt:P18 ?image .
   }
-  #?item wdt:P131 ?administrative .
-  #?item wdt:P27 ?nationality .
-  #?item wdt:P106 ?profession .
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
 }
 GROUP BY ?item ?itemLabel ?itemDescription
         `

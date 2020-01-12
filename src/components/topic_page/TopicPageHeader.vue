@@ -50,7 +50,9 @@ export default {
             return this.$store.state.wikidocumentaries;
         },
         isHumanTopic () {
-            if (this.$store.state.wikidocumentaries.wikidata != undefined && this.$store.state.wikidocumentaries.wikidata.instance_of.id == 'Q5') {
+            let typeid = this.$store.state.wikidocumentaries.wikidata.instance_of.id;
+            let conditionsArray = ['Q5', 'Q3305213'];
+            if (this.$store.state.wikidocumentaries.wikidata != undefined && conditionsArray.includes(typeid) === true) {
                 return true;
             }
             else {
