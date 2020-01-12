@@ -10,6 +10,8 @@
 	"LandingPage": {
 		"search": "搜索",
 		"searchInputSearchOnly": "寻找主题",
+		"showMore": "显示更多项目",
+		"createNew": "创建新项",
 		"titleDescription": "什么是维基纪录片？",
 		"titleStatus": "状态",
 		"status": "本站点尚在试运行。请注意，某些功能暂时不可用，页面可能无法正常运行。",
@@ -24,12 +26,14 @@
 		"titlePartners": "合作伙伴",
 		"getInvolved": "参与！",
 		"titleTranslate": "翻译",
+		"titleContent": "添加您的评论",
 		"facebook": "脸谱组",
 		"blog": "博客",
 		"email": "邮箱",
 		"github": "Github代码池"
 	},
 	"MainPage": {
+		"mapSearchPageName": "搜索地图",
 		"wikiTopicErrorMessage": "在当前语言中找不到该主题的维基百科页面，或者发生了其他意外错误。"
 	},
 	"WaitPage": {
@@ -55,8 +59,12 @@
 			},
 			"imagesActionMenu": {
 				"menuTitle": "选项",
-				"menuTooltip": "选项"
+				"menuTooltip": "选项",
+				"showImageText": "显示图像"
 			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "隐藏图像"
 		},
 		"TopicTimeline": {
 			"headerTitle": "时间轴"
@@ -68,15 +76,29 @@
 				"menuTooltip": "显示选项"
 			},
 			"optionsMenu": {
-				"menuTitle": "选择"
+				"menuTitle": "选择",
+				"subRelatedPeopleConf": {
+					"menuTitle": "配置"
+				}
 			}
 		},
 		"Wikipedia": {
+			"headerTitle": "条目",
 			"missingArticleChoose": "您可以从上面的“语言”菜单中选择另一种可用语言阅读文章，或者单击加号图标以您的语言创建文章。",
 			"missingArticleCreate": "您可以点击加号图标用您的语言创建这篇文章。",
 			"languageMenu": {
 				"otherLanguagestext": "其他语言"
 			}
+		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "类型"
+			},
+			"displayMenu": {
+				"optionGallery": "画廊",
+				"optionList": "列表"
+			},
+			"showAll": "全部"
 		},
 		"Depicted": {
 			"facetMenu": {
@@ -85,12 +107,20 @@
 			"displayMenu": {
 				"optionGallery": "略图排列",
 				"optionList": "列表"
-			}
+			},
+			"showAll": "全部"
+		},
+		"Partof": {
+			"headerTitle": "语境"
+		},
+		"Awards": {
+			"headerTitle": "奖项"
 		},
 		"Works": {
 			"facetMenuOptionCity": "地方",
 			"displayMenuTitle": "显示到",
-			"displayMenuTooltip": "选择显示器"
+			"displayMenuTooltip": "选择显示器",
+			"showAll": "全部"
 		},
 		"People": {
 			"facetMenuOptionProfession": "职业",

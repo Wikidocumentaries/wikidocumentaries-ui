@@ -7,7 +7,9 @@
 			"Trizek (WMF)",
 			"VIGNERON",
 			"Urhixidur",
-			"Verdy p"
+			"Verdy p",
+			"Eneelk",
+			"Pols12"
 		]
 	},
 	"LandingPage": {
@@ -272,11 +274,11 @@
 		},
 		"Partof": {
 			"headerTitle": "Contexte",
-			"intro": "Ce sujet fait partie ou rejoint les sujets suivants. Vous pouvez les trier par horodatage et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"intro": "Ce sujet fait partie ou rejoint les sujets suivants. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Twins": {
 			"headerTitle": "Villes jumelées",
-			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, soit légalement ou de façon informelle reconnue par leurs gouvernements. Vous pouvez les trier par temps et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, soit légalement ou de façon informelle reconnue par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Affiliations": {
 			"headerTitle": "Affiliations",
@@ -288,7 +290,7 @@
 		},
 		"Similar": {
 			"headerTitle": "Sujets similaires",
-			"intro": "Trouver les sujets qui ont des caractéristiques clé communes avec ce sujet."
+			"intro": "Trouver les sujets qui ont des caractéristiques clés communes avec ce sujet."
 		},
 		"Works": {
 			"headerTitle": "Works",

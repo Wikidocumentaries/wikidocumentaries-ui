@@ -3,7 +3,8 @@
 		"authors": [
 			"Beta16",
 			"Susannaanas",
-			"Senpremì"
+			"Senpremì",
+			"JackLantern"
 		]
 	},
 	"LandingPage": {
@@ -150,8 +151,14 @@
 		"Partof": {
 			"headerTitle": "Contesto"
 		},
+		"Twins": {
+			"headerTitle": "Città gemellate"
+		},
 		"Awards": {
 			"headerTitle": "Premi"
+		},
+		"Similar": {
+			"headerTitle": "Argomenti simili"
 		},
 		"Works": {
 			"sortMenuTitle": "Ordina",

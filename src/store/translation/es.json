@@ -229,7 +229,8 @@
 			"headerTitle": "Contexto"
 		},
 		"Awards": {
-			"headerTitle": "Premios"
+			"headerTitle": "Premios",
+			"intro": "Nominaciones y premios a los que es acreedor el tema de esta página."
 		},
 		"Similar": {
 			"headerTitle": "Temas similares"
