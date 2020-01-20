@@ -10,6 +10,8 @@
 		"search": "Etsi",
 		"searchInputPlaceHolder": "Etsi aihetta tai luo uusi aihe",
 		"searchInputSearchOnly": "Etsi aihetta",
+		"showMore": "Näytä lisää kohteita",
+		"createNew": "Luo uusi kohde",
 		"intro": "Wikidocumentaries on wiki pienelle historialle – siellä voi koota historian jälkiä ja tehdä niistä tarinoita. Aloita etsimällä kiinnostaaa aihetta!",
 		"titleDescription": "Mitä Wikidocumentaries on?",
 		"description": "Wikidocumentaries on kansalaishistorioitsijan työpaja. Se kokoaa tietoa aiheista, kuten ihmisistä, paikoista, rakennuksista ja tapahtumista. Aiheiden välillä voi navigoida minkä tahansa tallennetun linkin, kuten sukulaissuhteen, sijainnin, tekijätiedon tai työsuhteen kautta. Aiheen kuvitukseksi haetaan kuvia ja karttoja linkitetyistä museoista, arkistoista ja kirjastoista. Wikidocumentariesissa voit korjata olemassaolevia tietoja ja lisätä uusia aiheita. Voit liittää omat kuvasi ja muistosi aiheisiin ja käyttää koko aineistoa hyödyksi itse.",
@@ -38,7 +40,7 @@
 		"titleTranslate": "Käännä",
 		"joinTranslate": "Tuo kielesi Wikidocumentariesiin! Liity vapaaehtoiseen kääntäjätiimiin ja näet kulttuuriperinnön heräävän henkiin omalla kielelläsi.",
 		"titleContent": "Lisää omaa aineistoa",
-		"joinContent": "Jos sinulla on kokoelma tai valokuva, media, kartta tai datasetti, jonka haluat nähdä täällä, katsotaan yhdessä voiko se liittyä jonkin olemassaolevan kanavan kautta vai tekisimmekö sitä varten uuden liittymismekanismin. Haluamme myös järjestää työpajoja historiallisen tiedon tallentamiseksi yhdessä eri yhteisöjen kanssa.",
+		"joinContent": "Jos sinulla on valokuva, media, kartta tai datasetti, jonka haluat nähdä täällä, katsotaan yhdessä voiko se liittyä jonkin olemassaolevan kanavan kautta vai tekisimmekö sitä varten uuden liittymismekanismin. Haluamme myös järjestää työpajoja historiallisen tiedon tallentamiseksi yhdessä eri yhteisöjen kanssa.",
 		"titleDevelop": "Luo työkaluja tai joukkoistustehtäviä",
 		"joinDevelop": "Haluamme lisätä työkaluja ja luoda uusia joukkoistustehtäviä yhdessä organisaatioiden ja kehittäjien kanssa. Tehdään yhteisin voimin seuraava suosittu joukkoistusapp!",
 		"titleContact": "Ota yhteyttä!",
@@ -264,9 +266,25 @@
 			"headerTitle": "Osat",
 			"intro": "Tämä aihe jakautuu näihin osiin. Voit järjestää niitä ajan ja nimen perusteella. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
 		},
+		"Partof": {
+			"headerTitle": "Asiayhteys",
+			"intro": "Tämä aihe on osa tai liittyy seuraaviin aiheisiin. Voit järjestää niitä ajan tai nimen mukaan.    Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
+		"Twins": {
+			"headerTitle": "Ystävyyskaupungit",
+			"intro": "Ystävyyskaupungit tau -kunnat tai muut paikat, joilla on kumppanuus tai yhteistyösopimus muodollisesti tai epämuodollisesti. Voit järjestää niitä ajan tai nimen mukaan. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
 		"Affiliations": {
 			"headerTitle": "Yhteydet",
 			"intro": "Organisaatiot ja muut aiheet, joihin tällä taholla on yhteys."
+		},
+		"Awards": {
+			"headerTitle": "Palkinnot",
+			"intro": "Nimitykset ja palkinnot, joita sivun aiheelle on myönnetty."
+		},
+		"Similar": {
+			"headerTitle": "Samanlaisia aiheita",
+			"intro": "Etsi aiheita, joilla on joitain keskeisiä yhteisiä tekijöitä tämän sivun aiheen kanssa."
 		},
 		"Works": {
 			"headerTitle": "Teoksia",
@@ -370,6 +388,7 @@
 			"digitalCopy": "Digitaalinen kopio",
 			"publishingPlatform": "Julkaisualusta",
 			"platformId": "Tunniste",
+			"provider": "Sisällöntuottaja",
 			"imageInfoPage": "Kuvan tietosivu",
 			"imageDimensions": "Kuvan koko",
 			"fileSize": "Tiedostokoko",
@@ -419,6 +438,8 @@
 			"title": "Järjestä aiheet",
 			"tooltip": "Järjestä aiheet",
 			"optionTime": "Ajan perusteella",
+			"optionStart": "Alkamisajan mukaan",
+			"optionEnd": "Loppumisajan mukaan",
 			"optionAlpha": "Aakkosjärjestykseen",
 			"optionTitleAlpha": "Nimen mukaan aakkosjärjestykseen",
 			"optionCreatorAlpha": "Tekijän mukaan aakkosjärjestykseen",
