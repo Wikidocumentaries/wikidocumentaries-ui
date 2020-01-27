@@ -176,6 +176,9 @@
 		"Affiliations": {
 			"headerTitle": "Aleqerın"
 		},
+		"Awards": {
+			"headerTitle": "Xelati"
+		},
 		"Works": {
 			"sortMenuTitle": "Weçine",
 			"sortMenuOptionTime": "Gorey demi",
@@ -210,10 +213,12 @@
 			"addCreator": "Vıraştoğ dekere",
 			"removeCreator": "Vıraştoği wedarne",
 			"publisher": "Weşanayoğ",
+			"format": "Format",
 			"genre": "Tewır",
 			"location": "Lokasyon",
 			"address": "Adresa kuçeyi",
 			"addPerson": "Merdum cı ke",
+			"event": "Weqa",
 			"collection": "Koleksiyon",
 			"measurements": "Pêmeyi",
 			"copyright": "Heqa telifi",
@@ -223,6 +228,7 @@
 			"photographer": "Fotrafkar",
 			"digitalCopy": "Kopyaya dicitale",
 			"platformId": "Kamiye",
+			"fileSize": "Ebadê dosya",
 			"fileFormat": "Formatê dosya",
 			"remove": "Wedare",
 			"uploader": "Barkerdoğ",
