@@ -3,7 +3,8 @@
 		"authors": [
 			"Robby",
 			"Abijeet Patro",
-			"Susannaanas"
+			"Susannaanas",
+			"BaRaN6161 TURK"
 		]
 	},
 	"LandingPage": {
@@ -341,7 +342,7 @@
 			"rotateImage": "Submenu title to Rotate the image in the Actions menu in the Image viewer",
 			"clockwise": "Submenu option to Rotate the image clockwise in the Actions menu in the Image viewer",
 			"counterclockwise": "Submenu option to Rotate the image counterclockwise in the Actions menu in the Image viewer",
-			"flip": "Submenu title to Flip the image in the Actions menu in the Image viewer",
+			"flip": "Submenu title to Flip the image in the actions menu in the image viewer.\n{{Identical|Flip}}",
 			"horizontal": "Submenu option to Horizontally flip an image in the Actions menu in the Image viewer",
 			"vertical": "Submenu option to Vertically flip an image in the Actions menu in the Image viewer"
 		},
