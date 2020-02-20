@@ -14,14 +14,14 @@
 		"searchInputSearchOnly": "Konu bul",
 		"showMore": "Daha fazla öğe göster",
 		"createNew": "Yeni öğe oluştur",
-		"intro": "Wikidocumentaries, küçük tarih için bir wikidir - tarihin izlerini bir araya getirip hikayelere dönüştürmek için bir yer. Bir ilgi konusu arayarak başlayın!",
+		"intro": "Wikidocumentaries, küçük tarih için bir vikidir - tarihin izlerini bir araya getirip hikayelere dönüştürmek için bir yer. Bir ilgi konusu arayarak başlayın!",
 		"titleDescription": "Wikidocumentaries nedir?",
 		"description": "Wikidocumentaries, vatandaş tarihçiler için yapıcı bir alandır. İnsanlar, yerler, binalar, etkinlikler ve daha fazlası - konular hakkındaki bilgileri birleştirir. Aile ilişkileri, konumlar, yaratıcılar ve kreasyonlar veya bağlılıklar gibi kayıtlı bağlantıları izleyerek konular arasında gezinebilirsiniz. Bağlantılı müzelerden, arşivlerden ve kütüphanelerden görüntüler ve haritalar içeren bir konu gösterilmektedir. Wikidocumentaries'de mevcut bilgileri düzeltmek ve yeni konular eklemek, kendi resimlerinizi ve hatırlamalarınızı getirmek ve tüm materyalleri kendi amaçlarınız için kullanmak mümkün olacak.",
 		"titleStatus": "Durum",
 		"status": "Site demo aşamasındadır. Pek çok önemli özellik henüz mevcut değildir ve site beklendiği gibi çalışmayabilir.",
 		"moreBelow": "Aşağıda daha fazla okuyun",
-		"more": "Devamı",
-		"moreLink": "Devamı",
+		"more": "Devamını oku",
+		"moreLink": "Daha fazlasını oku",
 		"titleTopics": "Konular",
 		"statusTopics": "Konular Vikiveri'den okunur. Vikiveri içeriğinin kapsamı dışındaysa, bunun yerine Wikidocumentaries'de yeni konular oluşturulabilir. Konuyu Vikiveri'nin zengin seçenekleriyle tanımlamak yine de mümkün olacak. Güncel makaleler Vikipedi'den gelirken, makaleler daha sonra yalnızca Wikidocumentaries'de bulunan konular için yerel olarak oluşturulabilir.",
 		"titleMedia": "Medya",
@@ -32,9 +32,9 @@
 		"statusLanguages": "Wikidocumentaries, Vikiveri'de bulunan herhangi bir dilde gezilebilir. Bu küçük diller için harika bir fırsat. Çeviriler TranslateWiki'de yapılır.",
 		"titleTechnology": "Teknoloji",
 		"statusTechnology": "Wikidocumentaries, temel verileri Vikiveri'den okunur. Ek olarak, Wikidocumentaries, Vikiveri'nin kapsamı dışında kalan konular için kendi Wikibase'ine sahip olacaktır. Vikiveri ve Wikidocumentaries'in federe Wikibase olarak eşitlenmesi bekleniyor. İkincisi, resim meta verileri Vikiveri öğeleriyle bağlantılıdır ve bu veriler Wikimedia Commons'daki Structured Data ile senkronize edilebilir. Site Vue.js ile oluşturulmuştur ve Wikimedia Cloud Services'da barındırılmaktadır.",
-		"titleCreators": "Yaratıcılar",
-		"titleTeam": "Takım",
-		"titleThanks": "Özel sayesinde",
+		"titleCreators": "Oluşturucular",
+		"titleTeam": "Ekip",
+		"titleThanks": "Özel teşekkürler",
 		"titlePartners": "Ortaklar",
 		"titleFunding": "Türden destek ile",
 		"titleBy": "Proje hazırlayan",
@@ -47,10 +47,10 @@
 		"joinDevelop": "Daha fazla araç eklemek ve kuruluşlarla ve araç geliştiricilerle işbirliği içinde yeni kalabalık kaynak yaratma görevlerini oluşturmak istiyoruz. Bir sonraki güzel crowdsourcing uygulaması için güçlerini birleştirelim!",
 		"titleContact": "İletişime geçin!",
 		"facebook": "Facebook grubu",
-		"wiki": "Wikidocumentaries wiki",
+		"wiki": "Wikidocumentaries viki",
 		"blog": "Blog",
 		"email": "E-posta",
-		"github": "Github repository"
+		"github": "Github deposu"
 	},
 	"MainPage": {
 		"topicPageName": "Konu sayfası",
@@ -91,7 +91,7 @@
 				"menuTooltip": "Farklı ölçütlere göre faset görüntüleri",
 				"time": "zaman",
 				"map": "harita",
-				"people": "İnsanlar",
+				"people": "insanlar",
 				"places": "yerler",
 				"topics": "konular",
 				"form": "form",
@@ -100,15 +100,15 @@
 				"medium": "orta",
 				"small": "küçük",
 				"type": "medya türü",
-				"creator": "yaratıcı",
+				"creator": "oluşturan",
 				"platform": "platform",
 				"source": "kaynak",
 				"saveSelection": "Seçimi koleksiyon olarak kaydet",
 				"clear": "Seçimleri temizle"
 			},
 			"imagesActionMenu": {
-				"menuTitle": "İşlemler",
-				"menuTooltip": "İşlemler",
+				"menuTitle": "Eylemler",
+				"menuTooltip": "Eylemler",
 				"doGeolocatingText": "Konumu ayarla...",
 				"showImageText": "Görüntüyü göster",
 				"selectFeatured": "Başlık resmi olarak seç"
@@ -116,16 +116,16 @@
 			"imagesRemoveMenu": {
 				"menuTitle": "Görüntüyü kaldır çünkü...",
 				"shortMenuTitle": "Resmi kaldır",
-				"menuTooltip": "Bu görüntüyü kaldır",
+				"menuTooltip": "Resmi kaldır",
 				"remDepicted": {
-					"menuTitle": "Bunun yerine bu konuyu gösteriyor",
-					"shortMenuTitle": "Başka bir konu gösterir",
+					"menuTitle": "Bunun yerine bu konuyu tasvir ediyor",
+					"shortMenuTitle": "Başka bir konuyu tasvir ediyor",
 					"search": "Konu ara",
 					"browse": "İlgili konulara göz at"
 				},
 				"remCreator": {
-					"menuTitle": "Onun yerine oluşturanı tarafından",
-					"shortMenuTitle": "Başka bir yaratıcı tarafından",
+					"menuTitle": "Bunun yerine bu oluşturucu tarafından",
+					"shortMenuTitle": "Başka bir oluşturucu tarafından",
 					"search": "Oluşturanı ara",
 					"browse": "İlgili aktörlere göz at"
 				},
@@ -154,7 +154,7 @@
 		"TopicNewspapers": {
 			"headerTitle": "Gazete kupürleri",
 			"searhTopicFromArchivesMenuText": "Finlandiya Milli Kütüphanesi'ndeki gazetelerde arama yap",
-			"addClipFromArchivesMenuText": "Küpür ekle..."
+			"addClipFromArchivesMenuText": "Kırpma ekle..."
 		},
 		"TopicTimeline": {
 			"headerTitle": "Zaman çizelgesi",
@@ -189,13 +189,13 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Madde",
-			"missingArticle": "Bu konuyla ilgili dilinizde yazı bulunmamaktadır. Yukarıdaki dil menüsünde başka dillerde maddeler olup olmadığına bakın veya artı simgesine tıklayarak maddeyi oluşturun.",
-			"missingArticleMissing": "Bu konu hakkında kendi dilinizde makale yok.",
+			"missingArticle": "Bu konuyla ilgili kendi dilinizde madde yok. Yukarıdaki dil menüsünden seçim yaparak makaleyi başka bir dilde okuyabilirsiniz. Artı simgesine tıklayarak maddeyi kendi dilinizde oluşturabilirsiniz.",
+			"missingArticleMissing": "Bu konu hakkında kendi dilinizde madde yok.",
 			"missingArticleChoose": "Yukarıdaki dil menüsünden seçim yaparak makaleyi başka bir dilde okuyabilir veya artı simgesine tıklayarak makaleyi kendi dilinizde oluşturabilirsiniz.",
-			"missingArticleCreate": "Bu makaleyi kendi dilinizde artı simgesine tıklayarak oluşturabilirsiniz.",
-			"missingArticleFallback": "Başka bir dilde bu makale, dil geri dönüş tercihlerinize dayanarak size gösterilmektedir.",
-			"missingArticleTranslate": "Bu makaleyi dil menüsünden seçerek kendi dilinize çevirebilirsiniz.",
-			"missingArticleAuto": "Bu kısa metin kaydedilen verilerden otomatik olarak oluşturulmuştur. Bu taslağı kaydedebilir ve makaleyi düzenlemeye başlayabilirsiniz.",
+			"missingArticleCreate": "Bu maddeyi kendi dilinizde artı simgesine tıklayarak oluşturabilirsiniz.",
+			"missingArticleFallback": "Başka bir dilde bu madde, dil geri dönüş tercihlerinize dayanarak size gösterilmektedir.",
+			"missingArticleTranslate": "Bu maddeyi dil menüsünden seçerek kendi dilinize çevirebilirsiniz.",
+			"missingArticleAuto": "Bu kısa metin kaydedilen verilerden otomatik olarak oluşturulmuştur. Bu taslağı kaydedebilir ve maddeyi düzenlemeye başlayabilirsiniz.",
 			"extLink": {
 				"linkTitleWP": "Vikipedi'de oku veya düzenle"
 			},
@@ -204,7 +204,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Maddeyi başka bir dilde oku",
-				"translateArticleText": "Bu makaleyi Türkçe'ye çevir",
+				"translateArticleText": "Bu maddeyi Türkçe'ye çevir",
 				"otherLanguagestext": "Diğer diller"
 			}
 		},
@@ -224,7 +224,7 @@
 				"title": "Faset konumlarına göre",
 				"tooltip": "Farklı ölçütlere göre faset konumları",
 				"optionType": "Tür",
-				"optionColl": "Yaratıcı",
+				"optionColl": "Oluşturan",
 				"optionCity": "Konum"
 			},
 			"displayMenu": {
@@ -250,7 +250,7 @@
 				"title": "Faset işlerine göre",
 				"tooltip": "Faset farklı kriterlere göre çalışır",
 				"optionType": "Tür",
-				"optionColl": "Yaratıcı"
+				"optionColl": "Oluşturan"
 			},
 			"displayMenu": {
 				"title": "Görüntüle",
@@ -274,7 +274,7 @@
 		},
 		"Twins": {
 			"headerTitle": "İkiz şehirler",
-			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükümetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükumetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
 		},
 		"Affiliations": {
 			"headerTitle": "Bağlantılar",
@@ -334,22 +334,22 @@
 			"addCaption": "Başlık ekle",
 			"description": "Açıklama",
 			"addDescription": "Açıklama ekle",
-			"creator": "Yaratıcı",
+			"creator": "Oluşturan",
 			"creatorUnknown": "Bilinmiyor",
-			"addCreator": "Yaratıcı oluştur",
-			"removeCreator": "Yaratıcıyı kaldır",
+			"addCreator": "Oluşturan oluştur",
+			"removeCreator": "Oluşturanı kaldır",
 			"dateDepicted": "Tasvir tarihi",
 			"addDateDepicted": "Tasvir tarihi ekle",
 			"removeDateDepicted": "Tasvir tarihi kaldır",
 			"dateCreated": "Oluşturulma tarihi",
 			"addDateCreated": "Oluşturma tarihi ekle",
 			"removeDateCreated": "Oluşturma tarihi kaldır",
-			"publisher": "Yayımcı",
-			"addPublisher": "Yayımcı ekle",
-			"removePublisher": "Yayımcıyı kaldır",
+			"publisher": "Yayıncı",
+			"addPublisher": "Yayıncı ekle",
+			"removePublisher": "Yayıncıyı kaldır",
 			"format": "Biçim",
 			"addFormat": "Biçim ekle",
-			"removeFormat": "Biçim kaldır",
+			"removeFormat": "Biçimi kaldır",
 			"technique": "Teknik",
 			"addTechnique": "Teknik ekle",
 			"removeTechnique": "Tekniği kaldır",
@@ -370,9 +370,9 @@
 			"depictedPeople": "Tasvir insanlar",
 			"addPerson": "Kişi ekle",
 			"removePerson": "Kişiyi kaldır",
-			"event": "Etkinlik",
-			"addEvent": "Etkinlik ekle",
-			"removeEvent": "Etkinliği kaldır",
+			"event": "Olay",
+			"addEvent": "Olay ekle",
+			"removeEvent": "Olayı kaldır",
 			"institution": "Kurum",
 			"collection": "Koleksiyon",
 			"inventoryNumber": "Envanter numarası",
@@ -385,7 +385,7 @@
 			"image": "Resim",
 			"photographer": "Fotoğrafçı",
 			"addPhotographData": "Fotoğraf hakkında bilgi ekleyin",
-			"copyrightNotePD": "Resim $1 ile lisanslanmıştır, ancak resmin Public Domain'teki meta verilerine göre.",
+			"copyrightNotePD": "Resim $1 ile lisanslanmıştır, ancak resmin Kamu Malı daki meta verilerine göre.",
 			"copyrightNoteSame": "Aynı resim $1 ile daha açık bir şekilde lisanslanmıştır, bu nedenle bu resim için de geçerlidir.",
 			"digitalCopy": "Dijital kopya",
 			"publishingPlatform": "Platform yayınlıyor",
@@ -453,7 +453,7 @@
 			"title": "Faset olarak",
 			"tooltip": "Farklı kriterlere göre faset konuları",
 			"optionType": "Tür",
-			"optionColl": "Yaratıcı",
+			"optionColl": "Oluşturan",
 			"optionCity": "Konum"
 		},
 		"displayMenu": {
@@ -471,12 +471,12 @@
 		"expand": "Bu bölümü genişlet",
 		"collapse": "Bu bölümü daralt",
 		"menus": {
-			"actionMenuTitle": "İşlemler",
-			"actionMenuTooltip": "İşlemler",
-			"languageMenuTitle": "Dil seç",
+			"actionMenuTitle": "Eylemler",
+			"actionMenuTooltip": "Eylemler",
+			"languageMenuTitle": "Dil seçin",
 			"languageMenuTooltip": "Dilinizi seçin",
 			"myLanguagesItem": "Dillerim",
-			"languageMenuTranslate": "Bu makaleyi Türkçe'ye çevir"
+			"languageMenuTranslate": "Bu maddeyi Türkçe'ye çevir"
 		},
 		"languageMenu": {
 			"TranslateUI": "Dilinize çevirin"
