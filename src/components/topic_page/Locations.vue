@@ -25,6 +25,7 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
+            <div class="thumb-credit over">{{ item.creatorLabel }}</div>
             <div class="gallery-title">{{ item.location.label }}</div>
             <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
           </div>
