@@ -262,6 +262,9 @@
 			"facetMenuOptionProfession": "Profesión",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Género"
+		},
+		"Collection": {
+			"headerTitle": "Obras en la colección"
 		}
 	},
 	"imageViewer": {

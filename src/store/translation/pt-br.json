@@ -325,6 +325,10 @@
 			"facetMenuOptionProfession": "Profissão",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Gênero"
+		},
+		"Collection": {
+			"headerTitle": "Obras na coleção",
+			"intro": "Estes trabalhos estão na coleção desta pessoa ou instituição. Você pode optar por exibi-los como lista, o que mostra também funciona sem imagens. Eles podem ser classificados por datas ou nomes. Observe que apenas aqueles que possuem essas informações serão mostrados."
 		}
 	},
 	"imageViewer": {

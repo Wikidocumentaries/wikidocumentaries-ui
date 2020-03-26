@@ -228,6 +228,9 @@
 			"sortMenuOptionClear": "Ryd sortering",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Køn"
+		},
+		"Collection": {
+			"headerTitle": "Værk i samlingen"
 		}
 	},
 	"imageViewer": {

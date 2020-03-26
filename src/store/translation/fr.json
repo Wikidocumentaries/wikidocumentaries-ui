@@ -330,6 +330,10 @@
 			"facetMenuOptionProfession": "Profession",
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"
+		},
+		"Collection": {
+			"headerTitle": "Travaux dans la collection",
+			"intro": "Ces travaux sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls ceux qui ont cette information seront affichés."
 		}
 	},
 	"imageViewer": {

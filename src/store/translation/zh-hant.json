@@ -323,6 +323,10 @@
 			"facetMenuOptionProfession": "職業",
 			"facetMenuOptionCountry": "國家",
 			"facetMenuOptionCity": "性別"
+		},
+		"Collection": {
+			"headerTitle": "在收藏裡的作品",
+			"intro": "這些是此人物或機構收藏的作品，您可以用清單的方式來展示，另外也會秀出不帶有圖片的作品。它們可以按日期或名稱來排序，而這僅會秀出帶有這些資訊的內容。"
 		}
 	},
 	"imageViewer": {

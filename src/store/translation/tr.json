@@ -326,6 +326,10 @@
 			"facetMenuOptionProfession": "Meslek",
 			"facetMenuOptionCountry": "Ülke",
 			"facetMenuOptionCity": "Cinsiyet"
+		},
+		"Collection": {
+			"headerTitle": "Koleksiyondaki eserler",
+			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
 		}
 	},
 	"imageViewer": {
