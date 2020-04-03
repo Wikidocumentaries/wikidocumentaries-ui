@@ -5,7 +5,7 @@
       <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
       <!-- https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg -->
       <img
-        src="https://live.staticflickr.com/1719/26111035175_4240706b19_h.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Elderly_and_child_Sami.jpg"
         class="cover-image"
       >
       <div class="bottomshade">
