@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"500000000006城",
 			"A Chinese Wikipedian",
 			"A Retired User",
 			"沈澄心",
@@ -9,9 +10,11 @@
 	},
 	"LandingPage": {
 		"search": "搜索",
+		"searchInputPlaceHolder": "找到一个主题或创建一个新主题",
 		"searchInputSearchOnly": "寻找主题",
 		"showMore": "显示更多项目",
 		"createNew": "创建新项",
+		"intro": "Wikidocumentaries是一个关于小历史的wiki—一个汇集历史痕迹并把它们变成故事的地方。从寻找一个感兴趣的话题开始",
 		"titleDescription": "什么是维基纪录片？",
 		"titleStatus": "状态",
 		"status": "本站点尚在试运行。请注意，某些功能暂时不可用，页面可能无法正常运行。",

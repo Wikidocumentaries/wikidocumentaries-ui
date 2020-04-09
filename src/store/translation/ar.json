@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abijeet Patro",
 			"Meno25",
 			"ديفيد",
-			"Abijeet Patro",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
@@ -325,6 +325,10 @@
 			"facetMenuOptionProfession": "المهنة",
 			"facetMenuOptionCountry": "البلد",
 			"facetMenuOptionCity": "الجنس"
+		},
+		"Collection": {
+			"headerTitle": "الأعمال في المجموعة",
+			"intro": "هذه الأعمال موجودة في مجموعة هذا الشخص أو المؤسسة. يمكنك اختيار عرضها كقائمة، والتي تظهر أيضا تعمل بدون صور. يمكن فرزها حسب التواريخ أو الأسماء. لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات."
 		}
 	},
 	"imageViewer": {
