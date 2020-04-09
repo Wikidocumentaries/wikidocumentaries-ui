@@ -114,7 +114,7 @@ SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?inLabel_; separator=", ") as ?inLa
     }
   UNION
   {
-    wd:Q29021 wdt:P414|wdt:P6379|wdt:P527|wdt:P84|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
+    wd:Q29021 wdt:P414|wdt:P6379|wdt:P84|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
     wd:Q29021 ?rel_in ?aff .
     ?in wikibase:directClaim ?rel_in .
     OPTIONAL { ?in rdfs:label ?inLabel_ .
