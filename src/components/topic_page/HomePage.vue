@@ -20,6 +20,7 @@
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
+    <Effects id="effects"></Effects>
     <Works id="works"></Works>
     <Awards id="awards"></Awards>
     <Depicts id="depicts"></Depicts>
@@ -46,6 +47,7 @@ import TopicMap from "@/components/topic_page/TopicMap";
 import TopicImages from "@/components/topic_page/TopicImages";
 import TopicTimeline from "@/components/topic_page/TopicTimeline";
 import EventList from "@/components/topic_page/EventList";
+import Effects from "@/components/topic_page/Effects";
 import Works from "@/components/topic_page/Works";
 import Awards from "@/components/topic_page/Awards";
 import People from "@/components/topic_page/People";
@@ -76,6 +78,7 @@ export default {
     TopicImages,
     TopicTimeline,
     EventList,
+    Effects,
     Works,
     Awards,
     People,

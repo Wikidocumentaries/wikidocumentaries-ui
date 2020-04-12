@@ -141,7 +141,6 @@ export default {
 
 .header-image {
     width: 100%;
-    background: white;
     /* Remove for production? */
     /* Remove for production? not supported in IE 11 */
 }
