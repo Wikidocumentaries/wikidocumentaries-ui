@@ -102,7 +102,7 @@ export default {
 }
 
 .options {
-    max-height: 198px;
+    max-height: 205px;
     overflow-y: scroll;
 }
 

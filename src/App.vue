@@ -344,6 +344,7 @@ a:hover {
 
 .text {
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .one {
@@ -354,12 +355,12 @@ a:hover {
   background: var(--main-modal-color);
 }
 
-.text {
-  padding-right: 20px;
-}
-
 .notexpanded figure {
-  display:none;
+  margin-right: 40px;
+  margin-left: 20px;
+  float: left;
+  width: min-content;
+  clear: both;
 }
 
 @media all and (max-width: 992px) {

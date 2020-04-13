@@ -29,8 +29,8 @@
     <Affiliations id="affiliations"></Affiliations>
     <Depicted id="depicted"></Depicted>
     <TopicMap id="topicMap"></TopicMap>
-    <TopicTimeline id="topicTimeline"></TopicTimeline>
-    <EventList id="events"></EventList>
+<!--     <TopicTimeline id="topicTimeline"></TopicTimeline> -->
+<!--     <EventList id="events"></EventList> -->
     <Similar id="similar"></Similar>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
@@ -46,8 +46,8 @@ import WikipediaArticle from "@/components/topic_page/Wikipedia";
 import WikidataItem from "@/components/topic_page/Wikidata";
 import TopicMap from "@/components/topic_page/TopicMap";
 import TopicImages from "@/components/topic_page/TopicImages";
-import TopicTimeline from "@/components/topic_page/TopicTimeline";
-import EventList from "@/components/topic_page/EventList";
+//import TopicTimeline from "@/components/topic_page/TopicTimeline";
+//import EventList from "@/components/topic_page/EventList";
 import Effects from "@/components/topic_page/Effects";
 import Works from "@/components/topic_page/Works";
 import Awards from "@/components/topic_page/Awards";
@@ -78,8 +78,8 @@ export default {
     WikidataItem,
     TopicMap,
     TopicImages,
-    TopicTimeline,
-    EventList,
+/*     TopicTimeline, */
+/*     EventList, */
     Effects,
     Works,
     Awards,

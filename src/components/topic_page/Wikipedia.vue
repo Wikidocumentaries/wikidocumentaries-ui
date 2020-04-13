@@ -193,13 +193,14 @@ export default {
   margin-top: 0;
 }
 
-.expanded .excerpt {
+/* .expanded  */
+.excerpt {
   font-size: 1.2em;
 }
 
-.remain {
+/* .remain {
   display:none;
-}
+} */
 
 .expanded .remain {
   display:initial;
