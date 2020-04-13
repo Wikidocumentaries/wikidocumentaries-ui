@@ -25,6 +25,7 @@
     <Awards id="awards"></Awards>
     <Depicts id="depicts"></Depicts>
     <People id="people"></People>
+    <Things id="things"></Things>
     <Affiliations id="affiliations"></Affiliations>
     <Depicted id="depicted"></Depicted>
     <TopicMap id="topicMap"></TopicMap>
@@ -57,6 +58,7 @@ import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Parts from "@/components/topic_page/Parts";
 import Twins from "@/components/topic_page/Twins";
+import Things from "@/components/topic_page/Things";
 import Affiliations from "@/components/topic_page/Affiliations";
 import Similar from "@/components/topic_page/Similar";
 import Footer from "@/components/Footer";
@@ -87,6 +89,7 @@ export default {
     Locations,
     Depicted,
     Depicts,
+    Things,
     Twins,
     Footer,
     Affiliations,

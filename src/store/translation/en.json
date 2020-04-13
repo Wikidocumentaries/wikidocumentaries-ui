@@ -210,7 +210,6 @@
                 "optionTime": "By time",
                 "optionAlpha": "Alphabetically",
                 "optionDist": "By distance",
-                "optionRev": "Reverse sort",
                 "optionClear": "Clear sort"
             },
             "facetMenu": {
@@ -236,7 +235,6 @@
                 "tooltip": "Sort works",
                 "optionTime": "By time",
                 "optionAlpha": "Alphabetically",
-                "optionRev": "Reverse sort",
                 "optionClear": "Clear sort"
             },
             "facetMenu": {
@@ -285,6 +283,14 @@
             "headerTitle": "Effects",
             "intro": "These are the effects of the topic."
         },
+        "Things": {
+            "headerTitle": "Focus list topics",
+            "intro": "These topics are on the focus list of this Wikiproject.",
+            "sortMenuOptionTitle": "By title",
+            "sortMenuOptionCause": "By cause",
+            "sortMenuOptionPartof": "By item this is part of",
+            "sortMenuOptionSuperclass": "By class this is subclass of"
+        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",
@@ -293,7 +299,6 @@
             "sortMenuOptionTime": "By time",
             "sortMenuOptionAlpha": "Alphabetically",
             "sortMenuOptionDist": "By distance",
-            "sortMenuOptionRev": "Reverse sort",
             "sortMenuOptionClear": "Clear sort",
             "facetMenuTitle": "Facet by",
             "facetMenuTooltip": "Facet works by different criteria",
@@ -316,7 +321,6 @@
             "sortMenuOptionName": "By name",
             "sortMenuOptionFirst": "By first name",
             "sortMenuOptionLast": "By last name",
-            "sortMenuOptionRev": "Reverse sort order",
             "sortMenuOptionClear": "Clear sort",
             "facetMenuTitle": "Facet by",
             "facetMenuTooltip": "Facet people by different aspects",

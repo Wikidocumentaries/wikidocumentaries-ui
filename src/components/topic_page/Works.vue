@@ -82,7 +82,7 @@ export default {
             // },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.Works.sortMenuOptionRev'
+                text: "menus.sortMenu.optionRev"
             },
             {
                 id: SORT_ACTIONS.SORT_CLEAR,

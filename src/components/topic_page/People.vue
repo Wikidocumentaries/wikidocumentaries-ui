@@ -43,10 +43,11 @@ import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const SORT_ACTIONS = {
 		BY_LABEL: 0,
-    BY_BIRTH: 1,
-    BY_DEATH: 2,
-    SORT_REVERSE: 3,
-    SORT_CLEAR: 4
+    BY_LASTNAME: 1,
+    BY_BIRTH: 2,
+    BY_DEATH: 3,
+    SORT_REVERSE: 4,
+    SORT_CLEAR: 5
 }
 
 const DISPLAY_ACTIONS = {
@@ -75,6 +76,10 @@ export default {
 	              text: 'topic_page.People.sortMenuOptionName'
 	          },
             {
+                id: SORT_ACTIONS.BY_LASTNAME,
+                text: 'topic_page.People.sortMenuOptionLast'
+            },
+            {
                 id: SORT_ACTIONS.BY_BIRTH,
                 text: 'topic_page.People.sortMenuOptionBirth'
             },
@@ -84,7 +89,7 @@ export default {
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.People.sortMenuOptionRev'
+                text: "menus.sortMenu.optionRev"
             },
             {
                 id: SORT_ACTIONS.SORT_CLEAR,
@@ -100,7 +105,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
@@ -118,6 +123,9 @@ SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CO
         FILTER(LANG(?inLabel_)="fi")
       }
     }
+    OPTIONAL { ?person wdt:P21 ?sex. 
+              ?sex rdfs:label ?sexLabel .
+              FILTER(LANG(?sexLabel)="fi") }
     OPTIONAL { ?person wdt:P18 ?image. }
     OPTIONAL { ?person wdt:P734 ?lastname. 
               ?lastname rdfs:label ?lastnameLabel .
@@ -135,7 +143,7 @@ SELECT ?person ?personLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CO
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
 
 }
-GROUP BY ?person ?personLabel
+GROUP BY ?person ?personLabel ?sexLabel
 LIMIT 1000
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
@@ -161,6 +169,9 @@ LIMIT 1000
             switch (menuItem.id) {
 						case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["person.label"];
+	              break;
+						case SORT_ACTIONS.BY_LASTNAME:
+								currentSort = ["lastnameLabel"];
 	              break;
             case SORT_ACTIONS.BY_BIRTH:
 								currentSort = ["birth_year", "person.label"];
@@ -212,6 +223,7 @@ const selectResults = (lcl) => {
 	let filteredResults = fullResults;
 	if (currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
 	if (currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
+	if (currentSort[0].includes("lastnameLabel")) filteredResults = filteredResults.filter(x => x.lastnameLabel);
 	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
 		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
 			filteredResults = filteredResults.filter(x => x.image); // select only results with an image

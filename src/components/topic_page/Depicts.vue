@@ -85,7 +85,7 @@ export default {
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
-          text: "general.menus.sortMenuOptionRev"
+          text: "menus.sortMenu.optionRev"
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
