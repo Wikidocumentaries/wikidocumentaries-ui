@@ -217,7 +217,6 @@
 				"optionTime": "Saat olarak",
 				"optionAlpha": "Alfabetik olarak",
 				"optionDist": "Mesafe olarak",
-				"optionRev": "Ters sıralama",
 				"optionClear": "Sıralamayı temizle"
 			},
 			"facetMenu": {
@@ -243,7 +242,6 @@
 				"tooltip": "Sıralama işleri",
 				"optionTime": "Saat olarak",
 				"optionAlpha": "Alfabetik olarak",
-				"optionRev": "Ters sıralama",
 				"optionClear": "Sıralamayı temizle"
 			},
 			"facetMenu": {
@@ -288,6 +286,10 @@
 			"headerTitle": "Benzer konular",
 			"intro": "Bu konuyla ilgili bazı ortak anahtar özelliklere sahip konuları bulun."
 		},
+		"Effects": {
+			"headerTitle": "Etkiler",
+			"intro": "Bunlar konunun etkileri."
+		},
 		"Works": {
 			"headerTitle": "Çalışanlar",
 			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",
@@ -296,7 +298,6 @@
 			"sortMenuOptionTime": "Saat olarak",
 			"sortMenuOptionAlpha": "Alfabetik olarak",
 			"sortMenuOptionDist": "Mesafe olarak",
-			"sortMenuOptionRev": "Ters sıralama",
 			"sortMenuOptionClear": "Sıralamayı temizle",
 			"facetMenuTitle": "Faset olarak",
 			"facetMenuTooltip": "Faset farklı kriterlere göre çalışır",
@@ -319,7 +320,6 @@
 			"sortMenuOptionName": "İsim olarak",
 			"sortMenuOptionFirst": "İlk isime göre",
 			"sortMenuOptionLast": "Son isime göre",
-			"sortMenuOptionRev": "Sıralamayı değiştir",
 			"sortMenuOptionClear": "Sıralamayı temizle",
 			"facetMenuTitle": "Faset olarak",
 			"facetMenuTooltip": "Farklı yönlerden faset insanları",

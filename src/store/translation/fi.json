@@ -215,7 +215,6 @@
 				"optionTime": "Ajan perusteella",
 				"optionAlpha": "Aakkosjärjestykseen",
 				"optionDist": "Etäisyyden mukaan",
-				"optionRev": "Käänteiseen järjestykseen",
 				"optionClear": "Palauta alkuperäinen järjestys"
 			},
 			"facetMenu": {
@@ -241,7 +240,6 @@
 				"tooltip": "Järjestä teokset",
 				"optionTime": "Ajan perusteella",
 				"optionAlpha": "Aakkosjärjestykseen",
-				"optionRev": "Käänteiseen järjestykseen",
 				"optionClear": "Palauta alkuperäinen järjestys"
 			},
 			"facetMenu": {
@@ -294,7 +292,6 @@
 			"sortMenuOptionTime": "Ajan perusteella",
 			"sortMenuOptionAlpha": "Aakkosjärjestykseen",
 			"sortMenuOptionDist": "Etäisyyden mukaan",
-			"sortMenuOptionRev": "Käänteinen järjestys",
 			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
 			"facetMenuTitle": "Ryhmittele",
 			"facetMenuTooltip": "Ryhmittele teoksia eri tavoilla",
@@ -317,7 +314,6 @@
 			"sortMenuOptionName": "Nimen mukaan",
 			"sortMenuOptionFirst": "Etunimen mukaan",
 			"sortMenuOptionLast": "Sukunimen mukaan",
-			"sortMenuOptionRev": "Käänteinen järjestys",
 			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
 			"facetMenuTitle": "Ryhmittele",
 			"facetMenuTooltip": "Ryhmittele henkilöitä eri tavoilla",

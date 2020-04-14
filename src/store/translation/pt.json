@@ -3,7 +3,8 @@
 		"authors": [
 			"Hamilton Abreu",
 			"Mansil",
-			"Mansil alfalb"
+			"Mansil alfalb",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -173,7 +174,6 @@
 				"optionTime": "Por hora",
 				"optionAlpha": "Por ordem alfabética",
 				"optionDist": "Por distância",
-				"optionRev": "Inverter ordenação",
 				"optionClear": "Limpar ordenação"
 			},
 			"facetMenu": {
@@ -195,7 +195,6 @@
 				"tooltip": "Ordenar obras",
 				"optionTime": "Por hora",
 				"optionAlpha": "Por ordem alfabética",
-				"optionRev": "Inverter ordenação",
 				"optionClear": "Limpar ordenação"
 			},
 			"facetMenu": {
@@ -235,7 +234,6 @@
 			"sortMenuOptionTime": "Por hora",
 			"sortMenuOptionAlpha": "Por ordem alfabética",
 			"sortMenuOptionDist": "Por distância",
-			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
 			"facetMenuTitle": "Dividir por",
 			"facetMenuTooltip": "Dividir as obras por diferentes critérios",
@@ -257,7 +255,6 @@
 			"sortMenuOptionName": "Por nome",
 			"sortMenuOptionFirst": "Por primeiro nome",
 			"sortMenuOptionLast": "Por sobrenome",
-			"sortMenuOptionRev": "Inverter ordenação",
 			"sortMenuOptionClear": "Limpar ordenação",
 			"facetMenuTitle": "Dividir por",
 			"facetMenuTooltip": "Dividir as pessoas por aspetos diferentes",
@@ -308,7 +305,8 @@
 	},
 	"menus": {
 		"sortMenu": {
-			"optionCreatorAlpha": "Por criador em ordem alfabética"
+			"optionCreatorAlpha": "Por criador em ordem alfabética",
+			"optionRev": "Inverter ordenação"
 		}
 	},
 	"general": {

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joetaras"
+			"Joetaras",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -62,9 +63,6 @@
 		},
 		"Locations": {
 			"headerTitle": "Jndr'à stu luèche",
-			"sortMenu": {
-				"optionRev": "Ordenamende a smerse"
-			},
 			"facetMenu": {
 				"optionType": "Tipe",
 				"optionColl": "Ccrejatore",
@@ -143,6 +141,11 @@
 			"horizontal": "orizzondale"
 		},
 		"closeViewer": "Chiude 'u 'ndrucatore"
+	},
+	"menus": {
+		"sortMenu": {
+			"optionRev": "Ordenamende a smerse"
+		}
 	},
 	"general": {
 		"expand": "Spanne sta sezione",

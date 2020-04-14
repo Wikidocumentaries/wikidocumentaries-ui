@@ -11,6 +11,8 @@
 		"search": "Cı geyre",
 		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze",
 		"searchInputSearchOnly": "Yew mewzu bıvêne",
+		"showMore": "Zêde obceya bımocne",
+		"createNew": "Obceyo newe vırazê",
 		"titleDescription": "Wikidocumentaries çıçiya?",
 		"titleStatus": "Weziyet",
 		"moreBelow": "Cêr tayêna bıwane",
@@ -75,7 +77,8 @@
 				"type": "tewrê medya",
 				"creator": "vıraştoğ",
 				"platform": "platform",
-				"source": "çıme"
+				"source": "çıme",
+				"clear": "Weçinıtışa pak kerê"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Hereketi",
