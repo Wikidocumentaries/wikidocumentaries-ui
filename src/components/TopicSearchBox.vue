@@ -39,7 +39,7 @@ export default {
     },
     computed: {
         newLink() {
-            let url="https://www.wikidata.org/w/index.php?title=Special:NewItem&uselang=" + this.$i18n.locale;
+            let url="https://www.wikidata.org/w/index.php?title=Special:NewItem&label=" + this.topicInputValue + "&uselang=" + this.$i18n.locale;
             return url;
         }
     },
