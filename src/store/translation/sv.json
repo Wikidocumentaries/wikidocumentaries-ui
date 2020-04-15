@@ -196,7 +196,6 @@
 				"optionTime": "Efter tid",
 				"optionAlpha": "Alfabetiskt",
 				"optionDist": "Efter avstånd",
-				"optionRev": "Omvänd sortering",
 				"optionClear": "Rensa sortering"
 			},
 			"facetMenu": {
@@ -218,7 +217,6 @@
 				"tooltip": "Sortera verk",
 				"optionTime": "Efter tid",
 				"optionAlpha": "Alfabetiskt",
-				"optionRev": "Omvänd sortering",
 				"optionClear": "Rensa sortering"
 			},
 			"facetMenu": {
@@ -257,7 +255,6 @@
 			"sortMenuOptionTime": "Efter tid",
 			"sortMenuOptionAlpha": "Alfabetiskt",
 			"sortMenuOptionDist": "Efter avstånd",
-			"sortMenuOptionRev": "Omvänd sortering",
 			"sortMenuOptionClear": "Rensa sortering",
 			"facetMenuOptionType": "Typ",
 			"facetMenuOptionColl": "Samling",
@@ -276,7 +273,6 @@
 			"sortMenuOptionName": "Efter namn",
 			"sortMenuOptionFirst": "Efter förnamn",
 			"sortMenuOptionLast": "Efter efternamn",
-			"sortMenuOptionRev": "Omvänd sorteringsordning",
 			"sortMenuOptionClear": "Rensa sortering",
 			"facetMenuOptionProfession": "Yrke",
 			"facetMenuOptionCountry": "Land",

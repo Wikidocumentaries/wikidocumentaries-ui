@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Abijeet Patro",
-			"Gwenn-Ael"
+			"Fulup",
+			"Gwenn-Ael",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -143,7 +145,6 @@
 				"optionTime": "Hervez an eur",
 				"optionAlpha": "Lizherennek",
 				"optionDist": "Hervez ar c'heit",
-				"optionRev": "Eilpennañ ar rummañ",
 				"optionClear": "Chom hep rummañ"
 			},
 			"facetMenu": {
@@ -164,7 +165,6 @@
 			"sortMenu": {
 				"optionTime": "Hervez an eur",
 				"optionAlpha": "Lizherennek",
-				"optionRev": "Eilpennañ ar rummañ",
 				"optionClear": "Chom hep rummañ"
 			},
 			"facetMenu": {
@@ -179,11 +179,20 @@
 				"optionList": "Roll"
 			},
 			"showAll": "An holl"
+		},
+		"Effects": {
+			"headerTitle": "Efedoù",
+			"intro": "Setu aze efedoù an danvez."
 		}
 	},
 	"map_search_page": {
 		"HistoricalMapsSearch": {
 			"filterByMapMenuText": "Sil dre gartenn..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionRev": "Eilpennañ ar rummañ"
 		}
 	},
 	"general": {

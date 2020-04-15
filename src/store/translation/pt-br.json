@@ -216,7 +216,6 @@
 				"optionTime": "Por tempo",
 				"optionAlpha": "Alfabeticamente",
 				"optionDist": "Pela distância",
-				"optionRev": "Ordenação reversa",
 				"optionClear": "Tipo claro"
 			},
 			"facetMenu": {
@@ -242,7 +241,6 @@
 				"tooltip": "Ordenar trabalhos",
 				"optionTime": "Por tempo",
 				"optionAlpha": "Alfabética",
-				"optionRev": "Ordenação reversa",
 				"optionClear": "Tipo claro"
 			},
 			"facetMenu": {
@@ -287,6 +285,10 @@
 			"headerTitle": "Tópicos similares",
 			"intro": "Encontre tópicos que possuem algumas características-chave comuns com este tópico."
 		},
+		"Effects": {
+			"headerTitle": "Efeitos",
+			"intro": "Estes são os efeitos do tópico."
+		},
 		"Works": {
 			"headerTitle": "Trabalho",
 			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",
@@ -295,7 +297,6 @@
 			"sortMenuOptionTime": "Por tempo",
 			"sortMenuOptionAlpha": "Alfabeticamente",
 			"sortMenuOptionDist": "Pela distância",
-			"sortMenuOptionRev": "Ordenação reversa",
 			"sortMenuOptionClear": "Tipo claro",
 			"facetMenuTitle": "Faceta por",
 			"facetMenuTooltip": "Faceta funciona por diferentes critérios",
@@ -318,7 +319,6 @@
 			"sortMenuOptionName": "Por nome",
 			"sortMenuOptionFirst": "Pelo primeiro nome",
 			"sortMenuOptionLast": "Pelo sobrenome",
-			"sortMenuOptionRev": "Ordem de classificação inversa",
 			"sortMenuOptionClear": "Tipo claro",
 			"facetMenuTitle": "Faceta por",
 			"facetMenuTooltip": "Faceta pessoas por diferentes aspectos",

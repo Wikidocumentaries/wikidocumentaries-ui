@@ -3,6 +3,7 @@
 		"authors": [
 			"Elroy",
 			"Optilete",
+			"PonkoSasuke",
 			"Rots61",
 			"Spinster",
 			"Susannaanas"
@@ -134,6 +135,10 @@
 		"Awards": {
 			"headerTitle": "Onderscheidingen",
 			"intro": "Benoemingen en onderscheidingen van het onderwerp van deze pagina."
+		},
+		"Effects": {
+			"headerTitle": "Effecten",
+			"intro": "Dit zijn de effecten van het onderwerp,"
 		}
 	},
 	"imageViewer": {

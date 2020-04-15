@@ -211,7 +211,6 @@
 				"optionTime": "Berdasarkan waktu",
 				"optionAlpha": "Alfabetis",
 				"optionDist": "Berdasarkan jarak",
-				"optionRev": "Balikkan urutan",
 				"optionClear": "Abaikan urutan"
 			},
 			"facetMenu": {
@@ -237,7 +236,6 @@
 				"tooltip": "Urutkan karya",
 				"optionTime": "Berdasarkan waktu",
 				"optionAlpha": "Alfabetis",
-				"optionRev": "Balikkan urutan",
 				"optionClear": "Abaikan urutan"
 			},
 			"facetMenu": {
@@ -274,7 +272,6 @@
 			"sortMenuOptionTime": "Berdasarkan waktu",
 			"sortMenuOptionAlpha": "Alfabetis",
 			"sortMenuOptionDist": "Berdasarkan jarak",
-			"sortMenuOptionRev": "Balikkan urutan",
 			"sortMenuOptionClear": "Abaikan urutan",
 			"facetMenuTitle": "Kelompokkan berdasarkan",
 			"facetMenuTooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
@@ -297,7 +294,6 @@
 			"sortMenuOptionName": "Berdasarkan nama",
 			"sortMenuOptionFirst": "Berdasarkan nama depan",
 			"sortMenuOptionLast": "Berdasarkan nama belakang",
-			"sortMenuOptionRev": "Balikkan urutan",
 			"sortMenuOptionClear": "Abaikan urutan",
 			"facetMenuTitle": "Kelompokkan berdasarkan",
 			"facetMenuTooltip": "Kelompokkan tokoh berdasarkan aspek lainnya",

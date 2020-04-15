@@ -191,8 +191,7 @@
 				"tooltip": "Ordenar ubicaciones",
 				"optionTime": "Por tiempo",
 				"optionAlpha": "Alfabéticamente",
-				"optionDist": "Por distancia",
-				"optionRev": "Orden inverso"
+				"optionDist": "Por distancia"
 			},
 			"facetMenu": {
 				"optionType": "Tipo",
@@ -211,8 +210,7 @@
 				"title": "Ordenar trabajos",
 				"tooltip": "Ordenar trabajos",
 				"optionTime": "Por tiempo",
-				"optionAlpha": "Alfabéticamente",
-				"optionRev": "Orden inverso"
+				"optionAlpha": "Alfabéticamente"
 			},
 			"facetMenu": {
 				"optionType": "Tipo",
@@ -242,7 +240,6 @@
 			"sortMenuOptionTime": "Por tiempo",
 			"sortMenuOptionAlpha": "Por orden alfabético",
 			"sortMenuOptionDist": "Por distancia",
-			"sortMenuOptionRev": "Orden inverso",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Colección",
 			"facetMenuOptionCity": "Ubicación",
@@ -258,7 +255,6 @@
 			"sortMenuOptionDeath": "Por fecha de defunción",
 			"sortMenuOptionFirst": "Por nombre de pila",
 			"sortMenuOptionLast": "Por apellidos",
-			"sortMenuOptionRev": "Invertir orden",
 			"facetMenuOptionProfession": "Profesión",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Género"
@@ -351,6 +347,9 @@
 		}
 	},
 	"menus": {
+		"sortMenu": {
+			"optionRev": "Orden inverso"
+		},
 		"facetMenu": {
 			"optionType": "Tipo",
 			"optionColl": "Creador",

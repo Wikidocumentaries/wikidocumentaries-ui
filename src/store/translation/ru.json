@@ -216,7 +216,6 @@
 				"optionTime": "По времени",
 				"optionAlpha": "В алфавитном порядке",
 				"optionDist": "По расстоянию",
-				"optionRev": "Обратная сортировка",
 				"optionClear": "Очистить сортировку"
 			},
 			"facetMenu": {
@@ -242,7 +241,6 @@
 				"tooltip": "Сортировать работы",
 				"optionTime": "По времени",
 				"optionAlpha": "В алфавитном порядке",
-				"optionRev": "Обратная сортировка",
 				"optionClear": "Очистить сортировку"
 			},
 			"facetMenu": {
@@ -282,7 +280,6 @@
 			"sortMenuOptionTime": "По времени",
 			"sortMenuOptionAlpha": "В алфавитном порядке",
 			"sortMenuOptionDist": "По расстоянию",
-			"sortMenuOptionRev": "Обратная сортировка",
 			"sortMenuOptionClear": "Очистить сортировку",
 			"facetMenuTitle": "Ограничение по",
 			"facetMenuTooltip": "Ограничить работы по различным критериям",
@@ -305,7 +302,6 @@
 			"sortMenuOptionName": "По имени",
 			"sortMenuOptionFirst": "По личному имени",
 			"sortMenuOptionLast": "По фамилии",
-			"sortMenuOptionRev": "Обратный порядок сортировки",
 			"sortMenuOptionClear": "Очистить сортировку",
 			"facetMenuTitle": "Ограничение по",
 			"facetMenuTooltip": "Ограничить людей по различным критериям",

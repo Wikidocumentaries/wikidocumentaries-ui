@@ -214,7 +214,6 @@
 				"optionTime": "按時間",
 				"optionAlpha": "按字母順序",
 				"optionDist": "按距離",
-				"optionRev": "反向排序",
 				"optionClear": "清除排序"
 			},
 			"facetMenu": {
@@ -240,7 +239,6 @@
 				"tooltip": "排序作品",
 				"optionTime": "按時間",
 				"optionAlpha": "按字母順序",
-				"optionRev": "反向排序",
 				"optionClear": "清除排序"
 			},
 			"facetMenu": {
@@ -285,6 +283,10 @@
 			"headerTitle": "相似主題",
 			"intro": "查找包含有與此主題一些共同關鍵特徵的主題。"
 		},
+		"Effects": {
+			"headerTitle": "影響",
+			"intro": "主題的影響。"
+		},
 		"Works": {
 			"headerTitle": "作品",
 			"intro": "這些是依屬於此頁面主題的人物、集體、或組織分出的作品，您可以透過點擊此來進入收集關於作品資訊的頁面。僅有附帶圖片的作品會秀出，可顯示成清單來查看所有已儲存的相關作品。",
@@ -293,7 +295,6 @@
 			"sortMenuOptionTime": "按時間",
 			"sortMenuOptionAlpha": "按字母順序",
 			"sortMenuOptionDist": "按距離",
-			"sortMenuOptionRev": "反向排序",
 			"sortMenuOptionClear": "清除排序",
 			"facetMenuTitle": "分面按",
 			"facetMenuTooltip": "分面作品依不同標準",
@@ -316,7 +317,6 @@
 			"sortMenuOptionName": "按名稱",
 			"sortMenuOptionFirst": "按名字",
 			"sortMenuOptionLast": "按姓氏",
-			"sortMenuOptionRev": "反向排序順序",
 			"sortMenuOptionClear": "清除排序",
 			"facetMenuTitle": "分面按",
 			"facetMenuTooltip": "分面人物依不同外貌",

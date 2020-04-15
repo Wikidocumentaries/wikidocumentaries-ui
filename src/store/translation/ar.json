@@ -216,7 +216,6 @@
 				"optionTime": "حسب الوقت",
 				"optionAlpha": "أبجديا",
 				"optionDist": "حسب المسافة",
-				"optionRev": "عكس الترتيب",
 				"optionClear": "مسح الفرز"
 			},
 			"facetMenu": {
@@ -242,7 +241,6 @@
 				"tooltip": "ترتيب الأعمال",
 				"optionTime": "حسب الوقت",
 				"optionAlpha": "أبجديا",
-				"optionRev": "عكس الترتيب",
 				"optionClear": "مسح الفرز"
 			},
 			"facetMenu": {
@@ -295,7 +293,6 @@
 			"sortMenuOptionTime": "حسب الوقت",
 			"sortMenuOptionAlpha": "أبجديا",
 			"sortMenuOptionDist": "حسب المسافة",
-			"sortMenuOptionRev": "عكس النوع",
 			"sortMenuOptionClear": "مسح الفرز",
 			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
 			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
@@ -318,7 +315,6 @@
 			"sortMenuOptionName": "حسب الاسم",
 			"sortMenuOptionFirst": "حسب الاسم الأول",
 			"sortMenuOptionLast": "حسب الاسم الأخير",
-			"sortMenuOptionRev": "عكس الترتيب",
 			"sortMenuOptionClear": "مسح الفرز",
 			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
 			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",

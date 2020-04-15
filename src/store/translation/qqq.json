@@ -189,7 +189,6 @@
 				"optionTime": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
 				"optionAlpha": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
 				"optionDist": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
-				"optionRev": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
 				"optionClear": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound"
 			},
 			"facetMenu": {
@@ -215,7 +214,6 @@
 				"tooltip": "Menu tooltip of the 'Sort works' menu of the 'Depicted in' section",
 				"optionTime": "Menu option to sort by time in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
 				"optionAlpha": "Menu option to sort alphabetically in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"optionRev": "Menu option reverse sort order in the Sort menu of the 'Depicted in' section",
 				"optionClear": "Menu option clear sort order in the Sort menu of the 'Depicted in' section"
 			},
 			"facetMenu": {
@@ -240,7 +238,6 @@
 			"sortMenuOptionTime": "Menu item for sorting by time",
 			"sortMenuOptionAlpha": "Menu item for sorting alphabetically",
 			"sortMenuOptionDist": "Menu item for sorting by distance",
-			"sortMenuOptionRev": "Menu item for reversing the current sort order",
 			"sortMenuOptionClear": "Menu item for clearing the current sort order",
 			"facetMenuTitle": "Menu title of the Facet menu in the Works component",
 			"facetMenuTooltip": "Menu tooltip of the Facet menu in the Works section",
@@ -263,7 +260,6 @@
 			"sortMenuOptionName": "Option to sort by name in the Sort menu of the People section",
 			"sortMenuOptionFirst": "Menu item for sorting by first name",
 			"sortMenuOptionLast": "Menu item for sorting by last name",
-			"sortMenuOptionRev": "Menu item for reversing the current sort order",
 			"sortMenuOptionClear": "Menu item for clearing the current sort order",
 			"facetMenuTitle": "Menu title of the Facet menu in the People component",
 			"facetMenuTooltip": "Menu tooltip of the Facet menu in the People section",

@@ -221,7 +221,6 @@
 				"optionTime": "Chronologiquement",
 				"optionAlpha": "Alphabétiquement",
 				"optionDist": "Selon la distance",
-				"optionRev": "Inverser le tri",
 				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
@@ -247,7 +246,6 @@
 				"tooltip": "Trier les travaux",
 				"optionTime": "Chronologiquement",
 				"optionAlpha": "Alphabétiquement",
-				"optionRev": "Inverser le tri",
 				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
@@ -292,6 +290,10 @@
 			"headerTitle": "Sujets similaires",
 			"intro": "Trouver les sujets qui ont des caractéristiques clés communes avec ce sujet."
 		},
+		"Effects": {
+			"headerTitle": "Effets",
+			"intro": "Ce sont les effets du sujet."
+		},
 		"Works": {
 			"headerTitle": "Works",
 			"intro": "Voici les œuvres réalisées par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur une œuvre en cliquant dessus. Seules les œuvres avec des images sont affichées. Afficher comme une liste pour voir toutes les œuvres reliées qui ont été stockées.",
@@ -300,7 +302,6 @@
 			"sortMenuOptionTime": "Chronologiquement",
 			"sortMenuOptionAlpha": "Dans l’ordre alphabétique",
 			"sortMenuOptionDist": "Selon la distance",
-			"sortMenuOptionRev": "Tri inversé",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facettes par",
 			"facetMenuTooltip": "Travaux facettes selon différents critères",
@@ -323,7 +324,6 @@
 			"sortMenuOptionName": "Par nom",
 			"sortMenuOptionFirst": "Par prénom",
 			"sortMenuOptionLast": "Par nom de famille",
-			"sortMenuOptionRev": "Ordre de tri inverse",
 			"sortMenuOptionClear": "Ne pas trier",
 			"facetMenuTitle": "Facetter par",
 			"facetMenuTooltip": "Facetter les personnes selon différents aspects",

@@ -107,7 +107,6 @@
 		"Depicted": {
 			"sortMenu": {
 				"optionAlpha": "الفبایی",
-				"optionRev": "مرتب‌سازی برعکس",
 				"optionClear": "پاک کردن مرتب‌سازی"
 			},
 			"facetMenu": {
@@ -129,7 +128,6 @@
 			"sortMenuTitle": "مرتب‌سازی",
 			"sortMenuOptionTime": "بر اساس زمان",
 			"sortMenuOptionDist": "بر اساس فاصله",
-			"sortMenuOptionRev": "مرتب‌سازی برعکس",
 			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
 			"facetMenuOptionType": "نوع",
 			"facetMenuOptionColl": "مجموعه",
@@ -146,7 +144,6 @@
 			"sortMenuOptionName": "بر اساس نام",
 			"sortMenuOptionFirst": "بر اساس نام کوچک",
 			"sortMenuOptionLast": "بر اساس نام خانوادگی",
-			"sortMenuOptionRev": "برعکس کردن ترتیب مرتب‌سازی",
 			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
 			"facetMenuOptionProfession": "حرفه",
 			"facetMenuOptionCountry": "کشور",

@@ -157,6 +157,9 @@
 		"Awards": {
 			"headerTitle": "Auszeechnungen"
 		},
+		"Effects": {
+			"headerTitle": "Effekter"
+		},
 		"Works": {
 			"headerTitle": "Wierker",
 			"sortMenuTitle": "Zortéieren",

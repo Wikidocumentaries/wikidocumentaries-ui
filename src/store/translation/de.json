@@ -213,7 +213,6 @@
 				"optionTime": "Nach Zeit",
 				"optionAlpha": "Alphabetisch",
 				"optionDist": "Nach Entfernung",
-				"optionRev": "Sortierung umkehren",
 				"optionClear": "Sortierung löschen"
 			},
 			"facetMenu": {
@@ -239,7 +238,6 @@
 				"tooltip": "Werke sortieren",
 				"optionTime": "Nach Zeit",
 				"optionAlpha": "Alphabetisch",
-				"optionRev": "Sortierung umkehren",
 				"optionClear": "Sortierung löschen"
 			},
 			"facetMenu": {
@@ -276,7 +274,6 @@
 			"sortMenuOptionTime": "Nach Zeit",
 			"sortMenuOptionAlpha": "Alphabetisch",
 			"sortMenuOptionDist": "Nach Entfernung",
-			"sortMenuOptionRev": "Umgekehrte Sortierung",
 			"sortMenuOptionClear": "Sortierung aufheben",
 			"facetMenuTitle": "Aspekt nach",
 			"facetMenuTooltip": "Aspektwerke nach unterschiedlichen Kriterien",
@@ -299,7 +296,6 @@
 			"sortMenuOptionName": "Nach Name",
 			"sortMenuOptionFirst": "Nach Vorname",
 			"sortMenuOptionLast": "Nach Nachname",
-			"sortMenuOptionRev": "Umgekehrte Sortierreihenfolge",
 			"sortMenuOptionClear": "Sortierung aufheben",
 			"facetMenuTitle": "Aspekt nach",
 			"facetMenuTooltip": "Personen nach unterschiedlichen Aspekten",

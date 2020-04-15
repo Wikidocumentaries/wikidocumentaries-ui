@@ -3,6 +3,7 @@
 		"authors": [
 			"Higa4",
 			"Mogumin",
+			"Omotecho",
 			"Shirayuki"
 		]
 	},
@@ -215,7 +216,6 @@
 				"optionTime": "日時順",
 				"optionAlpha": "アルファベット順",
 				"optionDist": "距離順",
-				"optionRev": "ソートを反転",
 				"optionClear": "ソートをクリア"
 			},
 			"facetMenu": {
@@ -241,7 +241,6 @@
 				"tooltip": "作品をソート",
 				"optionTime": "日時順",
 				"optionAlpha": "アルファベット順",
-				"optionRev": "ソートを反転",
 				"optionClear": "ソートをクリア"
 			},
 			"facetMenu": {
@@ -271,7 +270,8 @@
 			"intro": "このトピックは下記トピックに含まれるか隣接しています。日時や名前順にソートできます。画像が無いものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
 		},
 		"Twins": {
-			"headerTitle": "ツインシティ"
+			"headerTitle": "ツインシティ",
+			"intro": "行政機関により承認された法的もしくは広報上の措置として、提携協議書もしくは協定協議書を取りかわす提携都市、姉妹都市あるいは地方自治体単位の提携関係。設立年もしくは自治体名から検索できます。画像のない件名を含めた全件名を表示するには、リスト表示への切り替えが必要です。"
 		},
 		"Affiliations": {
 			"headerTitle": "所属",
@@ -293,7 +293,6 @@
 			"sortMenuOptionTime": "日時順",
 			"sortMenuOptionAlpha": "アルファベット順",
 			"sortMenuOptionDist": "距離順",
-			"sortMenuOptionRev": "ソートを反転",
 			"sortMenuOptionClear": "ソートをクリア",
 			"facetMenuTitle": "区分",
 			"facetMenuTooltip": "異なる基準による区分ごとの作品",
@@ -316,7 +315,6 @@
 			"sortMenuOptionName": "名前順",
 			"sortMenuOptionFirst": "ファーストネーム順",
 			"sortMenuOptionLast": "ラストネーム順",
-			"sortMenuOptionRev": "ソート順を反転",
 			"sortMenuOptionClear": "ソートをクリア",
 			"facetMenuTitle": "区分",
 			"facetMenuTooltip": "異なる基準による区分ごと人々",

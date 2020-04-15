@@ -160,10 +160,12 @@
 		"Similar": {
 			"headerTitle": "Argomenti simili"
 		},
+		"Effects": {
+			"headerTitle": "Effetti"
+		},
 		"Works": {
 			"sortMenuTitle": "Ordina",
 			"sortMenuTooltip": "Ordina elementi",
-			"sortMenuOptionRev": "Ordinamento inverso",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionCity": "Località",
 			"displayMenuTitle": "Mostra come",
