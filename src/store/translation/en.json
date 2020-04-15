@@ -285,11 +285,11 @@
         },
         "Things": {
             "headerTitle": "Focus list topics",
-            "intro": "These topics are on the focus list of this Wikiproject.",
-            "sortMenuOptionTitle": "By title",
-            "sortMenuOptionCause": "By cause",
-            "sortMenuOptionPartof": "By item this is part of",
-            "sortMenuOptionSuperclass": "By class this is subclass of"
+            "intro": "These topics are on the focus list of this Wikiproject."
+        },
+        "Instances": {
+            "headerTitle": "Instances of this topic",
+            "intro": "See instances of this topic."
         },
         "Works": {
             "headerTitle": "Works",

@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <Instances id="instances"></Instances>
     <Partof id="partof"></Partof>
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
@@ -49,6 +50,7 @@ import TopicImages from "@/components/topic_page/TopicImages";
 //import TopicTimeline from "@/components/topic_page/TopicTimeline";
 //import EventList from "@/components/topic_page/EventList";
 import Effects from "@/components/topic_page/Effects";
+import Instances from "@/components/topic_page/Instances";
 import Works from "@/components/topic_page/Works";
 import Awards from "@/components/topic_page/Awards";
 import People from "@/components/topic_page/People";
@@ -73,27 +75,28 @@ export default {
     };
   },
   components: {
-    TopicPageHeader,
-    WikipediaArticle,
-    WikidataItem,
-    TopicMap,
-    TopicImages,
+    Affiliations,
+    Awards,
+    Depicted,
+    Depicts,
+    Effects,
+    Footer,
 /*     TopicTimeline, */
 /*     EventList, */
-    Effects,
-    Works,
-    Awards,
+    Instances,
+    Locations,
     People,
     Parts,
     Partof,
-    Locations,
-    Depicted,
-    Depicts,
+    Similar,
     Things,
+    TopicPageHeader,
+    TopicMap,
+    TopicImages,
     Twins,
-    Footer,
-    Affiliations,
-    Similar
+    WikidataItem,
+    WikipediaArticle,
+    Works
   },
   computed: {},
   mounted: {
