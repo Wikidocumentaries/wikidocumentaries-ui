@@ -73,19 +73,19 @@ export default {
             toolbarActionMenuItems: [
 			{
 	            id: SORT_ACTIONS.BY_LABEL,
-	            text: 'topic_page.Things.sortMenuOptionTitle'
+	            text: 'menus.sortMenu.optionTitle'
 	        },
             {
                 id: SORT_ACTIONS.BY_CAUSE,
-                text: 'topic_page.Things.sortMenuOptionCause'
+                text: 'menus.sortMenu.optionCause'
             },
             {
                 id: SORT_ACTIONS.BY_PARTOF,
-                text: 'topic_page.Things.sortMenuOptionPartof'
+                text: 'menus.sortMenu.optionPartof'
             },
             {
                 id: SORT_ACTIONS.BY_SUPERCLASS,
-                text: 'topic_page.Things.sortMenuOptionSuperclass'
+                text: 'menus.sortMenu.optionSuperclass'
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
