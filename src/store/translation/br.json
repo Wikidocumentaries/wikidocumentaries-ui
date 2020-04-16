@@ -9,6 +9,7 @@
 	},
 	"LandingPage": {
 		"search": "Klask",
+		"createNew": "Krouiñ un elfenn nevez",
 		"titleStatus": "Statud",
 		"moreBelow": "Lenn muioc'h amañ dindan",
 		"more": "Lenn muioc'h",
@@ -22,6 +23,7 @@
 		"titleBy": "Raktres gant",
 		"titleTranslate": "Treiñ",
 		"titleContent": "Ouzhpennañ hoc'h evezhiadenn",
+		"titleContact": "Deuit e darempred !",
 		"facebook": "Strollad Facebook",
 		"blog": "Blog",
 		"email": "Postel"
@@ -48,6 +50,7 @@
 			"facetMenu": {
 				"menuTitle": "Skeudennoù Facet gant",
 				"menuTooltip": "Skeudennoù Facet hervez dezverkoù a bep seurt",
+				"time": "eur",
 				"map": "kartenn",
 				"people": "tud",
 				"places": "lec'hioù",
@@ -67,6 +70,7 @@
 			"imagesActionMenu": {
 				"menuTitle": "Oberoù",
 				"menuTooltip": "Oberoù",
+				"doGeolocatingText": "Spisaat al lec'h",
 				"showImageText": "Diskouez ar bajenn",
 				"selectFeatured": "Dibab ur skeudenn reollin"
 			},
@@ -119,9 +123,11 @@
 			}
 		},
 		"Wikidata": {
+			"headerTitle": "Fedoù",
 			"extLink": {
 				"linkTitleWD": "Diskwel pe kemmañ e Wikida"
-			}
+			},
+			"noTopicFoundText": "N'eo ket bet kavet an danvez"
 		},
 		"Wikipedia": {
 			"headerTitle": "Pennad",
@@ -180,9 +186,64 @@
 			},
 			"showAll": "An holl"
 		},
+		"Parts": {
+			"headerTitle": "Lodennoù"
+		},
+		"Partof": {
+			"headerTitle": "Kendestenn"
+		},
+		"Twins": {
+			"headerTitle": "Kêrioù gevellet"
+		},
+		"Awards": {
+			"headerTitle": "Prizioù"
+		},
+		"Similar": {
+			"headerTitle": "Danvezioù kar"
+		},
 		"Effects": {
 			"headerTitle": "Efedoù",
 			"intro": "Setu aze efedoù an danvez."
+		},
+		"Things": {
+			"headerTitle": "Danvezioù ar roll pennañ",
+			"intro": "Emañ an danvezioù-se war roll pennañ ar Wikiproject-mañ."
+		},
+		"Works": {
+			"headerTitle": "Labourioù",
+			"sortMenuOptionTime": "Dre an amzer",
+			"sortMenuOptionAlpha": "En urzh al lizherenneg",
+			"sortMenuOptionDist": "Dre an hed",
+			"facetMenuOptionType": "Seurt",
+			"facetMenuOptionColl": "Dastumad",
+			"facetMenuOptionCity": "Lec'hiadur",
+			"displayMenuOptionList": "Roll",
+			"showAll": "An holl"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Dre zeiziad ganedigezh",
+			"sortMenuOptionDeath": "Dre zeiziad mervel",
+			"sortMenuOptionName": "Dre anv",
+			"sortMenuOptionFirst": "Dre anv-bihan",
+			"sortMenuOptionLast": "Dre anv-familh",
+			"sortMenuOptionClear": "Chom hep rummañ",
+			"facetMenuOptionProfession": "Micher",
+			"facetMenuOptionCountry": "Bro",
+			"facetMenuOptionCity": "Reizh"
+		},
+		"Collection": {
+			"headerTitle": "Labourioù en dastumad"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"publisher": "Embanner",
+			"addPublisher": "Ouzhpennañ un embanner",
+			"format": "Furmad",
+			"genre": "Rumm",
+			"addGenre": "Ouzhpennañ ur rumm",
+			"removeGenre": "Dilemel ar rumm",
+			"image": "Skeudenn"
 		}
 	},
 	"map_search_page": {
@@ -192,6 +253,10 @@
 	},
 	"menus": {
 		"sortMenu": {
+			"optionTitle": "Dre ditl",
+			"optionCause": "Dre abeg",
+			"optionPartof": "Dre elfennoù m'eo ar re-mañ lodek anezho",
+			"optionSuperclass": "Dre gevrennad m'eo hemañ un iskevrennad anezhañ",
 			"optionRev": "Eilpennañ ar rummañ"
 		}
 	},

@@ -248,6 +248,10 @@
 	"menus": {
 		"sortMenu": {
 			"optionTime": "No der Zäit",
+			"optionTitle": "Nom Titel",
+			"optionCause": "No Ursaach",
+			"optionPartof": "Nom Element dëst ass en Deel vun",
+			"optionSuperclass": "No Klass dëst ass eng Ënnerklass vun",
 			"optionAlpha": "Alphabetesch",
 			"optionTitleAlpha": "Alphabetesch nom Titel",
 			"optionDist": "No Distanz"

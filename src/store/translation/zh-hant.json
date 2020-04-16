@@ -268,7 +268,7 @@
 			"intro": "此主題是以下主題的部份、或與其主題相關，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視主題。"
 		},
 		"Twins": {
-			"headerTitle": "孿生城市",
+			"headerTitle": "雙城",
 			"intro": "被政府合法或是非正式承認具有合夥或是合作協議的孿生城鎮、姊妹市、孿生自治市、其它地區。您可以按時間、或是名稱來排序它們。要查看全部、且包含不帶有圖片的主題，您必須以清單方式來檢視主題。"
 		},
 		"Affiliations": {
@@ -286,6 +286,14 @@
 		"Effects": {
 			"headerTitle": "影響",
 			"intro": "主題的影響。"
+		},
+		"Things": {
+			"headerTitle": "焦點清單主題",
+			"intro": "這些主題在此維基專案的焦點清單裡。"
+		},
+		"Instances": {
+			"headerTitle": "此主題實例",
+			"intro": "查看此主題實例。"
 		},
 		"Works": {
 			"headerTitle": "作品",
@@ -443,6 +451,10 @@
 			"optionTime": "按時間",
 			"optionStart": "按開始時間",
 			"optionEnd": "按結束時間",
+			"optionTitle": "依標題",
+			"optionCause": "依原因",
+			"optionPartof": "依項目，此部分屬於",
+			"optionSuperclass": "依類別，此子類別屬於",
 			"optionAlpha": "按字母順序",
 			"optionTitleAlpha": "按標題字母順序",
 			"optionCreatorAlpha": "按創作者名稱字母順序",

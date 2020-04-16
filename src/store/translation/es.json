@@ -5,6 +5,7 @@
 			"Fitoschido",
 			"Harvest",
 			"Jbar82",
+			"Juenti el toju",
 			"Ryo567",
 			"Susannaanas"
 		]
@@ -348,6 +349,10 @@
 	},
 	"menus": {
 		"sortMenu": {
+			"optionTitle": "Por título",
+			"optionCause": "Por causa",
+			"optionPartof": "Por elemento esto es parte de",
+			"optionSuperclass": "Por clase, esta es una subclase de",
 			"optionRev": "Orden inverso"
 		},
 		"facetMenu": {

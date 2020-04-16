@@ -204,6 +204,7 @@
 	"menus": {
 		"sortMenu": {
 			"optionTime": "بر اساس زمان",
+			"optionTitle": "بر حسب عنوان",
 			"optionAlpha": "الفبایی",
 			"optionTitleAlpha": "الفبایی بر اساس عنوان",
 			"optionCreatorAlpha": "الفبایی بر اساس ایجادکننده",

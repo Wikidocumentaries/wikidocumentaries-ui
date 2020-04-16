@@ -294,6 +294,14 @@
 			"headerTitle": "Effets",
 			"intro": "Ce sont les effets du sujet."
 		},
+		"Things": {
+			"headerTitle": "Sujets de la liste de focalisation",
+			"intro": "Ces sujets sont sur la liste de focalisation de ce Wikiproject."
+		},
+		"Instances": {
+			"headerTitle": "Instances de ce sujet",
+			"intro": "Voir les instances de ce sujet."
+		},
 		"Works": {
 			"headerTitle": "Works",
 			"intro": "Voici les œuvres réalisées par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur une œuvre en cliquant dessus. Seules les œuvres avec des images sont affichées. Afficher comme une liste pour voir toutes les œuvres reliées qui ont été stockées.",
@@ -450,6 +458,10 @@
 			"optionTime": "Chronologiquement",
 			"optionStart": "Par date de début",
 			"optionEnd": "Par date de fin",
+			"optionTitle": "Par titre",
+			"optionCause": "Par cause",
+			"optionPartof": "Par élément dont il fait partie",
+			"optionSuperclass": "Par classe dont il est une sous-classe",
 			"optionAlpha": "Alphabétiquement",
 			"optionTitleAlpha": "Par titre, alphabétiquement",
 			"optionCreatorAlpha": "Par créateur, alphabétiquement",

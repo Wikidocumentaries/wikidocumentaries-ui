@@ -290,6 +290,14 @@
 			"headerTitle": "Etkiler",
 			"intro": "Bunlar konunun etkileri."
 		},
+		"Things": {
+			"headerTitle": "Odak listesi konuları",
+			"intro": "Bu konular, bu Vikiproje'nin odak listesidir."
+		},
+		"Instances": {
+			"headerTitle": "Bu konunun örnekleri",
+			"intro": "Bu konunun örneklerine bakın."
+		},
 		"Works": {
 			"headerTitle": "Çalışanlar",
 			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",
@@ -446,6 +454,10 @@
 			"optionTime": "Saat olarak",
 			"optionStart": "Başlangıç zamanına göre",
 			"optionEnd": "Bitiş zamanına göre",
+			"optionTitle": "Başlığa göre",
+			"optionCause": "Nedenle",
+			"optionPartof": "Öğeye göre bu bir parçası",
+			"optionSuperclass": "Sınıfa göre bu alt sınıf",
 			"optionAlpha": "Alfabetik olarak",
 			"optionTitleAlpha": "Alfabetik olarak başlığa göre",
 			"optionCreatorAlpha": "Yaratıcı tarafından alfabetik olarak",

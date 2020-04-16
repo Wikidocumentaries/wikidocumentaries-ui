@@ -182,6 +182,13 @@
 		"Awards": {
 			"headerTitle": "Xelati"
 		},
+		"Effects": {
+			"headerTitle": "Tesiri",
+			"intro": "Nê tesirê mewzuyê"
+		},
+		"Instances": {
+			"intro": "Bıewni rê misalê nê mewzuy"
+		},
 		"Works": {
 			"sortMenuTitle": "Weçine",
 			"sortMenuOptionTime": "Gorey demi",
