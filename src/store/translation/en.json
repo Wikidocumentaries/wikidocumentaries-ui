@@ -289,8 +289,14 @@
         },
         "Instances": {
             "headerTitle": "Instances of this topic",
-            "intro": "See instances of this topic."
+            "intro": "See instances of this topic. View as list to see also items without an image."
         },
+        "Subclasses": {
+            "headerTitle": "Subclasses of this topic",
+            "intro": "See subclasses of this topic. View as list to see also items without an image."
+        },
+        "Links": {
+            "headerTitle": "Links from this article"        },
         "Works": {
             "headerTitle": "Works",
             "intro": "These are works by the person, collective or organisation, who is the topic of this page. You can enter a page collecting all the information about the work by clicking on it. Only works with images are shown. Display as list to see all related works, that have been stored.",

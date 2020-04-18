@@ -17,6 +17,7 @@
       </div>
     </div>
     <Instances id="instances"></Instances>
+    <Subclasses id="subclasses"></Subclasses>
     <Partof id="partof"></Partof>
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
@@ -63,6 +64,7 @@ import Twins from "@/components/topic_page/Twins";
 import Things from "@/components/topic_page/Things";
 import Affiliations from "@/components/topic_page/Affiliations";
 import Similar from "@/components/topic_page/Similar";
+import Subclasses from "@/components/topic_page/Subclasses";
 import Footer from "@/components/Footer";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
@@ -89,6 +91,7 @@ export default {
     Parts,
     Partof,
     Similar,
+    Subclasses,
     Things,
     TopicPageHeader,
     TopicMap,

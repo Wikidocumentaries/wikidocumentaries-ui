@@ -133,7 +133,7 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?
 GROUP BY ?item ?itemLabel
 LIMIT 1000
         `.replace(/Q131742/g, this.$store.state.wikidocumentaries.wikidataId)
-        .replace(/fi/g, this.$i18n.locale);;
+        .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)
