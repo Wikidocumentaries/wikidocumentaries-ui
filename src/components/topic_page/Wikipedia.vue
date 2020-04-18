@@ -1,11 +1,5 @@
 <template>
   <div class="wikipedia">
-    <!-- <div class="toolbar">
-      <div class="header-title">Sisältö</div>
-    </div>
-    <div class="toc">
-
-    </div> -->
     <div class="toolbar">
       <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
       <ArticleLanguageMenu
@@ -36,6 +30,10 @@
         <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
       </div>
     </div>
+    <Links 
+    class="wplinks" 
+    :currentLanguage="this.language"
+    ></Links>
     <div class="haze" id="wp">
       <div class="toolbar-item block">
         <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
@@ -55,6 +53,7 @@
 import axios from "axios";
 import HeaderLink from "@/components/HeaderLink";
 import ArticleLanguageMenu from "@/components/menu/ArticleLanguageMenu";
+import Links from "@/components/topic_page/Links";
 export default {
   name: "WikipediaArticle",
   props: {},
@@ -109,7 +108,8 @@ export default {
   },
   components: {
     HeaderLink,
-    ArticleLanguageMenu
+    ArticleLanguageMenu,
+    Links
   },
   methods: {
     onLanguageChange(language) {
