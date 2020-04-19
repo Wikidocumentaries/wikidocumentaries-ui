@@ -29,11 +29,11 @@
       <div v-else class="text wiki-html">
         <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
       </div>
-    </div>
-    <Links 
+<!--       <Links 
     class="wplinks" 
     :currentLanguage="this.language"
-    ></Links>
+    ></Links> -->
+    </div>
     <div class="haze" id="wp">
       <div class="toolbar-item block">
         <a @click="isExpanded = !isExpanded" class="toolbar-item-a">

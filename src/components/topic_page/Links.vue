@@ -1,17 +1,19 @@
 <template>
 <div>
-	<div class="wplinks">
+<div v-if="results.length">
+ 	<div class="wplinks">
         <div class="toolbar">
         <div class="header-title">{{ $t('topic_page.Links.headerTitle') }}</div>
         </div>
-        <div tag="div" v-for="item in results" :key="item.id" class="linkrow">
+        <div v-for="item in results" :key="item.id" class="linkrow">
             <div class="switch"></div>
-            <div class="subject">{{ item.subject.label }}</div>
-            <div class="property">{{ item.property.label }}</div>
-            <div class="object">{{ item.object.label }}</div>
+            <div class="inputbox subject"><a :href="getItemURL(item.subject.value)">{{ item.subject.label }}</a></div>
+            <div class="inputbox property">{{ item.propertyLabel }}</div>
+            <div class="inputbox object">ceee{{ item.objectLabel }}</div>
             <div class="addbutton>"></div>
         </div>
 	</div>
+    </div>
 </div>
 </template>
 
@@ -22,6 +24,14 @@ import wdk from 'wikidata-sdk';
 
 export default {
     name: 'Links',
+    props: {
+    currentLanguage: String
+  },
+    data() {
+        return {
+            results: []
+        };
+    },
     mounted() {
         var title = this.$store.state.wikidocumentaries.title;
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
@@ -47,22 +57,39 @@ SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?property ?propertyL
 }
         `.replace(/Q88948269/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale)
-        .replace(/fr/g, currentLanguage);
+        .replace(/fr/g, this.currentLanguage);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
         .post(url, body)
         .then(response => {
-            fullResults = wdk.simplify.sparqlResults(response.data);
-            this.results = selectResults(this.$i18n.locale);
+			this.results = wdk.simplify.sparqlResults(response.data);
         })
         .catch(error => console.log(error));
+    },
+  computed: {
+    wikidocumentaries() {
+      return this.$store.state.wikidocumentaries;
     }
-}        
-
-
-
+  },
+  methods: {
+    getItemURL(value) {
+      return "/" + value + "?language=" + this.$i18n.locale;
+    }
+  }
+}
 
 </script>
 
 <style scoped>
+.linkrow {
+    display:flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.inputbox {
+/*     border: solid var(--main-dimmed) 1px;
+    padding: 0 10px; */
+    height: 35px;
+    flex: 1 1 33%;
+}
 </style>
