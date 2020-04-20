@@ -234,6 +234,9 @@
 		"Similar": {
 			"headerTitle": "Temas similares"
 		},
+		"Effects": {
+			"headerTitle": "Efectos"
+		},
 		"Works": {
 			"headerTitle": "Obras",
 			"sortMenuTitle": "Ordenar",

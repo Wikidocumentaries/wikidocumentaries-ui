@@ -293,7 +293,14 @@
 		},
 		"Instances": {
 			"headerTitle": "此主題實例",
-			"intro": "查看此主題實例。"
+			"intro": "查看此主題實例。以不帶有圖片的項目清單檢閱。"
+		},
+		"Subclasses": {
+			"headerTitle": "此主題的子類別",
+			"intro": "查看此主題的子類別。以不帶有圖片的項目清單檢閱。"
+		},
+		"Links": {
+			"headerTitle": "來自此條目的連結"
 		},
 		"Works": {
 			"headerTitle": "作品",
