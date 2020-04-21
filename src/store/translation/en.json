@@ -197,7 +197,7 @@
             },
             "languageMenu": {
                 "menuTitle": "Read the article in another language",
-                "translateArticleText": "Translate this article to English",
+                "translateArticleText": "Translate this article to your language",
                 "otherLanguagestext": "Other languages"
             }
         },

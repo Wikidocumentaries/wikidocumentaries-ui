@@ -55,7 +55,7 @@ const DISPLAY_ACTIONS = {
 	LIST: 1,
 }
 
-const MAX_ITEMS_TO_VIEW = 50;
+const MAX_ITEMS_TO_VIEW = 500;
 const DEFAULT_SORT = ["person.label"];
 
 let fullResults, currentSort, currentDisplay;
