@@ -139,7 +139,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Lenn ar pennad en ur yezh all",
-				"translateArticleText": "Treiñ ar pennad-mañ e saozneg",
+				"translateArticleText": "Treiñ ar pennad-mañ en ho yezh",
 				"otherLanguagestext": "Yezhoù all"
 			}
 		},
@@ -208,6 +208,16 @@
 		"Things": {
 			"headerTitle": "Danvezioù ar roll pennañ",
 			"intro": "Emañ an danvezioù-se war roll pennañ ar Wikiproject-mañ."
+		},
+		"Instances": {
+			"intro": "Gwelet instañsoù an danvez-mañ. Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Subclasses": {
+			"headerTitle": "Iskevrennad an danvez-mañ",
+			"intro": "Gwelet iskevrennadoù an danvez-mañ.  Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Links": {
+			"headerTitle": "Liammoù adalek ar pennad-mañ"
 		},
 		"Works": {
 			"headerTitle": "Labourioù",

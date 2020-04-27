@@ -204,7 +204,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Maddeyi başka bir dilde oku",
-				"translateArticleText": "Bu maddeyi Türkçe'ye çevir",
+				"translateArticleText": "Bu maddeyi dilinize çevirin",
 				"otherLanguagestext": "Diğer diller"
 			}
 		},
@@ -296,7 +296,14 @@
 		},
 		"Instances": {
 			"headerTitle": "Bu konunun örnekleri",
-			"intro": "Bu konunun örneklerine bakın."
+			"intro": "Bu konunun örneklerine bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Subclasses": {
+			"headerTitle": "Bu konunun alt sınıfları",
+			"intro": "Bu konunun alt sınıflarına bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Links": {
+			"headerTitle": "Bu maddedeki bağlantılar"
 		},
 		"Works": {
 			"headerTitle": "Çalışanlar",

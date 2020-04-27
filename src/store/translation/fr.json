@@ -208,7 +208,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Lire l’article dans une autre langue",
-				"translateArticleText": "Traduire cet article en anglais",
+				"translateArticleText": "Traduire cet article dans votre langue",
 				"otherLanguagestext": "Autres langues"
 			}
 		},
@@ -300,7 +300,14 @@
 		},
 		"Instances": {
 			"headerTitle": "Instances de ce sujet",
-			"intro": "Voir les instances de ce sujet."
+			"intro": "Voir les instances de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Subclasses": {
+			"headerTitle": "Sous-classes de ce sujet",
+			"intro": "Voir les sous-classes de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Links": {
+			"headerTitle": "Liens depuis cet article"
 		},
 		"Works": {
 			"headerTitle": "Works",

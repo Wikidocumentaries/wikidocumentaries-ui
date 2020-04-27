@@ -160,6 +160,9 @@
 		"Effects": {
 			"headerTitle": "Effekter"
 		},
+		"Instances": {
+			"headerTitle": "Instanze vun dësem Sujet"
+		},
 		"Works": {
 			"headerTitle": "Wierker",
 			"sortMenuTitle": "Zortéieren",

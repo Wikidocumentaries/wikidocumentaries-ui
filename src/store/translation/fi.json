@@ -284,6 +284,9 @@
 			"headerTitle": "Samanlaisia aiheita",
 			"intro": "Etsi aiheita, joilla on joitain keskeisiä yhteisiä tekijöitä tämän sivun aiheen kanssa."
 		},
+		"Links": {
+			"headerTitle": "Linkit tästä artikkelista"
+		},
 		"Works": {
 			"headerTitle": "Teoksia",
 			"intro": "Nämä ovat aiheena olevan henkilön, kollektiivin tai organisaation tekemiä teoksia. Klikkaamalla voit näyttää siihen liittyvän sivun. Vain kuvalliset kohteet ovat näkyvissä. Näet kaikki esittämällä teokset listana.",

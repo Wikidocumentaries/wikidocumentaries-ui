@@ -203,7 +203,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leia o artigo em outro idioma",
-				"translateArticleText": "Traduzir este artigo para Português brasileiro",
+				"translateArticleText": "Traduzir este artigo para seu idioma",
 				"otherLanguagestext": "Outros idiomas"
 			}
 		},
@@ -296,6 +296,9 @@
 		"Instances": {
 			"headerTitle": "Instâncias deste tópico",
 			"intro": "Veja instâncias deste tópico."
+		},
+		"Subclasses": {
+			"intro": "Veja subclasses deste tópico. Veja como lista para ver também itens sem imagem."
 		},
 		"Works": {
 			"headerTitle": "Trabalho",

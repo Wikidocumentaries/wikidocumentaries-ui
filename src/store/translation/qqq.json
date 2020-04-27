@@ -20,6 +20,7 @@
 		"statusTopics": "The text under the subheading \"Topics\" in the subsection \"Status\" in the introductory section",
 		"titleMedia": "Subheading in the subsection \"Status\" in the introductory section",
 		"titleTools": "Subheading in the subsection \"Status\" in the introductory section",
+		"statusTools": "Introductory text about tools of the site in the site main page.",
 		"titleLanguages": "{{Identical|Language}}",
 		"titleTechnology": "Subheading in the subsection \"Status\" in the introductory section",
 		"email": "{{Identical|Email}}"
@@ -160,23 +161,23 @@
 			"noTopicFoundText": "Error message for content not found in the Data section"
 		},
 		"Wikipedia": {
-			"headerTitle": "Main title for the Article section\n{{Identical|Article}}",
-			"missingArticle": "Error message for a missing article in the Article section",
+			"headerTitle": "Main title for the Article section (Wikipedia/encyclopedic article)\n{{Identical|Article}}",
+			"missingArticle": "Error message for a missing article in the Article section (Wikipedia/encyclopedic article)",
 			"missingArticleMissing": "General message about a missing article",
-			"missingArticleChoose": "Extended message about a missing article, prompt to read another language article.",
+			"missingArticleChoose": "Extended message about a missing article, prompt to read another language article. (Wikipedia/encyclopedic article)",
 			"missingArticleCreate": "Extended message about a missing article, prompt to create a new article.",
-			"missingArticleFallback": "Notice text in the Article section explaining the article shown is in a fallback language",
-			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article. Use the name of your language in the message.",
-			"missingArticleAuto": "Notice text in the Article section explaining the article shown is automatically generated",
+			"missingArticleFallback": "Notice text in the Article section explaining the article shown is in a fallback language (Wikipedia/encyclopedic article)",
+			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article. Use the name of your language in the message. (Wikipedia/encyclopedic article)",
+			"missingArticleAuto": "Notice text in the Article section explaining the article shown is automatically generated (Wikipedia/encyclopedic article)",
 			"extLink": {
 				"linkTitleWP": "Tooltip message for viewing an article in the Article section"
 			},
 			"addLink": {
-				"linkTitleWP": "Tooltip message for creating an article in the Article section"
+				"linkTitleWP": "Tooltip message for creating an article in the Article section (Wikipedia/encyclopedic article)"
 			},
 			"languageMenu": {
 				"menuTitle": "Menu title for the Article Language menu",
-				"translateArticleText": "Menu item for translating the article in the Article Language menu. Use the name of your language in the message.",
+				"translateArticleText": "Menu item for translating the article in the Article Language menu. Replace \"your language\" with the name of your language. (article = Wikipedia/encyclopedic article)",
 				"otherLanguagestext": "Menu item for reading the article in another language in the Article Language menu"
 			}
 		},
@@ -229,6 +230,9 @@
 				"optionList": "Menu option to display as list in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound"
 			},
 			"showAll": "Generic menu option to display all in the 'Depicted in' section\n{{Identical|All}}"
+		},
+		"Links": {
+			"headerTitle": "Title for a section listing links from the current Wikipedia article."
 		},
 		"Works": {
 			"headerTitle": "Main title of the Works section",
