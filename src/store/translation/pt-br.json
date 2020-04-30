@@ -4,7 +4,8 @@
 			"Abijeet Patro",
 			"Chicocvenancio",
 			"Eduardo Addad de Oliveira",
-			"Fitoschido"
+			"Fitoschido",
+			"Jhonnatanricardo"
 		]
 	},
 	"LandingPage": {
@@ -295,10 +296,14 @@
 		},
 		"Instances": {
 			"headerTitle": "Instâncias deste tópico",
-			"intro": "Veja instâncias deste tópico."
+			"intro": "Ver instâncias deste tópico. Visualize como lista para ver também itens sem uma imagem"
 		},
 		"Subclasses": {
+			"headerTitle": "Subclasses deste tópico",
 			"intro": "Veja subclasses deste tópico. Veja como lista para ver também itens sem imagem."
+		},
+		"Links": {
+			"headerTitle": "Links deste artigo"
 		},
 		"Works": {
 			"headerTitle": "Trabalho",

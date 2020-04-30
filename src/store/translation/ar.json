@@ -204,7 +204,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "اقرأ المقالة بلغة أخرى",
-				"translateArticleText": "ترجمة هذه المقالة إلى العربية",
+				"translateArticleText": "ترجمة هذه المقالة إلى لغتك",
 				"otherLanguagestext": "لغات أخرى"
 			}
 		},
@@ -291,12 +291,18 @@
 			"intro": "هذه هي تأثيرات الموضوع"
 		},
 		"Things": {
-			"headerTitle": "Focus list topics",
+			"headerTitle": "ركز موضوعات القائمة",
 			"intro": "   هذه المواضيع على قائمة التركيز لمشروع ويكي"
 		},
 		"Instances": {
 			"headerTitle": "مثيلات هذا الموضوع",
-			"intro": "أمثلة هذا الموضوع"
+			"intro": "انظر أمثلة لهذا الموضوع. عرض كقائمة لرؤية العناصر أيضا بدون صور."
+		},
+		"Subclasses": {
+			"headerTitle": "رتب فرعية لهذا الموضوع"
+		},
+		"Links": {
+			"headerTitle": "وصلات من هذه المقالة"
 		},
 		"Works": {
 			"headerTitle": "الأعمال",

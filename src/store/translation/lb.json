@@ -111,7 +111,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Den Artikel an enger anerer Sprooch liesen",
-				"translateArticleText": "Dësen Artikel op Lëtzebuergesch iwwersetzen",
+				"translateArticleText": "Dësen Artikel an Är Sprooch iwwersetzen",
 				"otherLanguagestext": "Aner Sproochen"
 			}
 		},
@@ -162,6 +162,9 @@
 		},
 		"Instances": {
 			"headerTitle": "Instanze vun dësem Sujet"
+		},
+		"Links": {
+			"headerTitle": "Linke vun dësem Artikel"
 		},
 		"Works": {
 			"headerTitle": "Wierker",
