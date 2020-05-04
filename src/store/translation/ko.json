@@ -124,7 +124,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "다른 언어로 문서 읽기",
-				"translateArticleText": "이 문서를 영어로 번역하기",
+				"translateArticleText": "이 문서를 내 언어로 번역하기",
 				"otherLanguagestext": "다른 언어"
 			}
 		},
@@ -169,6 +169,9 @@
 		},
 		"Similar": {
 			"headerTitle": "비슷한 주제"
+		},
+		"Effects": {
+			"headerTitle": "효과"
 		},
 		"Works": {
 			"sortMenuTitle": "정렬",
