@@ -6,6 +6,7 @@
 			"Kareyac",
 			"Movses",
 			"Okras",
+			"Pacha Tchernof",
 			"Putnik"
 		]
 	},
@@ -203,7 +204,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Читать статью на другом языке",
-				"translateArticleText": "Перевести эту статью на английский",
+				"translateArticleText": "Переведите эту статью на русский язык",
 				"otherLanguagestext": "Другие языки"
 			}
 		},
