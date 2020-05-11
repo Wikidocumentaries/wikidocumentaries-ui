@@ -203,7 +203,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "記事を別の言語で読む",
-				"translateArticleText": "この記事を英語に翻訳する",
+				"translateArticleText": "この記事をご使用の言語に翻訳する",
 				"otherLanguagestext": "他の言語"
 			}
 		},
