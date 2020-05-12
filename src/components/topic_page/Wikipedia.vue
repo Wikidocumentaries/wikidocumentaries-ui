@@ -1,7 +1,7 @@
 <template>
   <div class="wikipedia">
     <div class="toolbar">
-      <div class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</div>
+      <h1 class="header-title">{{ $t('topic_page.Wikipedia.headerTitle') }}</h1>
       <ArticleLanguageMenu
         class="language-menu"
         :currentLanguage="language"

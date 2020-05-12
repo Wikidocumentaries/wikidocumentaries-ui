@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-component">
     <div class="toolbar">
-      <div class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</div>
+      <h1 class="header-title">{{ $t('topic_page.TopicTimeline.headerTitle') }}</h1>
       <ToolbarMenu
         icon="wikiglyph-ellipses"
         :items="toolbarActionMenuItems"
@@ -310,7 +310,7 @@ export default {
         //console.log(height);
         for (var i = 0; i < this.sortedTimelineItems.length; i++) {
           var element = this.$refs["timelineExplanations" + i][0];
-          console.log(element);
+          //console.log(element);
           if (element != undefined) {
             var style = this.timelineExplanationConnectorStyle(i);
             //console.log(style);

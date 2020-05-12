@@ -66,7 +66,7 @@
         <div class="metadata-area">
           <div class="metadata-original">
             <div class="toolbar">
-              <div class="header-title">{{ $t('imageViewer.imageMetadata.image') }}</div>
+              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.image') }}</h1>
             </div>
             <div class="columns">
               <div class="grid-row">
@@ -338,12 +338,12 @@
           </div>
           <!--div class="metadata-original">
             <div class="toolbar">
-              <div class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</div>
+              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.work') }}</h1>
             </div>
           </div-->
           <div class="metadata-copyright">
             <div class="toolbar">
-              <div class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</div>
+              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</h1>
             </div>
             <div class="columns">
               <div class="grid-row">
@@ -373,7 +373,7 @@
           </div>
           <div class="metadata-digital">
             <div class="toolbar">
-              <div class="header-title">{{ $t('imageViewer.imageMetadata.digitalCopy') }}</div>
+              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.digitalCopy') }}</h1>
             </div>
             <div class="columns">
               <div class="grid-row">

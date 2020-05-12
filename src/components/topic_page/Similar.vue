@@ -2,7 +2,7 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <div class="header-title">{{ $t('topic_page.Similar.headerTitle') }}</div>
+        <h1 class="header-title">{{ $t('topic_page.Similar.headerTitle') }}</h1>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-funnel"

@@ -1,7 +1,7 @@
 <template>
   <div class="Wikidata">
     <div class="toolbar">
-      <div class="header-title">{{ $t('topic_page.Wikidata.headerTitle') }}</div>
+      <h1 class="header-title">{{ $t('topic_page.Wikidata.headerTitle') }}</h1>
       <HeaderLink
         class="toolbar-item"
         :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')"
@@ -367,9 +367,11 @@ export default {
 
 .item-instance-title {
   padding-left: 20px;
-  text-transform: uppercase;
-  font-family: "Barlow Condensed", sans-serif;
+/*   text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif; */
   font-size: 1.3em;
+  font-weight: 600;
+  color: #999;
 }
 
 .statements {

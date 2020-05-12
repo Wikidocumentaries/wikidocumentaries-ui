@@ -3,7 +3,7 @@
 <div v-if="results.length">
  	<div class="wplinks">
         <div class="toolbar">
-        <div class="header-title">{{ $t('topic_page.Links.headerTitle') }}</div>
+        <h1 class="header-title">{{ $t('topic_page.Links.headerTitle') }}</h1>
         </div>
         <div v-for="item in results" :key="item.id" class="linkrow">
             <div class="switch"></div>

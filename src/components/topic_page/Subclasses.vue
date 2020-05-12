@@ -2,7 +2,7 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.Subclasses.headerTitle') }}</div>
+            <h1 class="header-title">{{ $t('topic_page.Subclasses.headerTitle') }}</h1>
 						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
             <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>

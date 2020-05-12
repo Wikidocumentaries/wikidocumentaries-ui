@@ -1,7 +1,7 @@
 <template>
 <div>
   <div v-if="results.length">
-    <div class="toolbar"><div class="header-title">{{ $t('topic_page.Events.headerTitle') }}</div></div>
+    <div class="toolbar"><h1 class="header-title">{{ $t('topic_page.Events.headerTitle') }}</h1></div>
     <ul>
       <li v-for="item in results" :key="item.id">
         <a :href="item.event">{{ item.relation }} {{ item.time }}</a>: {{ item.description }}
@@ -10,7 +10,7 @@
     </ul>
   </div>
   <!-- <div v-if="wikidataResults.length">
-    <div class="toolbar"><div class="header-title">Tapahtumat-WD</div></div>
+    <div class="toolbar"><h1 class="header-title">Tapahtumat-WD</h1></div>
     <ul>
       <li v-for="item in wikidataResults">
         {{ item.wdLabel }} {{ item.time.substring(0, 4) }} {{ item.label }}

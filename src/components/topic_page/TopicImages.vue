@@ -1,7 +1,7 @@
 <template>
     <div v-if="wikidocumentaries.images.length" class="images-component">
         <div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</div>
+            <h1 class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</h1>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
             </ToolbarMenu>

@@ -1,7 +1,7 @@
 <template>
     <div v-if="(topicLocation && topicLocation.length) || (shownImages && shownImages.length)" class="map-component">
         <div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
+            <h1 class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</h1>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                 <TransparencySliderMenuItem slot="custom-menu-item"></TransparencySliderMenuItem>

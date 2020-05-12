@@ -70,9 +70,9 @@ body {
 
 .menu-title,
 .header-title {
-  font-family: "Barlow Condensed", sans-serif;
+/*   font-family: "Barlow Condensed", sans-serif; */
   color: var(--main-txt-color);
-  text-transform: uppercase;
+/*   text-transform: uppercase; */
 }
 
 h1,
@@ -266,7 +266,6 @@ a:hover {
 .header-title {
   flex-grow: 90;
   font-size: 1.5em;
-  text-transform: uppercase;
 }
 
 .header-link {
@@ -644,9 +643,10 @@ i.wikiglyph {
 }
 
 .gallery-title {
-  font-family: barlow condensed;
-  text-transform: uppercase;
+/*   font-family: barlow condensed; */
+/*   text-transform: uppercase; */
   font-size: 1.2em;
+  font-weight: 600;
 }
 
 .gallery {
