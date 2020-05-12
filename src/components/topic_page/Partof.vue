@@ -122,6 +122,10 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
     { ?pi wdt:P1647* wd:P279 . }
     UNION
     { ?pi wdt:P1647* wd:P47 . }
+    UNION
+    { ?pi wdt:P1647* wd:P3032 . }
+    UNION
+    { ?pi wdt:P1647* wd:P2789 . }
     MINUS
     { ?pi wdt:P1647* wd:P1416 . }
     MINUS
