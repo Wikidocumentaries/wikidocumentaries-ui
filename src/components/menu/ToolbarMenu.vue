@@ -60,6 +60,7 @@ export default {
 .menu-title {
     padding: 6px 10px;
     font-size: 1.3em;
+    font-weight: 600;
 }
 
 /* Dropdown Content (Hidden by Default) */
