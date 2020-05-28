@@ -101,7 +101,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?depicted ?depictedLabel (SAMPLE(?image) AS ?image) (GROUP_CONCAT(?typeLabel; separator=", ") as ?type) (SAMPLE(?time) AS ?time) WHERE {
+SELECT ?depicted ?depictedLabel ?depictedDescription (SAMPLE(?image) AS ?image) (GROUP_CONCAT(?typeLabel; separator=", ") as ?type) (SAMPLE(?time) AS ?time) WHERE {
   {
       {
         wd:Q1757 wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 ?depicted .

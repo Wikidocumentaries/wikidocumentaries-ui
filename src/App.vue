@@ -386,7 +386,7 @@ a:hover {
 
   figure {
     margin-right: 40px;
-    margin-left: 20px;
+    margin-left: 0px;
     float: left;
     width: min-content;
     clear: both;

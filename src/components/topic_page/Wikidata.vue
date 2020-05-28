@@ -374,6 +374,10 @@ export default {
   color: #999;
 }
 
+.item-instance-title::first-letter {
+  text-transform:uppercase;
+}
+
 .statements {
   list-style-type: none;
   margin: 5px 20px;
