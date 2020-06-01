@@ -10,6 +10,7 @@
 	"LandingPage": {
 		"search": "Cerca",
 		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento",
+		"searchInputSearchOnly": "Trova un argomento",
 		"titleStatus": "Stato",
 		"titleTools": "Strumenti",
 		"titleLanguages": "Lingue",
