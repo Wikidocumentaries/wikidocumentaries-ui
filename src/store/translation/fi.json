@@ -284,6 +284,22 @@
 			"headerTitle": "Samanlaisia aiheita",
 			"intro": "Etsi aiheita, joilla on joitain keskeisiä yhteisiä tekijöitä tämän sivun aiheen kanssa."
 		},
+		"Effects": {
+			"headerTitle": "Vaikutukset",
+			"intro": "Nämä ovat vaikutuksia, joita tämän sivun aiheella on."
+		},
+		"Things": {
+			"headerTitle": "Aiheita tähän liittyvässä projektissa",
+			"intro": "Nämä aiheet on linkitetty tähän aiheeseen liittyvään Wikiprojektiin."
+		},
+		"Instances": {
+			"headerTitle": "Tämän aiheen esiintymiä",
+			"intro": "Katso tämän aiheen esiintymät. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
+		"Subclasses": {
+			"headerTitle": "Tämän aiheen alaluokkia",
+			"intro": "Tarkastele tämän aiheen alaluokkia. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
 		"Links": {
 			"headerTitle": "Linkit tästä artikkelista"
 		},
@@ -323,6 +339,10 @@
 			"facetMenuOptionProfession": "Ammatin mukaan",
 			"facetMenuOptionCountry": "Maan mukaan",
 			"facetMenuOptionCity": "Sukupuolen mukaan"
+		},
+		"Collection": {
+			"headerTitle": "Teoksia kokoelmissa",
+			"intro": "Nämä teokset ovat tämän henkilön tai organisaation kokoelmissa. Voit näyttää ne listana, jolloin näet myös kohteet, joista ei ole kuvaa. Ne voi järjestää päivämäärän tai nimen perusteella. Kun tämä tieto puuttuu, aihe ei näe sillä perusteella järjestetyssä listassa."
 		}
 	},
 	"imageViewer": {
@@ -439,6 +459,10 @@
 			"optionTime": "Ajan perusteella",
 			"optionStart": "Alkamisajan mukaan",
 			"optionEnd": "Loppumisajan mukaan",
+			"optionTitle": "Otsikon mukaan",
+			"optionCause": "Syyn mukaan",
+			"optionPartof": "Sen aiheen mukaan, jonka osa tämä aihe on",
+			"optionSuperclass": "Sen luokan mukaan, jonka alaluokka tämä aihe on",
 			"optionAlpha": "Aakkosjärjestykseen",
 			"optionTitleAlpha": "Nimen mukaan aakkosjärjestykseen",
 			"optionCreatorAlpha": "Tekijän mukaan aakkosjärjestykseen",
