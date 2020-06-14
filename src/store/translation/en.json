@@ -260,8 +260,8 @@
             "intro": "These parts belong to this topic. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Partof": {
-            "headerTitle": "Context",
-            "intro": "This topic is part of or adjoining the following topics. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
+            "headerTitle": "Location",
+            "intro": "This topic is located in relation to these topics. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Twins": {
             "headerTitle": "Twin cities",

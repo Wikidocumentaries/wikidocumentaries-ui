@@ -38,7 +38,7 @@
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
-            <b>{{ item.item.label }}</b>
+            <b>{{ item.item.label }}</b> {{ item.item.description}} {{ item.startdate }}<span v-if="item.startdate || item.enddate">–</span>{{ item.enddate }}
           </a>
         </div>
       </div>
@@ -128,8 +128,17 @@ export default {
       } 
       if (statements[index].id == 'P17') {
         countryid = statements[index].values[0].id;
+      } else if (statements[index].id == 'P27') {
+        countryvar = 'P27';
+        countryid = statements[index].values[0].id;
+      } else if (statements[index].id == 'P495') {
+        countryvar = 'P495';
+        countryid = statements[index].values[0].id;
       } else if (statements[index].id == 'P131') {
         countryvar = 'P131';
+        countryid = statements[index].values[0].id;
+      } else if (statements[index].id == 'P291') {
+        countryvar = 'P291';
         countryid = statements[index].values[0].id;
       }
       console.log(countryvar, countryid, typevar, typeid);

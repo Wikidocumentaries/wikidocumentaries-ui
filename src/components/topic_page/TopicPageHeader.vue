@@ -5,6 +5,7 @@
             <div id="marks" class="header-marks">
                 <img :src="logoImage" class="header-logo" />
                 <img :src="signature" class="header-neg" />
+                <img :src="sailEmblem" class="header-logo" />
                 <a :href="getCoaURL"><img :src="coatOfArms" class="header-coa" /></a>
             </div>
             <div id="shade" :class="(headerImage ? 'bottomshade' : 'noshade')">
@@ -112,6 +113,16 @@ export default {
                 if (statements[index].id == 'P109') {
                     signature = statements[index].values[0].value;
                     return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+signature;
+                }
+            }
+        },
+        sailEmblem () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let sailEmblem;
+            for (var index in statements) {
+                if (statements[index].id == 'P5962') {
+                    sailEmblem = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+sailEmblem;
                 }
             }
         }

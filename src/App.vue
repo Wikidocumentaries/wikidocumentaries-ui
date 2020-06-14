@@ -266,6 +266,7 @@ a:hover {
 .header-title {
   flex-grow: 90;
   font-size: 1.5em;
+  margin: 0;
 }
 
 .header-link {

@@ -16,7 +16,7 @@
                 <div class="thumb-image-info">
                     <div class="thumb-credit over">{{ item.relation }}</div>
                     <div class="gallery-title">{{ item.work.label }}</div>
-                    <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{ item.copyrightLabel}}</div>
+                    <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }} {{item.municipalityLabel}} {{ item.copyrightLabel}}</div>
                 </div>
             </router-link>
         </div>
