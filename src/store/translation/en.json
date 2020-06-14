@@ -291,6 +291,10 @@
             "headerTitle": "Instances of this topic",
             "intro": "See instances of this topic. View as list to see also items without an image."
         },
+        "Location": {
+            "headerTitle": "Location",
+            "intro": "This topic is situated in or in the context of these topics."
+        },
         "Subclasses": {
             "headerTitle": "Subclasses of this topic",
             "intro": "See subclasses of this topic. View as list to see also items without an image."

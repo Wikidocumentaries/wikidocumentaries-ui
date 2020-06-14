@@ -16,9 +16,10 @@
         </div>
       </div>
     </div>
+    <Location id="location"></Location>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
-    <Partof id="partof"></Partof>
+<!--     <Partof id="partof"></Partof> -->
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
@@ -52,6 +53,7 @@ import TopicImages from "@/components/topic_page/TopicImages";
 //import EventList from "@/components/topic_page/EventList";
 import Effects from "@/components/topic_page/Effects";
 import Instances from "@/components/topic_page/Instances";
+import Location from "@/components/topic_page/Location";
 import Works from "@/components/topic_page/Works";
 import Awards from "@/components/topic_page/Awards";
 import People from "@/components/topic_page/People";
@@ -86,10 +88,11 @@ export default {
 /*     TopicTimeline, */
 /*     EventList, */
     Instances,
+    Location,
     Locations,
     People,
     Parts,
-    Partof,
+/*     Partof, */
     Similar,
     Subclasses,
     Things,
