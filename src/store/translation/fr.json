@@ -271,8 +271,8 @@
 			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
 		},
 		"Partof": {
-			"headerTitle": "Contexte",
-			"intro": "Ce sujet fait partie ou rejoint les sujets suivants. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"headerTitle": "Emplacement",
+			"intro": "Ce sujet est situé en lien avec ces sujets. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Twins": {
 			"headerTitle": "Villes jumelées",
@@ -301,6 +301,10 @@
 		"Instances": {
 			"headerTitle": "Instances de ce sujet",
 			"intro": "Voir les instances de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Location": {
+			"headerTitle": "Emplacement",
+			"intro": "Ce sujet est situé à l’intérieur ou dans le contexte de ces sujets."
 		},
 		"Subclasses": {
 			"headerTitle": "Sous-classes de ce sujet",
