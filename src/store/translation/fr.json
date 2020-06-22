@@ -304,7 +304,7 @@
 		},
 		"Location": {
 			"headerTitle": "Emplacement",
-			"intro": "Ce sujet est situé à l’intérieur ou dans le contexte de ces sujets."
+			"intro": "Ce sujet se trouve à l’intérieur ou dans le contexte de ces sujets."
 		},
 		"Subclasses": {
 			"headerTitle": "Sous-classes de ce sujet",

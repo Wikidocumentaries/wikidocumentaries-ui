@@ -267,8 +267,8 @@
 			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
 		},
 		"Partof": {
-			"headerTitle": "Contexto",
-			"intro": "Este tópico faz parte ou é adjacente aos seguintes tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+			"headerTitle": "Localização",
+			"intro": "Este tópico está localizado em relação a esses tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
 		},
 		"Twins": {
 			"headerTitle": "Cidades gêmeas",
@@ -297,6 +297,10 @@
 		"Instances": {
 			"headerTitle": "Instâncias deste tópico",
 			"intro": "Ver instâncias deste tópico. Visualize como lista para ver também itens sem uma imagem"
+		},
+		"Location": {
+			"headerTitle": "Localização",
+			"intro": "Este tópico está dentro ou no contexto desses tópicos."
 		},
 		"Subclasses": {
 			"headerTitle": "Subclasses deste tópico",

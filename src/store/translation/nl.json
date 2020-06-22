@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Elroy",
+			"Mainframe98",
 			"Optilete",
 			"PonkoSasuke",
 			"Rots61",
@@ -130,7 +131,7 @@
 			"headerTitle": "Gedeelte"
 		},
 		"Partof": {
-			"headerTitle": "Verband"
+			"headerTitle": "Locatie"
 		},
 		"Awards": {
 			"headerTitle": "Onderscheidingen",
@@ -139,6 +140,9 @@
 		"Effects": {
 			"headerTitle": "Effecten",
 			"intro": "Dit zijn de effecten van het onderwerp,"
+		},
+		"Location": {
+			"headerTitle": "Locatie"
 		}
 	},
 	"imageViewer": {

@@ -100,7 +100,8 @@
 					"copyvio": "Det overtræder ophavsret"
 				}
 			},
-			"imagesViewExternal": "Vis originalbilledet"
+			"imagesViewExternal": "Vis originalbilledet",
+			"imagesViewOnMap": "Visa billedet på et kort"
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "Skjul billeder",
@@ -121,6 +122,7 @@
 				"optionShowList": "Vis begivenheder som en liste"
 			},
 			"optionsMenu": {
+				"menuTitle": "Indstillinger",
 				"optionWorks": "Vis værker",
 				"subRelatedPeopleConf": {
 					"menuTitle": "Konfigurér"
@@ -147,7 +149,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Læs artiklen på et andet sprog",
-				"translateArticleText": "Oversæt denne artikel til engelsk",
+				"translateArticleText": "Oversæt denne artikel til dit sprog",
 				"otherLanguagestext": "Andre sprog"
 			}
 		},
@@ -196,10 +198,16 @@
 			"headerTitle": "Dele"
 		},
 		"Partof": {
-			"headerTitle": "Kontekst"
+			"headerTitle": "Placering"
+		},
+		"Awards": {
+			"headerTitle": "Priser"
 		},
 		"Similar": {
 			"headerTitle": "Lignende emner"
+		},
+		"Effects": {
+			"headerTitle": "Effekter"
 		},
 		"Works": {
 			"headerTitle": "Værker",

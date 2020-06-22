@@ -126,6 +126,9 @@
 			},
 			"showAll": "সকল"
 		},
+		"Location": {
+			"headerTitle": "অবস্থান"
+		},
 		"Works": {
 			"sortMenuTitle": "বাছাই করুন",
 			"sortMenuOptionTime": "সময় অনুসারে",

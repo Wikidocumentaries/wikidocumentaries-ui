@@ -267,8 +267,8 @@
 			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
 		},
 		"Partof": {
-			"headerTitle": "Bağlam",
-			"intro": "Bu konu, aşağıdaki konuların bir parçası veya bitişiğidir. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+			"headerTitle": "Konum",
+			"intro": "Bu konu, bu konular ile ilgilidir. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
 		},
 		"Twins": {
 			"headerTitle": "İkiz şehirler",
@@ -297,6 +297,10 @@
 		"Instances": {
 			"headerTitle": "Bu konunun örnekleri",
 			"intro": "Bu konunun örneklerine bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Location": {
+			"headerTitle": "Konum",
+			"intro": "Bu konu, bu konuların içinde veya bağlamında bulunmaktadır."
 		},
 		"Subclasses": {
 			"headerTitle": "Bu konunun alt sınıfları",

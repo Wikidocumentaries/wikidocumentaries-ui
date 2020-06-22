@@ -4,6 +4,7 @@
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"A Retired User",
+			"列维劳德",
 			"沈澄心",
 			"科劳"
 		]
@@ -114,10 +115,13 @@
 			"showAll": "全部"
 		},
 		"Partof": {
-			"headerTitle": "语境"
+			"headerTitle": "位置"
 		},
 		"Awards": {
 			"headerTitle": "奖项"
+		},
+		"Location": {
+			"headerTitle": "位置"
 		},
 		"Works": {
 			"facetMenuOptionCity": "地方",

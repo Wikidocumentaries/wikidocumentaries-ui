@@ -163,6 +163,9 @@
 		"Instances": {
 			"headerTitle": "Instanze vun dësem Sujet"
 		},
+		"Location": {
+			"headerTitle": "Plaz"
+		},
 		"Links": {
 			"headerTitle": "Linke vun dësem Artikel"
 		},
