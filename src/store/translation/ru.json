@@ -291,6 +291,9 @@
 			"headerTitle": "Эффекты",
 			"intro": "Это эффекты темы."
 		},
+		"Location": {
+			"headerTitle": "Местоположение"
+		},
 		"Links": {
 			"headerTitle": "Ссылки из этой статьи"
 		},
