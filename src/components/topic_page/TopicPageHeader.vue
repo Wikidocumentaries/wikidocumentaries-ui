@@ -70,6 +70,7 @@ export default {
                 }
             }
             if (imageid) {
+                imageid = encodeURIComponent(imageid);
                 imageurl = "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+imageid;
             } else {
                 imageurl = this.wikidocumentaries.headerImageURL;

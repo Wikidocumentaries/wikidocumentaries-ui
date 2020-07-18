@@ -92,7 +92,7 @@ export default {
     Locations,
     People,
     Parts,
-/*     Partof, */
+    Partof,
     Similar,
     Subclasses,
     Things,
