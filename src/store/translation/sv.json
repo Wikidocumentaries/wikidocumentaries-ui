@@ -3,18 +3,22 @@
 		"authors": [
 			"Abbe98",
 			"Abijeet Patro",
+			"Sabelöga",
 			"Susannaanas",
 			"WikiPhoenix"
 		]
 	},
 	"LandingPage": {
 		"search": "Sök",
-		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne",
-		"searchInputSearchOnly": "Finn ett ämne",
+		"searchInputPlaceHolder": "Sök ämnen eller skapa ett nytt ämne",
+		"searchInputSearchOnly": "Hitta ett ämne",
 		"showMore": "Visa fler objekt",
 		"createNew": "Skapa nytt objekt",
+		"intro": "Wikidomentaries är en wiki för liten historia - en plats för att samla spår från historien och stöpa om dem till berättelser. Börja genom att söka efter ämne som intresserar dig!",
 		"titleDescription": "Vad är Wikidocumentaries?",
+		"description": "Wikidocumentaries är en skaparplats för medborgarhistoriker. Den kombinerar information angående ämnena - folk, platser, byggnader, händelser och mer. Du kan navigera mellan ämnena genom att följa någon anknytande koppling såsom familjerelationer, orter, skapare, och skapelser eller anslutning. Ett ämne illustreras med bilder och kartor från kopplade museer, arkiv och bibliotek. I Wikidokumentärer kommer det att vara möjligt att rätta befintlig information och lägga till nya ämnen, lägga till sina egna bilder och minnen, och använda allt  material för dina egna syften.",
 		"titleStatus": "Status",
+		"status": "Webbplatsen är ett demo. Flera viktiga funktioner finns ännu inte och webbplatsen kanske inte presterar så bra som man kan vänta sig.",
 		"moreBelow": "Läs mer nedan",
 		"more": "Läs mer",
 		"moreLink": "Läs mer i",
@@ -25,12 +29,14 @@
 		"titleTechnology": "Teknik",
 		"titleCreators": "Skapare",
 		"titleTeam": "Team",
+		"titleThanks": "Särskilt tack till",
 		"titlePartners": "Partners",
+		"titleFunding": "Med tacksamt stöd från",
 		"titleBy": "Projekt av",
 		"getInvolved": "Engagera dig!",
 		"titleTranslate": "Översätt",
 		"titleContent": "Lägg till ditt innehåll",
-		"titleContact": "Kom i kontakt!",
+		"titleContact": "Ta kontakt!",
 		"facebook": "Facebookgrupp",
 		"wiki": "Wikidocumentaries wiki",
 		"blog": "Blogg",
@@ -40,7 +46,7 @@
 		"topicPageName": "Ämnesida",
 		"mapPlaceMatchPageName": "Koppla platsnamn",
 		"mapSearchPageName": "Sök kartor",
-		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia artikel om ämnet i valt språk eller en annan oförutsett fel.",
+		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia-artikel om ämnet i valt språk eller en annat oförutsett fel.",
 		"returnToHomeMessage": "Tillbaka till hemsidan"
 	},
 	"WaitPage": {
@@ -53,7 +59,7 @@
 			"yearAbbreviation": "år"
 		},
 		"Header": {
-			"titleEditText": "Rediger titeln",
+			"titleEditText": "Redigera titeln",
 			"titleApproveText": "Godkänn denna titel",
 			"subtitleEditText": "Redigera beskrivningen",
 			"subtitleApproveText": "Godkänn denna beskrivning"
@@ -66,7 +72,7 @@
 				"tooltip": "Visa eller arrangera bilder",
 				"showImagesOnMapMenuText": "Visa alla bilder på kartan",
 				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
-				"selectPortraits": "Välj god kvalitet porträtt av den här personen",
+				"selectPortraits": "Välj högkvalitativa porträtt av den här personen",
 				"arrangeByTime": "Arrangera bilder efter tid",
 				"selectWorks": "Välj bilder av verk"
 			},
@@ -126,7 +132,7 @@
 		},
 		"TopicMap": {
 			"headerTitle": "Plats på kartan",
-			"intro": "Temaets plats visas på kartan. Du kan också visa bilderna och andra data på kartan eller välja en historisk karta som ett baslager.",
+			"intro": "Temats plats visas på kartan. Du kan också visa bilderna och annan data på kartan eller välja en historisk karta som ett baslager.",
 			"chooseHistoricalBasemapMenuText": "Välj historisk baskarta eller baskartor...",
 			"hideImagesMenuText": "Dölj bilder",
 			"chooseTimelineMapsMenuText": "Välj tidslinjekartor ...",
@@ -141,7 +147,7 @@
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje",
 			"showEventsOnTimelineMenuText": "Visa händelser i tidslinjen",
-			"centuryText": "s"
+			"centuryText": "h"
 		},
 		"Events": {
 			"headerTitle": "Händelser",
@@ -167,15 +173,15 @@
 			"extLink": {
 				"linkTitleWD": "Visa eller redigera i Wikidata"
 			},
-			"noTopicFoundText": "Ämne inte hittat"
+			"noTopicFoundText": "Ämnet hittades inte"
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
-			"missingArticle": "Det finns ingen artikel om detta ämne på svenska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
-			"missingArticleMissing": "Det finns ingen artikel om detta ämne på svenska.",
-			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja på språkmenyn ovan eller du kan skapa artikeln på svenska genom att klicka på plusikonen.",
+			"missingArticle": "Det finns ingen artikel om detta ämne på ditt språk. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
+			"missingArticleMissing": "Det finns ingen artikel om detta ämne på ditt språk.",
+			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja i språkmenyn ovan eller så kan du skapa artikeln på svenska genom att klicka på plusikonen.",
 			"missingArticleCreate": "Du kan skapa den här artikeln på svenska genom att klicka på plusikonen.",
-			"missingArticleTranslate": "Du kan översätta denna artikel till svenska genom att välja den i språkmenyn.",
+			"missingArticleTranslate": "Du kan översätta denna artikel till svenska genom att välja det i språkmenyn.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
@@ -184,7 +190,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Läs artikeln på ett annat språk",
-				"translateArticleText": "Översätt denna artikel till svenska",
+				"translateArticleText": "Översätt denna artikel till ditt språk",
 				"otherLanguagestext": "Andra språk"
 			}
 		},
@@ -205,6 +211,7 @@
 			},
 			"displayMenu": {
 				"title": "Visa som",
+				"tooltip": "Välj visning",
 				"optionGallery": "Galleri",
 				"optionList": "Lista"
 			},
@@ -225,6 +232,7 @@
 			},
 			"displayMenu": {
 				"title": "Visa som",
+				"tooltip": "Välj visning",
 				"optionGallery": "Galleri",
 				"optionList": "Lista"
 			},
@@ -237,7 +245,10 @@
 			"headerTitle": "Delar"
 		},
 		"Partof": {
-			"headerTitle": "Sammanhang"
+			"headerTitle": "Plats"
+		},
+		"Twins": {
+			"headerTitle": "Tvillingstäder"
 		},
 		"Affiliations": {
 			"headerTitle": "Anknytning"
@@ -247,6 +258,9 @@
 		},
 		"Similar": {
 			"headerTitle": "Liknande ämnen"
+		},
+		"Links": {
+			"headerTitle": "Länkar från den här artikeln"
 		},
 		"Works": {
 			"headerTitle": "Verk",
@@ -260,6 +274,7 @@
 			"facetMenuOptionColl": "Samling",
 			"facetMenuOptionCity": "Plats",
 			"displayMenuTitle": "Visa som",
+			"displayMenuTooltip": "Välj visning",
 			"displayMenuOptionGallery": "Galleri",
 			"displayMenuOptionList": "Lista",
 			"showAll": "Alla"
@@ -391,9 +406,12 @@
 			"optionStart": "Efter starttid",
 			"optionEnd": "Efter sluttid",
 			"optionTitle": "Efter titel",
+			"optionCause": "Efter orsak",
+			"optionPartof": "Efter objekt den här är en  del av",
+			"optionSuperclass": "Efter klasser den här är en del av",
 			"optionAlpha": "Alfabetiskt",
-			"optionTitleAlpha": "Efter titel alfabetiskt",
-			"optionCreatorAlpha": "Efter titel alfabetiskt",
+			"optionTitleAlpha": "Alfabetiskt efter titel",
+			"optionCreatorAlpha": "Alfabetiskt efter skapare",
 			"optionDist": "Efter avstånd",
 			"optionRev": "Omvänd sortering",
 			"optionClear": "Rensa sortering"
@@ -405,6 +423,7 @@
 		},
 		"displayMenu": {
 			"title": "Visa som",
+			"tooltip": "Välj visning",
 			"optionGallery": "Galleri",
 			"optionList": "Lista"
 		}
@@ -429,9 +448,9 @@
 		},
 		"languages": {
 			"fi": "finska",
-			"en": "engelsk",
+			"en": "engelska",
 			"sv": "svenska",
-			"es": "spansk"
+			"es": "spanska"
 		}
 	}
 }
