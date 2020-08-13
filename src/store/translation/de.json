@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Abijeet Patro",
+			"BPX-web",
 			"Metalhead64",
 			"Susannaanas",
 			"Symposiarch"
@@ -22,7 +23,7 @@
 		"titleTopics": "Themen",
 		"statusTopics": "Die Themen werden von Wikidata gelesen. Neue Themen können später auch lokal mit der Anreicherung von Beschreibungen mit Wikidata erstellt werden. Aktuelle Artikel sind von Wikipedia, während ein Artikel für ein lokales Thema später lokal erstellt werden kann.",
 		"titleMedia": "Medien",
-		"statusMedia": "Die Medien werden derzeit von Finna.fi, Flickr und Wikimedia Commons gelesen. Wir arbeiten am genaueren Auffinden von Bildern und an der Anzeige von weiteren und besseren Metadaten von jeder der Quellen. Neue Medienquellen sind willkommen!",
+		"statusMedia": "Die Medien werden derzeit von einer wachsenden Anzahl Media-Repositorys  gelesen, welche offen lizenzierte Mediendateien bereitstellen.. Wir arbeiten am genaueren Auffinden von Bildern und an der Anzeige von weiteren und besseren Metadaten von jeder der Quellen. Neue Medienquellen sind willkommen!",
 		"titleTools": "Werkzeuge",
 		"statusTools": "Wikidocumentaries hat Aufgaben und Werkzeuge zum Arbeiten mit dem Inhalt. Artikel können bereits zwischen den Sprachen mit ContentTranslate übersetzt werden. Bestichwortungen mit Wikidata und Georeferenzierungen von Bildstandorten werden vorbereitet. Neuer Spaß und nützliche Werkzeuge können erstellt oder integriert werden.",
 		"titleLanguages": "Sprachen",
@@ -47,7 +48,7 @@
 		"wiki": "Wikidocumentaries-Wiki",
 		"blog": "Blog",
 		"email": "E-Mail",
-		"github": "Github-Repositorium"
+		"github": "Github-Repository"
 	},
 	"MainPage": {
 		"topicPageName": "Themenseite",
@@ -422,6 +423,8 @@
 			"title": "Themen sortieren",
 			"tooltip": "Themen sortieren",
 			"optionTime": "Nach Zeit",
+			"optionTitle": "Nach Titel",
+			"optionPartof": "Nach Element welches teil ist von",
 			"optionAlpha": "Alphabetisch",
 			"optionTitleAlpha": "Nach Titel alphabetisch",
 			"optionCreatorAlpha": "Nach Urheber alphabetisch",
