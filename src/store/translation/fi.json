@@ -265,8 +265,8 @@
 			"intro": "Tämä aihe jakautuu näihin osiin. Voit järjestää niitä ajan ja nimen perusteella. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
 		},
 		"Partof": {
-			"headerTitle": "Asiayhteys",
-			"intro": "Tämä aihe on osa tai liittyy seuraaviin aiheisiin. Voit järjestää niitä ajan tai nimen mukaan.    Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+			"headerTitle": "Sijainti",
+			"intro": "Tämän aihe sijainti liittyy näihin paikkoihin. Voit järjestää niitä ajan tai nimen mukaan. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
 		},
 		"Twins": {
 			"headerTitle": "Ystävyyskaupungit",
@@ -295,6 +295,10 @@
 		"Instances": {
 			"headerTitle": "Tämän aiheen esiintymiä",
 			"intro": "Katso tämän aiheen esiintymät. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
+		"Location": {
+			"headerTitle": "Sijainti",
+			"intro": "Tämä aihe sijaitsee näiden paikkojen yhteydessä."
 		},
 		"Subclasses": {
 			"headerTitle": "Tämän aiheen alaluokkia",
