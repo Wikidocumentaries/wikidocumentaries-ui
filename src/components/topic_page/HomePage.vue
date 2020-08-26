@@ -19,6 +19,7 @@
     <Location id="location"></Location>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
+    <Kartta id="kartta"></Kartta>
 <!--     <Partof id="partof"></Partof> -->
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
@@ -44,30 +45,31 @@
 </template>
 
 <script>
-import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
-import WikipediaArticle from "@/components/topic_page/Wikipedia";
-import WikidataItem from "@/components/topic_page/Wikidata";
-import TopicMap from "@/components/topic_page/TopicMap";
-import TopicImages from "@/components/topic_page/TopicImages";
-//import TopicTimeline from "@/components/topic_page/TopicTimeline";
-//import EventList from "@/components/topic_page/EventList";
-import Effects from "@/components/topic_page/Effects";
-import Instances from "@/components/topic_page/Instances";
-import Location from "@/components/topic_page/Location";
-import Works from "@/components/topic_page/Works";
+import Affiliations from "@/components/topic_page/Affiliations";
 import Awards from "@/components/topic_page/Awards";
-import People from "@/components/topic_page/People";
-import Locations from "@/components/topic_page/Locations";
-import Partof from "@/components/topic_page/Partof";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
+import Effects from "@/components/topic_page/Effects";
+import Footer from "@/components/Footer";
+import Instances from "@/components/topic_page/Instances";
+import Location from "@/components/topic_page/Location";
+import Locations from "@/components/topic_page/Locations";
+import Kartta from "@/components/topic_page/Kartta";
+import People from "@/components/topic_page/People";
+import Partof from "@/components/topic_page/Partof";
 import Parts from "@/components/topic_page/Parts";
-import Twins from "@/components/topic_page/Twins";
-import Things from "@/components/topic_page/Things";
-import Affiliations from "@/components/topic_page/Affiliations";
 import Similar from "@/components/topic_page/Similar";
 import Subclasses from "@/components/topic_page/Subclasses";
-import Footer from "@/components/Footer";
+import Things from "@/components/topic_page/Things";
+import TopicImages from "@/components/topic_page/TopicImages";
+import TopicMap from "@/components/topic_page/TopicMap";
+import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
+import Twins from "@/components/topic_page/Twins";
+import WikipediaArticle from "@/components/topic_page/Wikipedia";
+import WikidataItem from "@/components/topic_page/Wikidata";
+//import TopicTimeline from "@/components/topic_page/TopicTimeline";
+//import EventList from "@/components/topic_page/EventList";
+import Works from "@/components/topic_page/Works";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -90,6 +92,7 @@ export default {
     Instances,
     Location,
     Locations,
+    Kartta,
     People,
     Parts,
     Partof,
