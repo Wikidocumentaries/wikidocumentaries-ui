@@ -39,12 +39,15 @@ export default {
     const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     mapboxgl.accessToken = MAPBOX_AT;
-    var kartta = new mapboxgl.Map({
+    const kartta = new mapboxgl.Map({
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",
       center: [lon, lat],
       zoom: 12,
     });
+    const marker = new mapboxgl.Marker()
+      .setLngLat([lon, lat])
+      .addTo(kartta);
   },
   methods: {
     fitTitle(title) {
