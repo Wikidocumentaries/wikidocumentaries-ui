@@ -108,7 +108,7 @@ export default {
     mapboxgl.accessToken = MAPBOX_AT;
     let sparql;
     sparql = `
-SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
+SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates)(SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   ?pi wdt:P1647* wd:P276 .
   ?pi wikibase:directClaim ?p .
   OPTIONAL { ?pi wdt:P7087 ?rel .
@@ -119,6 +119,7 @@ SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", "
             ?type rdfs:label ?typeLabel_ .
               FILTER(LANG(?typeLabel_)="fi") }
   OPTIONAL { ?location wdt:P18 ?image. }
+  OPTIONAL { ?location wdt:P625 ?coordinates .}
   OPTIONAL { ?location wdt:P6375 ?address. }
   OPTIONAL { ?location wdt:P571 ?date.
            BIND(STR(YEAR(?date)) AS ?dated)}
@@ -172,12 +173,22 @@ LIMIT 1000
       currentDisplay = menuItem.id;
       if (currentDisplay == VIEW_MODES.MAP) {
         this.viewMode = currentDisplay;
+    const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
+    const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
         this.$nextTick(function() {
           myMap = new mapboxgl.Map({
             container: "LocationsMapContainer",
             style: "mapbox://styles/mapbox/streets-v11",
-            center: [20.6831616, 60.1100064],
+            center: [lon,lat],
             zoom: 12,
+          });
+          this.results.forEach(function(item) {
+            var koord = item.coordinates.split('(')[1].split(')')[0].split(' ');
+            new mapboxgl.Marker()
+              .setLngLat(koord)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML('<h3>' + item.location.label + '</h3><p>' + item.typeLabel + '</p>'))
+              .addTo(myMap);
           });
         });
       } else {
@@ -229,5 +240,13 @@ const selectResults = lcl => {
 .basemap {
   width: 100%;
   height: 300px;
+}
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>
