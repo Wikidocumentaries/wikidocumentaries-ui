@@ -11,6 +11,7 @@ import ToolbarMenu from '@/components/menu/ToolbarMenu'
 const MENU_ACTIONS = {
     GALLERY: 0,
     LIST: 1,
+    MAP: 2
 }
 
 export default {
@@ -28,6 +29,10 @@ export default {
                 {
                     id: MENU_ACTIONS.LIST,
                     text: 'topic_page.Works.displayMenuOptionList'
+                },
+                {
+                    id: MENU_ACTIONS.MAP,
+                    text: 'topic_page.Works.displayMenuOptionMap'
                 },
             ],
         };
