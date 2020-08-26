@@ -19,6 +19,7 @@
 
 <script>
 import mapboxgl from "mapbox-gl";
+import { MAPBOX_AT } from "@/common/tokens";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
 import axios from "axios";
 import wdk from "wikidata-sdk";
@@ -30,16 +31,14 @@ export default {
   },
   data() {
     return {
-      accessToken: MAPBOX_ACCESS_TOKEN,
-      gallery: true
+      placeholder: true
     };
   },
   mounted() {
-//    mapboxgl.accessToken = this.accessToken;
     const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
     const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
-    mapboxgl.accessToken = 'pk.eyJ1Ijoid2lraWRvY3VtZW50YXJpZXMiLCJhIjoiY2tlOW9penN0MHhseTJ4cm43d2tuOGxzdiJ9.mJ4q4MbImRfVOk8ct5FeLw';
+    mapboxgl.accessToken = MAPBOX_AT;
     var kartta = new mapboxgl.Map({
       container: "mapContainer",
       style: "mapbox://styles/mapbox/streets-v11",

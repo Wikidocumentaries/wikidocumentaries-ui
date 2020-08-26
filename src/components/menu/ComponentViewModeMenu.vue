@@ -8,9 +8,10 @@
 
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
-const MENU_ACTIONS = {
+export const VIEW_MODES = {
     GALLERY: 0,
-    LIST: 1
+    LIST: 1,
+    MAP: 2
 }
 
 export default {
@@ -22,13 +23,17 @@ export default {
         return {
             toolbarActionMenuItems: [
                 {
-                    id: MENU_ACTIONS.GALLERY,
+                    id: VIEW_MODES.GALLERY,
                     text: 'topic_page.Works.displayMenuOptionGallery'
                 },
                 {
-                    id: MENU_ACTIONS.LIST,
+                    id: VIEW_MODES.LIST,
                     text: 'topic_page.Works.displayMenuOptionList'
-                }
+                },
+                {
+                    id: VIEW_MODES.MAP,
+                    text: 'topic_page.Works.displayMenuOptionMap'
+                },
             ],
         };
     },
