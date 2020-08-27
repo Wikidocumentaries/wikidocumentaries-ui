@@ -1,6 +1,5 @@
 /**************************************
  * Tokens for local services          *
- * Do NOT commit the values to github *
  **************************************/
 
-export const MAPBOX_AT = 'write_token_here_locally_do_not_commit!';
+export const MAPBOX_AT = 'pk.eyJ1Ijoid2lraWRvY3VtZW50YXJpZXMiLCJhIjoiY2tlYjdvajhnMDY3MzMwbGVqNHM1dTJtMSJ9.warv9HDQmXWB9ZvYYyfxlw';
