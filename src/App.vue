@@ -1010,4 +1010,15 @@ i.wikiglyph {
 .menu-link:hover {
     color:white !important;
 }
+
+.mapboxgl-popup {
+}
+
+.mapboxgl-popup-content {
+  display: flex;
+  padding: 0px;
+}
+.popup-image {
+  width: 100px;
+}
 </style>

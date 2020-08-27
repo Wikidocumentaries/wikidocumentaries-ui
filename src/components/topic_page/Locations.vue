@@ -188,7 +188,7 @@ LIMIT 1000
             new mapboxgl.Marker()
               .setLngLat(koord)
               .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                .setHTML('<h3>' + item.location.label + '</h3><p>' + item.typeLabel + '</p>'))
+                .setHTML('<img src="'+ item.image + '" class="popup-image"><div class="popup-txt"><div class="thumb-credit over">' + item.creatorLabel + '</div><div class="gallery-title">' + item.location.label + '</div><div class="thumb-credit">' + item.typeLabel + ' ' +  item.time + '</div></div>'))
               .addTo(myMap);
           });
         });
@@ -241,13 +241,5 @@ const selectResults = lcl => {
 .basemap {
   width: 100%;
   height: 300px;
-}
-.mapboxgl-popup {
-  max-width: 200px;
-}
-
-.mapboxgl-popup-content {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
 }
 </style>
