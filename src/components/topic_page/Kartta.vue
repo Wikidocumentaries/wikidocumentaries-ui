@@ -3,14 +3,6 @@
   <div class="gallery-component">
     <div class="toolbar">
       <h1 class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</h1>
-      <ToolbarMenu
-        icon="wikiglyph-funnel"
-        :tooltip="$t('menus.sortMenu.tooltip')"
-        :items="toolbarActionMenuItems"
-        @doMenuItemAction="onDoMenuItemAction"
-      >
-        <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
-      </ToolbarMenu>
     </div>
       <div id="mapContainer" class="basemap"></div>
   </div>
@@ -20,14 +12,12 @@
 <script>
 import mapboxgl from "mapbox-gl";
 import { MAPBOX_AT } from "@/common/tokens";
-import ToolbarMenu from "@/components/menu/ToolbarMenu";
 import axios from "axios";
 import wdk from "wikidata-sdk";
 
 export default {
   name: "Kartta",
   components: {
-    ToolbarMenu
   },
   data() {
     return {
@@ -45,6 +35,11 @@ export default {
       center: [lon, lat],
       zoom: 12,
     });
+    kartta.scrollZoom.disable();
+    kartta.on('click', function(e) {
+      kartta.scrollZoom.enable();
+    });
+    kartta.addControl(new mapboxgl.NavigationControl());
     const marker = new mapboxgl.Marker()
       .setLngLat([lon, lat])
       .addTo(kartta);
