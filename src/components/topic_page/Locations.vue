@@ -173,9 +173,8 @@ LIMIT 1000
       currentDisplay = menuItem.id;
       if (currentDisplay == VIEW_MODES.MAP) {
         this.viewMode = currentDisplay;
-    const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
-    const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
-    var koord;
+        const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
+        const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
         this.$nextTick(function() {
           myMap = new mapboxgl.Map({
             container: "LocationsMapContainer",
@@ -184,12 +183,18 @@ LIMIT 1000
             zoom: 12,
           });
           this.results.forEach(function(item) {
-            koord = item.coordinates.split('(')[1].split(')')[0].split(' ');
-            new mapboxgl.Marker()
-              .setLngLat(koord)
-              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                .setHTML('<img src="'+ item.image + '" class="popup-image"><div class="popup-txt"><div class="thumb-credit over">' + item.creatorLabel + '</div><div class="gallery-title">' + item.location.label + '</div><div class="thumb-credit">' + item.typeLabel + ' ' +  item.time + '</div></div>'))
-              .addTo(myMap);
+            let popupHtml = '';
+            let koord;
+            if (item.coordinates) {
+              koord = item.coordinates.split('(')[1].split(')')[0].split(' ');
+              popupHtml = '<img src="'+ item.image + '" class="popup-image"><div class="popup-txt"><div class="thumb-credit over">' + item.creatorLabel + '</div><div class="gallery-title">' + item.location.label + '</div><div class="thumb-credit">' + item.typeLabel + ' ' +  item.time + '</div></div>'
+              console.log("Setting a marker to: ", koord, "with html: ", popupHtml);
+              var marker = new mapboxgl.Marker()
+                .setLngLat(koord)
+                .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                  .setHTML(popupHtml))
+                .addTo(myMap);
+            }
           });
         });
       } else {
@@ -241,5 +246,12 @@ const selectResults = lcl => {
 .basemap {
   width: 100%;
   height: 300px;
+}
+.mapboxgl-marker {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border:1px solid gray;
+    background-color:lightblue;
 }
 </style>
