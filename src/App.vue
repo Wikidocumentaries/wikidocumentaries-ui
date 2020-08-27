@@ -1011,10 +1011,6 @@ i.wikiglyph {
     color:white !important;
 }
 
-.mapboxgl-popup {
-  max-width: 300px;
-}
-
 .mapboxgl-popup-content {
   display: flex;
   padding: 0px;

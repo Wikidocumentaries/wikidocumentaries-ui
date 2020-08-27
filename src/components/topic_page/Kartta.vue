@@ -27,7 +27,9 @@ export default {
   mounted() {
     const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
     const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
+    const wikidataId = this.$store.state.wikidocumentaries.wikidataId;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+    
     mapboxgl.accessToken = MAPBOX_AT;
     const kartta = new mapboxgl.Map({
       container: "mapContainer",
@@ -35,14 +37,33 @@ export default {
       center: [lon, lat],
       zoom: 12,
     });
+    
     kartta.scrollZoom.disable();
     kartta.on('click', function(e) {
       kartta.scrollZoom.enable();
     });
+    
     kartta.addControl(new mapboxgl.NavigationControl());
+    
     const marker = new mapboxgl.Marker()
       .setLngLat([lon, lat])
       .addTo(kartta);
+    
+    kartta.addSource('osmshape', {
+      type: 'geojson',
+      data: 'https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + wikidataId
+    });
+
+    kartta.addLayer({
+      'id': 'osmlayer',
+      'type': 'fill',
+      'source': 'osmshape',
+      'layout': {},
+      'paint': {
+      'fill-color': '#088',
+      'fill-opacity': 0.8
+      }
+      });
   },
   methods: {
     fitTitle(title) {

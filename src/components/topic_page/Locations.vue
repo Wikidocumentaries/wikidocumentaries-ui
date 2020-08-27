@@ -175,6 +175,7 @@ LIMIT 1000
         this.viewMode = currentDisplay;
         const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
         const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
+        
         this.$nextTick(function() {
           myMap = new mapboxgl.Map({
             container: "LocationsMapContainer",
@@ -182,6 +183,7 @@ LIMIT 1000
             center: [lon,lat],
             zoom: 12,
           });
+          
           this.results.forEach(function(item) {
             let popupHtml = '';
             let koord;
@@ -192,6 +194,7 @@ LIMIT 1000
               var marker = new mapboxgl.Marker()
                 .setLngLat(koord)
                 .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                  .setMaxWidth("300px")
                   .setHTML(popupHtml))
                 .addTo(myMap);
             }
@@ -246,12 +249,5 @@ const selectResults = lcl => {
 .basemap {
   width: 100%;
   height: 300px;
-}
-.mapboxgl-marker {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border:1px solid gray;
-    background-color:lightblue;
 }
 </style>
