@@ -27,7 +27,7 @@
           <div class="thumb-image-info">
             <div class="thumb-credit over">{{ item.relation }}</div>
             <div class="gallery-title">{{ item.item.label }}</div>
-            <div class="thumb-credit">{{ item.typeLabel }}</div>
+            <div class="thumb-credit">{{ item.typeLabel }} {{ item.time }}</div>
           </div>
           <!--div class="thumb-image-header"-->
           <div>
@@ -44,7 +44,7 @@
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
             <span v-if="item.relation">{{ item.relation }} </span><b>{{ item.item.label }}</b> 
-            {{ item.typeLabel }}
+            {{ item.typeLabel }} {{ item.time }}
           </a>
         </div>
       </div>
@@ -116,11 +116,13 @@ export default {
 SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   {
     { ?pi wdt:P1647* wd:P1411. }
+    UNION
+    { ?pi wdt:P1647* wd:P166.}
   }
   ?pi wikibase:directClaim ?p .
   ?pi rdfs:label ?piLabel .
   FILTER(LANG(?piLabel)="fi") .
-  wd:Q490622 ?p ?item .
+  wd:Q60156953 ?p ?item .
   OPTIONAL { ?item wdt:P31 ?type .
             ?type rdfs:label ?typeLabel_ .
               FILTER(LANG(?typeLabel_)="fi") }
@@ -135,7 +137,7 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
 }
 GROUP BY ?item ?itemLabel
 LIMIT 1000
-        `.replace(/Q490622/g, this.$store.state.wikidocumentaries.wikidataId)
+        `.replace(/Q60156953/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
