@@ -1012,6 +1012,7 @@ i.wikiglyph {
 }
 
 .mapboxgl-popup {
+  max-width: 300px;
 }
 
 .mapboxgl-popup-content {
@@ -1019,6 +1020,11 @@ i.wikiglyph {
   padding: 0px;
 }
 .popup-image {
-  width: 100px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.popup-txt {
+  padding:8px;
 }
 </style>
