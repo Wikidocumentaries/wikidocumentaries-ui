@@ -259,6 +259,9 @@
 			"headerTitle": "描述",
 			"intro": "此作品描述出這些主題，您可以按時間和名稱來排序。請注意要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
 		},
+		"Map": {
+			"headerTitle": "在地圖上的位置"
+		},
 		"Parts": {
 			"headerTitle": "部份",
 			"intro": "這些部份屬於這些主題，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
@@ -324,6 +327,7 @@
 			"displayMenuTooltip": "挑選展示",
 			"displayMenuOptionGallery": "圖庫",
 			"displayMenuOptionList": "清單",
+			"displayMenuOptionMap": "地圖",
 			"showAll": "所有"
 		},
 		"People": {

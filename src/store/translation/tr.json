@@ -5,7 +5,8 @@
 			"BaRaN6161 TURK",
 			"Grkn gll",
 			"Hedda",
-			"Mirzali"
+			"Mirzali",
+			"MuratTheTurkish"
 		]
 	},
 	"LandingPage": {
@@ -262,6 +263,9 @@
 			"headerTitle": "Tasvir",
 			"intro": "Bu çalışma bu konuları gösteriyor. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemeniz gerektiğini unutmayın."
 		},
+		"Map": {
+			"headerTitle": "Haritadaki konum"
+		},
 		"Parts": {
 			"headerTitle": "Parçalar",
 			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
@@ -327,6 +331,7 @@
 			"displayMenuTooltip": "Görüntü seçin",
 			"displayMenuOptionGallery": "Galeri",
 			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Harita",
 			"showAll": "Hepsi"
 		},
 		"People": {

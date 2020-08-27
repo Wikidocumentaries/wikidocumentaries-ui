@@ -266,6 +266,9 @@
 			"headerTitle": "Dépeint",
 			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
+		"Map": {
+			"headerTitle": "Localisation sur la carte"
+		},
 		"Parts": {
 			"headerTitle": "Parties",
 			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
@@ -331,6 +334,7 @@
 			"displayMenuTooltip": "Choisir l’affichage",
 			"displayMenuOptionGallery": "Galerie",
 			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Carte",
 			"showAll": "Tout"
 		},
 		"People": {

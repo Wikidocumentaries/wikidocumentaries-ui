@@ -252,6 +252,7 @@
 			"displayMenuTooltip": "Display menu tooltip in the Works section",
 			"displayMenuOptionGallery": "Menu option for displaying as gallery",
 			"displayMenuOptionList": "Menu option for displaying as list\n{{Identical|List}}",
+			"displayMenuOptionMap": "{{identical|Map}}",
 			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
 		},
 		"People": {
