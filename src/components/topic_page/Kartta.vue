@@ -29,7 +29,7 @@ export default {
     const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
     const wikidataId = this.$store.state.wikidocumentaries.wikidataId;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
-    
+
     mapboxgl.accessToken = MAPBOX_AT;
     const kartta = new mapboxgl.Map({
       container: "mapContainer",
@@ -37,24 +37,27 @@ export default {
       center: [lon, lat],
       zoom: 12,
     });
-    
+
     kartta.scrollZoom.disable();
     kartta.on('click', function(e) {
       kartta.scrollZoom.enable();
     });
-    
+
     kartta.addControl(new mapboxgl.NavigationControl());
-    
+
     const marker = new mapboxgl.Marker({draggable: true})
       .setLngLat([lon, lat])
       .addTo(kartta);
-    
-    
+
+
     kartta.on('load', function() {
+
       kartta.addSource('osmshape', {
           type: 'geojson',
-          data: 'https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + this.wikidataId
+          data: 'https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + wikidataId
         });
+
+
 
       kartta.addLayer({
         'id': 'osmlayer',
