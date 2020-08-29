@@ -23,7 +23,7 @@
           :to="getItemURL(item.location.value)"
           class="gallery-item"
         >
-          <img :src="getImageLink(item.image)" class="gallery-image">
+          <img :src="getImageLink(item.image)" class="gallery-image" />
           <div class="thumb-image-info">
             <div class="thumb-credit over">{{ item.creatorLabel }}</div>
             <div class="gallery-title">{{ item.location.label }}</div>
@@ -39,8 +39,7 @@
           </a>
         </div>
       </div>
-      <div v-else-if="viewMode === VIEW_MODES.MAP" id="LocationsMapContainer" class="basemap">
-      </div>
+      <div v-else-if="viewMode === VIEW_MODES.MAP" id="LocationsMapContainer" class="basemap"></div>
     </div>
   </div>
 </template>
@@ -59,10 +58,10 @@ const SORT_ACTIONS = {
   BY_LABEL: 0,
   BY_TIME: 1,
   SORT_REVERSE: 2,
-  SORT_CLEAR: 3
+  SORT_CLEAR: 3,
 };
 
-const MAX_ITEMS_TO_VIEW = 50;
+const MAX_ITEMS_TO_VIEW = 200;
 const DEFAULT_SORT = ["location.label"];
 
 let fullResults, currentSort, currentDisplay, myMap;
@@ -74,7 +73,7 @@ export default {
   },
   components: {
     ToolbarMenu,
-    DisplayMenu
+    DisplayMenu,
   },
   data() {
     return {
@@ -83,21 +82,21 @@ export default {
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
-          text: "menus.sortMenu.optionAlpha"
+          text: "menus.sortMenu.optionAlpha",
         },
         {
           id: SORT_ACTIONS.BY_TIME,
-          text: "menus.sortMenu.optionTime"
+          text: "menus.sortMenu.optionTime",
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
-          text: "menus.sortMenu.optionRev"
+          text: "menus.sortMenu.optionRev",
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
-          text: "menus.sortMenu.optionClear"
-        }
-      ]
+          text: "menus.sortMenu.optionClear",
+        },
+      ],
     };
   },
   mounted() {
@@ -131,22 +130,23 @@ SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", "
 }
 GROUP BY ?location ?locationLabel
 LIMIT 1000
-        `.replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId)
-         .replace(/fi/g, this.$i18n.locale);;
+        `
+      .replace(/Q1772186/g, this.$store.state.wikidocumentaries.wikidataId)
+      .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
       .post(url, body)
-      .then(response => {
+      .then((response) => {
         fullResults = wdk.simplify.sparqlResults(response.data);
         this.results = selectResults(this.$i18n.locale);
         this.viewMode = currentDisplay;
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   },
   computed: {
     wikidocumentaries() {
       return this.$store.state.wikidocumentaries;
-    }
+    },
   },
   watch: {},
   methods: {
@@ -175,27 +175,46 @@ LIMIT 1000
         this.viewMode = currentDisplay;
         const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat;
         const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon;
-        
-        this.$nextTick(function() {
+
+        this.$nextTick(function () {
           myMap = new mapboxgl.Map({
             container: "LocationsMapContainer",
             style: "mapbox://styles/mapbox/streets-v11",
-            center: [lon,lat],
+            center: [lon, lat],
             zoom: 12,
           });
-          
-          this.results.forEach(function(item) {
-            let popupHtml = '';
+
+          this.results.forEach(function (item) {
+            let popupHtml = "";
             let koord;
             if (item.coordinates) {
-              koord = item.coordinates.split('(')[1].split(')')[0].split(' ');
-              popupHtml = '<img src="'+ item.image + '" class="popup-image"><div class="popup-txt"><div class="thumb-credit over">' + item.creatorLabel + '</div><div class="gallery-title">' + item.location.label + '</div><div class="thumb-credit">' + item.typeLabel + ' ' +  item.time + '</div></div>'
-              console.log("Setting a marker to: ", koord, "with html: ", popupHtml);
+              koord = item.coordinates.split("(")[1].split(")")[0].split(" ");
+              popupHtml =
+                (item.image
+                  ? '<img src="' + item.image + '" class="popup-image">'
+                  : '') +
+                '<div class="popup-txt"><div class="thumb-credit over">' +
+                item.creatorLabel +
+                '</div><div class="gallery-title">' +
+                item.location.label +
+                "</div>" +
+                '<div class="thumb-credit">' +
+                (item.typeLabel ? item.typeLabel : "") +
+                (item.time ? " " + item.time : "") +
+                "</div></div>";
+              console.log(
+                "Setting a marker to: ",
+                koord,
+                "with html: ",
+                popupHtml
+              );
               var marker = new mapboxgl.Marker()
                 .setLngLat(koord)
-                .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                  .setMaxWidth("300px")
-                  .setHTML(popupHtml))
+                .setPopup(
+                  new mapboxgl.Popup() // add popups
+                    .setMaxWidth("300px")
+                    .setHTML(popupHtml)
+                )
                 .addTo(myMap);
             }
           });
@@ -223,18 +242,18 @@ LIMIT 1000
     },
     getImageLink(value) {
       return value.replace(/\s/g, _) + "?width=500";
-    }
-  }
+    },
+  },
 };
 
-const selectResults = lcl => {
+const selectResults = (lcl) => {
   let filteredResults = fullResults;
   if (currentSort[0].includes("time"))
-    filteredResults = filteredResults.filter(x => x.time);
+    filteredResults = filteredResults.filter((x) => x.time);
   if (currentDisplay === VIEW_MODES.GALLERY) {
-    if (filteredResults.find(x => x.image)) {
+    if (filteredResults.find((x) => x.image)) {
       // If GALLERY and at least one image
-      filteredResults = filteredResults.filter(x => x.image); // select only results with an image
+      filteredResults = filteredResults.filter((x) => x.image); // select only results with an image
     } else {
       currentDisplay = VIEW_MODES.LIST; // GALLERY with no images => change to LIST
     }
@@ -248,6 +267,6 @@ const selectResults = lcl => {
 <style scoped>
 .basemap {
   width: 100%;
-  height: 300px;
+  height: 40vh;
 }
 </style>

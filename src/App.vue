@@ -336,7 +336,7 @@ a:hover {
   bottom: 0px;
   height: 45px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   text-align: center;
   vertical-align: middle;
   line-height: 45px;
