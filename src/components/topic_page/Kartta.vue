@@ -45,25 +45,28 @@ export default {
     
     kartta.addControl(new mapboxgl.NavigationControl());
     
-    const marker = new mapboxgl.Marker()
+    const marker = new mapboxgl.Marker({draggable: true})
       .setLngLat([lon, lat])
       .addTo(kartta);
     
-    kartta.addSource('osmshape', {
-      type: 'geojson',
-      data: 'https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + wikidataId
-    });
+    
+    kartta.on('load', function() {
+      kartta.addSource('osmshape', {
+          type: 'geojson',
+          data: 'https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + this.wikidataId
+        });
 
-    kartta.addLayer({
-      'id': 'osmlayer',
-      'type': 'fill',
-      'source': 'osmshape',
-      'layout': {},
-      'paint': {
-      'fill-color': '#088',
-      'fill-opacity': 0.8
-      }
+      kartta.addLayer({
+        'id': 'osmlayer',
+        'type': 'fill',
+        'source': 'osmshape',
+        'layout': {},
+        'paint': {
+        'fill-color': '#088',
+        'fill-opacity': 0.8
+        }
       });
+    });
   },
   methods: {
     fitTitle(title) {
@@ -90,6 +93,6 @@ export default {
 <style scoped>
 .basemap {
   width: 100%;
-  height: 300px;
+  height: 50vh;
 }
 </style>
