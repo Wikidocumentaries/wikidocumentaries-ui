@@ -67,7 +67,7 @@ export default {
             'source': 'osmshape',
             'layout': {},
             'paint': {
-              'line-color': '#f05800',
+              'line-color': '#ce492a',
               'line-width': [
                 'interpolate',
                 ['linear'],
@@ -87,7 +87,7 @@ export default {
             'source': 'osmshape',
             'layout': {},
             'paint': {
-              'fill-color': '#ffd24d',
+              'fill-color': '#ffd76e',
               'fill-opacity': 0.2
             }
           }, 'waterway-label')
