@@ -126,7 +126,7 @@ SELECT ?location ?locationLabel (GROUP_CONCAT(DISTINCT ?relLabel; separator=", "
            ?creator rdfs:label ?creatorLabel_ .
            FILTER(LANG(?creatorLabel_)="fi")}
   MINUS { ?location wdt:P31 wd:Q5 .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?location ?locationLabel
 LIMIT 1000
@@ -190,6 +190,7 @@ LIMIT 1000
             if (item.coordinates) {
               koord = item.coordinates.split("(")[1].split(")")[0].split(" ");
               popupHtml =
+              '<a href="#"><div class="popup-body">' +
                 (item.image
                   ? '<img src="' + item.image + '" class="popup-image">'
                   : '') +
@@ -201,7 +202,7 @@ LIMIT 1000
                 '<div class="thumb-credit">' +
                 (item.typeLabel ? item.typeLabel : "") +
                 (item.time ? " " + item.time : "") +
-                "</div></div>";
+                "</div></div></div></a>";
               console.log(
                 "Setting a marker to: ",
                 koord,

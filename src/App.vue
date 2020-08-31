@@ -1012,9 +1012,18 @@ i.wikiglyph {
 }
 
 .mapboxgl-popup-content {
-  display: flex;
   padding: 0px;
 }
+
+.popup-body {
+  display: flex;
+  transition: 80ms;
+}
+
+.popup-body:hover {
+  background-color: #33333322;
+}
+
 .popup-image {
   width: 75px;
   object-fit: cover;
@@ -1023,4 +1032,13 @@ i.wikiglyph {
 .popup-txt {
   padding:8px;
 }
+
+a .popup-txt {
+  color: var(--main-txt-color);
+}
+
+a:hover .popup-txt {
+  color: black;
+}
+
 </style>
