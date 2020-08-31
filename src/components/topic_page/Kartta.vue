@@ -46,7 +46,7 @@ export default {
 
     kartta.addControl(new mapboxgl.NavigationControl())
 
-    const marker = new mapboxgl.Marker({draggable: true})
+    const marker = new mapboxgl.Marker()
       .setLngLat([lon, lat])
       .addTo(kartta)
 
