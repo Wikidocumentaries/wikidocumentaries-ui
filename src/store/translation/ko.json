@@ -164,6 +164,9 @@
 			},
 			"showAll": "모두"
 		},
+		"Map": {
+			"headerTitle": "지도 상의 위치"
+		},
 		"Partof": {
 			"headerTitle": "다음의 일부:"
 		},

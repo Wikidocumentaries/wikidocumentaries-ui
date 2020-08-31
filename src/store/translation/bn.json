@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bodhisattwa",
+			"Titodutta",
 			"আফতাবুজ্জামান"
 		]
 	},
@@ -9,6 +10,8 @@
 		"search": "অনুসন্ধান করুন",
 		"searchInputPlaceHolder": "একটি বিষয় অনুসন্ধান করুন বা  একটি নতুন বিষয় তৈরি করুন",
 		"searchInputSearchOnly": "একটি বিষয় অনুসন্ধান করুন",
+		"showMore": "আরও আইটেম দেখান",
+		"createNew": "নতুন আইটেম তৈরি করুন",
 		"intro": "উইকিদস্তাবেজ ইতিহাসের টুকরো সম্বন্ধীয় উইকি - এখানে ইতিহাসের খণ্ডচিত্রগুলিকে একত্র করে গল্পের রূপ দেওয়া হয়। আপনার পছন্দের বিষয় অনুসন্ধান করে শুরু করুন।",
 		"titleDescription": "উইকিদস্তাবেজ কি?",
 		"description": "উইকিদস্তাবেজ নাগরিক ঐতিহাসিকদের স্থান। এখানে লোকজন, স্থান, অট্টালিকা, ঘটনা এবং আরও বহু বিষয় সম্বন্ধে তথ্য একত্র করা হয়। পারিবারিক সম্পর্ক, অবস্থান, নির্মাতা ও নির্মাণ ইত্যাদি বিভিন্ন নথিভুক্ত সম্পর্কগুলিকে নজরে রেখে আপনি বিভিন্ন বিষয়ের মধ্যে ঘুরে বেড়াতে পারবেন। সম্পর্কিত সংগ্রহশালা ও গ্রন্থাগার হতে ছবি ও মানচিত্র দিয়ে বিষয়গুলিকে সাজানো রয়েছে। উইকিদস্তাবেজে তথ্যগুলিকে যেমন সংশোধন করা যা, তেমনি নতুন বিষয় যোগ করা যাবে, আপনার তোলা ছবি যোগ করা যাবে এবং সমস্ত তথ্য আপনার প্রয়োজন মত ব্যবহার করতে পারবেন।",
@@ -55,23 +58,38 @@
 		},
 		"TopicImages": {
 			"headerTitle": "আর্কাইভগুলি হতে প্রাপ্ত ছবি",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "মানচিত্রে সকল চিত্র দেখান",
+				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান"
+			},
 			"facetMenu": {
 				"time": "সময়",
 				"map": "মানচিত্র",
 				"people": "ব্যক্তি",
 				"places": "স্থান",
 				"topics": "বিষয়",
+				"imageSize": "চিত্রের আকার",
 				"large": "বড়",
 				"medium": "মাঝারি",
 				"small": "ছোট",
 				"type": "মিডিয়ার ধরন",
 				"creator": "নির্মাতা",
+				"platform": "প্ল্যাটফর্ম",
 				"source": "উৎস"
+			},
+			"imagesActionMenu": {
+				"showImageText": "চিত্র প্রদর্শন করুন"
 			},
 			"imagesRemoveMenu": {
 				"shortMenuTitle": "ছবি সরান",
-				"menuTooltip": "ছবি সরান"
+				"menuTooltip": "ছবি সরান",
+				"remInappropriate": {
+					"copyvio": "এটি কপিরাইট লঙ্ঘন করছে"
+				}
 			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "চিত্র আড়াল করুন"
 		},
 		"Events": {
 			"headerTitle": "ঘটনা",
@@ -79,8 +97,18 @@
 				"menuTitle": "বিকল্পসমূহ"
 			}
 		},
+		"Wikidata": {
+			"headerTitle": "তথ্য",
+			"extLink": {
+				"linkTitleWD": "উইকিউপাত্তে দেখুন বা সম্পাদনা করুন"
+			}
+		},
 		"Wikipedia": {
 			"headerTitle": "নিবন্ধ",
+			"missingArticle": "এই বিষয় সম্বন্ধে আপনার ভাষায় কোন নিবন্ধ নেই। আপনি ওপরের মেনু হতে নির্বাচন করে অন্যান্য উপলব্ধ ভাষায় এই নিবন্ধ পড়তে পারেন। আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
+			"missingArticleMissing": "এই বিষয় সম্বন্ধে আপনার ভাষায় কোন নিবন্ধ নেই।",
+			"missingArticleChoose": "আপনি ওপরের মেনু হতে নির্বাচন করে অন্যান্য উপলব্ধ ভাষায় এই নিবন্ধ পড়তে পারেন। আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
+			"missingArticleCreate": "আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
 			"extLink": {
 				"linkTitleWP": "উইকিপিডিয়ায় পড়ুন আর সম্পাদনা করুন"
 			},
@@ -126,10 +154,20 @@
 			},
 			"showAll": "সকল"
 		},
+		"Map": {
+			"headerTitle": "মানচিত্রে অবস্থান"
+		},
+		"Partof": {
+			"headerTitle": "অবস্থান"
+		},
+		"Awards": {
+			"headerTitle": "পুরষ্কার"
+		},
 		"Location": {
 			"headerTitle": "অবস্থান"
 		},
 		"Works": {
+			"headerTitle": "কর্ম",
 			"sortMenuTitle": "বাছাই করুন",
 			"sortMenuOptionTime": "সময় অনুসারে",
 			"sortMenuOptionAlpha": "বর্ণানুক্রমিক",
@@ -139,6 +177,7 @@
 			"facetMenuOptionCity": "অবস্থান",
 			"displayMenuOptionGallery": "চিত্রশালা",
 			"displayMenuOptionList": "তালিকা",
+			"displayMenuOptionMap": "মানচিত্র",
 			"showAll": "সকল"
 		},
 		"People": {
@@ -163,6 +202,8 @@
 			"creatorUnknown": "অজানা",
 			"publisher": "প্রকাশক",
 			"addPublisher": "প্রকাশক যোগ করুন",
+			"format": "বিন্যাস",
+			"genre": "ধরণ",
 			"location": "অবস্থান",
 			"locationMap": "মানচিত্রে অবস্থান",
 			"addLocation": "অবস্থান যোগ করুন",
@@ -175,15 +216,28 @@
 			"photograph": "আলোকচিত্ৰ",
 			"image": "চিত্র",
 			"photographer": "আলোকচিত্ৰকর",
+			"platformId": "আইডি",
 			"fileSize": "ফাইলের আকার",
 			"remove": "অপসারণ করুন",
-			"uploader": "আপলোডকারী"
+			"uploader": "আপলোডকারী",
+			"rotate": "ঘোরান"
+		},
+		"imageActions": {
+			"rotateImage": "ছবি ঘোরান",
+			"clockwise": "ঘড়ির কাঁটার দিকে",
+			"counterclockwise": "ঘড়ির কাঁটার বিপরীত দিকে",
+			"horizontal": "অনুভূমিক"
 		}
 	},
 	"menus": {
 		"sortMenu": {
 			"optionTime": "সময় অনুসারে",
+			"optionStart": "শুরুর সময় অনুসারে",
+			"optionEnd": "শেষের সময় অনুসারে",
+			"optionTitle": "শিরোনাম অনুসারে",
+			"optionCause": "কারণ অনুসারে",
 			"optionAlpha": "বর্ণানুক্রমিক",
+			"optionTitleAlpha": "বর্ণানুক্রমিক শিরোনাম অনুসারে",
 			"optionDist": "দূরত্ব অনুসারে"
 		},
 		"facetMenu": {
@@ -212,6 +266,7 @@
 			"TranslateUI": "আপনার ভাষায় অনুবাদ করুন"
 		},
 		"languages": {
+			"fi": "ফিনীয়",
 			"en": "ইংরেজি",
 			"es": "স্পেনীয়"
 		}

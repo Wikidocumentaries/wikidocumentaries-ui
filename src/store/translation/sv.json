@@ -241,6 +241,9 @@
 		"Depicts": {
 			"headerTitle": "Skildrar"
 		},
+		"Map": {
+			"headerTitle": "Plats på kartan"
+		},
 		"Parts": {
 			"headerTitle": "Delar"
 		},
@@ -258,6 +261,9 @@
 		},
 		"Similar": {
 			"headerTitle": "Liknande ämnen"
+		},
+		"Location": {
+			"headerTitle": "Plats"
 		},
 		"Links": {
 			"headerTitle": "Länkar från den här artikeln"
@@ -277,6 +283,7 @@
 			"displayMenuTooltip": "Välj visning",
 			"displayMenuOptionGallery": "Galleri",
 			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Karta",
 			"showAll": "Alla"
 		},
 		"People": {

@@ -262,6 +262,9 @@
 			"headerTitle": "Descreve",
 			"intro": "Este trabalho descreve esses tópicos. Você pode classificá-los por hora e nome. Observe que para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
 		},
+		"Map": {
+			"headerTitle": "Localização no mapa"
+		},
 		"Parts": {
 			"headerTitle": "Partes",
 			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
@@ -327,6 +330,7 @@
 			"displayMenuTooltip": "Escolha a exibição",
 			"displayMenuOptionGallery": "Galeria",
 			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Mapa",
 			"showAll": "Todos"
 		},
 		"People": {

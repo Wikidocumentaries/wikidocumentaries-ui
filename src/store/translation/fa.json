@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Amirsara",
-			"FarsiNevis"
+			"FarsiNevis",
+			"Sunfyre"
 		]
 	},
 	"LandingPage": {
@@ -120,6 +121,9 @@
 			},
 			"showAll": "همه"
 		},
+		"Map": {
+			"headerTitle": "موقعیت بر روی نقشه"
+		},
 		"Parts": {
 			"headerTitle": "اجزا"
 		},
@@ -134,6 +138,7 @@
 			"displayMenuTitle": "نمایش به‌صورت",
 			"displayMenuOptionGallery": "نگارخانه",
 			"displayMenuOptionList": "فهرست",
+			"displayMenuOptionMap": "نقشه",
 			"showAll": "همه"
 		},
 		"People": {
