@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
+    <Kartta id="kartta"></Kartta>
     <Location id="location"></Location>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
-    <Kartta id="kartta"></Kartta>
 <!--     <Partof id="partof"></Partof> -->
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
@@ -32,7 +32,7 @@
     <Things id="things"></Things>
     <Affiliations id="affiliations"></Affiliations>
     <Depicted id="depicted"></Depicted>
-    <TopicMap id="topicMap"></TopicMap>
+<!--     <TopicMap id="topicMap"></TopicMap> -->
 <!--     <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
     <Similar id="similar"></Similar>
@@ -62,7 +62,7 @@ import Similar from "@/components/topic_page/Similar";
 import Subclasses from "@/components/topic_page/Subclasses";
 import Things from "@/components/topic_page/Things";
 import TopicImages from "@/components/topic_page/TopicImages";
-import TopicMap from "@/components/topic_page/TopicMap";
+/* import TopicMap from "@/components/topic_page/TopicMap"; */
 import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
 import Twins from "@/components/topic_page/Twins";
 import WikipediaArticle from "@/components/topic_page/Wikipedia";
@@ -100,7 +100,7 @@ export default {
     Subclasses,
     Things,
     TopicPageHeader,
-    TopicMap,
+/*     TopicMap, */
     TopicImages,
     Twins,
     WikidataItem,
