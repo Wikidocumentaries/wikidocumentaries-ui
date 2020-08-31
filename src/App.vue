@@ -1021,7 +1021,7 @@ i.wikiglyph {
 }
 
 .popup-body:hover {
-  background-color: #33333322;
+  background-color: rgba(0,0,0,.05);
 }
 
 .popup-image {
