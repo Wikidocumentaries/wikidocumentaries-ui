@@ -510,5 +510,8 @@
             "sv": "Swedish",
             "es": "Spanish"
         }
+    },
+    "Banner": {
+        "WLM2020": "Photograph this cultural heritage site and participate in the <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> photography competition!"
     }
 }
