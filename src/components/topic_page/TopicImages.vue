@@ -2,9 +2,9 @@
     <div v-if="wikidocumentaries.images.length" class="images-component">
         <div class="toolbar">
             <h1 class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</h1>
-            <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+<!--             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-            </ToolbarMenu>
+            </ToolbarMenu> -->
         </div>
         <div class="intro">{{ $t('topic_page.TopicImages.intro') }}</div>
         <ImageGrid class="image-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
