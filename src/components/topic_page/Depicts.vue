@@ -120,7 +120,7 @@ SELECT ?depicted ?depictedLabel ?depictedDescription (SAMPLE(?image) AS ?image) 
     OPTIONAL { ?depicted wdt:P571 ?creation_date. }
     OPTIONAL { ?depicted wdt:P577 ?publishing_date. }
 		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?depicted ?depictedLabel ?time
 LIMIT 1000

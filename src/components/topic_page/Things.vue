@@ -125,7 +125,7 @@ SELECT ?thing ?thingLabel (SAMPLE(?image) as ?image) (GROUP_CONCAT(DISTINCT ?cou
   OPTIONAL { ?thing wdt:P31 ?instance .
             ?instance rdfs:label ?instanceLabel_ .
              FILTER(LANG(?instanceLabel_)="fi") }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 
 }
 GROUP BY ?thing ?thingLabel

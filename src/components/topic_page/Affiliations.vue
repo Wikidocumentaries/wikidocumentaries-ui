@@ -122,7 +122,7 @@ SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?inLabel_; separator=", ") as ?inLa
   }
   MINUS { ?aff wdt:P31 wd:Q5 .}
   OPTIONAL {?aff wdt:P18 ?image .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   }
 GROUP BY ?aff ?affLabel
         `.replace(/Q29021/g, this.$store.state.wikidocumentaries.wikidataId)

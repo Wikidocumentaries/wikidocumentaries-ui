@@ -158,7 +158,7 @@ SELECT ?work ?workLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
               ?municipality rdfs:label ?municipalityLabel_ .
               FILTER(LANG(?municipalityLabel)="fi") }
 		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time_)
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?work ?workLabel
 LIMIT 1000
@@ -217,7 +217,7 @@ LIMIT 1000
             center: [lon, lat],
             zoom: 12,
           });
-          
+
           this.results.forEach(function (item) {
             let popupHtml = "";
             let koord;

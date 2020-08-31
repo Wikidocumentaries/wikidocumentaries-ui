@@ -52,7 +52,7 @@ SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?property ?propertyL
   ?property wikibase:directClaim ?p .
   ?property rdfs:label ?propertyLabel . 
   FILTER(LANG(?propertyLabel)="fi") . }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   FILTER (?ns = "0"). #showing only articles
 }
         `.replace(/Q88948269/g, this.$store.state.wikidocumentaries.wikidataId)

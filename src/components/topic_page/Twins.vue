@@ -127,7 +127,7 @@ SELECT ?item ?itemLabel ?countryLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separa
            BIND(STR(YEAR(?startdate)) AS ?startdate) .}
   OPTIONAL { ?item wdt:P582 ?date.
            BIND(STR(YEAR(?enddate)) AS ?enddate) .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?item ?itemLabel ?countryLabel
 LIMIT 1000

@@ -136,7 +136,7 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
            ?creator rdfs:label ?creatorLabel_ .
            FILTER(LANG(?creatorLabel_)="fi")}
   MINUS { ?item wdt:P31 wd:Q5 .}
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?item ?itemLabel
 LIMIT 1000

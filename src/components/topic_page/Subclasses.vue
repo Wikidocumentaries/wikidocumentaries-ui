@@ -90,7 +90,7 @@ export default {
 SELECT ?subclass ?subclassLabel ?subclassDescription (SAMPLE(?image) as ?image) WHERE {
   ?subclass wdt:P279 wd:Q89288125 .
   OPTIONAL { ?subclass wdt:P18 ?image. }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?subclass ?subclassLabel ?subclassDescription
 LIMIT 1000
