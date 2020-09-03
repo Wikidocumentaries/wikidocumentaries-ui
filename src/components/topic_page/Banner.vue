@@ -303,7 +303,7 @@ export default {
             lon + 
             "&categories=" +
             commonsCat;
-            return encodeURI(campaignLink);
+            return campaignLink;
         }
     },
 }
