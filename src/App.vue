@@ -353,7 +353,6 @@ a:hover {
 
 .two {
   background: var(--main-modal-color);
-  z-index: -1;
 }
 
 .notexpanded figure {
@@ -469,7 +468,6 @@ a:hover {
   .two {
     flex: 0 0 auto;
     width: 380px;
-    z-index: -1;
   }
 
   .expanded .two {
