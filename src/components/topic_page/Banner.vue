@@ -3,7 +3,7 @@
   <div class="banner">
       <div class="bannercontent"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LUSITANA_WLM_2011_d.svg">
       <div class="message"><span class="gallery-title">Photograph this cultural heritage site and participate in the <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> photography competition!</span></div>
-      <a :href="campaignLink()" class="noshadow"><div class="upload-button">Upload image</div></a>
+      <a :href="campaignLink" class="noshadow"><div class="upload-button">Upload image</div></a>
       </div>
   </div>
 </div>
@@ -277,14 +277,13 @@ export default {
                 }
             }
             return campaignId;
-        }
-    },
-    methods: {
+        },
         campaignLink() {
             let titleText = this.$store.state.wikidocumentaries.title ? this.$store.state.wikidocumentaries.title : "Cultural heritage monument";
             let descTxt = this.$store.state.wikidocumentaries.description ? " - " +
             this.$store.state.wikidocumentaries.description : "";
-            return "https://commons.wikimedia.org/w/index.php?title=Special:UploadWizard&campaign=" +
+            let campaignLink = 
+            "https://commons.wikimedia.org/w/index.php?title=Special:UploadWizard&campaign=" +
             this.campaignId +
             "&id=" + 
             this.$store.state.wikidocumentaries.wikidataId + 
@@ -300,7 +299,8 @@ export default {
             "&lon=" +
             this.$store.state.wikidocumentaries.wikidata.geo.lon + 
             "&categories=" +
-            this.commonsCat ? this.commonsCat : "";
+            this.commonsCat;
+            return campaignLink;
         }
     },
 }
