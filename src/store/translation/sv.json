@@ -459,5 +459,8 @@
 			"sv": "svenska",
 			"es": "spanska"
 		}
+	},
+	"Banner": {
+		"WLM2020Button": "Ladda upp bild"
 	}
 }

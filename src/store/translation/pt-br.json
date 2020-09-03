@@ -518,5 +518,9 @@
 			"sv": "Sueco",
 			"es": "Espanhol"
 		}
+	},
+	"Banner": {
+		"WLM2020": "Fotografe este patrimônio cultural e participe da competição de fotografia <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a>!",
+		"WLM2020Button": "Enviar imagem"
 	}
 }

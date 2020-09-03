@@ -260,6 +260,9 @@
 			"headerTitle": "Kuvaa",
 			"intro": "Tämä teos kuvaa seuraavia aiheita. Voit järjestää teokset ajan ja nimen perusteella. Katso teokset listana, jotta näet myös ne, joista ei ole kuvaa."
 		},
+		"Map": {
+			"headerTitle": "Sijainti kartalla"
+		},
 		"Parts": {
 			"headerTitle": "Osat",
 			"intro": "Tämä aihe jakautuu näihin osiin. Voit järjestää niitä ajan ja nimen perusteella. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
@@ -325,6 +328,7 @@
 			"displayMenuTooltip": "Valitse näyttötapa",
 			"displayMenuOptionGallery": "Galleriana",
 			"displayMenuOptionList": "Luettelona",
+			"displayMenuOptionMap": "Kartalla",
 			"showAll": "Kaikki"
 		},
 		"People": {
@@ -512,5 +516,9 @@
 			"sv": "ruotsi",
 			"es": "espanja"
 		}
+	},
+	"Banner": {
+		"WLM2020": "Kuvaa tämä kulttuuripeerintökohde ja osallistu <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> valokuvauskilpailuun!",
+		"WLM2020Button": "Lataa kuva"
 	}
 }

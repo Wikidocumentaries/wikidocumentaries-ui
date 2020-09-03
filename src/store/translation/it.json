@@ -250,5 +250,8 @@
 			"sv": "Svedese",
 			"es": "Spagnolo"
 		}
+	},
+	"Banner": {
+		"WLM2020Button": "Carica immagine"
 	}
 }

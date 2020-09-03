@@ -515,5 +515,9 @@
 			"sv": "瑞典語",
 			"es": "西班牙語"
 		}
+	},
+	"Banner": {
+		"WLM2020": "拍攝此文化遺產、遺址，並參加<a href='https://www.wikilovesmonuments.org/'>維基愛古蹟 2020</a> 攝影比賽！",
+		"WLM2020Button": "上傳圖片"
 	}
 }

@@ -161,7 +161,7 @@
 			"headerTitle": "অবস্থান"
 		},
 		"Awards": {
-			"headerTitle": "পুরষ্কার"
+			"headerTitle": "পুরস্কার"
 		},
 		"Location": {
 			"headerTitle": "অবস্থান"
@@ -270,5 +270,8 @@
 			"en": "ইংরেজি",
 			"es": "স্পেনীয়"
 		}
+	},
+	"Banner": {
+		"WLM2020Button": "চিত্র আপলোড করুন"
 	}
 }

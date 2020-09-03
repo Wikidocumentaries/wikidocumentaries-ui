@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Herryz",
 			"Pebaryan"
 		]
 	},
@@ -458,5 +459,8 @@
 			"sv": "Swedish",
 			"es": "Spanish"
 		}
+	},
+	"Banner": {
+		"WLM2020Button": "$1 Unggah gambar"
 	}
 }

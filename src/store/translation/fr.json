@@ -522,5 +522,9 @@
 			"sv": "suédois",
 			"es": "espagnol"
 		}
+	},
+	"Banner": {
+		"WLM2020": "Photographiez ce site d’héritage culturel et participez à la compétition de photographies <a href='https://www.wikilovesmonuments.org/'>Wiki aime les monuments 2020</a> !",
+		"WLM2020Button": "Télécharger l’image"
 	}
 }

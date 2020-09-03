@@ -3,6 +3,7 @@
 		"authors": [
 			"Abijeet Patro",
 			"BPX-web",
+			"Elliot",
 			"Metalhead64",
 			"Susannaanas",
 			"Symposiarch"
@@ -260,6 +261,9 @@
 			"headerTitle": "Stellt dar",
 			"intro": "Dieses Werk bildet diese Themen ab. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
 		},
+		"Map": {
+			"headerTitle": "Standort auf der Karte"
+		},
 		"Parts": {
 			"headerTitle": "Teile",
 			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
@@ -292,6 +296,7 @@
 			"displayMenuTooltip": "Die Anzeige auswählen",
 			"displayMenuOptionGallery": "Galerie",
 			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Karte",
 			"showAll": "Alle"
 		},
 		"People": {
@@ -470,5 +475,9 @@
 			"sv": "Schwedisch",
 			"es": "Spanisch"
 		}
+	},
+	"Banner": {
+		"WLM2020": "Fotografiere dieses Kulturerbe und nimm am <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> \nFotowettbewerb teil!",
+		"WLM2020Button": "Bild hochladen"
 	}
 }
