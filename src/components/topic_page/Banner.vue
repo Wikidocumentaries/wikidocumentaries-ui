@@ -282,6 +282,9 @@ export default {
             let titleText = this.$store.state.wikidocumentaries.title ? this.$store.state.wikidocumentaries.title : "Cultural heritage monument";
             let descTxt = this.$store.state.wikidocumentaries.description ? " - " +
             this.$store.state.wikidocumentaries.description : "";
+            let lat = this.$store.state.wikidocumentaries.wikidata.geo.lat ? this.$store.state.wikidocumentaries.wikidata.geo.lat : "";
+            let lon = this.$store.state.wikidocumentaries.wikidata.geo.lon ? this.$store.state.wikidocumentaries.wikidata.geo.lon : "";
+            let commonsCat = this.commonsCat ? this.commonsCat : "";
             let campaignLink = 
             "https://commons.wikimedia.org/w/index.php?title=Special:UploadWizard&campaign=" +
             this.campaignId +
@@ -295,12 +298,12 @@ export default {
             titleText + 
             descTxt +
             "&lat=" + 
-            this.$store.state.wikidocumentaries.wikidata.geo.lat + 
+            lat + 
             "&lon=" +
-            this.$store.state.wikidocumentaries.wikidata.geo.lon + 
+            lon + 
             "&categories=" +
-            this.commonsCat;
-            return campaignLink;
+            commonsCat;
+            return encodeURI(campaignLink);
         }
     },
 }
