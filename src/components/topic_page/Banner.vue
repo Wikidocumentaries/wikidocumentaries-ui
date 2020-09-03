@@ -284,7 +284,7 @@ export default {
             this.$store.state.wikidocumentaries.description : "";
             let lat = this.$store.state.wikidocumentaries.wikidata.geo.lat ? this.$store.state.wikidocumentaries.wikidata.geo.lat : "";
             let lon = this.$store.state.wikidocumentaries.wikidata.geo.lon ? this.$store.state.wikidocumentaries.wikidata.geo.lon : "";
-            let commonsCat = this.commonsCat ? this.commonsCat : "";
+            let commonsCat = this.commonsCat ? encodeURIComponent(this.commonsCat) : "";
             let campaignLink = 
             "https://commons.wikimedia.org/w/index.php?title=Special:UploadWizard&campaign=" +
             this.campaignId +
@@ -295,8 +295,8 @@ export default {
             "&uselang=" + 
             this.$i18n.locale + 
             "&description=" + 
-            titleText + 
-            descTxt +
+            encodeURIComponent(titleText) + 
+            encodeURIComponent(descTxt) +
             "&lat=" + 
             lat + 
             "&lon=" +
