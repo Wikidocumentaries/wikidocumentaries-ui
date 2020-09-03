@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <!--Banner id="banner"></Banner-->
+    <Banner id="banner"></Banner>
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
