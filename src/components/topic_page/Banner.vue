@@ -14,7 +14,7 @@ export default {
     data: function() {
         return {
         participating: [
-    {
+/*     {
         "country": "Algeria",
         "qid": "Q262",
         "campaign": "wlm-dz",
@@ -76,7 +76,7 @@ export default {
         "campaign": "wlm-eg",
         "start": "2020-10-01",
         "end": "2020-10-31"
-    },
+    }, */
     {
         "country": "Finland",
         "qid": "Q33",
@@ -84,7 +84,7 @@ export default {
         "start": "2020-09-01",
         "end": "2020-09-30"
     },
-    {
+/*     {
         "country": "France",
         "qid": "Q142",
         "campaign": "wlm-fr",
@@ -104,7 +104,7 @@ export default {
         "campaign": "wlm-gn",
         "start": "2020-10-01",
         "end": "2020-10-31"
-    },
+    }, */
     {
         "country": "India",
         "qid": "Q668",
@@ -112,7 +112,7 @@ export default {
         "start": "2020-09-01",
         "end": "2020-09-30"
     },
-    {
+/*     {
         "country": "Iraq",
         "qid": "Q796",
         "campaign": "wlm-iq",
@@ -190,6 +190,18 @@ export default {
         "end": "2020-09-30"
     },
     {
+        "country": "Sweden",
+        "qid": "Q34",
+        "campaign": {
+            "bbr": "wlm-bbr",
+            "fmi": "wlm-fmi",
+            "ship": "wlm-ship",
+            "arbetsl": "wlm-arbetsl"
+        },
+        "start": "2020-09-01",
+        "end": "2020-09-30"
+    },
+    {
         "country": "Thailand",
         "qid": "Q869",
         "campaign": "wlm-th",
@@ -216,7 +228,7 @@ export default {
         "campaign": "wlm-us",
         "start": "2020-10-01",
         "end": "2020-10-31"
-    }
+    } */
 ]
     }
     },
