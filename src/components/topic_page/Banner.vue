@@ -2,8 +2,8 @@
 <div v-if="(isHeritage && active == true)">
   <div class="banner">
       <div class="bannercontent"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LUSITANA_WLM_2011_d.svg">
-      <div class="message"><span class="gallery-title">Photograph this cultural heritage site and participate in the <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> photography competition!</span></div>
-      <a :href="campaignLink" class="noshadow" target="_blank"><div class="upload-button">Upload image</div></a>
+      <div class="message"><span class="gallery-title" v-html="$t('Banner.WLM2020')"></span></div>
+      <a :href="campaignLink" class="noshadow" target="_blank"><div class="upload-button">{{ $t('Banner.WLM2020Button') }}</div></a>
       </div>
   </div>
 </div>
