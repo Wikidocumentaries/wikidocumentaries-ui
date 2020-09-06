@@ -290,6 +290,28 @@ export default {
             }
             return campaignId;
         },
+        countryName() {
+            let countryName;
+            let countries = this.participating;
+            for (var index in countries) {
+                if (countries[index].qid == this.countryId) {
+                    countryName = countries[index].country;
+                }
+            }
+            return countryName;
+        },
+        idValue() {
+            let idValue;
+            switch (this.countryId) {
+                case 'Q33': 
+                case 'Q668': 
+                    idValue = this.$store.state.wikidocumentaries.wikidataId;
+                    break;
+                default:
+                    idValue = this.$store.state.wikidocumentaries.wikidataId;
+            }
+            return idValue;
+        },
         campaignLink() {
             let titleText = this.$store.state.wikidocumentaries.title ? this.$store.state.wikidocumentaries.title : "Cultural heritage monument";
             let descTxt = this.$store.state.wikidocumentaries.description ? " - " +
@@ -297,11 +319,14 @@ export default {
             let lat = this.$store.state.wikidocumentaries.wikidata.geo.lat ? this.$store.state.wikidocumentaries.wikidata.geo.lat : "";
             let lon = this.$store.state.wikidocumentaries.wikidata.geo.lon ? this.$store.state.wikidocumentaries.wikidata.geo.lon : "";
             let commonsCat = this.commonsCat ? encodeURIComponent(this.commonsCat) : "";
+            let uploadCat = "Images uploaded to WLM 2020 " + this.countryName + " from Wikidocumentaries";
+            let categories = [uploadCat, commonsCat];
+            categories = categories.join("|");
             let campaignLink = 
             "https://commons.wikimedia.org/w/index.php?title=Special:UploadWizard&campaign=" +
             this.campaignId +
             "&id=" + 
-            this.$store.state.wikidocumentaries.wikidataId + 
+            this.idValue + 
             "&descriptionlang=" +
             this.$i18n.locale + 
             "&uselang=" + 
@@ -314,7 +339,7 @@ export default {
             "&lon=" +
             lon + 
             "&categories=" +
-            commonsCat;
+            categories;
             return campaignLink;
         }
     },
