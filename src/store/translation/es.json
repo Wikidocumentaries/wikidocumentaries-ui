@@ -226,6 +226,9 @@
 			},
 			"showAll": "Todo"
 		},
+		"Map": {
+			"headerTitle": "Ubicación en el mapa"
+		},
 		"Partof": {
 			"headerTitle": "Contexto"
 		},
@@ -395,5 +398,8 @@
 			"sv": "Sueco",
 			"es": "Español"
 		}
+	},
+	"Banner": {
+		"WLM2020Button": "Cargar imagen"
 	}
 }
