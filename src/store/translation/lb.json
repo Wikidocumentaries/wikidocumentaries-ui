@@ -54,10 +54,12 @@
 				"people": "Leit",
 				"places": "Plazen",
 				"topics": "Themen",
+				"form": "Formulaire",
 				"imageSize": "Gréisst vum Bild",
 				"large": "grouss",
 				"medium": "mëttel",
 				"small": "kleng",
+				"type": "Medientyp",
 				"source": "Quell"
 			},
 			"imagesActionMenu": {
@@ -67,7 +69,11 @@
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "D'Bild ewechhuele well...",
-				"menuTooltip": "D'Bild ewechhuelen"
+				"shortMenuTitle": "D'Bild ewechhuelen",
+				"menuTooltip": "D'Bild ewechhuelen",
+				"remDepicted": {
+					"search": "Nom Sujet sichen"
+				}
 			},
 			"imagesViewExternal": "D'Originalbild weisen",
 			"imagesViewOnMap": "Bild op enger Kaart weisen"
@@ -237,6 +243,7 @@
 			"fileSize": "Gréisst vum Fichier",
 			"fileFormat": "Format vum Fichier",
 			"remove": "Ewechhuelen",
+			"addData": "Donnéeën derbäisetzen",
 			"rotate": "Dréinen"
 		},
 		"imageActions": {
