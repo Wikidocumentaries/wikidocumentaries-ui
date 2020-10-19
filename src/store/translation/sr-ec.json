@@ -31,7 +31,7 @@
 		"getInvolved": "Укључите се!",
 		"titleTranslate": "Превођење",
 		"titleContent": "Додајте Ваш садржај",
-		"facebook": "Група на Фејсбуку",
+		"facebook": "Група на Facebook-у",
 		"blog": "Блог",
 		"email": "Имејл"
 	},
@@ -57,36 +57,36 @@
 				"people": "људи",
 				"places": "места",
 				"topics": "теме",
-				"form": "од",
+				"form": "облик",
 				"imageSize": "величина слике",
 				"large": "велика",
 				"medium": "средња",
 				"small": "мала",
 				"type": "врста медија",
-				"creator": "аутор",
+				"creator": "творац",
 				"platform": "платформа",
 				"source": "извор"
 			},
 			"imagesActionMenu": {
-				"menuTitle": "Акције",
-				"menuTooltip": "Акције",
+				"menuTitle": "Радње",
+				"menuTooltip": "Радње",
 				"showImageText": "Прикажои слику"
 			}
 		},
 		"TopicTimeline": {
-			"headerTitle": "Временска линија"
+			"headerTitle": "Хронологија"
 		},
 		"Events": {
 			"headerTitle": "Догађаји",
 			"displayMenu": {
 				"menuTitle": "Опције приказа",
 				"menuTooltip": "Опције приказа",
-				"optionShowTimeline": "Прикажи догађаје на временској линији",
+				"optionShowTimeline": "Прикажи догађаје на хронологији",
 				"optionShowList": "Прикажи догађаје као списак"
 			},
 			"optionsMenu": {
 				"menuTitle": "Опције",
-				"menuTooltip": "Одабери чињенице за приказ",
+				"menuTooltip": "Изаберите чињенице за приказ",
 				"optionWorks": "Прикажи радове",
 				"subRelatedPeopleConf": {
 					"menuTitle": "Конфигурисање"
@@ -103,14 +103,14 @@
 		"Wikipedia": {
 			"headerTitle": "Чланак",
 			"extLink": {
-				"linkTitleWP": "Читај или уреди на Википедији"
+				"linkTitleWP": "Прочитајте или уредите на Википедији"
 			},
 			"addLink": {
-				"linkTitleWP": "Направи чланак на Википедији"
+				"linkTitleWP": "Направите чланак на Википедији"
 			},
 			"languageMenu": {
-				"menuTitle": "Читај чланак на другом језику",
-				"translateArticleText": "Преведи овај чланак на свој језик",
+				"menuTitle": "Прочитајте чланак на другом језику",
+				"translateArticleText": "Преведите чланак на српски",
 				"otherLanguagestext": "Други језици"
 			}
 		},
@@ -120,17 +120,17 @@
 				"title": "Сортирање локације",
 				"tooltip": "Сортирање локације",
 				"optionTime": "По времену",
-				"optionAlpha": "По абецеди",
+				"optionAlpha": "Азбучним редом",
 				"optionDist": "По удаљености"
 			},
 			"facetMenu": {
-				"optionType": "Тип",
-				"optionColl": "Аутор",
+				"optionType": "Врста",
+				"optionColl": "Творац",
 				"optionCity": "Локација"
 			},
 			"displayMenu": {
 				"title": "Прикажи као",
-				"tooltip": "Одабери приказ",
+				"tooltip": "Изаберите приказ",
 				"optionGallery": "Галерија",
 				"optionList": "Списак"
 			},
@@ -147,7 +147,7 @@
 			},
 			"displayMenu": {
 				"title": "Прикажи као",
-				"tooltip": "Одабери приказ",
+				"tooltip": "Изаберите приказ",
 				"optionGallery": "Галерија",
 				"optionList": "Списак"
 			},
@@ -188,10 +188,10 @@
 			"sortMenuOptionAlpha": "Азбучно",
 			"sortMenuOptionDist": "По удаљености",
 			"facetMenuOptionType": "Врста",
-			"facetMenuOptionColl": "Колекција",
+			"facetMenuOptionColl": "Збирка",
 			"facetMenuOptionCity": "Локација",
 			"displayMenuTitle": "Прикажи као",
-			"displayMenuTooltip": "Одабери приказ",
+			"displayMenuTooltip": "Изаберите приказ",
 			"displayMenuOptionGallery": "Галерија",
 			"displayMenuOptionList": "Списак",
 			"displayMenuOptionMap": "Мапа",
@@ -269,8 +269,8 @@
 			"copyrightNotePD": "Слика је лиценцирана под лиценцом $1, али на основу метаподатака, слика је у јавном власништву.",
 			"digitalCopy": "Дигитална копија",
 			"publishingPlatform": "Платформа објављивања",
-			"provider": "Провајдер садржаја",
-			"imageInfoPage": "Страница са информацијама о слици",
+			"provider": "Добављач садржаја",
+			"imageInfoPage": "Страница с информацијама о слици",
 			"imageDimensions": "Димензије слике",
 			"fileSize": "Величина датотеке",
 			"fileFormat": "Формат датотеке",
@@ -282,11 +282,11 @@
 		},
 		"imageActions": {
 			"rotateImage": "Ротирај слику",
-			"clockwise": "у смеру казаљке на сату",
-			"counterclockwise": "супротно од казаљке на сату",
+			"clockwise": "удесно",
+			"counterclockwise": "улево",
 			"flip": "Окрени",
 			"horizontal": "водоравно",
-			"vertical": "вертикално"
+			"vertical": "усправно"
 		},
 		"closeViewer": "Затвори прегледач"
 	},
@@ -342,19 +342,19 @@
 		"menus": {
 			"actionMenuTitle": "Радње",
 			"actionMenuTooltip": "Радње",
-			"languageMenuTitle": "Одабери језик",
-			"languageMenuTooltip": "Одабери свој језик",
+			"languageMenuTitle": "Изаберите језик",
+			"languageMenuTooltip": "Изаберите језик",
 			"myLanguagesItem": "Моји језици",
-			"languageMenuTranslate": "Преведи овај чланак на енглески"
+			"languageMenuTranslate": "Преведи чланак на српски"
 		},
 		"languageMenu": {
-			"TranslateUI": "Преведи на свој језик"
+			"TranslateUI": "Преведите на српски"
 		},
 		"languages": {
-			"fi": "Фински",
-			"en": "Енглески",
-			"sv": "Шведски",
-			"es": "Шпански"
+			"fi": "фински",
+			"en": "енглески",
+			"sv": "шведски",
+			"es": "шпански"
 		}
 	},
 	"Banner": {
