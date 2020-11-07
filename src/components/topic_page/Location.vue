@@ -117,6 +117,8 @@ SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?rel
   { 
     { ?pi wdt:P31 wd:Q18615777. }
     UNION
+    { ?pi wdt:P31 wd:Q18635217. }
+    UNION
     { ?pi wdt:P1647* wd:276 . }
    }
   ?pi wikibase:directClaim ?p .
