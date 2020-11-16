@@ -58,6 +58,7 @@
 		},
 		"TopicImages": {
 			"headerTitle": "আর্কাইভগুলি হতে প্রাপ্ত ছবি",
+			"intro": "এই চিত্রগুলি বেশ কয়েকটি উৎস থেকে সংগ্রহ করা হয়েছে এবং এগুলি সর্বদা সঠিক প্রতিনিধিত্ব নাও করতে পারে। আপনি আসল চিত্রটি দেখতে পারেন এবং চিত্রটির কোনও অবস্থান পিন নং থাকলে আপনি তাতে মানচিত্র যোগ করতে পারেন।",
 			"actionsMenu": {
 				"showImagesOnMapMenuText": "মানচিত্রে সকল চিত্র দেখান",
 				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান"
@@ -78,6 +79,7 @@
 				"source": "উৎস"
 			},
 			"imagesActionMenu": {
+				"doGeolocatingText": "অবস্থান নির্ধারন করুন...",
 				"showImageText": "চিত্র প্রদর্শন করুন"
 			},
 			"imagesRemoveMenu": {
@@ -89,7 +91,12 @@
 			}
 		},
 		"TopicMap": {
-			"hideImagesMenuText": "চিত্র আড়াল করুন"
+			"hideImagesMenuText": "চিত্র আড়াল করুন",
+			"showNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি দেখান",
+			"hideNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি লুকান"
+		},
+		"TopicTimeline": {
+			"headerTitle": "সময়রেখা"
 		},
 		"Events": {
 			"headerTitle": "ঘটনা",
@@ -163,6 +170,13 @@
 		"Awards": {
 			"headerTitle": "পুরস্কার"
 		},
+		"Similar": {
+			"headerTitle": "অনুরূপ প্রসঙ্গ",
+			"intro": "এই প্রসঙ্গের সাথে কিছু সাধারণ বৈশিষ্ট্য মিল রয়েছে এমন প্রসঙ্গ।"
+		},
+		"Effects": {
+			"headerTitle": "প্রভাব"
+		},
 		"Location": {
 			"headerTitle": "অবস্থান"
 		},
@@ -181,6 +195,7 @@
 			"showAll": "সকল"
 		},
 		"People": {
+			"headerTitle": "প্রসঙ্গটির সাথে সম্পর্কিত ব্যক্তি",
 			"sortMenuTitle": "বাছাই করুন",
 			"sortMenuOptionBirth": "জন্মদিন অনুসারে",
 			"sortMenuOptionDeath": "মৃত্যুদিন অনুসারে",
