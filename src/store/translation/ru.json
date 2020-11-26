@@ -295,6 +295,9 @@
 			"headerTitle": "Эффекты",
 			"intro": "Это эффекты темы."
 		},
+		"Instances": {
+			"headerTitle": "Экземпляры этой темы"
+		},
 		"Location": {
 			"headerTitle": "Местоположение"
 		},
