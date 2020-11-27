@@ -2,33 +2,39 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <h1 class="header-title">{{ $t('topic_page.People.headerTitle') }}</h1>
-						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
-            </ToolbarMenu>
+      <h1 class="header-title">{{ $t('topic_page.People.headerTitle') }}</h1>
+      <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
+      <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+          <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
+      </ToolbarMenu>
+    </div>
+    <div class="intro">{{ $t('topic_page.People.intro') }}</div>
+    <div v-if="gallery" class="gallery">
+      <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
+      <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
+        <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
+        <div v-else class="noimage"></div>
+        <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
+          <div v-if="item.inLabel" class="thumb-credit disappearing over">{{ item.inLabel }}</div>
+          <div v-else class="thumb-credit disappearing over">{{ item.outLabel }}</div>
+          <div class="gallery-title">{{ item.person.label }}</div>
+          <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
         </div>
-        <div class="intro">{{ $t('topic_page.People.intro') }}</div>
-        <div v-if="gallery" class="gallery">
-            <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
-                <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
-                <div v-else class="noimage"></div>
-                <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
-                    <div v-if="item.inLabel" class="thumb-credit disappearing over">{{ item.inLabel }}</div>
-                    <div v-else class="thumb-credit disappearing over">{{ item.outLabel }}</div>
-                    <div class="gallery-title">{{ item.person.label }}</div>
-                    <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
-                </div>
-            </router-link>
-        </div>
-				<div v-else class="list">
-            <div v-for="item in results" :key="item.id" class="listrow">
-            <a :href="getItemURL(item.person.value)" >
-            	<span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
-            </a>
-            </div>
-        </div>
+      </router-link>
+    </div>
+    <div v-else class="list">
+      <div v-for="item in results" :key="item.id" class="listrow">
+        <a :href="getItemURL(item.person.value)" >
+          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
+        </a>
+      </div>
+    </div>
+    		<div class="toolbar">
+      <h1 class="header-title">{{ $t('topic_page.Familytree.headerTitle') }}</h1>
+    </div>
+    <div>
+      <iframe :src="entitreeLink" width="100%" height="500" style="border:none;"></iframe>
+    </div>
 	</div>
 </div>
 </template>
@@ -160,6 +166,14 @@ LIMIT 1000
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
+        },
+        entitreeLink () {
+          let entitreeLink = 
+          "https://www.entitree.com/" +
+          this.$i18n.locale +
+          "/family_tree/" +
+          this.$store.state.wikidocumentaries.wikidataId;
+          return entitreeLink;
         }
     },
     watch: {
