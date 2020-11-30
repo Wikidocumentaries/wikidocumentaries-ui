@@ -314,6 +314,9 @@
 		"Links": {
 			"headerTitle": "Bu maddedeki bağlantılar"
 		},
+		"Familytree": {
+			"headerTitle": "Aile ağacı"
+		},
 		"Works": {
 			"headerTitle": "Çalışanlar",
 			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",

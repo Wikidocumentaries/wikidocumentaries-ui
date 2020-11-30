@@ -312,6 +312,9 @@
 		"Links": {
 			"headerTitle": "Links deste artigo"
 		},
+		"Familytree": {
+			"headerTitle": "Árvore genealógica"
+		},
 		"Works": {
 			"headerTitle": "Trabalho",
 			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",

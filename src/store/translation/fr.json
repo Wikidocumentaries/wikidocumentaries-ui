@@ -3,6 +3,7 @@
 		"authors": [
 			"Abijeet Patro",
 			"Eneelk",
+			"Florian COLLIN",
 			"Gomoko",
 			"Pols12",
 			"Thibaut120094",
@@ -316,6 +317,9 @@
 		},
 		"Links": {
 			"headerTitle": "Liens depuis cet article"
+		},
+		"Familytree": {
+			"headerTitle": "Arbre généalogique"
 		},
 		"Works": {
 			"headerTitle": "Works",
