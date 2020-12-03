@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Mguix",
 			"Qllach"
 		]
 	},
@@ -11,11 +12,22 @@
 		"searchInputSearchOnly": "Trobeu un tema",
 		"showMore": "Mostra més elements",
 		"createNew": "Crea un element nou",
+		"intro": "Wikidocumentals és una wiki per deixar constància: un lloc per recopilar traces històriques i convertir-les en històries. Comenceu a buscar un tema d’interès!",
+		"titleDescription": "Quin és Wikidocumentaries?",
+		"description": "Wikidocumentals és un espai de creació per als historiadors ciutadans.  Combina informació sobre temes: persones, llocs, edificis, esdeveniments i més.  Podeu navegar entre els temes seguint qualsevol connexió registrada com ara relacions familiars, ubicacions, creadors i creacions o afiliació.  Un tema s'il·lustra amb imatges i mapes de museus connectats, arxius i biblioteques.  En Wikidocumentals, serà possible corregir la informació existent i afegir nous temes, portar les vostres pròpies imatges i records, i utilitzar tot el material per als vostres propis propòsits.",
 		"titleStatus": "Estat",
+		"status": "El lloc està en fase de demostració.  Encara no hi ha moltes característiques importants i és possible que el lloc no funcioni tan bé com s'esperava.",
+		"moreBelow": "Llegiu-ne més a sota",
+		"more": "Llegir més",
+		"moreLink": "Llegir més en",
 		"titleTopics": "Temes",
+		"statusTopics": "Els temes es llegeixen des de Wikidata.  Més tard es poden crear nous temes en Wikidocumentaris, si el contingut està fora de l'abast de Wikidata.  Encara serà igualment possible descriure el tema amb les opcions riques de Wikidata.  Els articles actuals són de la Viquipèdia, mentre que els articles es poden crear posteriorment localment per a temes que només existeixen als Wikidocumentals.",
 		"titleMedia": "Multimèdia",
+		"statusMedia": "El suport es llegeix des d'un nombre creixent de repositoris multimèdia que serveixen fitxers de suports amb llicència oberta.  Estem treballant per trobar imatges amb més precisió i mostrar més i millors metadades de cadascuna de les fonts.  Els nous mitjans de comunicació són benvinguts!",
 		"titleTools": "Eines",
+		"statusTools": "Wikidocumentals té tasques i eines per treballar amb el contingut.  Els articles ja es poden traduir entre llengües amb l'eina de traducció del contingut.  Estem preparant paraules clau amb Wikidata i una eina de geoetiquetatge per a les ubicacions de les imatges.  Es poden crear o integrar noves eines divertides i útils.",
 		"titleLanguages": "Llengües",
+		"statusLanguages": "Els wikidocumentals es poden navegar en qualsevol idioma disponible a Wikidata.  Aquesta és una gran oportunitat per a les llengües petites.  Les traduccions es fan a TranslateWiki.",
 		"titleTechnology": "Tecnologia",
 		"titleCreators": "Creadors",
 		"titleTeam": "Equip",
