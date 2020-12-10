@@ -10,7 +10,6 @@
     </div>
     <div class="intro">{{ $t('topic_page.People.intro') }}</div>
     <div v-if="gallery" class="gallery">
-      <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
       <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
         <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
         <div v-else class="noimage"></div>
@@ -29,11 +28,13 @@
         </a>
       </div>
     </div>
-    		<div class="toolbar">
+    <div v-if="wikidocumentaries.wikidata.instance_of.id == 'Q5'">
+    <div class="toolbar">
       <h1 class="header-title">{{ $t('topic_page.Familytree.headerTitle') }}</h1>
     </div>
     <div>
       <iframe :src="entitreeLink" width="100%" height="500" style="border:none;"></iframe>
+    </div>
     </div>
 	</div>
 </div>
