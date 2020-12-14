@@ -29,32 +29,124 @@
 		"titleLanguages": "Llengües",
 		"statusLanguages": "Els wikidocumentals es poden navegar en qualsevol idioma disponible a Wikidata.  Aquesta és una gran oportunitat per a les llengües petites.  Les traduccions es fan a TranslateWiki.",
 		"titleTechnology": "Tecnologia",
+		"statusTechnology": "Wikidocumentaris llegeix les dades del nucli de Wikidata.  A més, els Wikidocumentaris tindran la seva pròpia base Wiki per a temes que estan fora de l'abast de Wikidata.  S'espera que el Wikidata i el Wikidocumentaris es sincronitzin com a bases wiki federades.  En segon lloc, les metadades d'imatge estan enllaçades amb elements Wikidata, i aquestes dades es poden sincronitzar amb les dades estructurades a Wikimedia Commons.  El lloc està construït amb Vue.js i està organitzat a Wikimedia Cloud Services.",
 		"titleCreators": "Creadors",
 		"titleTeam": "Equip",
+		"titleThanks": "Amb agraïment especial per",
 		"titlePartners": "Socis",
+		"titleFunding": "Amb el suport amable de",
+		"titleBy": "Projecte de",
 		"getInvolved": "Impliqueu-vos-hi",
+		"titleTranslate": "Tradueix",
+		"joinTranslate": "Vine i porta el teu idioma als Wikidocumentaris.  Uniu-vos a l'equip de traducció de voluntaris i mireu com el patrimoni cultural connectat es fa realitat en la vostra llengua.",
+		"titleContent": "Afegeix el teu contingut",
+		"joinContent": "Si teniu una foto, un mitjà, un document, un mapa o una recopilació de dades que voleu veure aquí, mirem junts si ja es poden connectar a través d'un dels canals existents o si podem crear nous mètodes de connexió.  També esperem organitzar tallers per a registrar el coneixement històric amb comunitats d'interès.",
+		"titleDevelop": "Crear eines i tasques de producció participativa.",
+		"joinDevelop": "Ens agrada afegir més eines i crear noves tasques de col·laboració col·laborativa amb organitzacions i creadors d'eines. Unim forces per a la propera aplicació de crowdfunding.",
 		"titleContact": "Poseu-vos en contacte!",
 		"facebook": "Grup al Facebook",
+		"wiki": "Wiki de Wikidocumentaris",
 		"blog": "Blog",
 		"email": "Correu electrònic",
 		"github": "Repositori al GitHub"
 	},
+	"MainPage": {
+		"topicPageName": "Pàgina del tema",
+		"mapPlaceMatchPageName": "Combina els noms dels llocs",
+		"mapSearchPageName": "Cercar mapes",
+		"wikiTopicErrorMessage": "No s'ha pogut trobar una pàgina de la Viquipèdia en l'idioma actual o ha succeït un altre error inesperat.",
+		"returnToHomeMessage": "Tornar a la pàgina de benvinguda"
+	},
+	"WaitPage": {
+		"waitMessage": "Un moment, si us plau... Recuperant dades de Viquipèdia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
+	},
 	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Trieu un o més mapes de base històrics",
+			"chooseMapHelpNote": "Consell: ctrl+clic permet seleccionar molts mapes",
+			"yearAbbreviation": "a."
+		},
+		"Header": {
+			"titleEditText": "Editar el títol",
+			"titleApproveText": "Aprovar aquest títol",
+			"subtitleEditText": "Modifica la descripció",
+			"subtitleApproveText": "Aprovar aquesta descripció"
+		},
 		"TopicImages": {
+			"headerTitle": "Imatges dels arxius",
+			"intro": "Aquestes imatges es recullen des de diverses fonts i poden no representar sempre amb precisió el tema.  Podeu visualitzar la imatge original i col·locar la imatge en un mapa si té un pin d'ubicació.",
+			"actionsMenu": {
+				"menuTitle": "Mostra o organitza imatges",
+				"tooltip": "Mostra o organitza imatges",
+				"showImagesOnMapMenuText": "Mostra totes les  imatges en el mapa",
+				"showImagesOnTimelineMenuText": "Mostra totes les imatges a la línia de temps",
+				"selectPortraits": "Seleccioneu els retrats de bona qualitat d'aquesta persona",
+				"arrangeByTime": "Organitza les imatges per data",
+				"selectWorks": "Seleccioneu imatges de treballs"
+			},
 			"facetMenu": {
+				"menuTitle": "Imatges de facetes de",
+				"menuTooltip": "Imatges amb facetes segons diferents criteris",
+				"time": "data",
+				"map": "mapa",
 				"people": "persones",
 				"places": "llocs",
 				"topics": "temes",
+				"form": "formulari",
 				"imageSize": "mida de la imatge",
+				"large": "gran",
+				"medium": "mitjà",
+				"small": "petit",
 				"type": "tipus de fitxer multimèdia",
+				"creator": "autor",
 				"platform": "plataforma",
-				"source": "font"
+				"source": "font",
+				"saveSelection": "Salva la selecció com a col·lecció",
+				"clear": "Esborra les opcions"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Accions",
-				"menuTooltip": "Accions"
+				"menuTooltip": "Accions",
+				"doGeolocatingText": "Estableix la ubicació...",
+				"showImageText": "Mostra la imatge",
+				"selectFeatured": "Tria com imatge de capçalera"
 			},
-			"imagesViewExternal": "Mostra la imatge original"
+			"imagesRemoveMenu": {
+				"menuTitle": "Elimina la imatge perquè...",
+				"shortMenuTitle": "Treure la imatge",
+				"menuTooltip": "Treure la imatge",
+				"remDepicted": {
+					"menuTitle": "En el seu lloc mostra aquest tema",
+					"shortMenuTitle": "Mostra un altre tema",
+					"search": "Cerca el tema",
+					"browse": "Navegueu pels temes relacionats"
+				},
+				"remCreator": {
+					"menuTitle": "És per aquest autor",
+					"shortMenuTitle": "Per aquest altre autor",
+					"search": "Cerca per autor",
+					"browse": "Navegueu pels actors relacionats"
+				},
+				"remInappropriate": {
+					"menuTitle": "És inadequat perquè",
+					"shortMenuTitle": "És inadequat",
+					"privacy": "Viola la privacitat del representat",
+					"violence": "Mostra violència extrema",
+					"sex": "Mostra sexe explícit",
+					"copyvio": "Viola els drets d'autor",
+					"explain": "Deixar una nota per explicar"
+				}
+			},
+			"imagesViewExternal": "Mostra la imatge original",
+			"imagesViewOnMap": "Visualitza la imatge en un mapa"
+		},
+		"TopicMap": {
+			"headerTitle": "Tema al mapa",
+			"intro": "La ubicació del subjecte es mostra al mapa. També podeu mostrar imatges i altres dades al mapa o triar un mapa històric com a capa base.",
+			"chooseHistoricalBasemapMenuText": "Trieu el(s) mapa(s) base històric(s)...",
+			"hideImagesMenuText": "Ocultar imatges",
+			"chooseTimelineMapsMenuText": "Trieu els mapes per a la línia de temps...",
+			"showNearbyPlacesMenuText": "Mostra llocs propers"
 		},
 		"TopicTimeline": {
 			"headerTitle": "Línia temporal"

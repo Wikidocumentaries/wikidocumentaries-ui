@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Daud I.F. Argana",
 			"Herryz",
 			"Pebaryan"
 		]
@@ -9,6 +10,8 @@
 		"search": "Pencarian",
 		"searchInputPlaceHolder": "Cari topik atau buat topik baru",
 		"searchInputSearchOnly": "Cari topik",
+		"showMore": "Tampilkan lebih banyak butir",
+		"createNew": "Buat butir baru",
 		"intro": "Wikidocumentaries adalah wiki untuk sejarah - tempat mengumpulkan jejak-jejak sejarah dan membuatnya menjadi cerita. Mulai dengan mencari topik yang menarik!",
 		"titleDescription": "Apa itu Wikidocumentaries?",
 		"description": "Wikidocumentaries adalah ruang bagi para sejarawan warga. Ia menggabungkan informasi tentang topik-topik – tokoh, tempat, bangunan, peristiwa, dan hal lainnya. Anda dapat menavigasikan antara topik-topik dengan mengikuti keterhubungan yang tersimpan seperti hubungan keluarga, lokasi, pembuat dan karya atau afiliasi. Suatu topik diilustrasikan dengan gambar dan peta dari museum, arsip, dan perpustakaan yang terhubung. Di Wikidocumentaries memungkinkan untuk mengoreksi informasi yang ada dan menambahkan topik-topik baru. Bawa gambar dan rekaman Anda dan gunakan semua material untuk keperluan Anda.",
@@ -20,7 +23,7 @@
 		"titleTopics": "Topik",
 		"statusTopics": "Topik-topik dibaca dari Wikidata. Topik-topik baru juga dapat ditambahkan kemudian di Wikidocumentaries jika konten tersebut berada di luar cakupan Wikidata. Sebaliknya juga dimungkinkan untuk mendeskripsikan suatu topik dengan opsi pengayaan dari Wikidata. Artikel saat ini berasal dari Wikipedia, namun artikel juga dapat dibuat secara lokal untuk topik yang hanya ada di Wikidocumentaries.",
 		"titleMedia": "Media",
-		"statusMedia": "Saat ini media berasal dari Finna.fi, Flickr, dan Wikimedia Commons. Kami sedang mengerjakan pencarian gambar dengan lebih akurat dan menampilkan metadata yang lebih baik dari tiap sumber. Kami juga terbuka jika ada sumber-sumber media baru.",
+		"statusMedia": "Media berasal dari banyak sekali repositori media yang melayani berkas-berkas media berlisensi terbuka. Kami sedang mengerjakan pencarian gambar dengan lebih akurat dan menampilkan metadata yang lebih baik dari tiap sumber. Kami juga terbuka jika ada sumber-sumber media baru.",
 		"titleTools": "Perkakas",
 		"statusTools": "Wikidocmentaries memiliki tugas dan kakas untuk bekerja dengan konten. Artikel dapat langsung diterjemahkan lintas bahasa menggunakan kakas Penerjemahan Konten. Kami sedang menyiapkan kakas penanda kata kunci dengan Wikidata dan penandaan geo untuk lokasi gambar. Kakas baru yang menarik dan berguna dapat dikembangkan dan diintegrasikan.",
 		"titleLanguages": "Bahasa",
@@ -199,7 +202,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Baca artikel di bahasa lain",
-				"translateArticleText": "Terjemahkan artikel ini ke bahasa Inggris",
+				"translateArticleText": "Terjemahkan artikel ini ke bahasa Anda",
 				"otherLanguagestext": "Bahasa lainnya"
 			}
 		},
@@ -257,13 +260,58 @@
 			"headerTitle": "Menggambarkan",
 			"intro": "Karya ini menggambarkan topik-topik berikut. Anda dapat mengurutkannya berdasarkan waktu dan nama. Perlu diingat bahwa untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
 		},
+		"Map": {
+			"headerTitle": "Lokasi di peta"
+		},
 		"Parts": {
 			"headerTitle": "Potongan",
 			"intro": "Potongan ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
 		},
+		"Partof": {
+			"headerTitle": "Lokasi",
+			"intro": "Topik ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Twins": {
+			"headerTitle": "Kota kembar",
+			"intro": "Kota kembar, kota saudari, munisipalitas dan tempat-tempat lain yang melakukan kerja sama, baik secara legal ataupun secara informal diakui oleh pemerintahnya. Anda boleh menyortir mereka menurut waktu dan nama. Untuk melihat semua topik, termasuk yang tidak punya gambar, Anda harus melihat topik-topiknya sebagai daftar."
+		},
 		"Affiliations": {
 			"headerTitle": "Afiliasi",
 			"intro": "Organisasi yang berafiliasi dengan tokoh atau organisasi ini."
+		},
+		"Awards": {
+			"headerTitle": "Penghargaan",
+			"intro": "Nominasi dan penghargaan yang topik halaman ini."
+		},
+		"Similar": {
+			"headerTitle": "Topik serupa",
+			"intro": "Cari topik yang memiliki beberapa ciri khas yang sama dengan topik ini."
+		},
+		"Effects": {
+			"headerTitle": "Efek",
+			"intro": "Berikut adalah efek dari topik ini."
+		},
+		"Things": {
+			"headerTitle": "Topik daftar fokus",
+			"intro": "Topik berikut terdapat di daftar fokus Wikiproject ini."
+		},
+		"Instances": {
+			"headerTitle": "Contoh dari topik ini",
+			"intro": "Lihat contoh-contoh dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
+		},
+		"Location": {
+			"headerTitle": "Lokasi",
+			"intro": "Topik ini terletak di atau dalam konteks topik-topik ini."
+		},
+		"Subclasses": {
+			"headerTitle": "Subkelas dari topik ini",
+			"intro": "Lihat subkelas-subkelas dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
+		},
+		"Links": {
+			"headerTitle": "Pranala dari artikel ini"
+		},
+		"Familytree": {
+			"headerTitle": "Pohon keluarga"
 		},
 		"Works": {
 			"headerTitle": "Karya",
@@ -283,6 +331,7 @@
 			"displayMenuTooltip": "Pilih tampilan",
 			"displayMenuOptionGallery": "Galeri",
 			"displayMenuOptionList": "Daftar",
+			"displayMenuOptionMap": "Peta",
 			"showAll": "Semua"
 		},
 		"People": {
@@ -301,6 +350,10 @@
 			"facetMenuOptionProfession": "Profesi",
 			"facetMenuOptionCountry": "Negara",
 			"facetMenuOptionCity": "Gender"
+		},
+		"Collection": {
+			"headerTitle": "Karya dalam koleksi",
+			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
 		}
 	},
 	"imageViewer": {
@@ -365,6 +418,7 @@
 			"digitalCopy": "Salinan digital",
 			"publishingPlatform": "Platform penerbitan",
 			"platformId": "Penanda",
+			"provider": "Penyedia konten",
 			"imageInfoPage": "Halaman info gambar",
 			"imageDimensions": "Dimensi gambar",
 			"fileSize": "Ukuran berkas",
@@ -414,6 +468,12 @@
 			"title": "Urutkan topik",
 			"tooltip": "Urutkan topik",
 			"optionTime": "Berdasarkan waktu",
+			"optionStart": "Berdasarkan waktu mulai",
+			"optionEnd": "Berdasarkan waktu akhir",
+			"optionTitle": "Berdasarkan judul",
+			"optionCause": "Berdasarkan alasan",
+			"optionPartof": "Berdasarkan butir yang terdiri dari ini",
+			"optionSuperclass": "Berdasarkan kelas yang subkelasnya adalah ini",
 			"optionAlpha": "Alfabetis",
 			"optionTitleAlpha": "Berdasarkan judul secara alfabetis",
 			"optionCreatorAlpha": "Berdasarkan pembuat secara alfabetis",
@@ -461,6 +521,7 @@
 		}
 	},
 	"Banner": {
+		"WLM2020": "Foto situs warisan budaya ini dan ikut serta dalam kompetisi fotografi <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a>!",
 		"WLM2020Button": "$1 Unggah gambar"
 	}
 }
