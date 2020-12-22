@@ -85,8 +85,8 @@
 				"selectWorks": "Seleccioneu imatges de treballs"
 			},
 			"facetMenu": {
-				"menuTitle": "Imatges de facetes de",
-				"menuTooltip": "Imatges amb facetes segons diferents criteris",
+				"menuTitle": "Les imatges retocades per",
+				"menuTooltip": "Imatges retocades segons diferents criteris",
 				"time": "data",
 				"map": "mapa",
 				"people": "persones",
@@ -116,7 +116,7 @@
 				"shortMenuTitle": "Treure la imatge",
 				"menuTooltip": "Treure la imatge",
 				"remDepicted": {
-					"menuTitle": "En el seu lloc mostra aquest tema",
+					"menuTitle": "En cambio, representa este tema",
 					"shortMenuTitle": "Mostra un altre tema",
 					"search": "Cerca el tema",
 					"browse": "Navegueu pels temes relacionats"
@@ -218,8 +218,8 @@
 				"optionClear": "Neteja l'ordenació"
 			},
 			"facetMenu": {
-				"title": "Ubicacions de faceta per",
-				"tooltip": "Imatges amb facetes segons diferents criteris",
+				"title": "Aspecte de les ubicacions d'acord amb",
+				"tooltip": "Aspecte de les ubicacions segons diferents criteris.",
 				"optionType": "Tipus",
 				"optionColl": "Autor",
 				"optionCity": "Ubicació"
@@ -243,8 +243,8 @@
 				"optionClear": "Neteja l'ordenació"
 			},
 			"facetMenu": {
-				"title": "Feines de faceta per",
-				"tooltip": "Feines de faceta per criteris diferents",
+				"title": "Retocat per",
+				"tooltip": "Retocat per criteris diferents.",
 				"optionType": "Tipus",
 				"optionColl": "Autor"
 			},
@@ -322,8 +322,8 @@
 			"sortMenuOptionAlpha": "Per ordre alfabètic",
 			"sortMenuOptionDist": "Per distància",
 			"sortMenuOptionClear": "Neteja l'ordenació",
-			"facetMenuTitle": "Faceta per",
-			"facetMenuTooltip": "Facet funciona amb diferents criteris",
+			"facetMenuTitle": "Retocat per",
+			"facetMenuTooltip": "Retocs per diferents criteris",
 			"facetMenuOptionType": "Tipus",
 			"facetMenuOptionColl": "Col·lecció",
 			"facetMenuOptionCity": "Ubicació",
@@ -345,7 +345,7 @@
 			"sortMenuOptionFirst": "Per nom",
 			"sortMenuOptionLast": "Per cognom",
 			"sortMenuOptionClear": "Neteja l'ordenació",
-			"facetMenuTitle": "Facet per",
+			"facetMenuTitle": "Retocat per",
 			"facetMenuTooltip": "Dividiu les persones per diferents aspectes",
 			"facetMenuOptionProfession": "Professió",
 			"facetMenuOptionCountry": "País",
@@ -366,9 +366,9 @@
 			"creatorUnknown": "Desconegut",
 			"addCreator": "Afegeix autor",
 			"removeCreator": "Elimina autor",
-			"dateDepicted": "Data de la il·lustració",
+			"dateDepicted": "Data representada",
 			"addDateDepicted": "Afegeix data de la il·lustració",
-			"removeDateDepicted": "Treu data de la il·lustració",
+			"removeDateDepicted": "Treu la data representada",
 			"dateCreated": "Data de creació",
 			"addDateCreated": "Afegeix la data de creació",
 			"removeDateCreated": "Treu data de creació",
@@ -395,7 +395,7 @@
 			"address": "Carrer",
 			"addAddress": "Afegir carrer",
 			"removeAddress": "Eliminar el carrer",
-			"depictedPeople": "Persones a la imatge",
+			"depictedPeople": "Persones descrites",
 			"addPerson": "Afegeix una persona",
 			"removePerson": "Elimina la persona",
 			"event": "Esdeveniment",
@@ -412,39 +412,106 @@
 			"photograph": "Fotografia",
 			"image": "Imatge",
 			"photographer": "Fotògraf",
+			"addPhotographData": "Afegir informació sobre la fotografia",
+			"copyrightNotePD": "La imatge té una llicència de $1, però en funció de les metadades, la imatge es troba en domini públic.",
+			"copyrightNoteSame": "La mateixa imatge té una llicència més oberta amb $1, per tant també s'aplica a aquesta imatge.",
 			"digitalCopy": "Còpia digital",
+			"publishingPlatform": "Plataforma de publicació",
 			"platformId": "Identificador",
 			"provider": "Proveïdor de continguts",
+			"imageInfoPage": "Pàgina d'informació de la imatge",
 			"imageDimensions": "Dimensions de la imatge",
 			"fileSize": "Mida del fitxer",
 			"fileFormat": "Format de fitxer",
-			"addData": "Afegeix dades"
+			"remove": "Elimina",
+			"moveTo": "Moure a un altre camp",
+			"addData": "Afegeix dades",
+			"uploader": "Carregador",
+			"rotate": "Girar"
 		},
 		"imageActions": {
+			"rotateImage": "Girar imatge",
+			"clockwise": "sentit horari",
+			"counterclockwise": "en sentit antihorari",
+			"flip": "Tornar",
 			"horizontal": "horitzontal",
 			"vertical": "vertical"
 		},
 		"closeViewer": "Tanca el visualitzador"
 	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combina els noms dels llocs"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Cercar mapes històrics",
+			"filterBySourceMenuText": "Filtrar per font...",
+			"filterByTimeMenuText": "Filtre basat en la data...",
+			"filterByMapMenuText": "Filtra per mapa..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Per al mapa de base històric, vegeu crèdits i drets d'autor a",
+			"attribution2PrefixText": "Mapa rectificat de"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparència del mapa de base històric:"
+		}
+	},
 	"menus": {
+		"sortMenu": {
+			"title": "Ordena els temes",
+			"tooltip": "Ordena els temes",
+			"optionTime": "Per data",
+			"optionStart": "Per temps d'inici",
+			"optionEnd": "Per temps de final",
+			"optionTitle": "Per títol",
+			"optionCause": "Per causa",
+			"optionPartof": "Per element això forma part de",
+			"optionSuperclass": "Per classe aquesta és la subclasse de",
+			"optionAlpha": "Alfabèticament",
+			"optionTitleAlpha": "Per títol alfabèticament",
+			"optionCreatorAlpha": "Per autor alfabèticament",
+			"optionDist": "Per distància",
+			"optionRev": "Invertir l'ordenació",
+			"optionClear": "Netejar l'ordenació"
+		},
 		"facetMenu": {
+			"title": "Retocat per",
+			"tooltip": "Temes d'aspecte segons diferents criteris",
 			"optionType": "Tipus",
+			"optionColl": "Autor",
 			"optionCity": "Ubicació"
 		},
 		"displayMenu": {
+			"title": "Mostra com a",
+			"tooltip": "Escollir la pantalla",
 			"optionGallery": "Galeria",
 			"optionList": "Llista"
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaris",
 		"ok": "D’acord",
 		"cancel": "Cancel·la",
 		"helpText": "Ajuda",
+		"expand": "Expandir aquesta secció",
+		"collapse": "Replega la secció",
 		"menus": {
 			"actionMenuTitle": "Accions",
 			"actionMenuTooltip": "Accions",
+			"languageMenuTitle": "Trieu un idioma",
+			"languageMenuTooltip": "Escolliu la vostra llengua",
 			"myLanguagesItem": "Les meves llengües",
 			"languageMenuTranslate": "Tradueix aquest article al català"
+		},
+		"languageMenu": {
+			"TranslateUI": "Tradueix a la vostra llengua"
 		},
 		"languages": {
 			"fi": "Finès",
@@ -452,5 +519,9 @@
 			"sv": "Suec",
 			"es": "Castellà"
 		}
+	},
+	"Banner": {
+		"WLM2020": "Fotografia d'aquest patrimoni cultural i participa en el <a href=\"https://www.wikilovesmonuments.org/\">Wiki Loves Monuments 2020</a> competició de fotografia!",
+		"WLM2020Button": "Puja la imatge"
 	}
 }
