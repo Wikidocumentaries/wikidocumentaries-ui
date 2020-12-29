@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			")8",
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"A Retired User",
@@ -72,7 +73,8 @@
 			"hideImagesMenuText": "隐藏图像"
 		},
 		"TopicTimeline": {
-			"headerTitle": "时间轴"
+			"headerTitle": "时间轴",
+			"centuryText": "C"
 		},
 		"Events": {
 			"headerTitle": "重要事件",
@@ -125,9 +127,13 @@
 			"headerTitle": "位置"
 		},
 		"Works": {
+			"facetMenuOptionType": "类型",
+			"facetMenuOptionColl": "收藏",
 			"facetMenuOptionCity": "地方",
 			"displayMenuTitle": "显示到",
 			"displayMenuTooltip": "选择显示器",
+			"displayMenuOptionGallery": "图库",
+			"displayMenuOptionList": "列表",
 			"displayMenuOptionMap": "地图",
 			"showAll": "全部"
 		},
@@ -170,13 +176,20 @@
 			"optionClear": "清晰排序"
 		},
 		"facetMenu": {
-			"tooltip": "按不同标准划分主题"
+			"tooltip": "按不同标准划分主题",
+			"optionType": "类型",
+			"optionColl": "创建者",
+			"optionCity": "位置"
 		},
 		"displayMenu": {
-			"tooltip": "选择显示器"
+			"title": "显示到",
+			"tooltip": "选择显示器",
+			"optionGallery": "图库",
+			"optionList": "列表"
 		}
 	},
 	"general": {
+		"ok": "确定",
 		"cancel": "取消",
 		"helpText": "帮助",
 		"languages": {

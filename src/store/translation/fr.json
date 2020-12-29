@@ -269,7 +269,7 @@
 			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Map": {
-			"headerTitle": "Localisation sur la carte"
+			"headerTitle": "Emplacement sur la carte"
 		},
 		"Parts": {
 			"headerTitle": "Parties",
@@ -281,7 +281,7 @@
 		},
 		"Twins": {
 			"headerTitle": "Villes jumelées",
-			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, soit légalement ou de façon informelle reconnue par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, reconnu de façon légale ou informelle par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Affiliations": {
 			"headerTitle": "Affiliations",
@@ -301,7 +301,7 @@
 		},
 		"Things": {
 			"headerTitle": "Sujets de la liste de focalisation",
-			"intro": "Ces sujets sont sur la liste de focalisation de ce Wikiproject."
+			"intro": "La liste de focalisation de ce Wikiprojet traite des sujets suivants."
 		},
 		"Instances": {
 			"headerTitle": "Instances de ce sujet",
@@ -309,7 +309,7 @@
 		},
 		"Location": {
 			"headerTitle": "Emplacement",
-			"intro": "Ce sujet se trouve à l’intérieur ou dans le contexte de ces sujets."
+			"intro": "Ce sujet est inclus parmi les sujets suivants ou dans leur contexte."
 		},
 		"Subclasses": {
 			"headerTitle": "Sous-classes de ce sujet",
@@ -361,7 +361,7 @@
 		},
 		"Collection": {
 			"headerTitle": "Travaux dans la collection",
-			"intro": "Ces travaux sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls ceux qui ont cette information seront affichés."
+			"intro": "Les travaux suivants sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls seront affichés les travaux qui ont cette information."
 		}
 	},
 	"imageViewer": {
@@ -529,7 +529,7 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Photographiez ce site d’héritage culturel et participez à la compétition de photographies <a href='https://www.wikilovesmonuments.org/'>Wiki aime les monuments 2020</a> !",
-		"WLM2020Button": "Télécharger l’image"
+		"WLM2020": "Photographiez ce site d’héritage culturel et participez à la compétition de photographies <a href='https://www.wikilovesmonuments.org/'>Wiki aime les monuments 2020</a> !",
+		"WLM2020Button": "Téléverser une image"
 	}
 }
