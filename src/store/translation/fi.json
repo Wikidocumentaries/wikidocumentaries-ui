@@ -12,7 +12,7 @@
 		"searchInputSearchOnly": "Etsi aihetta",
 		"showMore": "Näytä lisää kohteita",
 		"createNew": "Luo uusi kohde",
-		"intro": "Wikidocumentaries on wiki pienelle historialle – siellä voi koota historian jälkiä ja tehdä niistä tarinoita. Aloita etsimällä kiinnostaaa aihetta!",
+		"intro": "Wikidocumentaries on wiki pienelle historialle – siellä voi koota historian jälkiä ja tehdä niistä tarinoita. Aloita etsimällä kiinnostavaa aihetta!",
 		"titleDescription": "Mitä Wikidocumentaries on?",
 		"description": "Wikidocumentaries on kansalaishistorioitsijan työpaja. Se kokoaa tietoa aiheista, kuten ihmisistä, paikoista, rakennuksista ja tapahtumista. Aiheiden välillä voi navigoida minkä tahansa tallennetun linkin, kuten sukulaissuhteen, sijainnin, tekijätiedon tai työsuhteen kautta. Aiheen kuvitukseksi haetaan kuvia ja karttoja linkitetyistä museoista, arkistoista ja kirjastoista. Wikidocumentariesissa voit korjata olemassaolevia tietoja ja lisätä uusia aiheita. Voit liittää omat kuvasi ja muistosi aiheisiin ja käyttää koko aineistoa hyödyksi itse.",
 		"titleStatus": "Tila",
@@ -309,6 +309,9 @@
 		},
 		"Links": {
 			"headerTitle": "Linkit tästä artikkelista"
+		},
+		"Familytree": {
+			"headerTitle": "Sukupuu"
 		},
 		"Works": {
 			"headerTitle": "Teoksia",
