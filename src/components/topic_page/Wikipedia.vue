@@ -95,7 +95,7 @@ export default {
         this.language +
         "&to=" +
         this.$i18n.locale +
-        "&targettitle=&version=2";
+        "&targettitle=&version=2&campaign=Wikidocumentaries";
       return url;
     }
   },
