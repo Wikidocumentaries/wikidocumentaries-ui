@@ -137,7 +137,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Meqaleyi yewna zıwan de bıwanê",
-				"translateArticleText": "Enê meqaleyi bıçarne era zıwanê xo",
+				"translateArticleText": "Enê meqaley tadê zıwanê ho",
 				"otherLanguagestext": "Zıwanê bini"
 			}
 		},
@@ -295,7 +295,7 @@
 			"languageMenuTitle": "Zıwan weçine",
 			"languageMenuTooltip": "Zıwane xo weçine",
 			"myLanguagesItem": "Zıwanê mı",
-			"languageMenuTranslate": "Enê meqaleyi bıçarne era Zazaki"
+			"languageMenuTranslate": "Enê meqaley tadê Zazaki"
 		},
 		"languageMenu": {
 			"TranslateUI": "Êra zıwanê xo çarne"
