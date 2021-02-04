@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kingu"
+			"Abijeet Patro",
+			"Kingu",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
@@ -10,11 +12,21 @@
 	},
 	"MainPage": {
 		"topicPageName": "Emneside",
-		"mapPlaceMatchPageName": "Kombiner stedsnavn"
+		"mapPlaceMatchPageName": "Kombiner stedsnavn",
+		"mapSearchPageName": "Søk kort"
+	},
+	"WaitPage": {
+		"waitMessage": "Et øyeblikk... Søker informasjon i Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Velg historisk basekort",
+			"chooseMapHelpNote": "Tips: ctrl + klikke tillater at du velger fleste kort"
+		},
 		"TopicImages": {
-			"showImagesOnMapMenuText": "Vis alle bilder på kartet",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Vis alle bilder på kartet"
+			},
 			"imagesActionMenu": {
 				"menuTitle": "Handlinger",
 				"menuTooltip": "Handlinger",
@@ -32,13 +44,6 @@
 			"languageMenu": {
 				"otherLanguagestext": "Andre språk"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Folk tilknyttet emnet",
-			"menuTitle": "Vis",
-			"showBorn": "Født her",
-			"showDied": "Døde her",
-			"showBuried": "Gravlagt her"
 		}
 	},
 	"general": {

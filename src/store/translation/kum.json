@@ -9,12 +9,6 @@
 	},
 	"topic_page": {
 		"TopicImages": {
-			"imagesRemoveMenu": {
-				"menuTooltip": "Суратны тайдырмакъ",
-				"remInappropriate": {
-					"shortMenuTitle": "Бу къыйышсыз"
-				}
-			},
 			"facetMenu": {
 				"time": "заман",
 				"map": "харита",
@@ -26,16 +20,16 @@
 				"small": "гиччи",
 				"creator": "ясавчу",
 				"source": "эник"
+			},
+			"imagesRemoveMenu": {
+				"menuTooltip": "Суратны тайдырмакъ",
+				"remInappropriate": {
+					"shortMenuTitle": "Бу къыйышсыз"
+				}
 			}
 		},
 		"TopicTimeline": {
 			"headerTitle": "Заман гьыз"
-		},
-		"Gallery": {
-			"menuTitle": "Гёрсетмек",
-			"showDied": "Мунда гечинген",
-			"showBuried": "Мунда гёмюлген",
-			"showAll": "Тюм"
 		},
 		"Locations": {
 			"headerTitle": "Маканлар",
