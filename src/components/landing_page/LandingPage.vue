@@ -117,7 +117,7 @@
           <div class="subtitle sub">{{ $t('LandingPage.titleThanks') }}</div>
           <div
             class="status"
-          >Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen, Mari Viita-aho, Nuutti Kanerva, Jari Sorjonen</div>
+          >Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen, Mari Viita-aho, Nuutti Kanerva, Jari Sorjonen, Arun Ganesh, Albin Larsson</div>
         </div>
       </div>
       <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
