@@ -24,5 +24,10 @@ new Vue({
   store,
   i18n,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  watch: {
+    '$store.state.wikidocumentaries.title': (newValue) => {
+      document.title = newValue || "Wikidocumentaries";
+    }
+  },
 })
