@@ -1,7 +1,6 @@
 {
 	"@metadata": {
 		"authors": [
-			"Abijeet Patro",
 			"Gongsoonyee",
 			"Songhee",
 			"Ykhwong"
@@ -13,7 +12,9 @@
 		"searchInputSearchOnly": "주제 찾기",
 		"showMore": "항목 더 보기",
 		"createNew": "새 항목 만들기",
+		"titleDescription": "위키다큐멘터리는 무엇입니까?",
 		"titleStatus": "상태",
+		"status": "사이트가 데모 단계입니다. 수많은 중요 기능들은 아직 사용할 수 없으며 사이트는 예상대로 동작하지 않을 수 있습니다.",
 		"more": "더 읽어보기",
 		"titleTopics": "주제",
 		"titleMedia": "미디어",
@@ -47,27 +48,44 @@
 			"subtitleApproveText": "이 설명을 승인합니다"
 		},
 		"TopicImages": {
+			"headerTitle": "아카이브 이미지",
 			"actionsMenu": {
+				"menuTitle": "이미지 표시 또는 정렬",
+				"tooltip": "이미지 표시 또는 정렬",
 				"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
 				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
-				"arrangeByTime": "시간순으로 이미지 정렬"
+				"selectPortraits": "이 사람의 양질의 초상화 선택",
+				"arrangeByTime": "시간순으로 이미지 정렬",
+				"selectWorks": "작품 이미지 선택"
 			},
 			"facetMenu": {
+				"time": "시간",
+				"map": "지도",
+				"people": "사람",
+				"places": "장소",
+				"topics": "주제",
+				"imageSize": "이미지 크기",
+				"large": "큼",
+				"medium": "보통",
+				"small": "작음",
 				"type": "미디어 유형",
 				"creator": "만든이",
-				"platform": "플랫폼"
+				"platform": "플랫폼",
+				"clear": "선택 항목 지우기"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "동작",
 				"menuTooltip": "동작",
 				"doGeolocatingText": "위치 설정...",
-				"showImageText": "이미지 표시"
+				"showImageText": "이미지 표시",
+				"selectFeatured": "헤더 이미지를 선택합니다"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "이미지 제거 이유",
 				"shortMenuTitle": "이미지 제거",
 				"menuTooltip": "이미지 제거",
 				"remDepicted": {
+					"shortMenuTitle": "다른 주제를 설명합니다",
 					"search": "주제 검색",
 					"browse": "관련 주제 찾아보기"
 				},
@@ -76,13 +94,15 @@
 				},
 				"remInappropriate": {
 					"menuTitle": "부적절한 이유:",
-					"shortMenuTitle": "부적절합니다"
+					"shortMenuTitle": "부적절합니다",
+					"copyvio": "저작권을 침해합니다"
 				}
 			},
 			"imagesViewExternal": "원래 이미지 보기",
 			"imagesViewOnMap": "맵에서 이미지 보기"
 		},
 		"TopicMap": {
+			"headerTitle": "지도 상의 주제",
 			"hideImagesMenuText": "이미지 숨기기",
 			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
 			"showNearbyPlacesMenuText": "주변 장소 표시",
@@ -117,6 +137,8 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "문서",
+			"missingArticle": "당신의 언어로 이 주제에 관한 문서가 없습니다. 위 언어 메뉴를 선택하여 사용 가능한 다른 언어로 문서를 읽을 수 있습니다. 플러스 아이콘을 클릭하여 당신의 언어로 문서를 만들 수 있습니다.",
+			"missingArticleMissing": "당신의 언어로 이 주제에 관한 문서가 없습니다.",
 			"extLink": {
 				"linkTitleWP": "위키백과에서 읽기 또는 편집"
 			},
@@ -138,6 +160,7 @@
 				"optionClear": "정렬 지우기"
 			},
 			"facetMenu": {
+				"optionType": "유형",
 				"optionColl": "만든이",
 				"optionCity": "위치"
 			},
@@ -156,6 +179,7 @@
 				"optionClear": "정렬 지우기"
 			},
 			"facetMenu": {
+				"optionType": "유형",
 				"optionColl": "만든이"
 			},
 			"displayMenu": {
@@ -169,7 +193,7 @@
 			"headerTitle": "지도 상의 위치"
 		},
 		"Partof": {
-			"headerTitle": "다음의 일부:"
+			"headerTitle": "위치"
 		},
 		"Similar": {
 			"headerTitle": "비슷한 주제"
@@ -177,16 +201,21 @@
 		"Effects": {
 			"headerTitle": "효과"
 		},
+		"Location": {
+			"headerTitle": "위치"
+		},
 		"Works": {
 			"sortMenuTitle": "정렬",
 			"sortMenuOptionTime": "시간순",
 			"sortMenuOptionAlpha": "알파벳순",
 			"sortMenuOptionDist": "거리순",
 			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuOptionType": "유형",
 			"facetMenuOptionCity": "위치",
 			"displayMenuTooltip": "디스플레이 선택",
 			"displayMenuOptionGallery": "갤러리",
 			"displayMenuOptionList": "목록",
+			"displayMenuOptionMap": "지도",
 			"showAll": "모두"
 		},
 		"People": {
@@ -195,7 +224,9 @@
 			"sortMenuOptionName": "이름순",
 			"sortMenuOptionFirst": "이름순",
 			"sortMenuOptionLast": "성(이름)순",
-			"facetMenuOptionCountry": "국가"
+			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuOptionCountry": "국가",
+			"facetMenuOptionCity": "성별"
 		}
 	},
 	"imageViewer": {
@@ -238,7 +269,7 @@
 			"measurements": "측정",
 			"copyright": "저작권",
 			"license": "저작권 라이선스",
-			"work": "작품",
+			"work": "이미지에 표현된 작품",
 			"photograph": "사진",
 			"image": "이미지",
 			"photographer": "촬영자",
@@ -261,6 +292,12 @@
 			"counterclockwise": "시계 반대방향",
 			"horizontal": "수평",
 			"vertical": "수직"
+		},
+		"closeViewer": "뷰어 닫기"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "장소 이름 합치기"
 		}
 	},
 	"map_search_page": {
@@ -289,14 +326,17 @@
 		"displayMenu": {
 			"title": "표시 이름",
 			"tooltip": "디스플레이 선택",
-			"optionGallery": "갤러리"
+			"optionGallery": "갤러리",
+			"optionList": "목록"
 		}
 	},
 	"general": {
+		"wikidocumentaries": "위키다큐멘터리",
 		"ok": "확인",
 		"cancel": "취소",
 		"helpText": "도움말",
 		"expand": "이 문단 펼치기",
+		"collapse": "이 문단 접기",
 		"menus": {
 			"actionMenuTitle": "동작",
 			"actionMenuTooltip": "동작",
