@@ -215,8 +215,12 @@
 			"addDescription": "বিবরণ যোগ করুন",
 			"creator": "নির্মাতা",
 			"creatorUnknown": "অজানা",
+			"dateCreated": "তৈরির তারিখ",
+			"addDateCreated": "তৈরির তারিখ যোগ করুন",
+			"removeDateCreated": "তৈরির তারিখ অপসারণ করুন",
 			"publisher": "প্রকাশক",
 			"addPublisher": "প্রকাশক যোগ করুন",
+			"removePublisher": "প্রকাশক অপসারণ করুন",
 			"format": "বিন্যাস",
 			"genre": "ধরণ",
 			"location": "অবস্থান",
@@ -242,7 +246,8 @@
 			"rotateImage": "ছবি ঘোরান",
 			"clockwise": "ঘড়ির কাঁটার দিকে",
 			"counterclockwise": "ঘড়ির কাঁটার বিপরীত দিকে",
-			"horizontal": "অনুভূমিক"
+			"horizontal": "অনুভূমিক",
+			"vertical": "উল্লম্ব"
 		}
 	},
 	"menus": {
