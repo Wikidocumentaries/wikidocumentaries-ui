@@ -106,7 +106,7 @@ export default {
     sparql = `
 SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?inLabel_; separator=", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator=", ") as ?outLabel) (SAMPLE(?image) AS ?image) WHERE {
   {
-    ?aff wdt:P414|wdt:P991|wdt:P112|wdt:P169|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
+    ?aff wdt:P414|wdt:P1830|wdt:P991|wdt:P112|wdt:P169|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
     ?aff ?rel_out wd:Q29021 .
     ?out wikibase:directClaim ?rel_out .
     OPTIONAL { ?out rdfs:label ?outLabel_ .
