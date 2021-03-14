@@ -457,7 +457,8 @@ import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
 
 const MENU_ACTIONS = {
-  SELECT_HEADER: 0
+  DOWNLOAD: 0
+  //SELECT_HEADER: 1
   // GEOLOCATE: 1,
   // ADD_TO_COLLECTION: 0,
 };
@@ -477,13 +478,17 @@ export default {
       // showLinks: true,
       toolbarActionMenuItems: [
         {
+          id: MENU_ACTIONS.DOWNLOAD,
+          text: "topic_page.TopicImages.imagesActionMenu.downloadImage"
+        }/* ,
+        {
           id: MENU_ACTIONS.SELECT_HEADER,
           text: "topic_page.TopicImages.imagesActionMenu.selectFeatured"
         },
         {
           id: MENU_ACTIONS.GEOLOCATE,
           text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
-        }
+        } */
       ]
     };
   },
@@ -564,7 +569,14 @@ export default {
         // case MENU_ACTIONS.GEOLOCATE:
         //     ;
         //     break;
-        case MENU_ACTIONS.SELECT_HEADER:
+        case MENU_ACTIONS.DOWNLOAD:
+          var downloadUrl = element.imageURL;
+          var downloading = browser.downloads.download({
+            url : downloadUrl
+/*   filename : 'image.png',
+  conflictAction : 'uniquify' */
+  });
+          break;
       }
     },
     createMap() {
