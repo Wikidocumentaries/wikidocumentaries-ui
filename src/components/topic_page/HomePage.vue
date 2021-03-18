@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <Banner id="banner"></Banner>
+    <!-- <Banner id="banner"></Banner> -->
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
@@ -19,17 +19,18 @@
     </div>
     <Kartta id="kartta"></Kartta>
     <Location id="location"></Location>
+    <Heritage id="heritage"></Heritage>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
 <!--     <Partof id="partof"></Partof> -->
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
+    <People id="people"></People>
     <Effects id="effects"></Effects>
     <Works id="works"></Works>
     <Awards id="awards"></Awards>
     <Depicts id="depicts"></Depicts>
-    <People id="people"></People>
     <Things id="things"></Things>
     <Affiliations id="affiliations"></Affiliations>
     <Depicted id="depicted"></Depicted>
@@ -53,6 +54,7 @@ import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
 import Footer from "@/components/Footer";
+import Heritage from "@/components/topic_page/Heritage";
 import Instances from "@/components/topic_page/Instances";
 import Location from "@/components/topic_page/Location";
 import Locations from "@/components/topic_page/Locations";
@@ -92,6 +94,7 @@ export default {
     Footer,
 /*     TopicTimeline, */
 /*     EventList, */
+    Heritage,
     Instances,
     Location,
     Locations,
