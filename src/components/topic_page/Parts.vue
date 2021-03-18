@@ -26,7 +26,7 @@
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
             <div class="gallery-title">{{ item.item.label }}</div>
-            <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
+            <div class="thumb-credit">{{ item.item.description }}</div>
           </div>
           <!--div class="thumb-image-header"-->
           <div>
@@ -43,7 +43,7 @@
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
             <b>{{ item.item.label }}</b>
-            {{ item.typeLabel }} {{ item.time}}
+            {{ item.item.description}}
           </a>
         </div>
       </div>
@@ -112,28 +112,17 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(?address) as ?address) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
+SELECT ?item ?itemLabel ?itemDescription
+WHERE {
   { 
     { wd:Q407542 wdt:P527|wdt:P150 ?item. }
     UNION
     { ?item wdt:P361 wd:Q407542 . }
   }
-  ?item rdfs:label ?itemLabel .
-  FILTER(LANG(?itemLabel)="fi")
-  OPTIONAL { ?item wdt:P31 ?type .
-            ?type rdfs:label ?typeLabel_ .
-              FILTER(LANG(?typeLabel_)="fi") }
-  OPTIONAL { ?item wdt:P18 ?image. }
-  OPTIONAL { ?item wdt:P6375 ?address. }
-  OPTIONAL { ?item wdt:P571 ?date.
-           BIND(STR(YEAR(?date)) AS ?dated)}
-  OPTIONAL { ?item wdt:P170|wdt:P84 ?creator.
-           ?creator rdfs:label ?creatorLabel_ .
-           FILTER(LANG(?creatorLabel_)="fi")}
   MINUS { ?item wdt:P31 wd:Q5 .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
-GROUP BY ?item ?itemLabel
+GROUP BY ?item ?itemLabel ?itemDescription
 LIMIT 1000
         `.replace(/Q407542/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);;
