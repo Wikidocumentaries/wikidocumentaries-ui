@@ -1,5 +1,7 @@
 export {default as ar} from './translation/ar.json';
 export {default as bn} from './translation/bn.json';
+export {default as br} from './translation/br.json';
+export {default as ca} from './translation/ca.json';
 export {default as da} from './translation/da.json';
 export {default as de} from './translation/de.json';
 export {default as diq} from './translation/diq.json';
