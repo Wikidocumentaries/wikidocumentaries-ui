@@ -11,12 +11,13 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "http://localhost:3000/"
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+const BASE_URL = "http://localhost:3000/"
+//const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
     description: 'Muistomerkki Helsingissä',
+    aliases: ["majuri Fredrik Granatenhjelmin (1708-84) hauta", "Vapaamuurarin muistokivi"],
     headerImageURL: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png',
     wikipedia: {
         excerptHTML: '<p><strong>Vapaamuurarin hauta</strong> on <a href="https://fi.wikipedia.org/wiki/Helsinki" title="Helsinki">Helsingin</a> <a href="https://fi.wikipedia.org/wiki/Kaisaniemen_puisto" title="Kaisaniemen puisto">Kaisaniemen puistossa</a> sijaitseva yksinäinen nimetön hautakivi, joka on peräisin 1700-luvun lopulta. Hauta sijaitsee nykyisen Kaisaniemen urheilukentän koilliskulman tuntumassa <a href="https://fi.wikipedia.org/wiki/Helsingin_yliopiston_kasvitieteellinen_puutarha" title="Helsingin yliopiston kasvitieteellinen puutarha">Kasvitieteellisen puutarhan</a> ympärysaidan vieressä.</p><p>Hautakivessä ei ole vainajan nimeä vaan salaperäinen kirjoitus: &quot;Lika godt / om verlden vet hvem här hvilar / alt nog / Gud käńer hvad Han gjort / och / Uſlingen välſignar / HANS minne&quot;. (&quot;Yhdentekevää, tietääkö maailma, kuka tässä lepää. Joka tapauksessa Jumala tuntee hänen tekonsa ja kurja siunaa hänen muistoaan.&quot;)<a href="https://fi.wikipedia.org/wiki/Vapaamuurarin_hauta#cite_note-1">[1]</a> Vapaamuurarin hauta on Helsingin vanhin julkinen muistomerkki.</p><p>Haudassa lepää majuri <a href="https://fi.wikipedia.org/wiki/Fredrik_Granatenhjelm" title="Fredrik Granatenhjelm">Fredrik Granatenhjelm</a> (1708–1784), joka oli toivonut saada tulla haudatuksi juuri tälle paikalle, koska siinä hänen oli tapana levätä päiväkävelyllään silloisessa Edbomin puutarhassa. Granatenhjelmin on oletettu kuuluneen <a href="https://fi.wikipedia.org/wiki/Vapaamuurarit" title="Vapaamuurarit">vapaamuurareihin</a> ja osallistuneen järjestön hyväntekeväisyystoimintaan,<a href="https://fi.wikipedia.org/wiki/Vapaamuurarin_hauta#cite_note-2">[2]</a> mutta mahdollisesti hän ei eläessään kuulunut mihinkään seuraan, vaikka kuoltuaan saikin arvostusta monessa. <a href="https://fi.wikipedia.org/wiki/Valhalla-seura" title="Valhalla-seura">Valhalla-seuran</a> jäsenet kantoivat hänen arkkunsa hautaan ja olivat olleet aloitteentekijöinä, että kuningas <a href="https://fi.wikipedia.org/wiki/Kustaa_III" title="Kustaa III">Kustaa III</a> oli Parolan joukkojentarkastuksensa yhteydessä antanut erivapauden haudata Granatenhjelm hautausmaan ulkopuolelle; ja myös Valhalla-seura postuumisti korotti Granatenhjelmin kunniajäsenekseen. Muistomerkin pystytti eversti Lars <a href="https://fi.wikipedia.org/wiki/J%C3%A4gerhorn_af_Storby" title="Jägerhorn af Storby">Jägerhorn af Storby</a>, kun toiveet patsaan pystyttämisestä olivat hiipuneet. Hautaa ympäröi takorautainen aita, jossa on vapaamuurarien ja Granatenhjelmin aselajin, <a href="https://fi.wikipedia.org/wiki/Tykist%C3%B6" title="Tykistö">tykistön</a>, tunnukset.</p>',
@@ -791,6 +792,7 @@ export default new Vuex.Store({
             state.wikidocumentaries = {
                 title: null,
                 description: null,
+                aliases: null,
                 headerImageURL: null,
                 wikipedia: {
                     excerptHTML: null,
@@ -857,6 +859,9 @@ export default new Vuex.Store({
         },
         setWikidocumentariesTopicDescription(state, description) {
             state.wikidocumentaries.description = description;
+        },
+        setWikidocumentariesTopicAliases(state, aliases) {
+            state.wikidocumentaries.aliases = aliases;
         },
         setWikidata(state, wikidata) {
             state.wikidocumentaries.wikidata = wikidata;
@@ -996,6 +1001,7 @@ export default new Vuex.Store({
                             context.commit('setWikidata', response.data.wikidata);
                             context.commit('setWikidocumentariesTopicTitle', response.data.wikidata.title);
                             context.commit('setWikidocumentariesTopicDescription', response.data.wikidata.description);
+                            context.commit('setWikidocumentariesTopicAliases', response.data.wikidata.aliases);
                             //console.log(response.data.wikidata.statements);
                             var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
                             context.commit('setTopicStartYear', startYear);
@@ -1098,7 +1104,7 @@ export default new Vuex.Store({
                         }
                     }
                     requestConfig.params.topic = '"' + Array.from(terms).join('" OR "') + '"';
-                    // console.log('pööh', requestConfig);
+                    //console.log('pööh', requestConfig);
                 }
 
                 // pass on coordinates from wikidata or wikipedia, if any

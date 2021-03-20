@@ -106,7 +106,7 @@ export default {
     sparql = `
 SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?inLabel_; separator=", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator=", ") as ?outLabel) (SAMPLE(?image) AS ?image) WHERE {
   {
-    ?aff wdt:P414|wdt:P1830|wdt:P991|wdt:P112|wdt:P169|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
+    ?aff wdt:P414|wdt:P7888|wdt:P1366|wdt:P1398|wdt:P155|wdt:P156|wdt:P1365|wdt:P1830|wdt:P991|wdt:P112|wdt:P169|wdt:P466|wdt:P710|wdt:P488|wdt:P463|wdt:P6|wdt:P5769 wd:Q29021 .
     ?aff ?rel_out wd:Q29021 .
     ?out wikibase:directClaim ?rel_out .
     OPTIONAL { ?out rdfs:label ?outLabel_ .
@@ -114,7 +114,7 @@ SELECT ?aff ?affLabel (GROUP_CONCAT(DISTINCT ?inLabel_; separator=", ") as ?inLa
     }
   UNION
   {
-    wd:Q29021 wdt:P414|wdt:P127|wdt:P6379|wdt:P84|wdt:P466|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
+    wd:Q29021 wdt:P414|wdt:P7888|wdt:P1366|wdt:P1398|wdt:P155|wdt:P156|wdt:P1365|wdt:P127|wdt:P6379|wdt:P84|wdt:P466|wdt:P1830|wdt:P1344|wdt:P108|wdt:P463|wdt:P69|wdt:P102|wdt:P241|wdt:P1532|wdt:P118|wdt:P54|wdt:P647|wdt:P1344|wdt:P607 ?aff .
     wd:Q29021 ?rel_in ?aff .
     ?in wikibase:directClaim ?rel_in .
     OPTIONAL { ?in rdfs:label ?inLabel_ .
