@@ -122,7 +122,7 @@ SELECT ?depicted ?depictedLabel ?depictedDescription (SAMPLE(?image) AS ?image) 
 		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
-GROUP BY ?depicted ?depictedLabel ?time
+GROUP BY ?depicted ?depictedLabel ?depictedDescription ?time
 LIMIT 1000
         `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);
