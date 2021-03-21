@@ -1080,32 +1080,46 @@ export default new Vuex.Store({
                         switch (statements[i].id) {
                             case 'P373':
                                 requestConfig.params.commons_category = statements[i].values[0].value;
-                                case 'P1705': //nimi alkuperäiskielellä
-                                case 'P1559': //name in native language
-                                case 'P2561': //name
-                                case 'P1477': //birth name
-                                case 'P2562': //married name
-                                case 'P742': //pseudonym
-                                case 'P1448': //official name
-                                case 'P1449': //nickname
-                                case 'P1635': //religious name
-                                case 'P1782': //courtesy name
-                                case 'P1785': //temple name
-                                case 'P1786': //posthumous name
-                                case 'P1787': //art-name
-                                case 'P1810': //named as
-                                case 'P1813': //short name
-                                case 'P4970': //alternate names
-                                case 'P6375': //street address
-                            // case 'P5056': //henkilön patronyymi tai matronyymi
-                                for (let statement of statements[i].values) {
-                                    terms.add(statement.value);
-                                }
-                                break;
+                            case 'P1477': //birth name
+                            case 'P1559': //name in native language
+                            case 'P1635': //religious name
+                            case 'P1680': //subtitle
+                            case 'P1705': //native label
+                            case 'P1782': //courtesy name
+                            case 'P1785': //temple name
+                            case 'P1786': //posthumous name
+                            case 'P1787': //art-name
+                            case 'P1810': //named as
+                            case 'P1813': //short name
+                            case 'P1814': //name in kana
+                            case 'P1843': //taxon common name
+                            case 'P2561': //name
+                            case 'P2562': //married name
+                            case 'P4633': //name of the character role
+                            case 'P4970': //alternate names
+                            case 'P561': //NATO reporting name
+                            case 'P6375': //street address
+                            case 'P742': //pseudonym
+                            case 'P8927': //kunya
+                            for (let statement of statements[i].values) {
+                                terms.add(statement.value);
+                            }
+                            break;
                         }
                     }
+
+                    if (params.wiki.wikidata.aliases != null) {
+                        var entries = params.wiki.wikidata.aliases;
+                        for (let entry in entries) {
+                            for (var i = 0; i < entries[entry].length; i++) {
+                                //console.log(entries[entry][i].value);
+                                terms.add(entries[entry][i].value);
+                            }
+                        }
+                    }
+
                     requestConfig.params.topic = '"' + Array.from(terms).join('" OR "') + '"';
-                    //console.log('pööh', requestConfig);
+                    console.log('requestConfig@store: ', requestConfig);
                 }
 
                 // pass on coordinates from wikidata or wikipedia, if any
