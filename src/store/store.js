@@ -17,6 +17,7 @@ const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
     description: 'Muistomerkki Helsingissä',
+    labels: ['suomi', 'englanti'],
     aliases: ["majuri Fredrik Granatenhjelmin (1708-84) hauta", "Vapaamuurarin muistokivi"],
     headerImageURL: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png',
     wikipedia: {
@@ -792,6 +793,7 @@ export default new Vuex.Store({
             state.wikidocumentaries = {
                 title: null,
                 description: null,
+                labels: null,
                 aliases: null,
                 headerImageURL: null,
                 wikipedia: {
@@ -859,6 +861,9 @@ export default new Vuex.Store({
         },
         setWikidocumentariesTopicDescription(state, description) {
             state.wikidocumentaries.description = description;
+        },
+        setWikidocumentariesTopicLabels(state, labels) {
+            state.wikidocumentaries.labels = labels;
         },
         setWikidocumentariesTopicAliases(state, aliases) {
             state.wikidocumentaries.aliases = aliases;
@@ -1001,6 +1006,7 @@ export default new Vuex.Store({
                             context.commit('setWikidata', response.data.wikidata);
                             context.commit('setWikidocumentariesTopicTitle', response.data.wikidata.title);
                             context.commit('setWikidocumentariesTopicDescription', response.data.wikidata.description);
+                            context.commit('setWikidocumentariesTopicLabels', response.data.wikidata.labels);
                             context.commit('setWikidocumentariesTopicAliases', response.data.wikidata.aliases);
                             //console.log(response.data.wikidata.statements);
                             var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
@@ -1108,16 +1114,35 @@ export default new Vuex.Store({
                         }
                     }
 
-                    if (params.wiki.wikidata.aliases != null) {
-                        var entries = params.wiki.wikidata.aliases;
-                        for (let entry in entries) {
-                            for (var i = 0; i < entries[entry].length; i++) {
+                    if (params.wiki.wikidata.labels != null) {
+                        var labels = params.wiki.wikidata.labels;
+                        for (let label in labels) {
+                            //for (var i = 0; i < labels[label].length; i++) {
                                 //console.log(entries[entry][i].value);
-                                terms.add(entries[entry][i].value);
+                                terms.add(labels[label].value);
+                            //}
+                        }
+                    }
+
+                    if (params.wiki.wikidata.aliases != null) {
+                        var aliases = params.wiki.wikidata.aliases;
+                        for (let alias in aliases) {
+                            for (var i = 0; i < aliases[alias].length; i++) {
+                                //console.log(entries[entry][i].value);
+                                terms.add(aliases[alias][i].value);
                             }
                         }
                     }
 
+/*                     if (params.wiki.wikidata.instance_of.id == 'Q5') {
+                        const surnames = new Set();
+                        const firstnames = new Set();
+                        var statements = params.wiki.wikidata.statements;
+                        for (var i = 0; i < statements.length; i++) {
+                            switch (statements[i].id) {
+                                case 'P373':
+                    }
+ */
                     requestConfig.params.topic = '"' + Array.from(terms).join('" OR "') + '"';
                     console.log('requestConfig@store: ', requestConfig);
                 }
