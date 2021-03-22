@@ -77,11 +77,11 @@ export default {
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
-          text: "menus.sortMenuOptionAlpha"
+          text: "menus.sortMenu.optionAlpha"
         },
         {
           id: SORT_ACTIONS.BY_TIME,
-          text: "menus.sortMenuOptionTime"
+          text: "menus.sortMenu.optionTime"
         },
         {
           id: SORT_ACTIONS.SORT_REVERSE,
@@ -89,7 +89,7 @@ export default {
         },
         {
           id: SORT_ACTIONS.SORT_CLEAR,
-          text: "menus.sortMenuOptionClear"
+          text: "menus.sortMenu.optionClear"
         }
       ]
     };
