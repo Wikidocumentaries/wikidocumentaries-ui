@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Peterleth",
 			"Saederup92",
 			"Tinamalmgren"
 		]
@@ -11,19 +12,28 @@
 		"searchInputSearchOnly": "Find et emne",
 		"showMore": "Vis flere emner",
 		"createNew": "Opret et nyt emne",
-		"intro": "Wikidocumentaries er en wiki til lille historie - et sted til at trække små spor af historien og lave dem til historier. Begynd med at søge efter et interessant emne!",
+		"intro": "Wikidocumentaries er en wiki til små historier - et sted hvor historiske spor samles til fortællinger. Begynd med at søge efter et interessant emne!",
 		"titleDescription": "Hvad er Wikidocumentaries?",
+		"description": "Wikidocumentaries er et makerspace for alle mennesker. Det kombinerer informationer om emner - mennesker, steder, bygninger, begivenheder etc. fra en lang række kilder. Du kan navigere mellem emnerne ved at følge fortællingens links. Et emne kan desuden være illustreret med billeder og kort fra tilknyttede museer, arkiver og biblioteker. I Wikidocumentaries vil det blive muligt at redigere de eksisterende oplysninger, oprette nye emner, tilføje dine egne billeder og minder, samt bruge alle materialer til dine egne formål.",
 		"titleStatus": "Status",
-		"moreBelow": "Læs mere forneden",
+		"status": "Denne side er i sin demo-fase. Der er stadig mange vigtige funktioner, der endnu ikke er tilgængelig og der kan være situationer, hvor siden ikke præsterer som forventet.",
+		"moreBelow": "Læs mere herunder",
 		"more": "Læs mere",
 		"moreLink": "Læs mere på",
 		"titleTopics": "Emner",
+		"statusTopics": "Emner hentes fra Wikidata. Nye emner vil muligvis senere blive oprettet i Wikidocumentaries i stedet, hvis indholdet ligger udenfor Wikidatas område. Det vil stadig være tilsvarende muligt at beskrive emnet med Wikidata. Aktuelle artikler er fra Wikipedia, hvorimod artikler senere kan oprettes lokalt til emner, der kun findes i Wikidocumentaries.",
 		"titleMedia": "Medier",
+		"statusMedia": "Medier indlæses fra et stadig større antal mediesamlinger, der alle indeholder mediefiler under åbne licenser. Vi arbejder på at finde billeder mere præcist og blive bedre til at vise flere og bedre metadata fra kilderne. Nye mediekilder er velkommen!",
 		"titleTools": "Værktøjer",
+		"statusTools": "Wikidocumentaries har værktøjer til at arbejde med indholdet. Artikler kan allerede blive oversat mellem de enkelte sprog med Content Translation værktøjet. Vi forbereder nøgleord med Wikidata og et geolokeringsværktøj til billedlokationer. Nye, sjove og nyttige værtøjer kan blive lavet eller integreret.",
 		"titleLanguages": "Sprog",
+		"statusLanguages": "Wikidocumentaries kan benyttes på alle tilgængelige sprog i Wikidata. Dette er en stærk mulighed for også mindre sprog. Oversættelserne udføres i TranslateWiki.",
 		"titleTechnology": "Teknologi",
 		"titleCreators": "Skabere",
+		"titleTeam": "Team",
+		"titleThanks": "Særlig tak til",
 		"titlePartners": "Partnere",
+		"titleFunding": "Med venlig hjælp fra",
 		"titleBy": "Projekt af",
 		"getInvolved": "Deltag!",
 		"titleTranslate": "Oversæt",
