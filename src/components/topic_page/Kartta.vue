@@ -15,6 +15,7 @@ import { MAPBOX_AT } from '@/common/tokens'
 import axios from 'axios'
 import wdk from 'wikidata-sdk'
 import bbox from '@turf/bbox'
+import { geometryCollection, geometry } from '@turf/helpers'
 
 export default {
   name: 'Kartta',
@@ -52,12 +53,18 @@ export default {
 
     kartta.on('load', function () {
       // Request for Wikidata linked shape from OpenStreetMap data
-      fetch('https://maps.wikimedia.org/geoshape?getgeojson=1&ids=' + wikidataId)
+      fetch(`https://osm.wikidata.link/tagged/api/item/${wikidataId}?geojson=1`)
         .then(response => response.json())
         .then(data => {
+          // Gather the geometries of the OSM elements into a collection
+          const geojson = {
+            type: "GeometryCollection",
+            geometries: data.osm.map((element) => element.geojson)
+          }
+
           kartta.addSource('osmshape', {
             type: 'geojson',
-            data: data
+            data: geojson
           })
 
           // Add layer for osm shape outline and fill below any label layers
@@ -93,11 +100,13 @@ export default {
           }, 'waterway-label')
 
           // Fit map to shape if available
-          if (data.features.length) {
-            kartta.fitBounds(bbox(data),
-              {
-                padding: 20
-              })
+          if (geojson.geometries.length) {
+            const wikidataPoint = geometry('Point', [lon, lat])
+            const bounds = bbox(geometryCollection([geojson, wikidataPoint]))
+            kartta.fitBounds(bounds, {
+              padding: 20,
+              maxZoom: 19
+            })
           }
         })
     })
