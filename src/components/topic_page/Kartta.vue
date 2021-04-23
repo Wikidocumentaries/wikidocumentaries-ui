@@ -67,12 +67,14 @@ export default {
             data: geojson
           })
 
-          // Add layer for osm shape outline and fill below any label layers
+          // Draw outlines of osm geometries below any label layers
           kartta.addLayer({
             'id': 'osmlayer-line',
             'type': 'line',
             'source': 'osmshape',
-            'layout': {},
+            'layout': {
+              'line-cap': 'round'
+            },
             'paint': {
               'line-color': '#ce492a',
               'line-width': [
@@ -88,6 +90,7 @@ export default {
             }
           }, 'waterway-label')
 
+          // Draw fills of polygon osm geometries below any label layers
           kartta.addLayer({
             'id': 'osmlayer-fill',
             'type': 'fill',
@@ -96,7 +99,8 @@ export default {
             'paint': {
               'fill-color': '#ffd76e',
               'fill-opacity': 0.2
-            }
+            },
+            'filter': ["in", "Polygon", ["geometry-type"]],
           }, 'waterway-label')
 
           // Fit map to shape if available
