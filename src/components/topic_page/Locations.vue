@@ -197,7 +197,9 @@ LIMIT 1000
               wikidataPoint = geometry('Point', koord);
               points.push(wikidataPoint);
               popupHtml =
-              '<a href="#"><div class="popup-body">' +
+              '<a href="' + 
+              item.location.value +
+              '"><div class="popup-body">' +
                 //(item.image
                 //  ? '<img src="' + getImageLink(value) + '" class="popup-image">'
                 //  : '') +
