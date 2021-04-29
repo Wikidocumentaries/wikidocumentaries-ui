@@ -53,6 +53,8 @@ import wdk from "wikidata-sdk";
 import DisplayMenu from "@/components/menu/ComponentViewModeMenu";
 import { VIEW_MODES } from "@/components/menu/ComponentViewModeMenu";
 import mapboxgl from "mapbox-gl";
+import bbox from '@turf/bbox';
+import { geometryCollection, geometry } from '@turf/helpers'
 
 const SORT_ACTIONS = {
   BY_LABEL: 0,
@@ -184,15 +186,20 @@ LIMIT 1000
             zoom: 12,
           });
 
+          let points = new Array();
+
           this.results.forEach(function (item) {
             let popupHtml = "";
             let koord;
+            let wikidataPoint;
             if (item.coordinates) {
               koord = item.coordinates.split("(")[1].split(")")[0].split(" ");
+              wikidataPoint = geometry('Point', koord);
+              points.push(wikidataPoint);
               popupHtml =
               '<a href="#"><div class="popup-body">' +
                 //(item.image
-                //  ? '<img src="' + item.image + '" class="popup-image">'
+                //  ? '<img src="' + getImageLink(value) + '" class="popup-image">'
                 //  : '') +
                 '<div class="popup-txt"><div class="thumb-credit over">' +
                 item.creatorLabel +
@@ -203,12 +210,6 @@ LIMIT 1000
                 (item.typeLabel ? item.typeLabel : "") +
                 (item.time ? " " + item.time : "") +
                 "</div></div></div></a>";
-              console.log(
-                "Setting a marker to: ",
-                koord,
-                "with html: ",
-                popupHtml
-              );
               var marker = new mapboxgl.Marker()
                 .setLngLat(koord)
                 .setPopup(
@@ -218,6 +219,11 @@ LIMIT 1000
                 )
                 .addTo(myMap);
             }
+          });
+          const bounds = bbox(geometryCollection(points))
+          myMap.fitBounds(bounds, {
+            padding: 50,
+            maxZoom: 19
           });
         });
       } else {
