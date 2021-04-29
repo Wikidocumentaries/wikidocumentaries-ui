@@ -63,7 +63,7 @@ const SORT_ACTIONS = {
   SORT_CLEAR: 3,
 };
 
-const MAX_ITEMS_TO_VIEW = 200;
+const MAX_ITEMS_TO_VIEW = 1000;
 const DEFAULT_SORT = ["location.label"];
 
 let fullResults, currentSort, currentDisplay, myMap;
@@ -200,9 +200,9 @@ LIMIT 1000
               '<a href="' + 
               item.location.value +
               '"><div class="popup-body">' +
-                //(item.image
-                //  ? '<img src="' + getImageLink(value) + '" class="popup-image">'
-                //  : '') +
+/*                 (item.image
+                  ? '<img src="' + this.$getImageLink(item.image) + '" class="popup-image">'
+                  : '') + */
                 '<div class="popup-txt"><div class="thumb-credit over">' +
                 item.creatorLabel +
                 '</div><div class="gallery-title">' +
@@ -212,6 +212,7 @@ LIMIT 1000
                 (item.typeLabel ? item.typeLabel : "") +
                 (item.time ? " " + item.time : "") +
                 "</div></div></div></a>";
+              console.log(item);
               var marker = new mapboxgl.Marker()
                 .setLngLat(koord)
                 .setPopup(
