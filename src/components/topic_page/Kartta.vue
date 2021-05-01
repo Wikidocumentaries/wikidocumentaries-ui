@@ -3,6 +3,12 @@
   <div class="gallery-component">
     <div class="toolbar">
       <h1 class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</h1>
+      <HeaderLink
+        class="toolbar-item"
+        :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')"
+        :link="osmURL"
+        v-show="osmElements != undefined"
+      ></HeaderLink>
     </div>
       <div id="mapContainer" class="basemap"></div>
   </div>
@@ -10,6 +16,7 @@
 </template>
 
 <script>
+import HeaderLink from "@/components/HeaderLink";
 import mapboxgl from 'mapbox-gl'
 import { MAPBOX_AT } from '@/common/tokens'
 import axios from 'axios'
@@ -20,15 +27,19 @@ import { geometryCollection, geometry } from '@turf/helpers'
 export default {
   name: 'Kartta',
   components: {
+    HeaderLink
   },
   data () {
     return {
-      placeholder: true
+      osmElements: [],
+      lon: this.$store.state.wikidocumentaries.wikidata.geo.lon,
+      lat: this.$store.state.wikidocumentaries.wikidata.geo.lat,
+      zoom: 12
     }
   },
   mounted () {
-    const lat = this.$store.state.wikidocumentaries.wikidata.geo.lat
-    const lon = this.$store.state.wikidocumentaries.wikidata.geo.lon
+    const lat = this.lat
+    const lon = this.lon
     const wikidataId = this.$store.state.wikidocumentaries.wikidataId
     const statements = this.$store.state.wikidocumentaries.wikidata.statements
 
@@ -56,6 +67,9 @@ export default {
       fetch(`https://osm.wikidata.link/tagged/api/item/${wikidataId}?geojson=1`)
         .then(response => response.json())
         .then(data => {
+          this.osmElements = data.osm;
+          console.log(this.osmElements);
+
           // Gather the geometries of the OSM elements into a collection
           const geojson = {
             type: "GeometryCollection",
@@ -108,9 +122,12 @@ export default {
             const wikidataPoint = geometry('Point', [lon, lat])
             const bounds = bbox(geometryCollection([geojson, wikidataPoint]))
             kartta.fitBounds(bounds, {
-              padding: 20,
+              padding: {top: 50, bottom:20, left: 50, right: 50},
               maxZoom: 19
             })
+            this.lon = kartta.getCenter().lng.toFixed(4);
+            this.lat = kartta.getCenter().lat.toFixed(4);
+            this.zoom = kartta.getZoom().toFixed(2);
           }
         })
     })
@@ -133,6 +150,17 @@ export default {
   computed: {
     wikidocumentaries () {
       return this.$store.state.wikidocumentaries
+    },
+    osmURL () {
+      if (
+        this.osmElements != undefined
+      ) {
+        return (
+          "https://www.openstreetmap.org/#map=" + this.zoom + "/" + this.lat + "/" + this.lon
+        );
+      } else {
+        return null;
+      }
     }
   }
 }
