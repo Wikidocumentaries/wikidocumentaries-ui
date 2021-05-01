@@ -142,7 +142,10 @@
             "hideImagesMenuText": "Hide images",
             "chooseTimelineMapsMenuText": "Choose timeline maps...",
             "showNearbyPlacesMenuText": "Show nearby places",
-            "hideNearbyPlacesMenuText": "Hide nearby places"
+            "hideNearbyPlacesMenuText": "Hide nearby places",
+            "extLink": {
+                "menuTooltip": "View or edit in OpenStreetMap"
+            }
         },
         "TopicNewspapers": {
             "headerTitle": "Newspaper clippings",
@@ -307,6 +310,10 @@
         },
         "Familytree" : {
             "headerTitle": "Family tree"
+        },
+        "Names": {
+            "headerTitle": "Names",
+            "intro": "See the names of this topic and all available alternatives."
         },
         "Works": {
             "headerTitle": "Works",

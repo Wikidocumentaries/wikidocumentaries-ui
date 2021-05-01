@@ -5,7 +5,7 @@
       <h1 class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</h1>
       <HeaderLink
         class="toolbar-item"
-        :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')"
+        :tooltip="$t('topic_page.TopicMap.extLink.menuTooltip')"
         :link="osmURL"
         v-show="osmElements != undefined"
       ></HeaderLink>
