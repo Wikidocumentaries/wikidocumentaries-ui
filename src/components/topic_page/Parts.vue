@@ -122,7 +122,7 @@ export default {
     mapboxgl.accessToken = MAPBOX_AT;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?coordinates) AS ?coordinates)
+SELECT ?item ?itemLabel ?itemDescription ?image (SAMPLE(?coordinates) AS ?coordinates)
 WHERE {
   { 
     { wd:Q407542 wdt:P527|wdt:P150 ?item. }
@@ -130,6 +130,7 @@ WHERE {
     { ?item wdt:P361 wd:Q407542 . }
   }
   ?item wdt:P625 ?coordinates .
+  OPTIONAL { ?item wdt:P18 ?image . }
   MINUS { ?item wdt:P31 wd:Q5 .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
@@ -202,9 +203,9 @@ LIMIT 1000
               '<a href="' + 
               item.item.value +
               '"><div class="popup-body">' +
-/*                 (item.image
-                  ? '<img src="' + this.$getImageLink(item.image) + '" class="popup-image">'
-                  : '') + */
+                (item.image
+                  ? '<img src="' + item.image + '" class="popup-image">'
+                  : '') +
                 '<div class="popup-txt">' +
                 '<div class="gallery-title">' +
                 item.item.label +

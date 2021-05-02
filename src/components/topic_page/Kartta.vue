@@ -68,7 +68,7 @@ export default {
         .then(response => response.json())
         .then(data => {
           this.osmElements = data.osm;
-          console.log(this.osmElements);
+/*           console.log(this.osmElements); */
 
           // Gather the geometries of the OSM elements into a collection
           const geojson = {

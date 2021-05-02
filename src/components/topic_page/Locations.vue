@@ -200,9 +200,9 @@ LIMIT 1000
               '<a href="' + 
               item.location.value +
               '"><div class="popup-body">' +
-/*                 (item.image
-                  ? '<img src="' + this.$getImageLink(item.image) + '" class="popup-image">'
-                  : '') + */
+                (item.image
+                  ? '<img src="' + item.image + '" class="popup-image">'
+                  : '') +
                 '<div class="popup-txt"><div class="thumb-credit over">' +
                 item.creatorLabel +
                 '</div><div class="gallery-title">' +

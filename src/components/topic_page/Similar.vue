@@ -250,9 +250,9 @@ GROUP BY ?item ?itemLabel ?itemDescription
               '<a href="' + 
               item.item.value +
               '"><div class="popup-body">' +
-/*                 (item.image
-                  ? '<img src="' + this.$getImageLink(item.image) + '" class="popup-image">'
-                  : '') + */
+                (item.image
+                  ? '<img src="' + item.image + '" class="popup-image">'
+                  : '') +
                 '<div class="popup-txt">' +
                 '<div class="gallery-title">' +
                 item.item.label +
