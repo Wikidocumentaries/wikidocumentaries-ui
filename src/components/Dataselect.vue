@@ -20,11 +20,11 @@
           v-model="topicInputValue"
           type="text"
         >
-        <div class="drop-option" v-for="topic in topics" :key="topic.wikidata">
+        <router-link class="drop-option" v-for="(topic) in topics" :key="topic.wikidata" :to="topic.wikidocumentarieslink">
           <span class="topic-title">{{ topic.wikipage }}</span>
           <br>
           <span class="topic-summary">{{ getSummary(topic) }}</span>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
