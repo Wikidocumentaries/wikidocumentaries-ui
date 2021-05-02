@@ -225,7 +225,7 @@ LIMIT 1000
           });
           const bounds = bbox(geometryCollection(points))
           myMap.fitBounds(bounds, {
-            padding: 50,
+            padding: {top: 50, bottom:20, left: 50, right: 50},
             maxZoom: 19
           });
         });
