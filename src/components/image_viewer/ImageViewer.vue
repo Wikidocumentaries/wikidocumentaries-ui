@@ -39,7 +39,7 @@
                       <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                     </ToolbarMenu>
                     <HeaderLink
-                      v-if="element.infoURL != undefined"
+                      v-if="element.infoURL"
                       class="toolbar-item neg"
                       :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
                       :link="element.infoURL"

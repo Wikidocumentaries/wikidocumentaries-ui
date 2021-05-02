@@ -20,9 +20,9 @@ export default {
             if (this.link) {
                 return this.link;
             } else {
-                var language = this.$i18n.locale;
-                var title = this.$store.state.wikidocumentaries.title;
-                return "https://" + language + ".wikipedia.org/w/index.php?title=" + title + "&action=edit";
+/*                 var language = this.$i18n.locale;
+                var title = this.$store.state.wikidocumentaries.title; */
+                return "#";
             }
         }
     }
