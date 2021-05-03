@@ -5,6 +5,7 @@
 			"Harvest",
 			"Hasley",
 			"Jbar82",
+			"JenyxGym",
 			"Juenti el toju",
 			"MarcoAurelio",
 			"Ryo567",
@@ -240,6 +241,10 @@
 		},
 		"Effects": {
 			"headerTitle": "Efectos"
+		},
+		"Names": {
+			"headerTitle": "Nombres",
+			"intro": "Ver los nombres de este tema y todas las alternativas  disponibles."
 		},
 		"Works": {
 			"headerTitle": "Obras",

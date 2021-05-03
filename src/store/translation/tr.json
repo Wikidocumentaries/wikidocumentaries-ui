@@ -4,6 +4,7 @@
 			"BaRaN6161 TURK",
 			"Grkn gll",
 			"Hedda",
+			"Joseph",
 			"Mirzali",
 			"MuratTheTurkish",
 			"Stonecy"
@@ -150,7 +151,10 @@
 			"hideImagesMenuText": "Görüntüleri gizle",
 			"chooseTimelineMapsMenuText": "Zaman çizelgesi haritalarını seç...",
 			"showNearbyPlacesMenuText": "Yakındaki yerleri göster",
-			"hideNearbyPlacesMenuText": "Yakındaki yerleri gizle"
+			"hideNearbyPlacesMenuText": "Yakındaki yerleri gizle",
+			"extLink": {
+				"menuTooltip": "OpenStreetMap ile görüntüle ya da düzenle"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Gazete kupürleri",
@@ -315,6 +319,10 @@
 		},
 		"Familytree": {
 			"headerTitle": "Aile ağacı"
+		},
+		"Names": {
+			"headerTitle": "İsimler",
+			"intro": "Bu konunun isimlerini ve tüm mevcut seçenekleri görün."
 		},
 		"Works": {
 			"headerTitle": "Çalışanlar",

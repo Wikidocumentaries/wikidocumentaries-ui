@@ -4,6 +4,7 @@
 			"Eneelk",
 			"Florian COLLIN",
 			"Gomoko",
+			"JenyxGym",
 			"Pols12",
 			"Thibaut120094",
 			"Trizek (WMF)",
@@ -319,6 +320,9 @@
 		},
 		"Familytree": {
 			"headerTitle": "Arbre généalogique"
+		},
+		"Names": {
+			"headerTitle": "Noms"
 		},
 		"Works": {
 			"headerTitle": "Works",

@@ -164,6 +164,9 @@
 		"Effects": {
 			"headerTitle": "Effetti"
 		},
+		"Names": {
+			"headerTitle": "Nomi"
+		},
 		"Works": {
 			"sortMenuTitle": "Ordina",
 			"sortMenuTooltip": "Ordina elementi",
