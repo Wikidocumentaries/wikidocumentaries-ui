@@ -101,7 +101,10 @@
 			"hideImagesMenuText": "Nascondi immagini",
 			"chooseTimelineMapsMenuText": "Scegli le mappe della linea temporale...",
 			"showNearbyPlacesMenuText": "Mostra luoghi nelle vicinanze",
-			"hideNearbyPlacesMenuText": "Nascondi luoghi nelle vicinanze"
+			"hideNearbyPlacesMenuText": "Nascondi luoghi nelle vicinanze",
+			"extLink": {
+				"menuTooltip": "Vedi o modifica in OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Ritagli di giornale",

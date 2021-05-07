@@ -155,7 +155,10 @@
 			"hideImagesMenuText": "Masquer les images",
 			"chooseTimelineMapsMenuText": "Choisir les cartes de la frise temporelle...",
 			"showNearbyPlacesMenuText": "Afficher les lieux à proximité",
-			"hideNearbyPlacesMenuText": "Masquer les lieux à proximité"
+			"hideNearbyPlacesMenuText": "Masquer les lieux à proximité",
+			"extLink": {
+				"menuTooltip": "Afficher ou modifier dans OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Coupures de journaux",
@@ -322,7 +325,8 @@
 			"headerTitle": "Arbre généalogique"
 		},
 		"Names": {
-			"headerTitle": "Noms"
+			"headerTitle": "Noms",
+			"intro": "Voir les noms de ce sujet et toutes les autres alternatives."
 		},
 		"Works": {
 			"headerTitle": "Works",

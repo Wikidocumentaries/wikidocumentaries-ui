@@ -146,7 +146,10 @@
 			"hideImagesMenuText": "Скриј слики",
 			"chooseTimelineMapsMenuText": "Изберете времеследни карти...",
 			"showNearbyPlacesMenuText": "Прикажи места во близина",
-			"hideNearbyPlacesMenuText": "Скриј места во близина"
+			"hideNearbyPlacesMenuText": "Скриј места во близина",
+			"extLink": {
+				"menuTooltip": "Погледајте или уредете во OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Исечоци од весници",
@@ -311,6 +314,10 @@
 		},
 		"Familytree": {
 			"headerTitle": "Семејна лоза"
+		},
+		"Names": {
+			"headerTitle": "Називи",
+			"intro": "Погледајте ги називите на оваа тема и сите достапни алтернативи."
 		},
 		"Works": {
 			"headerTitle": "Дела",

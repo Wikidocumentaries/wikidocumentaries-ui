@@ -145,7 +145,10 @@
 			"hideImagesMenuText": "隱藏圖片",
 			"chooseTimelineMapsMenuText": "選擇時間表地圖…",
 			"showNearbyPlacesMenuText": "秀出附近地點",
-			"hideNearbyPlacesMenuText": "隱藏附近地點"
+			"hideNearbyPlacesMenuText": "隱藏附近地點",
+			"extLink": {
+				"menuTooltip": "在 OpenStreetMap 上檢視或編輯"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "報紙剪報",
@@ -310,6 +313,10 @@
 		},
 		"Familytree": {
 			"headerTitle": "譜系圖"
+		},
+		"Names": {
+			"headerTitle": "名稱",
+			"intro": "查看主題名稱與所有可用別名。"
 		},
 		"Works": {
 			"headerTitle": "作品",

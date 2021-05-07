@@ -149,7 +149,10 @@
 			"hideImagesMenuText": "Ocultar imagens",
 			"chooseTimelineMapsMenuText": "Escolha os mapas da linha do tempo...",
 			"showNearbyPlacesMenuText": "Mostrar locais próximos",
-			"hideNearbyPlacesMenuText": "Ocultar lugares próximos"
+			"hideNearbyPlacesMenuText": "Ocultar lugares próximos",
+			"extLink": {
+				"menuTooltip": "Ver ou editar no OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Recortes de jornais",
@@ -316,7 +319,8 @@
 			"headerTitle": "Árvore genealógica"
 		},
 		"Names": {
-			"headerTitle": "Nome"
+			"headerTitle": "Nome",
+			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
 		},
 		"Works": {
 			"headerTitle": "Trabalho",

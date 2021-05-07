@@ -152,7 +152,10 @@
 			"hideImagesMenuText": "Скрыть изображения",
 			"chooseTimelineMapsMenuText": "Выбрать хронологические карты…",
 			"showNearbyPlacesMenuText": "Показать места рядом",
-			"hideNearbyPlacesMenuText": "Скрыть места поблизости"
+			"hideNearbyPlacesMenuText": "Скрыть места поблизости",
+			"extLink": {
+				"menuTooltip": "Просмотр или редактирование в OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Газетные вырезки",
@@ -317,6 +320,10 @@
 		},
 		"Familytree": {
 			"headerTitle": "Семейное дерево"
+		},
+		"Names": {
+			"headerTitle": "Названия",
+			"intro": "Смотреть названия этой темы и все доступные альтернативы."
 		},
 		"Works": {
 			"headerTitle": "Работы",

@@ -3,6 +3,8 @@
 		"authors": [
 			"Amirsara",
 			"FarsiNevis",
+			"Jeeputer",
+			"Mohammad ebz",
 			"Sunfyre"
 		]
 	},
@@ -63,7 +65,10 @@
 			}
 		},
 		"TopicMap": {
-			"hideImagesMenuText": "پنهان‌سازی تصویرها"
+			"hideImagesMenuText": "پنهان‌سازی تصویرها",
+			"extLink": {
+				"menuTooltip": "مشاهده یا ویرایش در اوپن‌استریت‌مپ"
+			}
 		},
 		"TopicTimeline": {
 			"centuryText": "ق"
@@ -126,6 +131,10 @@
 		},
 		"Parts": {
 			"headerTitle": "اجزا"
+		},
+		"Names": {
+			"headerTitle": "اسامی",
+			"intro": "نام‌های این مبحث و تمامی جایگزین‌های موجود را مشاهده کنید."
 		},
 		"Works": {
 			"headerTitle": "آثار",

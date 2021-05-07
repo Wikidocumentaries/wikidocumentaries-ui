@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Jakub Fabijan",
 			"Mirin"
 		]
 	},
@@ -109,6 +110,9 @@
 		},
 		"Parts": {
 			"headerTitle": "Partoj"
+		},
+		"Names": {
+			"headerTitle": "Nomoj"
 		},
 		"Works": {
 			"headerTitle": "Verkoj",
