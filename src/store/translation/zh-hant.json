@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Kly"
+			"Kly",
+			"Neetp7k9"
 		]
 	},
 	"LandingPage": {
@@ -316,7 +317,7 @@
 		},
 		"Names": {
 			"headerTitle": "名稱",
-			"intro": "查看主題名稱與所有可用別名。"
+			"intro": "查看主題與所有可用別名。"
 		},
 		"Works": {
 			"headerTitle": "作品",
