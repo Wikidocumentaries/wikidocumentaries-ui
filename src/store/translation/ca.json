@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Mguix",
-			"Qllach"
+			"Qllach",
+			"Skurz0"
 		]
 	},
 	"LandingPage": {
@@ -147,7 +148,10 @@
 			"hideImagesMenuText": "Ocultar imatges",
 			"chooseTimelineMapsMenuText": "Trieu els mapes per a la línia de temps...",
 			"showNearbyPlacesMenuText": "Mostra llocs propers",
-			"hideNearbyPlacesMenuText": "Amagar els llocs propers"
+			"hideNearbyPlacesMenuText": "Amagar els llocs propers",
+			"extLink": {
+				"menuTooltip": "Veure o editar a OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Retalls de diari",
@@ -312,6 +316,9 @@
 		},
 		"Familytree": {
 			"headerTitle": "Arbre familiar"
+		},
+		"Names": {
+			"headerTitle": "Noms"
 		},
 		"Works": {
 			"headerTitle": "Treballs",

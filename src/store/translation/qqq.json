@@ -234,6 +234,9 @@
 		"Links": {
 			"headerTitle": "Title for a section listing links from the current Wikipedia article."
 		},
+		"Names": {
+			"headerTitle": "{{identical|Name}}"
+		},
 		"Works": {
 			"headerTitle": "Main title of the Works section",
 			"intro": "Introductory text of the Works section",
