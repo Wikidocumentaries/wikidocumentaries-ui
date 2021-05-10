@@ -38,8 +38,8 @@ export default new Router({
       component: LandingPage
     },
     {
-	path: '/wikipedia/:language/:topic',
-	component: MainPage
+      path: '/wikipedia/:language/:topic',
+      component: MainPage
 	/*
 	redirect: to => {
 	  return "/Q5501061"

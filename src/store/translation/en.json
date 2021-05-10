@@ -266,8 +266,8 @@
             "intro": "These parts belong to this topic. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Partof": {
-            "headerTitle": "Location",
-            "intro": "This topic is located in relation to these topics. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
+            "headerTitle": "Part of",
+            "intro": "This topic is part of these other topics. You can sort them by time and name. To see all topics, including the ones without an image, you must view the topics as a list."
         },
         "Twins": {
             "headerTitle": "Twin cities",

@@ -201,7 +201,7 @@ LIMIT 1000
               item.location.value +
               '"><div class="popup-body">' +
                 (item.image
-                  ? '<img src="' + item.image + '" class="popup-image">'
+                  ? '<img src="' + item.image.replace(/\s/g, _) + "?width=200" + '" class="popup-image">'
                   : '') +
                 '<div class="popup-txt"><div class="thumb-credit over">' +
                 item.creatorLabel +

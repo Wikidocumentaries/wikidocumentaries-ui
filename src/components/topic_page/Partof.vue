@@ -114,16 +114,7 @@ export default {
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(DISTINCT ?startdate) as ?startdate) (SAMPLE(DISTINCT ?enddate) as ?enddate) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
-  { 
-    { ?pi wdt:P31 wd:Q18615777. }
-    UNION
-    { ?pi wdt:P1647* wd:P361 . }
-   }
-  ?pi wikibase:directClaim ?p .
-  ?pi wikibase:propertyType wikibase:WikibaseItem .
-  ?pi rdfs:label ?piLabel .
-  FILTER(LANG(?piLabel)="fi") .
-  wd:Q55261337 ?p ?item .
+  wd:Q55261337 wdt:P279|wdt:P361|wdt:P1647 ?item .
   OPTIONAL { ?item wdt:P31 ?type .
             ?type rdfs:label ?typeLabel_ .
               FILTER(LANG(?typeLabel_)="fi") }

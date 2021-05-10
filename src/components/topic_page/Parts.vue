@@ -122,7 +122,7 @@ export default {
     mapboxgl.accessToken = MAPBOX_AT;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?itemDescription ?image (SAMPLE(?coordinates) AS ?coordinates)
+SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates)
 WHERE {
   { 
     { wd:Q407542 wdt:P527|wdt:P150 ?item. }
@@ -134,7 +134,7 @@ WHERE {
   MINUS { ?item wdt:P31 wd:Q5 .}
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
-GROUP BY ?item ?itemLabel ?itemDescription
+GROUP BY ?item ?itemLabel ?itemDescription ?image
 LIMIT 1000
         `.replace(/Q407542/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);;

@@ -65,7 +65,7 @@ const SORT_ACTIONS = {
   SORT_CLEAR: 4,
 };
 
-const MAX_ITEMS_TO_VIEW = 200;
+const MAX_ITEMS_TO_VIEW = 1000;
 const DEFAULT_SORT = ["work.label"];
 
 let fullResults, currentSort, currentDisplay, myMap;
