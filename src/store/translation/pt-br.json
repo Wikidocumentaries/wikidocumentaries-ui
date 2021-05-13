@@ -273,8 +273,8 @@
 			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
 		},
 		"Partof": {
-			"headerTitle": "Localização",
-			"intro": "Este tópico está localizado em relação a esses tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+			"headerTitle": "Parte de",
+			"intro": "Este tópico faz parte desses outros tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve exibir os tópicos como uma lista."
 		},
 		"Twins": {
 			"headerTitle": "Cidades gêmeas",
