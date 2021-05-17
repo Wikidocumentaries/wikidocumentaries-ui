@@ -268,7 +268,7 @@
 			"intro": "Disse dele hører til dette emne. Du kan sortere dem efter tid og navn. For at alle dele, også dem uden billede, skal du vælge listevisning."
 		},
 		"Partof": {
-			"headerTitle": "Placering",
+			"headerTitle": "Del af",
 			"intro": "Dette element er placeret i relation til disse elementer. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du vælge listevisning."
 		},
 		"Twins": {
@@ -312,6 +312,9 @@
 		},
 		"Familytree": {
 			"headerTitle": "Stamtræ"
+		},
+		"Names": {
+			"headerTitle": "Navne"
 		},
 		"Works": {
 			"headerTitle": "Værker",
