@@ -106,7 +106,10 @@
 			"hideImagesMenuText": "이미지 숨기기",
 			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
 			"showNearbyPlacesMenuText": "주변 장소 표시",
-			"hideNearbyPlacesMenuText": "주변 장소 숨기기"
+			"hideNearbyPlacesMenuText": "주변 장소 숨기기",
+			"extLink": {
+				"menuTooltip": "오픈스트립트맵에서 보기 또는 편집"
+			}
 		},
 		"TopicTimeline": {
 			"headerTitle": "타임라인",
@@ -203,6 +206,9 @@
 		},
 		"Location": {
 			"headerTitle": "위치"
+		},
+		"Names": {
+			"headerTitle": "이름"
 		},
 		"Works": {
 			"sortMenuTitle": "정렬",

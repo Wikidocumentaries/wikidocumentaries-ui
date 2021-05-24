@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Anupamdutta73",
 			"Bodhisattwa",
 			"Titodutta",
 			"আফতাবুজ্জামান"
@@ -31,6 +32,7 @@
 		"titleTeam": "দল",
 		"titleThanks": "সবিশেষ ধন্যবাদ যাদের প্রাপ্য",
 		"titlePartners": "অংশীদার",
+		"titleBy": "এটি সাহায্য করেছেন",
 		"getInvolved": "জড়িত হোন!",
 		"titleTranslate": "অনুবাদ করুন",
 		"titleContent": "আপনার লেখা যোগ করুন",
@@ -43,6 +45,7 @@
 	},
 	"MainPage": {
 		"topicPageName": "বিষয় সম্পর্কিত পাতা",
+		"mapPlaceMatchPageName": "জায়গার নাম একত্রিত করুন",
 		"mapSearchPageName": "মানচিত্র অনুসন্ধান করুন",
 		"returnToHomeMessage": "প্রধান পাতায় ফিরে যান"
 	},
@@ -50,6 +53,10 @@
 		"waitMessage": "দয়া করে একটু অপেক্ষা করুন... উইকিপিডিয়া, উইকিউপাত্ত, উইকিমিডিয়া কমন্স, ম্যাপওয়ার্পার, ফিনা, ফ্লিকার থেকে উপাত্ত আনা হচ্ছে"
 	},
 	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapHelpNote": "টিপ: ctrl+click আরো বেশি ম্যাপ খুলতে সাহায্য করে",
+			"yearAbbreviation": "বছর"
+		},
 		"Header": {
 			"titleEditText": "শিরোনাম সম্পাদনা করুন",
 			"titleApproveText": "এই শিরোনাম নিশ্চিত করুন",
@@ -60,8 +67,12 @@
 			"headerTitle": "আর্কাইভগুলি হতে প্রাপ্ত ছবি",
 			"intro": "এই চিত্রগুলি বেশ কয়েকটি উৎস থেকে সংগ্রহ করা হয়েছে এবং এগুলি সর্বদা সঠিক প্রতিনিধিত্ব নাও করতে পারে। আপনি আসল চিত্রটি দেখতে পারেন এবং চিত্রটির কোনও অবস্থান পিন নং থাকলে আপনি তাতে মানচিত্র যোগ করতে পারেন।",
 			"actionsMenu": {
+				"menuTitle": "চিত্রগুলো দেখুন বা সাজান",
+				"tooltip": "চিত্র গুলো দেখুন বা সাজান",
 				"showImagesOnMapMenuText": "মানচিত্রে সকল চিত্র দেখান",
-				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান"
+				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান",
+				"selectPortraits": "এই ব্যক্তির উচ্চ মানের ছবি বাছুন",
+				"arrangeByTime": "চিত্রগুলি সময় অনুযায়ী সাজান"
 			},
 			"facetMenu": {
 				"time": "সময়",
@@ -69,6 +80,7 @@
 				"people": "ব্যক্তি",
 				"places": "স্থান",
 				"topics": "বিষয়",
+				"form": "ফর্ম",
 				"imageSize": "চিত্রের আকার",
 				"large": "বড়",
 				"medium": "মাঝারি",
@@ -76,19 +88,37 @@
 				"type": "মিডিয়ার ধরন",
 				"creator": "নির্মাতা",
 				"platform": "প্ল্যাটফর্ম",
-				"source": "উৎস"
+				"source": "উৎস",
+				"clear": "আপনার পছন্দগুলি মুছে ফেলুন"
 			},
 			"imagesActionMenu": {
+				"menuTitle": "কর্ম",
+				"menuTooltip": "কার্যসমূহ",
 				"doGeolocatingText": "অবস্থান নির্ধারন করুন...",
-				"showImageText": "চিত্র প্রদর্শন করুন"
+				"showImageText": "চিত্র প্রদর্শন করুন",
+				"selectFeatured": "প্রধাণ চিত্র হিসেবে নির্বাচিত করুন"
 			},
 			"imagesRemoveMenu": {
+				"menuTitle": "চিত্র রতি সরিয়ে দিন, কারণ....",
 				"shortMenuTitle": "ছবি সরান",
 				"menuTooltip": "ছবি সরান",
+				"remDepicted": {
+					"search": "বিষয় অনুসন্ধান করুন",
+					"browse": "নির্দিষ্ট বিষয় খুঁজুন"
+				},
+				"remCreator": {
+					"menuTitle": "এটি তৈরি করেছেন",
+					"shortMenuTitle": "এটি অন্য কেউ তৈরী করেছেন",
+					"search": "সৃষ্টিকর্তার খোঁজ করুন",
+					"browse": "নির্দিষ্ট কলাকুশলীদের খুঁজুন"
+				},
 				"remInappropriate": {
-					"copyvio": "এটি কপিরাইট লঙ্ঘন করছে"
+					"copyvio": "এটি কপিরাইট লঙ্ঘন করছে",
+					"explain": "বিষয়টি বুঝিয়ে দিন"
 				}
-			}
+			},
+			"imagesViewExternal": "আসল চিত্রটি দেখুন",
+			"imagesViewOnMap": "চিত্রটি ম্যাপে দেখুন"
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "চিত্র আড়াল করুন",
@@ -179,6 +209,9 @@
 		},
 		"Location": {
 			"headerTitle": "অবস্থান"
+		},
+		"Familytree": {
+			"headerTitle": "পরিবার বৃক্ষ"
 		},
 		"Works": {
 			"headerTitle": "কর্ম",

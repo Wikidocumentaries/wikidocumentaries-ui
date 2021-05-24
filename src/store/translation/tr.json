@@ -7,6 +7,7 @@
 			"Joseph",
 			"Mirzali",
 			"MuratTheTurkish",
+			"SaldırganSincap",
 			"Stonecy"
 		]
 	},
@@ -275,8 +276,8 @@
 			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
 		},
 		"Partof": {
-			"headerTitle": "Konum",
-			"intro": "Bu konu, bu konular ile ilgilidir. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+			"headerTitle": "Parçası",
+			"intro": "Bu konu, bu diğer konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
 		},
 		"Twins": {
 			"headerTitle": "İkiz şehirler",
