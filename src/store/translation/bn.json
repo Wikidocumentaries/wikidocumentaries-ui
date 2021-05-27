@@ -54,7 +54,7 @@
 	},
 	"topic_page": {
 		"BaseMapDialog": {
-			"chooseMapHelpNote": "টিপ: ctrl+click আরো বেশি ম্যাপ খুলতে সাহায্য করে",
+			"chooseMapHelpNote": "পরামর্শ: ctrl+click আপনাকে আরো বেশি মানচিত্র নির্বাচন করতে সাহায্য করবে",
 			"yearAbbreviation": "বছর"
 		},
 		"Header": {
@@ -68,7 +68,7 @@
 			"intro": "এই চিত্রগুলি বেশ কয়েকটি উৎস থেকে সংগ্রহ করা হয়েছে এবং এগুলি সর্বদা সঠিক প্রতিনিধিত্ব নাও করতে পারে। আপনি আসল চিত্রটি দেখতে পারেন এবং চিত্রটির কোনও অবস্থান পিন নং থাকলে আপনি তাতে মানচিত্র যোগ করতে পারেন।",
 			"actionsMenu": {
 				"menuTitle": "চিত্রগুলো দেখুন বা সাজান",
-				"tooltip": "চিত্র গুলো দেখুন বা সাজান",
+				"tooltip": "চিত্রগুলো দেখুন বা সাজান",
 				"showImagesOnMapMenuText": "মানচিত্রে সকল চিত্র দেখান",
 				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান",
 				"selectPortraits": "এই ব্যক্তির উচ্চ মানের ছবি বাছুন",
@@ -96,10 +96,10 @@
 				"menuTooltip": "কার্যসমূহ",
 				"doGeolocatingText": "অবস্থান নির্ধারন করুন...",
 				"showImageText": "চিত্র প্রদর্শন করুন",
-				"selectFeatured": "প্রধাণ চিত্র হিসেবে নির্বাচিত করুন"
+				"selectFeatured": "প্রধান চিত্র হিসেবে নির্বাচিত করুন"
 			},
 			"imagesRemoveMenu": {
-				"menuTitle": "চিত্র রতি সরিয়ে দিন, কারণ....",
+				"menuTitle": "চিত্রটি সরিয়ে দিন, কারণ....",
 				"shortMenuTitle": "ছবি সরান",
 				"menuTooltip": "ছবি সরান",
 				"remDepicted": {
@@ -109,7 +109,7 @@
 				"remCreator": {
 					"menuTitle": "এটি তৈরি করেছেন",
 					"shortMenuTitle": "এটি অন্য কেউ তৈরী করেছেন",
-					"search": "সৃষ্টিকর্তার খোঁজ করুন",
+					"search": "প্রণেতার খোঁজ করুন",
 					"browse": "নির্দিষ্ট কলাকুশলীদের খুঁজুন"
 				},
 				"remInappropriate": {
@@ -118,7 +118,7 @@
 				}
 			},
 			"imagesViewExternal": "আসল চিত্রটি দেখুন",
-			"imagesViewOnMap": "চিত্রটি ম্যাপে দেখুন"
+			"imagesViewOnMap": "চিত্রটি মানচিত্রের দেখুন"
 		},
 		"TopicMap": {
 			"hideImagesMenuText": "চিত্র আড়াল করুন",
