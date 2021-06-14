@@ -8,7 +8,8 @@
 			"ManuelFranz",
 			"Metalhead64",
 			"Susannaanas",
-			"Symposiarch"
+			"Symposiarch",
+			"Umlaut"
 		]
 	},
 	"LandingPage": {
@@ -152,7 +153,10 @@
 			"hideImagesMenuText": "Bilder ausblenden",
 			"chooseTimelineMapsMenuText": "Zeitleistenkarten auswählen …",
 			"showNearbyPlacesMenuText": "Orte in der Nähe anzeigen",
-			"hideNearbyPlacesMenuText": "Orte in der Nähe ausblenden"
+			"hideNearbyPlacesMenuText": "Orte in der Nähe ausblenden",
+			"extLink": {
+				"menuTooltip": "In OpenStreetMap anzeigen oder bearbeiten"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Zeitungsausschnitte",
@@ -273,7 +277,7 @@
 			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
 		},
 		"Partof": {
-			"headerTitle": "Standort"
+			"headerTitle": "Teil von"
 		},
 		"Affiliations": {
 			"headerTitle": "Verbindungen",
