@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Higa4",
 			"Mogumin",
 			"Omotecho",
@@ -313,6 +314,9 @@
 		},
 		"Familytree": {
 			"headerTitle": "系統樹"
+		},
+		"Names": {
+			"headerTitle": "名前"
 		},
 		"Works": {
 			"headerTitle": "作品",
