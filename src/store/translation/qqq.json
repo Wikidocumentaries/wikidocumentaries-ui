@@ -11,6 +11,8 @@
 		"search": "Search button text, currently not in use\n{{Identical|Search}}",
 		"searchInputPlaceHolder": "Search input field placeholder text",
 		"searchInputSearchOnly": "Placeholder text in the search box",
+		"showMore": "Text in the search pulldown",
+		"createNew": "Option in the search pulldown for creating a missing item",
 		"intro": "The subtitle of the front page",
 		"titleDescription": "Subheading in the introductory section",
 		"description": "The text under the subheading \"What is Wikidocumentaries?\" in the introductory section",
