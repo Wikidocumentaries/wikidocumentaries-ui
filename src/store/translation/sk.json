@@ -1,0 +1,214 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yardom78"
+		]
+	},
+	"LandingPage": {
+		"search": "Hľadať",
+		"searchInputPlaceHolder": "Nájsť tému alebo vytvoriť novú",
+		"searchInputSearchOnly": "Nájsť tému",
+		"showMore": "Zobraziť viac položiek",
+		"createNew": "Vytvoriť novú položku",
+		"intro": "Wikidokumentáre je wiki pre malú históriu - miesto na zhromažďovanie stôp histórie a ich premenu na príbehy. Začnite hľadaním témy, ktorá vás zaujíma!",
+		"titleDescription": "Čo sú to Wikidokumentáre?",
+		"description": "Wikidokumentáre je tvorivý priestor pre občianskych historikov. Kombinuje informácie o témach - ľudia, miesta, budovy, udalosti a iné. Medzi témami sa môžete pohybovať pomocou ľubovoľného zaznamenaného spojenia, ako sú rodinné vzťahy, polohy, tvorcovia, diela alebo príslušnosť. Téma je ilustrovaná obrázkami a mapami z prepojených múzeí, archívov a knižníc. Vo Wikidokumentároch bude možné opraviť existujúce informácie a pridať nové témy, priniesť vlastné obrázky a spomienky a použiť všetok materiál na svoje vlastné účely.",
+		"titleStatus": "Stav",
+		"status": "Stránka je v demo fáze. Mnoho dôležitých funkcií ešte nie je k dispozícii a web nemusí fungovať tak, ako by sa očakávalo.",
+		"moreBelow": "Prečítajte si viac nižšie",
+		"more": "Čítať ďalej",
+		"moreLink": "Prečítajte si viac v",
+		"titleTopics": "Témy",
+		"statusTopics": "Témy sa čítajú z Wikidata. Nové témy môžu byť neskôr vytvorené vo Wikidokumentároch, ak je ich obsah mimo rozsahu pôsobnosti Wikidata. Stále bude rovnako možné opísať tému pomocou bohatých možností Wikidata. Aktuálne články pochádzajú z Wikipédie, zatiaľ čo články je možné neskôr vytvárať lokálne iba pre témy, ktoré existujú iba vo Wikidokumentároch.",
+		"titleMedia": "Médiá",
+		"statusMedia": "Médiá sa čítajú z rastúceho počtu úložísk médií, ktoré slúžia licenčne otvoreným mediálnym súborom. Pracujeme na presnejšom vyhľadávaní obrázkov a zobrazovaní ďalších a lepších metadát z každého zo zdrojov. Nové zdroje médií sú vítané!",
+		"titleTools": "Nástroje",
+		"statusTools": "Wikidokumentáre obsahujú úlohy a nástroje na prácu s obsahom. Články je už možné prekladať pomocou nástroja \"Preklad obsahu\". Pripravujeme nástroj na vytváranie kľúčových slov pomocou Wikidát a nástroja na označovanie miest obrázkov. Môžu byť vytvorené alebo integrované nové zábavné a užitočné nástroje.",
+		"titleLanguages": "Jazyky",
+		"statusLanguages": "Vo Wikidokumentároch je možná navigácia v ľubovoľnom jazyku dostupnom na serveri Wikidata. Toto je skvelá príležitosť pre malé jazyky. Preklady sa robia na TranslateWiki.",
+		"titleTechnology": "Technológie",
+		"statusTechnology": "Wikidokumentáre načítajú základné údaje z Wikidáta. Wikidokumentáre budú mať navyše svoju vlastnú Wikizákladňu pre témy, ktoré do Wikidáta nespadajú. Očakáva sa, že Wikidáta a Wikidokumentáre sa budú synchronizovať ako spolupracujúce Wikizákladne. Po druhé, obrazové metadáta sú prepojené s položkami Wikidáta a tieto údaje sa môžu synchronizovať so štruktúrovanými údajmi na Wikimedia Commons. Táto stránka je vytvorená pomocou knižnice Vue.js a je hostiteľom služby Wikimedia Cloud Services.",
+		"titleCreators": "Tvorcovia",
+		"titleTeam": "Tím",
+		"titleThanks": "So zvláštnym poďakovaním pre",
+		"titlePartners": "Partneri",
+		"titleFunding": "S láskavou podporou od",
+		"titleBy": "Projektor",
+		"getInvolved": "Zapojte sa!",
+		"titleTranslate": "Prekladať",
+		"joinTranslate": "Príďte a prineste svoj jazyk do Wikidokumentárov. Pripojte sa k tímu prekladateľov dobrovoľníkov a uvidíte, ako prepojené kultúrne dedičstvo ožíva vo vašom jazyku.",
+		"titleContent": "Pridajte svoj obsah",
+		"joinContent": "Ak máte fotografiu, médium, dokument, mapu alebo zbierku údajov, ktoré by ste tu chceli vidieť, pozrime sa spolu, či sa už môže spojiť cez jeden z existujúcich kanálov alebo či môžeme vytvoriť nové spôsoby spojenia. Tiež sa tešíme na usporiadanie workshopov na zaznamenávanie historických poznatkov so záujmovými komunitami.",
+		"titleDevelop": "Vytvárajte nástroje a úlohy týkajúce sa crowdsourcingu.",
+		"joinDevelop": "Radi pridáme ďalšie nástroje a v spolupráci s organizáciami a výrobcami nástrojov vytvoríme nové úlohy týkajúce sa crowdsourcingu. Spojme sily pre ďalšiu skvelú crowdsourcingovú aplikáciu!",
+		"titleContact": "Spojte sa!",
+		"facebook": "Facebooková skupina",
+		"wiki": "Wikidokumentáre wiki",
+		"blog": "Blog",
+		"email": "Email",
+		"github": "Úložisko Github"
+	},
+	"MainPage": {
+		"topicPageName": "Stránka s témou",
+		"mapPlaceMatchPageName": "Skombinujte miestne názvy",
+		"mapSearchPageName": "Hľadať v mapách",
+		"wikiTopicErrorMessage": "Stránku Wikipédia pre túto tému sa nepodarilo nájsť v aktuálnom jazyku alebo sa vyskytla iná neočakávaná chyba.",
+		"returnToHomeMessage": "Späť na vstupnú stránku"
+	},
+	"WaitPage": {
+		"waitMessage": "Chvíľu, prosím ... Načítavanie údajov zo serverov Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"chooseMapTitle": "Vybrať historickú základnú mapu(y)",
+			"chooseMapHelpNote": "Tip: ctrl + klik umožňuje zvoliť viac máp",
+			"yearAbbreviation": "r."
+		},
+		"Header": {
+			"titleEditText": "Upraviť názov",
+			"titleApproveText": "Schváliť tento názov",
+			"subtitleEditText": "Upraviť popis",
+			"subtitleApproveText": "Schváliť tento popis"
+		},
+		"TopicImages": {
+			"headerTitle": "Obrázky z archívov",
+			"intro": "Tieto obrázky sú zozbierané z rôznych zdrojov a nemusia vždy presne zodpovedať téme. Môžete vidieť originál obrázka a môžete ho pridať na mapu ak má špendlík na pripnutie.",
+			"actionsMenu": {
+				"menuTitle": "Zobraziť alebo usporiadať obrázky",
+				"tooltip": "Zobraziť alebo usporiadať obrázky",
+				"showImagesOnMapMenuText": "Zobraziť všetky obrázky na mape",
+				"showImagesOnTimelineMenuText": "Zobraziť všetky obrázky na časovej osi",
+				"selectPortraits": "Vybrať portréty tejto osoby v dobrej kvalite",
+				"arrangeByTime": "Usporiadať obrázky podľa času",
+				"selectWorks": "Vybrať obrázky práce"
+			},
+			"facetMenu": {
+				"menuTitle": "Použiť filter facet podľa",
+				"menuTooltip": "Použiť filter facet podľa iných kritérií",
+				"time": "čas",
+				"map": "mapa",
+				"people": "ľudia",
+				"places": "miesta",
+				"topics": "témy",
+				"form": "forma",
+				"imageSize": "veľkosť obrázka",
+				"large": "veľký",
+				"medium": "stredný",
+				"small": "malý",
+				"type": "typ média",
+				"creator": "tvorca",
+				"platform": "platforma",
+				"source": "zdroj",
+				"saveSelection": "Uložiť výber ako kolekciu",
+				"clear": "Vymazať výber"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Akcie",
+				"menuTooltip": "Akcie",
+				"doGeolocatingText": "Nastaviť polohu...",
+				"showImageText": "Ukázať obrázok",
+				"selectFeatured": "Vybrať ako nadpis obrázka"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Odstrániť obrázok pretože...",
+				"shortMenuTitle": "Odstrániť obrázok",
+				"menuTooltip": "Odstrániť obrázok",
+				"remDepicted": {
+					"menuTitle": "Zobrazuje túto tému",
+					"shortMenuTitle": "Zobrazuje inú tému",
+					"search": "Vyhľadať tému",
+					"browse": "Prehliadať súvisiace témy"
+				},
+				"remCreator": {
+					"menuTitle": "Je to od tohto tvorcu",
+					"shortMenuTitle": "Je to od iného tvorcu",
+					"search": "Hľadať tvorcu",
+					"browse": "Prehliadať súvisiacich účastníkov"
+				},
+				"remInappropriate": {
+					"menuTitle": "Je to nevhodné pretože",
+					"shortMenuTitle": "Je to nevhodné",
+					"privacy": "Porušuje to to súkromie zobrazeného",
+					"violence": "Zobrazuje extrémne násilie",
+					"sex": "Zobrazuje jasný sex",
+					"copyvio": "Porušuje autorské práva",
+					"explain": "Zanechať poznámku s vysvetlením"
+				}
+			},
+			"imagesViewExternal": "Ukázať originálny obrázok",
+			"imagesViewOnMap": "Ukázať obrázok na mape"
+		},
+		"TopicMap": {
+			"headerTitle": "Témy na mape",
+			"intro": "Lokalizácia témy je zobrazená na mape. Takisto sa mape dajú zobraziť obrázky a iné údaje alebo sa dá vybrať historická mapa ako základná vrstva.",
+			"chooseHistoricalBasemapMenuText": "Vybrať historickú základnú mapu(y)...",
+			"hideImagesMenuText": "Schovať obrázky",
+			"chooseTimelineMapsMenuText": "Vybrať mapy časovej osy...",
+			"showNearbyPlacesMenuText": "Zobraziť zaujímavé miesta v blízkosti",
+			"hideNearbyPlacesMenuText": "Schovať zaujímavé miesta v blízkosti",
+			"extLink": {
+				"menuTooltip": "Zobraziť alebo upraviť v OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Výstrižky z novín",
+			"searhTopicFromArchivesMenuText": "Hľadať v novinách vo Fínskej národnej knižnici",
+			"addClipFromArchivesMenuText": "Pridať výstrižok..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Časová os",
+			"showEventsOnTimelineMenuText": "Zobraziť udalosti témy na časovej osy",
+			"centuryText": "St."
+		},
+		"Events": {
+			"headerTitle": "Udalosti",
+			"displayMenu": {
+				"menuTitle": "Možnosti zobrazenia",
+				"menuTooltip": "Možnosti zobrazenia",
+				"optionShowTimeline": "Zobraziť udalosti na časovej osy",
+				"optionShowList": "Zobraziť udalosti ako zoznam"
+			},
+			"optionsMenu": {
+				"menuTitle": "Možnosti",
+				"menuTooltip": "Vybrať fakty pre zobrazenie",
+				"optionWorks": "Zobraziť práce",
+				"optionRelatedPeople": "Zobraziť udalosti ľudí, ktorých sa to týka",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurovať"
+				},
+				"optionRelatedTopics": "Zobraziť udalosti tém, ktorých sa to týka"
+			}
+		},
+		"Wikidata": {
+			"headerTitle": "Fakty",
+			"extLink": {
+				"linkTitleWD": "Zobraziť alebo upraviť vo Wikidáta"
+			},
+			"noTopicFoundText": "Téma sa nenašla"
+		},
+		"Wikipedia": {
+			"headerTitle": "Článok",
+			"missingArticle": "Vo vašom jazyku neexistuje žiaden článok na túto tému. Môžete čítať články v iných dostupných jazykoch vybratím jazyka z ponuky vyššie. Môžete tiež vytvoriť článok vo vašom jazyku stlačením ikony plus.",
+			"missingArticleMissing": "Vo vašom jazyku neexistuje článok na túto tému.",
+			"missingArticleChoose": "Môžete čítať články v iných dostupných jazykoch vybratím jazyka z ponuky vyššie. Môžete tiež vytvoriť článok vo vašom jazyku stlačením ikony plus.",
+			"missingArticleCreate": "Môžete vytvoriť článok vo vašom jazyku stlačením ikony plus.",
+			"missingArticleFallback": "Tento článok v inom jazyku sa Vám zobrazuje na základe Vašich jazykových nastavení.",
+			"missingArticleTranslate": "Tento článok môžete preložiť do iného jazyka tak, že ho vyberiete v ponuke s jazykmi.",
+			"missingArticleAuto": "Tento krátky text bol vytvorený automaticky z uložených faktov. Môžete ho uložiť a začať upravovať článok.",
+			"extLink": {
+				"linkTitleWP": "Čítať alebo upraviť vo Wikipédii"
+			},
+			"addLink": {
+				"linkTitleWP": "Vytvoriť článok na Wikipédii"
+			},
+			"languageMenu": {
+				"menuTitle": "Čítať článok v inom jazyku",
+				"translateArticleText": "Preložiť tento článok do vášho jazyka",
+				"otherLanguagestext": "Iné jazyky"
+			}
+		},
+		"Locations": {
+			"headerTitle": "Na tejto lokalizácii"
+		}
+	}
+}
