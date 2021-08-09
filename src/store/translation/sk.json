@@ -208,7 +208,59 @@
 			}
 		},
 		"Locations": {
-			"headerTitle": "Na tejto lokalizácii"
+			"headerTitle": "Na tejto lokalizácii",
+			"intro": "Tu vidíte všetko čo je lokalizované v téme tejto stránky. Zobrazenie v režime zoznamu Vám umožní vidieť všetky lokalizácie, ktoré boli uložené.",
+			"sortMenu": {
+				"title": "Triediť lokalizácie",
+				"tooltip": "Triediť lokalizácie",
+				"optionTime": "Podľa času",
+				"optionAlpha": "V abecednom poradí",
+				"optionDist": "Podľa vzdialenosti",
+				"optionClear": "Zrušiť triedenie"
+			},
+			"facetMenu": {
+				"optionColl": "Tvorca",
+				"optionCity": "Poloha"
+			},
+			"displayMenu": {
+				"title": "Zobraziť ako",
+				"tooltip": "Vybrať zobrazenie",
+				"optionGallery": "Galéria",
+				"optionList": "Zoznam"
+			},
+			"showAll": "Všetko"
+		},
+		"Depicted": {
+			"headerTitle": "Zobrazené v",
+			"intro": "Táto téma je zobrazená v týchto prácach. Práce môžete triediť podľa rôznych merítok a pri zobrazení prác v zozname uvidíte aj tie bez obrázka.",
+			"sortMenu": {
+				"title": "Triediť práce",
+				"tooltip": "Triediť práce",
+				"optionTime": "Podľa času",
+				"optionAlpha": "V abecednom poradí",
+				"optionClear": "Zrušiť triedenie"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionColl": "Tvorca"
+			},
+			"displayMenu": {
+				"title": "Zobraziť ako",
+				"tooltip": "Vybrať zobrazenie",
+				"optionGallery": "Galéria",
+				"optionList": "Zoznam"
+			},
+			"showAll": "Všetko"
+		},
+		"Map": {
+			"headerTitle": "Lokalizácia na mape"
+		},
+		"Parts": {
+			"headerTitle": "Časti",
+			"intro": "Tieto časti patria tejto téme. Môžete ich triediť podľa času a názvu. Pre zobrazenie všetkých tém vrátane tých bez obrázka musíte vybrať zobrazenie ako zoznam."
+		},
+		"Partof": {
+			"headerTitle": "Súčasť"
 		}
 	}
 }
