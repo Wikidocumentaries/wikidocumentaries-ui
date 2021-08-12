@@ -219,6 +219,9 @@
 				"optionClear": "Zrušiť triedenie"
 			},
 			"facetMenu": {
+				"title": "Facet lokácie podľa",
+				"tooltip": "Facet lokácie podľa iných kritérií",
+				"optionType": "Typ",
 				"optionColl": "Tvorca",
 				"optionCity": "Poloha"
 			},
@@ -241,6 +244,8 @@
 				"optionClear": "Zrušiť triedenie"
 			},
 			"facetMenu": {
+				"title": "Facetové práce podľa",
+				"tooltip": "Facetové práce podľa iných kritérií",
 				"optionType": "Typ",
 				"optionColl": "Tvorca"
 			},
@@ -252,6 +257,10 @@
 			},
 			"showAll": "Všetko"
 		},
+		"Depicts": {
+			"headerTitle": "Vykresľuje",
+			"intro": "Táto práca vykresľuje tieto témy. Môžete ich usporiadať podľa času a názvu. Pre zobrazenie všetkých tém vrátane tých bez obrázka, musíte vybrať zobrazenie ako zoznam."
+		},
 		"Map": {
 			"headerTitle": "Lokalizácia na mape"
 		},
@@ -260,7 +269,78 @@
 			"intro": "Tieto časti patria tejto téme. Môžete ich triediť podľa času a názvu. Pre zobrazenie všetkých tém vrátane tých bez obrázka musíte vybrať zobrazenie ako zoznam."
 		},
 		"Partof": {
-			"headerTitle": "Súčasť"
+			"headerTitle": "Súčasť",
+			"intro": "Tieto časti patria iným témam. Môžete ich triediť podľa času a názvu. Pre zobrazenie všetkých tém vrátane tých bez obrázka musíte vybrať zobrazenie ako zoznam."
+		},
+		"Twins": {
+			"headerTitle": "Sesterské mestá",
+			"intro": "Sesterské mestá a municipality a iné lokácie, ktoré majú medzi sebou nejaký druh spolupráce alebo dohody buď formálne alebo neformálne potvrdené vládou. Dajú sa triediť podľa času a názvu. Pre zobrazenie všetkých tém vrátane tých bez obrázkov, musíte zapnúť zobrazenie režimu zoznamu."
+		},
+		"Affiliations": {
+			"headerTitle": "Príslušnosti",
+			"intro": "Organizácie, ku ktorým má táto osoba alebo organizácia príslušnosť."
+		},
+		"Awards": {
+			"headerTitle": "Ocenenia",
+			"intro": "Nominácie a ocenenia témy tejto stránky."
+		},
+		"Similar": {
+			"headerTitle": "Podobné témy",
+			"intro": "Nájsť témy, ktoré majú nejaké spoločné kľúčové znaky s touto témou."
+		},
+		"Effects": {
+			"headerTitle": "Účinky",
+			"intro": "toto sú účinky tejto témy."
+		},
+		"Things": {
+			"headerTitle": "Zoznam zameraných tém",
+			"intro": "Na tomto zozname sú témy na ktoré je zameraná pozornosť tohto wiki projektu."
+		},
+		"Instances": {
+			"headerTitle": "Inštancie tejto témy",
+			"intro": "Pozrieť inštancie tejto témy. Pre zobrazenie položiek bez obrázkov zapnite režim zoznamu."
+		},
+		"Location": {
+			"headerTitle": "Poloha",
+			"intro": "Táto téma je situovaná v tejto téme alebo v kontexte tejto témy."
+		},
+		"Subclasses": {
+			"headerTitle": "Podtriedy tejto témy",
+			"intro": "Pozrieť podtriedy tejto témy. Pre zobrazenie položiek bez obrázkov zapnite režim zoznamu."
+		},
+		"Links": {
+			"headerTitle": "Odkazy z tohto článku"
+		},
+		"Familytree": {
+			"headerTitle": "Rodokmeň"
+		},
+		"Names": {
+			"headerTitle": "Názvy",
+			"intro": "Pozrieť názvy tejto témy a všetky dostupné alternatívy."
+		},
+		"Works": {
+			"headerTitle": "Práce",
+			"intro": "Toto sú práce človeka, kolektívu alebo organizácie, ktorí sú témou článku na tejto stránke. Zobrazené sú len práce s obrázkami a práce sa dajú prezrieť kliknutím na ne. Pre zobrazenie všetkých súvisiacich prác, zapnite režim zobrazenia zoznamu.",
+			"sortMenuTitle": "Triediť",
+			"sortMenuTooltip": "Triediť položky",
+			"sortMenuOptionTime": "Podľa času",
+			"sortMenuOptionAlpha": "V abecednom poradí",
+			"sortMenuOptionDist": "Podľa vzdialenosti",
+			"sortMenuOptionClear": "Zrušiť triedenie",
+			"facetMenuTitle": "Facet by",
+			"facetMenuTooltip": "Facetové práce podľa iných kritérií",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Kolekcia",
+			"facetMenuOptionCity": "Poloha",
+			"displayMenuTitle": "Zobraziť ako",
+			"displayMenuTooltip": "Vybrať zobrazenie",
+			"displayMenuOptionGallery": "Galéria",
+			"displayMenuOptionList": "Zoznam",
+			"displayMenuOptionMap": "Mapa",
+			"showAll": "Všetko"
+		},
+		"People": {
+			"headerTitle": "Ľudia súvisiaci s touto témou"
 		}
 	}
 }
