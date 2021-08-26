@@ -351,6 +351,7 @@
 			"sortMenuOptionLast": "Podľa priezviska",
 			"sortMenuOptionClear": "Zmazať triedenie",
 			"facetMenuTitle": "Facet by",
+			"facetMenuTooltip": "Facet ľudia podľa rôznych aspektov",
 			"facetMenuOptionProfession": "Profesia",
 			"facetMenuOptionCountry": "Krajina",
 			"facetMenuOptionCity": "Pohlavie"
@@ -416,7 +417,116 @@
 			"photograph": "Fotografia",
 			"image": "Obrázok",
 			"photographer": "Fotograf",
-			"addPhotographData": "Pridať informáciu o fotografii"
+			"addPhotographData": "Pridať informáciu o fotografii",
+			"copyrightNotePD": "Obrázok je licencovaný cez $1, ale na základe meta údajov je vo verejnej doméne.",
+			"copyrightNoteSame": "Ten istý obrázok je má voľnejšiu licenciu s $1, preto to platí aj pre tento obrázok.",
+			"digitalCopy": "Digitálna kópia",
+			"publishingPlatform": "Publikačná platforma",
+			"platformId": "ID",
+			"provider": "Poskytovateľ obsahu",
+			"imageInfoPage": "Stránka s informáciami o obrázku",
+			"imageDimensions": "Rozmery obrázka",
+			"fileSize": "Veľkosť súboru",
+			"fileFormat": "Formát súboru",
+			"remove": "Odstrániť",
+			"moveTo": "Presunúť do iného políčka",
+			"addData": "Pridať údaje",
+			"uploader": "Nahrávajúci",
+			"rotate": "Otáčať"
+		},
+		"imageActions": {
+			"rotateImage": "Otočiť obrázok",
+			"clockwise": "v smere hodinových ručičiek",
+			"counterclockwise": "v proti smere hodinových ručičiek",
+			"flip": "Preklopiť",
+			"horizontal": "horizontálne",
+			"vertical": "vertikálne"
+		},
+		"closeViewer": "Zavrieť prehliadanie"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Skombinovať názvy miest"
 		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Hľadať historické mapy",
+			"filterBySourceMenuText": "Filtrovať podľa zdroja...",
+			"filterByTimeMenuText": "Filtrovať podľa času...",
+			"filterByMapMenuText": "Filtrovať cez mapu..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Pre historickú mapu pozrite autorov a autorské práva",
+			"attribution2PrefixText": "Opravená mapa z"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparentnosť historickej základnej mapy:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Triediť témy",
+			"tooltip": "Triediť témy",
+			"optionTime": "Podľa času",
+			"optionStart": "Podľa času začiatku",
+			"optionEnd": "Podľa času ukončenia",
+			"optionTitle": "Podľa názvu",
+			"optionCause": "Podľa príčiny",
+			"optionPartof": "Podľa položky, ktorá je tohoto súčasťou",
+			"optionSuperclass": "Podľa triedy, ktorá je tohoto podtriedou",
+			"optionAlpha": "V abecednom poradí",
+			"optionTitleAlpha": "V abecednom poradí názvov",
+			"optionCreatorAlpha": "V abecednom poradí autorov",
+			"optionDist": "Podľa vzdialenosti",
+			"optionRev": "Reverzné triedenie",
+			"optionClear": "Zrušiť triedenie"
+		},
+		"facetMenu": {
+			"title": "Facet by",
+			"tooltip": "Facet témy podľa rôznych kritérií",
+			"optionType": "Typ",
+			"optionColl": "Tvorca",
+			"optionCity": "Poloha"
+		},
+		"displayMenu": {
+			"title": "Zobraziť ako",
+			"tooltip": "Vybrať zobrazenie",
+			"optionGallery": "Galéria",
+			"optionList": "Zoznam"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "Wikidokumentáre",
+		"ok": "OK",
+		"cancel": "Zrušiť",
+		"helpText": "Pomocník",
+		"expand": "Rozbaliť tento odsek",
+		"collapse": "Zbaliť tento odsek",
+		"menus": {
+			"actionMenuTitle": "Akcie",
+			"actionMenuTooltip": "Akcie",
+			"languageMenuTitle": "Vybrať jazyk",
+			"languageMenuTooltip": "Zvoľte si jazyk",
+			"myLanguagesItem": "Moje jazyky",
+			"languageMenuTranslate": "Preložiť tento článok do angličtiny"
+		},
+		"languageMenu": {
+			"TranslateUI": "Preložiť do Vášho jazyka"
+		},
+		"languages": {
+			"fi": "Fínčina",
+			"en": "Angličtina",
+			"sv": "Švédčina",
+			"es": "Španielčina"
+		}
+	},
+	"Banner": {
+		"WLM2020": "Vyfotografujte túto kultúrnu pamiatku a zúčastnite sa súťaže <a href='https://www.wikilovesmonuments.org/'>Wiki miluje monumenty 2020</a>!",
+		"WLM2020Button": "Nahrať obrázok"
 	}
 }
