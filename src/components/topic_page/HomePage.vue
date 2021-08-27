@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <!-- <Banner id="banner"></Banner> -->
+    <Banner id="banner"></Banner>
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
@@ -19,13 +19,15 @@
     </div>
     <Kartta id="kartta"></Kartta>
     <Location id="location"></Location>
+<!--     <Names id="names"></Names> -->
     <Heritage id="heritage"></Heritage>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
-<!--     <Partof id="partof"></Partof> -->
+    <Partof id="partof"></Partof>
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
+    <CV id="cv"></CV>
     <People id="people"></People>
     <Effects id="effects"></Effects>
     <Works id="works"></Works>
@@ -35,7 +37,7 @@
     <Affiliations id="affiliations"></Affiliations>
     <Depicted id="depicted"></Depicted>
 <!--     <TopicMap id="topicMap"></TopicMap> -->
-<!--     <TopicTimeline id="topicTimeline"></TopicTimeline> -->
+    <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
     <Similar id="similar"></Similar>
     <TopicImages
@@ -50,6 +52,7 @@
 import Affiliations from "@/components/topic_page/Affiliations";
 import Awards from "@/components/topic_page/Awards";
 import Banner from "@/components/topic_page/Banner";
+import CV from "@/components/topic_page/CV";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
@@ -59,6 +62,7 @@ import Instances from "@/components/topic_page/Instances";
 import Location from "@/components/topic_page/Location";
 import Locations from "@/components/topic_page/Locations";
 import Kartta from "@/components/topic_page/Kartta";
+/* import Names from "@/components/topic_page/Names"; */
 import People from "@/components/topic_page/People";
 import Partof from "@/components/topic_page/Partof";
 import Parts from "@/components/topic_page/Parts";
@@ -71,7 +75,7 @@ import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
 import Twins from "@/components/topic_page/Twins";
 import WikipediaArticle from "@/components/topic_page/Wikipedia";
 import WikidataItem from "@/components/topic_page/Wikidata";
-//import TopicTimeline from "@/components/topic_page/TopicTimeline";
+import TopicTimeline from "@/components/topic_page/TopicTimeline";
 //import EventList from "@/components/topic_page/EventList";
 import Works from "@/components/topic_page/Works";
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
@@ -88,17 +92,18 @@ export default {
     Affiliations,
     Awards,
     Banner,
+    CV,
     Depicted,
     Depicts,
     Effects,
     Footer,
-/*     TopicTimeline, */
 /*     EventList, */
     Heritage,
     Instances,
     Location,
     Locations,
     Kartta,
+/*     Names, */
     People,
     Parts,
     Partof,
@@ -108,6 +113,7 @@ export default {
     TopicPageHeader,
 /*     TopicMap, */
     TopicImages,
+    TopicTimeline,
     Twins,
     WikidataItem,
     WikipediaArticle,
