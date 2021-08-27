@@ -76,7 +76,7 @@ export default {
         "campaign": "wlm-eg",
         "start": "2020-10-01",
         "end": "2020-10-31"
-    }, */
+    }, 
     {
         "country": "Finland",
         "qid": "Q33",
@@ -84,7 +84,7 @@ export default {
         "start": "2020-09-01",
         "end": "2020-09-30"
     },
-/*     {
+     {
         "country": "France",
         "qid": "Q142",
         "campaign": "wlm-fr",
@@ -109,8 +109,8 @@ export default {
         "country": "India",
         "qid": "Q668",
         "campaign": "wlm-in",
-        "start": "2020-09-01",
-        "end": "2020-09-30"
+        "start": "2021-08-27",
+        "end": "2021-09-30"
     },
 /*     {
         "country": "Iraq",
