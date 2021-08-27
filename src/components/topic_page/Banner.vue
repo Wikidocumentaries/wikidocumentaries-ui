@@ -2,8 +2,8 @@
 <div v-if="(isHeritage && active == true)">
   <div class="banner">
       <div class="bannercontent"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LUSITANA_WLM_2011_d.svg">
-      <div class="message"><span class="gallery-title" v-html="$t('Banner.WLM2020')"></span></div>
-      <a :href="campaignLink" class="noshadow" target="_blank"><div class="upload-button">{{ $t('Banner.WLM2020Button') }}</div></a>
+      <div class="message"><span class="gallery-title" v-html="campaignText"></span></div>
+      <a :href="campaignLink" class="noshadow" target="_blank"><div class="upload-button">{{ $t('Banner.WLMButton') }}</div></a>
       </div>
   </div>
 </div>
@@ -110,7 +110,8 @@ export default {
         "qid": "Q668",
         "campaign": "wlm-in",
         "start": "2021-08-27",
-        "end": "2021-09-30"
+        "end": "2021-09-30",
+        "web": "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2021_in_India"
     },
 /*     {
         "country": "Iraq",
@@ -311,6 +312,22 @@ export default {
                     idValue = this.$store.state.wikidocumentaries.wikidataId;
             }
             return idValue;
+        },
+        campaignText() {
+            let sourceText = this.$t('Banner.WLMText');
+            let web;
+            let year;
+            let countries = this.participating;
+            for (var index in countries) {
+                if (countries[index].qid == this.countryId) {
+                    web = countries[index].web;
+                    year = countries[index].start.substring(0, 4);
+                }
+            }
+            let wlm = this.$t('Banner.WLM').replace("$1",year);
+            let link = '<a href="' + web + '" target="blank"> ' + wlm + '</a>';
+            let campaignText = sourceText.replace("$2",link);
+            return campaignText;
         },
         campaignLink() {
             let titleText = this.$store.state.wikidocumentaries.title ? this.$store.state.wikidocumentaries.title : "Cultural heritage monument";

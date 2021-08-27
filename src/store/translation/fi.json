@@ -528,6 +528,6 @@
 	},
 	"Banner": {
 		"WLM2020": "Kuvaa tämä kulttuuriperintökohde ja osallistu <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> valokuvauskilpailuun!",
-		"WLM2020Button": "Lataa kuva"
+		"WLMButton": "Lataa kuva"
 	}
 }

@@ -527,6 +527,6 @@
 	},
 	"Banner": {
 		"WLM2020": "この文化遺産の現地写真を撮って<a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> 競技に参加しよう！",
-		"WLM2020Button": "画像をアップロード"
+		"WLMButton": "画像をアップロード"
 	}
 }
