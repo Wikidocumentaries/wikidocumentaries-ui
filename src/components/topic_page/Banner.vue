@@ -109,7 +109,7 @@ export default {
         "country": "India",
         "qid": "Q668",
         "campaign": "wlm-in",
-        "start": "2021-08-27",
+        "start": "2021-09-01",
         "end": "2021-09-30",
         "web": "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2021_in_India"
     },
