@@ -31,64 +31,6 @@
 		"mapSearchPageName": "Serĉi mapojn"
 	},
 	"topic_page": {
-		"TopicImages": {
-			"facetMenu": {
-				"time": "tempo",
-				"map": "mapo",
-				"people": "homoj",
-				"places": "lokoj",
-				"topics": "temoj",
-				"form": "formo",
-				"imageSize": "grando de bildo",
-				"large": "granda",
-				"medium": "meza",
-				"small": "malgranda",
-				"creator": "kreinto",
-				"source": "fonto"
-			}
-		},
-		"Events": {
-			"headerTitle": "Eventoj",
-			"optionsMenu": {
-				"subRelatedPeopleConf": {
-					"menuTitle": "Agordi"
-				}
-			}
-		},
-		"Wikidata": {
-			"headerTitle": "Faktoj"
-		},
-		"Wikipedia": {
-			"headerTitle": "Artikolo",
-			"extLink": {
-				"linkTitleWP": "Legi aŭ redakti ĉe Vikipedio"
-			},
-			"addLink": {
-				"linkTitleWP": "Krei artikolon ĉe Vikipedio"
-			},
-			"languageMenu": {
-				"menuTitle": "Legi artikolon en alia lingvo",
-				"translateArticleText": "Traduki ĉi-artikolon anglen",
-				"otherLanguagestext": "Aliaj lingvoj"
-			}
-		},
-		"Locations": {
-			"sortMenu": {
-				"optionTime": "Laŭ tempo",
-				"optionAlpha": "Alfabete"
-			},
-			"facetMenu": {
-				"optionType": "Speco",
-				"optionColl": "Kreinto",
-				"optionCity": "Loko"
-			},
-			"displayMenu": {
-				"title": "Prezenti kiel",
-				"optionGallery": "Galerio",
-				"optionList": "Listo"
-			},
-			"showAll": "Ĉiuj"
-		},
 		"Depicted": {
 			"sortMenu": {
 				"optionTime": "Laŭ tempo",
@@ -108,11 +50,56 @@
 		"Depicts": {
 			"headerTitle": "Prezentas"
 		},
+		"Events": {
+			"headerTitle": "Eventoj",
+			"optionsMenu": {
+				"subRelatedPeopleConf": {
+					"menuTitle": "Agordi"
+				}
+			}
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "Laŭ tempo",
+				"optionAlpha": "Alfabete"
+			},
+			"facetMenu": {
+				"optionType": "Speco",
+				"optionColl": "Kreinto",
+				"optionCity": "Loko"
+			},
+			"displayMenu": {
+				"title": "Prezenti kiel",
+				"optionGallery": "Galerio",
+				"optionList": "Listo"
+			},
+			"showAll": "Ĉiuj"
+		},
 		"Parts": {
 			"headerTitle": "Partoj"
 		},
 		"Names": {
 			"headerTitle": "Nomoj"
+		},
+		"People": {
+			"sortMenuTitle": "Ordigi",
+			"facetMenuOptionCountry": "Lando"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "tempo",
+				"map": "mapo",
+				"people": "homoj",
+				"places": "lokoj",
+				"topics": "temoj",
+				"form": "formo",
+				"imageSize": "grando de bildo",
+				"large": "granda",
+				"medium": "meza",
+				"small": "malgranda",
+				"creator": "kreinto",
+				"source": "fonto"
+			}
 		},
 		"Works": {
 			"headerTitle": "Verkoj",
@@ -120,9 +107,22 @@
 			"facetMenuOptionType": "Speco",
 			"displayMenuOptionGallery": "Galerio"
 		},
-		"People": {
-			"sortMenuTitle": "Ordigi",
-			"facetMenuOptionCountry": "Lando"
+		"Wikidata": {
+			"headerTitle": "Faktoj"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikolo",
+			"extLink": {
+				"linkTitleWP": "Legi aŭ redakti ĉe Vikipedio"
+			},
+			"addLink": {
+				"linkTitleWP": "Krei artikolon ĉe Vikipedio"
+			},
+			"languageMenu": {
+				"menuTitle": "Legi artikolon en alia lingvo",
+				"translateArticleText": "Traduki ĉi-artikolon anglen",
+				"otherLanguagestext": "Aliaj lingvoj"
+			}
 		}
 	},
 	"imageViewer": {

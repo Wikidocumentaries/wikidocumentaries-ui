@@ -32,14 +32,99 @@
 		"mapSearchPageName": "Kaarten duerchsichen"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Affiliatiounen"
+		},
+		"Awards": {
+			"headerTitle": "Auszeechnungen"
+		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "J."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Wierker zortéieren",
+				"optionTime": "No der Zäit",
+				"optionAlpha": "Alphabetesch"
+			},
+			"facetMenu": {
+				"optionType": "Typ"
+			},
+			"displayMenu": {
+				"optionGallery": "Galerie",
+				"optionList": "Lëscht"
+			},
+			"showAll": "All"
+		},
+		"Events": {
+			"headerTitle": "Evenementer",
+			"displayMenu": {
+				"menuTitle": "Optioune weisen",
+				"menuTooltip": "Optioune weisen"
+			},
+			"optionsMenu": {
+				"menuTitle": "Optiounen",
+				"optionWorks": "Wierker weisen",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Astellen"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Den Titel änneren",
 			"titleApproveText": "Dësen Titel akzeptéieren",
 			"subtitleEditText": "D'Beschreiwung änneren",
 			"subtitleApproveText": "Dës Beschreiwung akzeptéieren"
+		},
+		"Locations": {
+			"headerTitle": "Op dëser Plaz",
+			"sortMenu": {
+				"optionTime": "No der Zäit",
+				"optionDist": "No Distanz"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionCity": "Plaz"
+			},
+			"displayMenu": {
+				"optionList": "Lëscht"
+			},
+			"showAll": "All"
+		},
+		"Map": {
+			"headerTitle": "Plaz op der Kaart"
+		},
+		"Parts": {
+			"headerTitle": "Deeler"
+		},
+		"Partof": {
+			"headerTitle": "Deel vu(n)"
+		},
+		"Effects": {
+			"headerTitle": "Effekter"
+		},
+		"Instances": {
+			"headerTitle": "Instanze vun dësem Sujet"
+		},
+		"Links": {
+			"headerTitle": "Linke vun dësem Artikel"
+		},
+		"Location": {
+			"headerTitle": "Plaz"
+		},
+		"Names": {
+			"headerTitle": "Nimm"
+		},
+		"People": {
+			"sortMenuTitle": "Zortéieren",
+			"sortMenuOptionBirth": "Nom Gebuertsdatum",
+			"sortMenuOptionDeath": "Nom Doudesdatum",
+			"sortMenuOptionName": "Nom Numm",
+			"sortMenuOptionFirst": "Nom Virnumm",
+			"sortMenuOptionLast": "Nom Familljennumm",
+			"facetMenuOptionProfession": "Beruff",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Geschlecht"
 		},
 		"TopicImages": {
 			"headerTitle": "Biller aus den Archiven",
@@ -85,19 +170,19 @@
 			"headerTitle": "Chronologie",
 			"centuryText": "Jh"
 		},
-		"Events": {
-			"headerTitle": "Evenementer",
-			"displayMenu": {
-				"menuTitle": "Optioune weisen",
-				"menuTooltip": "Optioune weisen"
-			},
-			"optionsMenu": {
-				"menuTitle": "Optiounen",
-				"optionWorks": "Wierker weisen",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Astellen"
-				}
-			}
+		"Works": {
+			"headerTitle": "Wierker",
+			"sortMenuTitle": "Zortéieren",
+			"sortMenuOptionTime": "No der Zäit",
+			"sortMenuOptionAlpha": "Alphabetesch",
+			"sortMenuOptionDist": "No Distanz",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Sammlung",
+			"facetMenuOptionCity": "Plaz",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Lëscht",
+			"displayMenuOptionMap": "Kaart",
+			"showAll": "All"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakten",
@@ -119,91 +204,6 @@
 				"translateArticleText": "Dësen Artikel an Är Sprooch iwwersetzen",
 				"otherLanguagestext": "Aner Sproochen"
 			}
-		},
-		"Locations": {
-			"headerTitle": "Op dëser Plaz",
-			"sortMenu": {
-				"optionTime": "No der Zäit",
-				"optionDist": "No Distanz"
-			},
-			"facetMenu": {
-				"optionType": "Typ",
-				"optionCity": "Plaz"
-			},
-			"displayMenu": {
-				"optionList": "Lëscht"
-			},
-			"showAll": "All"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"title": "Wierker zortéieren",
-				"optionTime": "No der Zäit",
-				"optionAlpha": "Alphabetesch"
-			},
-			"facetMenu": {
-				"optionType": "Typ"
-			},
-			"displayMenu": {
-				"optionGallery": "Galerie",
-				"optionList": "Lëscht"
-			},
-			"showAll": "All"
-		},
-		"Map": {
-			"headerTitle": "Plaz op der Kaart"
-		},
-		"Parts": {
-			"headerTitle": "Deeler"
-		},
-		"Partof": {
-			"headerTitle": "Deel vu(n)"
-		},
-		"Affiliations": {
-			"headerTitle": "Affiliatiounen"
-		},
-		"Awards": {
-			"headerTitle": "Auszeechnungen"
-		},
-		"Effects": {
-			"headerTitle": "Effekter"
-		},
-		"Instances": {
-			"headerTitle": "Instanze vun dësem Sujet"
-		},
-		"Location": {
-			"headerTitle": "Plaz"
-		},
-		"Links": {
-			"headerTitle": "Linke vun dësem Artikel"
-		},
-		"Names": {
-			"headerTitle": "Nimm"
-		},
-		"Works": {
-			"headerTitle": "Wierker",
-			"sortMenuTitle": "Zortéieren",
-			"sortMenuOptionTime": "No der Zäit",
-			"sortMenuOptionAlpha": "Alphabetesch",
-			"sortMenuOptionDist": "No Distanz",
-			"facetMenuOptionType": "Typ",
-			"facetMenuOptionColl": "Sammlung",
-			"facetMenuOptionCity": "Plaz",
-			"displayMenuOptionGallery": "Galerie",
-			"displayMenuOptionList": "Lëscht",
-			"displayMenuOptionMap": "Kaart",
-			"showAll": "All"
-		},
-		"People": {
-			"sortMenuTitle": "Zortéieren",
-			"sortMenuOptionBirth": "Nom Gebuertsdatum",
-			"sortMenuOptionDeath": "Nom Doudesdatum",
-			"sortMenuOptionName": "Nom Numm",
-			"sortMenuOptionFirst": "Nom Virnumm",
-			"sortMenuOptionLast": "Nom Familljennumm",
-			"facetMenuOptionProfession": "Beruff",
-			"facetMenuOptionCountry": "Land",
-			"facetMenuOptionCity": "Geschlecht"
 		}
 	},
 	"imageViewer": {

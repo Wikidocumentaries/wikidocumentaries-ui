@@ -69,16 +69,171 @@
 		"waitMessage": "Veuillez patienter : récupération en cours des données depuis Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Affiliations",
+			"intro": "Organisations avec lesquelles cette personne ou cette organisation sont affiliées."
+		},
+		"Awards": {
+			"headerTitle": "Récompenses",
+			"intro": "Nominations et récompenses du sujet de cette page."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Choisir une ou plusieurs cartes de base historiques",
 			"chooseMapHelpNote": "Conseil : Ctrl+Clic permet de sélectionner plusieurs cartes",
 			"yearAbbreviation": "a."
+		},
+		"Collection": {
+			"headerTitle": "Travaux dans la collection",
+			"intro": "Les travaux suivants sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls seront affichés les travaux qui ont cette information."
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Voici les événements professionnels de la personne du sujet."
+		},
+		"Depicted": {
+			"headerTitle": "Dépeint dans",
+			"intro": "Ce sujet est dépeint dans les œuvres suivantes, triées selon différents critères et affichées sous forme de liste pour voir celles sans image.",
+			"sortMenu": {
+				"title": "Trier les travaux",
+				"tooltip": "Trier les travaux",
+				"optionTime": "Chronologiquement",
+				"optionAlpha": "Alphabétiquement",
+				"optionClear": "Ne pas trier"
+			},
+			"facetMenu": {
+				"title": "Facetter les travaux par",
+				"tooltip": "Facetter les travaux selon différents critères",
+				"optionType": "Type",
+				"optionColl": "Créateur"
+			},
+			"displayMenu": {
+				"title": "Afficher comme",
+				"tooltip": "Choisir l’affichage",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Tous"
+		},
+		"Depicts": {
+			"headerTitle": "Dépeint",
+			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
+		"Events": {
+			"headerTitle": "Événements",
+			"displayMenu": {
+				"menuTitle": "Options d’affichage",
+				"menuTooltip": "Options d’affichage",
+				"optionShowTimeline": "Afficher les événements sur une frise chronologique",
+				"optionShowList": "Afficher les événements sous forme de liste"
+			},
+			"optionsMenu": {
+				"menuTitle": "Options",
+				"menuTooltip": "Sélectionner les faits à afficher",
+				"optionWorks": "Afficher les travaux",
+				"optionRelatedPeople": "Afficher les événements des personnes associées",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurer"
+				},
+				"optionRelatedTopics": "Afficher les événements des sujets associés"
+			}
 		},
 		"Header": {
 			"titleEditText": "Modifier le titre",
 			"titleApproveText": "Approuver ce titre",
 			"subtitleEditText": "Modifier la description",
 			"subtitleApproveText": "Approuver cette description"
+		},
+		"Locations": {
+			"headerTitle": "À cet endroit",
+			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
+			"sortMenu": {
+				"title": "Trier les emplacements",
+				"tooltip": "Trier les emplacements",
+				"optionTime": "Chronologiquement",
+				"optionAlpha": "Alphabétiquement",
+				"optionDist": "Selon la distance",
+				"optionClear": "Ne pas trier"
+			},
+			"facetMenu": {
+				"title": "Facetter les emplacements par",
+				"tooltip": "Facetter les emplacements selon différents critères",
+				"optionType": "Type",
+				"optionColl": "Créateur",
+				"optionCity": "Emplacement"
+			},
+			"displayMenu": {
+				"title": "Afficher comme",
+				"tooltip": "Choisir l’affichage",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Tous"
+		},
+		"Map": {
+			"headerTitle": "Emplacement sur la carte"
+		},
+		"Parts": {
+			"headerTitle": "Parties",
+			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
+		},
+		"Partof": {
+			"headerTitle": "Partie de",
+			"intro": "Ce sujet fait partie de ces autres sujets. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
+		"Similar": {
+			"headerTitle": "Sujets similaires",
+			"intro": "Trouver les sujets qui ont des caractéristiques clés communes avec ce sujet."
+		},
+		"Effects": {
+			"headerTitle": "Effets",
+			"intro": "Ce sont les effets du sujet."
+		},
+		"Familytree": {
+			"headerTitle": "Arbre généalogique"
+		},
+		"Instances": {
+			"headerTitle": "Instances de ce sujet",
+			"intro": "Voir les instances de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Links": {
+			"headerTitle": "Liens depuis cet article"
+		},
+		"Location": {
+			"headerTitle": "Emplacement",
+			"intro": "Ce sujet est inclus parmi les sujets suivants ou dans leur contexte."
+		},
+		"Names": {
+			"headerTitle": "Noms",
+			"intro": "Voir les noms de ce sujet et toutes les autres alternatives."
+		},
+		"People": {
+			"headerTitle": "Personnes liées au sujet",
+			"intro": "Les personnes suivantes sont associées au sujet de cette page. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les personnes sans image. Elles peuvent être triées par date ou nom. Notez que seules celles qui ont cette information seront affichées.",
+			"sortMenuTitle": "Trier",
+			"sortMenuTooltip": "Modifier l'ordre de tri",
+			"sortMenuOptionBirth": "Par date de naissance",
+			"sortMenuOptionDeath": "Par date de décès",
+			"sortMenuOptionName": "Par nom",
+			"sortMenuOptionFirst": "Par prénom",
+			"sortMenuOptionLast": "Par nom de famille",
+			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuTitle": "Facetter par",
+			"facetMenuTooltip": "Facetter les personnes selon différents aspects",
+			"facetMenuOptionProfession": "Profession",
+			"facetMenuOptionCountry": "Pays",
+			"facetMenuOptionCity": "Genre"
+		},
+		"Subclasses": {
+			"headerTitle": "Sous-classes de ce sujet",
+			"intro": "Voir les sous-classes de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Things": {
+			"headerTitle": "Sujets de la liste de focalisation",
+			"intro": "La liste de focalisation de ce Wikiprojet traite des sujets suivants."
+		},
+		"Twins": {
+			"headerTitle": "Villes jumelées",
+			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, reconnu de façon légale ou informelle par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"TopicImages": {
 			"headerTitle": "Images des archives",
@@ -170,24 +325,26 @@
 			"showEventsOnTimelineMenuText": "Afficher les événements du sujet sur la frise chronologique",
 			"centuryText": "S"
 		},
-		"Events": {
-			"headerTitle": "Événements",
-			"displayMenu": {
-				"menuTitle": "Options d’affichage",
-				"menuTooltip": "Options d’affichage",
-				"optionShowTimeline": "Afficher les événements sur une frise chronologique",
-				"optionShowList": "Afficher les événements sous forme de liste"
-			},
-			"optionsMenu": {
-				"menuTitle": "Options",
-				"menuTooltip": "Sélectionner les faits à afficher",
-				"optionWorks": "Afficher les travaux",
-				"optionRelatedPeople": "Afficher les événements des personnes associées",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Configurer"
-				},
-				"optionRelatedTopics": "Afficher les événements des sujets associés"
-			}
+		"Works": {
+			"headerTitle": "Works",
+			"intro": "Voici les œuvres réalisées par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur une œuvre en cliquant dessus. Seules les œuvres avec des images sont affichées. Afficher comme une liste pour voir toutes les œuvres reliées qui ont été stockées.",
+			"sortMenuTitle": "Trier",
+			"sortMenuTooltip": "Trier les éléments",
+			"sortMenuOptionTime": "Chronologiquement",
+			"sortMenuOptionAlpha": "Dans l’ordre alphabétique",
+			"sortMenuOptionDist": "Selon la distance",
+			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuTitle": "Facettes par",
+			"facetMenuTooltip": "Travaux facettes selon différents critères",
+			"facetMenuOptionType": "Type",
+			"facetMenuOptionColl": "Collection",
+			"facetMenuOptionCity": "Emplacement",
+			"displayMenuTitle": "Afficher comme",
+			"displayMenuTooltip": "Choisir l’affichage",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Carte",
+			"showAll": "Tout"
 		},
 		"Wikidata": {
 			"headerTitle": "Faits",
@@ -216,159 +373,6 @@
 				"translateArticleText": "Traduire cet article dans votre langue",
 				"otherLanguagestext": "Autres langues"
 			}
-		},
-		"Locations": {
-			"headerTitle": "À cet endroit",
-			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
-			"sortMenu": {
-				"title": "Trier les emplacements",
-				"tooltip": "Trier les emplacements",
-				"optionTime": "Chronologiquement",
-				"optionAlpha": "Alphabétiquement",
-				"optionDist": "Selon la distance",
-				"optionClear": "Ne pas trier"
-			},
-			"facetMenu": {
-				"title": "Facetter les emplacements par",
-				"tooltip": "Facetter les emplacements selon différents critères",
-				"optionType": "Type",
-				"optionColl": "Créateur",
-				"optionCity": "Emplacement"
-			},
-			"displayMenu": {
-				"title": "Afficher comme",
-				"tooltip": "Choisir l’affichage",
-				"optionGallery": "Galerie",
-				"optionList": "Liste"
-			},
-			"showAll": "Tous"
-		},
-		"Depicted": {
-			"headerTitle": "Dépeint dans",
-			"intro": "Ce sujet est dépeint dans les œuvres suivantes, triées selon différents critères et affichées sous forme de liste pour voir celles sans image.",
-			"sortMenu": {
-				"title": "Trier les travaux",
-				"tooltip": "Trier les travaux",
-				"optionTime": "Chronologiquement",
-				"optionAlpha": "Alphabétiquement",
-				"optionClear": "Ne pas trier"
-			},
-			"facetMenu": {
-				"title": "Facetter les travaux par",
-				"tooltip": "Facetter les travaux selon différents critères",
-				"optionType": "Type",
-				"optionColl": "Créateur"
-			},
-			"displayMenu": {
-				"title": "Afficher comme",
-				"tooltip": "Choisir l’affichage",
-				"optionGallery": "Galerie",
-				"optionList": "Liste"
-			},
-			"showAll": "Tous"
-		},
-		"Depicts": {
-			"headerTitle": "Dépeint",
-			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
-		},
-		"Map": {
-			"headerTitle": "Emplacement sur la carte"
-		},
-		"Parts": {
-			"headerTitle": "Parties",
-			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
-		},
-		"Partof": {
-			"headerTitle": "Emplacement",
-			"intro": "Ce sujet est situé en lien avec ces sujets. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
-		},
-		"Twins": {
-			"headerTitle": "Villes jumelées",
-			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, reconnu de façon légale ou informelle par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
-		},
-		"Affiliations": {
-			"headerTitle": "Affiliations",
-			"intro": "Organisations avec lesquelles cette personne ou cette organisation sont affiliées."
-		},
-		"Awards": {
-			"headerTitle": "Récompenses",
-			"intro": "Nominations et récompenses du sujet de cette page."
-		},
-		"Similar": {
-			"headerTitle": "Sujets similaires",
-			"intro": "Trouver les sujets qui ont des caractéristiques clés communes avec ce sujet."
-		},
-		"Effects": {
-			"headerTitle": "Effets",
-			"intro": "Ce sont les effets du sujet."
-		},
-		"Things": {
-			"headerTitle": "Sujets de la liste de focalisation",
-			"intro": "La liste de focalisation de ce Wikiprojet traite des sujets suivants."
-		},
-		"Instances": {
-			"headerTitle": "Instances de ce sujet",
-			"intro": "Voir les instances de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
-		},
-		"Location": {
-			"headerTitle": "Emplacement",
-			"intro": "Ce sujet est inclus parmi les sujets suivants ou dans leur contexte."
-		},
-		"Subclasses": {
-			"headerTitle": "Sous-classes de ce sujet",
-			"intro": "Voir les sous-classes de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
-		},
-		"Links": {
-			"headerTitle": "Liens depuis cet article"
-		},
-		"Familytree": {
-			"headerTitle": "Arbre généalogique"
-		},
-		"Names": {
-			"headerTitle": "Noms",
-			"intro": "Voir les noms de ce sujet et toutes les autres alternatives."
-		},
-		"Works": {
-			"headerTitle": "Works",
-			"intro": "Voici les œuvres réalisées par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur une œuvre en cliquant dessus. Seules les œuvres avec des images sont affichées. Afficher comme une liste pour voir toutes les œuvres reliées qui ont été stockées.",
-			"sortMenuTitle": "Trier",
-			"sortMenuTooltip": "Trier les éléments",
-			"sortMenuOptionTime": "Chronologiquement",
-			"sortMenuOptionAlpha": "Dans l’ordre alphabétique",
-			"sortMenuOptionDist": "Selon la distance",
-			"sortMenuOptionClear": "Ne pas trier",
-			"facetMenuTitle": "Facettes par",
-			"facetMenuTooltip": "Travaux facettes selon différents critères",
-			"facetMenuOptionType": "Type",
-			"facetMenuOptionColl": "Collection",
-			"facetMenuOptionCity": "Emplacement",
-			"displayMenuTitle": "Afficher comme",
-			"displayMenuTooltip": "Choisir l’affichage",
-			"displayMenuOptionGallery": "Galerie",
-			"displayMenuOptionList": "Liste",
-			"displayMenuOptionMap": "Carte",
-			"showAll": "Tout"
-		},
-		"People": {
-			"headerTitle": "Personnes liées au sujet",
-			"intro": "Les personnes suivantes sont associées au sujet de cette page. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les personnes sans image. Elles peuvent être triées par date ou nom. Notez que seules celles qui ont cette information seront affichées.",
-			"sortMenuTitle": "Trier",
-			"sortMenuTooltip": "Modifier l'ordre de tri",
-			"sortMenuOptionBirth": "Par date de naissance",
-			"sortMenuOptionDeath": "Par date de décès",
-			"sortMenuOptionName": "Par nom",
-			"sortMenuOptionFirst": "Par prénom",
-			"sortMenuOptionLast": "Par nom de famille",
-			"sortMenuOptionClear": "Ne pas trier",
-			"facetMenuTitle": "Facetter par",
-			"facetMenuTooltip": "Facetter les personnes selon différents aspects",
-			"facetMenuOptionProfession": "Profession",
-			"facetMenuOptionCountry": "Pays",
-			"facetMenuOptionCity": "Genre"
-		},
-		"Collection": {
-			"headerTitle": "Travaux dans la collection",
-			"intro": "Les travaux suivants sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls seront affichés les travaux qui ont cette information."
 		}
 	},
 	"imageViewer": {
@@ -536,7 +540,8 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Photographiez ce site d’héritage culturel et participez à la compétition de photographies <a href='https://www.wikilovesmonuments.org/'>Wiki aime les monuments 2020</a> !",
+		"WLM": "Monuments aimés de wiki $1",
+		"WLMText": "Photographier ce site d’héritage culturel et participer au concours de photographie $2 !",
 		"WLMButton": "Téléverser une image"
 	}
 }

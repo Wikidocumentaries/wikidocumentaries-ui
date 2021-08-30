@@ -34,9 +34,71 @@
 		"BaseMapDialog": {
 			"yearAbbreviation": "س."
 		},
+		"Depicted": {
+			"sortMenu": {
+				"optionAlpha": "الفبایی",
+				"optionClear": "پاک کردن مرتب‌سازی"
+			},
+			"facetMenu": {
+				"optionType": "نوع",
+				"optionColl": "ایجادکننده"
+			},
+			"displayMenu": {
+				"title": "نمایش به‌صورت",
+				"optionGallery": "نگارخانه",
+				"optionList": "فهرست"
+			},
+			"showAll": "همه"
+		},
+		"Events": {
+			"headerTitle": "رویدادها",
+			"displayMenu": {
+				"menuTitle": "گزینه‌های نمایش",
+				"menuTooltip": "گزینه‌های نمایش"
+			},
+			"optionsMenu": {
+				"menuTitle": "گزینه‌ها"
+			}
+		},
 		"Header": {
 			"titleEditText": "عنوان را ویرایش کنید",
 			"titleApproveText": "این عنوان را تأیید کنید"
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionClear": "پاک کردن مرتب‌سازی"
+			},
+			"facetMenu": {
+				"optionType": "نوع",
+				"optionColl": "ایجادکننده"
+			},
+			"displayMenu": {
+				"optionList": "فهرست"
+			},
+			"showAll": "همه"
+		},
+		"Map": {
+			"headerTitle": "موقعیت بر روی نقشه"
+		},
+		"Parts": {
+			"headerTitle": "اجزا"
+		},
+		"Names": {
+			"headerTitle": "اسامی",
+			"intro": "نام‌های این مبحث و تمامی جایگزین‌های موجود را مشاهده کنید."
+		},
+		"People": {
+			"sortMenuTitle": "مرتب‌سازی",
+			"sortMenuTooltip": "تغییر ترتیب مرتب‌سازی",
+			"sortMenuOptionBirth": "بر اساس زادروز",
+			"sortMenuOptionDeath": "بر اساس زمان مرگ",
+			"sortMenuOptionName": "بر اساس نام",
+			"sortMenuOptionFirst": "بر اساس نام کوچک",
+			"sortMenuOptionLast": "بر اساس نام خانوادگی",
+			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
+			"facetMenuOptionProfession": "حرفه",
+			"facetMenuOptionCountry": "کشور",
+			"facetMenuOptionCity": "جنسیت"
 		},
 		"TopicImages": {
 			"facetMenu": {
@@ -73,69 +135,6 @@
 		"TopicTimeline": {
 			"centuryText": "ق"
 		},
-		"Events": {
-			"headerTitle": "رویدادها",
-			"displayMenu": {
-				"menuTitle": "گزینه‌های نمایش",
-				"menuTooltip": "گزینه‌های نمایش"
-			},
-			"optionsMenu": {
-				"menuTitle": "گزینه‌ها"
-			}
-		},
-		"Wikipedia": {
-			"headerTitle": "مقاله",
-			"extLink": {
-				"linkTitleWP": "مطالعه یا ویرایش در ویکی‌پدیا"
-			},
-			"addLink": {
-				"linkTitleWP": "مقاله‌ای در ویکی‌پدیا ایجاد کنید"
-			},
-			"languageMenu": {
-				"menuTitle": "مقاله را به زبان دیگری بخوانید",
-				"translateArticleText": "این مقاله را به‌زبان خود ترجمه کنید",
-				"otherLanguagestext": "زبان‌های دیگر"
-			}
-		},
-		"Locations": {
-			"sortMenu": {
-				"optionClear": "پاک کردن مرتب‌سازی"
-			},
-			"facetMenu": {
-				"optionType": "نوع",
-				"optionColl": "ایجادکننده"
-			},
-			"displayMenu": {
-				"optionList": "فهرست"
-			},
-			"showAll": "همه"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionAlpha": "الفبایی",
-				"optionClear": "پاک کردن مرتب‌سازی"
-			},
-			"facetMenu": {
-				"optionType": "نوع",
-				"optionColl": "ایجادکننده"
-			},
-			"displayMenu": {
-				"title": "نمایش به‌صورت",
-				"optionGallery": "نگارخانه",
-				"optionList": "فهرست"
-			},
-			"showAll": "همه"
-		},
-		"Map": {
-			"headerTitle": "موقعیت بر روی نقشه"
-		},
-		"Parts": {
-			"headerTitle": "اجزا"
-		},
-		"Names": {
-			"headerTitle": "اسامی",
-			"intro": "نام‌های این مبحث و تمامی جایگزین‌های موجود را مشاهده کنید."
-		},
 		"Works": {
 			"headerTitle": "آثار",
 			"sortMenuTitle": "مرتب‌سازی",
@@ -150,18 +149,19 @@
 			"displayMenuOptionMap": "نقشه",
 			"showAll": "همه"
 		},
-		"People": {
-			"sortMenuTitle": "مرتب‌سازی",
-			"sortMenuTooltip": "تغییر ترتیب مرتب‌سازی",
-			"sortMenuOptionBirth": "بر اساس زادروز",
-			"sortMenuOptionDeath": "بر اساس زمان مرگ",
-			"sortMenuOptionName": "بر اساس نام",
-			"sortMenuOptionFirst": "بر اساس نام کوچک",
-			"sortMenuOptionLast": "بر اساس نام خانوادگی",
-			"sortMenuOptionClear": "پاک کردن مرتب‌سازی",
-			"facetMenuOptionProfession": "حرفه",
-			"facetMenuOptionCountry": "کشور",
-			"facetMenuOptionCity": "جنسیت"
+		"Wikipedia": {
+			"headerTitle": "مقاله",
+			"extLink": {
+				"linkTitleWP": "مطالعه یا ویرایش در ویکی‌پدیا"
+			},
+			"addLink": {
+				"linkTitleWP": "مقاله‌ای در ویکی‌پدیا ایجاد کنید"
+			},
+			"languageMenu": {
+				"menuTitle": "مقاله را به زبان دیگری بخوانید",
+				"translateArticleText": "این مقاله را به‌زبان خود ترجمه کنید",
+				"otherLanguagestext": "زبان‌های دیگر"
+			}
 		}
 	},
 	"imageViewer": {

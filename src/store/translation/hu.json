@@ -35,6 +35,9 @@
 		"waitMessage": "Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Díjak"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Válasszon történelmi alaptérképe(ke)t",
 			"chooseMapHelpNote": "Tipp: A ctrl + klikk lehetővé teszi több térkép kiválasztását",
@@ -45,6 +48,19 @@
 			"titleApproveText": "Jóváhagyja ezt a címet",
 			"subtitleEditText": "Leírás szerkesztése",
 			"subtitleApproveText": "Leírás eltávolítása"
+		},
+		"People": {
+			"sortMenuTitle": "Rendezés",
+			"sortMenuTooltip": "Rendezési sorrend módosítása",
+			"sortMenuOptionBirth": "Születési dátum szerint",
+			"sortMenuOptionDeath": "Elhalálozási dátum szerint",
+			"sortMenuOptionName": "Név szerint",
+			"sortMenuOptionFirst": "Keresztnév szerint",
+			"sortMenuOptionLast": "Családi név szerint",
+			"sortMenuOptionClear": "Rendezés törlése",
+			"facetMenuOptionProfession": "Szakma",
+			"facetMenuOptionCountry": "Ország",
+			"facetMenuOptionCity": "Nem"
 		},
 		"TopicImages": {
 			"headerTitle": "Képek az archivumból",
@@ -108,22 +124,6 @@
 			"languageMenu": {
 				"translateArticleText": "Szócikk lefordítása angol nyelvre"
 			}
-		},
-		"Awards": {
-			"headerTitle": "Díjak"
-		},
-		"People": {
-			"sortMenuTitle": "Rendezés",
-			"sortMenuTooltip": "Rendezési sorrend módosítása",
-			"sortMenuOptionBirth": "Születési dátum szerint",
-			"sortMenuOptionDeath": "Elhalálozási dátum szerint",
-			"sortMenuOptionName": "Név szerint",
-			"sortMenuOptionFirst": "Keresztnév szerint",
-			"sortMenuOptionLast": "Családi név szerint",
-			"sortMenuOptionClear": "Rendezés törlése",
-			"facetMenuOptionProfession": "Szakma",
-			"facetMenuOptionCountry": "Ország",
-			"facetMenuOptionCity": "Nem"
 		}
 	},
 	"imageViewer": {

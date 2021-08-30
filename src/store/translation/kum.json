@@ -8,6 +8,45 @@
 		"search": "Излемек"
 	},
 	"topic_page": {
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Заманына гёре",
+				"optionAlpha": "Алифбалы"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа",
+				"optionColl": "Ясавчу"
+			},
+			"displayMenu": {
+				"optionList": "Тизме"
+			},
+			"showAll": "Тюм"
+		},
+		"Locations": {
+			"headerTitle": "Маканлар",
+			"sortMenu": {
+				"optionTime": "Заманына гёре",
+				"optionAlpha": "Алифбалы",
+				"optionDist": "Мезгилине гёре"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа",
+				"optionColl": "Ясавчу",
+				"optionCity": "Макан"
+			},
+			"displayMenu": {
+				"optionList": "Тизме"
+			},
+			"showAll": "Тюм"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Тувув тархына гёре",
+			"sortMenuOptionDeath": "Оьлюм тархына гёре",
+			"sortMenuOptionName": "Атына гёре",
+			"sortMenuOptionFirst": "Атына гёре",
+			"facetMenuOptionProfession": "Касбу",
+			"facetMenuOptionCity": "Жынс"
+		},
 		"TopicImages": {
 			"facetMenu": {
 				"time": "заман",
@@ -31,37 +70,6 @@
 		"TopicTimeline": {
 			"headerTitle": "Заман гьыз"
 		},
-		"Locations": {
-			"headerTitle": "Маканлар",
-			"sortMenu": {
-				"optionTime": "Заманына гёре",
-				"optionAlpha": "Алифбалы",
-				"optionDist": "Мезгилине гёре"
-			},
-			"facetMenu": {
-				"optionType": "Тайпа",
-				"optionColl": "Ясавчу",
-				"optionCity": "Макан"
-			},
-			"displayMenu": {
-				"optionList": "Тизме"
-			},
-			"showAll": "Тюм"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "Заманына гёре",
-				"optionAlpha": "Алифбалы"
-			},
-			"facetMenu": {
-				"optionType": "Тайпа",
-				"optionColl": "Ясавчу"
-			},
-			"displayMenu": {
-				"optionList": "Тизме"
-			},
-			"showAll": "Тюм"
-		},
 		"Works": {
 			"headerTitle": "Ишлер",
 			"sortMenuOptionTime": "Заманына гёре",
@@ -69,14 +77,6 @@
 			"facetMenuOptionCity": "Макан",
 			"displayMenuOptionList": "Тизме",
 			"showAll": "Тюм"
-		},
-		"People": {
-			"sortMenuOptionBirth": "Тувув тархына гёре",
-			"sortMenuOptionDeath": "Оьлюм тархына гёре",
-			"sortMenuOptionName": "Атына гёре",
-			"sortMenuOptionFirst": "Атына гёре",
-			"facetMenuOptionProfession": "Касбу",
-			"facetMenuOptionCity": "Жынс"
 		}
 	},
 	"general": {

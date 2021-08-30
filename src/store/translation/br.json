@@ -31,14 +31,120 @@
 		"mapSearchPageName": "Klask kartennoù"
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Prizioù"
+		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "b."
+		},
+		"Collection": {
+			"headerTitle": "Labourioù en dastumad"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Hervez an eur",
+				"optionAlpha": "Lizherennek",
+				"optionClear": "Chom hep rummañ"
+			},
+			"facetMenu": {
+				"title": "Labourioù Facet gant",
+				"tooltip": "Labourioù Facet hervez dezverkoù a bep seurt",
+				"optionType": "Seurt",
+				"optionColl": "Krouer"
+			},
+			"displayMenu": {
+				"title": "Diskwel evel",
+				"optionGallery": "Skeudennaoueg",
+				"optionList": "Roll"
+			},
+			"showAll": "An holl"
+		},
+		"Events": {
+			"headerTitle": "Darvoudoù",
+			"displayMenu": {
+				"menuTitle": "Dibarzhioù diskwel",
+				"menuTooltip": "Dibarzhioù diskwel",
+				"optionShowTimeline": "Diskouez an darvoudoù war ur frizenn gronologel"
+			},
+			"optionsMenu": {
+				"menuTitle": "Dibaboù",
+				"menuTooltip": "Diskwel ar fedoù da ziskwel",
+				"optionWorks": "Diskouez al labourioù",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Kefluniañ"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Kemmañ an titl",
 			"titleApproveText": "Aprouiñ an titl-mañ",
 			"subtitleEditText": "Kemmañ an deskrivadur",
 			"subtitleApproveText": "Aprouiñ an deskrivadur-mañ"
+		},
+		"Locations": {
+			"headerTitle": "El lec'h-mañ",
+			"sortMenu": {
+				"title": "Rummañ al lec'hiadurioù",
+				"tooltip": "Rummañ al lec'hiadurioù",
+				"optionTime": "Hervez an eur",
+				"optionAlpha": "Lizherennek",
+				"optionDist": "Hervez ar c'heit",
+				"optionClear": "Chom hep rummañ"
+			},
+			"facetMenu": {
+				"title": "Lec'hiadurioù Facet dre",
+				"tooltip": "Lec'hiadurioù Facet hervez dezverkoù a bep seurt",
+				"optionType": "Seurt",
+				"optionColl": "Krouer",
+				"optionCity": "Lec'hiadur"
+			},
+			"displayMenu": {
+				"title": "Diskwel evel",
+				"optionGallery": "Skeudennaoueg",
+				"optionList": "Roll"
+			},
+			"showAll": "An holl"
+		},
+		"Parts": {
+			"headerTitle": "Lodennoù"
+		},
+		"Partof": {
+			"headerTitle": "Kendestenn"
+		},
+		"Similar": {
+			"headerTitle": "Danvezioù kar"
+		},
+		"Effects": {
+			"headerTitle": "Efedoù",
+			"intro": "Setu aze efedoù an danvez."
+		},
+		"Instances": {
+			"intro": "Gwelet instañsoù an danvez-mañ. Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Links": {
+			"headerTitle": "Liammoù adalek ar pennad-mañ"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Dre zeiziad ganedigezh",
+			"sortMenuOptionDeath": "Dre zeiziad mervel",
+			"sortMenuOptionName": "Dre anv",
+			"sortMenuOptionFirst": "Dre anv-bihan",
+			"sortMenuOptionLast": "Dre anv-familh",
+			"sortMenuOptionClear": "Chom hep rummañ",
+			"facetMenuOptionProfession": "Micher",
+			"facetMenuOptionCountry": "Bro",
+			"facetMenuOptionCity": "Reizh"
+		},
+		"Subclasses": {
+			"headerTitle": "Iskevrennad an danvez-mañ",
+			"intro": "Gwelet iskevrennadoù an danvez-mañ.  Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Things": {
+			"headerTitle": "Danvezioù ar roll pennañ",
+			"intro": "Emañ an danvezioù-se war roll pennañ ar Wikiproject-mañ."
+		},
+		"Twins": {
+			"headerTitle": "Kêrioù gevellet"
 		},
 		"TopicImages": {
 			"headerTitle": "Skeudennoù diell",
@@ -105,21 +211,16 @@
 			"showEventsOnTimelineMenuText": "Diskwel darvoudoù an danvez war ar frizenn gronogel",
 			"centuryText": "K"
 		},
-		"Events": {
-			"headerTitle": "Darvoudoù",
-			"displayMenu": {
-				"menuTitle": "Dibarzhioù diskwel",
-				"menuTooltip": "Dibarzhioù diskwel",
-				"optionShowTimeline": "Diskouez an darvoudoù war ur frizenn gronologel"
-			},
-			"optionsMenu": {
-				"menuTitle": "Dibaboù",
-				"menuTooltip": "Diskwel ar fedoù da ziskwel",
-				"optionWorks": "Diskouez al labourioù",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Kefluniañ"
-				}
-			}
+		"Works": {
+			"headerTitle": "Labourioù",
+			"sortMenuOptionTime": "Dre an amzer",
+			"sortMenuOptionAlpha": "En urzh al lizherenneg",
+			"sortMenuOptionDist": "Dre an hed",
+			"facetMenuOptionType": "Seurt",
+			"facetMenuOptionColl": "Dastumad",
+			"facetMenuOptionCity": "Lec'hiadur",
+			"displayMenuOptionList": "Roll",
+			"showAll": "An holl"
 		},
 		"Wikidata": {
 			"headerTitle": "Fedoù",
@@ -141,107 +242,6 @@
 				"translateArticleText": "Treiñ ar pennad-mañ en ho yezh",
 				"otherLanguagestext": "Yezhoù all"
 			}
-		},
-		"Locations": {
-			"headerTitle": "El lec'h-mañ",
-			"sortMenu": {
-				"title": "Rummañ al lec'hiadurioù",
-				"tooltip": "Rummañ al lec'hiadurioù",
-				"optionTime": "Hervez an eur",
-				"optionAlpha": "Lizherennek",
-				"optionDist": "Hervez ar c'heit",
-				"optionClear": "Chom hep rummañ"
-			},
-			"facetMenu": {
-				"title": "Lec'hiadurioù Facet dre",
-				"tooltip": "Lec'hiadurioù Facet hervez dezverkoù a bep seurt",
-				"optionType": "Seurt",
-				"optionColl": "Krouer",
-				"optionCity": "Lec'hiadur"
-			},
-			"displayMenu": {
-				"title": "Diskwel evel",
-				"optionGallery": "Skeudennaoueg",
-				"optionList": "Roll"
-			},
-			"showAll": "An holl"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "Hervez an eur",
-				"optionAlpha": "Lizherennek",
-				"optionClear": "Chom hep rummañ"
-			},
-			"facetMenu": {
-				"title": "Labourioù Facet gant",
-				"tooltip": "Labourioù Facet hervez dezverkoù a bep seurt",
-				"optionType": "Seurt",
-				"optionColl": "Krouer"
-			},
-			"displayMenu": {
-				"title": "Diskwel evel",
-				"optionGallery": "Skeudennaoueg",
-				"optionList": "Roll"
-			},
-			"showAll": "An holl"
-		},
-		"Parts": {
-			"headerTitle": "Lodennoù"
-		},
-		"Partof": {
-			"headerTitle": "Kendestenn"
-		},
-		"Twins": {
-			"headerTitle": "Kêrioù gevellet"
-		},
-		"Awards": {
-			"headerTitle": "Prizioù"
-		},
-		"Similar": {
-			"headerTitle": "Danvezioù kar"
-		},
-		"Effects": {
-			"headerTitle": "Efedoù",
-			"intro": "Setu aze efedoù an danvez."
-		},
-		"Things": {
-			"headerTitle": "Danvezioù ar roll pennañ",
-			"intro": "Emañ an danvezioù-se war roll pennañ ar Wikiproject-mañ."
-		},
-		"Instances": {
-			"intro": "Gwelet instañsoù an danvez-mañ. Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
-		},
-		"Subclasses": {
-			"headerTitle": "Iskevrennad an danvez-mañ",
-			"intro": "Gwelet iskevrennadoù an danvez-mañ.  Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
-		},
-		"Links": {
-			"headerTitle": "Liammoù adalek ar pennad-mañ"
-		},
-		"Works": {
-			"headerTitle": "Labourioù",
-			"sortMenuOptionTime": "Dre an amzer",
-			"sortMenuOptionAlpha": "En urzh al lizherenneg",
-			"sortMenuOptionDist": "Dre an hed",
-			"facetMenuOptionType": "Seurt",
-			"facetMenuOptionColl": "Dastumad",
-			"facetMenuOptionCity": "Lec'hiadur",
-			"displayMenuOptionList": "Roll",
-			"showAll": "An holl"
-		},
-		"People": {
-			"sortMenuOptionBirth": "Dre zeiziad ganedigezh",
-			"sortMenuOptionDeath": "Dre zeiziad mervel",
-			"sortMenuOptionName": "Dre anv",
-			"sortMenuOptionFirst": "Dre anv-bihan",
-			"sortMenuOptionLast": "Dre anv-familh",
-			"sortMenuOptionClear": "Chom hep rummañ",
-			"facetMenuOptionProfession": "Micher",
-			"facetMenuOptionCountry": "Bro",
-			"facetMenuOptionCity": "Reizh"
-		},
-		"Collection": {
-			"headerTitle": "Labourioù en dastumad"
 		}
 	},
 	"imageViewer": {

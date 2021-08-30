@@ -66,16 +66,167 @@
 		"waitMessage": "Bir dakika lütfen... Vikipedi, Vikiveri, Wikimedia Commons, MapWarper, Finna, Flickr'dan veri alınıyor..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Bağlantılar",
+			"intro": "Bu kişi veya kuruluşun bağlı olduğu kuruluşlar."
+		},
+		"Awards": {
+			"headerTitle": "Ödüller",
+			"intro": "Bu sayfanın konusunun adaylıkları ve ödülleri."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Tarihsel harita seç",
 			"chooseMapHelpNote": "İpucu: ctrl+tıklama birçok harita seçmenize izin verir",
 			"yearAbbreviation": "y."
+		},
+		"Collection": {
+			"headerTitle": "Koleksiyondaki eserler",
+			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
+		},
+		"Depicted": {
+			"headerTitle": "Tasvir edilen",
+			"intro": "Bu konu bu eserlerde tasvir edilmiştir. İşleri farklı kriterlere göre sıralayın, resimsiz olanları görmek için liste halinde görüntüleyin.",
+			"sortMenu": {
+				"title": "Sıralama işleri",
+				"tooltip": "Sıralama işleri",
+				"optionTime": "Saat olarak",
+				"optionAlpha": "Alfabetik olarak",
+				"optionClear": "Sıralamayı temizle"
+			},
+			"facetMenu": {
+				"title": "Faset işlerine göre",
+				"tooltip": "Faset farklı kriterlere göre çalışır",
+				"optionType": "Tür",
+				"optionColl": "Oluşturan"
+			},
+			"displayMenu": {
+				"title": "Görüntüle",
+				"tooltip": "Görüntü seçin",
+				"optionGallery": "Galeri",
+				"optionList": "Liste"
+			},
+			"showAll": "Hepsi"
+		},
+		"Depicts": {
+			"headerTitle": "Tasvir",
+			"intro": "Bu çalışma bu konuları gösteriyor. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemeniz gerektiğini unutmayın."
+		},
+		"Events": {
+			"headerTitle": "Olaylar",
+			"displayMenu": {
+				"menuTitle": "Görüntüleme seçenekleri",
+				"menuTooltip": "Görüntüleme seçenekleri",
+				"optionShowTimeline": "Bir zaman çizelgesindeki etkinlikleri göster",
+				"optionShowList": "Etkinlikleri liste olarak göster"
+			},
+			"optionsMenu": {
+				"menuTitle": "Seçenekler",
+				"menuTooltip": "Görüntülenecek gerçekleri seçin",
+				"optionWorks": "İşleri göster",
+				"optionRelatedPeople": "İlgili kişilerin etkinliklerini göster",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Yapılandır"
+				},
+				"optionRelatedTopics": "İlgili konuların etkinlikleri göster"
+			}
 		},
 		"Header": {
 			"titleEditText": "Başlığı düzenle",
 			"titleApproveText": "Bu başlığı onayla",
 			"subtitleEditText": "Açıklamayı düzenle",
 			"subtitleApproveText": "Bu açıklamayı onayla"
+		},
+		"Locations": {
+			"headerTitle": "Bu konumda",
+			"intro": "Burada bu sayfanın başlığında yer alan herhangi bir şeyi görüyorsunuz. Depolanan tüm konumları görmek için liste halinde göster.",
+			"sortMenu": {
+				"title": "Yerleri sırala",
+				"tooltip": "Yerleri sırala",
+				"optionTime": "Saat olarak",
+				"optionAlpha": "Alfabetik olarak",
+				"optionDist": "Mesafe olarak",
+				"optionClear": "Sıralamayı temizle"
+			},
+			"facetMenu": {
+				"title": "Faset konumlarına göre",
+				"tooltip": "Farklı ölçütlere göre faset konumları",
+				"optionType": "Tür",
+				"optionColl": "Oluşturan",
+				"optionCity": "Konum"
+			},
+			"displayMenu": {
+				"title": "Görüntüle",
+				"tooltip": "Görüntü seçin",
+				"optionGallery": "Galeri",
+				"optionList": "Liste"
+			},
+			"showAll": "Hepsi"
+		},
+		"Map": {
+			"headerTitle": "Haritadaki konum"
+		},
+		"Parts": {
+			"headerTitle": "Parçalar",
+			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
+		},
+		"Partof": {
+			"headerTitle": "Parçası",
+			"intro": "Bu konu, bu diğer konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+		},
+		"Similar": {
+			"headerTitle": "Benzer konular",
+			"intro": "Bu konuyla ilgili bazı ortak anahtar özelliklere sahip konuları bulun."
+		},
+		"Effects": {
+			"headerTitle": "Etkiler",
+			"intro": "Bunlar konunun etkileri."
+		},
+		"Familytree": {
+			"headerTitle": "Aile ağacı"
+		},
+		"Instances": {
+			"headerTitle": "Bu konunun örnekleri",
+			"intro": "Bu konunun örneklerine bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Links": {
+			"headerTitle": "Bu maddedeki bağlantılar"
+		},
+		"Location": {
+			"headerTitle": "Konum",
+			"intro": "Bu konu, bu konuların içinde veya bağlamında bulunmaktadır."
+		},
+		"Names": {
+			"headerTitle": "İsimler",
+			"intro": "Bu konunun isimlerini ve tüm mevcut seçenekleri görün."
+		},
+		"People": {
+			"headerTitle": "Konu ile ilgili kişiler",
+			"intro": "Bu insanlar bu sayfanın konusu ile ilişkili. Onları resim olarak göstermeyen insanları da gösteren liste olarak görüntülemeyi seçebilirsiniz. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın.",
+			"sortMenuTitle": "Sırala",
+			"sortMenuTooltip": "Sıralama düzenini değiştirin",
+			"sortMenuOptionBirth": "Doğum tarihi olarak",
+			"sortMenuOptionDeath": "Ölüm tarihi olarak",
+			"sortMenuOptionName": "İsim olarak",
+			"sortMenuOptionFirst": "İlk isime göre",
+			"sortMenuOptionLast": "Son isime göre",
+			"sortMenuOptionClear": "Sıralamayı temizle",
+			"facetMenuTitle": "Faset olarak",
+			"facetMenuTooltip": "Farklı yönlerden faset insanları",
+			"facetMenuOptionProfession": "Meslek",
+			"facetMenuOptionCountry": "Ülke",
+			"facetMenuOptionCity": "Cinsiyet"
+		},
+		"Subclasses": {
+			"headerTitle": "Bu konunun alt sınıfları",
+			"intro": "Bu konunun alt sınıflarına bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Things": {
+			"headerTitle": "Odak listesi konuları",
+			"intro": "Bu konular, bu Vikiproje'nin odak listesidir."
+		},
+		"Twins": {
+			"headerTitle": "İkiz şehirler",
+			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükumetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
 		},
 		"TopicImages": {
 			"headerTitle": "Arşivden görüntüler",
@@ -167,24 +318,26 @@
 			"showEventsOnTimelineMenuText": "Zaman çizelgesinde konu olaylarını göster",
 			"centuryText": "YY"
 		},
-		"Events": {
-			"headerTitle": "Olaylar",
-			"displayMenu": {
-				"menuTitle": "Görüntüleme seçenekleri",
-				"menuTooltip": "Görüntüleme seçenekleri",
-				"optionShowTimeline": "Bir zaman çizelgesindeki etkinlikleri göster",
-				"optionShowList": "Etkinlikleri liste olarak göster"
-			},
-			"optionsMenu": {
-				"menuTitle": "Seçenekler",
-				"menuTooltip": "Görüntülenecek gerçekleri seçin",
-				"optionWorks": "İşleri göster",
-				"optionRelatedPeople": "İlgili kişilerin etkinliklerini göster",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Yapılandır"
-				},
-				"optionRelatedTopics": "İlgili konuların etkinlikleri göster"
-			}
+		"Works": {
+			"headerTitle": "Çalışanlar",
+			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",
+			"sortMenuTitle": "Sırala",
+			"sortMenuTooltip": "Öğeleri sırala",
+			"sortMenuOptionTime": "Saat olarak",
+			"sortMenuOptionAlpha": "Alfabetik olarak",
+			"sortMenuOptionDist": "Mesafe olarak",
+			"sortMenuOptionClear": "Sıralamayı temizle",
+			"facetMenuTitle": "Faset olarak",
+			"facetMenuTooltip": "Faset farklı kriterlere göre çalışır",
+			"facetMenuOptionType": "Tür",
+			"facetMenuOptionColl": "Koleksiyon",
+			"facetMenuOptionCity": "Konum",
+			"displayMenuTitle": "Görüntüle",
+			"displayMenuTooltip": "Görüntü seçin",
+			"displayMenuOptionGallery": "Galeri",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Harita",
+			"showAll": "Hepsi"
 		},
 		"Wikidata": {
 			"headerTitle": "Gerçekler",
@@ -213,159 +366,6 @@
 				"translateArticleText": "Bu maddeyi dilinize çevirin",
 				"otherLanguagestext": "Diğer diller"
 			}
-		},
-		"Locations": {
-			"headerTitle": "Bu konumda",
-			"intro": "Burada bu sayfanın başlığında yer alan herhangi bir şeyi görüyorsunuz. Depolanan tüm konumları görmek için liste halinde göster.",
-			"sortMenu": {
-				"title": "Yerleri sırala",
-				"tooltip": "Yerleri sırala",
-				"optionTime": "Saat olarak",
-				"optionAlpha": "Alfabetik olarak",
-				"optionDist": "Mesafe olarak",
-				"optionClear": "Sıralamayı temizle"
-			},
-			"facetMenu": {
-				"title": "Faset konumlarına göre",
-				"tooltip": "Farklı ölçütlere göre faset konumları",
-				"optionType": "Tür",
-				"optionColl": "Oluşturan",
-				"optionCity": "Konum"
-			},
-			"displayMenu": {
-				"title": "Görüntüle",
-				"tooltip": "Görüntü seçin",
-				"optionGallery": "Galeri",
-				"optionList": "Liste"
-			},
-			"showAll": "Hepsi"
-		},
-		"Depicted": {
-			"headerTitle": "Tasvir edilen",
-			"intro": "Bu konu bu eserlerde tasvir edilmiştir. İşleri farklı kriterlere göre sıralayın, resimsiz olanları görmek için liste halinde görüntüleyin.",
-			"sortMenu": {
-				"title": "Sıralama işleri",
-				"tooltip": "Sıralama işleri",
-				"optionTime": "Saat olarak",
-				"optionAlpha": "Alfabetik olarak",
-				"optionClear": "Sıralamayı temizle"
-			},
-			"facetMenu": {
-				"title": "Faset işlerine göre",
-				"tooltip": "Faset farklı kriterlere göre çalışır",
-				"optionType": "Tür",
-				"optionColl": "Oluşturan"
-			},
-			"displayMenu": {
-				"title": "Görüntüle",
-				"tooltip": "Görüntü seçin",
-				"optionGallery": "Galeri",
-				"optionList": "Liste"
-			},
-			"showAll": "Hepsi"
-		},
-		"Depicts": {
-			"headerTitle": "Tasvir",
-			"intro": "Bu çalışma bu konuları gösteriyor. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemeniz gerektiğini unutmayın."
-		},
-		"Map": {
-			"headerTitle": "Haritadaki konum"
-		},
-		"Parts": {
-			"headerTitle": "Parçalar",
-			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
-		},
-		"Partof": {
-			"headerTitle": "Parçası",
-			"intro": "Bu konu, bu diğer konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
-		},
-		"Twins": {
-			"headerTitle": "İkiz şehirler",
-			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükumetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
-		},
-		"Affiliations": {
-			"headerTitle": "Bağlantılar",
-			"intro": "Bu kişi veya kuruluşun bağlı olduğu kuruluşlar."
-		},
-		"Awards": {
-			"headerTitle": "Ödüller",
-			"intro": "Bu sayfanın konusunun adaylıkları ve ödülleri."
-		},
-		"Similar": {
-			"headerTitle": "Benzer konular",
-			"intro": "Bu konuyla ilgili bazı ortak anahtar özelliklere sahip konuları bulun."
-		},
-		"Effects": {
-			"headerTitle": "Etkiler",
-			"intro": "Bunlar konunun etkileri."
-		},
-		"Things": {
-			"headerTitle": "Odak listesi konuları",
-			"intro": "Bu konular, bu Vikiproje'nin odak listesidir."
-		},
-		"Instances": {
-			"headerTitle": "Bu konunun örnekleri",
-			"intro": "Bu konunun örneklerine bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
-		},
-		"Location": {
-			"headerTitle": "Konum",
-			"intro": "Bu konu, bu konuların içinde veya bağlamında bulunmaktadır."
-		},
-		"Subclasses": {
-			"headerTitle": "Bu konunun alt sınıfları",
-			"intro": "Bu konunun alt sınıflarına bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
-		},
-		"Links": {
-			"headerTitle": "Bu maddedeki bağlantılar"
-		},
-		"Familytree": {
-			"headerTitle": "Aile ağacı"
-		},
-		"Names": {
-			"headerTitle": "İsimler",
-			"intro": "Bu konunun isimlerini ve tüm mevcut seçenekleri görün."
-		},
-		"Works": {
-			"headerTitle": "Çalışanlar",
-			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",
-			"sortMenuTitle": "Sırala",
-			"sortMenuTooltip": "Öğeleri sırala",
-			"sortMenuOptionTime": "Saat olarak",
-			"sortMenuOptionAlpha": "Alfabetik olarak",
-			"sortMenuOptionDist": "Mesafe olarak",
-			"sortMenuOptionClear": "Sıralamayı temizle",
-			"facetMenuTitle": "Faset olarak",
-			"facetMenuTooltip": "Faset farklı kriterlere göre çalışır",
-			"facetMenuOptionType": "Tür",
-			"facetMenuOptionColl": "Koleksiyon",
-			"facetMenuOptionCity": "Konum",
-			"displayMenuTitle": "Görüntüle",
-			"displayMenuTooltip": "Görüntü seçin",
-			"displayMenuOptionGallery": "Galeri",
-			"displayMenuOptionList": "Liste",
-			"displayMenuOptionMap": "Harita",
-			"showAll": "Hepsi"
-		},
-		"People": {
-			"headerTitle": "Konu ile ilgili kişiler",
-			"intro": "Bu insanlar bu sayfanın konusu ile ilişkili. Onları resim olarak göstermeyen insanları da gösteren liste olarak görüntülemeyi seçebilirsiniz. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın.",
-			"sortMenuTitle": "Sırala",
-			"sortMenuTooltip": "Sıralama düzenini değiştirin",
-			"sortMenuOptionBirth": "Doğum tarihi olarak",
-			"sortMenuOptionDeath": "Ölüm tarihi olarak",
-			"sortMenuOptionName": "İsim olarak",
-			"sortMenuOptionFirst": "İlk isime göre",
-			"sortMenuOptionLast": "Son isime göre",
-			"sortMenuOptionClear": "Sıralamayı temizle",
-			"facetMenuTitle": "Faset olarak",
-			"facetMenuTooltip": "Farklı yönlerden faset insanları",
-			"facetMenuOptionProfession": "Meslek",
-			"facetMenuOptionCountry": "Ülke",
-			"facetMenuOptionCity": "Cinsiyet"
-		},
-		"Collection": {
-			"headerTitle": "Koleksiyondaki eserler",
-			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
 		}
 	},
 	"imageViewer": {
@@ -533,7 +533,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Bu kültürel miras sitesinin fotoğrafını çekin ve <a href='https://www.wikilovesmonuments.org/'>Viki Anıtları Seviyor 2020</a> fotoğraf yarışmasına katılın!",
 		"WLMButton": "Resim yükle"
 	}
 }

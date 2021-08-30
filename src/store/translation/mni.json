@@ -8,8 +8,66 @@
 		"search": "ꯊꯤꯕꯥ"
 	},
 	"topic_page": {
+		"Depicted": {
+			"sortMenu": {
+				"title": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
+				"tooltip": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
+				"optionTime": "ꯃꯇꯝꯅꯥ",
+				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ"
+			},
+			"facetMenu": {
+				"optionType": "ꯃꯈꯜ",
+				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ"
+			},
+			"displayMenu": {
+				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
+				"optionGallery": "ꯊꯝꯐꯝ",
+				"optionList": "ꯄꯥꯔꯤꯡ"
+			},
+			"showAll": "ꯄꯨꯂꯞ"
+		},
+		"Events": {
+			"headerTitle": "ꯇꯧꯒꯗꯕꯁꯤꯡ",
+			"displayMenu": {
+				"menuTitle": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ",
+				"menuTooltip": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ"
+			},
+			"optionsMenu": {
+				"menuTitle": "ꯃꯌꯥꯝꯒꯤꯃꯔꯛꯇꯥ",
+				"menuTooltip": "ꯎꯠꯊꯣꯛꯅꯕ ꯑꯆꯨꯝꯕ ꯈꯟꯂꯨ",
+				"optionWorks": "ꯊꯕꯛꯁꯤꯡ ꯎꯠꯂꯨ"
+			}
+		},
 		"Header": {
 			"titleEditText": "ꯃꯃꯤꯡ ꯁꯦꯝꯒꯠꯄꯥ"
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "ꯃꯇꯝꯅꯥ",
+				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ",
+				"optionDist": "ꯑꯔꯥꯞꯄꯅꯥ"
+			},
+			"facetMenu": {
+				"optionType": "ꯃꯈꯜ",
+				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ",
+				"optionCity": "ꯃꯐꯝ"
+			},
+			"displayMenu": {
+				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
+				"optionGallery": "ꯊꯝꯐꯝ",
+				"optionList": "ꯄꯥꯔꯤꯡ"
+			},
+			"showAll": "ꯄꯨꯂꯞ"
+		},
+		"People": {
+			"sortMenuOptionBirth": "ꯄꯣꯛꯄꯥ ꯆꯩꯆꯠꯅꯥ",
+			"sortMenuOptionDeath": "ꯁꯤꯕꯒꯤ ꯆꯩꯆꯠꯅꯥ",
+			"sortMenuOptionName": "ꯃꯃꯤꯡꯅꯥ",
+			"sortMenuOptionFirst": "ꯑꯍꯥꯟꯕ ꯃꯃꯤꯡꯅꯥ",
+			"sortMenuOptionLast": "ꯑꯔꯣꯏꯕ ꯃꯃꯤꯡꯅꯥ",
+			"facetMenuOptionProfession": "ꯁꯤꯟꯐꯝ",
+			"facetMenuOptionCountry": "ꯂꯩꯄꯥꯛ",
+			"facetMenuOptionCity": "ꯅꯨꯄꯥ/ꯅꯨꯄꯤ"
 		},
 		"TopicImages": {
 			"facetMenu": {
@@ -41,64 +99,6 @@
 			"headerTitle": "ꯆꯠꯊꯔꯛꯂꯤꯕ ꯃꯇꯝ",
 			"centuryText": "ꯆ"
 		},
-		"Events": {
-			"headerTitle": "ꯇꯧꯒꯗꯕꯁꯤꯡ",
-			"displayMenu": {
-				"menuTitle": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ",
-				"menuTooltip": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ"
-			},
-			"optionsMenu": {
-				"menuTitle": "ꯃꯌꯥꯝꯒꯤꯃꯔꯛꯇꯥ",
-				"menuTooltip": "ꯎꯠꯊꯣꯛꯅꯕ ꯑꯆꯨꯝꯕ ꯈꯟꯂꯨ",
-				"optionWorks": "ꯊꯕꯛꯁꯤꯡ ꯎꯠꯂꯨ"
-			}
-		},
-		"Wikidata": {
-			"headerTitle": "ꯑꯆꯨꯝꯕꯁꯤꯡ",
-			"extLink": {
-				"linkTitleWD": "ꯎꯠꯂꯨ ꯅꯠꯇ꯭ꯔꯒ ꯋꯤꯀꯤꯗꯥꯇꯥ ꯗ ꯁꯦꯝꯒꯠꯂꯨ"
-			},
-			"noTopicFoundText": "ꯃꯃꯤꯡꯁꯤ ꯊꯤꯕꯗ ꯐꯪꯗꯦ"
-		},
-		"Wikipedia": {
-			"headerTitle": "ꯋꯥꯔꯦꯡ"
-		},
-		"Locations": {
-			"sortMenu": {
-				"optionTime": "ꯃꯇꯝꯅꯥ",
-				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ",
-				"optionDist": "ꯑꯔꯥꯞꯄꯅꯥ"
-			},
-			"facetMenu": {
-				"optionType": "ꯃꯈꯜ",
-				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ",
-				"optionCity": "ꯃꯐꯝ"
-			},
-			"displayMenu": {
-				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
-				"optionGallery": "ꯊꯝꯐꯝ",
-				"optionList": "ꯄꯥꯔꯤꯡ"
-			},
-			"showAll": "ꯄꯨꯂꯞ"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"title": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
-				"tooltip": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
-				"optionTime": "ꯃꯇꯝꯅꯥ",
-				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ"
-			},
-			"facetMenu": {
-				"optionType": "ꯃꯈꯜ",
-				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ"
-			},
-			"displayMenu": {
-				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
-				"optionGallery": "ꯊꯝꯐꯝ",
-				"optionList": "ꯄꯥꯔꯤꯡ"
-			},
-			"showAll": "ꯄꯨꯂꯞ"
-		},
 		"Works": {
 			"headerTitle": "ꯊꯕꯛꯁꯤꯡ",
 			"sortMenuTitle": "ꯑꯇꯦꯟꯕ",
@@ -114,15 +114,15 @@
 			"displayMenuOptionList": "ꯄꯥꯔꯤꯡ",
 			"showAll": "ꯄꯨꯂꯞ"
 		},
-		"People": {
-			"sortMenuOptionBirth": "ꯄꯣꯛꯄꯥ ꯆꯩꯆꯠꯅꯥ",
-			"sortMenuOptionDeath": "ꯁꯤꯕꯒꯤ ꯆꯩꯆꯠꯅꯥ",
-			"sortMenuOptionName": "ꯃꯃꯤꯡꯅꯥ",
-			"sortMenuOptionFirst": "ꯑꯍꯥꯟꯕ ꯃꯃꯤꯡꯅꯥ",
-			"sortMenuOptionLast": "ꯑꯔꯣꯏꯕ ꯃꯃꯤꯡꯅꯥ",
-			"facetMenuOptionProfession": "ꯁꯤꯟꯐꯝ",
-			"facetMenuOptionCountry": "ꯂꯩꯄꯥꯛ",
-			"facetMenuOptionCity": "ꯅꯨꯄꯥ/ꯅꯨꯄꯤ"
+		"Wikidata": {
+			"headerTitle": "ꯑꯆꯨꯝꯕꯁꯤꯡ",
+			"extLink": {
+				"linkTitleWD": "ꯎꯠꯂꯨ ꯅꯠꯇ꯭ꯔꯒ ꯋꯤꯀꯤꯗꯥꯇꯥ ꯗ ꯁꯦꯝꯒꯠꯂꯨ"
+			},
+			"noTopicFoundText": "ꯃꯃꯤꯡꯁꯤ ꯊꯤꯕꯗ ꯐꯪꯗꯦ"
+		},
+		"Wikipedia": {
+			"headerTitle": "ꯋꯥꯔꯦꯡ"
 		}
 	},
 	"imageViewer": {

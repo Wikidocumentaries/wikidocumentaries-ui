@@ -63,16 +63,166 @@
 		"waitMessage": "しばらくお待ち下さい……ウィキペディア、ウィキデータ、ウィキメディア・コモンズ、MapWarper、Finna、Flickrその他にデータを照会中……"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "所有・帰属するもの",
+			"intro": "この人物や組織などが所有・帰属する組織"
+		},
+		"Awards": {
+			"headerTitle": "賞",
+			"intro": "このページのトピックのノミネートと受賞"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "歴史的ベース地図（複数可能）を選択",
 			"chooseMapHelpNote": "ヒント: ctrl+click で複数地図を選択可",
 			"yearAbbreviation": "年"
+		},
+		"Collection": {
+			"headerTitle": "コレクション内の作品",
+			"intro": "これらの作品はこの人物や組織のコレクション内にあります。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。"
+		},
+		"Depicted": {
+			"headerTitle": "題材にしているもの",
+			"intro": "このトピックは以下の作品の題材になっています。作品を様々な基準でソートしたり、画像の無いものを見つける際には一覧表示してください。",
+			"sortMenu": {
+				"title": "作品をソート",
+				"tooltip": "作品をソート",
+				"optionTime": "日時順",
+				"optionAlpha": "アルファベット順",
+				"optionClear": "ソートをクリア"
+			},
+			"facetMenu": {
+				"title": "区分ごとの作品",
+				"tooltip": "異なる基準による区分ごとの作品",
+				"optionType": "種類",
+				"optionColl": "作成者"
+			},
+			"displayMenu": {
+				"title": "表示方式",
+				"tooltip": "表示方式を選択",
+				"optionGallery": "ギャラリー",
+				"optionList": "一覧"
+			},
+			"showAll": "すべて"
+		},
+		"Depicts": {
+			"headerTitle": "題材",
+			"intro": "この作品にはこれらのトピックが題材として描かれています。日時や名前順のソートできます。画像の無いものも含め、全てのトピックを見るには一覧として閲覧しなければならないことに注意してください。"
+		},
+		"Events": {
+			"headerTitle": "出来事",
+			"displayMenu": {
+				"menuTitle": "表示の設定",
+				"menuTooltip": "表示の設定",
+				"optionShowTimeline": "タイムライン上に出来事を表示",
+				"optionShowList": "出来事をリスト表示する"
+			},
+			"optionsMenu": {
+				"menuTitle": "オプション",
+				"menuTooltip": "表示する事実情報を選択",
+				"optionWorks": "作品を表示する",
+				"optionRelatedPeople": "関連する人々の出来事を表示する",
+				"subRelatedPeopleConf": {
+					"menuTitle": "設定"
+				},
+				"optionRelatedTopics": "関連するトピックの出来事を表示する"
+			}
 		},
 		"Header": {
 			"titleEditText": "タイトルを編集",
 			"titleApproveText": "このタイトルを承認",
 			"subtitleEditText": "説明を編集",
 			"subtitleApproveText": "この説明を承認"
+		},
+		"Locations": {
+			"headerTitle": "この場所にあるもの",
+			"intro": "このページのトピックの位置にあるものは全て見ることができます。保存された全ての場所を見る際には一覧表示を選んでください。",
+			"sortMenu": {
+				"title": "位置をソート",
+				"tooltip": "位置をソート",
+				"optionTime": "日時順",
+				"optionAlpha": "アルファベット順",
+				"optionDist": "距離順",
+				"optionClear": "ソートをクリア"
+			},
+			"facetMenu": {
+				"title": "区分ごとの位置",
+				"tooltip": "異なる基準による区分ごとの位置",
+				"optionType": "種類",
+				"optionColl": "作成者",
+				"optionCity": "位置"
+			},
+			"displayMenu": {
+				"title": "表示方式",
+				"tooltip": "表示方式を選択",
+				"optionGallery": "ギャラリー",
+				"optionList": "一覧"
+			},
+			"showAll": "すべて"
+		},
+		"Map": {
+			"headerTitle": "地図上の位置"
+		},
+		"Parts": {
+			"headerTitle": "含まれるもの",
+			"intro": "以下はこのトピックの一部分です。日時や名前順にソートできます。画像が無いものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
+		},
+		"Partof": {
+			"headerTitle": "位置",
+			"intro": "このトピックは下記トピックに関連した位置にあります。日時や名前順にソートできます。画像がないものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
+		},
+		"Similar": {
+			"headerTitle": "類似トピック",
+			"intro": "このトピックと主要な特徴が共通するトピックを探す。"
+		},
+		"Effects": {
+			"headerTitle": "影響",
+			"intro": "この主題の影響範囲は次の通りです。"
+		},
+		"Familytree": {
+			"headerTitle": "系統樹"
+		},
+		"Instances": {
+			"headerTitle": "この主題の実例",
+			"intro": "この主題の実例をご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
+		},
+		"Links": {
+			"headerTitle": "この記事からのリンク"
+		},
+		"Location": {
+			"headerTitle": "位置づけ",
+			"intro": "このトピックは以下のトピック（の文脈）内に位置しています。"
+		},
+		"Names": {
+			"headerTitle": "名前"
+		},
+		"People": {
+			"headerTitle": "トピックに関連する人々",
+			"intro": "これらの人々はこのページのトピックに関連しています。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。",
+			"sortMenuTitle": "ソート",
+			"sortMenuTooltip": "ソート順を変更",
+			"sortMenuOptionBirth": "誕生日順",
+			"sortMenuOptionDeath": "死亡日順",
+			"sortMenuOptionName": "名前順",
+			"sortMenuOptionFirst": "ファーストネーム順",
+			"sortMenuOptionLast": "ラストネーム順",
+			"sortMenuOptionClear": "ソートをクリア",
+			"facetMenuTitle": "区分",
+			"facetMenuTooltip": "異なる基準による区分ごと人々",
+			"facetMenuOptionProfession": "職業",
+			"facetMenuOptionCountry": "国",
+			"facetMenuOptionCity": "性別"
+		},
+		"Subclasses": {
+			"headerTitle": "このトピックのサブクラス",
+			"intro": "このトピックのサブクラスをご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
+		},
+		"Things": {
+			"headerTitle": "特定の主題の一覧",
+			"intro": "このウィキプロジェクトには、これらの主題を含む特定の主題の一覧があります。"
+		},
+		"Twins": {
+			"headerTitle": "ツインシティ",
+			"intro": "行政機関により承認された法的もしくは広報上の措置として、提携協議書もしくは協定協議書を取りかわす提携都市、姉妹都市あるいは地方自治体単位の提携関係。設立年もしくは自治体名から検索できます。画像のない件名を含めた全件名を表示するには、リスト表示への切り替えが必要です。"
 		},
 		"TopicImages": {
 			"headerTitle": "アーカイブにある画像",
@@ -161,24 +311,26 @@
 			"showEventsOnTimelineMenuText": "トピックの出来事をタイムライン上に表示",
 			"centuryText": "世紀"
 		},
-		"Events": {
-			"headerTitle": "出来事",
-			"displayMenu": {
-				"menuTitle": "表示の設定",
-				"menuTooltip": "表示の設定",
-				"optionShowTimeline": "タイムライン上に出来事を表示",
-				"optionShowList": "出来事をリスト表示する"
-			},
-			"optionsMenu": {
-				"menuTitle": "オプション",
-				"menuTooltip": "表示する事実情報を選択",
-				"optionWorks": "作品を表示する",
-				"optionRelatedPeople": "関連する人々の出来事を表示する",
-				"subRelatedPeopleConf": {
-					"menuTitle": "設定"
-				},
-				"optionRelatedTopics": "関連するトピックの出来事を表示する"
-			}
+		"Works": {
+			"headerTitle": "作品",
+			"intro": "これらの作品は、このページのトピックである人物、集団、組織による作品です。その上をクリックすると、作品に関する全ての情報を集めたページに入ることができます。画像のあるページだけが表示されます。ストアされた全ての関連作品を見るには一覧として表示します。",
+			"sortMenuTitle": "ソート",
+			"sortMenuTooltip": "項目をソートする",
+			"sortMenuOptionTime": "日時順",
+			"sortMenuOptionAlpha": "アルファベット順",
+			"sortMenuOptionDist": "距離順",
+			"sortMenuOptionClear": "ソートをクリア",
+			"facetMenuTitle": "区分",
+			"facetMenuTooltip": "異なる基準による区分ごとの作品",
+			"facetMenuOptionType": "種類",
+			"facetMenuOptionColl": "コレクション",
+			"facetMenuOptionCity": "位置",
+			"displayMenuTitle": "表示方式",
+			"displayMenuTooltip": "表示方式を選択",
+			"displayMenuOptionGallery": "ギャラリー",
+			"displayMenuOptionList": "一覧",
+			"displayMenuOptionMap": "地図",
+			"showAll": "すべて"
 		},
 		"Wikidata": {
 			"headerTitle": "事実情報",
@@ -207,158 +359,6 @@
 				"translateArticleText": "この記事をご使用の言語に翻訳する",
 				"otherLanguagestext": "他の言語"
 			}
-		},
-		"Locations": {
-			"headerTitle": "この場所にあるもの",
-			"intro": "このページのトピックの位置にあるものは全て見ることができます。保存された全ての場所を見る際には一覧表示を選んでください。",
-			"sortMenu": {
-				"title": "位置をソート",
-				"tooltip": "位置をソート",
-				"optionTime": "日時順",
-				"optionAlpha": "アルファベット順",
-				"optionDist": "距離順",
-				"optionClear": "ソートをクリア"
-			},
-			"facetMenu": {
-				"title": "区分ごとの位置",
-				"tooltip": "異なる基準による区分ごとの位置",
-				"optionType": "種類",
-				"optionColl": "作成者",
-				"optionCity": "位置"
-			},
-			"displayMenu": {
-				"title": "表示方式",
-				"tooltip": "表示方式を選択",
-				"optionGallery": "ギャラリー",
-				"optionList": "一覧"
-			},
-			"showAll": "すべて"
-		},
-		"Depicted": {
-			"headerTitle": "題材にしているもの",
-			"intro": "このトピックは以下の作品の題材になっています。作品を様々な基準でソートしたり、画像の無いものを見つける際には一覧表示してください。",
-			"sortMenu": {
-				"title": "作品をソート",
-				"tooltip": "作品をソート",
-				"optionTime": "日時順",
-				"optionAlpha": "アルファベット順",
-				"optionClear": "ソートをクリア"
-			},
-			"facetMenu": {
-				"title": "区分ごとの作品",
-				"tooltip": "異なる基準による区分ごとの作品",
-				"optionType": "種類",
-				"optionColl": "作成者"
-			},
-			"displayMenu": {
-				"title": "表示方式",
-				"tooltip": "表示方式を選択",
-				"optionGallery": "ギャラリー",
-				"optionList": "一覧"
-			},
-			"showAll": "すべて"
-		},
-		"Depicts": {
-			"headerTitle": "題材",
-			"intro": "この作品にはこれらのトピックが題材として描かれています。日時や名前順のソートできます。画像の無いものも含め、全てのトピックを見るには一覧として閲覧しなければならないことに注意してください。"
-		},
-		"Map": {
-			"headerTitle": "地図上の位置"
-		},
-		"Parts": {
-			"headerTitle": "含まれるもの",
-			"intro": "以下はこのトピックの一部分です。日時や名前順にソートできます。画像が無いものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
-		},
-		"Partof": {
-			"headerTitle": "位置",
-			"intro": "このトピックは下記トピックに関連した位置にあります。日時や名前順にソートできます。画像がないものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
-		},
-		"Twins": {
-			"headerTitle": "ツインシティ",
-			"intro": "行政機関により承認された法的もしくは広報上の措置として、提携協議書もしくは協定協議書を取りかわす提携都市、姉妹都市あるいは地方自治体単位の提携関係。設立年もしくは自治体名から検索できます。画像のない件名を含めた全件名を表示するには、リスト表示への切り替えが必要です。"
-		},
-		"Affiliations": {
-			"headerTitle": "所有・帰属するもの",
-			"intro": "この人物や組織などが所有・帰属する組織"
-		},
-		"Awards": {
-			"headerTitle": "賞",
-			"intro": "このページのトピックのノミネートと受賞"
-		},
-		"Similar": {
-			"headerTitle": "類似トピック",
-			"intro": "このトピックと主要な特徴が共通するトピックを探す。"
-		},
-		"Effects": {
-			"headerTitle": "影響",
-			"intro": "この主題の影響範囲は次の通りです。"
-		},
-		"Things": {
-			"headerTitle": "特定の主題の一覧",
-			"intro": "このウィキプロジェクトには、これらの主題を含む特定の主題の一覧があります。"
-		},
-		"Instances": {
-			"headerTitle": "この主題の実例",
-			"intro": "この主題の実例をご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
-		},
-		"Location": {
-			"headerTitle": "位置づけ",
-			"intro": "このトピックは以下のトピック（の文脈）内に位置しています。"
-		},
-		"Subclasses": {
-			"headerTitle": "このトピックのサブクラス",
-			"intro": "このトピックのサブクラスをご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
-		},
-		"Links": {
-			"headerTitle": "この記事からのリンク"
-		},
-		"Familytree": {
-			"headerTitle": "系統樹"
-		},
-		"Names": {
-			"headerTitle": "名前"
-		},
-		"Works": {
-			"headerTitle": "作品",
-			"intro": "これらの作品は、このページのトピックである人物、集団、組織による作品です。その上をクリックすると、作品に関する全ての情報を集めたページに入ることができます。画像のあるページだけが表示されます。ストアされた全ての関連作品を見るには一覧として表示します。",
-			"sortMenuTitle": "ソート",
-			"sortMenuTooltip": "項目をソートする",
-			"sortMenuOptionTime": "日時順",
-			"sortMenuOptionAlpha": "アルファベット順",
-			"sortMenuOptionDist": "距離順",
-			"sortMenuOptionClear": "ソートをクリア",
-			"facetMenuTitle": "区分",
-			"facetMenuTooltip": "異なる基準による区分ごとの作品",
-			"facetMenuOptionType": "種類",
-			"facetMenuOptionColl": "コレクション",
-			"facetMenuOptionCity": "位置",
-			"displayMenuTitle": "表示方式",
-			"displayMenuTooltip": "表示方式を選択",
-			"displayMenuOptionGallery": "ギャラリー",
-			"displayMenuOptionList": "一覧",
-			"displayMenuOptionMap": "地図",
-			"showAll": "すべて"
-		},
-		"People": {
-			"headerTitle": "トピックに関連する人々",
-			"intro": "これらの人々はこのページのトピックに関連しています。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。",
-			"sortMenuTitle": "ソート",
-			"sortMenuTooltip": "ソート順を変更",
-			"sortMenuOptionBirth": "誕生日順",
-			"sortMenuOptionDeath": "死亡日順",
-			"sortMenuOptionName": "名前順",
-			"sortMenuOptionFirst": "ファーストネーム順",
-			"sortMenuOptionLast": "ラストネーム順",
-			"sortMenuOptionClear": "ソートをクリア",
-			"facetMenuTitle": "区分",
-			"facetMenuTooltip": "異なる基準による区分ごと人々",
-			"facetMenuOptionProfession": "職業",
-			"facetMenuOptionCountry": "国",
-			"facetMenuOptionCity": "性別"
-		},
-		"Collection": {
-			"headerTitle": "コレクション内の作品",
-			"intro": "これらの作品はこの人物や組織のコレクション内にあります。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。"
 		}
 	},
 	"imageViewer": {
@@ -526,7 +526,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "この文化遺産の現地写真を撮って<a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> 競技に参加しよう！",
 		"WLMButton": "画像をアップロード"
 	}
 }

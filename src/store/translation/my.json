@@ -23,25 +23,20 @@
 		"mapSearchPageName": "မြေပုံများ ရှာဖွေရန်"
 	},
 	"topic_page": {
-		"Header": {
-			"titleEditText": "ခေါင်းစဉ် ပြင်ဆင်ရန်",
-			"subtitleEditText": "ဖော်ပြချက် တည်းဖြတ်ရန်"
-		},
-		"TopicImages": {
-			"imagesActionMenu": {
-				"menuTitle": "ဆောင်ရွက်ချက်များ",
-				"menuTooltip": "ဆောင်ရွက်ချက်များ",
-				"showImageText": "ပုံပြသရန်"
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "အချိန်အလိုက်",
+				"optionAlpha": "အက္ခရာစဉ်အတိုင်း"
 			},
-			"imagesRemoveMenu": {
-				"remInappropriate": {
-					"shortMenuTitle": "မသင့်လျော်ပါ"
-				}
+			"facetMenu": {
+				"optionType": "အမျိုးအစား",
+				"optionColl": "ဖန်တီးသူ"
 			},
-			"imagesViewExternal": "မူရင်းပုံကို ကြည့်ရန်"
-		},
-		"TopicTimeline": {
-			"headerTitle": "အချိန်လိုင်း"
+			"displayMenu": {
+				"optionGallery": "ပြခန်း",
+				"optionList": "စာရင်း"
+			},
+			"showAll": "အားလုံး"
 		},
 		"Events": {
 			"headerTitle": "ဖြစ်ရပ်များ",
@@ -52,16 +47,9 @@
 				}
 			}
 		},
-		"Wikidata": {
-			"extLink": {
-				"linkTitleWD": "ဝီကီဒေတာတွင် ကြည့်ရန် (သို့) ပြင်ဆင်ရန်"
-			}
-		},
-		"Wikipedia": {
-			"headerTitle": "ဆောင်းပါး",
-			"languageMenu": {
-				"otherLanguagestext": "အခြားဘာသာစကားများ"
-			}
+		"Header": {
+			"titleEditText": "ခေါင်းစဉ် ပြင်ဆင်ရန်",
+			"subtitleEditText": "ဖော်ပြချက် တည်းဖြတ်ရန်"
 		},
 		"Locations": {
 			"headerTitle": "ဤတည်နေရာထဲတွင်",
@@ -80,20 +68,32 @@
 			},
 			"showAll": "အားလုံး"
 		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "အချိန်အလိုက်",
-				"optionAlpha": "အက္ခရာစဉ်အတိုင်း"
+		"People": {
+			"sortMenuTitle": "စီစဉ်ရန်",
+			"sortMenuOptionBirth": "မွေးရက်အလိုက်",
+			"sortMenuOptionDeath": "ကွယ်လွန်ရက်အလိုက်",
+			"sortMenuOptionName": "အမည်အလိုက်",
+			"sortMenuOptionFirst": "ပထမအမည်အလိုက်",
+			"sortMenuOptionLast": "နောက်ဆုံးအမည်အလိုက်",
+			"facetMenuOptionProfession": "အလုပ်အကိုင်",
+			"facetMenuOptionCountry": "နိုင်ငံ",
+			"facetMenuOptionCity": "ကျား/မ -"
+		},
+		"TopicImages": {
+			"imagesActionMenu": {
+				"menuTitle": "ဆောင်ရွက်ချက်များ",
+				"menuTooltip": "ဆောင်ရွက်ချက်များ",
+				"showImageText": "ပုံပြသရန်"
 			},
-			"facetMenu": {
-				"optionType": "အမျိုးအစား",
-				"optionColl": "ဖန်တီးသူ"
+			"imagesRemoveMenu": {
+				"remInappropriate": {
+					"shortMenuTitle": "မသင့်လျော်ပါ"
+				}
 			},
-			"displayMenu": {
-				"optionGallery": "ပြခန်း",
-				"optionList": "စာရင်း"
-			},
-			"showAll": "အားလုံး"
+			"imagesViewExternal": "မူရင်းပုံကို ကြည့်ရန်"
+		},
+		"TopicTimeline": {
+			"headerTitle": "အချိန်လိုင်း"
 		},
 		"Works": {
 			"sortMenuTitle": "စီစဉ်ရန်",
@@ -107,16 +107,16 @@
 			"displayMenuOptionList": "စာရင်း",
 			"showAll": "အားလုံး"
 		},
-		"People": {
-			"sortMenuTitle": "စီစဉ်ရန်",
-			"sortMenuOptionBirth": "မွေးရက်အလိုက်",
-			"sortMenuOptionDeath": "ကွယ်လွန်ရက်အလိုက်",
-			"sortMenuOptionName": "အမည်အလိုက်",
-			"sortMenuOptionFirst": "ပထမအမည်အလိုက်",
-			"sortMenuOptionLast": "နောက်ဆုံးအမည်အလိုက်",
-			"facetMenuOptionProfession": "အလုပ်အကိုင်",
-			"facetMenuOptionCountry": "နိုင်ငံ",
-			"facetMenuOptionCity": "ကျား/မ -"
+		"Wikidata": {
+			"extLink": {
+				"linkTitleWD": "ဝီကီဒေတာတွင် ကြည့်ရန် (သို့) ပြင်ဆင်ရန်"
+			}
+		},
+		"Wikipedia": {
+			"headerTitle": "ဆောင်းပါး",
+			"languageMenu": {
+				"otherLanguagestext": "အခြားဘာသာစကားများ"
+			}
 		}
 	},
 	"imageViewer": {

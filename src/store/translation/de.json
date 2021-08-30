@@ -67,16 +67,135 @@
 		"waitMessage": "Einen Moment, bitte. Es werden Daten abgerufen von Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr …"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Verbindungen",
+			"intro": "Organisationen, mit denen diese Person oder Organisation eine Verbindung hat."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Historische Basiskarte(n) auswählen",
 			"chooseMapHelpNote": "Tipp: Strg+Klick erlaubt die Auswahl vieler Karten",
 			"yearAbbreviation": "J."
+		},
+		"Depicted": {
+			"headerTitle": "Abgebildet in",
+			"intro": "Dieses Thema ist in diesen Werken abgebildet. Die Werke nach unterschiedlichen Kriterien sortieren, als Liste anzeigen, um diejenigen ohne Bild anzusehen.",
+			"sortMenu": {
+				"title": "Werke sortieren",
+				"tooltip": "Werke sortieren",
+				"optionTime": "Nach Zeit",
+				"optionAlpha": "Alphabetisch",
+				"optionClear": "Sortierung löschen"
+			},
+			"facetMenu": {
+				"title": "Aspektwerke nach",
+				"tooltip": "Aspektwerke nach unterschiedlichen Kriterien",
+				"optionType": "Typ",
+				"optionColl": "Urheber"
+			},
+			"displayMenu": {
+				"title": "Anzeigen als",
+				"tooltip": "Die Anzeige auswählen",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
+		"Depicts": {
+			"headerTitle": "Stellt dar",
+			"intro": "Dieses Werk bildet diese Themen ab. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
+		},
+		"Events": {
+			"headerTitle": "Ereignisse",
+			"displayMenu": {
+				"menuTitle": "Optionen anzeigen",
+				"menuTooltip": "Optionen anzeigen",
+				"optionShowTimeline": "Ereignisse auf einer Zeitleiste anzeigen",
+				"optionShowList": "Ereignisse als Liste anzeigen"
+			},
+			"optionsMenu": {
+				"menuTitle": "Optionen",
+				"menuTooltip": "Anzuzeigende Fakten auswählen",
+				"optionWorks": "Werke anzeigen",
+				"optionRelatedPeople": "Ereignisse verwandter Personen anzeigen",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurieren"
+				},
+				"optionRelatedTopics": "Ereignisse verwandter Themen anzeigen"
+			}
 		},
 		"Header": {
 			"titleEditText": "Den Titel bearbeiten",
 			"titleApproveText": "Diesen Titel bestätigen",
 			"subtitleEditText": "Die Beschreibung bearbeiten",
 			"subtitleApproveText": "Diese Beschreibung bestätigen"
+		},
+		"Locations": {
+			"headerTitle": "In diesem Standort",
+			"intro": "Hier siehst du alles, was im Thema dieser Seite angesiedelt ist. Als Liste anzeigen, um alle Standorte anzusehen, die gespeichert wurden.",
+			"sortMenu": {
+				"title": "Standorte sortieren",
+				"tooltip": "Standorte sortieren",
+				"optionTime": "Nach Zeit",
+				"optionAlpha": "Alphabetisch",
+				"optionDist": "Nach Entfernung",
+				"optionClear": "Sortierung löschen"
+			},
+			"facetMenu": {
+				"title": "Aspektstandorte nach",
+				"tooltip": "Aspektstandorte nach unterschiedlichen Kriterien",
+				"optionType": "Typ",
+				"optionColl": "Urheber",
+				"optionCity": "Standort"
+			},
+			"displayMenu": {
+				"title": "Anzeigen als",
+				"tooltip": "Die Anzeige auswählen",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
+		"Map": {
+			"headerTitle": "Standort auf der Karte"
+		},
+		"Parts": {
+			"headerTitle": "Teile",
+			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
+		},
+		"Partof": {
+			"headerTitle": "Teil von"
+		},
+		"Similar": {
+			"headerTitle": "Ähnliche Themen"
+		},
+		"Effects": {
+			"headerTitle": "Effekte"
+		},
+		"Links": {
+			"headerTitle": "Verknüpfungen dieses Artikels"
+		},
+		"Location": {
+			"headerTitle": "Standort"
+		},
+		"People": {
+			"headerTitle": "Personen bezüglich zum Thema",
+			"intro": "Diese Personen sind mit dem Thema dieser Seite verknüpft. Du kannst sie als Liste anzeigen, was auch Personen ohne Bilder anzeigt. Sie können nach Datum oder Namen sortiert werden. Beachte, dass nur solche angezeigt werden, die diese Informationen haben.",
+			"sortMenuTitle": "Sortieren",
+			"sortMenuTooltip": "Die Sortierreihenfolge ändern",
+			"sortMenuOptionBirth": "Nach Geburtsdatum",
+			"sortMenuOptionDeath": "Nach Sterbedatum",
+			"sortMenuOptionName": "Nach Name",
+			"sortMenuOptionFirst": "Nach Vorname",
+			"sortMenuOptionLast": "Nach Nachname",
+			"sortMenuOptionClear": "Sortierung aufheben",
+			"facetMenuTitle": "Aspekt nach",
+			"facetMenuTooltip": "Personen nach unterschiedlichen Aspekten",
+			"facetMenuOptionProfession": "Beruf",
+			"facetMenuOptionCountry": "Staat",
+			"facetMenuOptionCity": "Geschlecht"
+		},
+		"Subclasses": {
+			"headerTitle": "Unterklasse dieses Themas"
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder von den Archiven",
@@ -168,24 +287,26 @@
 			"showEventsOnTimelineMenuText": "Themenereignisse auf der Zeitleiste anzeigen",
 			"centuryText": "JZ"
 		},
-		"Events": {
-			"headerTitle": "Ereignisse",
-			"displayMenu": {
-				"menuTitle": "Optionen anzeigen",
-				"menuTooltip": "Optionen anzeigen",
-				"optionShowTimeline": "Ereignisse auf einer Zeitleiste anzeigen",
-				"optionShowList": "Ereignisse als Liste anzeigen"
-			},
-			"optionsMenu": {
-				"menuTitle": "Optionen",
-				"menuTooltip": "Anzuzeigende Fakten auswählen",
-				"optionWorks": "Werke anzeigen",
-				"optionRelatedPeople": "Ereignisse verwandter Personen anzeigen",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Konfigurieren"
-				},
-				"optionRelatedTopics": "Ereignisse verwandter Themen anzeigen"
-			}
+		"Works": {
+			"headerTitle": "Werke",
+			"intro": "Dies sind Werke von der Person, dem Kollektiv oder der Organisation, die Thema dieser Seite ist. Du kannst eine Seite eingeben, die alle Informationen über das Werk sammelt, indem du auf sie klickst. Es werden nur Werke mit Bildern angezeigt. Als Liste anzeigen, um alle verwandten Werke anzusehen, die gespeichert wurden.",
+			"sortMenuTitle": "Sortieren",
+			"sortMenuTooltip": "Objekte sortieren",
+			"sortMenuOptionTime": "Nach Zeit",
+			"sortMenuOptionAlpha": "Alphabetisch",
+			"sortMenuOptionDist": "Nach Entfernung",
+			"sortMenuOptionClear": "Sortierung aufheben",
+			"facetMenuTitle": "Aspekt nach",
+			"facetMenuTooltip": "Aspektwerke nach unterschiedlichen Kriterien",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Sammlung",
+			"facetMenuOptionCity": "Standort",
+			"displayMenuTitle": "Anzeigen als",
+			"displayMenuTooltip": "Die Anzeige auswählen",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Karte",
+			"showAll": "Alle"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakten",
@@ -214,127 +335,6 @@
 				"translateArticleText": "Diesen Artikel auf Deutsch übersetzen",
 				"otherLanguagestext": "Andere Sprachen"
 			}
-		},
-		"Locations": {
-			"headerTitle": "In diesem Standort",
-			"intro": "Hier siehst du alles, was im Thema dieser Seite angesiedelt ist. Als Liste anzeigen, um alle Standorte anzusehen, die gespeichert wurden.",
-			"sortMenu": {
-				"title": "Standorte sortieren",
-				"tooltip": "Standorte sortieren",
-				"optionTime": "Nach Zeit",
-				"optionAlpha": "Alphabetisch",
-				"optionDist": "Nach Entfernung",
-				"optionClear": "Sortierung löschen"
-			},
-			"facetMenu": {
-				"title": "Aspektstandorte nach",
-				"tooltip": "Aspektstandorte nach unterschiedlichen Kriterien",
-				"optionType": "Typ",
-				"optionColl": "Urheber",
-				"optionCity": "Standort"
-			},
-			"displayMenu": {
-				"title": "Anzeigen als",
-				"tooltip": "Die Anzeige auswählen",
-				"optionGallery": "Galerie",
-				"optionList": "Liste"
-			},
-			"showAll": "Alle"
-		},
-		"Depicted": {
-			"headerTitle": "Abgebildet in",
-			"intro": "Dieses Thema ist in diesen Werken abgebildet. Die Werke nach unterschiedlichen Kriterien sortieren, als Liste anzeigen, um diejenigen ohne Bild anzusehen.",
-			"sortMenu": {
-				"title": "Werke sortieren",
-				"tooltip": "Werke sortieren",
-				"optionTime": "Nach Zeit",
-				"optionAlpha": "Alphabetisch",
-				"optionClear": "Sortierung löschen"
-			},
-			"facetMenu": {
-				"title": "Aspektwerke nach",
-				"tooltip": "Aspektwerke nach unterschiedlichen Kriterien",
-				"optionType": "Typ",
-				"optionColl": "Urheber"
-			},
-			"displayMenu": {
-				"title": "Anzeigen als",
-				"tooltip": "Die Anzeige auswählen",
-				"optionGallery": "Galerie",
-				"optionList": "Liste"
-			},
-			"showAll": "Alle"
-		},
-		"Depicts": {
-			"headerTitle": "Stellt dar",
-			"intro": "Dieses Werk bildet diese Themen ab. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
-		},
-		"Map": {
-			"headerTitle": "Standort auf der Karte"
-		},
-		"Parts": {
-			"headerTitle": "Teile",
-			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
-		},
-		"Partof": {
-			"headerTitle": "Teil von"
-		},
-		"Affiliations": {
-			"headerTitle": "Verbindungen",
-			"intro": "Organisationen, mit denen diese Person oder Organisation eine Verbindung hat."
-		},
-		"Similar": {
-			"headerTitle": "Ähnliche Themen"
-		},
-		"Effects": {
-			"headerTitle": "Effekte"
-		},
-		"Location": {
-			"headerTitle": "Standort"
-		},
-		"Subclasses": {
-			"headerTitle": "Unterklasse dieses Themas"
-		},
-		"Links": {
-			"headerTitle": "Verknüpfungen dieses Artikels"
-		},
-		"Works": {
-			"headerTitle": "Werke",
-			"intro": "Dies sind Werke von der Person, dem Kollektiv oder der Organisation, die Thema dieser Seite ist. Du kannst eine Seite eingeben, die alle Informationen über das Werk sammelt, indem du auf sie klickst. Es werden nur Werke mit Bildern angezeigt. Als Liste anzeigen, um alle verwandten Werke anzusehen, die gespeichert wurden.",
-			"sortMenuTitle": "Sortieren",
-			"sortMenuTooltip": "Objekte sortieren",
-			"sortMenuOptionTime": "Nach Zeit",
-			"sortMenuOptionAlpha": "Alphabetisch",
-			"sortMenuOptionDist": "Nach Entfernung",
-			"sortMenuOptionClear": "Sortierung aufheben",
-			"facetMenuTitle": "Aspekt nach",
-			"facetMenuTooltip": "Aspektwerke nach unterschiedlichen Kriterien",
-			"facetMenuOptionType": "Typ",
-			"facetMenuOptionColl": "Sammlung",
-			"facetMenuOptionCity": "Standort",
-			"displayMenuTitle": "Anzeigen als",
-			"displayMenuTooltip": "Die Anzeige auswählen",
-			"displayMenuOptionGallery": "Galerie",
-			"displayMenuOptionList": "Liste",
-			"displayMenuOptionMap": "Karte",
-			"showAll": "Alle"
-		},
-		"People": {
-			"headerTitle": "Personen bezüglich zum Thema",
-			"intro": "Diese Personen sind mit dem Thema dieser Seite verknüpft. Du kannst sie als Liste anzeigen, was auch Personen ohne Bilder anzeigt. Sie können nach Datum oder Namen sortiert werden. Beachte, dass nur solche angezeigt werden, die diese Informationen haben.",
-			"sortMenuTitle": "Sortieren",
-			"sortMenuTooltip": "Die Sortierreihenfolge ändern",
-			"sortMenuOptionBirth": "Nach Geburtsdatum",
-			"sortMenuOptionDeath": "Nach Sterbedatum",
-			"sortMenuOptionName": "Nach Name",
-			"sortMenuOptionFirst": "Nach Vorname",
-			"sortMenuOptionLast": "Nach Nachname",
-			"sortMenuOptionClear": "Sortierung aufheben",
-			"facetMenuTitle": "Aspekt nach",
-			"facetMenuTooltip": "Personen nach unterschiedlichen Aspekten",
-			"facetMenuOptionProfession": "Beruf",
-			"facetMenuOptionCountry": "Staat",
-			"facetMenuOptionCity": "Geschlecht"
 		}
 	},
 	"imageViewer": {
@@ -497,7 +497,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Fotografiere dieses Kulturerbe und nimm am <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> \nFotowettbewerb teil!",
 		"WLMButton": "Bild hochladen"
 	}
 }

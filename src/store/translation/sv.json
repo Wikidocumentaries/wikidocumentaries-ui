@@ -52,16 +52,123 @@
 		"waitMessage": "Ett ögonblick... Söker information i Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Anknytning"
+		},
+		"Awards": {
+			"headerTitle": "Utmärkelser"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Välj historisk baskarta eller baskartor",
 			"chooseMapHelpNote": "Tips: ctrl + klicka tillåter att du väljer många kartor",
 			"yearAbbreviation": "år"
+		},
+		"Depicted": {
+			"headerTitle": "Skildras i",
+			"sortMenu": {
+				"title": "Sortera verk",
+				"tooltip": "Sortera verk",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionColl": "Skapare"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"tooltip": "Välj visning",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
+		"Depicts": {
+			"headerTitle": "Skildrar"
+		},
+		"Events": {
+			"headerTitle": "Händelser",
+			"displayMenu": {
+				"menuTitle": "Visningsalternativ",
+				"menuTooltip": "Visningsalternativ",
+				"optionShowTimeline": "Visa händelser på en tidslinje",
+				"optionShowList": "Visa händelser som en lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Inställningar",
+				"menuTooltip": "Välj fakta som ska visas",
+				"optionWorks": "Visa verk",
+				"optionRelatedPeople": "Visa händelser av relaterade personer",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurera"
+				},
+				"optionRelatedTopics": "Visa händelser av relaterade ämnen"
+			}
 		},
 		"Header": {
 			"titleEditText": "Redigera titeln",
 			"titleApproveText": "Godkänn denna titel",
 			"subtitleEditText": "Redigera beskrivningen",
 			"subtitleApproveText": "Godkänn denna beskrivning"
+		},
+		"Locations": {
+			"headerTitle": "På denna plats",
+			"sortMenu": {
+				"title": "Sortera platser",
+				"tooltip": "Sortera platser",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionDist": "Efter avstånd",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"optionType": "Typ",
+				"optionColl": "Skapare",
+				"optionCity": "Plats"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"tooltip": "Välj visning",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
+		"Map": {
+			"headerTitle": "Plats på kartan"
+		},
+		"Parts": {
+			"headerTitle": "Delar"
+		},
+		"Partof": {
+			"headerTitle": "Plats"
+		},
+		"Similar": {
+			"headerTitle": "Liknande ämnen"
+		},
+		"Links": {
+			"headerTitle": "Länkar från den här artikeln"
+		},
+		"Location": {
+			"headerTitle": "Plats"
+		},
+		"People": {
+			"headerTitle": "Människor relaterade till ämnet",
+			"sortMenuTitle": "Sortera",
+			"sortMenuTooltip": "Ändra sorteringsordningen",
+			"sortMenuOptionBirth": "Efter födelsedatum",
+			"sortMenuOptionDeath": "Efter dödsdatum",
+			"sortMenuOptionName": "Efter namn",
+			"sortMenuOptionFirst": "Efter förnamn",
+			"sortMenuOptionLast": "Efter efternamn",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuOptionProfession": "Yrke",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Kön"
+		},
+		"Twins": {
+			"headerTitle": "Tvillingstäder"
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder från arkiven",
@@ -148,24 +255,23 @@
 			"showEventsOnTimelineMenuText": "Visa händelser i tidslinjen",
 			"centuryText": "h"
 		},
-		"Events": {
-			"headerTitle": "Händelser",
-			"displayMenu": {
-				"menuTitle": "Visningsalternativ",
-				"menuTooltip": "Visningsalternativ",
-				"optionShowTimeline": "Visa händelser på en tidslinje",
-				"optionShowList": "Visa händelser som en lista"
-			},
-			"optionsMenu": {
-				"menuTitle": "Inställningar",
-				"menuTooltip": "Välj fakta som ska visas",
-				"optionWorks": "Visa verk",
-				"optionRelatedPeople": "Visa händelser av relaterade personer",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Konfigurera"
-				},
-				"optionRelatedTopics": "Visa händelser av relaterade ämnen"
-			}
+		"Works": {
+			"headerTitle": "Verk",
+			"sortMenuTitle": "Sortera",
+			"sortMenuTooltip": "Sortera objekt",
+			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionAlpha": "Alfabetiskt",
+			"sortMenuOptionDist": "Efter avstånd",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Samling",
+			"facetMenuOptionCity": "Plats",
+			"displayMenuTitle": "Visa som",
+			"displayMenuTooltip": "Välj visning",
+			"displayMenuOptionGallery": "Galleri",
+			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Karta",
+			"showAll": "Alla"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakta",
@@ -192,112 +298,6 @@
 				"translateArticleText": "Översätt denna artikel till ditt språk",
 				"otherLanguagestext": "Andra språk"
 			}
-		},
-		"Locations": {
-			"headerTitle": "På denna plats",
-			"sortMenu": {
-				"title": "Sortera platser",
-				"tooltip": "Sortera platser",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetiskt",
-				"optionDist": "Efter avstånd",
-				"optionClear": "Rensa sortering"
-			},
-			"facetMenu": {
-				"optionType": "Typ",
-				"optionColl": "Skapare",
-				"optionCity": "Plats"
-			},
-			"displayMenu": {
-				"title": "Visa som",
-				"tooltip": "Välj visning",
-				"optionGallery": "Galleri",
-				"optionList": "Lista"
-			},
-			"showAll": "Alla"
-		},
-		"Depicted": {
-			"headerTitle": "Skildras i",
-			"sortMenu": {
-				"title": "Sortera verk",
-				"tooltip": "Sortera verk",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetiskt",
-				"optionClear": "Rensa sortering"
-			},
-			"facetMenu": {
-				"optionType": "Typ",
-				"optionColl": "Skapare"
-			},
-			"displayMenu": {
-				"title": "Visa som",
-				"tooltip": "Välj visning",
-				"optionGallery": "Galleri",
-				"optionList": "Lista"
-			},
-			"showAll": "Alla"
-		},
-		"Depicts": {
-			"headerTitle": "Skildrar"
-		},
-		"Map": {
-			"headerTitle": "Plats på kartan"
-		},
-		"Parts": {
-			"headerTitle": "Delar"
-		},
-		"Partof": {
-			"headerTitle": "Plats"
-		},
-		"Twins": {
-			"headerTitle": "Tvillingstäder"
-		},
-		"Affiliations": {
-			"headerTitle": "Anknytning"
-		},
-		"Awards": {
-			"headerTitle": "Utmärkelser"
-		},
-		"Similar": {
-			"headerTitle": "Liknande ämnen"
-		},
-		"Location": {
-			"headerTitle": "Plats"
-		},
-		"Links": {
-			"headerTitle": "Länkar från den här artikeln"
-		},
-		"Works": {
-			"headerTitle": "Verk",
-			"sortMenuTitle": "Sortera",
-			"sortMenuTooltip": "Sortera objekt",
-			"sortMenuOptionTime": "Efter tid",
-			"sortMenuOptionAlpha": "Alfabetiskt",
-			"sortMenuOptionDist": "Efter avstånd",
-			"sortMenuOptionClear": "Rensa sortering",
-			"facetMenuOptionType": "Typ",
-			"facetMenuOptionColl": "Samling",
-			"facetMenuOptionCity": "Plats",
-			"displayMenuTitle": "Visa som",
-			"displayMenuTooltip": "Välj visning",
-			"displayMenuOptionGallery": "Galleri",
-			"displayMenuOptionList": "Lista",
-			"displayMenuOptionMap": "Karta",
-			"showAll": "Alla"
-		},
-		"People": {
-			"headerTitle": "Människor relaterade till ämnet",
-			"sortMenuTitle": "Sortera",
-			"sortMenuTooltip": "Ändra sorteringsordningen",
-			"sortMenuOptionBirth": "Efter födelsedatum",
-			"sortMenuOptionDeath": "Efter dödsdatum",
-			"sortMenuOptionName": "Efter namn",
-			"sortMenuOptionFirst": "Efter förnamn",
-			"sortMenuOptionLast": "Efter efternamn",
-			"sortMenuOptionClear": "Rensa sortering",
-			"facetMenuOptionProfession": "Yrke",
-			"facetMenuOptionCountry": "Land",
-			"facetMenuOptionCity": "Kön"
 		}
 	},
 	"imageViewer": {
