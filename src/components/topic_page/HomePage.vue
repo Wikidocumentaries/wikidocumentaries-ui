@@ -91,7 +91,6 @@ export default {
     Affiliations,
     Awards,
     Banner,
-    CV,
     Depicted,
     Depicts,
     Effects,
