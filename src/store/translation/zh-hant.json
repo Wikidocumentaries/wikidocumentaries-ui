@@ -60,16 +60,171 @@
 		"waitMessage": "請稍等…正在從維基百科、維基數據、維基共享資源、MapWarper、Finna、Flickr 檢索資料…"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "隸屬",
+			"intro": "此人或該組織有所聯繫的組織。"
+		},
+		"Awards": {
+			"headerTitle": "獎項",
+			"intro": "此頁面主題的提名與獎項。"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "選擇歷史性的地圖",
 			"chooseMapHelpNote": "提示：按下 ctrl 鍵和點擊能允許選擇多個地圖",
 			"yearAbbreviation": "年份"
+		},
+		"Collection": {
+			"headerTitle": "在收藏裡的作品",
+			"intro": "這些是此人物或機構收藏的作品，您可以用清單的方式來展示，另外也會秀出不帶有圖片的作品。它們可以按日期或名稱來排序，而這僅會秀出帶有這些資訊的內容。"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "這些是主題人物的專門活動。"
+		},
+		"Depicted": {
+			"headerTitle": "描述於",
+			"intro": "此主題被描述在這些作品中。作品是依不同準則做排序，若作品缺少介紹圖片可透過顯示成清單的方式來查看。",
+			"sortMenu": {
+				"title": "排序作品",
+				"tooltip": "排序作品",
+				"optionTime": "按時間",
+				"optionAlpha": "按字母順序",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"title": "分面作品依",
+				"tooltip": "分面作品依不同標準",
+				"optionType": "類型",
+				"optionColl": "創作者"
+			},
+			"displayMenu": {
+				"title": "顯示成",
+				"tooltip": "挑選展示",
+				"optionGallery": "圖庫",
+				"optionList": "清單"
+			},
+			"showAll": "所有"
+		},
+		"Depicts": {
+			"headerTitle": "描述",
+			"intro": "此作品描述出這些主題，您可以按時間和名稱來排序。請注意要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
+		},
+		"Events": {
+			"headerTitle": "事件",
+			"displayMenu": {
+				"menuTitle": "顯示選項",
+				"menuTooltip": "顯示選項",
+				"optionShowTimeline": "在時間表上秀出事件",
+				"optionShowList": "秀出事件成清單"
+			},
+			"optionsMenu": {
+				"menuTitle": "選項",
+				"menuTooltip": "選擇要顯示的詳情內容",
+				"optionWorks": "秀出作品",
+				"optionRelatedPeople": "秀出與事件相關的人物",
+				"subRelatedPeopleConf": {
+					"menuTitle": "設置"
+				},
+				"optionRelatedTopics": "秀出與事件相關的主題"
+			}
 		},
 		"Header": {
 			"titleEditText": "編輯標題",
 			"titleApproveText": "批准此標題",
 			"subtitleEditText": "編輯描述",
 			"subtitleApproveText": "批准此描述"
+		},
+		"Locations": {
+			"headerTitle": "在此位置",
+			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
+			"sortMenu": {
+				"title": "排序位置",
+				"tooltip": "排序位置",
+				"optionTime": "按時間",
+				"optionAlpha": "按字母順序",
+				"optionDist": "按距離",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"title": "分面位置依",
+				"tooltip": "分面位置依不同標準",
+				"optionType": "類型",
+				"optionColl": "創作者",
+				"optionCity": "位置"
+			},
+			"displayMenu": {
+				"title": "顯示成",
+				"tooltip": "挑選展示",
+				"optionGallery": "圖庫",
+				"optionList": "清單"
+			},
+			"showAll": "所有"
+		},
+		"Map": {
+			"headerTitle": "在地圖上的位置"
+		},
+		"Parts": {
+			"headerTitle": "部份",
+			"intro": "這些部份屬於這些主題，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
+		},
+		"Partof": {
+			"headerTitle": "一部分的",
+			"intro": "此主題是這些其他主題的一部分，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視主題。"
+		},
+		"Similar": {
+			"headerTitle": "相似主題",
+			"intro": "查找包含有與此主題一些共同關鍵特徵的主題。"
+		},
+		"Effects": {
+			"headerTitle": "影響",
+			"intro": "主題的影響。"
+		},
+		"Familytree": {
+			"headerTitle": "譜系圖"
+		},
+		"Instances": {
+			"headerTitle": "此主題實例",
+			"intro": "查看此主題實例。以不帶有圖片的項目清單檢閱。"
+		},
+		"Links": {
+			"headerTitle": "來自此條目的連結"
+		},
+		"Location": {
+			"headerTitle": "位置",
+			"intro": "此主題位在這些條目裡，或是與內容背景相關。"
+		},
+		"Names": {
+			"headerTitle": "名稱",
+			"intro": "查看主題與所有可用別名。"
+		},
+		"People": {
+			"headerTitle": "與主題關聯的人物",
+			"intro": "這些是關聯此頁面主題的人物，您可以用清單的方式來展示，另外也會秀出不帶有圖片的人物。他們可以按日期或名稱來排序，而這僅會秀出帶有這些資訊的內容。",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "更改排序順序",
+			"sortMenuOptionBirth": "按出生日期",
+			"sortMenuOptionDeath": "按逝世日期",
+			"sortMenuOptionName": "按名稱",
+			"sortMenuOptionFirst": "按名字",
+			"sortMenuOptionLast": "按姓氏",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面人物依不同外貌",
+			"facetMenuOptionProfession": "職業",
+			"facetMenuOptionCountry": "國家",
+			"facetMenuOptionCity": "性別"
+		},
+		"Subclasses": {
+			"headerTitle": "此主題的子類別",
+			"intro": "查看此主題的子類別。以不帶有圖片的項目清單檢閱。"
+		},
+		"Things": {
+			"headerTitle": "焦點清單主題",
+			"intro": "這些主題在此維基專案的焦點清單裡。"
+		},
+		"Twins": {
+			"headerTitle": "雙城",
+			"intro": "被政府合法或是非正式承認具有合夥或是合作協議的孿生城鎮、姊妹市、孿生自治市、其它地區。您可以按時間、或是名稱來排序它們。要查看全部、且包含不帶有圖片的主題，您必須以清單方式來檢視主題。"
 		},
 		"TopicImages": {
 			"headerTitle": "來自存檔的圖片",
@@ -161,24 +316,26 @@
 			"showEventsOnTimelineMenuText": "秀出在時間表上的主題事件",
 			"centuryText": "世紀"
 		},
-		"Events": {
-			"headerTitle": "事件",
-			"displayMenu": {
-				"menuTitle": "顯示選項",
-				"menuTooltip": "顯示選項",
-				"optionShowTimeline": "在時間表上秀出事件",
-				"optionShowList": "秀出事件成清單"
-			},
-			"optionsMenu": {
-				"menuTitle": "選項",
-				"menuTooltip": "選擇要顯示的詳情內容",
-				"optionWorks": "秀出作品",
-				"optionRelatedPeople": "秀出與事件相關的人物",
-				"subRelatedPeopleConf": {
-					"menuTitle": "設置"
-				},
-				"optionRelatedTopics": "秀出與事件相關的主題"
-			}
+		"Works": {
+			"headerTitle": "作品",
+			"intro": "這些是依屬於此頁面主題的人物、集體、或組織分出的作品，您可以透過點擊此來進入收集關於作品資訊的頁面。僅有附帶圖片的作品會秀出，可顯示成清單來查看所有已儲存的相關作品。",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "排序項目",
+			"sortMenuOptionTime": "按時間",
+			"sortMenuOptionAlpha": "按字母順序",
+			"sortMenuOptionDist": "按距離",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面作品依不同標準",
+			"facetMenuOptionType": "類型",
+			"facetMenuOptionColl": "收藏",
+			"facetMenuOptionCity": "位置",
+			"displayMenuTitle": "顯示成",
+			"displayMenuTooltip": "挑選展示",
+			"displayMenuOptionGallery": "圖庫",
+			"displayMenuOptionList": "清單",
+			"displayMenuOptionMap": "地圖",
+			"showAll": "所有"
 		},
 		"Wikidata": {
 			"headerTitle": "詳情",
@@ -207,159 +364,6 @@
 				"translateArticleText": "翻譯此條目成英語",
 				"otherLanguagestext": "其它語言"
 			}
-		},
-		"Locations": {
-			"headerTitle": "在此位置",
-			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
-			"sortMenu": {
-				"title": "排序位置",
-				"tooltip": "排序位置",
-				"optionTime": "按時間",
-				"optionAlpha": "按字母順序",
-				"optionDist": "按距離",
-				"optionClear": "清除排序"
-			},
-			"facetMenu": {
-				"title": "分面位置依",
-				"tooltip": "分面位置依不同標準",
-				"optionType": "類型",
-				"optionColl": "創作者",
-				"optionCity": "位置"
-			},
-			"displayMenu": {
-				"title": "顯示成",
-				"tooltip": "挑選展示",
-				"optionGallery": "圖庫",
-				"optionList": "清單"
-			},
-			"showAll": "所有"
-		},
-		"Depicted": {
-			"headerTitle": "描述於",
-			"intro": "此主題被描述在這些作品中。作品是依不同準則做排序，若作品缺少介紹圖片可透過顯示成清單的方式來查看。",
-			"sortMenu": {
-				"title": "排序作品",
-				"tooltip": "排序作品",
-				"optionTime": "按時間",
-				"optionAlpha": "按字母順序",
-				"optionClear": "清除排序"
-			},
-			"facetMenu": {
-				"title": "分面作品依",
-				"tooltip": "分面作品依不同標準",
-				"optionType": "類型",
-				"optionColl": "創作者"
-			},
-			"displayMenu": {
-				"title": "顯示成",
-				"tooltip": "挑選展示",
-				"optionGallery": "圖庫",
-				"optionList": "清單"
-			},
-			"showAll": "所有"
-		},
-		"Depicts": {
-			"headerTitle": "描述",
-			"intro": "此作品描述出這些主題，您可以按時間和名稱來排序。請注意要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
-		},
-		"Map": {
-			"headerTitle": "在地圖上的位置"
-		},
-		"Parts": {
-			"headerTitle": "部份",
-			"intro": "這些部份屬於這些主題，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視。"
-		},
-		"Partof": {
-			"headerTitle": "位置",
-			"intro": "此主題所在位置與這些主題相關，您可以按時間和名稱來排序。要查看所有且包含不帶有圖片的主題，您必須以清單來檢視主題。"
-		},
-		"Twins": {
-			"headerTitle": "雙城",
-			"intro": "被政府合法或是非正式承認具有合夥或是合作協議的孿生城鎮、姊妹市、孿生自治市、其它地區。您可以按時間、或是名稱來排序它們。要查看全部、且包含不帶有圖片的主題，您必須以清單方式來檢視主題。"
-		},
-		"Affiliations": {
-			"headerTitle": "隸屬",
-			"intro": "此人或該組織有所聯繫的組織。"
-		},
-		"Awards": {
-			"headerTitle": "獎項",
-			"intro": "此頁面主題的提名與獎項。"
-		},
-		"Similar": {
-			"headerTitle": "相似主題",
-			"intro": "查找包含有與此主題一些共同關鍵特徵的主題。"
-		},
-		"Effects": {
-			"headerTitle": "影響",
-			"intro": "主題的影響。"
-		},
-		"Things": {
-			"headerTitle": "焦點清單主題",
-			"intro": "這些主題在此維基專案的焦點清單裡。"
-		},
-		"Instances": {
-			"headerTitle": "此主題實例",
-			"intro": "查看此主題實例。以不帶有圖片的項目清單檢閱。"
-		},
-		"Location": {
-			"headerTitle": "位置",
-			"intro": "此主題位在這些條目裡，或是與內容背景相關。"
-		},
-		"Subclasses": {
-			"headerTitle": "此主題的子類別",
-			"intro": "查看此主題的子類別。以不帶有圖片的項目清單檢閱。"
-		},
-		"Links": {
-			"headerTitle": "來自此條目的連結"
-		},
-		"Familytree": {
-			"headerTitle": "譜系圖"
-		},
-		"Names": {
-			"headerTitle": "名稱",
-			"intro": "查看主題與所有可用別名。"
-		},
-		"Works": {
-			"headerTitle": "作品",
-			"intro": "這些是依屬於此頁面主題的人物、集體、或組織分出的作品，您可以透過點擊此來進入收集關於作品資訊的頁面。僅有附帶圖片的作品會秀出，可顯示成清單來查看所有已儲存的相關作品。",
-			"sortMenuTitle": "排序",
-			"sortMenuTooltip": "排序項目",
-			"sortMenuOptionTime": "按時間",
-			"sortMenuOptionAlpha": "按字母順序",
-			"sortMenuOptionDist": "按距離",
-			"sortMenuOptionClear": "清除排序",
-			"facetMenuTitle": "分面按",
-			"facetMenuTooltip": "分面作品依不同標準",
-			"facetMenuOptionType": "類型",
-			"facetMenuOptionColl": "收藏",
-			"facetMenuOptionCity": "位置",
-			"displayMenuTitle": "顯示成",
-			"displayMenuTooltip": "挑選展示",
-			"displayMenuOptionGallery": "圖庫",
-			"displayMenuOptionList": "清單",
-			"displayMenuOptionMap": "地圖",
-			"showAll": "所有"
-		},
-		"People": {
-			"headerTitle": "與主題關聯的人物",
-			"intro": "這些是關聯此頁面主題的人物，您可以用清單的方式來展示，另外也會秀出不帶有圖片的人物。他們可以按日期或名稱來排序，而這僅會秀出帶有這些資訊的內容。",
-			"sortMenuTitle": "排序",
-			"sortMenuTooltip": "更改排序順序",
-			"sortMenuOptionBirth": "按出生日期",
-			"sortMenuOptionDeath": "按逝世日期",
-			"sortMenuOptionName": "按名稱",
-			"sortMenuOptionFirst": "按名字",
-			"sortMenuOptionLast": "按姓氏",
-			"sortMenuOptionClear": "清除排序",
-			"facetMenuTitle": "分面按",
-			"facetMenuTooltip": "分面人物依不同外貌",
-			"facetMenuOptionProfession": "職業",
-			"facetMenuOptionCountry": "國家",
-			"facetMenuOptionCity": "性別"
-		},
-		"Collection": {
-			"headerTitle": "在收藏裡的作品",
-			"intro": "這些是此人物或機構收藏的作品，您可以用清單的方式來展示，另外也會秀出不帶有圖片的作品。它們可以按日期或名稱來排序，而這僅會秀出帶有這些資訊的內容。"
 		}
 	},
 	"imageViewer": {
@@ -527,7 +531,8 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "拍攝此文化遺產、遺址，並參加<a href='https://www.wikilovesmonuments.org/'>維基愛古蹟 2020</a> 攝影比賽！",
+		"WLM": "維基愛古蹟 $1",
+		"WLMText": "拍攝這個文化遺產地點，並參加在$2的攝影比賽！",
 		"WLMButton": "上傳圖片"
 	}
 }

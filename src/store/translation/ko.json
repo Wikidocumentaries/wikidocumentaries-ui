@@ -41,11 +41,94 @@
 			"chooseMapHelpNote": "팁: Ctrl+클릭을 통해 다수의 지도를 선택할 수 있습니다",
 			"yearAbbreviation": "y."
 		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "시간순",
+				"optionAlpha": "알파벳순",
+				"optionClear": "정렬 지우기"
+			},
+			"facetMenu": {
+				"optionType": "유형",
+				"optionColl": "만든이"
+			},
+			"displayMenu": {
+				"tooltip": "디스플레이 선택",
+				"optionGallery": "갤러리",
+				"optionList": "목록"
+			},
+			"showAll": "모두"
+		},
+		"Events": {
+			"headerTitle": "이벤트",
+			"displayMenu": {
+				"menuTitle": "표시 옵션",
+				"menuTooltip": "표시 옵션",
+				"optionShowTimeline": "타임라인의 이벤트 표시",
+				"optionShowList": "이벤트를 목록으로 표시"
+			},
+			"optionsMenu": {
+				"menuTitle": "옵션",
+				"optionRelatedPeople": "관련 인물의 이벤트 표시",
+				"subRelatedPeopleConf": {
+					"menuTitle": "설정"
+				},
+				"optionRelatedTopics": "관련 주제의 이벤트 표시"
+			}
+		},
 		"Header": {
 			"titleEditText": "제목 편집",
 			"titleApproveText": "이 제목 승인",
 			"subtitleEditText": "설명 편집",
 			"subtitleApproveText": "이 설명을 승인합니다"
+		},
+		"Locations": {
+			"headerTitle": "이 위치에서",
+			"sortMenu": {
+				"optionTime": "시간순",
+				"optionAlpha": "알파벳순",
+				"optionDist": "거리순",
+				"optionClear": "정렬 지우기"
+			},
+			"facetMenu": {
+				"optionType": "유형",
+				"optionColl": "만든이",
+				"optionCity": "위치"
+			},
+			"displayMenu": {
+				"title": "표시 이름",
+				"tooltip": "디스플레이 선택",
+				"optionGallery": "갤러리",
+				"optionList": "목록"
+			},
+			"showAll": "모두"
+		},
+		"Map": {
+			"headerTitle": "지도 상의 위치"
+		},
+		"Partof": {
+			"headerTitle": "위치"
+		},
+		"Similar": {
+			"headerTitle": "비슷한 주제"
+		},
+		"Effects": {
+			"headerTitle": "효과"
+		},
+		"Location": {
+			"headerTitle": "위치"
+		},
+		"Names": {
+			"headerTitle": "이름"
+		},
+		"People": {
+			"headerTitle": "주제와 관련된 인물",
+			"sortMenuTitle": "정렬",
+			"sortMenuOptionName": "이름순",
+			"sortMenuOptionFirst": "이름순",
+			"sortMenuOptionLast": "성(이름)순",
+			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuOptionCountry": "국가",
+			"facetMenuOptionCity": "성별"
 		},
 		"TopicImages": {
 			"headerTitle": "아카이브 이미지",
@@ -115,22 +198,19 @@
 			"headerTitle": "타임라인",
 			"centuryText": "C"
 		},
-		"Events": {
-			"headerTitle": "이벤트",
-			"displayMenu": {
-				"menuTitle": "표시 옵션",
-				"menuTooltip": "표시 옵션",
-				"optionShowTimeline": "타임라인의 이벤트 표시",
-				"optionShowList": "이벤트를 목록으로 표시"
-			},
-			"optionsMenu": {
-				"menuTitle": "옵션",
-				"optionRelatedPeople": "관련 인물의 이벤트 표시",
-				"subRelatedPeopleConf": {
-					"menuTitle": "설정"
-				},
-				"optionRelatedTopics": "관련 주제의 이벤트 표시"
-			}
+		"Works": {
+			"sortMenuTitle": "정렬",
+			"sortMenuOptionTime": "시간순",
+			"sortMenuOptionAlpha": "알파벳순",
+			"sortMenuOptionDist": "거리순",
+			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuOptionType": "유형",
+			"facetMenuOptionCity": "위치",
+			"displayMenuTooltip": "디스플레이 선택",
+			"displayMenuOptionGallery": "갤러리",
+			"displayMenuOptionList": "목록",
+			"displayMenuOptionMap": "지도",
+			"showAll": "모두"
 		},
 		"Wikidata": {
 			"extLink": {
@@ -153,86 +233,6 @@
 				"translateArticleText": "이 문서를 내 언어로 번역하기",
 				"otherLanguagestext": "다른 언어"
 			}
-		},
-		"Locations": {
-			"headerTitle": "이 위치에서",
-			"sortMenu": {
-				"optionTime": "시간순",
-				"optionAlpha": "알파벳순",
-				"optionDist": "거리순",
-				"optionClear": "정렬 지우기"
-			},
-			"facetMenu": {
-				"optionType": "유형",
-				"optionColl": "만든이",
-				"optionCity": "위치"
-			},
-			"displayMenu": {
-				"title": "표시 이름",
-				"tooltip": "디스플레이 선택",
-				"optionGallery": "갤러리",
-				"optionList": "목록"
-			},
-			"showAll": "모두"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "시간순",
-				"optionAlpha": "알파벳순",
-				"optionClear": "정렬 지우기"
-			},
-			"facetMenu": {
-				"optionType": "유형",
-				"optionColl": "만든이"
-			},
-			"displayMenu": {
-				"tooltip": "디스플레이 선택",
-				"optionGallery": "갤러리",
-				"optionList": "목록"
-			},
-			"showAll": "모두"
-		},
-		"Map": {
-			"headerTitle": "지도 상의 위치"
-		},
-		"Partof": {
-			"headerTitle": "위치"
-		},
-		"Similar": {
-			"headerTitle": "비슷한 주제"
-		},
-		"Effects": {
-			"headerTitle": "효과"
-		},
-		"Location": {
-			"headerTitle": "위치"
-		},
-		"Names": {
-			"headerTitle": "이름"
-		},
-		"Works": {
-			"sortMenuTitle": "정렬",
-			"sortMenuOptionTime": "시간순",
-			"sortMenuOptionAlpha": "알파벳순",
-			"sortMenuOptionDist": "거리순",
-			"sortMenuOptionClear": "정렬 지우기",
-			"facetMenuOptionType": "유형",
-			"facetMenuOptionCity": "위치",
-			"displayMenuTooltip": "디스플레이 선택",
-			"displayMenuOptionGallery": "갤러리",
-			"displayMenuOptionList": "목록",
-			"displayMenuOptionMap": "지도",
-			"showAll": "모두"
-		},
-		"People": {
-			"headerTitle": "주제와 관련된 인물",
-			"sortMenuTitle": "정렬",
-			"sortMenuOptionName": "이름순",
-			"sortMenuOptionFirst": "이름순",
-			"sortMenuOptionLast": "성(이름)순",
-			"sortMenuOptionClear": "정렬 지우기",
-			"facetMenuOptionCountry": "국가",
-			"facetMenuOptionCity": "성별"
 		}
 	},
 	"imageViewer": {
@@ -362,7 +362,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "이 문화유산을 촬영하고  <a href='https://www.wikilovesmonuments.org/'> Wiki Loves Monuments 2020 </a> 사진 경연 대회에 참여하세요!",
 		"WLMButton": "이미지 업로드"
 	}
 }

@@ -23,12 +23,63 @@
 		"waitMessage": "Aspitte 'nu mumende... stoche a recupere date da Uicchipèdie, Uicchidate, Uicchimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Affigliazziune"
+		},
+		"Awards": {
+			"headerTitle": "Premie"
+		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "a."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionAlpha": "Alfabbeticamende"
+			},
+			"facetMenu": {
+				"optionType": "Tipe",
+				"optionColl": "Ccrejatore"
+			},
+			"displayMenu": {
+				"title": "Fa 'ndrucà cumme",
+				"optionGallery": "Gallerie",
+				"optionList": "Elenghe"
+			},
+			"showAll": "Tutte"
+		},
+		"Events": {
+			"headerTitle": "Fatte",
+			"displayMenu": {
+				"menuTitle": "Fà 'ndrucà le opziune",
+				"menuTooltip": "Fà 'ndrucà le opziune"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opziune",
+				"menuTooltip": "Scacchie le fatte da fà 'ndrucà",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configure"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Cange 'u titole",
 			"titleApproveText": "Approve stu titole"
+		},
+		"Locations": {
+			"headerTitle": "Jndr'à stu luèche",
+			"facetMenu": {
+				"optionType": "Tipe",
+				"optionColl": "Ccrejatore",
+				"optionCity": "Luèche"
+			},
+			"displayMenu": {
+				"optionGallery": "Gallerie",
+				"optionList": "Elenghe"
+			},
+			"showAll": "Tutte"
+		},
+		"Partof": {
+			"headerTitle": "Luèche"
 		},
 		"TopicImages": {
 			"facetMenu": {
@@ -46,57 +97,6 @@
 			},
 			"imagesViewExternal": "'Ndruche l'immaggine origgenale",
 			"imagesViewOnMap": "?ndruche l'immaggine sus 'a mappe"
-		},
-		"Events": {
-			"headerTitle": "Fatte",
-			"displayMenu": {
-				"menuTitle": "Fà 'ndrucà le opziune",
-				"menuTooltip": "Fà 'ndrucà le opziune"
-			},
-			"optionsMenu": {
-				"menuTitle": "Opziune",
-				"menuTooltip": "Scacchie le fatte da fà 'ndrucà",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Configure"
-				}
-			}
-		},
-		"Locations": {
-			"headerTitle": "Jndr'à stu luèche",
-			"facetMenu": {
-				"optionType": "Tipe",
-				"optionColl": "Ccrejatore",
-				"optionCity": "Luèche"
-			},
-			"displayMenu": {
-				"optionGallery": "Gallerie",
-				"optionList": "Elenghe"
-			},
-			"showAll": "Tutte"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionAlpha": "Alfabbeticamende"
-			},
-			"facetMenu": {
-				"optionType": "Tipe",
-				"optionColl": "Ccrejatore"
-			},
-			"displayMenu": {
-				"title": "Fa 'ndrucà cumme",
-				"optionGallery": "Gallerie",
-				"optionList": "Elenghe"
-			},
-			"showAll": "Tutte"
-		},
-		"Partof": {
-			"headerTitle": "Luèche"
-		},
-		"Affiliations": {
-			"headerTitle": "Affigliazziune"
-		},
-		"Awards": {
-			"headerTitle": "Premie"
 		},
 		"Works": {
 			"facetMenuOptionCity": "Luèche"

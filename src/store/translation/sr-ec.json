@@ -43,11 +43,106 @@
 		"BaseMapDialog": {
 			"yearAbbreviation": "г."
 		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "По времену",
+				"optionAlpha": "По абецеди"
+			},
+			"facetMenu": {
+				"optionType": "Тип",
+				"optionColl": "Аутор"
+			},
+			"displayMenu": {
+				"title": "Прикажи као",
+				"tooltip": "Изаберите приказ",
+				"optionGallery": "Галерија",
+				"optionList": "Списак"
+			},
+			"showAll": "Све"
+		},
+		"Events": {
+			"headerTitle": "Догађаји",
+			"displayMenu": {
+				"menuTitle": "Опције приказа",
+				"menuTooltip": "Опције приказа",
+				"optionShowTimeline": "Прикажи догађаје на хронологији",
+				"optionShowList": "Прикажи догађаје као списак"
+			},
+			"optionsMenu": {
+				"menuTitle": "Опције",
+				"menuTooltip": "Изаберите чињенице за приказ",
+				"optionWorks": "Прикажи радове",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Конфигурисање"
+				}
+			}
+		},
 		"Header": {
 			"titleEditText": "Измени наслов",
 			"titleApproveText": "Одобри наслов",
 			"subtitleEditText": "Измени опис",
 			"subtitleApproveText": "Одобри опис"
+		},
+		"Locations": {
+			"headerTitle": "На овој локацији",
+			"sortMenu": {
+				"title": "Сортирање локације",
+				"tooltip": "Сортирање локације",
+				"optionTime": "По времену",
+				"optionAlpha": "Азбучним редом",
+				"optionDist": "По удаљености"
+			},
+			"facetMenu": {
+				"optionType": "Врста",
+				"optionColl": "Творац",
+				"optionCity": "Локација"
+			},
+			"displayMenu": {
+				"title": "Прикажи као",
+				"tooltip": "Изаберите приказ",
+				"optionGallery": "Галерија",
+				"optionList": "Списак"
+			},
+			"showAll": "Све"
+		},
+		"Map": {
+			"headerTitle": "Локација на мапи"
+		},
+		"Parts": {
+			"headerTitle": "Делови"
+		},
+		"Partof": {
+			"headerTitle": "Локација"
+		},
+		"Similar": {
+			"headerTitle": "Сличне теме"
+		},
+		"Effects": {
+			"headerTitle": "Ефекти"
+		},
+		"Instances": {
+			"headerTitle": "Инстанце ове теме"
+		},
+		"Links": {
+			"headerTitle": "Везе из овог чланка"
+		},
+		"Location": {
+			"headerTitle": "Локације"
+		},
+		"People": {
+			"headerTitle": "Људи везани за тему",
+			"sortMenuTitle": "Сортирај",
+			"sortMenuOptionBirth": "По датуму рођења",
+			"sortMenuOptionDeath": "По датуму смрти",
+			"sortMenuOptionName": "По имену",
+			"sortMenuOptionFirst": "По имену",
+			"sortMenuOptionLast": "По презимену",
+			"facetMenuOptionProfession": "Занимање",
+			"facetMenuOptionCountry": "Земља",
+			"facetMenuOptionCity": "Пол"
+		},
+		"Subclasses": {
+			"headerTitle": "Подкласе ове теме"
 		},
 		"TopicImages": {
 			"headerTitle": "Слике из архива",
@@ -76,22 +171,22 @@
 		"TopicTimeline": {
 			"headerTitle": "Хронологија"
 		},
-		"Events": {
-			"headerTitle": "Догађаји",
-			"displayMenu": {
-				"menuTitle": "Опције приказа",
-				"menuTooltip": "Опције приказа",
-				"optionShowTimeline": "Прикажи догађаје на хронологији",
-				"optionShowList": "Прикажи догађаје као списак"
-			},
-			"optionsMenu": {
-				"menuTitle": "Опције",
-				"menuTooltip": "Изаберите чињенице за приказ",
-				"optionWorks": "Прикажи радове",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Конфигурисање"
-				}
-			}
+		"Works": {
+			"headerTitle": "Радови",
+			"sortMenuTitle": "Сортирај",
+			"sortMenuTooltip": "Сортирај ставке",
+			"sortMenuOptionTime": "По времену",
+			"sortMenuOptionAlpha": "Азбучно",
+			"sortMenuOptionDist": "По удаљености",
+			"facetMenuOptionType": "Врста",
+			"facetMenuOptionColl": "Збирка",
+			"facetMenuOptionCity": "Локација",
+			"displayMenuTitle": "Прикажи као",
+			"displayMenuTooltip": "Изаберите приказ",
+			"displayMenuOptionGallery": "Галерија",
+			"displayMenuOptionList": "Списак",
+			"displayMenuOptionMap": "Мапа",
+			"showAll": "Све"
 		},
 		"Wikidata": {
 			"headerTitle": "Чињенице",
@@ -113,101 +208,6 @@
 				"translateArticleText": "Преведите чланак на српски",
 				"otherLanguagestext": "Други језици"
 			}
-		},
-		"Locations": {
-			"headerTitle": "На овој локацији",
-			"sortMenu": {
-				"title": "Сортирање локације",
-				"tooltip": "Сортирање локације",
-				"optionTime": "По времену",
-				"optionAlpha": "Азбучним редом",
-				"optionDist": "По удаљености"
-			},
-			"facetMenu": {
-				"optionType": "Врста",
-				"optionColl": "Творац",
-				"optionCity": "Локација"
-			},
-			"displayMenu": {
-				"title": "Прикажи као",
-				"tooltip": "Изаберите приказ",
-				"optionGallery": "Галерија",
-				"optionList": "Списак"
-			},
-			"showAll": "Све"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "По времену",
-				"optionAlpha": "По абецеди"
-			},
-			"facetMenu": {
-				"optionType": "Тип",
-				"optionColl": "Аутор"
-			},
-			"displayMenu": {
-				"title": "Прикажи као",
-				"tooltip": "Изаберите приказ",
-				"optionGallery": "Галерија",
-				"optionList": "Списак"
-			},
-			"showAll": "Све"
-		},
-		"Map": {
-			"headerTitle": "Локација на мапи"
-		},
-		"Parts": {
-			"headerTitle": "Делови"
-		},
-		"Partof": {
-			"headerTitle": "Локација"
-		},
-		"Similar": {
-			"headerTitle": "Сличне теме"
-		},
-		"Effects": {
-			"headerTitle": "Ефекти"
-		},
-		"Instances": {
-			"headerTitle": "Инстанце ове теме"
-		},
-		"Location": {
-			"headerTitle": "Локације"
-		},
-		"Subclasses": {
-			"headerTitle": "Подкласе ове теме"
-		},
-		"Links": {
-			"headerTitle": "Везе из овог чланка"
-		},
-		"Works": {
-			"headerTitle": "Радови",
-			"sortMenuTitle": "Сортирај",
-			"sortMenuTooltip": "Сортирај ставке",
-			"sortMenuOptionTime": "По времену",
-			"sortMenuOptionAlpha": "Азбучно",
-			"sortMenuOptionDist": "По удаљености",
-			"facetMenuOptionType": "Врста",
-			"facetMenuOptionColl": "Збирка",
-			"facetMenuOptionCity": "Локација",
-			"displayMenuTitle": "Прикажи као",
-			"displayMenuTooltip": "Изаберите приказ",
-			"displayMenuOptionGallery": "Галерија",
-			"displayMenuOptionList": "Списак",
-			"displayMenuOptionMap": "Мапа",
-			"showAll": "Све"
-		},
-		"People": {
-			"headerTitle": "Људи везани за тему",
-			"sortMenuTitle": "Сортирај",
-			"sortMenuOptionBirth": "По датуму рођења",
-			"sortMenuOptionDeath": "По датуму смрти",
-			"sortMenuOptionName": "По имену",
-			"sortMenuOptionFirst": "По имену",
-			"sortMenuOptionLast": "По презимену",
-			"facetMenuOptionProfession": "Занимање",
-			"facetMenuOptionCountry": "Земља",
-			"facetMenuOptionCity": "Пол"
 		}
 	},
 	"imageViewer": {

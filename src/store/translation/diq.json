@@ -45,16 +45,85 @@
 		"returnToHomeMessage": "Peyser şo pela akerdışi"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Aleqerın"
+		},
+		"Awards": {
+			"headerTitle": "Xelati"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Xeritanê tarixiyê bıngehınan weçine",
 			"chooseMapHelpNote": "Tip: ctrl+click weçinayışê zehf xeritan dano",
 			"yearAbbreviation": "s."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Ebe wext ra",
+				"optionAlpha": "Alfabetik"
+			},
+			"facetMenu": {
+				"optionType": "Babet",
+				"optionColl": "Vıraştoğ"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeriye",
+				"optionList": "Liste"
+			},
+			"showAll": "Pêro"
+		},
+		"Events": {
+			"headerTitle": "Weqeyi",
+			"optionsMenu": {
+				"menuTitle": "Weçinıteki",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Awan ke"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Sernameyi bıvurne",
 			"titleApproveText": "Nê sernameyi tesdiq ke",
 			"subtitleEditText": "Şınasiye bıvurne",
 			"subtitleApproveText": "Nê şınasnayışi tesdiq ke"
+		},
+		"Locations": {
+			"headerTitle": "Naca de",
+			"sortMenu": {
+				"optionTime": "Ebe wext ra",
+				"optionAlpha": "Alfabetik"
+			},
+			"facetMenu": {
+				"optionType": "Babet",
+				"optionColl": "Vıraştoğ",
+				"optionCity": "Lokasyon"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeriye",
+				"optionList": "Liste"
+			},
+			"showAll": "Pêro"
+		},
+		"Parts": {
+			"headerTitle": "Leteyi"
+		},
+		"Effects": {
+			"headerTitle": "Tesiri",
+			"intro": "Nê tesirê mewzuyê"
+		},
+		"Instances": {
+			"intro": "Bıewni rê misalê nê mewzuy. Bêasaye obceyan vinayışi rê zê lista bımocne"
+		},
+		"People": {
+			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
+			"sortMenuTitle": "Weçine",
+			"sortMenuOptionBirth": "Gorey bıyayışi",
+			"sortMenuOptionDeath": "Gorey merdışi",
+			"sortMenuOptionName": "Ebe name ra",
+			"sortMenuOptionFirst": "Gorey namey",
+			"sortMenuOptionLast": "Gorey peynamey",
+			"facetMenuOptionProfession": "Mesleg",
+			"facetMenuOptionCountry": "Dewlete",
+			"facetMenuOptionCity": "Cınsiyet"
 		},
 		"TopicImages": {
 			"headerTitle": "Arşivan ra resımi",
@@ -110,14 +179,17 @@
 			"headerTitle": "Wareyê saete",
 			"centuryText": "SS"
 		},
-		"Events": {
-			"headerTitle": "Weqeyi",
-			"optionsMenu": {
-				"menuTitle": "Weçinıteki",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Awan ke"
-				}
-			}
+		"Works": {
+			"sortMenuTitle": "Weçine",
+			"sortMenuOptionTime": "Gorey demi",
+			"sortMenuOptionAlpha": "Alfabetik",
+			"sortMenuOptionDist": "Gorey mesafey",
+			"facetMenuOptionType": "Babet",
+			"facetMenuOptionColl": "Koleksiyon",
+			"facetMenuOptionCity": "Lokasyon",
+			"displayMenuOptionGallery": "Galeriye",
+			"displayMenuOptionList": "Liste",
+			"showAll": "Pêro"
 		},
 		"Wikidata": {
 			"headerTitle": "Raşti",
@@ -139,78 +211,6 @@
 				"translateArticleText": "Enê meqaley tadê zıwanê ho",
 				"otherLanguagestext": "Zıwanê bini"
 			}
-		},
-		"Locations": {
-			"headerTitle": "Naca de",
-			"sortMenu": {
-				"optionTime": "Ebe wext ra",
-				"optionAlpha": "Alfabetik"
-			},
-			"facetMenu": {
-				"optionType": "Babet",
-				"optionColl": "Vıraştoğ",
-				"optionCity": "Lokasyon"
-			},
-			"displayMenu": {
-				"optionGallery": "Galeriye",
-				"optionList": "Liste"
-			},
-			"showAll": "Pêro"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "Ebe wext ra",
-				"optionAlpha": "Alfabetik"
-			},
-			"facetMenu": {
-				"optionType": "Babet",
-				"optionColl": "Vıraştoğ"
-			},
-			"displayMenu": {
-				"optionGallery": "Galeriye",
-				"optionList": "Liste"
-			},
-			"showAll": "Pêro"
-		},
-		"Parts": {
-			"headerTitle": "Leteyi"
-		},
-		"Affiliations": {
-			"headerTitle": "Aleqerın"
-		},
-		"Awards": {
-			"headerTitle": "Xelati"
-		},
-		"Effects": {
-			"headerTitle": "Tesiri",
-			"intro": "Nê tesirê mewzuyê"
-		},
-		"Instances": {
-			"intro": "Bıewni rê misalê nê mewzuy. Bêasaye obceyan vinayışi rê zê lista bımocne"
-		},
-		"Works": {
-			"sortMenuTitle": "Weçine",
-			"sortMenuOptionTime": "Gorey demi",
-			"sortMenuOptionAlpha": "Alfabetik",
-			"sortMenuOptionDist": "Gorey mesafey",
-			"facetMenuOptionType": "Babet",
-			"facetMenuOptionColl": "Koleksiyon",
-			"facetMenuOptionCity": "Lokasyon",
-			"displayMenuOptionGallery": "Galeriye",
-			"displayMenuOptionList": "Liste",
-			"showAll": "Pêro"
-		},
-		"People": {
-			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
-			"sortMenuTitle": "Weçine",
-			"sortMenuOptionBirth": "Gorey bıyayışi",
-			"sortMenuOptionDeath": "Gorey merdışi",
-			"sortMenuOptionName": "Ebe name ra",
-			"sortMenuOptionFirst": "Gorey namey",
-			"sortMenuOptionLast": "Gorey peynamey",
-			"facetMenuOptionProfession": "Mesleg",
-			"facetMenuOptionCountry": "Dewlete",
-			"facetMenuOptionCity": "Cınsiyet"
 		}
 	},
 	"imageViewer": {

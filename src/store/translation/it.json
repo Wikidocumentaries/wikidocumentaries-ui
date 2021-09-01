@@ -35,16 +35,67 @@
 		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Premi"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Scegli mappa/e storica di base",
 			"chooseMapHelpNote": "Suggerimento: ctrl+click permette selezionare più mappe",
 			"yearAbbreviation": "a."
+		},
+		"Depicted": {
+			"headerTitle": "Rappresentato in",
+			"facetMenu": {
+				"optionType": "Tipo"
+			},
+			"displayMenu": {
+				"optionGallery": "Galleria",
+				"optionList": "Elenco"
+			},
+			"showAll": "Tutto"
+		},
+		"Events": {
+			"headerTitle": "Eventi",
+			"optionsMenu": {
+				"menuTitle": "Opzioni",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configura"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Modifica il titolo",
 			"titleApproveText": "Approva questo titolo",
 			"subtitleEditText": "Modifica la descrizione",
 			"subtitleApproveText": "Approva questa descrizione"
+		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "Tipo"
+			},
+			"showAll": "Tutto"
+		},
+		"Partof": {
+			"headerTitle": "Parte di"
+		},
+		"Similar": {
+			"headerTitle": "Argomenti simili"
+		},
+		"Effects": {
+			"headerTitle": "Effetti"
+		},
+		"Names": {
+			"headerTitle": "Nomi"
+		},
+		"People": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuOptionBirth": "Per data di nascita",
+			"sortMenuOptionDeath": "Per data di morte",
+			"facetMenuOptionCountry": "Stato",
+			"facetMenuOptionCity": "Sesso"
+		},
+		"Twins": {
+			"headerTitle": "Città gemellate"
 		},
 		"TopicImages": {
 			"actionsMenu": {
@@ -120,14 +171,16 @@
 			"headerTitle": "Linea temporale",
 			"showEventsOnTimelineMenuText": "Mostra eventi dell'argomento nella linea temporale"
 		},
-		"Events": {
-			"headerTitle": "Eventi",
-			"optionsMenu": {
-				"menuTitle": "Opzioni",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Configura"
-				}
-			}
+		"Works": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuTooltip": "Ordina elementi",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionCity": "Località",
+			"displayMenuTitle": "Mostra come",
+			"displayMenuOptionGallery": "Galleria",
+			"displayMenuOptionList": "Elenco",
+			"displayMenuOptionMap": "Mappa",
+			"showAll": "Tutto"
 		},
 		"Wikidata": {
 			"headerTitle": "Dati",
@@ -153,59 +206,6 @@
 				"translateArticleText": "Traduci questa voce nella tua lingua",
 				"otherLanguagestext": "Altre lingue"
 			}
-		},
-		"Locations": {
-			"facetMenu": {
-				"optionType": "Tipo"
-			},
-			"showAll": "Tutto"
-		},
-		"Depicted": {
-			"headerTitle": "Rappresentato in",
-			"facetMenu": {
-				"optionType": "Tipo"
-			},
-			"displayMenu": {
-				"optionGallery": "Galleria",
-				"optionList": "Elenco"
-			},
-			"showAll": "Tutto"
-		},
-		"Partof": {
-			"headerTitle": "Parte di"
-		},
-		"Twins": {
-			"headerTitle": "Città gemellate"
-		},
-		"Awards": {
-			"headerTitle": "Premi"
-		},
-		"Similar": {
-			"headerTitle": "Argomenti simili"
-		},
-		"Effects": {
-			"headerTitle": "Effetti"
-		},
-		"Names": {
-			"headerTitle": "Nomi"
-		},
-		"Works": {
-			"sortMenuTitle": "Ordina",
-			"sortMenuTooltip": "Ordina elementi",
-			"facetMenuOptionType": "Tipo",
-			"facetMenuOptionCity": "Località",
-			"displayMenuTitle": "Mostra come",
-			"displayMenuOptionGallery": "Galleria",
-			"displayMenuOptionList": "Elenco",
-			"displayMenuOptionMap": "Mappa",
-			"showAll": "Tutto"
-		},
-		"People": {
-			"sortMenuTitle": "Ordina",
-			"sortMenuOptionBirth": "Per data di nascita",
-			"sortMenuOptionDeath": "Per data di morte",
-			"facetMenuOptionCountry": "Stato",
-			"facetMenuOptionCity": "Sesso"
 		}
 	},
 	"imageViewer": {

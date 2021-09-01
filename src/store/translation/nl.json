@@ -67,16 +67,86 @@
 		"waitMessage": "Een ogenblik... Data wordt opgehaald van Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Onderscheidingen",
+			"intro": "Benoemingen en onderscheidingen van het onderwerp van deze pagina."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Kies historische basiskaart(en)",
 			"chooseMapHelpNote": "Tip: met ctrl+klikken kan je meerdere kaarten selecteren",
 			"yearAbbreviation": "y."
+		},
+		"Depicted": {
+			"headerTitle": "Afgebeeld in",
+			"intro": "Dit onderwerp wordt afgebeeld in deze werken. De werken volgens verschillende criteria ordenen, weergeven als een lijst zonder afbeeldingen.",
+			"sortMenu": {
+				"title": "Werken ordenen",
+				"tooltip": "Werken ordenen",
+				"optionTime": "Op tijd",
+				"optionAlpha": "Alfabetisch"
+			},
+			"facetMenu": {
+				"optionType": "Type"
+			},
+			"displayMenu": {
+				"tooltip": "Weergave kiezen",
+				"optionGallery": "Galerij",
+				"optionList": "Lijst"
+			},
+			"showAll": "Alle"
+		},
+		"Depicts": {
+			"headerTitle": "Verwijzingen"
+		},
+		"Events": {
+			"headerTitle": "Evenementen",
+			"displayMenu": {
+				"menuTitle": "Weergaveopties",
+				"menuTooltip": "Weergaveopties"
+			},
+			"optionsMenu": {
+				"menuTitle": "Instellingen",
+				"optionWorks": "Werk weergeven"
+			}
 		},
 		"Header": {
 			"titleEditText": "Bewerk de titel",
 			"titleApproveText": "Bevestig deze titel",
 			"subtitleEditText": "De beschrijving bewerken",
 			"subtitleApproveText": "Deze beschrijving goedkeuren"
+		},
+		"Locations": {
+			"sortMenu": {
+				"title": "Locaties ordenen",
+				"tooltip": "Locaties ordenen",
+				"optionTime": "Op tijd",
+				"optionAlpha": "Alfabetisch",
+				"optionDist": "Op afstand"
+			},
+			"facetMenu": {
+				"optionType": "Type",
+				"optionCity": "Locatie"
+			},
+			"displayMenu": {
+				"title": "Weergeven als",
+				"tooltip": "Weergave kiezen",
+				"optionGallery": "Galerij",
+				"optionList": "Lijst"
+			},
+			"showAll": "Alle"
+		},
+		"Parts": {
+			"headerTitle": "Gedeelte"
+		},
+		"Partof": {
+			"headerTitle": "Onderdeel van"
+		},
+		"Effects": {
+			"headerTitle": "Effecten",
+			"intro": "Dit zijn de effecten van het onderwerp,"
+		},
+		"Location": {
+			"headerTitle": "Locatie"
 		},
 		"TopicImages": {
 			"headerTitle": "Beelden uit archieven",
@@ -140,78 +210,8 @@
 		"TopicTimeline": {
 			"headerTitle": "Tijdlijn"
 		},
-		"Events": {
-			"headerTitle": "Evenementen",
-			"displayMenu": {
-				"menuTitle": "Weergaveopties",
-				"menuTooltip": "Weergaveopties"
-			},
-			"optionsMenu": {
-				"menuTitle": "Instellingen",
-				"optionWorks": "Werk weergeven"
-			}
-		},
 		"Wikipedia": {
 			"headerTitle": "Onderwerp"
-		},
-		"Locations": {
-			"sortMenu": {
-				"title": "Locaties ordenen",
-				"tooltip": "Locaties ordenen",
-				"optionTime": "Op tijd",
-				"optionAlpha": "Alfabetisch",
-				"optionDist": "Op afstand"
-			},
-			"facetMenu": {
-				"optionType": "Type",
-				"optionCity": "Locatie"
-			},
-			"displayMenu": {
-				"title": "Weergeven als",
-				"tooltip": "Weergave kiezen",
-				"optionGallery": "Galerij",
-				"optionList": "Lijst"
-			},
-			"showAll": "Alle"
-		},
-		"Depicted": {
-			"headerTitle": "Afgebeeld in",
-			"intro": "Dit onderwerp wordt afgebeeld in deze werken. De werken volgens verschillende criteria ordenen, weergeven als een lijst zonder afbeeldingen.",
-			"sortMenu": {
-				"title": "Werken ordenen",
-				"tooltip": "Werken ordenen",
-				"optionTime": "Op tijd",
-				"optionAlpha": "Alfabetisch"
-			},
-			"facetMenu": {
-				"optionType": "Type"
-			},
-			"displayMenu": {
-				"tooltip": "Weergave kiezen",
-				"optionGallery": "Galerij",
-				"optionList": "Lijst"
-			},
-			"showAll": "Alle"
-		},
-		"Depicts": {
-			"headerTitle": "Verwijzingen"
-		},
-		"Parts": {
-			"headerTitle": "Gedeelte"
-		},
-		"Partof": {
-			"headerTitle": "Onderdeel van"
-		},
-		"Awards": {
-			"headerTitle": "Onderscheidingen",
-			"intro": "Benoemingen en onderscheidingen van het onderwerp van deze pagina."
-		},
-		"Effects": {
-			"headerTitle": "Effecten",
-			"intro": "Dit zijn de effecten van het onderwerp,"
-		},
-		"Location": {
-			"headerTitle": "Locatie"
 		}
 	},
 	"imageViewer": {

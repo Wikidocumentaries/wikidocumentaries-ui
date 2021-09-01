@@ -61,16 +61,166 @@
 		"waitMessage": "Et øjeblik...henter data fra Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Tilknytninger",
+			"intro": "Organisationer som denne person eller organisation har en tilknytning til."
+		},
+		"Awards": {
+			"headerTitle": "Priser",
+			"intro": "Nomineringer og priser til denne sides emne."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Vælg historiske grundkort",
 			"chooseMapHelpNote": "Tip: ctrl+klik giver mulighed for at vælge flere kort",
 			"yearAbbreviation": "år"
+		},
+		"Collection": {
+			"headerTitle": "Værk i samlingen",
+			"intro": "Disse værker er i denne persons eller institutions samling. Du kan vælge at se dem som en liste, hvilket også vil vise værker uden billeder. De kan sorteres efter dato eller navn. Bemærk at kun værker med disse informationer vil blive vist."
+		},
+		"Depicted": {
+			"headerTitle": "Vist i",
+			"intro": "Dette emne er gengive i disse værker. Sortér værkerne efter forskellige kriterier. Vælg listevisning for at se dem uden billede.",
+			"sortMenu": {
+				"title": "Sorter værker",
+				"tooltip": "Sorter værker",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetisk",
+				"optionClear": "Ryd sortering"
+			},
+			"facetMenu": {
+				"title": "Facet værker efter",
+				"tooltip": "Facet værker efter forskellige kriterier",
+				"optionType": "Type",
+				"optionColl": "Skaber"
+			},
+			"displayMenu": {
+				"title": "Vis som",
+				"tooltip": "Vælg visningen",
+				"optionGallery": "Galleri",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
+		"Depicts": {
+			"headerTitle": "Skildrer",
+			"intro": "Dette værk skildrer disse emner. Du kan sortere dem efter tid og navn. Bemærk at for at se alle genstande, inklusiv dem uden et billede, skal du vælge listevisning."
+		},
+		"Events": {
+			"headerTitle": "Hændelser",
+			"displayMenu": {
+				"menuTitle": "Visningsindstillinger",
+				"menuTooltip": "Visningsmuligheder",
+				"optionShowTimeline": "Vis begivenheder på en tidslinje",
+				"optionShowList": "Vis begivenheder som en liste"
+			},
+			"optionsMenu": {
+				"menuTitle": "Indstillinger",
+				"menuTooltip": "Vælg facts der skal vises",
+				"optionWorks": "Vis værker",
+				"optionRelatedPeople": "Vis begivenheder for relaterede personer",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurér"
+				},
+				"optionRelatedTopics": "Vis begivenheder for relaterede emner"
+			}
 		},
 		"Header": {
 			"titleEditText": "Rediger titlen",
 			"titleApproveText": "Godkend denne titeæ",
 			"subtitleEditText": "Rediger beskrivelsen",
 			"subtitleApproveText": "Godkend denne beskrivelse"
+		},
+		"Locations": {
+			"headerTitle": "På denne plads",
+			"intro": "Her kan du se alt, som er lokeret til emnet på denne side. Vælg listevisning for at se alle lokationer, som er gemt.",
+			"sortMenu": {
+				"title": "Sorter lokationer",
+				"tooltip": "Sorter lokationer",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetisk",
+				"optionDist": "Efter afstand",
+				"optionClear": "Ryd sortering"
+			},
+			"facetMenu": {
+				"title": "Facet lokationer efter",
+				"tooltip": "Facet lokationer efter forskellige kriterier",
+				"optionType": "Type",
+				"optionColl": "Skaber",
+				"optionCity": "Placering"
+			},
+			"displayMenu": {
+				"title": "Vis som",
+				"tooltip": "Vælg visningen",
+				"optionGallery": "Galleri",
+				"optionList": "Liste"
+			},
+			"showAll": "Alle"
+		},
+		"Map": {
+			"headerTitle": "Lokation på kort"
+		},
+		"Parts": {
+			"headerTitle": "Dele",
+			"intro": "Disse dele hører til dette emne. Du kan sortere dem efter tid og navn. For at alle dele, også dem uden billede, skal du vælge listevisning."
+		},
+		"Partof": {
+			"headerTitle": "Del af",
+			"intro": "Dette element er placeret i relation til disse elementer. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du vælge listevisning."
+		},
+		"Similar": {
+			"headerTitle": "Lignende emner",
+			"intro": "Find emner, der har nogle fælles karakteristika til dette emne."
+		},
+		"Effects": {
+			"headerTitle": "Effekter",
+			"intro": "Dette er effekterne af dette emne."
+		},
+		"Familytree": {
+			"headerTitle": "Stamtræ"
+		},
+		"Instances": {
+			"headerTitle": "Tilfælde med dette emne",
+			"intro": "Se dette emnes tilfælde. Vælg listevisning for også at se emner uden billeder."
+		},
+		"Links": {
+			"headerTitle": "Links fra denne artikel"
+		},
+		"Location": {
+			"headerTitle": "Lokation",
+			"intro": "Dette emne er placeret i eller i kontekst til disse emner."
+		},
+		"Names": {
+			"headerTitle": "Navne"
+		},
+		"People": {
+			"headerTitle": "Personer relateret til dette emne",
+			"intro": "Disse personer er associerede til denne sides emne. Du kan vælge at se dem som en liste, hvilket også sikrer at du ser personer uden billeder tilknyttet. De kan sorteres efter dato eller navn. Bemærk at kun personer med disse informationer vil blive vist.",
+			"sortMenuTitle": "Sortér",
+			"sortMenuTooltip": "Skift sortering",
+			"sortMenuOptionBirth": "Efter fødselsdato",
+			"sortMenuOptionDeath": "Efter dødsdato",
+			"sortMenuOptionName": "Efter navn",
+			"sortMenuOptionFirst": "Efter fornavn",
+			"sortMenuOptionLast": "Efter efternavn",
+			"sortMenuOptionClear": "Ryd sortering",
+			"facetMenuTitle": "Facet af",
+			"facetMenuTooltip": "Facet personer af forskellige aspekter",
+			"facetMenuOptionProfession": "Profession",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Køn"
+		},
+		"Subclasses": {
+			"headerTitle": "Underklasser af dette emne",
+			"intro": "Se dette emnes underklasser. Vælg listevisning for også at se emner uden et billede."
+		},
+		"Things": {
+			"headerTitle": "Fokuslisteemner",
+			"intro": "Disse emner er på fokuslisten for dette Wikiprojekt."
+		},
+		"Twins": {
+			"headerTitle": "Tvillingebyer",
+			"intro": "Tvillingebyer, søskendebyer, sammenkoblede kommuner og andre lokationer som har et partnerskab eller en samarbejdsaftale, eller juridisk eller uformelt godkendt af deres byråd. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du benytte listevisning."
 		},
 		"TopicImages": {
 			"headerTitle": "Billeder fra arkiverne",
@@ -159,24 +309,26 @@
 			"showEventsOnTimelineMenuText": "Vis emnets begivenheder på tidslinjen",
 			"centuryText": "C"
 		},
-		"Events": {
-			"headerTitle": "Hændelser",
-			"displayMenu": {
-				"menuTitle": "Visningsindstillinger",
-				"menuTooltip": "Visningsmuligheder",
-				"optionShowTimeline": "Vis begivenheder på en tidslinje",
-				"optionShowList": "Vis begivenheder som en liste"
-			},
-			"optionsMenu": {
-				"menuTitle": "Indstillinger",
-				"menuTooltip": "Vælg facts der skal vises",
-				"optionWorks": "Vis værker",
-				"optionRelatedPeople": "Vis begivenheder for relaterede personer",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Konfigurér"
-				},
-				"optionRelatedTopics": "Vis begivenheder for relaterede emner"
-			}
+		"Works": {
+			"headerTitle": "Værker",
+			"intro": "Dette er værker af den person, gruppe eller organisation, som er denne sides emne. Du kan gå videre til en side med informationer om selve værket, ved at klikke på det. Kun værker med et billede er vist her. Vælg listevisning for at se alle relaterede værker, der er gemt.",
+			"sortMenuTitle": "Sorter",
+			"sortMenuTooltip": "Sorter emner",
+			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionAlpha": "Alfabetisk",
+			"sortMenuOptionDist": "Efter afstand",
+			"sortMenuOptionClear": "Ryd sortering",
+			"facetMenuTitle": "Facet af",
+			"facetMenuTooltip": "Facetværker af forskellige kriterier",
+			"facetMenuOptionType": "Type",
+			"facetMenuOptionColl": "Samling",
+			"facetMenuOptionCity": "Placering",
+			"displayMenuTitle": "Vis som",
+			"displayMenuTooltip": "Vælg visningen",
+			"displayMenuOptionGallery": "Galleri",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Kort",
+			"showAll": "Alle"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakta",
@@ -205,158 +357,6 @@
 				"translateArticleText": "Oversæt denne artikel til dit sprog",
 				"otherLanguagestext": "Andre sprog"
 			}
-		},
-		"Locations": {
-			"headerTitle": "På denne plads",
-			"intro": "Her kan du se alt, som er lokeret til emnet på denne side. Vælg listevisning for at se alle lokationer, som er gemt.",
-			"sortMenu": {
-				"title": "Sorter lokationer",
-				"tooltip": "Sorter lokationer",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetisk",
-				"optionDist": "Efter afstand",
-				"optionClear": "Ryd sortering"
-			},
-			"facetMenu": {
-				"title": "Facet lokationer efter",
-				"tooltip": "Facet lokationer efter forskellige kriterier",
-				"optionType": "Type",
-				"optionColl": "Skaber",
-				"optionCity": "Placering"
-			},
-			"displayMenu": {
-				"title": "Vis som",
-				"tooltip": "Vælg visningen",
-				"optionGallery": "Galleri",
-				"optionList": "Liste"
-			},
-			"showAll": "Alle"
-		},
-		"Depicted": {
-			"headerTitle": "Vist i",
-			"intro": "Dette emne er gengive i disse værker. Sortér værkerne efter forskellige kriterier. Vælg listevisning for at se dem uden billede.",
-			"sortMenu": {
-				"title": "Sorter værker",
-				"tooltip": "Sorter værker",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetisk",
-				"optionClear": "Ryd sortering"
-			},
-			"facetMenu": {
-				"title": "Facet værker efter",
-				"tooltip": "Facet værker efter forskellige kriterier",
-				"optionType": "Type",
-				"optionColl": "Skaber"
-			},
-			"displayMenu": {
-				"title": "Vis som",
-				"tooltip": "Vælg visningen",
-				"optionGallery": "Galleri",
-				"optionList": "Liste"
-			},
-			"showAll": "Alle"
-		},
-		"Depicts": {
-			"headerTitle": "Skildrer",
-			"intro": "Dette værk skildrer disse emner. Du kan sortere dem efter tid og navn. Bemærk at for at se alle genstande, inklusiv dem uden et billede, skal du vælge listevisning."
-		},
-		"Map": {
-			"headerTitle": "Lokation på kort"
-		},
-		"Parts": {
-			"headerTitle": "Dele",
-			"intro": "Disse dele hører til dette emne. Du kan sortere dem efter tid og navn. For at alle dele, også dem uden billede, skal du vælge listevisning."
-		},
-		"Partof": {
-			"headerTitle": "Del af",
-			"intro": "Dette element er placeret i relation til disse elementer. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du vælge listevisning."
-		},
-		"Twins": {
-			"headerTitle": "Tvillingebyer",
-			"intro": "Tvillingebyer, søskendebyer, sammenkoblede kommuner og andre lokationer som har et partnerskab eller en samarbejdsaftale, eller juridisk eller uformelt godkendt af deres byråd. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du benytte listevisning."
-		},
-		"Affiliations": {
-			"headerTitle": "Tilknytninger",
-			"intro": "Organisationer som denne person eller organisation har en tilknytning til."
-		},
-		"Awards": {
-			"headerTitle": "Priser",
-			"intro": "Nomineringer og priser til denne sides emne."
-		},
-		"Similar": {
-			"headerTitle": "Lignende emner",
-			"intro": "Find emner, der har nogle fælles karakteristika til dette emne."
-		},
-		"Effects": {
-			"headerTitle": "Effekter",
-			"intro": "Dette er effekterne af dette emne."
-		},
-		"Things": {
-			"headerTitle": "Fokuslisteemner",
-			"intro": "Disse emner er på fokuslisten for dette Wikiprojekt."
-		},
-		"Instances": {
-			"headerTitle": "Tilfælde med dette emne",
-			"intro": "Se dette emnes tilfælde. Vælg listevisning for også at se emner uden billeder."
-		},
-		"Location": {
-			"headerTitle": "Lokation",
-			"intro": "Dette emne er placeret i eller i kontekst til disse emner."
-		},
-		"Subclasses": {
-			"headerTitle": "Underklasser af dette emne",
-			"intro": "Se dette emnes underklasser. Vælg listevisning for også at se emner uden et billede."
-		},
-		"Links": {
-			"headerTitle": "Links fra denne artikel"
-		},
-		"Familytree": {
-			"headerTitle": "Stamtræ"
-		},
-		"Names": {
-			"headerTitle": "Navne"
-		},
-		"Works": {
-			"headerTitle": "Værker",
-			"intro": "Dette er værker af den person, gruppe eller organisation, som er denne sides emne. Du kan gå videre til en side med informationer om selve værket, ved at klikke på det. Kun værker med et billede er vist her. Vælg listevisning for at se alle relaterede værker, der er gemt.",
-			"sortMenuTitle": "Sorter",
-			"sortMenuTooltip": "Sorter emner",
-			"sortMenuOptionTime": "Efter tid",
-			"sortMenuOptionAlpha": "Alfabetisk",
-			"sortMenuOptionDist": "Efter afstand",
-			"sortMenuOptionClear": "Ryd sortering",
-			"facetMenuTitle": "Facet af",
-			"facetMenuTooltip": "Facetværker af forskellige kriterier",
-			"facetMenuOptionType": "Type",
-			"facetMenuOptionColl": "Samling",
-			"facetMenuOptionCity": "Placering",
-			"displayMenuTitle": "Vis som",
-			"displayMenuTooltip": "Vælg visningen",
-			"displayMenuOptionGallery": "Galleri",
-			"displayMenuOptionList": "Liste",
-			"displayMenuOptionMap": "Kort",
-			"showAll": "Alle"
-		},
-		"People": {
-			"headerTitle": "Personer relateret til dette emne",
-			"intro": "Disse personer er associerede til denne sides emne. Du kan vælge at se dem som en liste, hvilket også sikrer at du ser personer uden billeder tilknyttet. De kan sorteres efter dato eller navn. Bemærk at kun personer med disse informationer vil blive vist.",
-			"sortMenuTitle": "Sortér",
-			"sortMenuTooltip": "Skift sortering",
-			"sortMenuOptionBirth": "Efter fødselsdato",
-			"sortMenuOptionDeath": "Efter dødsdato",
-			"sortMenuOptionName": "Efter navn",
-			"sortMenuOptionFirst": "Efter fornavn",
-			"sortMenuOptionLast": "Efter efternavn",
-			"sortMenuOptionClear": "Ryd sortering",
-			"facetMenuTitle": "Facet af",
-			"facetMenuTooltip": "Facet personer af forskellige aspekter",
-			"facetMenuOptionProfession": "Profession",
-			"facetMenuOptionCountry": "Land",
-			"facetMenuOptionCity": "Køn"
-		},
-		"Collection": {
-			"headerTitle": "Værk i samlingen",
-			"intro": "Disse værker er i denne persons eller institutions samling. Du kan vælge at se dem som en liste, hvilket også vil vise værker uden billeder. De kan sorteres efter dato eller navn. Bemærk at kun værker med disse informationer vil blive vist."
 		}
 	},
 	"imageViewer": {
@@ -524,7 +524,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Fotografér dette kulturarvssted og deltag i <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a> fotograferingsudfordring!",
 		"WLMButton": "Upload billede"
 	}
 }

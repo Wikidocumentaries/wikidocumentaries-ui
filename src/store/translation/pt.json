@@ -49,16 +49,115 @@
 		"waitMessage": "Um momento, por favor... A obter dados da Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliações"
+		},
+		"Awards": {
+			"headerTitle": "Prémios"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Escolher um ou mais mapas de base históricos",
 			"chooseMapHelpNote": "Dica: ctrl+clique permite selecionar muitos mapas",
 			"yearAbbreviation": "a."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Ordenar obras",
+				"tooltip": "Ordenar obras",
+				"optionTime": "Por hora",
+				"optionAlpha": "Por ordem alfabética",
+				"optionClear": "Limpar ordenação"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionColl": "Criador"
+			},
+			"displayMenu": {
+				"title": "Apresentar como",
+				"tooltip": "Escolher apresentação",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Tudo"
+		},
+		"Events": {
+			"headerTitle": "Eventos",
+			"displayMenu": {
+				"menuTitle": "Opções de apresentação",
+				"menuTooltip": "Opções de apresentação",
+				"optionShowTimeline": "Mostrar eventos numa linha cronológica",
+				"optionShowList": "Mostrar eventos como uma lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opções",
+				"optionWorks": "Mostrar obras",
+				"optionRelatedPeople": "Mostrar eventos de pessoas relacionadas",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurar"
+				},
+				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
+			}
 		},
 		"Header": {
 			"titleEditText": "Editar o título",
 			"titleApproveText": "Aprovar este título",
 			"subtitleEditText": "Editar a descrição",
 			"subtitleApproveText": "Aprovar esta descrição"
+		},
+		"Locations": {
+			"headerTitle": "Nesta localização",
+			"sortMenu": {
+				"title": "Ordenar localizações",
+				"tooltip": "Ordenar localizações",
+				"optionTime": "Por hora",
+				"optionAlpha": "Por ordem alfabética",
+				"optionDist": "Por distância",
+				"optionClear": "Limpar ordenação"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionColl": "Criador",
+				"optionCity": "Localização"
+			},
+			"displayMenu": {
+				"title": "Apresentar como",
+				"tooltip": "Escolher a apresentação",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todas"
+		},
+		"Parts": {
+			"headerTitle": "Partes"
+		},
+		"Partof": {
+			"headerTitle": "Contexto"
+		},
+		"Similar": {
+			"headerTitle": "Tópicos semelhantes"
+		},
+		"Names": {
+			"headerTitle": "Nomes",
+			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
+		},
+		"People": {
+			"headerTitle": "Pessoas relacionadas com o tópico",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Alterar a ordenação",
+			"sortMenuOptionBirth": "Por data de nascimento",
+			"sortMenuOptionDeath": "Por data de falecimento",
+			"sortMenuOptionName": "Por nome",
+			"sortMenuOptionFirst": "Por primeiro nome",
+			"sortMenuOptionLast": "Por sobrenome",
+			"sortMenuOptionClear": "Limpar ordenação",
+			"facetMenuTitle": "Dividir por",
+			"facetMenuTooltip": "Dividir as pessoas por aspetos diferentes",
+			"facetMenuOptionProfession": "Profissão",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Sexo"
+		},
+		"Twins": {
+			"headerTitle": "Cidades geminadas"
 		},
 		"TopicImages": {
 			"headerTitle": "Imagens dos arquivos",
@@ -138,104 +237,6 @@
 			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha cronológica",
 			"centuryText": "S"
 		},
-		"Events": {
-			"headerTitle": "Eventos",
-			"displayMenu": {
-				"menuTitle": "Opções de apresentação",
-				"menuTooltip": "Opções de apresentação",
-				"optionShowTimeline": "Mostrar eventos numa linha cronológica",
-				"optionShowList": "Mostrar eventos como uma lista"
-			},
-			"optionsMenu": {
-				"menuTitle": "Opções",
-				"optionWorks": "Mostrar obras",
-				"optionRelatedPeople": "Mostrar eventos de pessoas relacionadas",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Configurar"
-				},
-				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
-			}
-		},
-		"Wikidata": {
-			"headerTitle": "Factos",
-			"extLink": {
-				"linkTitleWD": "Ver ou editar na wiki Wikidata"
-			},
-			"noTopicFoundText": "Tópico não encontrado"
-		},
-		"Wikipedia": {
-			"headerTitle": "Artigo",
-			"languageMenu": {
-				"menuTitle": "Ler o artigo noutra língua",
-				"translateArticleText": "Traduza este artigo para a sua língua",
-				"otherLanguagestext": "Outras línguas"
-			}
-		},
-		"Locations": {
-			"headerTitle": "Nesta localização",
-			"sortMenu": {
-				"title": "Ordenar localizações",
-				"tooltip": "Ordenar localizações",
-				"optionTime": "Por hora",
-				"optionAlpha": "Por ordem alfabética",
-				"optionDist": "Por distância",
-				"optionClear": "Limpar ordenação"
-			},
-			"facetMenu": {
-				"optionType": "Tipo",
-				"optionColl": "Criador",
-				"optionCity": "Localização"
-			},
-			"displayMenu": {
-				"title": "Apresentar como",
-				"tooltip": "Escolher a apresentação",
-				"optionGallery": "Galeria",
-				"optionList": "Lista"
-			},
-			"showAll": "Todas"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"title": "Ordenar obras",
-				"tooltip": "Ordenar obras",
-				"optionTime": "Por hora",
-				"optionAlpha": "Por ordem alfabética",
-				"optionClear": "Limpar ordenação"
-			},
-			"facetMenu": {
-				"optionType": "Tipo",
-				"optionColl": "Criador"
-			},
-			"displayMenu": {
-				"title": "Apresentar como",
-				"tooltip": "Escolher apresentação",
-				"optionGallery": "Galeria",
-				"optionList": "Lista"
-			},
-			"showAll": "Tudo"
-		},
-		"Parts": {
-			"headerTitle": "Partes"
-		},
-		"Partof": {
-			"headerTitle": "Contexto"
-		},
-		"Twins": {
-			"headerTitle": "Cidades geminadas"
-		},
-		"Affiliations": {
-			"headerTitle": "Afiliações"
-		},
-		"Awards": {
-			"headerTitle": "Prémios"
-		},
-		"Similar": {
-			"headerTitle": "Tópicos semelhantes"
-		},
-		"Names": {
-			"headerTitle": "Nomes",
-			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
-		},
 		"Works": {
 			"headerTitle": "Obras",
 			"sortMenuTitle": "Ordenação",
@@ -255,21 +256,20 @@
 			"displayMenuOptionList": "Lista",
 			"showAll": "Todos"
 		},
-		"People": {
-			"headerTitle": "Pessoas relacionadas com o tópico",
-			"sortMenuTitle": "Ordenar",
-			"sortMenuTooltip": "Alterar a ordenação",
-			"sortMenuOptionBirth": "Por data de nascimento",
-			"sortMenuOptionDeath": "Por data de falecimento",
-			"sortMenuOptionName": "Por nome",
-			"sortMenuOptionFirst": "Por primeiro nome",
-			"sortMenuOptionLast": "Por sobrenome",
-			"sortMenuOptionClear": "Limpar ordenação",
-			"facetMenuTitle": "Dividir por",
-			"facetMenuTooltip": "Dividir as pessoas por aspetos diferentes",
-			"facetMenuOptionProfession": "Profissão",
-			"facetMenuOptionCountry": "País",
-			"facetMenuOptionCity": "Sexo"
+		"Wikidata": {
+			"headerTitle": "Factos",
+			"extLink": {
+				"linkTitleWD": "Ver ou editar na wiki Wikidata"
+			},
+			"noTopicFoundText": "Tópico não encontrado"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artigo",
+			"languageMenu": {
+				"menuTitle": "Ler o artigo noutra língua",
+				"translateArticleText": "Traduza este artigo para a sua língua",
+				"otherLanguagestext": "Outras línguas"
+			}
 		}
 	},
 	"imageViewer": {

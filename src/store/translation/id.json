@@ -61,16 +61,163 @@
 		"waitMessage": "Harap tunggu sebentar... memuat data dari Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliasi",
+			"intro": "Organisasi yang berafiliasi dengan tokoh atau organisasi ini."
+		},
+		"Awards": {
+			"headerTitle": "Penghargaan",
+			"intro": "Nominasi dan penghargaan yang topik halaman ini."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Pilih peta dasar historis",
 			"chooseMapHelpNote": "Tips: Ctrl+klik untuk memilih lebih dari satu peta",
 			"yearAbbreviation": "thn."
+		},
+		"Collection": {
+			"headerTitle": "Karya dalam koleksi",
+			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
+		},
+		"Depicted": {
+			"headerTitle": "Digambarkan di",
+			"intro": "Topik ini digambarkan dalam karya berikut. Urutkan karya berdasarkan berbagai kriteria, tampilkan sebagai daftar untuk melihat tanpa gambar.",
+			"sortMenu": {
+				"title": "Urutkan karya",
+				"tooltip": "Urutkan karya",
+				"optionTime": "Berdasarkan waktu",
+				"optionAlpha": "Alfabetis",
+				"optionClear": "Abaikan urutan"
+			},
+			"facetMenu": {
+				"title": "Kelompokkan karya berdasarkan",
+				"tooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
+				"optionType": "Tipe",
+				"optionColl": "Pembuat"
+			},
+			"displayMenu": {
+				"title": "Tampilkan sebagai",
+				"tooltip": "Pilih tampilan",
+				"optionGallery": "Galeri",
+				"optionList": "Daftar"
+			},
+			"showAll": "Semua"
+		},
+		"Depicts": {
+			"headerTitle": "Menggambarkan",
+			"intro": "Karya ini menggambarkan topik-topik berikut. Anda dapat mengurutkannya berdasarkan waktu dan nama. Perlu diingat bahwa untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Events": {
+			"headerTitle": "Peristiwa",
+			"displayMenu": {
+				"menuTitle": "Opsi tampilan",
+				"menuTooltip": "Opsi tampilan",
+				"optionShowTimeline": "Tampilkan peristiwa di linimasa",
+				"optionShowList": "Tampilkan peristiwa sebagai daftar"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opsi",
+				"menuTooltip": "Pilih fakta untuk ditampilkan",
+				"optionWorks": "Tampilkan karya",
+				"optionRelatedPeople": "Tampilkan peristiwa dari tokoh terkait",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Pengaturan"
+				},
+				"optionRelatedTopics": "Tampilkan peristiwa dari topik terkait"
+			}
 		},
 		"Header": {
 			"titleEditText": "Sunting judul",
 			"titleApproveText": "Setujui judul ini",
 			"subtitleEditText": "Sunting deskripsi",
 			"subtitleApproveText": "Setujui deskripsi ini"
+		},
+		"Locations": {
+			"headerTitle": "Di lokasi ini",
+			"intro": "Di sini Anda dapat melihat semua hal yang berlokasi di topik halaman ini. Tampilkan sebagai daftar untuk melihat semua lokasi yang telah disimpan.",
+			"sortMenu": {
+				"title": "Urutkan lokasi",
+				"tooltip": "Urutkan lokasi",
+				"optionTime": "Berdasarkan waktu",
+				"optionAlpha": "Alfabetis",
+				"optionDist": "Berdasarkan jarak",
+				"optionClear": "Abaikan urutan"
+			},
+			"facetMenu": {
+				"title": "Kelompokkan lokasi berdasarkan",
+				"tooltip": "Kelompokkan lokasi berdasarkan kriteria lainnya",
+				"optionType": "Tipe",
+				"optionColl": "Pembuat",
+				"optionCity": "Lokasi"
+			},
+			"displayMenu": {
+				"title": "Tampilkan sebagai",
+				"tooltip": "Pilih tampilan",
+				"optionGallery": "Galeri",
+				"optionList": "Daftar"
+			},
+			"showAll": "Semua"
+		},
+		"Map": {
+			"headerTitle": "Lokasi di peta"
+		},
+		"Parts": {
+			"headerTitle": "Potongan",
+			"intro": "Potongan ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Partof": {
+			"headerTitle": "Lokasi",
+			"intro": "Topik ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
+		},
+		"Similar": {
+			"headerTitle": "Topik serupa",
+			"intro": "Cari topik yang memiliki beberapa ciri khas yang sama dengan topik ini."
+		},
+		"Effects": {
+			"headerTitle": "Efek",
+			"intro": "Berikut adalah efek dari topik ini."
+		},
+		"Familytree": {
+			"headerTitle": "Pohon keluarga"
+		},
+		"Instances": {
+			"headerTitle": "Contoh dari topik ini",
+			"intro": "Lihat contoh-contoh dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
+		},
+		"Links": {
+			"headerTitle": "Pranala dari artikel ini"
+		},
+		"Location": {
+			"headerTitle": "Lokasi",
+			"intro": "Topik ini terletak di atau dalam konteks topik-topik ini."
+		},
+		"People": {
+			"headerTitle": "Tokoh yang terkait dengan topik",
+			"intro": "Tokoh-tokoh berikut terkait dengan topik pada halaman ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan.",
+			"sortMenuTitle": "Urutkan",
+			"sortMenuTooltip": "Ubah pengurutan",
+			"sortMenuOptionBirth": "Berdasarkan tanggal kelahiran",
+			"sortMenuOptionDeath": "Berdasarkan tanggal kematian",
+			"sortMenuOptionName": "Berdasarkan nama",
+			"sortMenuOptionFirst": "Berdasarkan nama depan",
+			"sortMenuOptionLast": "Berdasarkan nama belakang",
+			"sortMenuOptionClear": "Abaikan urutan",
+			"facetMenuTitle": "Kelompokkan berdasarkan",
+			"facetMenuTooltip": "Kelompokkan tokoh berdasarkan aspek lainnya",
+			"facetMenuOptionProfession": "Profesi",
+			"facetMenuOptionCountry": "Negara",
+			"facetMenuOptionCity": "Gender"
+		},
+		"Subclasses": {
+			"headerTitle": "Subkelas dari topik ini",
+			"intro": "Lihat subkelas-subkelas dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
+		},
+		"Things": {
+			"headerTitle": "Topik daftar fokus",
+			"intro": "Topik berikut terdapat di daftar fokus Wikiproject ini."
+		},
+		"Twins": {
+			"headerTitle": "Kota kembar",
+			"intro": "Kota kembar, kota saudari, munisipalitas dan tempat-tempat lain yang melakukan kerja sama, baik secara legal ataupun secara informal diakui oleh pemerintahnya. Anda boleh menyortir mereka menurut waktu dan nama. Untuk melihat semua topik, termasuk yang tidak punya gambar, Anda harus melihat topik-topiknya sebagai daftar."
 		},
 		"TopicImages": {
 			"headerTitle": "Gambar dari arsip",
@@ -159,24 +306,26 @@
 			"showEventsOnTimelineMenuText": "Tampilkan topik peristiwa di linimasa",
 			"centuryText": "abad"
 		},
-		"Events": {
-			"headerTitle": "Peristiwa",
-			"displayMenu": {
-				"menuTitle": "Opsi tampilan",
-				"menuTooltip": "Opsi tampilan",
-				"optionShowTimeline": "Tampilkan peristiwa di linimasa",
-				"optionShowList": "Tampilkan peristiwa sebagai daftar"
-			},
-			"optionsMenu": {
-				"menuTitle": "Opsi",
-				"menuTooltip": "Pilih fakta untuk ditampilkan",
-				"optionWorks": "Tampilkan karya",
-				"optionRelatedPeople": "Tampilkan peristiwa dari tokoh terkait",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Pengaturan"
-				},
-				"optionRelatedTopics": "Tampilkan peristiwa dari topik terkait"
-			}
+		"Works": {
+			"headerTitle": "Karya",
+			"intro": "Berikut ini adalah karya oleh tokoh, kolektif, atau organisasi yang menjadi topik halaman ini. Anda dapat memasuki halaman berisi semua informasi tentang karya tersebut dengan meng-klik-nya. Hanya karya yang disertai oleh gambar yang ditampilkan. Tampilkan sebagai daftar untuk melihat semua karya terkait yang telah tersimpan.",
+			"sortMenuTitle": "Urutkan",
+			"sortMenuTooltip": "Urutkan butir",
+			"sortMenuOptionTime": "Berdasarkan waktu",
+			"sortMenuOptionAlpha": "Alfabetis",
+			"sortMenuOptionDist": "Berdasarkan jarak",
+			"sortMenuOptionClear": "Abaikan urutan",
+			"facetMenuTitle": "Kelompokkan berdasarkan",
+			"facetMenuTooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
+			"facetMenuOptionType": "Tipe",
+			"facetMenuOptionColl": "Koleksi",
+			"facetMenuOptionCity": "Lokasi",
+			"displayMenuTitle": "Tampilkan sebagai",
+			"displayMenuTooltip": "Pilih tampilan",
+			"displayMenuOptionGallery": "Galeri",
+			"displayMenuOptionList": "Daftar",
+			"displayMenuOptionMap": "Peta",
+			"showAll": "Semua"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakta",
@@ -205,155 +354,6 @@
 				"translateArticleText": "Terjemahkan artikel ini ke bahasa Anda",
 				"otherLanguagestext": "Bahasa lainnya"
 			}
-		},
-		"Locations": {
-			"headerTitle": "Di lokasi ini",
-			"intro": "Di sini Anda dapat melihat semua hal yang berlokasi di topik halaman ini. Tampilkan sebagai daftar untuk melihat semua lokasi yang telah disimpan.",
-			"sortMenu": {
-				"title": "Urutkan lokasi",
-				"tooltip": "Urutkan lokasi",
-				"optionTime": "Berdasarkan waktu",
-				"optionAlpha": "Alfabetis",
-				"optionDist": "Berdasarkan jarak",
-				"optionClear": "Abaikan urutan"
-			},
-			"facetMenu": {
-				"title": "Kelompokkan lokasi berdasarkan",
-				"tooltip": "Kelompokkan lokasi berdasarkan kriteria lainnya",
-				"optionType": "Tipe",
-				"optionColl": "Pembuat",
-				"optionCity": "Lokasi"
-			},
-			"displayMenu": {
-				"title": "Tampilkan sebagai",
-				"tooltip": "Pilih tampilan",
-				"optionGallery": "Galeri",
-				"optionList": "Daftar"
-			},
-			"showAll": "Semua"
-		},
-		"Depicted": {
-			"headerTitle": "Digambarkan di",
-			"intro": "Topik ini digambarkan dalam karya berikut. Urutkan karya berdasarkan berbagai kriteria, tampilkan sebagai daftar untuk melihat tanpa gambar.",
-			"sortMenu": {
-				"title": "Urutkan karya",
-				"tooltip": "Urutkan karya",
-				"optionTime": "Berdasarkan waktu",
-				"optionAlpha": "Alfabetis",
-				"optionClear": "Abaikan urutan"
-			},
-			"facetMenu": {
-				"title": "Kelompokkan karya berdasarkan",
-				"tooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
-				"optionType": "Tipe",
-				"optionColl": "Pembuat"
-			},
-			"displayMenu": {
-				"title": "Tampilkan sebagai",
-				"tooltip": "Pilih tampilan",
-				"optionGallery": "Galeri",
-				"optionList": "Daftar"
-			},
-			"showAll": "Semua"
-		},
-		"Depicts": {
-			"headerTitle": "Menggambarkan",
-			"intro": "Karya ini menggambarkan topik-topik berikut. Anda dapat mengurutkannya berdasarkan waktu dan nama. Perlu diingat bahwa untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
-		},
-		"Map": {
-			"headerTitle": "Lokasi di peta"
-		},
-		"Parts": {
-			"headerTitle": "Potongan",
-			"intro": "Potongan ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
-		},
-		"Partof": {
-			"headerTitle": "Lokasi",
-			"intro": "Topik ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
-		},
-		"Twins": {
-			"headerTitle": "Kota kembar",
-			"intro": "Kota kembar, kota saudari, munisipalitas dan tempat-tempat lain yang melakukan kerja sama, baik secara legal ataupun secara informal diakui oleh pemerintahnya. Anda boleh menyortir mereka menurut waktu dan nama. Untuk melihat semua topik, termasuk yang tidak punya gambar, Anda harus melihat topik-topiknya sebagai daftar."
-		},
-		"Affiliations": {
-			"headerTitle": "Afiliasi",
-			"intro": "Organisasi yang berafiliasi dengan tokoh atau organisasi ini."
-		},
-		"Awards": {
-			"headerTitle": "Penghargaan",
-			"intro": "Nominasi dan penghargaan yang topik halaman ini."
-		},
-		"Similar": {
-			"headerTitle": "Topik serupa",
-			"intro": "Cari topik yang memiliki beberapa ciri khas yang sama dengan topik ini."
-		},
-		"Effects": {
-			"headerTitle": "Efek",
-			"intro": "Berikut adalah efek dari topik ini."
-		},
-		"Things": {
-			"headerTitle": "Topik daftar fokus",
-			"intro": "Topik berikut terdapat di daftar fokus Wikiproject ini."
-		},
-		"Instances": {
-			"headerTitle": "Contoh dari topik ini",
-			"intro": "Lihat contoh-contoh dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
-		},
-		"Location": {
-			"headerTitle": "Lokasi",
-			"intro": "Topik ini terletak di atau dalam konteks topik-topik ini."
-		},
-		"Subclasses": {
-			"headerTitle": "Subkelas dari topik ini",
-			"intro": "Lihat subkelas-subkelas dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
-		},
-		"Links": {
-			"headerTitle": "Pranala dari artikel ini"
-		},
-		"Familytree": {
-			"headerTitle": "Pohon keluarga"
-		},
-		"Works": {
-			"headerTitle": "Karya",
-			"intro": "Berikut ini adalah karya oleh tokoh, kolektif, atau organisasi yang menjadi topik halaman ini. Anda dapat memasuki halaman berisi semua informasi tentang karya tersebut dengan meng-klik-nya. Hanya karya yang disertai oleh gambar yang ditampilkan. Tampilkan sebagai daftar untuk melihat semua karya terkait yang telah tersimpan.",
-			"sortMenuTitle": "Urutkan",
-			"sortMenuTooltip": "Urutkan butir",
-			"sortMenuOptionTime": "Berdasarkan waktu",
-			"sortMenuOptionAlpha": "Alfabetis",
-			"sortMenuOptionDist": "Berdasarkan jarak",
-			"sortMenuOptionClear": "Abaikan urutan",
-			"facetMenuTitle": "Kelompokkan berdasarkan",
-			"facetMenuTooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
-			"facetMenuOptionType": "Tipe",
-			"facetMenuOptionColl": "Koleksi",
-			"facetMenuOptionCity": "Lokasi",
-			"displayMenuTitle": "Tampilkan sebagai",
-			"displayMenuTooltip": "Pilih tampilan",
-			"displayMenuOptionGallery": "Galeri",
-			"displayMenuOptionList": "Daftar",
-			"displayMenuOptionMap": "Peta",
-			"showAll": "Semua"
-		},
-		"People": {
-			"headerTitle": "Tokoh yang terkait dengan topik",
-			"intro": "Tokoh-tokoh berikut terkait dengan topik pada halaman ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan.",
-			"sortMenuTitle": "Urutkan",
-			"sortMenuTooltip": "Ubah pengurutan",
-			"sortMenuOptionBirth": "Berdasarkan tanggal kelahiran",
-			"sortMenuOptionDeath": "Berdasarkan tanggal kematian",
-			"sortMenuOptionName": "Berdasarkan nama",
-			"sortMenuOptionFirst": "Berdasarkan nama depan",
-			"sortMenuOptionLast": "Berdasarkan nama belakang",
-			"sortMenuOptionClear": "Abaikan urutan",
-			"facetMenuTitle": "Kelompokkan berdasarkan",
-			"facetMenuTooltip": "Kelompokkan tokoh berdasarkan aspek lainnya",
-			"facetMenuOptionProfession": "Profesi",
-			"facetMenuOptionCountry": "Negara",
-			"facetMenuOptionCity": "Gender"
-		},
-		"Collection": {
-			"headerTitle": "Karya dalam koleksi",
-			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
 		}
 	},
 	"imageViewer": {
@@ -521,7 +521,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "Foto situs warisan budaya ini dan ikut serta dalam kompetisi fotografi <a href='https://www.wikilovesmonuments.org/'>Wiki Loves Monuments 2020</a>!",
 		"WLMButton": "$1 Unggah gambar"
 	}
 }

@@ -5,6 +5,7 @@
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"A Retired User",
+			"GuoPC",
 			"Shuiwater",
 			"列维劳德",
 			"沈澄心",
@@ -46,6 +47,57 @@
 		"waitMessage": "请稍等；五湖四海的数据正鱼贯而出维基百科、维基数据、维基媒体公共领域、MapWarper，Finna，Flickr……"
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "奖项"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "这些是主题人物的专门活动。"
+		},
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "样式"
+			},
+			"displayMenu": {
+				"optionGallery": "略图排列",
+				"optionList": "列表"
+			},
+			"showAll": "全部"
+		},
+		"Events": {
+			"headerTitle": "重要事件",
+			"displayMenu": {
+				"menuTitle": "显示选项",
+				"menuTooltip": "显示选项"
+			},
+			"optionsMenu": {
+				"menuTitle": "选择",
+				"subRelatedPeopleConf": {
+					"menuTitle": "配置"
+				}
+			}
+		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "类型"
+			},
+			"displayMenu": {
+				"optionGallery": "画廊",
+				"optionList": "列表"
+			},
+			"showAll": "全部"
+		},
+		"Partof": {
+			"headerTitle": "位置"
+		},
+		"Location": {
+			"headerTitle": "位置"
+		},
+		"People": {
+			"facetMenuOptionProfession": "职业",
+			"facetMenuOptionCountry": "国家",
+			"facetMenuOptionCity": "性别"
+		},
 		"TopicImages": {
 			"facetMenu": {
 				"time": "时间",
@@ -76,56 +128,6 @@
 			"headerTitle": "时间轴",
 			"centuryText": "C"
 		},
-		"Events": {
-			"headerTitle": "重要事件",
-			"displayMenu": {
-				"menuTitle": "显示选项",
-				"menuTooltip": "显示选项"
-			},
-			"optionsMenu": {
-				"menuTitle": "选择",
-				"subRelatedPeopleConf": {
-					"menuTitle": "配置"
-				}
-			}
-		},
-		"Wikipedia": {
-			"headerTitle": "条目",
-			"missingArticleChoose": "您可以从上面的“语言”菜单中选择另一种可用语言阅读文章，或者单击加号图标以您的语言创建文章。",
-			"missingArticleCreate": "您可以点击加号图标用您的语言创建这篇文章。",
-			"languageMenu": {
-				"otherLanguagestext": "其他语言"
-			}
-		},
-		"Locations": {
-			"facetMenu": {
-				"optionType": "类型"
-			},
-			"displayMenu": {
-				"optionGallery": "画廊",
-				"optionList": "列表"
-			},
-			"showAll": "全部"
-		},
-		"Depicted": {
-			"facetMenu": {
-				"optionType": "样式"
-			},
-			"displayMenu": {
-				"optionGallery": "略图排列",
-				"optionList": "列表"
-			},
-			"showAll": "全部"
-		},
-		"Partof": {
-			"headerTitle": "位置"
-		},
-		"Awards": {
-			"headerTitle": "奖项"
-		},
-		"Location": {
-			"headerTitle": "位置"
-		},
 		"Works": {
 			"facetMenuOptionType": "类型",
 			"facetMenuOptionColl": "收藏",
@@ -137,10 +139,13 @@
 			"displayMenuOptionMap": "地图",
 			"showAll": "全部"
 		},
-		"People": {
-			"facetMenuOptionProfession": "职业",
-			"facetMenuOptionCountry": "国家",
-			"facetMenuOptionCity": "性别"
+		"Wikipedia": {
+			"headerTitle": "条目",
+			"missingArticleChoose": "您可以从上面的“语言”菜单中选择另一种可用语言阅读文章，或者单击加号图标以您的语言创建文章。",
+			"missingArticleCreate": "您可以点击加号图标用您的语言创建这篇文章。",
+			"languageMenu": {
+				"otherLanguagestext": "其他语言"
+			}
 		}
 	},
 	"imageViewer": {
@@ -198,5 +203,9 @@
 			"sv": "瑞典语",
 			"es": "西班牙语"
 		}
+	},
+	"Banner": {
+		"WLM": "维基爱古迹$1",
+		"WLMText": "拍摄这个文化遗产地点，并参加在$2的摄影比赛！"
 	}
 }

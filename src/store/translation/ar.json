@@ -64,16 +64,167 @@
 		"waitMessage": "لحظة، من فضلك... جارٍ استرجاع البيانات من ويكيبيديا، ويكيي بيانات، ويكيميديا ​​كومنز، ماب واربر ، فنا، فليكر ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "الانتماءات",
+			"intro": "المنظمات التي ينتمي إليها هذا الشخص أو المنظمة."
+		},
+		"Awards": {
+			"headerTitle": "جوائز",
+			"intro": "ترشيحات وجوائز موضوع هذه الصفحة."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "اختر خريطة(خرائط) أساسية تاريخية",
 			"chooseMapHelpNote": "نصيحة: ctrl+click يسمح لك بتحديد العديد من الخرائط",
 			"yearAbbreviation": "س."
+		},
+		"Collection": {
+			"headerTitle": "الأعمال في المجموعة",
+			"intro": "هذه الأعمال موجودة في مجموعة هذا الشخص أو المؤسسة. يمكنك اختيار عرضها كقائمة، والتي تظهر أيضا تعمل بدون صور. يمكن فرزها حسب التواريخ أو الأسماء. لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات."
+		},
+		"Depicted": {
+			"headerTitle": "المصور في",
+			"intro": "هذا الموضوع مصور في هذه الأعمال، افرز الأعمال حسب معايير مختلفة، واعرضها كقائمة لرؤيتها دون صورة.",
+			"sortMenu": {
+				"title": "ترتيب الأعمال",
+				"tooltip": "ترتيب الأعمال",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "أعمال الوجه حسب",
+				"tooltip": "أعمال الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
+		"Depicts": {
+			"headerTitle": "يصور",
+			"intro": "هذا العمل يصور هذه المواضيع، يمكنك فرزها حسب الوقت والاسم، لاحظ أنه لمشاهدة جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض الموضوعات كقائمة."
+		},
+		"Events": {
+			"headerTitle": "الأحداث",
+			"displayMenu": {
+				"menuTitle": "خيارات العرض",
+				"menuTooltip": "خيارات العرض",
+				"optionShowTimeline": "عرض الأحداث على جدول زمني",
+				"optionShowList": "عرض الأحداث كقائمة"
+			},
+			"optionsMenu": {
+				"menuTitle": "خيارات",
+				"menuTooltip": "حدد حقائق لعرضها",
+				"optionWorks": "عرض الأعمال",
+				"optionRelatedPeople": "عرض أحداث الأشخاص ذوي الصلة",
+				"subRelatedPeopleConf": {
+					"menuTitle": "تهيئة"
+				},
+				"optionRelatedTopics": "عرض أحداث الموضوعات ذات الصلة"
+			}
 		},
 		"Header": {
 			"titleEditText": "تحرير العنوان",
 			"titleApproveText": "الموافقة على هذا العنوان",
 			"subtitleEditText": "تعديل الوصف",
 			"subtitleApproveText": "الموافقة على هذا الوصف"
+		},
+		"Locations": {
+			"headerTitle": "في هذا الموقع",
+			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
+			"sortMenu": {
+				"title": "فرز المواقع",
+				"tooltip": "فرز المواقع",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionDist": "حسب المسافة",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "مواقع الوجه حسب",
+				"tooltip": "مواقع الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ",
+				"optionCity": "الموقع"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
+		"Map": {
+			"headerTitle": "الموقع على الخريطة"
+		},
+		"Parts": {
+			"headerTitle": "الأجزاء",
+			"intro": "هذه الأجزاء تنتمي إلى هذا الموضوع، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
+		},
+		"Partof": {
+			"headerTitle": "جزء من",
+			"intro": "هذا الموضوع جزء من هذه المواضيع الأخرى. يمكنك فرزها حسب الوقت والاسم. كي ترى كافة المواضيع، من بينها تلك التي لا تحتوي على صور، يتعين عليك أ تعرض المواضيع في هيئة قائمة."
+		},
+		"Similar": {
+			"headerTitle": "مواضيع مماثلة",
+			"intro": "ابحث عن مواضيع لها بعض الخصائص الأساسية الشائعة مع هذا الموضوع."
+		},
+		"Effects": {
+			"headerTitle": "تأثيرات",
+			"intro": "هذه هي تأثيرات الموضوع"
+		},
+		"Familytree": {
+			"headerTitle": "شجرة العائلة"
+		},
+		"Instances": {
+			"headerTitle": "مثيلات هذا الموضوع",
+			"intro": "انظر أمثلة لهذا الموضوع. عرض كقائمة لرؤية العناصر أيضا بدون صور."
+		},
+		"Links": {
+			"headerTitle": "وصلات من هذه المقالة"
+		},
+		"Location": {
+			"headerTitle": "الموقع",
+			"intro": "هذا الموضوع هو في سياق هذه المواضيع."
+		},
+		"Names": {
+			"headerTitle": "الأسماء",
+			"intro": "طالع أسماء هذه المواضيع وكافة البدائل المتاحة."
+		},
+		"People": {
+			"headerTitle": "أشخاص مرتبطون بالموضوع",
+			"intro": "هؤلاء الأشخاص مرتبطون بموضوع هذه الصفحة، يمكنك اختيار عرضهم كقائمة، والتي تعرض أيضا الأشخاص بدون صور، يمكن فرزها حسب التواريخ أو الأسماء، لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات.",
+			"sortMenuTitle": "ترتيب",
+			"sortMenuTooltip": "تغيير ترتيب الفرز",
+			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
+			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
+			"sortMenuOptionName": "حسب الاسم",
+			"sortMenuOptionFirst": "حسب الاسم الأول",
+			"sortMenuOptionLast": "حسب الاسم الأخير",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",
+			"facetMenuOptionProfession": "المهنة",
+			"facetMenuOptionCountry": "البلد",
+			"facetMenuOptionCity": "الجنس"
+		},
+		"Subclasses": {
+			"headerTitle": "رتب فرعية لهذا الموضوع",
+			"intro": "انظر الرتب الفرعية لهذا الموضوع. عرض كقائمة لترى أيضا العناصر بدون صورة."
+		},
+		"Things": {
+			"headerTitle": "ركز موضوعات القائمة",
+			"intro": "   هذه المواضيع على قائمة التركيز لمشروع ويكي"
+		},
+		"Twins": {
+			"headerTitle": "مدن توائم",
+			"intro": "المدن التوائم والمدن الشقيقة والبلديات التوائم وغيرها من المواقع التي لها شراكة أو اتفاقية تعاونية، إما معترف بها قانونا أو غير رسمية من قبل حكوماتها، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
 		},
 		"TopicImages": {
 			"headerTitle": "صور من الأرشيف",
@@ -165,24 +316,26 @@
 			"showEventsOnTimelineMenuText": "عرض أحداث الموضوع على المخطط الزمني",
 			"centuryText": "ق"
 		},
-		"Events": {
-			"headerTitle": "الأحداث",
-			"displayMenu": {
-				"menuTitle": "خيارات العرض",
-				"menuTooltip": "خيارات العرض",
-				"optionShowTimeline": "عرض الأحداث على جدول زمني",
-				"optionShowList": "عرض الأحداث كقائمة"
-			},
-			"optionsMenu": {
-				"menuTitle": "خيارات",
-				"menuTooltip": "حدد حقائق لعرضها",
-				"optionWorks": "عرض الأعمال",
-				"optionRelatedPeople": "عرض أحداث الأشخاص ذوي الصلة",
-				"subRelatedPeopleConf": {
-					"menuTitle": "تهيئة"
-				},
-				"optionRelatedTopics": "عرض أحداث الموضوعات ذات الصلة"
-			}
+		"Works": {
+			"headerTitle": "الأعمال",
+			"intro": "هذه هي أعمال الشخص أو الجماعة أو المنظمة، التي هي موضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات حول العمل من خلال النقر عليه، يعمل فقط مع الصور، اعرض كقائمة لرؤية جميع الأعمال ذات الصلة، التي تم تخزينها.",
+			"sortMenuTitle": "الترتيب",
+			"sortMenuTooltip": "فرز العناصر",
+			"sortMenuOptionTime": "حسب الوقت",
+			"sortMenuOptionAlpha": "أبجديا",
+			"sortMenuOptionDist": "حسب المسافة",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
+			"facetMenuOptionType": "النوع",
+			"facetMenuOptionColl": "المجموعة",
+			"facetMenuOptionCity": "الموقع",
+			"displayMenuTitle": "العرض",
+			"displayMenuTooltip": "اختيار العرض",
+			"displayMenuOptionGallery": "معرض",
+			"displayMenuOptionList": "قائمة",
+			"displayMenuOptionMap": "خريطة",
+			"showAll": "الكل"
 		},
 		"Wikidata": {
 			"headerTitle": "حقائق",
@@ -211,159 +364,6 @@
 				"translateArticleText": "ترجمة هذه المقالة إلى لغتك",
 				"otherLanguagestext": "لغات أخرى"
 			}
-		},
-		"Locations": {
-			"headerTitle": "في هذا الموقع",
-			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
-			"sortMenu": {
-				"title": "فرز المواقع",
-				"tooltip": "فرز المواقع",
-				"optionTime": "حسب الوقت",
-				"optionAlpha": "أبجديا",
-				"optionDist": "حسب المسافة",
-				"optionClear": "مسح الفرز"
-			},
-			"facetMenu": {
-				"title": "مواقع الوجه حسب",
-				"tooltip": "مواقع الوجه بمعايير مختلفة",
-				"optionType": "النوع",
-				"optionColl": "المنشئ",
-				"optionCity": "الموقع"
-			},
-			"displayMenu": {
-				"title": "عرض كـ",
-				"tooltip": "اختيار العرض",
-				"optionGallery": "معرض",
-				"optionList": "قائمة"
-			},
-			"showAll": "الكل"
-		},
-		"Depicted": {
-			"headerTitle": "المصور في",
-			"intro": "هذا الموضوع مصور في هذه الأعمال، افرز الأعمال حسب معايير مختلفة، واعرضها كقائمة لرؤيتها دون صورة.",
-			"sortMenu": {
-				"title": "ترتيب الأعمال",
-				"tooltip": "ترتيب الأعمال",
-				"optionTime": "حسب الوقت",
-				"optionAlpha": "أبجديا",
-				"optionClear": "مسح الفرز"
-			},
-			"facetMenu": {
-				"title": "أعمال الوجه حسب",
-				"tooltip": "أعمال الوجه بمعايير مختلفة",
-				"optionType": "النوع",
-				"optionColl": "المنشئ"
-			},
-			"displayMenu": {
-				"title": "عرض كـ",
-				"tooltip": "اختيار العرض",
-				"optionGallery": "معرض",
-				"optionList": "قائمة"
-			},
-			"showAll": "الكل"
-		},
-		"Depicts": {
-			"headerTitle": "يصور",
-			"intro": "هذا العمل يصور هذه المواضيع، يمكنك فرزها حسب الوقت والاسم، لاحظ أنه لمشاهدة جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض الموضوعات كقائمة."
-		},
-		"Map": {
-			"headerTitle": "الموقع على الخريطة"
-		},
-		"Parts": {
-			"headerTitle": "الأجزاء",
-			"intro": "هذه الأجزاء تنتمي إلى هذا الموضوع، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
-		},
-		"Partof": {
-			"headerTitle": "جزء من",
-			"intro": "هذا الموضوع جزء من هذه المواضيع الأخرى. يمكنك فرزها حسب الوقت والاسم. كي ترى كافة المواضيع، من بينها تلك التي لا تحتوي على صور، يتعين عليك أ تعرض المواضيع في هيئة قائمة."
-		},
-		"Twins": {
-			"headerTitle": "مدن توائم",
-			"intro": "المدن التوائم والمدن الشقيقة والبلديات التوائم وغيرها من المواقع التي لها شراكة أو اتفاقية تعاونية، إما معترف بها قانونا أو غير رسمية من قبل حكوماتها، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
-		},
-		"Affiliations": {
-			"headerTitle": "الانتماءات",
-			"intro": "المنظمات التي ينتمي إليها هذا الشخص أو المنظمة."
-		},
-		"Awards": {
-			"headerTitle": "جوائز",
-			"intro": "ترشيحات وجوائز موضوع هذه الصفحة."
-		},
-		"Similar": {
-			"headerTitle": "مواضيع مماثلة",
-			"intro": "ابحث عن مواضيع لها بعض الخصائص الأساسية الشائعة مع هذا الموضوع."
-		},
-		"Effects": {
-			"headerTitle": "تأثيرات",
-			"intro": "هذه هي تأثيرات الموضوع"
-		},
-		"Things": {
-			"headerTitle": "ركز موضوعات القائمة",
-			"intro": "   هذه المواضيع على قائمة التركيز لمشروع ويكي"
-		},
-		"Instances": {
-			"headerTitle": "مثيلات هذا الموضوع",
-			"intro": "انظر أمثلة لهذا الموضوع. عرض كقائمة لرؤية العناصر أيضا بدون صور."
-		},
-		"Location": {
-			"headerTitle": "الموقع",
-			"intro": "هذا الموضوع هو في سياق هذه المواضيع."
-		},
-		"Subclasses": {
-			"headerTitle": "رتب فرعية لهذا الموضوع",
-			"intro": "انظر الرتب الفرعية لهذا الموضوع. عرض كقائمة لترى أيضا العناصر بدون صورة."
-		},
-		"Links": {
-			"headerTitle": "وصلات من هذه المقالة"
-		},
-		"Familytree": {
-			"headerTitle": "شجرة العائلة"
-		},
-		"Names": {
-			"headerTitle": "الأسماء",
-			"intro": "طالع أسماء هذه المواضيع وكافة البدائل المتاحة."
-		},
-		"Works": {
-			"headerTitle": "الأعمال",
-			"intro": "هذه هي أعمال الشخص أو الجماعة أو المنظمة، التي هي موضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات حول العمل من خلال النقر عليه، يعمل فقط مع الصور، اعرض كقائمة لرؤية جميع الأعمال ذات الصلة، التي تم تخزينها.",
-			"sortMenuTitle": "الترتيب",
-			"sortMenuTooltip": "فرز العناصر",
-			"sortMenuOptionTime": "حسب الوقت",
-			"sortMenuOptionAlpha": "أبجديا",
-			"sortMenuOptionDist": "حسب المسافة",
-			"sortMenuOptionClear": "مسح الفرز",
-			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
-			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
-			"facetMenuOptionType": "النوع",
-			"facetMenuOptionColl": "المجموعة",
-			"facetMenuOptionCity": "الموقع",
-			"displayMenuTitle": "العرض",
-			"displayMenuTooltip": "اختيار العرض",
-			"displayMenuOptionGallery": "معرض",
-			"displayMenuOptionList": "قائمة",
-			"displayMenuOptionMap": "خريطة",
-			"showAll": "الكل"
-		},
-		"People": {
-			"headerTitle": "أشخاص مرتبطون بالموضوع",
-			"intro": "هؤلاء الأشخاص مرتبطون بموضوع هذه الصفحة، يمكنك اختيار عرضهم كقائمة، والتي تعرض أيضا الأشخاص بدون صور، يمكن فرزها حسب التواريخ أو الأسماء، لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات.",
-			"sortMenuTitle": "ترتيب",
-			"sortMenuTooltip": "تغيير ترتيب الفرز",
-			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
-			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
-			"sortMenuOptionName": "حسب الاسم",
-			"sortMenuOptionFirst": "حسب الاسم الأول",
-			"sortMenuOptionLast": "حسب الاسم الأخير",
-			"sortMenuOptionClear": "مسح الفرز",
-			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
-			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",
-			"facetMenuOptionProfession": "المهنة",
-			"facetMenuOptionCountry": "البلد",
-			"facetMenuOptionCity": "الجنس"
-		},
-		"Collection": {
-			"headerTitle": "الأعمال في المجموعة",
-			"intro": "هذه الأعمال موجودة في مجموعة هذا الشخص أو المؤسسة. يمكنك اختيار عرضها كقائمة، والتي تظهر أيضا تعمل بدون صور. يمكن فرزها حسب التواريخ أو الأسماء. لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات."
 		}
 	},
 	"imageViewer": {
@@ -531,7 +531,6 @@
 		}
 	},
 	"Banner": {
-		"WLM2020": "التقط صورة لموقع الإرث الثقافي هذا وشارك في <a href='https://www.wikilovesmonuments.org/'>حملة الويكي تهوى المعالم 2020</a> للتصوير الفوتوغرافي!",
 		"WLMButton": "رفع صورة"
 	}
 }
