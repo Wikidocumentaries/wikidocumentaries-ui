@@ -27,7 +27,7 @@
     <Parts id="parts"></Parts>
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
-    <CV id="cv"></CV>
+    <!-- <CV id="cv"></CV> -->
     <People id="people"></People>
     <Effects id="effects"></Effects>
     <Works id="works"></Works>
