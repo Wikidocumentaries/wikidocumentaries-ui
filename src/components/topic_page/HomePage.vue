@@ -52,7 +52,6 @@
 import Affiliations from "@/components/topic_page/Affiliations";
 import Awards from "@/components/topic_page/Awards";
 import Banner from "@/components/topic_page/Banner";
-import CV from "@/components/topic_page/CV";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
