@@ -3,6 +3,7 @@
 		"authors": [
 			"Anupamdutta73",
 			"Bodhisattwa",
+			"Greatder",
 			"Titodutta",
 			"আফতাবুজ্জামান"
 		]
@@ -79,7 +80,7 @@
 		"Events": {
 			"headerTitle": "ঘটনা",
 			"displayMenu": {
-				"menuTitle": "বিকল্প দেখুন",
+				"menuTitle": "পছন্দসমূহ দেখুন",
 				"optionShowTimeline": "সময়সারণিতে ঘটনাগুলি দেখুন",
 				"optionShowList": "ঘটনাগুলি তালিকা হিসেবে দেখুন"
 			},

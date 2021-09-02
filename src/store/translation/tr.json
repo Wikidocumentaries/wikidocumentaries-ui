@@ -83,6 +83,10 @@
 			"headerTitle": "Koleksiyondaki eserler",
 			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
 		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Bunlar, konu kişisinin profesyonel olaylarıdır."
+		},
 		"Depicted": {
 			"headerTitle": "Tasvir edilen",
 			"intro": "Bu konu bu eserlerde tasvir edilmiştir. İşleri farklı kriterlere göre sıralayın, resimsiz olanları görmek için liste halinde görüntüleyin.",
@@ -533,6 +537,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Viki Anıtları Seviyor $1",
+		"WLMText": "Bu kültürel mirası fotoğraflayın ve $2 fotoğraf yarışmasına katılın!",
 		"WLMButton": "Resim yükle"
 	}
 }
