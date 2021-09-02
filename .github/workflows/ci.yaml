@@ -29,6 +29,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/wikidocumentaries-ui
+          flavor: |
+            latest=${{ github.ref == 'refs/heads/master' }}
       -
         name: Build and push to DockerHub
         uses: docker/build-push-action@v2
