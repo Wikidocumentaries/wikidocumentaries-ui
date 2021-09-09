@@ -76,6 +76,10 @@
 			"headerTitle": "Práce v kolekcii",
 			"intro": "Tieto práce sú v kolekcii tejto osoby alebo inštitúcie. Môžete ich zobraziť ako zoznam, čo umožní vidieť aj tie, ktoré nemajú obrázky. Môžu byť zoradené podľa dátumu alebo mena. Zobrazia sa ale len tie pri ktorých sú tieto informácie uložené."
 		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Toto sú profesionálne udalosti osoby v článku."
+		},
 		"Depicted": {
 			"headerTitle": "Zobrazené v",
 			"intro": "Táto téma je zobrazená v týchto prácach. Práce môžete triediť podľa rôznych merítok a pri zobrazení prác v zozname uvidíte aj tie bez obrázka.",
@@ -526,6 +530,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki miluje pamiatky $1",
+		"WLMText": "Odfotografujte túto kultúrnu pamiatku a zúčastnite sa $2 súťaže fotografií!",
 		"WLMButton": "Nahrať obrázok"
 	}
 }
