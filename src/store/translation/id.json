@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Akmaie Ajam",
 			"Daud I.F. Argana",
 			"Herryz",
 			"Pebaryan"
@@ -77,6 +78,10 @@
 		"Collection": {
 			"headerTitle": "Karya dalam koleksi",
 			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Ini adalah acara professional pada topik orang ini."
 		},
 		"Depicted": {
 			"headerTitle": "Digambarkan di",
@@ -165,7 +170,7 @@
 			"intro": "Potongan ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
 		},
 		"Partof": {
-			"headerTitle": "Lokasi",
+			"headerTitle": "Bagian dari",
 			"intro": "Topik ini merupakan bagian dari topik ini. Anda dapat mengurutkannya berdasarkan waktu dan nama. Untuk melihat semua topik termasuk yang tidak disertai gambar, Anda harus menampilkan topik sebagai sebuah daftar."
 		},
 		"Similar": {
@@ -189,6 +194,10 @@
 		"Location": {
 			"headerTitle": "Lokasi",
 			"intro": "Topik ini terletak di atau dalam konteks topik-topik ini."
+		},
+		"Names": {
+			"headerTitle": "Nama",
+			"intro": "Lihat nama topik ini dan semua alternatif yang ada."
 		},
 		"People": {
 			"headerTitle": "Tokoh yang terkait dengan topik",
@@ -294,7 +303,10 @@
 			"hideImagesMenuText": "Sembunyikan gambar",
 			"chooseTimelineMapsMenuText": "Pilih peta linnimasa...",
 			"showNearbyPlacesMenuText": "Tampilkan tempat sekitar",
-			"hideNearbyPlacesMenuText": "Sembunyikan tempat sekitar"
+			"hideNearbyPlacesMenuText": "Sembunyikan tempat sekitar",
+			"extLink": {
+				"menuTooltip": "Lihat atau sunting pada OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Kliping surat kabar",
@@ -521,6 +533,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotolah situs warisan budaya ini dan ikuti kompetisi fotografi $2!",
 		"WLMButton": "$1 Unggah gambar"
 	}
 }
