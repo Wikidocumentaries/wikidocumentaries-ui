@@ -37,6 +37,7 @@
 		"titleBy": "এটি সাহায্য করেছেন",
 		"getInvolved": "জড়িত হোন!",
 		"titleTranslate": "অনুবাদ করুন",
+		"joinTranslate": "আপনার ভাষা উইকিডকুমেন্টারিতে নিয়ে আসুন। স্বেচ্ছাসেবী অনুবাদ দলে যোগ দিন এবং সংযুক্ত সাংস্কৃতিক ঐতিহ্য আপনার ভাষায় জীবিত হয়ে উঠুক",
 		"titleContent": "আপনার লেখা যোগ করুন",
 		"titleContact": "যোগাযোগ করুন!",
 		"facebook": "ফেসবুক গ্রুপ",
@@ -65,7 +66,8 @@
 		"Depicted": {
 			"sortMenu": {
 				"optionTime": "সময় অনুসারে",
-				"optionAlpha": "বর্ণানুক্রমিক"
+				"optionAlpha": "বর্ণানুক্রমিক",
+				"optionClear": "বাছাই পরিষ্কার করুন"
 			},
 			"facetMenu": {
 				"optionType": "ধরন",
@@ -77,10 +79,14 @@
 			},
 			"showAll": "সকল"
 		},
+		"Depicts": {
+			"headerTitle": "যা বোঝানো হয়েছে"
+		},
 		"Events": {
 			"headerTitle": "ঘটনা",
 			"displayMenu": {
 				"menuTitle": "পছন্দসমূহ দেখুন",
+				"menuTooltip": "বিকল্প দেখান",
 				"optionShowTimeline": "সময়সারণিতে ঘটনাগুলি দেখুন",
 				"optionShowList": "ঘটনাগুলি তালিকা হিসেবে দেখুন"
 			},
@@ -98,9 +104,12 @@
 		"Locations": {
 			"headerTitle": "এই অবস্থানে",
 			"sortMenu": {
+				"title": "অবস্থান অনুসারে বাছুন",
+				"tooltip": "অবস্থান অনুসারে বাছুন",
 				"optionTime": "সময় অনুসারে",
 				"optionAlpha": "বর্ণানুক্রমিক",
-				"optionDist": "দূরত্ব অনুসারে"
+				"optionDist": "দূরত্ব অনুসারে",
+				"optionClear": "বাছাই পরিষ্কার করুন"
 			},
 			"facetMenu": {
 				"optionType": "ধরণ",
@@ -108,6 +117,7 @@
 				"optionCity": "অবস্থান"
 			},
 			"displayMenu": {
+				"title": "যেভাবে দেখবেন",
 				"optionGallery": "চিত্রশালা",
 				"optionList": "তালিকা"
 			},
@@ -116,8 +126,11 @@
 		"Map": {
 			"headerTitle": "মানচিত্রে অবস্থান"
 		},
+		"Parts": {
+			"headerTitle": "অংশ"
+		},
 		"Partof": {
-			"headerTitle": "অবস্থান"
+			"headerTitle": "এটি যার অংশ"
 		},
 		"Similar": {
 			"headerTitle": "অনুরূপ প্রসঙ্গ",
@@ -129,6 +142,9 @@
 		"Familytree": {
 			"headerTitle": "পরিবার বৃক্ষ"
 		},
+		"Links": {
+			"headerTitle": "এই নিবন্ধ থেকে সংযোগ করা হয়েছে"
+		},
 		"Location": {
 			"headerTitle": "অবস্থান"
 		},
@@ -138,11 +154,13 @@
 		"People": {
 			"headerTitle": "প্রসঙ্গটির সাথে সম্পর্কিত ব্যক্তি",
 			"sortMenuTitle": "বাছাই করুন",
+			"sortMenuTooltip": "বাছাইয়ের ক্রম পাল্টান",
 			"sortMenuOptionBirth": "জন্মদিন অনুসারে",
 			"sortMenuOptionDeath": "মৃত্যুদিন অনুসারে",
 			"sortMenuOptionName": "নাম অনুসারে",
 			"sortMenuOptionFirst": "প্রথম নাম অনুসারে",
 			"sortMenuOptionLast": "পদবী অনুসারে",
+			"sortMenuOptionClear": "বাছাই পরিষ্কার করুন",
 			"facetMenuOptionProfession": "পেশা",
 			"facetMenuOptionCountry": "দেশ",
 			"facetMenuOptionCity": "লিঙ্গ"
@@ -214,7 +232,10 @@
 			"headerTitle": "মানচিত্রের বিষয়",
 			"hideImagesMenuText": "চিত্র আড়াল করুন",
 			"showNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি দেখান",
-			"hideNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি লুকান"
+			"hideNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি লুকান",
+			"extLink": {
+				"menuTooltip": "ওপেনষ্ট্রিটম্যাপে দেখুন বা সম্পাদনা করুন"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "সংবাদপত্রের ক্লিপিং",
@@ -222,7 +243,8 @@
 			"addClipFromArchivesMenuText": "ক্লিপিং যোগ করুন"
 		},
 		"TopicTimeline": {
-			"headerTitle": "সময়রেখা"
+			"headerTitle": "সময়রেখা",
+			"showEventsOnTimelineMenuText": "বিষয় ঘটনাগুলি সময়সারণিতে দেখুন"
 		},
 		"Works": {
 			"headerTitle": "কর্ম",
@@ -230,6 +252,7 @@
 			"sortMenuOptionTime": "সময় অনুসারে",
 			"sortMenuOptionAlpha": "বর্ণানুক্রমিক",
 			"sortMenuOptionDist": "দূরত্ব অনুসারে",
+			"sortMenuOptionClear": "বাছাই পরিষ্কার করুন",
 			"facetMenuOptionType": "ধরন",
 			"facetMenuOptionColl": "সংগ্রহ",
 			"facetMenuOptionCity": "অবস্থান",
@@ -272,6 +295,11 @@
 			"addDescription": "বিবরণ যোগ করুন",
 			"creator": "নির্মাতা",
 			"creatorUnknown": "অজানা",
+			"addCreator": "নির্মাতা যোগ করুন",
+			"removeCreator": "নির্মাতা সরান",
+			"dateDepicted": "নির্ধারিত তারিখ",
+			"addDateDepicted": "নির্ধারিত তারিখ যোগ করুন",
+			"removeDateDepicted": "নির্ধারিত তারিখ সরান",
 			"dateCreated": "তৈরির তারিখ",
 			"addDateCreated": "তৈরির তারিখ যোগ করুন",
 			"removeDateCreated": "তৈরির তারিখ অপসারণ করুন",
@@ -280,11 +308,22 @@
 			"removePublisher": "প্রকাশক অপসারণ করুন",
 			"format": "বিন্যাস",
 			"genre": "ধরণ",
+			"depicts": "ছবিতে যা বোঝানো হয়েছে",
+			"addTopic": "প্রসঙ্গ যোগ করুন",
+			"removeTopic": "প্রসঙ্গ সরান",
 			"location": "অবস্থান",
 			"locationMap": "মানচিত্রে অবস্থান",
 			"addLocation": "অবস্থান যোগ করুন",
+			"removeLocation": "অবস্থান সরান",
 			"address": "রাস্তার ঠিকানা",
 			"addAddress": "রাস্তার ঠিকানা যোগ করুন",
+			"removeAddress": "রাস্তার ঠিকানা সরান",
+			"depictedPeople": "যে ব্যক্তি(দের) বোঝানো হয়েছে",
+			"addPerson": "ব্যক্তি যোগ করুন",
+			"removePerson": "ব্যক্তি সরান",
+			"event": "ঘটনা",
+			"addEvent": "ঘটনা যোগ করুন",
+			"removeEvent": "ঘটনা সরান",
 			"institution": "প্রতিষ্ঠান",
 			"collection": "সংগ্রহ",
 			"copyright": "কপিরাইট",
@@ -303,12 +342,19 @@
 			"rotateImage": "ছবি ঘোরান",
 			"clockwise": "ঘড়ির কাঁটার দিকে",
 			"counterclockwise": "ঘড়ির কাঁটার বিপরীত দিকে",
+			"flip": "ওল্টান",
 			"horizontal": "অনুভূমিক",
 			"vertical": "উল্লম্ব"
 		}
 	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "জায়গার নাম একত্রিত করুন"
+		}
+	},
 	"menus": {
 		"sortMenu": {
+			"tooltip": "প্রসঙ্গ অনুসারে বাছুন",
 			"optionTime": "সময় অনুসারে",
 			"optionStart": "শুরুর সময় অনুসারে",
 			"optionEnd": "শেষের সময় অনুসারে",
