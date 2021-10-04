@@ -13,10 +13,15 @@
 		"titleTools": "Struminde",
 		"titleLanguages": "Lènghe",
 		"titleCreators": "Ccrejature",
+		"titleTeam": "Squadre",
 		"titlePartners": "Partner",
+		"titleBy": "Pruggette de",
 		"getInvolved": "Pigghie parte!",
+		"titleTranslate": "Traduce",
 		"titleContent": "Aggiunge 'u condenute tune",
 		"facebook": "Gruppe Feisbuc",
+		"blog": "Blog",
+		"email": "Email",
 		"github": "Archivije GitHub"
 	},
 	"WaitPage": {
@@ -31,6 +36,9 @@
 		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "a."
+		},
+		"CV": {
+			"headerTitle": "CV"
 		},
 		"Depicted": {
 			"sortMenu": {
@@ -79,7 +87,7 @@
 			"showAll": "Tutte"
 		},
 		"Partof": {
-			"headerTitle": "Luèche"
+			"headerTitle": "Parte de"
 		},
 		"TopicImages": {
 			"facetMenu": {
