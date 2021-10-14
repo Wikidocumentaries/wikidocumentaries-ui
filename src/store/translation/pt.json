@@ -136,10 +136,6 @@
 		"Similar": {
 			"headerTitle": "Tópicos semelhantes"
 		},
-		"Names": {
-			"headerTitle": "Nomes",
-			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
-		},
 		"People": {
 			"headerTitle": "Pessoas relacionadas com o tópico",
 			"sortMenuTitle": "Ordenar",
@@ -227,10 +223,7 @@
 			"headerTitle": "Tópico no mapa",
 			"hideImagesMenuText": "Ocultar imagens",
 			"showNearbyPlacesMenuText": "Mostrar locais próximos",
-			"hideNearbyPlacesMenuText": "Ocultar locais próximos",
-			"extLink": {
-				"menuTooltip": "\nVer ou editar no OpenStreetMap"
-			}
+			"hideNearbyPlacesMenuText": "Ocultar locais próximos"
 		},
 		"TopicTimeline": {
 			"headerTitle": "Linha cronológica",
