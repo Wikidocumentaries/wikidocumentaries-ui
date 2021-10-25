@@ -166,8 +166,8 @@
 			"intro": "Aquestes parts pertanyen a aquest tema.  Els podeu ordenar per temps i nom.  Per veure tots els temes, inclosos els que no tenen imatge, cal veure els temes com una llista."
 		},
 		"Partof": {
-			"headerTitle": "Ubicació",
-			"intro": "Aquest tema es troba relacionat amb aquests altres. Podeu ordenar-los per marca de temps o per nom. Per veure tots els temes, inclosos els que no tenen imatges, cal que els vegeu com una llista."
+			"headerTitle": "Part de",
+			"intro": "Aquest tema es part d'aquests altres. Podeu ordenar-los per marca de temps o per nom. Per veure tots els temes, inclosos els que no tenen imatges, cal que els vegeu com una llista."
 		},
 		"Similar": {
 			"headerTitle": "Temes similars",
