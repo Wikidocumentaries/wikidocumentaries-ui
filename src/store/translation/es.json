@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Biancailin",
 			"Fitoschido",
 			"Harvest",
 			"Hasley",
@@ -20,7 +21,9 @@
 		"createNew": "Crear un elemento nuevo",
 		"intro": "Wikidocumentales es una wiki con poca historia; un lugar donde tomar unos pequeños trazos de historia y convertirlos en cuentos. ¡Empieza por buscar un tema de interés!",
 		"titleDescription": "¿Qué es Wikidocumentales?",
+		"description": "Wikidocumentarios es un espacio colaborativo para historiadores. Compila información de diversos temas como diferentes poblaciones, lugares, construcciones, eventos históricos, entre otras cosas. Puedes navegar por los diferentes temas siguiendo cualquier enlace ya registrado, por ejemplo por relaciones de familia, por ubicación, por creadores o por creaciones o afiliaciones. Los temas están ilustrados con imágenes y mapas de los museos enlazados, los archivos y las bibliotecas. En Wikidocumentaries, se podrá corregir la información ya registrada y también los nuevos temas. Podrás agregar tus propias imagenes y recuerdos y utilizar todos los materiales para lo que quieras.",
 		"titleStatus": "Estado",
+		"status": "El sitio está en su versión de prueba. Muchas de sus características todavía no están disponibles y puede que la página no funcione debidamente.",
 		"moreBelow": "Leer más abajo",
 		"more": "Leer más",
 		"moreLink": "Seguir leyendo",
