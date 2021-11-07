@@ -15,6 +15,9 @@
         </div>
       </div>
     </div>
+    <div class="intro" style="padding-top:10px;">
+      Photo: <a href="https://commons.wikimedia.org/wiki/File:GALIMANTAPA.jpg">Rock cut Temples, Chitradurga - tempel in Chitradurga, India</a> by Basavarajmin21, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a>. The image is the winner of the Wiki Loves Monuments India 2021 contest. Read more about the <a :href="'/Q97440924?language=' + this.$i18n.locale">Temple in Chitradurga.</a>
+    </div>
     <div class="site-info">
       <div class="subtitle">{{ $t('LandingPage.titleDescription') }}</div>
       <div class="description">{{ $t('LandingPage.description') }}</div>
@@ -123,7 +126,7 @@
       <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
       <div
         class="status"
-      >Finna, Gallen-Kallela Museum, Lusto - The Finnish Forest Museum, Savonlinna Provincial Museum, Rauma Museum, Wikimedia Finland, Candidate program in history Helsinki University, Semantic Computing Research Group, Ajapaik, Albumit Auki!, Creative Commons Finland, HELDIG Helsinki University, ICARUS, South-Eastern Finland University of Applied Sciences XAMK, Kansalaismuisti, National Archives of Finland, Digitalia, Language Bank of Finland / FIN_CLARIN, Institute for the Languages of Finland, Finnish Local Heritage Federation, Association of Cultural Heritage Education in Finland, Lokalhistoriewiki.no, National Land Survey of Finland, Nagu Hembygdsförening r.f., Pori Art Museum, Genealogical Society of Finland, Tilaushistoriakeskus, Department of Archaeology University of Turku, Cultural Production and Landscape Studies University of Turku, ALM Uppsala University, Yle Archives, Åbo Akademi University, Master program on Cultural Heritage Helsinki University,</div>
+      >Finna, West Bengal Wikimedians User Group, Ajapaik, Albumit Auki!, ALM Uppsala University, Association of Cultural Heritage Education in Finland, Candidate program in history Helsinki University, Creative Commons Finland, Cultural Production and Landscape Studies University of Turku, Department of Archaeology University of Turku, Digitalia, Finnish Local Heritage Federation, Gallen-Kallela Museum, Genealogical Society of Finland, HELDIG Helsinki University, ICARUS, Institute for the Languages of Finland, Kansalaismuisti, Language Bank of Finland / FIN_CLARIN, Lokalhistoriewiki.no, Lusto - The Finnish Forest Museum, Master program on Cultural Heritage Helsinki University, Nagu Hembygdsförening r.f., National Archives of Finland, National Land Survey of Finland, Pori Art Museum, Rauma Museum, Savonlinna Provincial Museum, Semantic Computing Research Group, South-Eastern Finland University of Applied Sciences XAMK, Tilaushistoriakeskus, Wikimedia Finland, Yle Archives, Åbo Akademi University</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>
@@ -189,9 +192,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="intro" style="padding-top:10px;">
-      Photo: <a href="https://commons.wikimedia.org/wiki/File:GALIMANTAPA.jpg">Rock cut Temples, Chitradurga - tempel in Chitradurga, India</a> by Basavarajmin21, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a>. The image is the winner of the Wiki Loves Monuments India 2021 contest. Read more about the <a :href="'/Q97440924?language=' + this.$i18n.locale">Temple in Chitradurga.</a>
     </div>
   </div>
 </template>
