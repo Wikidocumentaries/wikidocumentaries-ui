@@ -5,7 +5,7 @@
       <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
       <!-- https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg -->
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Elderly_and_child_Sami.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/8/85/GALIMANTAPA.jpg"
         class="cover-image"
       >
       <div class="bottomshade">
@@ -191,18 +191,7 @@
       </div>
     </div>
     <div class="intro" style="padding-top:10px;">
-      Valokuva:
-      <a
-        href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/"
-        target="_blank"
-      >Talvikylä. Vastasyntyneet karitsat pidetään tuvassa.</a> Kuvassa O'nddri Gauriloff ja hänen tyttärensä Maria. Eino Mäkinen, 1930-luku. Suenjel (Suonikylä), Petsamo. Hopeagelatiinivedos. Suomen valokuvataiteen museo. Ei tunnettuja tekijänoikeusrajoitteita.
-    </div>
-    <div class="intro" style="padding-bottom:10px;">
-      Photo:
-      <a
-        href="https://www.flickr.com/photos/valokuvataiteenmuseo/26111035175/in/album-72157666254464720/"
-        target="_blank"
-      >Winter Village. Newborn lambs are kept indoors.</a> Depicting O'nddri Gauriloff and his daughter Maria. Eino Mäkinen, 1930's. Suenjel (Suonikylä), Petsamo. Silver gelatin print. The Finnish Museum of Photography. No known copyright restrictions.
+      Photo: <a href="https://commons.wikimedia.org/wiki/File:GALIMANTAPA.jpg">Rock cut Temples, Chitradurga - tempel in Chitradurga, India</a> by Basavarajmin21, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a>. The image is the winner of the Wiki Loves Monuments India 2021 contest. Read more about the <a :href="'/Q97440924?language=' + this.$i18n.locale">Temple in Chitradurga.</a>
     </div>
   </div>
 </template>

@@ -122,16 +122,25 @@ export default {
     mapboxgl.accessToken = MAPBOX_AT;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates)
+SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates) (MIN(?_time) AS ?time) 
 WHERE {
   { 
-    { wd:Q407542 wdt:P527|wdt:P150 ?item. }
+    { wd:Q407542 ?p ?item.
+    ?pi wdt:P1647* wd:P527 .
+    ?pi wikibase:directClaim ?p .
+    ?pi rdfs:label ?piLabel . }
     UNION
-    { ?item wdt:P361 wd:Q407542 . }
+    { ?item ?p wd:Q407542.
+    ?pi wdt:P1647* wd:P361 .
+    ?pi wikibase:directClaim ?p .
+    ?pi rdfs:label ?piLabel . }
   }
-  ?item wdt:P625 ?coordinates .
+  OPTIONAL { ?item wdt:P625 ?coordinates . }
   OPTIONAL { ?item wdt:P18 ?image . }
   MINUS { ?item wdt:P31 wd:Q5 .}
+  OPTIONAL { ?item wdt:P580 ?startdate. }
+  OPTIONAL { ?item wdt:P582 ?enddate .}
+  BIND(STR(COALESCE(?startdate, ?enddate)) AS ?_time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?item ?itemLabel ?itemDescription ?image
