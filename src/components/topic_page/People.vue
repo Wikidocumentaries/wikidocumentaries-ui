@@ -4,7 +4,7 @@
 		<div class="toolbar">
       <h1 class="header-title">{{ $t('topic_page.People.headerTitle') }}</h1>
       <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
-      <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+      <ToolbarMenu icon="wikiglyph-sort" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
           <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
       </ToolbarMenu>
     </div>

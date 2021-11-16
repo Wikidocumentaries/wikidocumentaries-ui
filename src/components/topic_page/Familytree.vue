@@ -3,7 +3,7 @@
 	<div class="familytree-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.Tree.headerTitle') }}</div>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Tree.actionMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-sort" :tooltip="$t('topic_page.Tree.actionMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Tree.actionMenu.title') }}</div>
             </ToolbarMenu>
         </div>

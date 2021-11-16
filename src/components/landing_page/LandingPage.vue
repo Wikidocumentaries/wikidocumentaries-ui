@@ -5,7 +5,7 @@
       <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
       <!-- https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg -->
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/8/85/GALIMANTAPA.jpg"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/GALIMANTAPA.jpg/2560px-GALIMANTAPA.jpg"
         class="cover-image"
       >
       <div class="bottomshade">

@@ -2,7 +2,7 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <h1 class="header-title">{{ $t('topic_page.Effects.headerTitle') }}</h1>
+        <h1 class="header-title">{{ $t('topic_page.Names.headerTitle') }}</h1>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-sort"
@@ -13,37 +13,11 @@
           <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
-      <div class="intro">{{ $t('topic_page.Effects.intro') }}</div>
-      <div v-if="gallery" class="gallery">
-        <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-        <router-link
-          tag="div"
-          v-for="item in results"
-          :key="item.id"
-          :to="getItemURL(item.item.value)"
-          class="gallery-item"
-        >
-          <img :src="getImageLink(item.image)" class="gallery-image">
-          <div class="thumb-image-info">
-            <div class="gallery-title">{{ item.item.label }}</div>
-            <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div>
-          </div>
-          <!--div class="thumb-image-header"-->
-          <div>
-            <div class="left-align">
-              <!--ImagesActionMenu></ImagesActionMenu-->
-            </div>
-            <div class="right-align">
-              <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-            </div>
-          </div>
-        </router-link>
-      </div>
-      <div v-else class="list">
+      <div class="intro">{{ $t('topic_page.Names.intro') }}</div>
+      <div class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
-          <a :href="getItemURL(item.item.value)">
-            <b>{{ item.item.label }}</b>
-            {{ item.typeLabel }} {{ item.time}}
+          <a :href="getItemURL(item.depicted.value)">
+            <b>{{ item.depicted.label }} {{ item.time }}</b>
           </a>
         </div>
       </div>
@@ -65,26 +39,26 @@ const SORT_ACTIONS = {
   SORT_CLEAR: 3
 };
 
-const DISPLAY_ACTIONS = {
+/* const DISPLAY_ACTIONS = {
   GALLERY: 0,
   LIST: 1
-};
+}; */
 
 const MAX_ITEMS_TO_VIEW = 50;
-const DEFAULT_SORT = ["item.label"];
+const DEFAULT_SORT = ["depicted.label"];
 
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Effects",
+  name: "Names",
   components: {
     ToolbarMenu,
-    DisplayMenu
+    //DisplayMenu
   },
   data() {
     return {
       results: [],
-      gallery: true,
+      //gallery: true,
       toolbarActionMenuItems: [
         {
           id: SORT_ACTIONS.BY_LABEL,
@@ -107,32 +81,35 @@ export default {
   },
   mounted() {
     currentSort = DEFAULT_SORT.slice();
-    currentDisplay = DISPLAY_ACTIONS.GALLERY;
+    //currentDisplay = DISPLAY_ACTIONS.GALLERY;
     var title = this.$store.state.wikidocumentaries.title;
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?location_) AS ?location) (SAMPLE(?image) AS ?image) (GROUP_CONCAT(DISTINCT ?dated; separator="/") as ?time) WHERE {
-  { 
-    { wd:Q131742 wdt:P1542 ?item. }
-    UNION
-    { ?item wdt:P828 wd:Q131742 . }
-  }
-  ?item rdfs:label ?itemLabel .
-  FILTER(LANG(?itemLabel)="fi")
-  OPTIONAL { ?item wdt:P31 ?type .
-            ?type rdfs:label ?typeLabel_ .
-              FILTER(LANG(?typeLabel_)="fi") }
-  OPTIONAL { ?item wdt:P18 ?image. }
-  OPTIONAL { ?item wdt:P571 ?date.
-           BIND(STR(YEAR(?date)) AS ?dated)}
-  OPTIONAL { ?item wdt:P279* ?location_.}
-  MINUS { ?item wdt:P31 wd:Q5 .}
+SELECT ?depicted ?depictedLabel ?depictedDescription (SAMPLE(?image) AS ?image) (GROUP_CONCAT(?typeLabel; separator=", ") as ?type) (SAMPLE(?time) AS ?time) WHERE {
+  {
+      {
+        wd:Q1757 wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 ?depicted .
+      }
+      UNION
+      {
+        ?depicted wdt:P1343 wd:Q1757 .
+      }
+    }
+  ?depicted rdfs:label ?depictedLabel .
+    FILTER(LANG(?depictedLabel)="fi")
+    OPTIONAL { ?depicted wdt:P31 ?type.
+              ?type rdfs:label ?typeLabel .
+              FILTER(LANG(?typeLabel)="fi")}
+    OPTIONAL { ?depicted wdt:P18 ?image. }
+    OPTIONAL { ?depicted wdt:P571 ?creation_date. }
+    OPTIONAL { ?depicted wdt:P577 ?publishing_date. }
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
-GROUP BY ?item ?itemLabel
+GROUP BY ?depicted ?depictedLabel ?depictedDescription ?time
 LIMIT 1000
-        `.replace(/Q131742/g, this.$store.state.wikidocumentaries.wikidataId)
+        `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios
@@ -140,7 +117,7 @@ LIMIT 1000
       .then(response => {
         fullResults = wdk.simplify.sparqlResults(response.data);
         this.results = selectResults(this.$i18n.locale);
-        this.gallery = currentDisplay === DISPLAY_ACTIONS.GALLERY;
+        //this.gallery = currentDisplay === DISPLAY_ACTIONS.GALLERY;
       })
       .catch(error => console.log(error));
   },
@@ -154,14 +131,13 @@ LIMIT 1000
     onDoMenuItemAction(menuItem) {
       switch (menuItem.id) {
         case SORT_ACTIONS.BY_LABEL:
-          currentSort = ["item.label"];
+          currentSort = ["depicted.label"];
           break;
         case SORT_ACTIONS.BY_TIME:
-          currentSort = ["time", "item.label"];
+          currentSort = ["time"];
           break;
         case SORT_ACTIONS.SORT_REVERSE:
-          if (currentSort[0].charAt(0) == "-")
-            currentSort[0] = currentSort[0].substr(1);
+          if (currentSort[0].charAt(0) == '-') currentSort[0] = currentSort[0].substr(1);
           else currentSort[0] = "-" + currentSort[0];
           break;
         case SORT_ACTIONS.SORT_CLEAR:
@@ -170,7 +146,7 @@ LIMIT 1000
       }
       this.results = selectResults(this.$i18n.locale);
     },
-    onDisplayChange(menuItem) {
+/*     onDisplayChange(menuItem) {
       switch (menuItem.id) {
         case DISPLAY_ACTIONS.GALLERY:
           currentDisplay = DISPLAY_ACTIONS.GALLERY;
@@ -180,8 +156,8 @@ LIMIT 1000
           break;
       }
       this.results = selectResults(this.$i18n.locale);
-      this.gallery = currentDisplay === DISPLAY_ACTIONS.GALLERY;
-    },
+      this.gallery = (currentDisplay === DISPLAY_ACTIONS.GALLERY);
+    }, */
     fitTitle(title) {
       var newTitle = title;
       return newTitle;
@@ -198,22 +174,20 @@ LIMIT 1000
   }
 };
 
-const selectResults = lcl => {
+const selectResults = (lcl) => {
   let filteredResults = fullResults;
-  if (currentSort[0].includes("time"))
-    filteredResults = filteredResults.filter(x => x.time);
-  if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
+  if (currentSort[0].includes("time")) filteredResults = filteredResults.filter(x => x.time);
+  /* if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
     if (filteredResults.find(x => x.image)) {
       // If GALLERY and at least one image
       filteredResults = filteredResults.filter(x => x.image); // select only results with an image
     } else {
       currentDisplay = DISPLAY_ACTIONS.LIST; // GALLERY with no images => change to LIST
     }
-  }
-  return filteredResults
-    .sort(sortResults(currentSort, lcl))
-    .slice(0, MAX_ITEMS_TO_VIEW);
+  } */
+  return filteredResults.sort(sortResults(currentSort, lcl)).slice(0, MAX_ITEMS_TO_VIEW);
 };
+
 </script>
 
 <style scoped>

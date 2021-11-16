@@ -2,12 +2,9 @@
 
 @font-face {
   font-family: "WikiFont-Glyphs";
-  src:url("WikiFont-Glyphs.eot"); /* IE9 Compat Modes */
-  src:url("WikiFont-Glyphs.eot?#iefix") format("embedded-opentype"),  /* IE6-IE8 */
-    url("WikiFont-Glyphs.woff") format("woff"), /* Modern Browsers */
+  src:url("WikiFont-Glyphs.woff") format("woff"), /* Modern Browsers */
     url("WikiFont-Glyphs.woff2") format("woff2"),
-    url("WikiFont-Glyphs.ttf") format("truetype"), /* Safari, Android, iOS */
-    url("WikiFont-Glyphs.svg#wikiglyph") format("svg"); /* Legacy iOS */
+    url("WikiFont-Glyphs.ttf") format("truetype"); /* Safari, Android, iOS */
   font-weight: normal;
   font-style: normal;
 
@@ -369,7 +366,7 @@
   content: "\e501";
 }
 .wikiglyph-wikitrail:before {
-  content: "\504";
+  content: "\e504";
 }
 .wikiglyph-heart:before {
   content: "\e001";
@@ -384,13 +381,13 @@
   content: "\e043";
 }
 .wikiglyph-watchlist:before, 
-.wikiglyph-star-list:before{
+.wikiglyph-star-list:before {
   content: "\e004";
 }
 .wikiglyph-sun:before {
   content: "\e005";
 }
-.wikiglyph-funnel:before {
+.wikiglyph-sort:before {
   content: "\e006";
 }
 .wikiglyph-eye-closed:before,
@@ -466,3 +463,67 @@
 .wikiglyph-translation:before {
   content: "\e021";
 }
+.wikiglyph-help:before {
+  content: "\e251";
+}
+.wikiglyph-game:before {
+  content: "\e252";
+}
+.wikiglyph-id:before {
+  content: "\e253";
+}
+.wikiglyph-tag:before {
+  content: "\e254";
+}
+.wikiglyph-task:before {
+  content: "\e255";
+}
+.wikiglyph-photo:before {
+  content: "\e256";
+}
+.wikiglyph-depicted-person:before {
+  content: "\e257";
+}
+.wikiglyph-depicted-place:before {
+  content: "\e258";
+}
+.wikiglyph-depicted:before {
+  content: "\e259";
+}
+.wikiglyph-measures:before {
+  content: "\e260";
+}
+.wikiglyph-production-date:before {
+  content: "\e262";
+}
+.wikiglyph-publishing-date:before {
+  content: "\e263";
+}
+.wikiglyph-depicted-date:before {
+  content: "\e264";
+}
+.wikiglyph-soundoff:before {
+  content: "\e266";
+}
+.wikiglyph-collection:before {
+  content: "\e267";
+}
+.wikiglyph-filesize:before {
+  content: "\e270";
+}
+.wikiglyph-imagesize:before {
+  content: "\e271";
+}
+.wikiglyph-filetype:before {
+  content: "\e272";
+}
+.wikiglyph-wikidata:before {
+  content: "\e504";
+}
+.wikiglyph-sort:before {
+  content: "\e067";
+}
+.wikiglyph-display:before {
+  content: "\e116";
+}
+

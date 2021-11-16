@@ -5,7 +5,7 @@
         <h1 class="header-title">{{ $t('topic_page.Works.headerTitle') }}</h1>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
-          icon="wikiglyph-funnel"
+          icon="wikiglyph-sort"
           :tooltip="$t('topic_page.Works.sortMenuTooltip')"
           :items="toolbarActionMenuItems"
           @doMenuItemAction="onDoMenuItemAction"

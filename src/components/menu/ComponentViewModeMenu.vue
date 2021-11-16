@@ -1,5 +1,5 @@
 <template>
-    <ToolbarMenu icon="wikiglyph-view-details" :tooltip="$t('topic_page.Works.displayMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu icon="wikiglyph-display" :tooltip="$t('topic_page.Works.displayMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('topic_page.Works.displayMenuTitle') }}</div>
     </ToolbarMenu>
 </template>
