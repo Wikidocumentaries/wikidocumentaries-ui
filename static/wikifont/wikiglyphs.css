@@ -526,4 +526,6 @@
 .wikiglyph-display:before {
   content: "\e116";
 }
-
+.wikiglyph-description:before {
+  content: "\e117";
+}

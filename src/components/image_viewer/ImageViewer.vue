@@ -80,7 +80,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-description metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
@@ -135,7 +135,7 @@
               </div>
               <div class="grid-row" v-if="element.datecreated">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-clock metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-production-date metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
@@ -174,7 +174,7 @@
               </div>
               <div v-if="element.measurements" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-stripe-toc metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-measures metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.measurements') }}</div>
@@ -200,7 +200,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-clip metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicts') }}</div>
@@ -218,7 +218,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-depicted-place metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
@@ -249,7 +249,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-depicted-person metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.depictedPeople') }}</div>
@@ -284,7 +284,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-institution metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.institution') }}</div>
@@ -297,7 +297,7 @@
               </div>
               <div v-if="element.collection" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-collection metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.collection') }}</div>
@@ -310,7 +310,7 @@
               </div>
               <div v-if="element.inventoryNumber" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-star-circle metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.inventoryNumber') }}</div>
