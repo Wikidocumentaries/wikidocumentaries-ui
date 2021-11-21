@@ -11,7 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "http://localhost:3000/"
+// const BASE_URL = "http://localhost:3000/"
 const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
 
 const wikidocumentaries = {
@@ -1143,7 +1143,8 @@ export default new Vuex.Store({
                                 case 'P373':
                     }
  */
-                    requestConfig.params.topic = '"' + Array.from(terms).join('" OR "') + '"';
+/*                     requestConfig.params.topic = "'" + Array.from(terms).join("' OR '") + "'"; */
+                    requestConfig.params.topic = terms;
                     console.log('requestConfig@store: ', requestConfig);
                 }
 
