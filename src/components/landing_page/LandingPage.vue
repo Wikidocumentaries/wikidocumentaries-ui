@@ -120,13 +120,13 @@
           <div class="subtitle sub">{{ $t('LandingPage.titleThanks') }}</div>
           <div
             class="status"
-          >Bodhisattwa Mandal, Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen, Mari Viita-aho, Nuutti Kanerva, Jari Sorjonen, Arun Ganesh, Albin Larsson</div>
+          >Bodhisattwa Mandal, Bert Spaan, Arun Ganesh, Albin Larsson, Niklas Laxström, Eetu Mäkelä, Vahur Puik, Kimmo Virtanen, Piia Naukkarinen, Mari Viita-aho, Nuutti Kanerva, Jari Sorjonen</div>
         </div>
       </div>
       <div class="subtitle sub">{{ $t('LandingPage.titlePartners') }}</div>
       <div
         class="status"
-      >Finna, West Bengal Wikimedians User Group, Ajapaik, Albumit Auki!, ALM Uppsala University, Association of Cultural Heritage Education in Finland, Candidate program in history Helsinki University, Creative Commons Finland, Cultural Production and Landscape Studies University of Turku, Department of Archaeology University of Turku, Digitalia, Finnish Local Heritage Federation, Gallen-Kallela Museum, Genealogical Society of Finland, HELDIG Helsinki University, ICARUS, Institute for the Languages of Finland, Kansalaismuisti, Language Bank of Finland / FIN_CLARIN, Lokalhistoriewiki.no, Lusto - The Finnish Forest Museum, Master program on Cultural Heritage Helsinki University, Nagu Hembygdsförening r.f., National Archives of Finland, National Land Survey of Finland, Pori Art Museum, Rauma Museum, Savonlinna Provincial Museum, Semantic Computing Research Group, South-Eastern Finland University of Applied Sciences XAMK, Tilaushistoriakeskus, Wikimedia Finland, Yle Archives, Åbo Akademi University</div>
+      >West Bengal Wikimedians User Group, Finna, Ajapaik, Albumit Auki!, ALM Uppsala University, Association of Cultural Heritage Education in Finland, Candidate program in history Helsinki University, Creative Commons Finland, Cultural Production and Landscape Studies University of Turku, Department of Archaeology University of Turku, Digitalia, Finnish Local Heritage Federation, Gallen-Kallela Museum, Genealogical Society of Finland, HELDIG Helsinki University, ICARUS, Institute for the Languages of Finland, Kansalaismuisti, Language Bank of Finland / FIN_CLARIN, Lokalhistoriewiki.no, Lusto - The Finnish Forest Museum, Master program on Cultural Heritage Helsinki University, Nagu Hembygdsförening r.f., National Archives of Finland, National Land Survey of Finland, Pori Art Museum, Rauma Museum, Savonlinna Provincial Museum, Semantic Computing Research Group, South-Eastern Finland University of Applied Sciences XAMK, Tilaushistoriakeskus, Wikimedia Finland, Yle Archives, Åbo Akademi University</div>
       <div class="info-cubes">
         <div class="info-cube">
           <div class="subtitle sub">{{ $t('LandingPage.titleBy') }}</div>

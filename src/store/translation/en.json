@@ -421,6 +421,8 @@
             "addPhotographData": "Add information about the photograph",
             "copyrightNotePD": "The image is licensed with $1, but based on the metadata the image is in Public Domain.",
             "copyrightNoteSame": "The same image is licensed more openly with $1, therefore it applies to this image as well.",
+            "creditline": "Credit line",
+            "attribution": "Attribution",
             "digitalCopy": "Digital copy",
             "publishingPlatform": "Publishing platform",
             "platformId": "ID",

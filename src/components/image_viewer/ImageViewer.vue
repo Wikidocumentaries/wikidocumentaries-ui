@@ -187,7 +187,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-genre metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.genre') }}</div>
@@ -218,7 +218,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-depicted-place metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
@@ -267,7 +267,7 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-bell-on metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-event metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
@@ -346,7 +346,7 @@
               <h1 class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</h1>
             </div>
             <div class="columns">
-              <div class="grid-row">
+              <div v-if="element.license" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
                 </div>
@@ -354,6 +354,18 @@
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.license') }}</div>
                   <div class="data-text">
                     <a href="#">{{ element.license }}</a>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-row">
+                <div class="grid-icons">
+                  <i class="wikiglyph wikiglyph-attribution metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.attribution') }}</div>
+                  <div class="data-text">
+                    <i v-for="title in element.title" :key="title.id">{{ title }}</i>
+                    {{ getCredits(element) }}
                   </div>
                 </div>
               </div>
@@ -378,7 +390,7 @@
             <div class="columns">
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-photo-gallery metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-browser metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>
@@ -389,11 +401,11 @@
               </div>
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-list-numbered metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
                 </div>
                 <div v-if="element.id" class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
-                  <div class="data-text">{{ element.id }}</div>
+                  <div class="data-text break">{{ element.id }}</div>
                 </div>
               </div>
               <div class="grid-row">
@@ -402,14 +414,14 @@
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
-                  <div class="data-text">
+                  <div class="data-text break">
                     <a :href="element.infoURL" target="_blank">{{ element.infoURL }}</a>
                   </div>
                 </div>
               </div>
               <div v-if="dimension.x > -1" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-imagesize metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageDimensions') }}</div>
@@ -418,31 +430,31 @@
               </div>
               <div v-if="element.uploader" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.uploader') }}</div>
                   <div class="data-text">{{ element.uploader }}</div>
                 </div>
               </div>
-              <!-- <div class="grid-row">
+<!--               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-filesize metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileSize') }}</div>
                   <div class="data-text">2,1 MB</div>
                 </div>
-              </div>
-              <div class="grid-row">
+              </div> -->
+<!--               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-cog metadata-glyph"></i>
+                  <i class="wikiglyph wikiglyph-filetype metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.fileFormat') }}</div>
                   <div class="data-text">jpg</div>
                 </div>
-              </div>-->
+              </div> -->
             </div>
           </div>
         </div>
@@ -540,13 +552,13 @@ export default {
           newAuthors.push(author.name + ", ");
         }
       } else if (item.source != undefined) {
-        newAuthors = item.creators + ", ";
+        newAuthors = item.creators + " ";
       }
       var newYear =
         item.year != "" && item.year != null ? item.year + ". " : "";
       var newInstitutions =
         item.institutions != "" && item.institutions != null
-          ? item.institutions + ", "
+          ? item.institutions + " "
           : "";
       var newLicense =
         item.license != "" && item.license != null ? item.license + ", " : "";
@@ -792,6 +804,10 @@ export default {
   font-family: "Roboto Condensed", sans-serif;
   color: #333;
   text-transform: uppercase;
+}
+
+.break {
+  word-break: break-all;
 }
 
 /*
@@ -1170,7 +1186,6 @@ export default {
 
 .data-text {
   display: inline-block;
-  word-break: break-all;
 }
 
 /* .unedited::after, .edited::after {

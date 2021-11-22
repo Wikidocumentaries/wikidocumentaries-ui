@@ -529,3 +529,18 @@
 .wikiglyph-description:before {
   content: "\e117";
 }
+.wikiglyph-institution:before {
+  content: "\e268";
+}
+.wikiglyph-genre:before {
+  content: "\e269";
+}
+.wikiglyph-event:before {
+  content: "\e261";
+}
+.wikiglyph-sparql:before {
+  content: "\e273";
+}
+.wikiglyph-attribution:before {
+  content: "\e274";
+}
