@@ -409,6 +409,7 @@
             "removeEvent": "Remove event",
             "institution": "Institution",
             "collection": "Collection",
+            "addCollection": "Add collection",
             "inventoryNumber": "Inventory number",
             "inscriptions": "Inscriptions",
             "measurements": "Measurements",

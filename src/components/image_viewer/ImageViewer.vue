@@ -112,7 +112,7 @@
                   </div>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.creators" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
                 </div>
@@ -155,7 +155,7 @@
                   ></Dataselect>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.formats" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
                 </div>
@@ -185,7 +185,7 @@
                   >{{ measurement }}</div>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.genre" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-genre metadata-glyph"></i>
                 </div>
@@ -198,7 +198,7 @@
                   ></Dataselect>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.subjects" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
                 </div>
@@ -216,7 +216,7 @@
                   ></Dataselect>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.places" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
                 </div>
@@ -232,8 +232,12 @@
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addLocation')"
                   ></Dataselect>
+                  <Dataselect
+                    class="grid-select action"
+                    v-bind:title="$t('imageViewer.imageMetadata.addAddress')"
+                  ></Dataselect>
                 </div>
-              </div>
+              </div><!-- 
               <div v-if="element.address" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
@@ -246,8 +250,8 @@
                     v-bind:term="element.address"
                   ></Dataselect>
                 </div>
-              </div>
-              <div class="grid-row">
+              </div> -->
+              <div v-if="element.actors" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-depicted-person metadata-glyph"></i>
                 </div>
@@ -265,7 +269,7 @@
                   ></Dataselect>
                 </div>
               </div>
-              <div class="grid-row">
+              <div v-if="element.events" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-event metadata-glyph"></i>
                 </div>

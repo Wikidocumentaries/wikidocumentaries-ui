@@ -107,6 +107,12 @@ export default {
         case 'Europeana':
           icon = '../../static/icons/europeana-mini.png';
           break;
+        case 'Smithsonian':
+          icon = '../../static/icons/smithsonian-mini.png';
+          break;
+        case 'Trove':
+          icon = '../../static/icons/trove-mini.png';
+          break;
         }
         return icon;
     },
