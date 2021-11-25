@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Csega",
+			"Luckylukee81",
 			"Misibacsi",
 			"R-Joe"
 		]
@@ -129,6 +130,8 @@
 	"imageViewer": {
 		"imageMetadata": {
 			"image": "Kép",
+			"creditline": "Hitelkeret",
+			"attribution": "Attribútum",
 			"uploader": "Feltöltő"
 		}
 	},

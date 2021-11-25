@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DreZhsh",
 			"Eneelk",
 			"Florian COLLIN",
 			"Gomoko",
@@ -422,6 +423,7 @@
 			"removeEvent": "Supprimer un événement",
 			"institution": "Institution",
 			"collection": "Collection",
+			"addCollection": "Ajouter une collection",
 			"inventoryNumber": "Numéro d’inventaire",
 			"inscriptions": "Inscriptions",
 			"measurements": "Mesures",
@@ -434,6 +436,8 @@
 			"addPhotographData": "Ajouter des informations sur le photographe",
 			"copyrightNotePD": "L’image est sous licence avec $1, mais d’après ses métadonnées, l’image est dans le domaine public.",
 			"copyrightNoteSame": "La même image est sous une licence plus ouverte avec $1, donc cela s’applique aussi à l’image.",
+			"creditline": "Ligne de crédit",
+			"attribution": "Attribution",
 			"digitalCopy": "Copie numérique",
 			"publishingPlatform": "Plateforme de publication",
 			"platformId": "ID",

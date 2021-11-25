@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Biancailin",
+			"Destinid10 2",
 			"Fitoschido",
 			"Harvest",
 			"Hasley",
@@ -319,6 +320,8 @@
 			"copyright": "Derechos de autor",
 			"work": "Obra representada en la imagen",
 			"photograph": "Fotografía",
+			"creditline": "Línea de crédito",
+			"attribution": "Atribución",
 			"digitalCopy": "Copia digitar",
 			"platformId": "Identificador",
 			"provider": "Proveedor de contenidos",
