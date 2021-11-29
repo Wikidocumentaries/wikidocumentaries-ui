@@ -347,6 +347,7 @@
 			"removeEvent": "Ta bort händelsen",
 			"institution": "Institution",
 			"collection": "Samling",
+			"addCollection": "Lägg till samling",
 			"inventoryNumber": "Inventarnummer",
 			"inscriptions": "Inskriptioner",
 			"measurements": "Mätningar",

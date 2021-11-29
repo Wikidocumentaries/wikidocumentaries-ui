@@ -3,6 +3,7 @@
 		"authors": [
 			"Ajeje Brazorf",
 			"Beta16",
+			"Ciampix",
 			"JackLantern",
 			"Senpremì",
 			"Susannaanas"
@@ -239,6 +240,7 @@
 			"image": "Immagine",
 			"photographer": "Fotografo",
 			"addPhotographData": "Aggiungi informazioni sulla fotografia",
+			"attribution": "Attribuzione",
 			"digitalCopy": "Copia digitale",
 			"platformId": "ID",
 			"fileSize": "Dimensione del file",

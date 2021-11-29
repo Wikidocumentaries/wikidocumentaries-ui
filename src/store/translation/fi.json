@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MITO",
 			"Pyscowicz",
 			"Susannaanas"
 		]
@@ -409,6 +410,7 @@
 			"removeEvent": "Poista tapahtuma",
 			"institution": "Instituutio",
 			"collection": "Kokoelma",
+			"addCollection": "Lisää kokoelma",
 			"inventoryNumber": "Inventaarionumero",
 			"inscriptions": "Merkinnät",
 			"measurements": "Mitat",
