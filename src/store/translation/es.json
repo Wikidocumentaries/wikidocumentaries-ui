@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Biancailin",
+			"DDPAT",
 			"Destinid10 2",
 			"Fitoschido",
 			"Harvest",
@@ -141,7 +142,7 @@
 			"headerTitle": "Ubicación en el mapa"
 		},
 		"Partof": {
-			"headerTitle": "Contexto"
+			"headerTitle": "Parte de"
 		},
 		"Similar": {
 			"headerTitle": "Temas similares"
