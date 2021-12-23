@@ -421,6 +421,7 @@
 			"removeEvent": "Удалить событие",
 			"institution": "Учреждение",
 			"collection": "Коллекция",
+			"addCollection": "Добавить коллекцию",
 			"inventoryNumber": "Инвентарный номер",
 			"inscriptions": "Надписи",
 			"measurements": "Измерения",
