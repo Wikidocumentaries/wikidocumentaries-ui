@@ -116,8 +116,6 @@ export default {
 SELECT ?item ?itemLabel (GROUP_CONCAT(DISTINCT ?piLabel; separator=", ") AS ?relation) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) (SAMPLE(?image) AS ?image) (SAMPLE(DISTINCT ?startdate) as ?startdate) (SAMPLE(DISTINCT ?enddate) as ?enddate) (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) WHERE {
   { 
     { ?pi wdt:P31/wdt:P279* wd:Q18615777. }
-    UNION
-    { ?pi wdt:P1647* wd:276 . }
    }
   ?pi wikibase:directClaim ?p .
   ?pi wikibase:propertyType wikibase:WikibaseItem .

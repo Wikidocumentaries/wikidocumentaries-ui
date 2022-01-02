@@ -7,6 +7,7 @@
         class="toolbar-item"
         :tooltip="$t('topic_page.TopicMap.extLink.menuTooltip')"
         :link="osmURL"
+        icon="wikiglyph-new-window"
         v-show="osmElements != undefined"
       ></HeaderLink>
     </div>

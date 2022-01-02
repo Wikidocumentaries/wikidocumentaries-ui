@@ -151,7 +151,6 @@ SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel)
 
 }
 GROUP BY ?person ?personLabel ?sexLabel
-LIMIT 1000
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');

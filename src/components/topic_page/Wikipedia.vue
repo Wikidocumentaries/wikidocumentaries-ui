@@ -13,12 +13,14 @@
         class="toolbar-item"
         :tooltip="$t('topic_page.Wikipedia.extLink.linkTitleWP')"
         :link="wikipedia.wikipediaURL"
+        icon="wikiglyph-new-window"
       ></HeaderLink>
       <HeaderLink
         v-else
         class="toolbar-item"
         :tooltip="$t('topic_page.Wikipedia.addLink.linkTitleWP')"
-        :link="wikipedia.wikipediaURL"
+        :link="newArticleLink"
+        icon="wikiglyph-plus"
       ></HeaderLink>
     </div>
     <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
@@ -70,7 +72,6 @@ export default {
         }
         return false;
       }
-      return false;
     },
     doSelection() {
       var selection = getSelected();
@@ -96,6 +97,16 @@ export default {
         "&to=" +
         this.$i18n.locale +
         "&targettitle=&version=2&campaign=Wikidocumentaries";
+      return url;
+    },
+    newArticleLink() {
+      const title = this.$store.state.wikidocumentaries.wikidata.title;
+      const url =
+        "https://" +
+        this.$i18n.locale +
+        ".wikipedia.org/w/index.php?title=" +
+        title +
+        "&action=edit";
       return url;
     }
   },

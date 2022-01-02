@@ -76,7 +76,7 @@ const SORT_ACTIONS = {
   LIST: 1
 }; */
 
-const MAX_ITEMS_TO_VIEW = 50;
+const MAX_ITEMS_TO_VIEW = 1000;
 const DEFAULT_SORT = ["item.label"];
 
 let fullResults, currentSort, currentDisplay, myMap;

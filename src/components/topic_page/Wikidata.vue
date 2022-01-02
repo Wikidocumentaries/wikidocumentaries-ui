@@ -6,6 +6,7 @@
         class="toolbar-item"
         :tooltip="$t('topic_page.Wikidata.extLink.linkTitleWD')"
         :link="wikidataURL"
+        icon="wikiglyph-new-window"
         v-show="wikidocumentaries.wikidata != undefined"
       ></HeaderLink>
     </div>
