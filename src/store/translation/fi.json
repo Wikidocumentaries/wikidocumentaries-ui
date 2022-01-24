@@ -78,6 +78,10 @@
 			"headerTitle": "Teoksia kokoelmissa",
 			"intro": "Nämä teokset ovat tämän henkilön tai organisaation kokoelmissa. Voit näyttää ne listana, jolloin näet myös kohteet, joista ei ole kuvaa. Ne voi järjestää päivämäärän tai nimen perusteella. Kun tämä tieto puuttuu, aihe ei näe sillä perusteella järjestetyssä listassa."
 		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Nämä ovat aiheen henkilön ammatillisia tapahtumia."
+		},
 		"Depicted": {
 			"headerTitle": "Kuvattu teoksessa",
 			"intro": "Tätä aihetta kuvataan näissä teoksissa. Järjestä teokset eri perustein tai näytä luettelona nähdäksesi myös ne, joissa ei ole kuvaa.",
@@ -423,6 +427,8 @@
 			"addPhotographData": "Lisää tietoa valokuvasta",
 			"copyrightNotePD": "Tämän kuvan lisenssi on $1, mutta metatietojen perusteella sillä ei ole tekijänoikeussuojaa.",
 			"copyrightNoteSame": "Sama kuva on lisensoitu avoimemmalla $1-lisenssillä, joka koskee silloin myös tätä kuvaa.",
+			"creditline": "Kiitokset",
+			"attribution": "Nimeäminen",
 			"digitalCopy": "Digitaalinen kopio",
 			"publishingPlatform": "Julkaisualusta",
 			"platformId": "Tunniste",
@@ -529,6 +535,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Kuvaa tämä kulttuuriperintökohde ja osallistu $2 -valokuvauskilpailuun!",
 		"WLMButton": "Lataa kuva"
 	}
 }

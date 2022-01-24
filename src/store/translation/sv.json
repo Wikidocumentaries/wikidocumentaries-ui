@@ -63,6 +63,9 @@
 			"chooseMapHelpNote": "Tips: ctrl + klicka tillåter att du väljer många kartor",
 			"yearAbbreviation": "år"
 		},
+		"CV": {
+			"headerTitle": "CV"
+		},
 		"Depicted": {
 			"headerTitle": "Skildras i",
 			"sortMenu": {
@@ -142,7 +145,7 @@
 			"headerTitle": "Delar"
 		},
 		"Partof": {
-			"headerTitle": "Plats"
+			"headerTitle": "Del av"
 		},
 		"Similar": {
 			"headerTitle": "Liknande ämnen"
