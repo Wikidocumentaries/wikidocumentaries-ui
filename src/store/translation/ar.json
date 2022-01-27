@@ -3,6 +3,7 @@
 		"authors": [
 			"Hhaboh162002",
 			"Meno25",
+			"Michel Bakni",
 			"NEHAOUA",
 			"Tala Ali",
 			"ديفيد",
@@ -396,7 +397,7 @@
 			"addGenre": "أضف النوع",
 			"removeGenre": "إزالة النوع",
 			"depicts": "الصورة تصور",
-			"addTopic": "أضف موضوعا",
+			"addTopic": "أضِف موضوعاً",
 			"removeTopic": "إزالة الموضوع",
 			"location": "الموقع",
 			"locationMap": "الموقع على الخريطة",
