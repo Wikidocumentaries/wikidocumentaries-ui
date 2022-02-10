@@ -544,7 +544,7 @@
 		}
 	},
 	"Banner": {
-		"WLM": "Monuments aimés de wiki $1",
+		"WLM": "Wiki aime les monuments $1",
 		"WLMText": "Photographier ce site d’héritage culturel et participer au concours de photographie $2 !",
 		"WLMButton": "Téléverser une image"
 	}
