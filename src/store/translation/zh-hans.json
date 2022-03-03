@@ -22,7 +22,9 @@
 		"titleDescription": "什么是维基纪录片？",
 		"titleStatus": "状态",
 		"status": "本站点尚在试运行。请注意，某些功能暂时不可用，页面可能无法正常运行。",
+		"moreBelow": "阅读以下更多",
 		"more": "阅读更多",
+		"moreLink": "阅读更多于",
 		"titleTopics": "主题",
 		"titleMedia": "媒体",
 		"titleTools": "工具",
@@ -30,31 +32,60 @@
 		"titleTechnology": "技术",
 		"titleCreators": "创建者",
 		"titleTeam": "学期",
+		"titleThanks": "特别感谢",
 		"titlePartners": "合作伙伴",
+		"titleFunding": "友善支持来自",
+		"titleBy": "项目来自",
 		"getInvolved": "参与！",
 		"titleTranslate": "翻译",
 		"titleContent": "添加您的评论",
-		"facebook": "脸谱组",
+		"titleDevelop": "创建工具和群众外包任务。",
+		"titleContact": "取得联系！",
+		"facebook": "脸书群组",
+		"wiki": "Wikidocumentaries wiki",
 		"blog": "博客",
 		"email": "邮箱",
 		"github": "Github代码池"
 	},
 	"MainPage": {
+		"topicPageName": "主题页面",
+		"mapPlaceMatchPageName": "结合地点名称",
 		"mapSearchPageName": "搜索地图",
-		"wikiTopicErrorMessage": "在当前语言中找不到该主题的维基百科页面，或者发生了其他意外错误。"
+		"wikiTopicErrorMessage": "在当前语言中找不到该主题的维基百科页面，或者发生了其他意外错误。",
+		"returnToHomeMessage": "返回着陆页"
 	},
 	"WaitPage": {
 		"waitMessage": "请稍等；五湖四海的数据正鱼贯而出维基百科、维基数据、维基媒体公共领域、MapWarper，Finna，Flickr……"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "附属",
+			"intro": "此人或组织有所属组织。"
+		},
 		"Awards": {
-			"headerTitle": "奖项"
+			"headerTitle": "奖项",
+			"intro": "此页面主题的题名与奖项。"
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "选择历史底图",
+			"yearAbbreviation": "年"
+		},
+		"Collection": {
+			"headerTitle": "收藏里的作品"
 		},
 		"CV": {
 			"headerTitle": "CV",
 			"intro": "这些是主题人物的专门活动。"
 		},
 		"Depicted": {
+			"headerTitle": "描述于",
+			"sortMenu": {
+				"title": "排序作品",
+				"tooltip": "排序作品",
+				"optionTime": "按时间",
+				"optionAlpha": "按字母顺序",
+				"optionClear": "清除排序"
+			},
 			"facetMenu": {
 				"optionType": "样式"
 			},
@@ -179,7 +210,7 @@
 		"sortMenu": {
 			"tooltip": "排序主题",
 			"optionTitleAlpha": "标题按字母顺序排列",
-			"optionClear": "清晰排序"
+			"optionClear": "清除排序"
 		},
 		"facetMenu": {
 			"tooltip": "按不同标准划分主题",
