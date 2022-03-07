@@ -87,44 +87,108 @@
 				"optionClear": "清除排序"
 			},
 			"facetMenu": {
-				"optionType": "样式"
+				"optionType": "样式",
+				"optionColl": "创作者"
 			},
 			"displayMenu": {
+				"title": "显示为",
+				"tooltip": "选择展示方式",
 				"optionGallery": "略图排列",
 				"optionList": "列表"
 			},
 			"showAll": "全部"
 		},
+		"Depicts": {
+			"headerTitle": "描述"
+		},
 		"Events": {
 			"headerTitle": "重要事件",
 			"displayMenu": {
 				"menuTitle": "显示选项",
-				"menuTooltip": "显示选项"
+				"menuTooltip": "显示选项",
+				"optionShowTimeline": "在时间轴上展示事件",
+				"optionShowList": "以列表形式展示事件"
 			},
 			"optionsMenu": {
-				"menuTitle": "选择",
+				"menuTitle": "选项",
+				"menuTooltip": "选择要显示的详情",
+				"optionWorks": "展示作品",
+				"optionRelatedPeople": "展示相关人物的事件",
 				"subRelatedPeopleConf": {
 					"menuTitle": "配置"
-				}
+				},
+				"optionRelatedTopics": "展示相关主题的事件"
 			}
 		},
+		"Header": {
+			"titleEditText": "编辑标题",
+			"titleApproveText": "批准此标题",
+			"subtitleEditText": "编辑描述",
+			"subtitleApproveText": "批准此描述"
+		},
 		"Locations": {
+			"headerTitle": "在此位置",
+			"sortMenu": {
+				"title": "排序位置",
+				"tooltip": "排序位置",
+				"optionTime": "按时间",
+				"optionAlpha": "按字母顺序",
+				"optionDist": "按距离",
+				"optionClear": "清除排序"
+			},
 			"facetMenu": {
-				"optionType": "类型"
+				"optionType": "类型",
+				"optionColl": "创作者",
+				"optionCity": "位置"
 			},
 			"displayMenu": {
+				"title": "显示为",
+				"tooltip": "选择展示方式",
 				"optionGallery": "画廊",
 				"optionList": "列表"
 			},
 			"showAll": "全部"
 		},
+		"Map": {
+			"headerTitle": "地图上的位置"
+		},
+		"Parts": {
+			"headerTitle": "部分"
+		},
 		"Partof": {
-			"headerTitle": "位置"
+			"headerTitle": "一部分的"
+		},
+		"Similar": {
+			"headerTitle": "相似主题"
+		},
+		"Effects": {
+			"headerTitle": "影响"
+		},
+		"Familytree": {
+			"headerTitle": "谱系图"
+		},
+		"Instances": {
+			"headerTitle": "此主题的实例"
+		},
+		"Links": {
+			"headerTitle": "来自此条目的链接"
 		},
 		"Location": {
 			"headerTitle": "位置"
 		},
+		"Names": {
+			"headerTitle": "名称"
+		},
 		"People": {
+			"headerTitle": "与主题相关的人物",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "更改排序顺序",
+			"sortMenuOptionBirth": "按出生日期",
+			"sortMenuOptionDeath": "按逝世日期",
+			"sortMenuOptionName": "按名称",
+			"sortMenuOptionFirst": "按名字",
+			"sortMenuOptionLast": "按姓氏",
+			"sortMenuOptionClear": "清除排序",
 			"facetMenuOptionProfession": "职业",
 			"facetMenuOptionCountry": "国家",
 			"facetMenuOptionCity": "性别"
