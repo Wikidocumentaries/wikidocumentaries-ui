@@ -9,14 +9,10 @@
                 <div class="turquoise"></div>
                 <div class="green"></div>
             </div>
-             <div id="main-toolbar" class="main-toolbar">
-                <div class="left-align">
-                    <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
-                </div>
-                <div class="right-align">
-                    <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <UILanguageMenu class="language-menu"></UILanguageMenu>
-                </div>
+            <div id="main-toolbar" class="main-toolbar">
+                <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
+                <TopicSearchBox class="topic-search-box"></TopicSearchBox>
+                <UILanguageMenu class="language-menu"></UILanguageMenu>
             </div>
           <component
               v-bind:is="currentTabComponentName"
@@ -116,6 +112,9 @@ export default {
     font-size: 16pt;
     color: #333;
     cursor: pointer;
+    min-width: 0;
+    overflow: hidden;
+    flex-shrink: 1;
 }
 
 a.main-button:hover {
@@ -169,6 +168,7 @@ a.main-button:hover {
 .topic-search-box {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .language-bar {

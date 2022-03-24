@@ -166,9 +166,10 @@ export default {
     border: none;
     text-align: right;
     right: 35px;
-    min-width: 300px;
     height: 100%;
     box-sizing: border-box;
+    width: 60px;
+    flex-grow: 1;
 }
 
 .input-find:focus {
