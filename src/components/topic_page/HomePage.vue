@@ -24,7 +24,7 @@
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
     <Partof id="partof"></Partof>
-    <Parts id="parts"></Parts>
+<!--     <Parts id="parts"></Parts> -->
     <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
     <!-- <CV id="cv"></CV> -->
