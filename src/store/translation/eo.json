@@ -3,7 +3,8 @@
 		"authors": [
 			"Fitoschido",
 			"Jakub Fabijan",
-			"Mirin"
+			"Mirin",
+			"Robin van der Vliet"
 		]
 	},
 	"LandingPage": {
@@ -23,6 +24,7 @@
 		"titleBy": "Projekto far",
 		"getInvolved": "Partoprenu!",
 		"titleTranslate": "Traduki",
+		"blog": "Blogo",
 		"email": "Retpoŝto",
 		"github": "Github-deponejo"
 	},
@@ -78,12 +80,25 @@
 		"Parts": {
 			"headerTitle": "Partoj"
 		},
+		"Location": {
+			"headerTitle": "Loko"
+		},
 		"Names": {
 			"headerTitle": "Nomoj"
 		},
 		"People": {
 			"sortMenuTitle": "Ordigi",
-			"facetMenuOptionCountry": "Lando"
+			"sortMenuOptionBirth": "Laŭ naskiĝdato",
+			"sortMenuOptionDeath": "Laŭ mortdato",
+			"sortMenuOptionName": "Laŭ nomo",
+			"sortMenuOptionFirst": "Laŭ persona nomo",
+			"sortMenuOptionLast": "Laŭ familia nomo",
+			"facetMenuOptionProfession": "Profesio",
+			"facetMenuOptionCountry": "Lando",
+			"facetMenuOptionCity": "Genro"
+		},
+		"Twins": {
+			"headerTitle": "Ĝemelaj urboj"
 		},
 		"TopicImages": {
 			"facetMenu": {
@@ -99,6 +114,10 @@
 				"small": "malgranda",
 				"creator": "kreinto",
 				"source": "fonto"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Agoj",
+				"menuTooltip": "Agoj"
 			}
 		},
 		"Works": {
@@ -120,7 +139,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Legi artikolon en alia lingvo",
-				"translateArticleText": "Traduki ĉi-artikolon anglen",
+				"translateArticleText": "Traduki ĉi tiun artikolon al via lingvo",
 				"otherLanguagestext": "Aliaj lingvoj"
 			}
 		}
