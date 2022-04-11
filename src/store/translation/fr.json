@@ -80,7 +80,7 @@
 		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Choisir une ou plusieurs cartes de base historiques",
-			"chooseMapHelpNote": "Conseil : Ctrl+Clic permet de sélectionner plusieurs cartes",
+			"chooseMapHelpNote": "Conseil : Ctrl + Clic permet de sélectionner plusieurs cartes",
 			"yearAbbreviation": "a."
 		},
 		"Collection": {
