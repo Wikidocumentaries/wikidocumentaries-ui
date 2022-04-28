@@ -4,7 +4,8 @@
 			"Akmaie Ajam",
 			"Daud I.F. Argana",
 			"Herryz",
-			"Pebaryan"
+			"Pebaryan",
+			"RXerself"
 		]
 	},
 	"LandingPage": {
@@ -26,7 +27,7 @@
 		"titleMedia": "Media",
 		"statusMedia": "Media berasal dari banyak sekali repositori media yang melayani berkas-berkas media berlisensi terbuka. Kami sedang mengerjakan pencarian gambar dengan lebih akurat dan menampilkan metadata yang lebih baik dari tiap sumber. Kami juga terbuka jika ada sumber-sumber media baru.",
 		"titleTools": "Perkakas",
-		"statusTools": "Wikidocmentaries memiliki tugas dan kakas untuk bekerja dengan konten. Artikel dapat langsung diterjemahkan lintas bahasa menggunakan kakas Penerjemahan Konten. Kami sedang menyiapkan kakas penanda kata kunci dengan Wikidata dan penandaan geo untuk lokasi gambar. Kakas baru yang menarik dan berguna dapat dikembangkan dan diintegrasikan.",
+		"statusTools": "Wikidocumentaries memiliki tugas dan perkakas yang dapat mengolah konten. Artikel dapat langsung diterjemahkan lintas bahasa menggunakan perkakas Penerjemahan Konten. Kami sedang menyiapkan perkakas penanda kata kunci dengan Wikidata dan penandaan geo untuk lokasi gambar. Perkakas baru yang menarik dan berguna dapat dibuat dan diintegrasikan.",
 		"titleLanguages": "Bahasa",
 		"statusLanguages": "Wikidocumentaries dapat dinavigasikan dalam berbagai bahasa yang tersedia di Wikidata. Hal ini merupakan peluang bagi bahasa dengan sedikit penurut. Penerjemahan dilakukan di TranslateWiki.",
 		"titleTechnology": "Teknologi",
