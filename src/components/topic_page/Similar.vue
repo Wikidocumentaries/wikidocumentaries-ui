@@ -173,7 +173,7 @@ SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?startdate) AS ?startdate) (SAM
   OPTIONAL { ?item wdt:P18 ?image . }
   OPTIONAL { ?item wdt:P625 ?coordinates .}
   FILTER(?item != wd:Q1) .
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
 GROUP BY ?item ?itemLabel ?itemDescription
         `
