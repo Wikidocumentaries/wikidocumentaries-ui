@@ -17,14 +17,14 @@
           <div v-if="item.inLabel" class="thumb-credit disappearing over">{{ item.inLabel }}</div>
           <div v-else class="thumb-credit disappearing over">{{ item.outLabel }}</div>
           <div class="gallery-title">{{ item.person.label }}</div>
-          <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
+          <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} <span v-if="item.playpositionLabel"> ({{ item.playpositionLabel }})</span> {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
         </div>
       </router-link>
     </div>
     <div v-else class="list">
       <div v-for="item in results" :key="item.id" class="listrow">
         <a :href="getItemURL(item.person.value)" >
-          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> {{ item.playpositionLabel }} <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
+          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.playpositionLabel"> ({{ item.playpositionLabel }})</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
         </a>
       </div>
     </div>
