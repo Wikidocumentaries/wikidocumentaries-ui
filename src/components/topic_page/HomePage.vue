@@ -32,6 +32,7 @@
     <Effects id="effects"></Effects>
     <Works id="works"></Works>
     <Awards id="awards"></Awards>
+    <Cups id="cups"></Cups>
     <Depicts id="depicts"></Depicts>
     <Things id="things"></Things>
     <Affiliations id="affiliations"></Affiliations>
@@ -52,6 +53,7 @@
 import Affiliations from "@/components/topic_page/Affiliations";
 import Awards from "@/components/topic_page/Awards";
 import Banner from "@/components/topic_page/Banner";
+import Cups from "@/components/topic_page/Cups";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
@@ -91,6 +93,7 @@ export default {
     Affiliations,
     Awards,
     Banner,
+    Cups,
     Depicted,
     Depicts,
     Effects,
