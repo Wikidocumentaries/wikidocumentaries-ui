@@ -148,7 +148,7 @@ ORDER BY ?start
     onDoMenuItemAction(menuItem) {
       switch (menuItem.id) {
         case SORT_ACTIONS.BY_LABEL:
-          currentSort = ["aff.label"];
+          currentSort = ["item.label"];
           break;
         // case SORT_ACTIONS.BY_TIME:
         //   currentSort = ["time", "aff.label"];
