@@ -24,7 +24,7 @@
     <div v-else class="list">
       <div v-for="item in results" :key="item.id" class="listrow">
         <a :href="getItemURL(item.person.value)" >
-          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
+          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span><span v-if="item.playpositionLabel">, ({{ item.playpositionLabel }})</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
         </a>
       </div>
     </div>
@@ -112,7 +112,7 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) (GROUP_CONCAT(DISTINCT ?playpositionLabel_; separator = ", ") as ?playpositionLabel) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
@@ -147,6 +147,10 @@ SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel)
     OPTIONAL { ?person wdt:P27 ?country.
               ?country wdt:P1549 ?nationality .
               FILTER(LANG(?nationality)="fi") }
+    OPTIONAL { ?person wdt:P413 ?playposition.
+              ?playposition rdfs:label ?playpositionLabel_ 
+              FILTER(LANG(?playposition)="fi") }
+    }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 
 }
