@@ -41,7 +41,15 @@
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
-            {{ item.P31Label }} <b>{{ item.item.label }}</b> {{ item.item.label }} {{ item.item.label }} {{ item.item.label }} {{ item.item.label }} {{ item.item.label }}
+            <div class="thumb-credit over">{{ item.P31Label }}</div>
+            <div class="gallery-title">{{ item.item.label }}</div>
+            <div class="thumb-credit">Games: {{ item.games }}</div>
+            <div class="thumb-credit">Wins: {{ item.wins }}</div>
+            <div class="thumb-credit">Losses: {{ item.losses }}</div>
+            <div class="thumb-credit">Ties: {{ item.ties }}</div>
+            <div class="thumb-credit">Ranking: {{ item.ranking }}</div>
+            <div class="thumb-credit">Scored: {{ item.scored }}</div>
+            <div class="thumb-credit">Conceded: {{ item.conceded }}</div>
           </a>
         </div>
       </div>
@@ -111,7 +119,7 @@ export default {
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded WHERE {
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
   OPTIONAL { ?clubstatement pq:P1350 ?games . }
