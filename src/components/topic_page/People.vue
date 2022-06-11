@@ -149,7 +149,7 @@ SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel)
               FILTER(LANG(?nationality)="fi") }
     OPTIONAL { ?person wdt:P413 ?playposition.
               ?playposition rdfs:label ?playpositionLabel_ 
-              FILTER(LANG(?playposition)="fi") }
+              FILTER(LANG(?playpositionLabel_)="fi") }
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 
 }
