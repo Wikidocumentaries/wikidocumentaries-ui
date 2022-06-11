@@ -119,7 +119,7 @@ export default {
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded WHERE {
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
   OPTIONAL { ?clubstatement pq:P1350 ?games . }
