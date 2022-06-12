@@ -710,6 +710,7 @@ i.wikiglyph {
 
 .listrow {
   padding-bottom: 3px;
+  -webkit-column-break-inside: avoid;
 }
 
 .data-select {
