@@ -112,7 +112,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag WHERE {
+SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag ?cupLogo WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
@@ -127,9 +127,9 @@ SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored 
   OPTIONAL { ?item wdt:P582 ?end. }
   OPTIONAL { ?item wdt:P17 ?country .
            OPTIONAL { ?country wdt:P41 ?countryFlag .}}
-  OPTIONAL { ?item wdt:P3450 ?cup . }
+  OPTIONAL { ?item wdt:P3450 ?cup .
+           OPTIONAL { ?cup wdt:P154 ?cupLogo .}}
 }
-ORDER BY ?start
         `.replace(/Q2674/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
