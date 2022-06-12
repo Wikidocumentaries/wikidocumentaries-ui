@@ -25,8 +25,9 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div v-if="item.P31Label" class="thumb-credit over">{{ item.P31Label }}</div>
+            <div v-if="item.P31.label" class="thumb-credit over">{{ item.P31.label }}</div>
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
+            <div v-if="item.country.label" class="thumb-credit">{{ item.country.label }}</div>
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
             <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
@@ -41,8 +42,9 @@
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
-            <div v-if="item.P31Label" class="thumb-credit over">{{ item.P31Label }}</div>
+            <div v-if="item.P31.label" class="thumb-credit over">{{ item.P31.label }}</div>
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
+            <div v-if="item.country.label" class="thumb-credit">{{ item.country.label }}</div>
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
             <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
@@ -118,7 +120,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel WHERE {
+SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cupLabel ?countryFlag WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
@@ -133,6 +135,8 @@ SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?r
   OPTIONAL { ?item wdt:P580 ?start. }
   OPTIONAL { ?item wdt:P582 ?end. }
   OPTIONAL { ?item wdt:P17 ?country . }
+  OPTIONAL { ?item wdt:P41 ?countryFlag . }
+  OPTIONAL { ?item wdt:P3450 ?cup . }
 }
 ORDER BY ?start
         `.replace(/Q2674/g, this.$store.state.wikidocumentaries.wikidataId)
