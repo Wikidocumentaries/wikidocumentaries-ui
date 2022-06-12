@@ -33,6 +33,7 @@
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
+            <img v-if="item.cupLogo" :src="getImageLink(item.cupLogo)" class="icon-image">
             <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-image">
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
