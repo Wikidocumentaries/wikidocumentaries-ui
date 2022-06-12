@@ -25,26 +25,15 @@
         >
           <img :src="getImageLink(item.image)" class="gallery-image">
           <div class="thumb-image-info">
-            <div v-if="item.P31.label" class="thumb-credit over">{{ item.P31.label }}</div>
-            <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
-            <div v-if="item.country.label" class="thumb-credit">{{ item.country.label }}</div>
-            <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
-            <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
-            <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
-            <div v-if="item.ties" class="thumb-credit">Ties: {{ item.ties }}</div>
-            <div v-if="item.ranking" class="thumb-credit">Ranking: {{ item.ranking }}</div>
-            <div v-if="item.scored" class="thumb-credit">Scored: {{ item.scored }}</div>
-            <div v-if="item.conceded" class="thumb-credit">Conceded: {{ item.conceded }}</div>
-            <!-- <div class="thumb-credit">{{ item.typeLabel }} {{ item.time}}</div> -->
+            <div v-if="item.item.label" class="gallery-title">Gallery</div>
           </div>
         </router-link>
       </div>
       <div v-else class="list">
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
-            <div v-if="item.P31.label" class="thumb-credit over">{{ item.P31.label }}</div>
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
-            <div v-if="item.country.label" class="thumb-credit">{{ item.country.label }}</div>
+            <div v-if="item.country" class="thumb-credit">{{ item.countryLabel }}</div>
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
             <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
