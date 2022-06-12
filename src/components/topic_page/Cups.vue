@@ -33,6 +33,7 @@
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
+            <img :src="getImageLink(item.countryFlag)" class="gallery-image">
             <div v-if="item.country" class="thumb-credit">{{ item.countryLabel }}</div>
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
@@ -109,7 +110,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cupLabel ?countryFlag WHERE {
+SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
@@ -120,11 +121,10 @@ SELECT ?item ?itemLabel ?P31 ?P31Label ?start ?end ?games ?wins ?losses ?ties ?r
   OPTIONAL { ?clubstatement pq:P1352 ?ranking . }
   OPTIONAL { ?clubstatement pq:P1351 ?scored . }
   OPTIONAL { ?clubstatement pq:P1359 ?conceded . }
-  OPTIONAL { ?item wdt:P31 ?P31. }
   OPTIONAL { ?item wdt:P580 ?start. }
   OPTIONAL { ?item wdt:P582 ?end. }
-  OPTIONAL { ?item wdt:P17 ?country . }
-  OPTIONAL { ?item wdt:P41 ?countryFlag . }
+  OPTIONAL { ?item wdt:P17 ?country .
+           OPTIONAL { ?country wdt:P41 ?countryFlag .}}
   OPTIONAL { ?item wdt:P3450 ?cup . }
 }
 ORDER BY ?start
