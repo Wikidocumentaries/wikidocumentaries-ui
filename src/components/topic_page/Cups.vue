@@ -33,7 +33,6 @@
         <div v-for="item in results" :key="item.id" class="listrow">
           <a :href="getItemURL(item.item.value)">
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
-            <img v-if="item.cupLogo" :src="getImageLink(item.cupLogo)" class="icon-image">
             <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-image">
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
@@ -110,7 +109,7 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag ?cupLogo WHERE {
+SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
@@ -125,8 +124,7 @@ SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored 
   OPTIONAL { ?item wdt:P582 ?end. }
   OPTIONAL { ?item wdt:P17 ?country .
            OPTIONAL { ?country wdt:P41 ?countryFlag .}}
-  OPTIONAL { ?item wdt:P3450 ?cup .
-           OPTIONAL { ?cup wdt:P154 ?cupLogo .}}
+  OPTIONAL { ?item wdt:P3450 ?cup .}
 }
         `.replace(/Q2674/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
