@@ -72,8 +72,8 @@
             "intro": "These works are in the collection of this person or institution. You can choose to display them as list, which shows also works without images. They can be sorted by dates or names. Note that only those who have that information will be shown."
         },
         "Cups": {
-            "headerTitle": "Series and tournaments",
-            "intro": "This club has played in the following series and tournaments"
+            "headerTitle": "Games, series and tournaments",
+            "intro": "This club has played in the following games, sseries and tournaments"
         },
         "CV": {
             "headerTitle": "CV",
