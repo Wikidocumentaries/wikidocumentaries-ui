@@ -34,8 +34,6 @@
           <a :href="getItemURL(item.item.value)">
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
             <img :src="getImageLink(item.countryFlag)" class="icon-image">
-            <div v-if="item.countryLabel" class="thumb-credit">{{ item.countryLabel }}</div>
-            <div v-if="item.cup" class="thumb-credit">{{ item.cupLabel }}</div>
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
             <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
