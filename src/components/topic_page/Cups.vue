@@ -34,8 +34,8 @@
           <a :href="getItemURL(item.item.value)">
             <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
             <img :src="getImageLink(item.countryFlag)" class="icon-image">
-            <div v-if="item.countryLabel" class="thumb-credit">{{ item.countryLabel }}</div>
-            <div v-if="item.cup" class="thumb-credit">{{ item.cupLabel }}</div>
+            <!-- <div v-if="item.countryLabel" class="thumb-credit">{{ item.countryLabel }}</div> -->
+            <!-- <div v-if="item.cup" class="thumb-credit">{{ item.cupLabel }}</div> -->
             <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
             <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
             <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
@@ -112,7 +112,7 @@ export default {
     let sparql;
     sparql = `
 SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag ?cupLogo WHERE {
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
   ?item p:P1923 ?clubstatement .
   ?clubstatement ps:P1923 wd:Q2674 .
   OPTIONAL { ?clubstatement pq:P1350 ?games . }
