@@ -87,6 +87,10 @@
 			"headerTitle": "Travaux dans la collection",
 			"intro": "Les travaux suivants sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls seront affichés les travaux qui ont cette information."
 		},
+		"Cups": {
+			"headerTitle": "Jeux, séries et tournois",
+			"intro": "Ce club a participé aux jeux, séries et tournois suivants"
+		},
 		"CV": {
 			"headerTitle": "CV",
 			"intro": "Voici les événements professionnels de la personne du sujet."
