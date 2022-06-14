@@ -30,23 +30,30 @@
         </router-link>
       </div>
       <div v-else class="list">
-        <div v-for="item in results" :key="item.id" class="listrow">
-          <a :href="getItemURL(item.item.value)">
-            <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
-            <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-image">
-            <div v-if="item.cupLabel" class="thumb-credit">{{ item.cupLabel }}</div>
-            <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
-            <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
-            <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
-            <div v-if="item.ties" class="thumb-credit">Ties: {{ item.ties }}</div>
-            <div v-if="item.ranking" class="thumb-credit">Ranking: {{ item.ranking }}</div>
-            <div v-if="item.scored" class="thumb-credit">Scored: {{ item.scored }}</div>
-            <div v-if="item.conceded" class="thumb-credit">Conceded: {{ item.conceded }}</div>
-          </a>
+        <router-link 
+          tag="div"
+          v-for="item in results" 
+          :key="item.id" 
+          :to="getItemURL(item.item.value)"
+          class="listrow listblock">
+            <div class="icon">
+              <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-image">
+            </div>
+            <div class="content">
+              <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
+              <div v-if="item.cupLabel" class="thumb-credit">{{ item.cupLabel }}</div>
+              <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
+              <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
+              <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
+              <div v-if="item.ties" class="thumb-credit">Ties: {{ item.ties }}</div>
+              <div v-if="item.ranking" class="thumb-credit">Ranking: {{ item.ranking }}</div>
+              <div v-if="item.scored" class="thumb-credit">Scored: {{ item.scored }}</div>
+              <div v-if="item.conceded" class="thumb-credit">Conceded: {{ item.conceded }}</div>
+            </div>
+          </router-link>
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -212,7 +219,4 @@ const selectResults = lcl => {
 </script>
 
 <style scoped>
-.icon-image {
-    height: 15px;
-}
 </style>

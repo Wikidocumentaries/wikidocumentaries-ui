@@ -978,6 +978,10 @@ i.wikiglyph {
   color: var(--main-txt-color);
 }
 
+.icon-image {
+    height: 15px;
+}
+
 .grid-items {
   display: flex;
   flex-wrap: wrap;
@@ -1040,6 +1044,31 @@ a .popup-txt {
 
 a:hover .popup-txt {
   color: black;
+}
+
+.listblock {
+  padding:0.5em 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.listblock .icon {
+  width:75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listblock:hover {
+  background-color: var(--main-modal-color);
+}
+
+.listblock a {
+  color: var(--main-txt-color);
+}
+
+.listblock a:hover {
+  box-shadow:none;
 }
 
 </style>
