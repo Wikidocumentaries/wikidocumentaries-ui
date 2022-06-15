@@ -214,9 +214,17 @@
             "facetMenuOptionCountry": "Country",
             "facetMenuOptionCity": "Gender"
         },
+        "Seasons": {
+            "headerTitle": "Seasons",
+            "intro": "See the seasons of this activity."
+        },
         "Subclasses": {
             "headerTitle": "Subclasses of this topic",
             "intro": "See subclasses of this topic. View as list to see also items without an image."
+        },
+        "Teams": {
+            "headerTitle": "Participating teams",
+            "intro": "Teams participating in this game, series ot tournament."
         },
         "Things": {
             "headerTitle": "Focus list topics",

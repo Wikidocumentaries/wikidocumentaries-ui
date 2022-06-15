@@ -53,60 +53,6 @@
             </ul>
           </li>
         </ul>
-        <!-- <div v-if="expanded">
-          <button class="expander" v-if="shownRemainingStaments.length > 0" @click="switchExpand()">
-            <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
-            <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-          </button>
-          <ul class="statements">
-            <li
-              class="statement-list-item"
-              v-for="statement in shownRemainingStaments"
-              :key="statement.id"
-            >
-              <div class="statement-label">{{ statement.label }}</div>
-              <ul class="statement-values">
-                <li
-                  class="statment-value-list-item"
-                  v-for="(value, index) in statement.values"
-                  :key="getID(value) + index"
-                >
-                  <div class="statement-value">
-                    <div v-if="value.url != null">
-                      <a
-                        v-if="getTarget(value) != '_self'"
-                        :href="getStatementURL(value)"
-                        :target="getTarget(value)"
-                        :style="getStyle(value)"
-                      >{{ getValue(value) }}</a>
-                    <div 
-                    v-for="q in value.qualifiers"
-                    :key="q.id"
-                    class="qualifier"
-                    >{{ q.label }}: {{ q.value }}</div>
-                      <router-link
-                        v-if="getTarget(value) == '_self'"
-                        :to="getStatementURL(value)"
-                      >{{ getValue(value) }}</router-link>
-                    </div>
-                    <div v-else>
-                      {{ getValue(value) }}
-                                          <div 
-                    v-for="q in value.qualifiers"
-                    :key="q.id"
-                    class="qualifier"
-                    >{{ q.label }}: {{ q.value }}</div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <button class="expander" v-if="shownRemainingStaments.length > 0" @click="switchExpand()">
-          <i v-if="expanded" class="wikiglyph wikiglyph-caret-up"></i>
-          <i v-else class="wikiglyph wikiglyph-caret-down"></i>
-        </button>-->
       </div>
     </div>
     <div class="haze" id="wd">

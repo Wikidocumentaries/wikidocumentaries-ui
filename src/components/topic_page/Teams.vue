@@ -2,7 +2,7 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <h1 class="header-title">{{ $t('topic_page.Cups.headerTitle') }}</h1>
+        <h1 class="header-title">{{ $t('topic_page.Teams.headerTitle') }}</h1>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-sort"
@@ -13,7 +13,7 @@
           <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
-      <div class="intro">{{ $t('topic_page.Cups.intro') }}</div>
+      <div class="intro">{{ $t('topic_page.Teams.intro') }}</div>
       <div v-if="gallery" class="gallery">
         <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
         <router-link
@@ -37,7 +37,7 @@
           :to="getItemURL(item.item.value)"
           class="listrow listblock">
             <div class="icon">
-              <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-flag">
+              <img v-if="item.logo" :src="getImageLink(item.logo)" class="icon-image">
             </div>
             <div class="content">
               <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
@@ -81,7 +81,7 @@ const DEFAULT_SORT = ["item.label"];
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Cups",
+  name: "Teams",
   components: {
     ToolbarMenu,
     DisplayMenu
@@ -117,24 +117,20 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag WHERE {
+SELECT ?item ?itemLabel ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?logo WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
-  ?item p:P1923 ?clubstatement .
-  ?clubstatement ps:P1923 wd:Q2674 .
-  OPTIONAL { ?clubstatement pq:P1350 ?games . }
-  OPTIONAL { ?clubstatement pq:P1355 ?wins . }
-  OPTIONAL { ?clubstatement pq:P1356 ?losses . }
-  OPTIONAL { ?clubstatement pq:P1356 ?ties . }
-  OPTIONAL { ?clubstatement pq:P1352 ?ranking . }
-  OPTIONAL { ?clubstatement pq:P1351 ?scored . }
-  OPTIONAL { ?clubstatement pq:P1359 ?conceded . }
-  OPTIONAL { ?item wdt:P580 ?start. }
-  OPTIONAL { ?item wdt:P582 ?end. }
-  OPTIONAL { ?item wdt:P17 ?country .
-           OPTIONAL { ?country wdt:P41 ?countryFlag .}}
-  OPTIONAL { ?item wdt:P3450 ?cup .}
+  wd:Q3957513 p:P1923 ?clubstatement.
+  ?clubstatement ps:P1923 ?item.
+  OPTIONAL { ?clubstatement pq:P1350 ?games. }
+  OPTIONAL { ?clubstatement pq:P1355 ?wins. }
+  OPTIONAL { ?clubstatement pq:P1356 ?losses. }
+  OPTIONAL { ?clubstatement pq:P1356 ?ties. }
+  OPTIONAL { ?clubstatement pq:P1352 ?ranking. }
+  OPTIONAL { ?clubstatement pq:P1351 ?scored. }
+  OPTIONAL { ?clubstatement pq:P1359 ?conceded. }
+  OPTIONAL { ?item wdt:P154 ?logo. }
 }
-        `.replace(/Q2674/g, this.$store.state.wikidocumentaries.wikidataId)
+        `.replace(/Q3957513/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios

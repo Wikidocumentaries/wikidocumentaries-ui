@@ -124,17 +124,13 @@ export default {
     sparql = `
 SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates) (MIN(?_time) AS ?time) 
 WHERE {
-  { 
-    { wd:Q407542 ?p ?item.
-    ?pi wdt:P1647* wd:P527 .
-    ?pi wikibase:directClaim ?p .
-    ?pi rdfs:label ?piLabel . }
-    UNION
-    { ?item ?p wd:Q407542.
-    ?pi wdt:P1647* wd:P361 .
-    ?pi wikibase:directClaim ?p .
-    ?pi rdfs:label ?piLabel . }
-  }
+  { wd:Q407542 wdt:P527 ?item. }
+  UNION
+  { ?item wdt:P361 wd:Q407542 . }
+  UNION
+  { ?item wdt:P131 wd:Q407542 . }
+  UNION
+  { wd:Q407542 wdt:P150 ?item . }
   OPTIONAL { ?item wdt:P625 ?coordinates . }
   OPTIONAL { ?item wdt:P18 ?image . }
   MINUS { ?item wdt:P31 wd:Q5 .}

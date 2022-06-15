@@ -2,7 +2,7 @@
   <div v-if="results.length">
     <div class="gallery-component">
       <div class="toolbar">
-        <h1 class="header-title">{{ $t('topic_page.Cups.headerTitle') }}</h1>
+        <h1 class="header-title">{{ $t('topic_page.Seasons.headerTitle') }}</h1>
         <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
         <ToolbarMenu
           icon="wikiglyph-sort"
@@ -13,7 +13,7 @@
           <div slot="menu-title">{{ $t('menus.sortMenu.title') }}</div>
         </ToolbarMenu>
       </div>
-      <div class="intro">{{ $t('topic_page.Cups.intro') }}</div>
+      <div class="intro">{{ $t('topic_page.Seasons.intro') }}</div>
       <div v-if="gallery" class="gallery">
         <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
         <router-link
@@ -37,18 +37,15 @@
           :to="getItemURL(item.item.value)"
           class="listrow listblock">
             <div class="icon">
-              <img v-if="item.countryFlag" :src="getImageLink(item.countryFlag)" class="icon-flag">
+              <img v-if="item.logo" :src="getImageLink(item.logo)" class="icon-image">
             </div>
             <div class="content">
               <div v-if="item.item.label" class="gallery-title">{{ item.item.label }}</div>
-              <div v-if="item.cupLabel" class="thumb-credit">{{ item.cupLabel }}</div>
-              <div v-if="item.games" class="thumb-credit">Games: {{ item.games }}</div>
-              <div v-if="item.wins" class="thumb-credit">Wins: {{ item.wins }}</div>
-              <div v-if="item.losses" class="thumb-credit">Losses: {{ item.losses }}</div>
-              <div v-if="item.ties" class="thumb-credit">Ties: {{ item.ties }}</div>
-              <div v-if="item.ranking" class="thumb-credit">Ranking: {{ item.ranking }}</div>
-              <div v-if="item.scored" class="thumb-credit">Scored: {{ item.scored }}</div>
-              <div v-if="item.conceded" class="thumb-credit">Conceded: {{ item.conceded }}</div>
+              <div v-if="item.ed" class="thumb-credit">Season {{ item.ed }}</div>
+              <div class="thumb-credit">
+                  <span v-if="item.start">{{ item.start }}</span><span v-if="item.end" class="thumb-credit">–{{ item.end }}</span>
+                </div>
+              <div v-if="item.winner" class="thumb-credit">Winner: {{ item.winner.label }}</div>
             </div>
           </router-link>
         </div>
@@ -75,13 +72,13 @@ const DISPLAY_ACTIONS = {
   LIST: 1
 };
 
-const MAX_ITEMS_TO_VIEW = 50;
+const MAX_ITEMS_TO_VIEW = 500;
 const DEFAULT_SORT = ["item.label"];
 
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Cups",
+  name: "Teams",
   components: {
     ToolbarMenu,
     DisplayMenu
@@ -117,24 +114,17 @@ export default {
     const statements = this.$store.state.wikidocumentaries.wikidata.statements;
     let sparql;
     sparql = `
-SELECT ?item ?itemLabel ?start ?end ?games ?wins ?losses ?ties ?ranking ?scored ?conceded ?countryLabel ?cup ?cupLabel ?countryFlag WHERE {
+SELECT ?item ?itemLabel ?ed ?start ?end ?winner ?winnerLabel ?logo WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,en,sv,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
-  ?item p:P1923 ?clubstatement .
-  ?clubstatement ps:P1923 wd:Q2674 .
-  OPTIONAL { ?clubstatement pq:P1350 ?games . }
-  OPTIONAL { ?clubstatement pq:P1355 ?wins . }
-  OPTIONAL { ?clubstatement pq:P1356 ?losses . }
-  OPTIONAL { ?clubstatement pq:P1356 ?ties . }
-  OPTIONAL { ?clubstatement pq:P1352 ?ranking . }
-  OPTIONAL { ?clubstatement pq:P1351 ?scored . }
-  OPTIONAL { ?clubstatement pq:P1359 ?conceded . }
+  ?item wdt:P3450 wd:Q324867.
+  OPTIONAL { ?item wdt:P393 ?ed. }
   OPTIONAL { ?item wdt:P580 ?start. }
   OPTIONAL { ?item wdt:P582 ?end. }
-  OPTIONAL { ?item wdt:P17 ?country .
-           OPTIONAL { ?country wdt:P41 ?countryFlag .}}
-  OPTIONAL { ?item wdt:P3450 ?cup .}
+  OPTIONAL { ?item wdt:P1346 ?winner. 
+     OPTIONAL { ?winner wdt:P154 ?logo .}
+  }
 }
-        `.replace(/Q2674/g, this.$store.state.wikidocumentaries.wikidataId)
+        `.replace(/Q324867/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
     const [url, body] = wdk.sparqlQuery(sparql).split("?");
     axios

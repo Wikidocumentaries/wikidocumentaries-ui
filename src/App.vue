@@ -979,7 +979,11 @@ i.wikiglyph {
 }
 
 .icon-image {
-    height: 15px;
+  width: 50px;
+}
+
+.icon-flag {
+  height: 20px;
 }
 
 .grid-items {
@@ -1057,6 +1061,13 @@ a:hover .popup-txt {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+.listblock .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .listblock:hover {

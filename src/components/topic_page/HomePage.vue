@@ -17,6 +17,7 @@
         </div>
       </div>
     </div>
+    <Teams id="teams"></Teams>
     <Kartta id="kartta"></Kartta>
     <Location id="location"></Location>
 <!--     <Names id="names"></Names> -->
@@ -32,6 +33,7 @@
     <Effects id="effects"></Effects>
     <Works id="works"></Works>
     <Awards id="awards"></Awards>
+    <Seasons id="seasons"></Seasons>
     <Cups id="cups"></Cups>
     <Depicts id="depicts"></Depicts>
     <Things id="things"></Things>
@@ -67,12 +69,14 @@ import Kartta from "@/components/topic_page/Kartta";
 import People from "@/components/topic_page/People";
 import Partof from "@/components/topic_page/Partof";
 import Parts from "@/components/topic_page/Parts";
+import Seasons from "@/components/topic_page/Seasons";
 import Similar from "@/components/topic_page/Similar";
 import Subclasses from "@/components/topic_page/Subclasses";
 import Things from "@/components/topic_page/Things";
 import TopicImages from "@/components/topic_page/TopicImages";
 /* import TopicMap from "@/components/topic_page/TopicMap"; */
 import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
+import Teams from "@/components/topic_page/Teams";
 import Twins from "@/components/topic_page/Twins";
 import WikipediaArticle from "@/components/topic_page/Wikipedia";
 import WikidataItem from "@/components/topic_page/Wikidata";
@@ -108,8 +112,10 @@ export default {
     People,
     Parts,
     Partof,
+    Seasons,
     Similar,
     Subclasses,
+    Teams,
     Things,
     TopicPageHeader,
 /*     TopicMap, */
