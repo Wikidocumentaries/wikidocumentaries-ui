@@ -95,6 +95,9 @@
 			"facetMenuOptionCountry": "Stato",
 			"facetMenuOptionCity": "Sesso"
 		},
+		"Seasons": {
+			"headerTitle": "Stagioni"
+		},
 		"Twins": {
 			"headerTitle": "Città gemellate"
 		},

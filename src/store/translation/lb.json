@@ -126,6 +126,9 @@
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Geschlecht"
 		},
+		"Seasons": {
+			"headerTitle": "Joreszäiten"
+		},
 		"TopicImages": {
 			"headerTitle": "Biller aus den Archiven",
 			"actionsMenu": {
