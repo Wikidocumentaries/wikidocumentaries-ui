@@ -128,7 +128,8 @@ WHERE {
   UNION
   { ?item wdt:P361 wd:Q407542 . }
   UNION
-  { ?item wdt:P131 wd:Q407542 . }
+  { ?item wdt:P131 wd:Q407542 .
+  ?item wdt:P31/wdt:P279* wd:Q56061. }
   UNION
   { wd:Q407542 wdt:P150 ?item . }
   OPTIONAL { ?item wdt:P625 ?coordinates . }

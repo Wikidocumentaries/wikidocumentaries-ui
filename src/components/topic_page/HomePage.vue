@@ -2,6 +2,7 @@
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
     <Banner id="banner"></Banner>
+    <Colours id="colours"></Colours>
     <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
@@ -22,6 +23,7 @@
     <Location id="location"></Location>
 <!--     <Names id="names"></Names> -->
     <Heritage id="heritage"></Heritage>
+    <Collection id=collection></Collection>
     <Instances id="instances"></Instances>
     <Subclasses id="subclasses"></Subclasses>
     <Partof id="partof"></Partof>
@@ -56,6 +58,8 @@ import Affiliations from "@/components/topic_page/Affiliations";
 import Awards from "@/components/topic_page/Awards";
 import Banner from "@/components/topic_page/Banner";
 import Cups from "@/components/topic_page/Cups";
+import Collection from "@/components/topic_page/Collection";
+import Colours from "@/components/topic_page/Colours";
 import Depicted from "@/components/topic_page/Depicted";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
@@ -83,6 +87,7 @@ import WikidataItem from "@/components/topic_page/Wikidata";
 import TopicTimeline from "@/components/topic_page/TopicTimeline";
 //import EventList from "@/components/topic_page/EventList";
 import Works from "@/components/topic_page/Works";
+//import Colours from './Colours.vue';
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
@@ -97,6 +102,8 @@ export default {
     Affiliations,
     Awards,
     Banner,
+    Collection,
+    Colours,
     Cups,
     Depicted,
     Depicts,

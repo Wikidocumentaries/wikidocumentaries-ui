@@ -78,7 +78,7 @@ const DEFAULT_SORT = ["item.label"];
 let fullResults, currentSort, currentDisplay;
 
 export default {
-  name: "Teams",
+  name: "Seasons",
   components: {
     ToolbarMenu,
     DisplayMenu
