@@ -228,9 +228,17 @@
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"
 		},
+		"Seasons": {
+			"headerTitle": "Saisons",
+			"intro": "Voir les saisons de cette activité."
+		},
 		"Subclasses": {
 			"headerTitle": "Sous-classes de ce sujet",
 			"intro": "Voir les sous-classes de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Teams": {
+			"headerTitle": "Équipes participantes",
+			"intro": "Équipes qui participent à ce jeu, ces séries ou ce tournois."
 		},
 		"Things": {
 			"headerTitle": "Sujets de la liste de focalisation",
