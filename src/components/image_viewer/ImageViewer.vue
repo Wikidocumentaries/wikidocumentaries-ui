@@ -36,13 +36,14 @@
                       :items="toolbarActionMenuItems"
                       @doMenuItemAction="onDoMenuItemAction"
                     >
-                      <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+                    <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                     </ToolbarMenu>
                     <HeaderLink
                       v-if="element.infoURL"
                       class="toolbar-item neg"
                       :tooltip="$t('topic_page.TopicImages.imagesViewExternal')"
                       :link="element.infoURL"
+                      icon="wikiglyph-new-window"
                     ></HeaderLink>
                     <div class="toolbar-item neg" @click.prevent="hide">
                       <a href="#" class="toolbar-item-a">
@@ -357,7 +358,7 @@
                 <div class="grid-text">
                   <div class="grid-item">{{ $t('imageViewer.imageMetadata.license') }}</div>
                   <div class="data-text">
-                    <a href="#">{{ element.license }}</a>
+                    <a :href="element.license_link">{{ element.license }}</a>
                   </div>
                 </div>
               </div>
