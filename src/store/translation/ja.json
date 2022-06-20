@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Ajeje Brazorf",
+			"Funa-enpitu",
 			"Higa4",
+			"MathXplore",
 			"Mogumin",
 			"Omotecho",
 			"Shirayuki"
@@ -212,9 +214,17 @@
 			"facetMenuOptionCountry": "国",
 			"facetMenuOptionCity": "性別"
 		},
+		"Seasons": {
+			"headerTitle": "季節",
+			"intro": "この活動のシーズンをご覧ください。"
+		},
 		"Subclasses": {
 			"headerTitle": "このトピックのサブクラス",
 			"intro": "このトピックのサブクラスをご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
+		},
+		"Teams": {
+			"headerTitle": "参加しているチーム",
+			"intro": "このゲーム、シリーズ、トーナメントに参加するチーム。"
 		},
 		"Things": {
 			"headerTitle": "特定の主題の一覧",

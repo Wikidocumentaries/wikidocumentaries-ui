@@ -11,7 +11,8 @@
 			"Pacha Tchernof",
 			"Putnik",
 			"Rivka Silinsky",
-			"Teretalexev"
+			"Teretalexev",
+			"Артём 13327"
 		]
 	},
 	"LandingPage": {
@@ -222,6 +223,9 @@
 			"facetMenuOptionProfession": "Профессия",
 			"facetMenuOptionCountry": "Страна",
 			"facetMenuOptionCity": "Пол"
+		},
+		"Seasons": {
+			"headerTitle": "Времена года"
 		},
 		"Subclasses": {
 			"headerTitle": "Подклассы этой темы",
