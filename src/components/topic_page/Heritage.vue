@@ -88,7 +88,7 @@ export default {
         let sparql;
         sparql = `
 SELECT ?instance ?instanceLabel ?instanceDescription (SAMPLE(?image) AS ?image) (SAMPLE(?coordinates) AS ?coordinates) WHERE {
-    ?instance wdt:P1435 wd:Q38896738.
+    ?instance wdt:P1435|wdt:P3259 wd:Q38896738.
     OPTIONAL { ?instance wdt:P18 ?image. }
     OPTIONAL { ?instance wdt:P625 ?coordinates. }
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
