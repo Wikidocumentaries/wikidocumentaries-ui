@@ -16,34 +16,34 @@
 		"searchInputPlaceHolder": "Bir konu bul veya yeni bir konu oluştur",
 		"searchInputSearchOnly": "Konu bul",
 		"showMore": "Daha fazla öğe göster",
-		"createNew": "Yeni öğe oluştur",
-		"intro": "Wikidocumentaries, küçük tarih için bir vikidir - tarihin izlerini bir araya getirip hikayelere dönüştürmek için bir yer. Bir ilgi konusu arayarak başlayın!",
-		"titleDescription": "Wikidocumentaries nedir?",
-		"description": "Wikidocumentaries, vatandaş tarihçiler için yapıcı bir alandır. İnsanlar, yerler, binalar, etkinlikler ve daha fazlası - konular hakkındaki bilgileri birleştirir. Aile ilişkileri, konumlar, yaratıcılar ve kreasyonlar veya bağlılıklar gibi kayıtlı bağlantıları izleyerek konular arasında gezinebilirsiniz. Bağlantılı müzelerden, arşivlerden ve kütüphanelerden görüntüler ve haritalar içeren bir konu gösterilmektedir. Wikidocumentaries'de mevcut bilgileri düzeltmek ve yeni konular eklemek, kendi resimlerinizi ve hatırlamalarınızı getirmek ve tüm materyalleri kendi amaçlarınız için kullanmak mümkün olacak.",
+		"createNew": "Yeni öge oluştur",
+		"intro": "Vikibelge, tarihin izlerini bir araya getirmek ve onları hikâyelere dönüştürmek için bir yerdir. İlgilendiğiniz bir konu arayarak başlayın!",
+		"titleDescription": "Vikibelge nedir?",
+		"description": "Vikibelge, vatandaş tarihçiler için yaratıcı bir alandır. İnsanlar, yerler, binalar, olaylar ve daha fazlası gibi konular hakkındaki bilgileri birleştirir. Aile ilişkileri, konumlar, yaratıcılar ve kreasyonlar veya üyelik gibi kayıtlı herhangi bir bağlantıyı takip ederek konular arasında gezinebilirsiniz. Bir konu, bağlantılı müzelerden, arşivlerden ve kütüphanelerden alınan görüntüler ve haritalarla gösterilir. Vikibelgelerde, mevcut bilgileri düzeltip yeni konular eklemek, kendi görüntülerinizi ve anılarınızı getirmek ve tüm materyalleri kendi amaçlarınız için kullanmak mümkün olacaktır.",
 		"titleStatus": "Durum",
-		"status": "Site demo aşamasındadır. Pek çok önemli özellik henüz mevcut değildir ve site beklendiği gibi çalışmayabilir.",
-		"moreBelow": "Aşağıda daha fazla okuyun",
+		"status": "Site demo aşamasındadır. Birçok önemli özellik henüz mevcut değildir ve site beklendiği gibi çalışmayabilir.",
+		"moreBelow": "Aşağıda daha fazlasını okuyun",
 		"more": "Devamını oku",
-		"moreLink": "Daha fazlasını oku",
+		"moreLink": "Devamını oku",
 		"titleTopics": "Konular",
-		"statusTopics": "Konular Vikiveri'den okunur. Vikiveri içeriğinin kapsamı dışındaysa, bunun yerine Wikidocumentaries'de yeni konular oluşturulabilir. Konuyu Vikiveri'nin zengin seçenekleriyle tanımlamak yine de mümkün olacak. Güncel makaleler Vikipedi'den gelirken, makaleler daha sonra yalnızca Wikidocumentaries'de bulunan konular için yerel olarak oluşturulabilir.",
+		"statusTopics": "Konular Vikiveri'den okunur. Vikiveri içeriğinin kapsamı dışındaysa, bunun yerine Vikibelge'de yeni konular oluşturulabilir. Konuyu Vikiveri'nin zengin seçenekleriyle tanımlamak yine de mümkün olacak. Güncel makaleler Vikipedi'den gelirken makaleler daha sonra yalnızca Vikibelge'de bulunan konular için yerel olarak oluşturulabilir.",
 		"titleMedia": "Medya",
 		"statusMedia": "Medya, açık lisanslı medya dosyalarına hizmet veren artan sayıda medya deposundan okunur. Görüntüleri daha doğru bulmak ve her bir kaynaktan daha fazla ve daha iyi meta veriler görüntülemek için çalışıyoruz. Yeni medya kaynakları özgürdür!",
 		"titleTools": "Araçlar",
-		"statusTools": "Wikidocumentaries, içerikle çalışmak için görev ve araçlara sahiptir. İçerik Çeviri aracıyla makaleler zaten diller arasında çevrilebilir. Vikiveri ve görüntü konumlar için bir coğrafi etiketleme aracı ile anahtar kelimeler hazırlıyoruz. Yeni eğlenceli ve kullanışlı araçlar oluşturulabilir veya entegre edilebilir.",
+		"statusTools": "Vikibelge, içerikle çalışmak için görev ve araçlara sahiptir. İçerik Çeviri aracıyla makaleler zaten diller arasında çevrilebilir. Vikiveri ve görüntü konumlar için bir coğrafi etiketleme aracı ile anahtar kelimeler hazırlıyoruz. Yeni eğlenceli ve kullanışlı araçlar oluşturulabilir veya entegre edilebilir.",
 		"titleLanguages": "Diller",
-		"statusLanguages": "Wikidocumentaries, Vikiveri'de bulunan herhangi bir dilde gezilebilir. Bu küçük diller için harika bir fırsat. Çeviriler TranslateWiki'de yapılır.",
+		"statusLanguages": "Vikibelge, Vikiveri'de bulunan herhangi bir dilde gezilebilir. Bu küçük diller için harika bir fırsat. Çeviriler TranslateWiki'de yapılır.",
 		"titleTechnology": "Teknoloji",
-		"statusTechnology": "Wikidocumentaries, temel verileri Vikiveri'den okunur. Ek olarak, Wikidocumentaries, Vikiveri'nin kapsamı dışında kalan konular için kendi Wikibase'ine sahip olacaktır. Vikiveri ve Wikidocumentaries'in federe Wikibase olarak eşitlenmesi bekleniyor. İkincisi, resim meta verileri Vikiveri öğeleriyle bağlantılıdır ve bu veriler Wikimedia Commons'daki Structured Data ile senkronize edilebilir. Site Vue.js ile oluşturulmuştur ve Wikimedia Cloud Services'da barındırılmaktadır.",
-		"titleCreators": "Oluşturucular",
+		"statusTechnology": "Vikibelge, temel verileri Vikiveri'den okunur. Ek olarak Vikibelge, Vikiveri'nin kapsamı dışında kalan konular için kendi Wikibase'ine sahip olacaktır. Vikiveri ve Vikibelge'nin federe Wikibase olarak eşitlenmesi bekleniyor. İkincisi, resim meta verileri Vikiveri öğeleriyle bağlantılıdır ve bu veriler Wikimedia Commons'daki Structured Data ile senkronize edilebilir. Site Vue.js ile oluşturulmuştur ve Wikimedia Cloud Services'da barındırılmaktadır.",
+		"titleCreators": "Yaratıcılar",
 		"titleTeam": "Ekip",
 		"titleThanks": "Özel teşekkürler",
 		"titlePartners": "Ortaklar",
-		"titleFunding": "Türden destek ile",
-		"titleBy": "Proje hazırlayan",
+		"titleFunding": "Nazik desteğiyle",
+		"titleBy": "Projeyi hazırlayan",
 		"getInvolved": "Katılın!",
 		"titleTranslate": "Çevir",
-		"joinTranslate": "Gelin ve dilinizi Wikidocumentaries'e getirin. Gönüllü çeviri ekibine katılın ve bağlı kültürel mirasın kendi dilinizde hayata geçtiğini görün.",
+		"joinTranslate": "Gelin ve dilinizi Vikibelge'ye getirin. Gönüllü çeviri ekibine katılın ve bağlı kültürel mirasın kendi dilinizde hayata geçtiğini görün.",
 		"titleContent": "İçeriğinizi ekleyin",
 		"joinContent": "Burada görmek istediğiniz bir fotoğrafınız, medyanız, belgeniz, haritanız veya veri koleksiyonunuz varsa, mevcut kanallardan birinden daha önce bağlanabiliyorsa veya yeni bağlantı yöntemleri oluşturabiliyorsak birlikte bir göz atalım. Ayrıca, tarihsel bilgiyi ilgilenen topluluklarla kaydetmek için atölye çalışmaları düzenlemek için sabırsızlanıyoruz.",
 		"titleDevelop": "Araçlar ve kitle kaynaklı görevler oluşturun.",
@@ -82,6 +82,10 @@
 		"Collection": {
 			"headerTitle": "Koleksiyondaki eserler",
 			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
+		},
+		"Cups": {
+			"headerTitle": "Oyunlar, seriler ve turnuvalar",
+			"intro": "Bu kulüp aşağıdaki oyunlarda, serilerde ve turnuvalarda oynamıştır."
 		},
 		"CV": {
 			"headerTitle": "CV",
@@ -220,9 +224,17 @@
 			"facetMenuOptionCountry": "Ülke",
 			"facetMenuOptionCity": "Cinsiyet"
 		},
+		"Seasons": {
+			"headerTitle": "Sezonlar",
+			"intro": "Bu etkinliğin sezonuna bakın."
+		},
 		"Subclasses": {
 			"headerTitle": "Bu konunun alt sınıfları",
 			"intro": "Bu konunun alt sınıflarına bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Teams": {
+			"headerTitle": "Katılan takımlar",
+			"intro": "Bu oyuna, seriye ya da turnuvaya katılan takımlar."
 		},
 		"Things": {
 			"headerTitle": "Odak listesi konuları",

@@ -76,6 +76,10 @@
 			"headerTitle": "Práce v kolekcii",
 			"intro": "Tieto práce sú v kolekcii tejto osoby alebo inštitúcie. Môžete ich zobraziť ako zoznam, čo umožní vidieť aj tie, ktoré nemajú obrázky. Môžu byť zoradené podľa dátumu alebo mena. Zobrazia sa ale len tie pri ktorých sú tieto informácie uložené."
 		},
+		"Cups": {
+			"headerTitle": "Hry, série a turnaje",
+			"intro": "Tento klub hral v nasledujúcich hrách, sériách a turnajoch"
+		},
 		"CV": {
 			"headerTitle": "CV",
 			"intro": "Toto sú profesionálne udalosti osoby v článku."
@@ -213,9 +217,17 @@
 			"facetMenuOptionCountry": "Krajina",
 			"facetMenuOptionCity": "Pohlavie"
 		},
+		"Seasons": {
+			"headerTitle": "Obdobia",
+			"intro": "Pozrieť obdobia tejto aktivity."
+		},
 		"Subclasses": {
 			"headerTitle": "Podtriedy tejto témy",
 			"intro": "Pozrieť podtriedy tejto témy. Pre zobrazenie položiek bez obrázkov zapnite režim zoznamu."
+		},
+		"Teams": {
+			"headerTitle": "Zúčastnené tímy",
+			"intro": "Tímy, ktoré sa zúčastňujú tejto hry, série, alebo turnaja."
 		},
 		"Things": {
 			"headerTitle": "Zoznam zameraných tém",
