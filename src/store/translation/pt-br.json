@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Chicocvenancio",
+			"Duke of Wikipädia",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Fitoschido",
@@ -79,6 +80,14 @@
 		"Collection": {
 			"headerTitle": "Obras na coleção",
 			"intro": "Estes trabalhos estão na coleção desta pessoa ou instituição. Você pode optar por exibi-los como lista, o que mostra também funciona sem imagens. Eles podem ser classificados por datas ou nomes. Observe que apenas aqueles que possuem essas informações serão mostrados."
+		},
+		"Cups": {
+			"headerTitle": "Jogos, séries e torneios",
+			"intro": "Este clube jogou nos seguintes jogos, séries e torneios"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Estes são eventos profissionais da pessoa do tópico."
 		},
 		"Depicted": {
 			"headerTitle": "Retratado em",
@@ -213,9 +222,17 @@
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Gênero"
 		},
+		"Seasons": {
+			"headerTitle": "Temporadas",
+			"intro": "Veja as temporadas desta atividade."
+		},
 		"Subclasses": {
 			"headerTitle": "Subclasses deste tópico",
 			"intro": "Veja subclasses deste tópico. Veja como lista para ver também itens sem imagem."
+		},
+		"Teams": {
+			"headerTitle": "Equipes participantes",
+			"intro": "Equipes participantes deste jogo, série ou torneio."
 		},
 		"Things": {
 			"headerTitle": "Tópicos da lista de foco",
@@ -412,6 +429,7 @@
 			"removeEvent": "Remover evento",
 			"institution": "Instituição",
 			"collection": "Coleção",
+			"addCollection": "Adicionar coleção",
 			"inventoryNumber": "Número de inventário",
 			"inscriptions": "Inscrições",
 			"measurements": "Medidas",
@@ -424,6 +442,8 @@
 			"addPhotographData": "Adicionar informações sobre a fotografia",
 			"copyrightNotePD": "A imagem é licenciada com $1, mas com base nos metadados que a imagem está em domínio público.",
 			"copyrightNoteSame": "A mesma imagem é licenciada mais abertamente com $1, portanto, também se aplica a essa imagem.",
+			"creditline": "Linha de crédito",
+			"attribution": "Atribuição",
 			"digitalCopy": "Copia digital",
 			"publishingPlatform": "Plataforma de publicação",
 			"platformId": "ID",
@@ -530,6 +550,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografe este patrimônio cultural e participe do concurso de fotografia $2!",
 		"WLMButton": "Enviar imagem"
 	}
 }
