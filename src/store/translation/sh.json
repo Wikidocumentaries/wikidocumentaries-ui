@@ -8,6 +8,9 @@
 		"search": "Traži",
 		"searchInputPlaceHolder": "Pronađite temu ili izradite novu",
 		"searchInputSearchOnly": "Nađi temu",
+		"showMore": "Prikaži više stavki",
+		"createNew": "Napravi novu stavku",
+		"intro": "Wikidokumentari su wiki za malu povijest — mjesto za skupljanje tragova povijesti i njihovo pretvaranje u priče. Započnite traženjem teme koja vas zanima!",
 		"titleStatus": "Status",
 		"status": "Sajt je u probnoj fazi (demo). Mnoge od najvažnijih mogućnosti za sada nisu dostupne; također, sajt možda neće raditi prema svim očekivanjima.",
 		"moreBelow": "Pročitajte više u nastavku",
@@ -158,7 +161,7 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Pročitajte članak na drugom jeziku",
-				"translateArticleText": "Prevedite članak na svoj jezik",
+				"translateArticleText": "Prevedite ovaj članak na svoj jezik",
 				"otherLanguagestext": "Drugi jezici"
 			}
 		}
@@ -195,7 +198,17 @@
 			"actionMenuTitle": "Radnje",
 			"actionMenuTooltip": "Radnje",
 			"languageMenuTitle": "Izaberite jezik",
-			"myLanguagesItem": "Moji jezici"
+			"myLanguagesItem": "Moji jezici",
+			"languageMenuTranslate": "Prevedite ovaj članak na srpskohrvatski"
+		},
+		"languages": {
+			"fi": "finski",
+			"en": "engleski",
+			"sv": "švedski",
+			"es": "spanski"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki voli spomenike $1"
 	}
 }
