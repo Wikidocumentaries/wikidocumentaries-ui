@@ -374,7 +374,7 @@
 			"missingArticleCreate": "Vous pouvez créer cet article dans votre langue en cliquant sur l’icône plus.",
 			"missingArticleFallback": "Cet article écrit dans une autre langue vous est montré d’après vos préférences de langues de repli.",
 			"missingArticleTranslate": "Vous pouvez traduire cet article dans votre langue en la choisissant dans le menu des langues.",
-			"missingArticleAuto": "Ce texte bref a été créé automatiquement depuis les faits enregistrés. Vous pouvez sauvegarder ce brouillon et commencer la modification de l’article.",
+			"missingArticleAuto": "Ce texte bref a été créé automatiquement depuis les faits enregistrés. Vous pouvez enregistrer ce brouillon et commencer la modification de l’article.",
 			"extLink": {
 				"linkTitleWP": "Lire ou modifier dans Wikipédia"
 			},
