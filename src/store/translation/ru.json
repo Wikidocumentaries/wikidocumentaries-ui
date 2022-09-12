@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alexander Yukal",
+			"Amire80",
 			"DDPAT",
 			"DmitTrix",
 			"Ice bulldog",
@@ -208,7 +209,7 @@
 			"intro": "Эта тема находится внутри или в контексте этих тем."
 		},
 		"Names": {
-			"headerTitle": "Название",
+			"headerTitle": "Названия",
 			"intro": "Смотреть названия этой темы и все доступные альтернативы."
 		},
 		"People": {
