@@ -83,9 +83,10 @@
 				"form": "oblik",
 				"imageSize": "veličina slike",
 				"large": "velika",
+				"medium": "srednja",
 				"small": "mala",
 				"type": "vrsta medija",
-				"creator": "tvoritelj",
+				"creator": "tvorac",
 				"platform": "platforma",
 				"source": "izvor",
 				"saveSelection": "Spremi izabrano kao zbirka",
@@ -209,6 +210,7 @@
 		}
 	},
 	"Banner": {
-		"WLM": "Wiki voli spomenike $1"
+		"WLM": "Wiki voli spomenike $1",
+		"WLMButton": "Otpremi sliku"
 	}
 }
