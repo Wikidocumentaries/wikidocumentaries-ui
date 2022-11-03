@@ -1,0 +1,304 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80",
+			"DmitTrix",
+			"Erelon",
+			"Neriah",
+			"Yali23",
+			"YaronSh"
+		]
+	},
+	"LandingPage": {
+		"search": "חיפוש",
+		"searchInputPlaceHolder": "איתור נושא או יצירת נושא חדש",
+		"searchInputSearchOnly": "מציאת נושא",
+		"showMore": "להציג יותר פריטים",
+		"createNew": "ליצור פריט חדש",
+		"intro": "ויקיתעודה הוא אתר ויקי להיסטוריה קטנה – מקום שאפשר למשוך אליו פיסות של היסטוריה ולהפוך אותן לסיפורים.",
+		"titleDescription": "מה זה ויקיתעודה?",
+		"description": "ויקיתעודה (Wikidocumentaries) הוא מרחב עשיינים (מייקרים) להיסטוריונים אזרחים. הוא משלב מידע על נושאים – אנשים, מקומות, בניינים, אירועים, ועוד. באפשרותך לנווט בין הנושאים באמצעות מעקב חיבור רשום כגון יחסים משחתיים, אתרים, יוצרים, יצירות, או שייכות. כל נושא מאויר באמצעות תמונות ומפות ממוזאונים, ארכיונים, וספריות שהתחברו למיזם. בוויקיתעודה יהיה אפשר לחבר מידע קיים ולהוסיף נושאים חדשים, להביא תמונות וזיכרונות משלך, ולהשתמש בכל החומר למטרות שלך.",
+		"titleStatus": "מצב",
+		"moreBelow": "מידע נוסף להלן",
+		"more": "מידע נוסף",
+		"moreLink": "ניתן ללמוד עוד תחת",
+		"titleTopics": "נושאים",
+		"titleMedia": "מדיה",
+		"titleTools": "כלים",
+		"titleLanguages": "שפות",
+		"titleTechnology": "טכנולוגיה",
+		"titleCreators": "יוצרים",
+		"titleTeam": "צוות",
+		"titleThanks": "עם תודה מיוחדת אל",
+		"titlePartners": "שותפים",
+		"titleFunding": "עם תמיכה נדיבה של",
+		"titleBy": "מיזם מאת",
+		"titleTranslate": "תרגום",
+		"facebook": "קבוצת פייסבוק",
+		"blog": "בלוג",
+		"email": "דואר אלקטרוני",
+		"github": "מאגר ב־GitHub"
+	},
+	"MainPage": {
+		"topicPageName": "עמוד נושא",
+		"mapPlaceMatchPageName": "שילוב שמות מקומות",
+		"mapSearchPageName": "חיפוש במפות",
+		"returnToHomeMessage": "חזרה לעמוד נחיתה"
+	},
+	"WaitPage": {
+		"waitMessage": "רק רגע בבקשה… מתקבלים נתונים מוויקיפדיה, ויקינתונים, ויקישיתוף, Map Warper, ‏Finna,‏ Flickr…"
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "פרסים"
+		},
+		"CV": {
+			"headerTitle": "קו״ח"
+		},
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "סוג"
+			},
+			"displayMenu": {
+				"title": "הצגה בתור",
+				"optionGallery": "גלריה",
+				"optionList": "רשימה"
+			},
+			"showAll": "הכול"
+		},
+		"Events": {
+			"headerTitle": "אירועים",
+			"displayMenu": {
+				"menuTitle": "אפשרויות תצוגה",
+				"menuTooltip": "אפשרויות תצוגה"
+			},
+			"optionsMenu": {
+				"menuTitle": "אפשרויות",
+				"subRelatedPeopleConf": {
+					"menuTitle": "הגדרה"
+				}
+			}
+		},
+		"Header": {
+			"titleEditText": "עריכת הכותרת",
+			"titleApproveText": "אישור הכותרת",
+			"subtitleEditText": "עריכת התיאור",
+			"subtitleApproveText": "אישור התיאור"
+		},
+		"Locations": {
+			"headerTitle": "במקום הזה",
+			"sortMenu": {
+				"optionDist": "לפי מרחק"
+			},
+			"facetMenu": {
+				"optionType": "סוג"
+			},
+			"displayMenu": {
+				"optionGallery": "גלריה",
+				"optionList": "רשימה"
+			},
+			"showAll": "הכול"
+		},
+		"Map": {
+			"headerTitle": "מקום במפה"
+		},
+		"Parts": {
+			"headerTitle": "חלקים"
+		},
+		"Effects": {
+			"headerTitle": "השפעות",
+			"intro": "אלו ההשפעות של הנושא."
+		},
+		"Familytree": {
+			"headerTitle": "עץ משפחה"
+		},
+		"Instances": {
+			"headerTitle": "מופעים של הנושא הזה"
+		},
+		"Location": {
+			"headerTitle": "מקום"
+		},
+		"Names": {
+			"headerTitle": "שמות"
+		},
+		"People": {
+			"facetMenuOptionProfession": "עיסוק",
+			"facetMenuOptionCountry": "ארץ",
+			"facetMenuOptionCity": "מגדר"
+		},
+		"Seasons": {
+			"headerTitle": "עונות",
+			"intro": "הצגת עונות הפעילות הזאת."
+		},
+		"TopicImages": {
+			"actionsMenu": {
+				"menuTitle": "הצגה או סידור של תמונות",
+				"tooltip": "הצגה או סידור של תמונות",
+				"showImagesOnMapMenuText": "הצגת כל התמונות במפה"
+			},
+			"facetMenu": {
+				"time": "זמן",
+				"map": "מפה",
+				"people": "אנשים",
+				"places": "מקומות",
+				"topics": "נושאים",
+				"imageSize": "גודל תמונה",
+				"large": "גדול",
+				"medium": "בינוני",
+				"small": "קטן",
+				"type": "סוג מדיה",
+				"platform": "פלטפורמה",
+				"source": "מקור",
+				"saveSelection": "שמירת בחירה כאוסף"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "פעולות",
+				"menuTooltip": "פעולות",
+				"doGeolocatingText": "הגדרת המיקום…",
+				"showImageText": "הצגת תמונה",
+				"selectFeatured": "בחירה כתמונת כותרת"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "הסרת התמונה כיוון…",
+				"shortMenuTitle": "הסרת התמונה",
+				"menuTooltip": "הסרת התמונה",
+				"remDepicted": {
+					"search": "חיפוש אחר הנושא",
+					"browse": "עיון בנושאים הקשורים"
+				},
+				"remInappropriate": {
+					"menuTitle": "היא לא הולמת מהסיבה",
+					"shortMenuTitle": "היא לא הולמת",
+					"privacy": "היא מפרה את פרטיות המצולמים",
+					"violence": "היא מציגה אלימות קיצונית",
+					"sex": "היא מציגה סקס מפורש",
+					"copyvio": "היא מפרה זכויות יוצרים"
+				}
+			},
+			"imagesViewExternal": "לצפות בתמונה המקורית",
+			"imagesViewOnMap": "הצגת תמונה על מפה"
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "הסרת תמונות"
+		},
+		"TopicTimeline": {
+			"headerTitle": "ציר זמן"
+		},
+		"Works": {
+			"facetMenuOptionType": "סוג",
+			"facetMenuOptionColl": "אוסף",
+			"displayMenuTitle": "הצגה בתור",
+			"displayMenuOptionGallery": "גלריה",
+			"displayMenuOptionList": "רשימה",
+			"displayMenuOptionMap": "מפה",
+			"showAll": "הכול"
+		},
+		"Wikidata": {
+			"headerTitle": "עובדות",
+			"extLink": {
+				"linkTitleWD": "הצגה או עריכה בוויקינתונים"
+			},
+			"noTopicFoundText": "הנושא לא נמצא"
+		},
+		"Wikipedia": {
+			"headerTitle": "ערך",
+			"extLink": {
+				"linkTitleWP": "קריאה או עריכה בוויקיפדיה"
+			},
+			"addLink": {
+				"linkTitleWP": "יצירת ערך בוויקיפדיה"
+			},
+			"languageMenu": {
+				"menuTitle": "קריאת הערך בשפה אחרת",
+				"translateArticleText": "תרגום הערך הזה לשפה שלך",
+				"otherLanguagestext": "שפות אחרות"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "תיאור",
+			"addDescription": "הוספת תיאור",
+			"creatorUnknown": "לא ידוע",
+			"addTopic": "הוספת נושא",
+			"removeTopic": "הסרת נושא",
+			"address": "כתובת רחוב",
+			"addAddress": "הוספת כתובת רחוב",
+			"event": "אירוע",
+			"addEvent": "הוספת אירוע",
+			"removeEvent": "הסרת אירוע",
+			"institution": "מוסד",
+			"collection": "אוסף",
+			"addCollection": "הוספת אוסף",
+			"measurements": "מדידות",
+			"copyright": "זכויות יוצרים",
+			"license": "רישיון זכויות יוצרים",
+			"photograph": "צילום",
+			"image": "תמונה",
+			"photographer": "צלם",
+			"addPhotographData": "הוספת מידע על הצילום",
+			"attribution": "ייחוס",
+			"digitalCopy": "עותק דיגיטלי",
+			"imageDimensions": "ממדי תמונה",
+			"fileSize": "גודל קובץ",
+			"fileFormat": "סוג קובץ",
+			"remove": "הסרה",
+			"moveTo": "העברה לשדה אחר",
+			"addData": "הוספת נתונים",
+			"rotate": "סיבוב"
+		},
+		"imageActions": {
+			"rotateImage": "סיבוב התמונה",
+			"clockwise": "בכיוון השעון",
+			"counterclockwise": "נגד כיוון השעון",
+			"flip": "היפוך",
+			"horizontal": "אופקי",
+			"vertical": "אנכי"
+		},
+		"closeViewer": "סגירת המציג"
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"filterBySourceMenuText": "סינון לפי מקור…",
+			"filterByTimeMenuText": "סינון לפי זמן…",
+			"filterByMapMenuText": "סינון דרך מפה…"
+		}
+	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "סוג"
+		},
+		"displayMenu": {
+			"title": "הצגה בתור",
+			"tooltip": "בחירת התצוגה",
+			"optionGallery": "גלריה",
+			"optionList": "רשימה"
+		}
+	},
+	"general": {
+		"ok": "אישור",
+		"cancel": "ביטול",
+		"helpText": "עזרה",
+		"menus": {
+			"actionMenuTitle": "פעולות",
+			"actionMenuTooltip": "פעולות",
+			"languageMenuTitle": "בחירת שפה",
+			"languageMenuTooltip": "בחירת השפה שלך",
+			"myLanguagesItem": "השפות שלי",
+			"languageMenuTranslate": "תרגום הערך הזה לאנגלית"
+		},
+		"languageMenu": {
+			"TranslateUI": "תרגום לשפה שלך"
+		},
+		"languages": {
+			"fi": "פינית",
+			"en": "אנגלית",
+			"sv": "שוודית",
+			"es": "ספרדית"
+		}
+	},
+	"Banner": {
+		"WLM": "ויקי אוהבת אתרי מורשת $1",
+		"WLMButton": "העלאת תמונה"
+	}
+}
