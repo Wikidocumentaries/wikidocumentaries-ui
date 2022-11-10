@@ -72,7 +72,7 @@
 			"showAll": "Pêro"
 		},
 		"Events": {
-			"headerTitle": "Weqeyi",
+			"headerTitle": "Fealiyeti",
 			"optionsMenu": {
 				"menuTitle": "Weçinıteki",
 				"subRelatedPeopleConf": {
@@ -228,7 +228,7 @@
 			"location": "Lokasyon",
 			"address": "Adresa kuçeyi",
 			"addPerson": "Merdum cı ke",
-			"event": "Weqa",
+			"event": "Fealiyet",
 			"collection": "Koleksiyon",
 			"measurements": "Pêmeyi",
 			"copyright": "Heqa telifi",
