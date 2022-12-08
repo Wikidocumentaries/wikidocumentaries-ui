@@ -6,6 +6,7 @@
 			"A Chinese Wikipedian",
 			"A Retired User",
 			"GuoPC",
+			"Lantianjialiang",
 			"Shuiwater",
 			"列维劳德",
 			"沈澄心",
@@ -72,6 +73,9 @@
 		},
 		"Collection": {
 			"headerTitle": "收藏里的作品"
+		},
+		"Cups": {
+			"intro": "该俱乐部参加了以下比赛、系列赛和锦标赛"
 		},
 		"CV": {
 			"headerTitle": "CV",
