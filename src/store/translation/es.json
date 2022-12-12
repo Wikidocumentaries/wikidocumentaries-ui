@@ -13,7 +13,8 @@
 			"Juenti el toju",
 			"MarcoAurelio",
 			"Ryo567",
-			"Susannaanas"
+			"Susannaanas",
+			"Yel Martinez Seo"
 		]
 	},
 	"LandingPage": {
@@ -31,11 +32,15 @@
 		"more": "Leer más",
 		"moreLink": "Seguir leyendo",
 		"titleTopics": "Temas",
+		"statusTopics": "Los temas se leen de Wikidata. Si el contenido está fuera del alcance de Wikidata, pueden crearse nuevos temas en Wikidocumentales. Será igualmente posible describir el tema con las ricas opciones de Wikidata. Los artículos actuales provienen de Wikipedia, mientras que los artículos pueden crearse más tarde localmente para temas que sólo existen en Wikidocumentales.",
 		"titleMedia": "Multimedia",
+		"statusMedia": "Los archivos multimedia se leen en un número cada vez mayor de repositorios que ofrecen archivos con licencia abierta. Estamos trabajando para encontrar imágenes con mayor precisión y mostrar más y mejores metadatos de cada una de las fuentes. Las nuevas fuentes son bienvenidas.",
 		"titleTools": "Herramientas",
+		"statusTools": "Wikidocumentales dispone de tareas y herramientas para trabajar con el contenido. Los artículos ya se pueden traducir entre idiomas con la herramienta de traducción de contenidos. Estamos preparando el keywording con Wikidata y una herramienta de geoetiquetado para la localización de imágenes. Se pueden crear o integrar nuevas herramientas útiles y divertidas.",
 		"titleLanguages": "Idiomas",
 		"statusLanguages": "Wikidocumentales está disponible en cualquier idioma disponible en Wikipedia. Es una gran oportunidad para los idiomas minoritarios. Las traducciones se realizan en TranslateWiki.",
 		"titleTechnology": "Tecnología",
+		"statusTechnology": "Wikidocumentales lee los datos principales de Wikidata. Además, Wikidocumentales tendrá su propia Wikibase para temas que están fuera del alcance de Wikidata. Se espera que Wikidata y Wikidocumentales se sincronicen como Wikibases federadas. En segundo lugar, los metadatos de imágenes están vinculados a los elementos de Wikidata, y estos datos pueden sincronizarse con los datos estructurados de Wikimedia Commons. El sitio está construido con Vue.js y está alojado en Wikimedia Cloud Services.",
 		"titleCreators": "Creadores",
 		"titleTeam": "Equipo",
 		"titleThanks": "Con agradecimientos especiales a",
@@ -44,7 +49,11 @@
 		"titleBy": "Proyecto de",
 		"getInvolved": "¡Involúcrate!",
 		"titleTranslate": "Traducir",
+		"joinTranslate": "Ven y trae tu idioma a Wikidocumentales. Únete al equipo de traductores voluntarios y observa cómo el patrimonio cultural conectado cobra vida en tu idioma.",
 		"titleContent": "Añade tu contenido",
+		"joinContent": "Si tiene una foto, un medio de comunicación, un documento, un mapa o una recopilación de datos que le gustaría ver aquí, veamos juntos si ya puede conectarse a través de alguno de los canales existentes o si podemos crear nuevos métodos de conexión. También estamos deseando organizar talleres para registrar el conocimiento histórico con las comunidades de interés.",
+		"titleDevelop": "Crear herramientas y tareas de crowdsourcing.",
+		"joinDevelop": "Nos gusta añadir más herramientas y crear nuevas tareas de crowdsourcing en colaboración con organizaciones y creadores de herramientas. ¡Unamos fuerzas para crear la próxima aplicación de crowdsourcing!",
 		"titleContact": "¡Ponte en contacto!",
 		"facebook": "Grupo de Facebook",
 		"wiki": "Wikidocumentales",
@@ -60,9 +69,13 @@
 		"returnToHomeMessage": "Volver a la página de bienvenida"
 	},
 	"WaitPage": {
-		"waitMessage": "Un momento, por favor... Recuperando datos de Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Un momento, por favor... Recuperar datos de Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliaciones",
+			"intro": "Organizaciones a las que esta persona u organización está afiliada."
+		},
 		"Awards": {
 			"headerTitle": "Premios",
 			"intro": "Nominaciones y premios a los que es acreedor el tema de esta página."
@@ -73,25 +86,44 @@
 			"yearAbbreviation": "a."
 		},
 		"Collection": {
-			"headerTitle": "Obras en la colección"
+			"headerTitle": "Obras en la colección",
+			"intro": "Estas obras se encuentran en la colección de esta persona o institución. Puede elegir mostrarlas en forma de lista, que muestra también las obras sin imágenes. Pueden ordenarse por fechas o nombres. Tenga en cuenta que sólo se mostrarán las que tengan esa información."
+		},
+		"Cups": {
+			"headerTitle": "Juegos, series y torneos",
+			"intro": "Este club ha participado en los siguientes partidos, series y torneos"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Se trata de eventos profesionales de la persona del tema."
 		},
 		"Depicted": {
+			"headerTitle": "Representado en",
+			"intro": "Este tema está representado en estas obras. Ordenar las obras por diferentes criterios, mostrar como lista para ver las que no tienen imagen.",
 			"sortMenu": {
 				"title": "Ordenar trabajos",
 				"tooltip": "Ordenar trabajos",
 				"optionTime": "Por tiempo",
-				"optionAlpha": "Alfabéticamente"
+				"optionAlpha": "Alfabéticamente",
+				"optionClear": "Borrar clasificación"
 			},
 			"facetMenu": {
+				"title": "facetas funciona mediante",
+				"tooltip": "facetas funciona mediante diferentes criterios",
 				"optionType": "Tipo",
 				"optionColl": "Creador"
 			},
 			"displayMenu": {
 				"title": "Mostrar como",
+				"tooltip": "Elija mostrar como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
 			"showAll": "Todo"
+		},
+		"Depicts": {
+			"headerTitle": "Muestra",
+			"intro": "Esta obra muestra estos temas. Puede ordenarlos por tiempo y nombre. Tenga en cuenta que para ver todos los temas, incluidos los que no tienen imagen, debe verlos en forma de lista."
 		},
 		"Events": {
 			"headerTitle": "Sucesos",
@@ -120,20 +152,25 @@
 		},
 		"Locations": {
 			"headerTitle": "En esta ubicación",
+			"intro": "Aquí puede ver todo lo que se encuentra en el tema de esta página. Mostrar como lista para ver todas las ubicaciones que se han almacenado.",
 			"sortMenu": {
 				"title": "Ordenar ubicaciones",
 				"tooltip": "Ordenar ubicaciones",
 				"optionTime": "Por tiempo",
 				"optionAlpha": "Alfabéticamente",
-				"optionDist": "Por distancia"
+				"optionDist": "Por distancia",
+				"optionClear": "Borrar clasificación"
 			},
 			"facetMenu": {
+				"title": "ubicación de la faceta por",
+				"tooltip": "ubicación de la faceta por diferentes criterios",
 				"optionType": "Tipo",
 				"optionColl": "Creador",
 				"optionCity": "Ubicación"
 			},
 			"displayMenu": {
 				"title": "Mostrar como",
+				"tooltip": "Elija mostrar como",
 				"optionGallery": "Galería",
 				"optionList": "Lista"
 			},
@@ -142,14 +179,35 @@
 		"Map": {
 			"headerTitle": "Ubicación en el mapa"
 		},
+		"Parts": {
+			"headerTitle": "Partes",
+			"intro": "Estas partes pertenecen a este tema. Puedes ordenarlos por hora y nombre. Para ver todos los temas, incluidos los que no tienen imagen, debes ver los temas como una lista."
+		},
 		"Partof": {
-			"headerTitle": "Parte de"
+			"headerTitle": "Parte de",
+			"intro": "Este tema forma parte de estos otros temas. Puedes ordenarlos por hora y nombre. Para ver todos los temas, incluidos los que no tienen imagen, debes ver los temas como una lista."
 		},
 		"Similar": {
-			"headerTitle": "Temas similares"
+			"headerTitle": "Temas similares",
+			"intro": "Buscar temas que tengan algunas características clave comunes con este tema"
 		},
 		"Effects": {
-			"headerTitle": "Efectos"
+			"headerTitle": "Efectos",
+			"intro": "Estos son los efectos del tema."
+		},
+		"Familytree": {
+			"headerTitle": "árbol genealógico"
+		},
+		"Instances": {
+			"headerTitle": "Instancias de este tema",
+			"intro": "Ver instancias de este tema. Ver como lista para ver también elementos sin imagen."
+		},
+		"Links": {
+			"headerTitle": "Enlaces de este artículo"
+		},
+		"Location": {
+			"headerTitle": "Ubicación",
+			"intro": "Este tema está situado en contexto o en el contexto de estos temas."
 		},
 		"Names": {
 			"headerTitle": "Nombres",
@@ -157,18 +215,46 @@
 		},
 		"People": {
 			"headerTitle": "Personas relacionadas con el tema",
+			"intro": "Estas personas están asociadas al tema de esta página. Puede elegir mostrarlos en forma de lista, que muestra también las personas sin imágenes. Pueden ordenarse por fechas o nombres. Tenga en cuenta que sólo se mostrarán los que tengan esa información.",
 			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Cambiar el orden de clasificación",
 			"sortMenuOptionBirth": "Por fecha de nacimiento",
 			"sortMenuOptionDeath": "Por fecha de defunción",
+			"sortMenuOptionName": "Por nombre",
 			"sortMenuOptionFirst": "Por nombre de pila",
 			"sortMenuOptionLast": "Por apellidos",
+			"sortMenuOptionClear": "Borrar clasificación",
+			"facetMenuTitle": "Faceta por",
+			"facetMenuTooltip": "Facetar a las personas por diferentes aspectos",
 			"facetMenuOptionProfession": "Profesión",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Género"
 		},
+		"Seasons": {
+			"headerTitle": "Estaciones",
+			"intro": "Consulte los períodos de esta actividad."
+		},
+		"Subclasses": {
+			"headerTitle": "Subclases de este tema",
+			"intro": "Ver subclases de este tema. Ver como lista para ver también elementos sin imagen."
+		},
+		"Teams": {
+			"headerTitle": "Equipos participantes",
+			"intro": "Equipos que participan en este juego, serie o torneo."
+		},
+		"Things": {
+			"headerTitle": "Temas principales",
+			"intro": "Estos temas están en la lista de temas principales de este Wikiproyecto."
+		},
+		"Twins": {
+			"headerTitle": "Ciudades gemelas",
+			"intro": "Pueblos hermanados, ciudades hermanas, municipios hermanados y otras localidades que tienen un acuerdo de asociación o cooperación, reconocido legal o informalmente por sus gobiernos. Puede ordenarlos por tiempo y nombre. Para ver todos los temas, incluidos los que no tienen imagen, debe ver los temas como una lista."
+		},
 		"TopicImages": {
 			"headerTitle": "Imágenes de los archivos",
+			"intro": "Estas imágenes proceden de diversas fuentes y es posible que no siempre representen el tema con exactitud. Puedes ver la imagen original y situarla en un mapa si tiene un pin de localización.",
 			"actionsMenu": {
+				"menuTitle": "Mostrar u organizar imágenes",
 				"tooltip": "Mostrar u organizar imágenes",
 				"showImagesOnMapMenuText": "Mostrar todas las imágenes en el mapa",
 				"showImagesOnTimelineMenuText": "Mostrar todas las imágenes en la línea de tiempo",
@@ -177,6 +263,8 @@
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"facetMenu": {
+				"menuTitle": "Imágenes facetadas por",
+				"menuTooltip": "Imágenes facetadas por diferentes criterios",
 				"time": "tiempo",
 				"map": "mapa",
 				"people": "personas",
@@ -191,7 +279,8 @@
 				"creator": "creador",
 				"platform": "plataforma",
 				"source": "fuente",
-				"saveSelection": "Guardar selección como una colección"
+				"saveSelection": "Guardar selección como una colección",
+				"clear": "Limpiar opciones"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Acciones",
@@ -206,16 +295,19 @@
 				"menuTooltip": "Eliminar imagen",
 				"remDepicted": {
 					"menuTitle": "Describe este tema en cambio",
+					"shortMenuTitle": "Representa otro tema.",
 					"search": "Buscar el tema",
 					"browse": "Explorar el relacionó temas"
 				},
 				"remCreator": {
 					"menuTitle": "Es por este creador en cambio",
+					"shortMenuTitle": "Es obra de otro creador",
 					"search": "Buscar el creador",
 					"browse": "Explorar los actores relacionados"
 				},
 				"remInappropriate": {
 					"menuTitle": "Es inapropiado porque",
+					"shortMenuTitle": "es inapropiado",
 					"privacy": "Viola la intimidad del descrito",
 					"violence": "Muestra violencia extrema",
 					"sex": "Muestra sexo explícito",
@@ -223,15 +315,20 @@
 					"explain": "Dejar una nota para explicar"
 				}
 			},
-			"imagesViewExternal": "Ver la imagen original"
+			"imagesViewExternal": "Ver la imagen original",
+			"imagesViewOnMap": "Ver imagen en un mapa"
 		},
 		"TopicMap": {
 			"headerTitle": "Tema en el mapa",
+			"intro": "El lugar del tema se muestra en el mapa. También puede mostrar las imágenes y otros datos en el mapa o elegir un mapa histórico como capa base.",
 			"chooseHistoricalBasemapMenuText": "Elige uno o varios mapas históricos de base...",
 			"hideImagesMenuText": "Ocultar imágenes",
 			"chooseTimelineMapsMenuText": "Elige mapas para la línea de tiempo...",
 			"showNearbyPlacesMenuText": "Mostrar lugares cercanos",
-			"hideNearbyPlacesMenuText": "Ocultar lugares cercanos"
+			"hideNearbyPlacesMenuText": "Ocultar lugares cercanos",
+			"extLink": {
+				"menuTooltip": "Ver o editar en OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Recortes de diarios",
@@ -245,15 +342,20 @@
 		},
 		"Works": {
 			"headerTitle": "Obras",
+			"intro": "Se trata de obras de la persona, colectivo u organización que es el tema de esta página. Puede entrar en una página que recoge toda la información sobre la obra haciendo clic en ella. Sólo se muestran las obras con imágenes. Mostrar como lista para ver todas las obras relacionadas, que han sido almacenadas.",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Ordenar elementos",
 			"sortMenuOptionTime": "Por tiempo",
 			"sortMenuOptionAlpha": "Por orden alfabético",
 			"sortMenuOptionDist": "Por distancia",
+			"sortMenuOptionClear": "Borrar clasificación",
+			"facetMenuTitle": "Facetas por",
+			"facetMenuTooltip": "facetas funciona mediante diferentes criterios",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Colección",
 			"facetMenuOptionCity": "Ubicación",
 			"displayMenuTitle": "Mostrar como",
+			"displayMenuTooltip": "Elija mostrar como",
 			"displayMenuOptionGallery": "Galería",
 			"displayMenuOptionList": "Lista",
 			"displayMenuOptionMap": "Mapa",
@@ -270,6 +372,11 @@
 			"headerTitle": "Artículo",
 			"missingArticle": "No hay ningún artículo sobre este tema en tu idioma. Puedes leer este artículo en otro idioma disponible, seleccionándolo desde el menú de idioma arriba. Puedes crear el artículo en tu idioma haciendo clic en el ícono del signo más (+).",
 			"missingArticleMissing": "No hay ningún artículo sobre este tema en tu idioma.",
+			"missingArticleChoose": "Puede leer el artículo en otro idioma disponible eligiendo en el menú de idiomas de arriba o puede crear el artículo en su idioma haciendo clic en el icono del signo más.",
+			"missingArticleCreate": "Puede crear este artículo en su idioma haciendo clic en el icono del signo más.",
+			"missingArticleFallback": "Este artículo se muestra en otro idioma en función de sus preferencias de idioma.",
+			"missingArticleTranslate": "Puede traducir este artículo a su idioma seleccionándolo en el menú de idiomas.",
+			"missingArticleAuto": "Este breve texto se ha creado automáticamente a partir de los hechos registrados. Puede guardar este borrador y empezar a editar el artículo.",
 			"extLink": {
 				"linkTitleWP": "Leer o editar en Wikipedia"
 			},
@@ -292,24 +399,37 @@
 			"creator": "Creador",
 			"creatorUnknown": "Desconocido",
 			"addCreator": "Agregar creador",
+			"removeCreator": "Eliminar creador",
+			"dateDepicted": "Fecha representada",
+			"addDateDepicted": "Agregar fecha representada",
+			"removeDateDepicted": "Eliminar fecha representada",
 			"dateCreated": "Fecha de creación",
 			"addDateCreated": "Añadir fecha de creación",
 			"removeDateCreated": "Quitar fecha de creación",
 			"publisher": "Editor",
 			"addPublisher": "Agregar editor",
+			"removePublisher": "Eliminar editor",
 			"format": "Formato",
 			"addFormat": "Añadir formato",
+			"removeFormat": "Eliminar formato",
 			"technique": "Técnica",
 			"addTechnique": "Añadir técnica",
 			"removeTechnique": "Quitar técnica",
+			"depicted": "La imagen representa",
 			"genre": "Género",
 			"addGenre": "Añadir género",
 			"removeGenre": "Quitar género",
+			"depicts": "La imagen representa",
 			"addTopic": "Añadir tema",
+			"removeTopic": "Eliminar tema",
 			"location": "Ubicación",
 			"locationMap": "Ubicación en el mapa",
 			"addLocation": "Añadir ubicación",
 			"removeLocation": "Quitar ubicación",
+			"address": "dirección (calle)",
+			"addAddress": "Añadir dirección (calle)",
+			"removeAddress": "Eliminar dirección (calle)",
+			"depictedPeople": "personas representadas",
 			"addPerson": "Añadir persona",
 			"removePerson": "Quitar persona",
 			"event": "Suceso",
@@ -317,14 +437,23 @@
 			"removeEvent": "Quitar suceso",
 			"institution": "Institución",
 			"collection": "Colección",
+			"addCollection": "Añadir colección",
 			"inventoryNumber": "Número de inventario",
+			"inscriptions": "Inscripciones",
 			"measurements": "Medidas",
 			"copyright": "Derechos de autor",
+			"license": "Licencia de derechos de autor",
 			"work": "Obra representada en la imagen",
 			"photograph": "Fotografía",
+			"image": "Imagen",
+			"photographer": "Fotógrafo",
+			"addPhotographData": "Añadir información sobre la fotografía.",
+			"copyrightNotePD": "La imagen tiene una licencia de $1 , pero según los metadatos, la imagen es de dominio público.",
+			"copyrightNoteSame": "La misma imagen tiene una licencia más abierta con $1 , por lo que también se aplica a esta imagen.",
 			"creditline": "Línea de crédito",
 			"attribution": "Atribución",
 			"digitalCopy": "Copia digitar",
+			"publishingPlatform": "Plataforma de publicación",
 			"platformId": "Identificador",
 			"provider": "Proveedor de contenidos",
 			"imageInfoPage": "Página de información de la imagen",
@@ -334,10 +463,13 @@
 			"remove": "Quitar",
 			"moveTo": "Mover a otro campo",
 			"addData": "Añadir datos",
+			"uploader": "Cargador",
 			"rotate": "Girar"
 		},
 		"imageActions": {
 			"rotateImage": "Girar imagen",
+			"clockwise": "agujas del reloj",
+			"counterclockwise": "en el sentido contrario a las agujas del reloj",
 			"flip": "Voltear",
 			"horizontal": "horizontal",
 			"vertical": "vertical"
@@ -370,18 +502,32 @@
 	},
 	"menus": {
 		"sortMenu": {
+			"title": "Ordenar temas",
+			"tooltip": "Ordenar temas",
+			"optionTime": "Por tiempo",
+			"optionStart": "por hora de inicio",
+			"optionEnd": "por tiempo de finalización",
 			"optionTitle": "Por título",
 			"optionCause": "Por causa",
 			"optionPartof": "Por elemento esto es parte de",
 			"optionSuperclass": "Por clase, esta es una subclase de",
-			"optionRev": "Orden inverso"
+			"optionAlpha": "Alfabéticamente",
+			"optionTitleAlpha": "Por título alfabéticamente",
+			"optionCreatorAlpha": "Por creador alfabéticamente",
+			"optionDist": "Por distancia",
+			"optionRev": "Orden inverso",
+			"optionClear": "Borrar clasificación"
 		},
 		"facetMenu": {
+			"title": "Facetas por",
+			"tooltip": "Temas facetados por diferentes criterios",
 			"optionType": "Tipo",
 			"optionColl": "Creador",
 			"optionCity": "Ubicación"
 		},
 		"displayMenu": {
+			"title": "Mostrar como",
+			"tooltip": "Elija mostrar como",
 			"optionGallery": "Galería",
 			"optionList": "Lista"
 		}
@@ -412,6 +558,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki ama los monumentos $1",
+		"WLMText": "Fotografíe este patrimonio cultural y participe en el concurso fotográfico de 2 $.",
 		"WLMButton": "Cargar imagen"
 	}
 }
