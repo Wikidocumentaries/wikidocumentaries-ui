@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Agam Riyandana",
 			"Akmaie Ajam",
 			"DARMAS BUDI SANTOSO",
 			"Daud I.F. Argana",
@@ -81,6 +82,9 @@
 		"Collection": {
 			"headerTitle": "Karya dalam koleksi",
 			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
+		},
+		"Cups": {
+			"intro": "Klub ini telah bermain di pertandingan, seri, dan turnamen berikut"
 		},
 		"CV": {
 			"headerTitle": "CV",
