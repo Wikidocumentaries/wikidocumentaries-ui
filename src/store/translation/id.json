@@ -8,7 +8,8 @@
 			"Herryz",
 			"Pebaryan",
 			"RXerself",
-			"Rahmatdenas"
+			"Rahmatdenas",
+			"Veracious"
 		]
 	},
 	"LandingPage": {
@@ -84,6 +85,7 @@
 			"intro": "Karya-karya berikut terdapat dalam koleksi orang atau institusi ini. Anda dapat memilih untuk menampilkannya sebagai daftar yang akan menampilkan semua tokoh termasuk yang tidak disertai gambar. Hal tersebut juga dapat diurutkan berdasarkan tanggal atau nama. Perlu diingat bahwa hanya mereka yang informasinya tersedia yang akan ditampilkan."
 		},
 		"Cups": {
+			"headerTitle": "Permainan, seri, dan turnamen",
 			"intro": "Klub ini telah bermain di pertandingan, seri, dan turnamen berikut"
 		},
 		"CV": {
@@ -223,9 +225,17 @@
 			"facetMenuOptionCountry": "Negara",
 			"facetMenuOptionCity": "Gender"
 		},
+		"Seasons": {
+			"headerTitle": "Musim",
+			"intro": "Lihat musim kegiatan ini."
+		},
 		"Subclasses": {
 			"headerTitle": "Subkelas dari topik ini",
 			"intro": "Lihat subkelas-subkelas dari topik ini. Tampilkan sebagai daftar untuk melihat butir-butir yang tidak memiliki gambar."
+		},
+		"Teams": {
+			"headerTitle": "Tim yang berpartisipasi",
+			"intro": "Tim yang berpartisipasi dalam permainan, seri atau turnamen ini."
 		},
 		"Things": {
 			"headerTitle": "Topik daftar fokus",
@@ -435,6 +445,7 @@
 			"addPhotographData": "Tambahkan informasi tentang foto",
 			"copyrightNotePD": "Gambar ini berlisensi $1, namun lisensi berdasarkan metadata gambar adalah Domain Publik",
 			"copyrightNoteSame": "Gambar yang sama berlisensi lebih terbuka dengan $1, oleh sebab itu berlaku terhadap gambar ini juga.",
+			"creditline": "Batas kredit",
 			"attribution": "Atribusi",
 			"digitalCopy": "Salinan digital",
 			"publishingPlatform": "Platform penerbitan",
