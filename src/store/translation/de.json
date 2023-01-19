@@ -6,6 +6,7 @@
 			"Elliot",
 			"FF-11",
 			"FF11",
+			"Justman10000",
 			"ManuelFranz",
 			"Metalhead64",
 			"Susannaanas",
@@ -73,12 +74,25 @@
 			"intro": "Organisationen, mit denen diese Person oder Organisation eine Verbindung hat."
 		},
 		"Awards": {
-			"headerTitle": "Auszeichnungen"
+			"headerTitle": "Auszeichnungen",
+			"intro": "Nominierungen und Auszeichnungen zum Thema dieser Seite."
 		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Historische Basiskarte(n) auswählen",
 			"chooseMapHelpNote": "Tipp: Strg+Klick erlaubt die Auswahl vieler Karten",
 			"yearAbbreviation": "J."
+		},
+		"Collection": {
+			"headerTitle": "Werke in der Sammlung",
+			"intro": "Diese Werke befinden sich in der Sammlung der betreffenden Person oder Institution. Du kannst sie als Liste anzeigen lassen, die auch Werke ohne Bilder anzeigt. Sie können nach Datum oder Namen sortiert werden. Beachte, dass nur diejenigen angezeigt werden, die diese Informationen haben."
+		},
+		"Cups": {
+			"headerTitle": "Spiele, Serien und Turniere",
+			"intro": "Dieser Verein hat an den folgenden Spielen, Serien und Turnieren teilgenommen"
+		},
+		"CV": {
+			"headerTitle": "Lebenslauf",
+			"intro": "Dies sind berufliche Veranstaltungen der Person des Themas."
 		},
 		"Depicted": {
 			"headerTitle": "Abgebildet in",
@@ -167,19 +181,34 @@
 			"intro": "Diese Teile gehören zu diesem Thema. Du kannst sie nach Zeit und Namen sortieren. Um alle Themen zu sehen, inklusive solche ohne Bild, musst du die Themen als Liste anzeigen."
 		},
 		"Partof": {
-			"headerTitle": "Teil von"
+			"headerTitle": "Teil von",
+			"intro": "Dieses Thema ist ein Teil dieser anderen Themen. Du kannst sie nach Zeit und Name sortieren. Um alle Themen zu sehen, auch die ohne Bild, musst du die Themen als Liste anzeigen."
 		},
 		"Similar": {
-			"headerTitle": "Ähnliche Themen"
+			"headerTitle": "Ähnliche Themen",
+			"intro": "Finde Themen, die einige Schlüsselmerkmale mit diesem Thema gemeinsam haben."
 		},
 		"Effects": {
-			"headerTitle": "Effekte"
+			"headerTitle": "Effekte",
+			"intro": "Das sind die Auswirkungen des Themas."
+		},
+		"Familytree": {
+			"headerTitle": "Familienstammbaum"
+		},
+		"Instances": {
+			"headerTitle": "Instanzen zu diesem Thema",
+			"intro": "Siehe Instanzen zu diesem Thema. Als Liste anzeigen, um auch Artikel ohne Bild zu sehen."
 		},
 		"Links": {
 			"headerTitle": "Verknüpfungen dieses Artikels"
 		},
 		"Location": {
-			"headerTitle": "Standort"
+			"headerTitle": "Standort",
+			"intro": "Dieses Thema ist in oder im Zusammenhang mit diesen Themen angesiedelt."
+		},
+		"Names": {
+			"headerTitle": "Namen",
+			"intro": "Siehe die Namen dieses Themas und alle verfügbaren Alternativen."
 		},
 		"People": {
 			"headerTitle": "Personen bezüglich zum Thema",
@@ -198,8 +227,25 @@
 			"facetMenuOptionCountry": "Staat",
 			"facetMenuOptionCity": "Geschlecht"
 		},
+		"Seasons": {
+			"headerTitle": "Jahreszeiten",
+			"intro": "Siehe die Jahreszeiten dieser Aktivität."
+		},
 		"Subclasses": {
-			"headerTitle": "Unterklasse dieses Themas"
+			"headerTitle": "Unterklasse dieses Themas",
+			"intro": "Siehe Unterklassen zu diesem Thema. Als Liste anzeigen, um auch Artikel ohne Bild zu sehen."
+		},
+		"Teams": {
+			"headerTitle": "Teilnehmende Teams",
+			"intro": "Teams, die an diesem Spiel, dieser Serie oder diesem Turnier teilnehmen."
+		},
+		"Things": {
+			"headerTitle": "Themen der Fokusliste",
+			"intro": "Diese Themen stehen auf der Fokusliste dieses Wikiprojekts."
+		},
+		"Twins": {
+			"headerTitle": "Partnerstädte",
+			"intro": "Partnerstädte, Schwesterstädte, verschwisterte Gemeinden und andere Orte, die eine Partnerschaft oder ein Kooperationsabkommen haben, das entweder rechtlich oder informell von ihren Regierungen anerkannt wird. Du kannst sie nach Zeit und Name sortieren. Um alle Themen zu sehen, auch die ohne Bild, musst du die Themen als Liste anzeigen."
 		},
 		"TopicImages": {
 			"headerTitle": "Bilder von den Archiven",
@@ -388,6 +434,7 @@
 			"removeEvent": "Ereignis entfernen",
 			"institution": "Einrichtung",
 			"collection": "Sammlung",
+			"addCollection": "Sammlung hinzufügen",
 			"inventoryNumber": "Inventarnummer",
 			"inscriptions": "Inschriften",
 			"measurements": "Abmessungen",
@@ -400,9 +447,12 @@
 			"addPhotographData": "Informationen über die Fotografie hinzufügen",
 			"copyrightNotePD": "Das Bild ist mit $1 lizenziert, basiert jedoch auf den Metadaten des gemeinfreien Bildes.",
 			"copyrightNoteSame": "Das gleiche Bild ist offener mit $1 lizenziert. Deswegen wird diese Lizenz auch auf dieses Bild angewendet.",
+			"creditline": "Anerkennung",
+			"attribution": "Namensnennung",
 			"digitalCopy": "Digitale Kopie",
 			"publishingPlatform": "Veröffentlichungsplattform",
 			"platformId": "Kennung",
+			"provider": "Inhaltsanbieter",
 			"imageInfoPage": "Bildinformationsseite",
 			"imageDimensions": "Bildabmessungen",
 			"fileSize": "Dateigröße",
@@ -452,8 +502,12 @@
 			"title": "Themen sortieren",
 			"tooltip": "Themen sortieren",
 			"optionTime": "Nach Zeit",
+			"optionStart": "Nach Startzeit",
+			"optionEnd": "Bis zur Endzeit",
 			"optionTitle": "Nach Titel",
+			"optionCause": "Nach Ursache",
 			"optionPartof": "Nach Element welches Teil ist von",
+			"optionSuperclass": "Nach Klasse ist dies eine Unterklasse von",
 			"optionAlpha": "Alphabetisch",
 			"optionTitleAlpha": "Nach Titel alphabetisch",
 			"optionCreatorAlpha": "Nach Urheber alphabetisch",
@@ -501,6 +555,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki liebt Denkmäler $1",
+		"WLMText": "Fotografiere dieses Kulturerbe und nimm am $2-Fotowettbewerb teil!",
 		"WLMButton": "Bild hochladen"
 	}
 }
