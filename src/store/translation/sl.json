@@ -1,0 +1,196 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"LandingPage": {
+		"search": "Poišči",
+		"searchInputPlaceHolder": "Poiščite temo ali ustvarite novo temo",
+		"searchInputSearchOnly": "Poiščite temo",
+		"showMore": "Prikaži več predmetov",
+		"createNew": "Ustvari nov predmet",
+		"intro": "Wikidokumentarci so viki za majhno zgodovino – kraj, kjer zbiramo sledove zgodovine in jih spreminjamo v zgodbe. Začnite z iskanjem teme, ki vas zanima!",
+		"titleDescription": "Kaj so Wikidokumentarci?",
+		"description": "Wikidokumentarci so prostor za ustvarjanje občanskih zgodovinarjev. Združuje informacije o temah – ljudeh, krajih, stavbah, dogodkih in drugem. Med temami lahko krmarite tako, da sledite kateri koli zabeleženi povezavi, kot so družinski odnosi, kraji, ustvarjalci in stvaritve ali pripadnost. Tema je ilustrirana s slikami in zemljevidi iz povezanih muzejev, arhivov in knjižnic. V Wikidokumentarcih bo mogoče popravljati obstoječe informacije in dodajati nove teme, vnašati svoje slike in spomine ter vse gradivo uporabljati za lastne namene.",
+		"titleStatus": "Stanje",
+		"status": "Stran je v demo fazi. Veliko pomembnih funkcij še ni na voljo in spletno mesto morda ne bo delovalo po pričakovanjih.",
+		"moreBelow": "Preberite več spodaj",
+		"more": "Preberite več",
+		"moreLink": "Preberite več v",
+		"titleTopics": "Teme",
+		"titleTools": "Orodja",
+		"titleTranslate": "Prevedi"
+	},
+	"MainPage": {
+		"topicPageName": "Stran teme",
+		"mapSearchPageName": "Preišči zemljevide"
+	},
+	"topic_page": {
+		"Cups": {
+			"intro": "Ta klub je igral v naslednjih igrah, serijah in turnirjih"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Razvrsti dela",
+				"tooltip": "Razvrsti dela",
+				"optionTime": "Po času",
+				"optionClear": "Odstrani razvrščanje"
+			},
+			"facetMenu": {
+				"optionType": "Vrsta"
+			},
+			"displayMenu": {
+				"optionGallery": "Galerija",
+				"optionList": "Seznam"
+			},
+			"showAll": "Vsi"
+		},
+		"Events": {
+			"optionsMenu": {
+				"menuTitle": "Možnosti"
+			}
+		},
+		"Header": {
+			"titleEditText": "Uredi naslov",
+			"titleApproveText": "Odobri ta naslov"
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "Po času"
+			},
+			"facetMenu": {
+				"optionType": "Vrsta",
+				"optionCity": "Lokacija"
+			},
+			"displayMenu": {
+				"optionGallery": "Galerija"
+			},
+			"showAll": "Vse"
+		},
+		"Map": {
+			"headerTitle": "Lega na zemljevidu"
+		},
+		"Instances": {
+			"headerTitle": "Primerki te teme"
+		},
+		"Location": {
+			"headerTitle": "Lokacija"
+		},
+		"Names": {
+			"headerTitle": "Imena"
+		},
+		"People": {
+			"headerTitle": "Ljudje, povezani s temo",
+			"sortMenuTitle": "Razvrsti"
+		},
+		"Subclasses": {
+			"headerTitle": "Podrazredi te teme",
+			"intro": "Oglejte si podrazrede te teme. Če si želite ogledati tudi elemente brez slike, si jih oglejte kot seznam,"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "čas",
+				"map": "zemljevid",
+				"topics": "teme",
+				"imageSize": "velikost slike",
+				"source": "vir"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Dejanja",
+				"menuTooltip": "Dejanja",
+				"showImageText": "Prikaži sliko"
+			},
+			"imagesRemoveMenu": {
+				"remDepicted": {
+					"menuTitle": "Namesto tega prikazuje to temo",
+					"shortMenuTitle": "Prikazuje drugo temo",
+					"search": "Poišči temo"
+				},
+				"remCreator": {
+					"search": "Poišči ustvarjalca"
+				},
+				"remInappropriate": {
+					"copyvio": "Krši avtorske pravice"
+				}
+			}
+		},
+		"TopicMap": {
+			"headerTitle": "Tema na zemljevidu"
+		},
+		"Works": {
+			"sortMenuTitle": "Razvrsti",
+			"sortMenuOptionTime": "Po času",
+			"facetMenuOptionType": "Vrsta",
+			"facetMenuOptionCity": "Lokacija",
+			"displayMenuOptionGallery": "Galerija",
+			"displayMenuOptionList": "Seznam",
+			"displayMenuOptionMap": "Zemljevid",
+			"showAll": "Vsi"
+		},
+		"Wikidata": {
+			"headerTitle": "Dejstva",
+			"noTopicFoundText": "Tema ni najdena"
+		},
+		"Wikipedia": {
+			"missingArticleCreate": "Ta članek lahko v svojem jeziku ustvarite tako, da kliknete ikono plus."
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Opis",
+			"addDescription": "Dodaj opis",
+			"creatorUnknown": "Neznano",
+			"depicted": "Slika prikazuje",
+			"depicts": "Slika prikazuje",
+			"location": "Lokacija",
+			"locationMap": "Lega na zemljevidu",
+			"copyright": "Avtorske pravice",
+			"license": "Avtorskopravna licenca",
+			"image": "Slika",
+			"imageDimensions": "Mere slike"
+		},
+		"imageActions": {
+			"rotateImage": "Zavrti sliko"
+		},
+		"closeViewer": "Zapri pregledovalnik"
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Preišči zgodovinske zemljevide"
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Za zgodovinski osnovni zemljevid glejte zahvale in avtorske pravice",
+			"attribution2PrefixText": "Popravljeni zemljevid iz"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "Po času",
+			"optionStart": "Po času začetka",
+			"optionEnd": "Po času konca",
+			"optionTitle": "Po naslovu",
+			"optionPartof": "Po predmetu je to del",
+			"optionTitleAlpha": "Abecedno po naslovu"
+		},
+		"facetMenu": {
+			"optionType": "Vrsta",
+			"optionCity": "Lokacija"
+		},
+		"displayMenu": {
+			"optionGallery": "Galerija"
+		}
+	},
+	"general": {
+		"cancel": "Prekliči",
+		"menus": {
+			"actionMenuTitle": "Dejanja",
+			"actionMenuTooltip": "Dejanja"
+		}
+	},
+	"Banner": {
+		"WLMButton": "Naloži sliko"
+	}
+}
