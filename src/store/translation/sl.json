@@ -56,6 +56,7 @@
 			"titleApproveText": "Odobri ta naslov"
 		},
 		"Locations": {
+			"headerTitle": "Na tej lokaciji",
 			"sortMenu": {
 				"optionTime": "Po času"
 			},
@@ -145,6 +146,8 @@
 			"depicts": "Slika prikazuje",
 			"location": "Lokacija",
 			"locationMap": "Lega na zemljevidu",
+			"addLocation": "Dodaj lokacijo",
+			"removeLocation": "Odstrani lokacijo",
 			"copyright": "Avtorske pravice",
 			"license": "Avtorskopravna licenca",
 			"image": "Slika",
