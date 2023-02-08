@@ -2,12 +2,21 @@
     <div v-if="wikidocumentaries.images.length" class="images-component">
         <div class="toolbar">
             <h1 class="header-title">{{ $t('topic_page.TopicImages.headerTitle') }}</h1>
-<!--             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
-            </ToolbarMenu> -->
+            </ToolbarMenu>
         </div>
-        <div class="intro">{{ $t('topic_page.TopicImages.intro') }}</div>
-        <ImageGrid class="image-grid" :items="wikidocumentaries.images" @showItemGeolocation="showImageOnMap">
+        <div class="filters">
+            <button @click="onDoMenuItemAction({id: 'kauppa'})">kauppa</button>
+            <button @click="onDoMenuItemAction({id: 'sisustus'})">sisustus</button>
+            <button @click="onDoMenuItemAction({id: 'viihde'})">viihde</button>
+            <button @click="onDoMenuItemAction({id: 'ruoka'})">ruoka</button>
+            <button @click="onDoMenuItemAction({id: 'pukeutuminen'})">pukeutuminen</button>
+            <button @click="onDoMenuItemAction({id: 'käsityöt'})">käsityöt</button>
+            <button @click="onDoMenuItemAction({id: null})">Näytä kaikki</button>
+        </div>
+<!--        <div class="intro">{{ $t('topic_page.TopicImages.intro') }}</div> -->
+        <ImageGrid class="image-grid" :items="wikidocumentaries.images.filter((image => !filter || (image.subjects && image.subjects.includes(filter))))" @showItemGeolocation="showImageOnMap">
         </ImageGrid>
     </div>
 </template>
@@ -36,14 +45,49 @@ export default {
         return {
             toolbarActionMenuItems: [
                 {
+                    id: null,
+                    text: "Näytä kaikki",
+                },
+                {
+                    id: "kauppa",
+                    text: "kauppa",
+                },
+                {
+                    id: "sisustus",
+                    text: "sisustus",
+                },
+                {
+                    id: "viihde",
+                    text: "viihde",
+                },
+                {
+                    id: "ruoka",
+                    text: "ruoka",
+                },
+                {
+                    id: "pukeutuminen",
+                    text: "pukeutuminen",
+                },
+                {
+                    id: "käsityöt",
+                    text: "käsityöt",
+                },
+/* XXX
+                {
+                    id: "",
+                    text: "",
+                },
+*/
+/*                {
                     id: MENU_ACTIONS.SHOW_IMAGES_ON_MAP,
                     text: 'topic_page.TopicImages.actionsMenu.showImagesOnMapMenuText'
                 },
-                // {
-                //     id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
-                //     text: 'topic_page.TopicImages.showImagesOnTimelineMenuText'
-                // },
+                {
+                    id: MENU_ACTIONS.SHOW_IMAGES_ON_TIMELINE,
+                    text: 'topic_page.TopicImages.showImagesOnTimelineMenuText'
+                },*/
             ],
+            filter: null,
         }
     },
     methods: {
@@ -53,6 +97,7 @@ export default {
             this.$emit('showImagesOnMap');
         },
         onDoMenuItemAction(menuItem) {
+            this.filter = menuItem.id;
             switch (menuItem.id) {
             case MENU_ACTIONS.SHOW_IMAGES_ON_MAP:
                 this.$store.commit('setImagesShownOnMap', this.wikidocumentaries.images);
@@ -79,5 +124,13 @@ export default {
 }
 .thumb-image-glyph {
     color: white;
+}
+.filters button {
+    background: white;
+    color: black;
+    border: solid thin black;
+}
+.filters {
+  padding: 2em;
 }
 </style>
