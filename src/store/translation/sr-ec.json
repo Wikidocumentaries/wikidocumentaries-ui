@@ -40,6 +40,12 @@
 		"mapSearchPageName": "Претрага мапа"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Афилијације"
+		},
+		"Awards": {
+			"headerTitle": "Награде"
+		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "г."
 		},
@@ -112,7 +118,7 @@
 			"headerTitle": "Делови"
 		},
 		"Partof": {
-			"headerTitle": "Локација"
+			"headerTitle": "Део"
 		},
 		"Similar": {
 			"headerTitle": "Сличне теме"
@@ -128,6 +134,9 @@
 		},
 		"Location": {
 			"headerTitle": "Локације"
+		},
+		"Names": {
+			"headerTitle": "Имена"
 		},
 		"People": {
 			"headerTitle": "Људи везани за тему",
@@ -257,6 +266,8 @@
 			"removeEvent": "Уклони догађај",
 			"institution": "Установа",
 			"collection": "Збирка",
+			"addCollection": "Додај колекцију",
+			"inventoryNumber": "Број инвентара",
 			"inscriptions": "Натписи",
 			"measurements": "Мерења",
 			"copyright": "Ауторско право",
