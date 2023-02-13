@@ -89,7 +89,7 @@
 		},
 		"Cups": {
 			"headerTitle": "Jeux, séries et tournois",
-			"intro": "Ce club a participé aux jeux, séries et tournois suivants"
+			"intro": "Ce club a participé aux jeux, championnats et tournois suivants :"
 		},
 		"CV": {
 			"headerTitle": "CV",
@@ -238,7 +238,7 @@
 		},
 		"Teams": {
 			"headerTitle": "Équipes participantes",
-			"intro": "Équipes qui participent à ce jeu, ces séries ou ce tournois."
+			"intro": "Équipes qui participent à ce jeu, ce championnat ou ce tournois."
 		},
 		"Things": {
 			"headerTitle": "Sujets de la liste de focalisation",

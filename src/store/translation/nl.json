@@ -4,6 +4,7 @@
 			"Aranka",
 			"Elroy",
 			"Mainframe98",
+			"McDutchie",
 			"Nickthijssen1994",
 			"Optilete",
 			"PonkoSasuke",
@@ -76,6 +77,9 @@
 			"chooseMapHelpNote": "Tip: met ctrl+klikken kan je meerdere kaarten selecteren",
 			"yearAbbreviation": "y."
 		},
+		"Cups": {
+			"intro": "Deze club heeft in de volgende wedstrijden, series en toernooien gespeeld"
+		},
 		"Depicted": {
 			"headerTitle": "Afgebeeld in",
 			"intro": "Dit onderwerp wordt afgebeeld in deze werken. De werken volgens verschillende criteria ordenen, weergeven als een lijst zonder afbeeldingen.",
@@ -147,6 +151,9 @@
 		},
 		"Location": {
 			"headerTitle": "Locatie"
+		},
+		"Teams": {
+			"intro": "Teams die aan deze wedstrijd, serie of toernooi deelnemen."
 		},
 		"TopicImages": {
 			"headerTitle": "Beelden uit archieven",

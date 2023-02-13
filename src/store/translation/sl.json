@@ -89,11 +89,15 @@
 			"headerTitle": "Podrazredi te teme",
 			"intro": "Oglejte si podrazrede te teme. Če si želite ogledati tudi elemente brez slike, si jih oglejte kot seznam,"
 		},
+		"Teams": {
+			"intro": "Ekipe, ki sodelujejo v tej igri, seriji ali turnirju."
+		},
 		"TopicImages": {
 			"facetMenu": {
 				"time": "čas",
 				"map": "zemljevid",
 				"topics": "teme",
+				"form": "oblika",
 				"imageSize": "velikost slike",
 				"source": "vir"
 			},
