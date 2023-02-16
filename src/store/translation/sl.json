@@ -155,7 +155,8 @@
 			"copyright": "Avtorske pravice",
 			"license": "Avtorskopravna licenca",
 			"image": "Slika",
-			"imageDimensions": "Mere slike"
+			"imageDimensions": "Mere slike",
+			"moveTo": "Prestavitev v drugo polje"
 		},
 		"imageActions": {
 			"rotateImage": "Zavrti sliko"
