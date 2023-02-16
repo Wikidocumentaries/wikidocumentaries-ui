@@ -2,7 +2,7 @@
     <div class="topic-search-box">
         <form class="search-items">
             <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" @keydown.down="onArrowDown" @keydown.up="onArrowUp" @keydown.enter="pickResult" class="input-find" v-model="topicInputValue" type="search" :placeholder="$t('LandingPage.searchInputSearchOnly')">
-            <button title="Search" @click.prevent="focusInput" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass" aria-hidden></i></button>
+            <button title="Search" @click.prevent="focusInput($event)" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass" aria-hidden></i></button>
 
             <div class="search-results">
                 <div :class="[shouldShowMenu ? 'dropdown-content' : 'dropdown-content-hide']">
@@ -73,7 +73,7 @@ export default {
                 this.showMenu(false);
             }
         },
-        focusInput: function(e) {
+        focusInput: function(event) {
             document.querySelector("#findTopicInput").focus();
         },
         onArrowDown: function() {
