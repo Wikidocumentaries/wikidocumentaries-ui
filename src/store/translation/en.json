@@ -73,7 +73,7 @@
         },
         "Cups": {
             "headerTitle": "Games, series and tournaments",
-            "intro": "This club has played in the following games, sseries and tournaments"
+            "intro": "This club has played in the following games, series and tournaments"
         },
         "CV": {
             "headerTitle": "CV",
@@ -224,7 +224,7 @@
         },
         "Teams": {
             "headerTitle": "Participating teams",
-            "intro": "Teams participating in this game, series ot tournament."
+            "intro": "Teams participating in this game, series or tournament."
         },
         "Things": {
             "headerTitle": "Focus list topics",

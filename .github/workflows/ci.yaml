@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/wikidocumentaries-ui
+          images: ${{ secrets.DOCKERHUB_USERNAME || 'local' }}/wikidocumentaries-ui
           flavor: |
             latest=${{ github.ref == 'refs/heads/master' }}
       -
