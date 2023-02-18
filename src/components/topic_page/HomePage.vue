@@ -134,7 +134,7 @@ export default {
     Works
   },
   computed: {},
-  mounted() {
+  mounted: {
   },
   methods: {
     onShowImagesOnMap() {

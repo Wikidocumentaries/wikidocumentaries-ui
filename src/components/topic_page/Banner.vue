@@ -233,7 +233,7 @@ export default {
 ]
     }
     },
-    mounted() {
+    mounted: {
     },
     computed: {
         commonsCat() {
