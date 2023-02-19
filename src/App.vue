@@ -675,8 +675,9 @@ i.wikiglyph {
 
 .gallery-item > img {
   height: 100%;
-  max-width: fit-content;
   background: white;
+  max-width: 400px;
+  object-fit: cover;
 }
 
 .gallery-item:hover .gallery-image {
