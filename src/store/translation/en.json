@@ -132,6 +132,9 @@
             "subtitleEditText": "Edit the description",
             "subtitleApproveText": "Approve this description"
         },
+        "Heritage": {
+            "headerTitle": "Heritage elements"
+        },
         "HomePage": {
         },
         "Locations": {
