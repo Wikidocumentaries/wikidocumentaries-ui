@@ -140,7 +140,7 @@ WHERE {
   BIND(STR(COALESCE(?startdate, ?enddate)) AS ?_time)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
-GROUP BY ?item ?itemLabel ?itemDescription ?image
+GROUP BY ?item ?itemLabel ?itemDescription
 LIMIT 1000
         `.replace(/Q407542/g, this.$store.state.wikidocumentaries.wikidataId)
         .replace(/fi/g, this.$i18n.locale);;
