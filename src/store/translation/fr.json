@@ -148,6 +148,9 @@
 			"subtitleEditText": "Modifier la description",
 			"subtitleApproveText": "Approuver cette description"
 		},
+		"Heritage": {
+			"headerTitle": "Éléments patrimoniaux"
+		},
 		"Locations": {
 			"headerTitle": "À cet endroit",
 			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
