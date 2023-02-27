@@ -25,13 +25,13 @@
     </div>
     <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
       <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
-        <div class="excerpt" v-html="wikipedia.excerptHTML"></div>
-        <div class="remain" v-html="wikipedia.remainingHTML"></div>
+        <div class="excerpt" ref="excerpt" v-html="wikipedia.excerptHTML"></div>
+        <div class="remain" ref="remain" v-html="wikipedia.remainingHTML"></div>
       </div>
       <div v-else class="text wiki-html">
         <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
       </div>
-<!--       <Links 
+    <!--<Links 
     class="wplinks" 
     :currentLanguage="this.language"
     ></Links> -->
@@ -48,6 +48,7 @@
         <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
       </div>
     </div>
+    <ImageViewer ref="imageviewer" :showMetaData=false ></ImageViewer>
   </div>
 </template>
 
@@ -56,6 +57,7 @@ import axios from "axios";
 import HeaderLink from "@/components/HeaderLink";
 import ArticleLanguageMenu from "@/components/menu/ArticleLanguageMenu";
 import Links from "@/components/topic_page/Links";
+import ImageViewer from "@/components/image_viewer/ImageViewer";
 export default {
   name: "WikipediaArticle",
   props: {},
@@ -120,7 +122,8 @@ export default {
   components: {
     HeaderLink,
     ArticleLanguageMenu,
-    Links
+    Links,
+    ImageViewer
   },
   methods: {
     onLanguageChange(language) {
@@ -149,7 +152,69 @@ export default {
             response.data.wikipedia.content_urls.desktop.page;
         }
       });
+    },
+    isDescendant(child) {
+      let node = child.parentNode;
+      while (node) {
+        if (node === this.$refs.excerpt || node === this.$refs.remain) {
+          return true;
+        }
+        node = node.parentNode;
+      }
+      return false;
     }
+  },
+  mounted() {
+    let imgs = document.querySelectorAll("img");
+    let refs = this.$refs;
+    imgs.forEach(img => {
+      if (
+        img.parentElement &&
+        img.parentElement.nodeName == "A" &&
+        this.isDescendant(img.parentElement)
+      ) {
+        // suppress orginal click action
+        img.parentElement.addEventListener("click", function(e) {
+          e.preventDefault();
+        });
+        img.addEventListener("click", function(e) {
+          let items = [
+            {
+              actors: [],
+              collection: "",
+              creators: [],
+              datecreated: [],
+              description: [],
+              details: [],
+              downloadURL: "",
+              formats: [],
+              geoLocations: [],
+              id: "",
+              imageURL: img.currentSrc
+                .slice(0, img.currentSrc.lastIndexOf("/"))
+                .replace("/thumb", ""),
+              infoURL: img.parentElement.href,
+              inscriptions: [],
+              institutions: [],
+              inventoryNumber: "",
+              license: "",
+              license_link: "",
+              materials: [],
+              measurements: [],
+              places: [],
+              publisher: null,
+              rightsstatement: "",
+              source: "",
+              subjects: [],
+              thumbURL: img.currentSrc,
+              title: [img.parentElement.parentElement.outerText],
+              year: 0
+            }
+          ];
+          refs.imageviewer.show(items, 0);
+        });
+      }
+    });
   }
 };
 </script>
@@ -209,7 +274,6 @@ export default {
 } */
 
 .expanded .remain {
-  display:initial;
+  display: initial;
 }
-
 </style>
