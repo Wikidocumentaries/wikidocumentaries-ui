@@ -55,6 +55,9 @@
 			"titleEditText": "Uredi naslov",
 			"titleApproveText": "Odobri ta naslov"
 		},
+		"Heritage": {
+			"headerTitle": "Podedovani elementi"
+		},
 		"Locations": {
 			"headerTitle": "Na tej lokaciji",
 			"sortMenu": {

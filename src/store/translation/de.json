@@ -11,6 +11,7 @@
 			"Metalhead64",
 			"Susannaanas",
 			"Symposiarch",
+			"Timonade",
 			"Umlaut"
 		]
 	},
@@ -146,6 +147,9 @@
 			"titleApproveText": "Diesen Titel bestätigen",
 			"subtitleEditText": "Die Beschreibung bearbeiten",
 			"subtitleApproveText": "Diese Beschreibung bestätigen"
+		},
+		"Heritage": {
+			"headerTitle": "Erbe-Elemente"
 		},
 		"Locations": {
 			"headerTitle": "In diesem Standort",

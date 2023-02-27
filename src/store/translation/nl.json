@@ -119,6 +119,9 @@
 			"subtitleEditText": "De beschrijving bewerken",
 			"subtitleApproveText": "Deze beschrijving goedkeuren"
 		},
+		"Heritage": {
+			"headerTitle": "Erfgoed-elementen"
+		},
 		"Locations": {
 			"sortMenu": {
 				"title": "Locaties ordenen",

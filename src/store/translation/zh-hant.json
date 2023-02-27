@@ -139,6 +139,9 @@
 			"subtitleEditText": "編輯描述",
 			"subtitleApproveText": "批准此描述"
 		},
+		"Heritage": {
+			"headerTitle": "遺產元素"
+		},
 		"Locations": {
 			"headerTitle": "在此位置",
 			"intro": "在這裡您可以查看到位在此頁面主題裡任何內容，顯示成清單來查看所有已被儲存的位置。",
