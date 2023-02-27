@@ -144,6 +144,9 @@
 			"subtitleEditText": "Açıklamayı düzenle",
 			"subtitleApproveText": "Bu açıklamayı onayla"
 		},
+		"Heritage": {
+			"headerTitle": "Miras öğeleri"
+		},
 		"Locations": {
 			"headerTitle": "Bu konumda",
 			"intro": "Burada bu sayfanın başlığında yer alan herhangi bir şeyi görüyorsunuz. Depolanan tüm konumları görmek için liste halinde göster.",

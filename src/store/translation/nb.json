@@ -1,13 +1,17 @@
 {
 	"@metadata": {
 		"authors": [
+			"Desoda",
 			"Kingu",
 			"Susannaanas"
 		]
 	},
 	"LandingPage": {
 		"search": "Søk",
-		"searchInputPlaceHolder": "Finn et emne eller start et nytt"
+		"searchInputPlaceHolder": "Finn et emne eller start et nytt",
+		"searchInputSearchOnly": "Finn et emne",
+		"showMore": "Vis flere elementer",
+		"createNew": "Opprett nytt element"
 	},
 	"MainPage": {
 		"topicPageName": "Emneside",
