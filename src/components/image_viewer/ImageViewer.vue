@@ -64,7 +64,7 @@
           </div>
           <!--div class="tool-area"></div-->
         </div>
-        <div v-if="showMetaData" class="metadata-area">
+        <div class="metadata-area">
           <div class="metadata-original">
             <div class="toolbar">
               <h1 class="header-title">{{ $t('imageViewer.imageMetadata.image') }}</h1>
@@ -511,10 +511,6 @@ export default {
   },
   props: {
     shouldShowDialog: Boolean,
-    showMetaData: {
-      type: Boolean,
-      default: true
-    }
   },
   mounted() {
     // this.$el.addEventListener("mousemove", () => {

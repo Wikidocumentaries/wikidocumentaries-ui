@@ -48,7 +48,7 @@
         <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
       </div>
     </div>
-    <ImageViewer ref="imageviewer" :showMetaData=false ></ImageViewer>
+    <ImageViewer ref="imageviewer"></ImageViewer>
   </div>
 </template>
 
@@ -116,7 +116,8 @@ export default {
     return {
       isExpanded: false,
       language: this.$i18n.locale,
-      wikipedia: this.$store.state.wikidocumentaries.wikipedia
+      wikipedia: this.$store.state.wikidocumentaries.wikipedia,
+      items: []
     };
   },
   components: {
@@ -150,10 +151,12 @@ export default {
           this.wikipedia.remainingHTML = response.data.wikipediaRemainingHTML;
           this.wikipedia.wikipediaURL =
             response.data.wikipedia.content_urls.desktop.page;
+          this.items = [];
         }
       });
     },
-    isDescendant(child) {
+    // check if an element is n decendant of the article
+    isArticleDescendant(child) {
       let node = child.parentNode;
       while (node) {
         if (node === this.$refs.excerpt || node === this.$refs.remain) {
@@ -162,59 +165,142 @@ export default {
         node = node.parentNode;
       }
       return false;
+    },
+    // get the image title from wiki imageURL
+    getImageTitleFromURL(imgURL) {
+      return imgURL.slice(imgURL.lastIndexOf("/") + 1);
+    },
+    async getImageDetailsInfo(imgs) {
+      const parent = this;
+      // check if items data is stored
+      if (this.items.length !== 0) return this.items;
+      this.items = new Array(imgs.length);
+      await Promise.all(
+        imgs.map(async function(img, index) {
+          let requestConfig = {
+            baseURL: parent.$store.state.BASE_URL,
+            url: "/wiki/imageinfo",
+            method: "get",
+            params: {
+              titles: parent.getImageTitleFromURL(img.parentNode.href),
+              language: parent.language
+            }
+          };
+          await axios
+            .request(requestConfig)
+            .then(function(response) {
+              let wikiImageInfo = response.data.wikiImageInfo;
+              let extMetadata = wikiImageInfo.imageinfo[0].extmetadata;
+              // fill the image item fields with data from the api
+              parent.items[index] = {
+                actors: [],
+                collection: "",
+                creators: extMetadata.Artist ? [extMetadata.Artist.value] : [],
+                datecreated: extMetadata.DateTimeOriginal
+                  ? [extMetadata.DateTimeOriginal.value]
+                  : [],
+                description: extMetadata.ImageDescription
+                  ? [extMetadata.ImageDescription.value]
+                  : [],
+                details: [],
+                downloadURL: wikiImageInfo.imageinfo[0].url,
+                formats: [],
+                geoLocations: [],
+                id: "",
+                imageURL: wikiImageInfo.imageinfo[0].url,
+                infoURL: img.parentElement.href,
+                inscriptions: [],
+                institutions: [],
+                inventoryNumber: "",
+                license: extMetadata.License ? extMetadata.License.value : "",
+                license_link: extMetadata.LicenseUrl
+                  ? extMetadata.LicenseUrl.value
+                  : "",
+                materials: [],
+                measurements: [],
+                places: [],
+                publisher: null,
+                rightsstatement: "",
+                source: "",
+                subjects: [],
+                thumbURL: img.currentSrc,
+                title: [
+                  extMetadata.ObjectName.value
+                    ? extMetadata.ObjectName.value
+                    : wikiImageInfo.title
+                ],
+                year: 0
+              };
+            })
+            .catch(function(error) {
+              // infer image info from the img element
+              parent.items[index] = {
+                actors: [],
+                collection: "",
+                creators: [],
+                datecreated: [],
+                description: [],
+                details: [],
+                downloadURL: "",
+                formats: [],
+                geoLocations: [],
+                id: "",
+                imageURL: img.currentSrc
+                  .slice(0, img.currentSrc.lastIndexOf("/"))
+                  .replace("/thumb", ""),
+                infoURL: img.parentElement.href,
+                inscriptions: [],
+                institutions: [],
+                inventoryNumber: "",
+                license: "",
+                license_link: "",
+                materials: [],
+                measurements: [],
+                places: [],
+                publisher: null,
+                rightsstatement: "",
+                source: "",
+                subjects: [],
+                thumbURL: img.currentSrc,
+                title: [img.parentElement.parentElement.outerText],
+                year: 0
+              };
+              console.log(error);
+            });
+        })
+      );
+      return this.items;
+    },
+    addLinksToImages() {
+      // query all images in the wikipedia article
+      const imgs = Array.from(document.querySelectorAll("img")).filter(
+        img =>
+          img.parentElement &&
+          img.parentElement.nodeName == "A" &&
+          this.isArticleDescendant(img.parentElement)
+      );
+      const parent = this;
+      for (let i = 0; i < imgs.length; i++) {
+        let img = imgs[i];
+        // suppress orginal image click action
+        img.parentElement.addEventListener("click", e => {
+          e.preventDefault();
+        });
+        // when the image is clicked, the image viewer is opened
+        img.addEventListener("click", async e => {
+          const items = await parent.getImageDetailsInfo(imgs);
+          parent.$refs.imageviewer.show(items, i);
+        });
+      }
     }
   },
   mounted() {
-    let imgs = document.querySelectorAll("img");
-    let refs = this.$refs;
-    imgs.forEach(img => {
-      if (
-        img.parentElement &&
-        img.parentElement.nodeName == "A" &&
-        this.isDescendant(img.parentElement)
-      ) {
-        // suppress orginal click action
-        img.parentElement.addEventListener("click", function(e) {
-          e.preventDefault();
-        });
-        img.addEventListener("click", function(e) {
-          let items = [
-            {
-              actors: [],
-              collection: "",
-              creators: [],
-              datecreated: [],
-              description: [],
-              details: [],
-              downloadURL: "",
-              formats: [],
-              geoLocations: [],
-              id: "",
-              imageURL: img.currentSrc
-                .slice(0, img.currentSrc.lastIndexOf("/"))
-                .replace("/thumb", ""),
-              infoURL: img.parentElement.href,
-              inscriptions: [],
-              institutions: [],
-              inventoryNumber: "",
-              license: "",
-              license_link: "",
-              materials: [],
-              measurements: [],
-              places: [],
-              publisher: null,
-              rightsstatement: "",
-              source: "",
-              subjects: [],
-              thumbURL: img.currentSrc,
-              title: [img.parentElement.parentElement.outerText],
-              year: 0
-            }
-          ];
-          refs.imageviewer.show(items, 0);
-        });
-      }
-    });
+    // add links on page mounted
+    this.addLinksToImages();
+  },
+  updated() {
+    // add links on language changed
+    this.addLinksToImages();
   }
 };
 </script>
