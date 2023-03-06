@@ -158,6 +158,7 @@
 			"copyright": "Avtorske pravice",
 			"license": "Avtorskopravna licenca",
 			"image": "Slika",
+			"copyrightNotePD": "Slika ima licenco $1, vendar je glede na metapodatke v javni domeni.",
 			"imageDimensions": "Mere slike",
 			"moveTo": "Prestavitev v drugo polje"
 		},
