@@ -149,6 +149,9 @@
 	"imageViewer": {
 		"imageMetadata": {
 			"addData": "Adjuntez datumi"
+		},
+		"imageActions": {
+			"flip": "Inversigar"
 		}
 	},
 	"menus": {
