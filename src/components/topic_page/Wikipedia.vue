@@ -170,6 +170,16 @@ export default {
     getImageTitleFromURL(imgURL) {
       return imgURL.slice(imgURL.lastIndexOf("/") + 1);
     },
+    // convert item field htmlString to regular text
+    convertHtmlToText(htmlString) {
+      const parser = new DOMParser();
+      const floatingElement = parser.parseFromString(
+         htmlString ,
+        "text/html"
+      );
+      const text = floatingElement.activeElement.innerText;
+      return text;
+    },
     async getImageDetailsInfo(imgs) {
       const parent = this;
       // check if items data is stored
@@ -195,12 +205,22 @@ export default {
               parent.items[index] = {
                 actors: [],
                 collection: "",
-                creators: extMetadata.Artist ? [extMetadata.Artist.value] : [],
+                creators: extMetadata.Artist
+                  ? [parent.convertHtmlToText(extMetadata.Artist.value)]
+                  : [],
                 datecreated: extMetadata.DateTimeOriginal
-                  ? [extMetadata.DateTimeOriginal.value]
+                  ? [
+                      parent.convertHtmlToText(
+                        extMetadata.DateTimeOriginal.value
+                      )
+                    ]
                   : [],
                 description: extMetadata.ImageDescription
-                  ? [extMetadata.ImageDescription.value]
+                  ? [
+                      parent.convertHtmlToText(
+                        extMetadata.ImageDescription.value
+                      )
+                    ]
                   : [],
                 details: [],
                 downloadURL: wikiImageInfo.imageinfo[0].url,
