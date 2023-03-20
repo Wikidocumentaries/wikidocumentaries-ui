@@ -1,6 +1,6 @@
 <template>
     <div :class="( headerImage ? 'header' : 'header-compact')">
-        <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
+        <img :src="headerImage" class="header-image zoomable-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <div class="header-contents">
             <div id="marks" class="header-marks">
                 <img :src="logoImage" class="header-logo" />
@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import mediumZoom from 'medium-zoom';
 export default {
     name: 'TopicPageHeader',
     props: {
@@ -131,7 +132,14 @@ export default {
     //         return 'height:' + this.$refs.shade.clientHeight;
     //         console.log('height:' + this.$refs.shade.clientHeight);
     //   }
-    }
+    },
+    mounted() {
+    this.$nextTick(() => {
+      mediumZoom('.zoomable-image', {
+        background: '#000',
+      });
+    });
+  }
 }
 </script>
 

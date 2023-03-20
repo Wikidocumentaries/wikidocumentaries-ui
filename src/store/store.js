@@ -11,7 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "http://localhost:3000/"
+// const BASE_URL = "http://localhost:3000/"
 const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
 
 const wikidocumentaries = {
