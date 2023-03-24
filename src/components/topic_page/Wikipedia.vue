@@ -173,10 +173,7 @@ export default {
     // convert item field htmlString to regular text
     convertHtmlToText(htmlString) {
       const parser = new DOMParser();
-      const floatingElement = parser.parseFromString(
-         htmlString ,
-        "text/html"
-      );
+      const floatingElement = parser.parseFromString(htmlString, "text/html");
       const text = floatingElement.activeElement.innerText;
       return text;
     },
@@ -200,57 +197,23 @@ export default {
             .request(requestConfig)
             .then(function(response) {
               let wikiImageInfo = response.data.wikiImageInfo;
-              let extMetadata = wikiImageInfo.imageinfo[0].extmetadata;
-              // fill the image item fields with data from the api
-              parent.items[index] = {
-                actors: [],
-                collection: "",
-                creators: extMetadata.Artist
-                  ? [parent.convertHtmlToText(extMetadata.Artist.value)]
-                  : [],
-                datecreated: extMetadata.DateTimeOriginal
-                  ? [
-                      parent.convertHtmlToText(
-                        extMetadata.DateTimeOriginal.value
-                      )
-                    ]
-                  : [],
-                description: extMetadata.ImageDescription
-                  ? [
-                      parent.convertHtmlToText(
-                        extMetadata.ImageDescription.value
-                      )
-                    ]
-                  : [],
-                details: [],
-                downloadURL: wikiImageInfo.imageinfo[0].url,
-                formats: [],
-                geoLocations: [],
-                id: "",
-                imageURL: wikiImageInfo.imageinfo[0].url,
-                infoURL: img.parentElement.href,
-                inscriptions: [],
-                institutions: [],
-                inventoryNumber: "",
-                license: extMetadata.License ? extMetadata.License.value : "",
-                license_link: extMetadata.LicenseUrl
-                  ? extMetadata.LicenseUrl.value
-                  : "",
-                materials: [],
-                measurements: [],
-                places: [],
-                publisher: null,
-                rightsstatement: "",
-                source: "",
-                subjects: [],
-                thumbURL: img.currentSrc,
-                title: [
-                  extMetadata.ObjectName.value
-                    ? extMetadata.ObjectName.value
-                    : wikiImageInfo.title
-                ],
-                year: 0
-              };
+              // Process some data here because DOMParser is not available at backend
+              if (wikiImageInfo.datecreated && wikiImageInfo.datecreated[0]) {
+                wikiImageInfo.datecreated[0] = parent.convertHtmlToText(
+                  wikiImageInfo.datecreated[0]
+                );
+              }
+              if (wikiImageInfo.creators && wikiImageInfo.creators[0]) {
+                wikiImageInfo.creators[0] = parent.convertHtmlToText(
+                  wikiImageInfo.creators[0]
+                );
+              }
+              if (wikiImageInfo.description && wikiImageInfo.description[0]) {
+                wikiImageInfo.description[0] = parent.convertHtmlToText(
+                  wikiImageInfo.description[0]
+                );
+              }
+              parent.items[index] = wikiImageInfo;
             })
             .catch(function(error) {
               // infer image info from the img element
