@@ -40,7 +40,7 @@
 		"titleTeam": "Tim",
 		"titleThanks": "Ucapan terima kasih kepada",
 		"titlePartners": "Mitra",
-		"titleFunding": "atas dukungan dari",
+		"titleFunding": "Dengan dukungan dari",
 		"titleBy": "Proyek oleh",
 		"getInvolved": "Ayo ikut terlibat!",
 		"titleTranslate": "Terjemahkan",
@@ -144,6 +144,9 @@
 			"titleApproveText": "Setujui judul ini",
 			"subtitleEditText": "Sunting deskripsi",
 			"subtitleApproveText": "Setujui deskripsi ini"
+		},
+		"Heritage": {
+			"headerTitle": "Elemen warisan"
 		},
 		"Locations": {
 			"headerTitle": "Di lokasi ini",
