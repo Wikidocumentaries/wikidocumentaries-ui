@@ -5,6 +5,7 @@
 			"Amire80",
 			"DDPAT",
 			"DmitTrix",
+			"Facenapalm",
 			"Ice bulldog",
 			"Kareyac",
 			"Movses",
@@ -148,6 +149,9 @@
 			"titleApproveText": "Подтвердить этот заголовок",
 			"subtitleEditText": "Редактировать описание",
 			"subtitleApproveText": "Подтвердить это описание"
+		},
+		"Heritage": {
+			"headerTitle": "Элементы объектов наследия"
 		},
 		"Locations": {
 			"headerTitle": "В этом месте",
