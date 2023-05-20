@@ -248,7 +248,6 @@ export default {
   min-width: 350px;
   -webkit-box-shadow: var(--main-shadow);
   box-shadow: var(--main-shadow);
-  z-index: 1;
 }
 
 .dropdown-content-hide {
