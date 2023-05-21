@@ -45,6 +45,7 @@
     <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
     <Similar id="similar"></Similar>
+    <DepictingImages></DepictingImages>
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
@@ -61,6 +62,7 @@ import Cups from "@/components/topic_page/Cups";
 import Collection from "@/components/topic_page/Collection";
 import Colours from "@/components/topic_page/Colours";
 import Depicted from "@/components/topic_page/Depicted";
+import DepictingImages from "@/components/topic_page/DepictingImages";
 import Depicts from "@/components/topic_page/Depicts";
 import Effects from "@/components/topic_page/Effects";
 import Footer from "@/components/Footer";
@@ -106,6 +108,7 @@ export default {
     Colours,
     Cups,
     Depicted,
+    DepictingImages,
     Depicts,
     Effects,
     Footer,
