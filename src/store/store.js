@@ -11,8 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "http://localhost:3000/"
-const BASE_URL = "https://wikidocumentaries-api.wmcloud.org/"
+const BASE_URL = process.env.API_URL || "https://wikidocumentaries-api.wmcloud.org/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
