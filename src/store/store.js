@@ -1160,11 +1160,20 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        //console.log(response.data);
+                        const images = response.data;
 
-                        commit('setWikidocumentariesImages', response.data);
-                        commit('setImagesShownOnTimeline', response.data);
-                        resolve(response.data);
+                        // Shuffle the images array starting from the last index
+                        // (the Fisher-Yates shuffle)
+                        for (let i = images.length - 1; i > 0; i--) {
+                            // pick a random index from the remaining unshuffled ones
+                            let j = Math.floor(Math.random() * (i+1));
+                            // swap the last unshuffled element with the random element
+                            [images[j], images[i]] = [images[i], images[j]];
+                        }
+
+                        commit('setWikidocumentariesImages', images);
+                        commit('setImagesShownOnTimeline', images);
+                        resolve(images);
 
                     }).catch(function (error) {
                         console.log(error);
