@@ -133,7 +133,7 @@
           <div class="logogrid">
             <img
               class="logo"
-              src="https://wikidocumentaries.wmflabs.org/w/images/f/f2/OK_LG_LOGO_FINLAND_RGB.png"
+              src="https://wikidocumentaries.wmcloud.org/w/images/f/f2/OK_LG_LOGO_FINLAND_RGB.png"
             >
           </div>
         </div>
@@ -142,11 +142,11 @@
           <div class="logogrid">
             <img
               class="logo"
-              src="https://wikidocumentaries.wmflabs.org/w/images/5/5b/Kone_logo.jpeg"
+              src="https://wikidocumentaries.wmcloud.org/w/images/5/5b/Kone_logo.jpeg"
             >
             <img
               class="logo"
-              src="https://wikidocumentaries.wmflabs.org/w/images/a/a4/EYCH2018_Logos_Yellow-EN-300.png"
+              src="https://wikidocumentaries.wmcloud.org/w/images/a/a4/EYCH2018_Logos_Yellow-EN-300.png"
             >
           </div>
         </div>
@@ -166,7 +166,7 @@
               </li>
               <li>
                 <a
-                  href="https://wikidocumentaries.wmflabs.org"
+                  href="https://wikidocumentaries.wmcloud.org"
                   target="_blank"
                 >{{ $t('LandingPage.wiki') }}</a>
               </li>

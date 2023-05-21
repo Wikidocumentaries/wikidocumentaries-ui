@@ -2,7 +2,7 @@
 
 > Basic page template for the Wikidocumentaries UI
 
-For more info, see the project page: https://wikidocumentaries.wmflabs.org
+For more info, see the project page: https://wikidocumentaries.wmcloud.org
 
 
 ## Build Setup
