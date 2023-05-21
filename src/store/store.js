@@ -11,8 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-//const BASE_URL = "http://localhost:3000/"
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+const BASE_URL = process.env.API_URL || "https://wikidocumentaries-api.wmcloud.org/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
@@ -67,7 +66,7 @@ const wikidocumentaries = {
                 id: 'P625',
                 label: 'koordinaatit',
                 value: '60.175556, 24.944028',
-                url: 'https://tools.wmflabs.org/geohack/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
+                url: 'https://geohack.toolforge.org/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
             },
             {
                 id: 'P373',
