@@ -322,8 +322,11 @@ LIMIT 200
     margin-top: 0.25em;
     max-width: 30vw;
 }
-.facet button:hover { background: pink; }
-.facet button.selected { background: red; }
+
+.facet button.selected, .facet button:hover { 
+    background: var(--main-red);
+    color: white; 
+}
 .facet button .label {
     flex-grow: 1;
     text-align: left;
