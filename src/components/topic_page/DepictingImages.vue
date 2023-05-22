@@ -142,10 +142,12 @@ SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count
         }
     }
     ${filterTriples}
-    BIND(?item AS ?objectValue) .
     OPTIONAL {
-        ?objectValue rdfs:label ?label_ .
-        FILTER (LANG(?label_) = "en") .
+        ?file wdt:P180 ?objectValue .
+        OPTIONAL {
+            ?objectValue rdfs:label ?label_ .
+            FILTER (LANG(?label_) = "en") .
+        }
     }
 }
 GROUP BY ?objectValue
