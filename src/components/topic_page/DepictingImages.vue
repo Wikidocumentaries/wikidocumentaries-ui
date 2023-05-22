@@ -266,21 +266,22 @@ LIMIT 200
 
 .imagegrid-container {
     position: relative;
-    max-height: 100vh;
-    overflow-y: hidden;
-}
-
-.imagegrid-container.expanded {
-    max-height: initial;
-}
-
-.haze.expanded {
-    position: initial;
 }
 
 .image-grid {
     width: 100%;
+    max-height: 100vh;
+    overflow-y: hidden;
 }
+
+.expanded .image-grid {
+    max-height: initial;
+}
+
+.expanded .haze {
+    position: initial;
+}
+
 .thumb-image-glyph {
     color: white;
 }
