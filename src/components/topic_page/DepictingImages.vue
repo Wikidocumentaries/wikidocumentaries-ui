@@ -50,7 +50,7 @@ import ImageGrid from '@/components/ImageGrid'
 export default {
     name: 'DepictingImages',
     data () {
-	return {
+        return {
             results: [],
             status: "LOADING",
             error: "",
@@ -60,8 +60,8 @@ export default {
                 P180: "Depicts",
                 P195: "Collection",
                 P6731: "Assessment"
-	    },
-	    isExpanded: false
+            },
+            isExpanded: false
         };
     },
     methods: {
@@ -71,34 +71,34 @@ export default {
             this.$emit('showImagesOnMap');
         },
         chooseValue(property, facetValue) {
-	    const clear = !facetValue || this.filters.find((item) =>
-		item.property === property && item.value === 'wd:' + facetValue
-	    );
-	    this.filters = this.filters.filter((item) => item.property !== property);
-	    if (!clear) {
-		this.filters = [ ...this.filters, {
-		    property: property,
-		    value: 'wd:' + facetValue
-		}];
-	    }
+            const clear = !facetValue || this.filters.find((item) =>
+                item.property === property && item.value === 'wd:' + facetValue
+            );
+            this.filters = this.filters.filter((item) => item.property !== property);
+            if (!clear) {
+                this.filters = [ ...this.filters, {
+                    property: property,
+                    value: 'wd:' + facetValue
+                }];
+            }
 
-	    Object.keys(this.facetValues).forEach((property) => this.fetchPossibleValues(property));
-	    this.fetchImages();
+            Object.keys(this.facetValues).forEach((property) => this.fetchPossibleValues(property));
+            this.fetchImages();
         },
         fetchSparql({property: property} = {}) {
-	    const filterTriples = this.filters
-		.filter(filter => filter.property !== property)
-		.map(({property, value}) => `?file ${property} ${value} .`)
-		.join("\n");
-	    const prefixes = `
+            const filterTriples = this.filters
+                .filter(filter => filter.property !== property)
+                .map(({property, value}) => `?file ${property} ${value} .`)
+                .join("\n");
+            const prefixes = `
 PREFIX schema: <http://schema.org/>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             `
-	    let sparql;
-	    if (property === "wdt:P6731") {
-		sparql = `
+            let sparql;
+            if (property === "wdt:P6731") {
+                sparql = `
 ${prefixes}
 SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
     ?file a schema:ImageObject .
@@ -115,7 +115,7 @@ SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count
     }
     ${filterTriples}
     OPTIONAL {
-	?file wdt:P6731 ?objectValue .
+        ?file wdt:P6731 ?objectValue .
         OPTIONAL {
             ?objectValue rdfs:label ?label_ .
             FILTER (LANG(?label_) = "en") .
@@ -154,7 +154,7 @@ GROUP BY ?objectValue
 ORDER BY DESC(?count)
 LIMIT 20
                 `;
-	    } else if (property) {
+            } else if (property) {
                 sparql = `
 ${prefixes}
 SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
@@ -184,7 +184,7 @@ ORDER BY DESC(?count)
 LIMIT 20
                 `.replace(/wdt:P195/g, property);
             } else {
-	        sparql = `
+                sparql = `
 ${prefixes}
 SELECT ?file ?image ?caption (SAMPLE(?commonsQualityAssessment) AS ?quality_) {
     ?file a schema:ImageObject .
@@ -210,50 +210,50 @@ GROUP BY ?file ?image ?caption
 ORDER BY DESC(?quality_)
 LIMIT 200
                 `;
-	    }
-	    sparql = sparql
-		.replace(/Q42/g, this.$store.state.wikidocumentaries.wikidataId)
-	    const [url, body] = wdk.sparqlQuery(sparql).split("?");
-	    return axios
-		.post("https://qlever.cs.uni-freiburg.de/api/wikimedia-commons", body);
-	},
-	fetchPossibleValues(property) {
-	    this.fetchSparql({ property: property }).then(response => {
-		this.facetValues = { ...this.facetValues,
-		    [property]: wdk.simplify.sparqlResults(response.data)
-		};
-	    });
-	},
-	fetchImages() {
-	    this.fetchSparql().then(response => {
-		this.status = "SUCCESS";
-		const results = wdk.simplify.sparqlResults(response.data);
-		this.results = results.map((result => ({
-		    id: result.file,
-		    infoURL: result.file,
-		    imageURL: result.image,
-		    thumbURL: result.image+"?width=500",
-		    title: result.caption ? [ result.caption ] : undefined,
-		    source: "Wikimedia Commons",
-		    institutions: "",
-		    license: "",
-		    creators: "",
-		    geoLocations: [],
-		})));
-		console.log(this.results)
-	    }).catch(error => {
-		console.log(error);
-		this.status = "ERROR";
-		this.error = "Failed to fetch search results."
-		this.results = [];
-	    });
-	},
+            }
+            sparql = sparql
+                .replace(/Q42/g, this.$store.state.wikidocumentaries.wikidataId)
+            const [url, body] = wdk.sparqlQuery(sparql).split("?");
+            return axios
+                .post("https://qlever.cs.uni-freiburg.de/api/wikimedia-commons", body);
+        },
+        fetchPossibleValues(property) {
+            this.fetchSparql({ property: property }).then(response => {
+                this.facetValues = { ...this.facetValues,
+                    [property]: wdk.simplify.sparqlResults(response.data)
+                };
+            });
+        },
+        fetchImages() {
+            this.fetchSparql().then(response => {
+                this.status = "SUCCESS";
+                const results = wdk.simplify.sparqlResults(response.data);
+                this.results = results.map((result => ({
+                    id: result.file,
+                    infoURL: result.file,
+                    imageURL: result.image,
+                    thumbURL: result.image+"?width=500",
+                    title: result.caption ? [ result.caption ] : undefined,
+                    source: "Wikimedia Commons",
+                    institutions: "",
+                    license: "",
+                    creators: "",
+                    geoLocations: [],
+                })));
+                console.log(this.results)
+            }).catch(error => {
+                console.log(error);
+                this.status = "ERROR";
+                this.error = "Failed to fetch search results."
+                this.results = [];
+            });
+        },
     },
     mounted() {
-	this.fetchPossibleValues('wdt:P6731');
-	this.fetchPossibleValues('wdt:P180');
-	this.fetchPossibleValues('wdt:P195');
-	this.fetchImages();
+        this.fetchPossibleValues('wdt:P6731');
+        this.fetchPossibleValues('wdt:P180');
+        this.fetchPossibleValues('wdt:P195');
+        this.fetchImages();
     },
     components: {
         ImageGrid
