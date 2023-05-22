@@ -293,6 +293,7 @@ LIMIT 200
     display: flex;
     flex-direction: row;
     padding: 0 10px 0px 10px;
+    gap: 1em;
 }
 .facet {
     flex-shrink: 0;
@@ -327,6 +328,11 @@ LIMIT 200
     background: var(--main-red);
     color: white; 
 }
+
+.facet button.selected:hover {
+    background:#333;
+}
+
 .facet button .label {
     flex-grow: 1;
     text-align: left;
