@@ -23,7 +23,21 @@
              <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in Structured Data on Commons.</div>
              <div v-if="status === 'ERROR'">{{ error }}</div>
         </div>
-        <ImageGrid v-if="results.length" class="image-grid" :items="results" @showItemGeolocation="showImageOnMap" />
+        <div :class="isExpanded ? 'expanded' : ''" class="imagegrid-container">
+            <ImageGrid v-if="results.length" class="image-grid" :items="results" @showItemGeolocation="showImageOnMap" />
+            <div class="haze">
+                <div class="toolbar-item block">
+                    <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
+                        <i
+                            class="wikiglyph"
+                            :class="isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down'"
+                            />
+                    </a>
+                    <span v-if="!isExpanded" class="tooltip">{{ $t('general.expand') }}</span>
+                    <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -46,7 +60,8 @@ export default {
                 P180: "Depicts",
                 P195: "Collection",
                 P6731: "Assessment"
-	    }
+	    },
+	    isExpanded: false
         };
     },
     methods: {
@@ -246,6 +261,20 @@ LIMIT 200
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.imagegrid-container {
+    position: relative;
+    max-height: 100vh;
+    overflow-y: hidden;
+}
+
+.imagegrid-container.expanded {
+    max-height: initial;
+}
+
+.haze.expanded {
+    position: initial;
+}
 
 .image-grid {
     width: 100%;
