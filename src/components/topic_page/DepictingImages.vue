@@ -1,25 +1,29 @@
 <template>
-    <div v-if="results.length" class="images-component">
+    <div class="images-component">
         <div class="toolbar">
             <h1 class="header-title">Depictions from Wikimedia Commons</h1>
         </div>
         <div class="facets">
             <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
-                <h2>{{ property.split(":")[1] }}</h2>
+                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] }}</h2>
                 <div class="value-list">
                     <button
                         v-for="value in facetValues[property]"
                         :key="value.objectValue"
                         :class="filters.find(item => item.property === property && item.value === 'wd:'+value.objectValue) ? 'selected' : ''"
                         @click="chooseValue(property, value.objectValue)">
-                        <div class="label">{{ value.label }}</div>
-                        <div class="count">{{ value.count }}</div>
+                        <div class="label">{{ value.label || value.objectValue || "-" }}</div>
+                        <div class="count">&nbsp;{{ value.count }}</div>
                     </button>
                 </div>
             </div>
         </div>
-        <ImageGrid class="image-grid" :items="results" @showItemGeolocation="showImageOnMap">
-        </ImageGrid>
+        <div class="intro">
+             <div v-if="status === 'LOADING'">Searching for images...</div>
+             <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in Structured Data on Commons.</div>
+             <div v-if="status === 'ERROR'">{{ error }}</div>
+        </div>
+        <ImageGrid v-if="results.length" class="image-grid" :items="results" @showItemGeolocation="showImageOnMap" />
     </div>
 </template>
 
@@ -34,8 +38,15 @@ export default {
     data () {
 	return {
             results: [],
+            status: "LOADING",
+            error: "",
             facetValues: {},
-            filters: []
+            filters: [],
+            labels: {
+                P180: "Depicts",
+                P195: "Collection",
+                P6731: "Assessment"
+	    }
         };
     },
     methods: {
@@ -197,8 +208,8 @@ LIMIT 200
 	    });
 	},
 	fetchImages() {
-	    this.fetchSparql()
-	    .then(response => {
+	    this.fetchSparql().then(response => {
+		this.status = "SUCCESS";
 		const results = wdk.simplify.sparqlResults(response.data);
 		this.results = results.map((result => ({
 		    id: result.file,
@@ -213,8 +224,12 @@ LIMIT 200
 		    geoLocations: [],
 		})));
 		console.log(this.results)
-	    })
-	    .catch(error => console.log(error));
+	    }).catch(error => {
+		console.log(error);
+		this.status = "ERROR";
+		this.error = "Failed to fetch search results."
+		this.results = [];
+	    });
 	},
     },
     mounted() {
@@ -238,15 +253,19 @@ LIMIT 200
 .thumb-image-glyph {
     color: white;
 }
+
+.intro {
+    padding: 0 20px 10px 20px;
+}
+
 .facets {
     display: flex;
     flex-direction: row;
-    max-height: 30vh;
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 0px 10px;
 }
 .facet {
-    width: 30%;
-    max-height: 100%;
+    flex-shrink: 0;
+    min-width: auto;
 }
 .facet h2 {
     padding-left: 10px;
@@ -258,7 +277,7 @@ LIMIT 200
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    max-height: 100%;
+    max-height: 30vh;
 }
 .facet button {
     display: flex;
@@ -270,6 +289,7 @@ LIMIT 200
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 0.25em;
+    max-width: 30vw;
 }
 .facet button:hover { background: pink; }
 .facet button.selected { background: red; }
