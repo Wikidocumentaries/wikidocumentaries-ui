@@ -170,8 +170,9 @@ a:hover {
   display: flex;
   color: #333;
   padding: 0 20px;
-  height: 45px;
-  align-items: center;
+  min-height: 45px; /* Normal height, but line wrap can grow this */
+  align-items: flex-start; /* We want multiple lines to align to the top */
+  line-height: 1.2;
 }
 
 .toolbar-item {
@@ -181,13 +182,13 @@ a:hover {
 }
 
 .toolbar-item a {
-  height: 100%;
   display: flex;
-  align-items: center;
   transition: color 80ms ease-in, background 80ms ease-in;
   justify-content: center;
   cursor: pointer;
   width: 45px;
+  padding-top: 9px; /* To adjust baseline to a good position */
+  padding-bottom: 6px; /* For visual symmetry */
 }
 
 .toolbar-item-a {
@@ -267,6 +268,8 @@ a:hover {
   flex-grow: 90;
   font-size: 1.5em;
   margin: 0;
+  padding-top: 9px; /* To adjust baseline to a good position */
+  padding-bottom: 9px; /* For symmetry */
 }
 
 .header-link {
