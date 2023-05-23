@@ -47,6 +47,97 @@ import wdk from "wikidata-sdk";
 
 import ImageGrid from '@/components/ImageGrid'
 
+const prefixes =
+    `
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    `.trim().split("\n");
+
+function buildQuery({ topicItem, selectVars, filterTriples, optionalStatements, modifiers }) {
+    return `
+${prefixes.join("\n")}
+
+SELECT ${selectVars.join(" ")} {
+
+    ?file a schema:ImageObject .
+    ?file schema:url ?image .
+
+    ?file wdt:P180 ?item .
+
+    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
+        {
+            VALUES ?item { ${topicItem} }
+        }
+        UNION
+        {
+            ?item wdt:P171+ ${topicItem} . # parent taxon
+        }
+    }
+
+    ${filterTriples.join("\n    ")}
+
+    ${optionalStatements.join("\n    ")}
+}
+${modifiers.join("\n")}
+    `.trim();
+}
+
+function buildFacetQuery(topicItem, filterTriples, facetProperty) {
+    return buildQuery({
+        topicItem: topicItem,
+        selectVars: [
+            "?objectValue",
+            "(SAMPLE(?label_) AS ?label)",
+            "(COUNT(DISTINCT ?file) AS ?count)"
+        ],
+        filterTriples: filterTriples,
+        optionalStatements:
+            `
+OPTIONAL {
+    ?file ${facetProperty} ?objectValue .
+    OPTIONAL {
+        ?objectValue rdfs:label ?label_ .
+        FILTER (LANG(?label_) = "en") .
+    }
+}
+            `.trim().split("\n"),
+        modifiers: [
+            "GROUP BY ?objectValue",
+            "ORDER BY DESC(?count)",
+            "LIMIT 20"
+        ]
+    });
+}
+
+function buildImageQuery(topicItem, filterTriples) {
+    return buildQuery({
+        topicItem: topicItem,
+        selectVars: [
+            "?file",
+            "?image",
+            "?caption",
+            "(MAX(?commonsQualityAssessment) AS ?quality_)"
+        ],
+        filterTriples: filterTriples,
+        optionalStatements: [
+            "OPTIONAL { ?file wdt:P6731 ?commonsQualityAssessment . }",
+            ...`
+OPTIONAL {
+    ?file schema:caption ?caption .
+    FILTER (LANG(?caption) = "en") .
+}
+            `.trim().split("\n")
+        ],
+        modifiers: [
+            "GROUP BY ?file ?image ?caption",
+            "ORDER BY DESC(?quality_)",
+            "LIMIT 200"
+        ]
+    });
+}
+
 export default {
     name: 'DepictingImages',
     data () {
@@ -86,134 +177,22 @@ export default {
             Object.keys(this.facetValues).forEach((property) => this.fetchPossibleValues(property));
             this.fetchImages();
         },
-        fetchSparql({property: property} = {}) {
+
+        fetchSparql({facetProperty: facetProperty} = {}) {
+            const topicItem =
+                  "wd:" + this.$store.state.wikidocumentaries.wikidataId;
             const filterTriples = this.filters
-                .filter(filter => filter.property !== property)
-                .map(({property, value}) => `?file ${property} ${value} .`)
-                .join("\n");
-            const prefixes = `
-PREFIX schema: <http://schema.org/>
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            `
+                .filter(filter => filter.property !== facetProperty)
+                .map(({property, value}) => `?file ${property} ${value} .`);
             let sparql;
-            if (property === "wdt:P6731") {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P6731 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-                `;
-            } else if(property === "wdt:P180") {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P180 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-LIMIT 20
-                `;
-            } else if (property) {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P195 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-LIMIT 20
-                `.replace(/wdt:P195/g, property);
+            if (facetProperty) {
+                // Build a query for the values of the given facet property
+                sparql = buildFacetQuery(topicItem, filterTriples, facetProperty);
             } else {
-                sparql = `
-${prefixes}
-SELECT ?file ?image ?caption (SAMPLE(?commonsQualityAssessment) AS ?quality_) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL { ?file wdt:P6731 ?commonsQualityAssessment . }
-    OPTIONAL {
-        ?file schema:caption ?caption.
-        FILTER (LANG(?caption) = "en") .
-    }
-}
-GROUP BY ?file ?image ?caption
-ORDER BY DESC(?quality_)
-LIMIT 200
-                `;
+                // Build a query to fetch the result images
+                sparql = buildImageQuery(topicItem, filterTriples);
             }
-            sparql = sparql
-                .replace(/Q42/g, this.$store.state.wikidocumentaries.wikidataId)
+
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
 
             return axios.post(
@@ -237,8 +216,9 @@ LIMIT 200
         },
 
         fetchPossibleValues(property) {
-            this.fetchSparql({ property: property }).then(response => {
-                this.facetValues = { ...this.facetValues,
+            this.fetchSparql({ facetProperty: property }).then(response => {
+                this.facetValues = {
+                    ...this.facetValues,
                     [property]: wdk.simplify.sparqlResults(response.data)
                 };
             }).catch(error => {
