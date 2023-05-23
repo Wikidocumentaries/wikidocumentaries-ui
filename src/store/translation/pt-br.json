@@ -6,7 +6,8 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Fitoschido",
-			"Jhonnatanricardo"
+			"Jhonnatanricardo",
+			"Re demz"
 		]
 	},
 	"LandingPage": {
@@ -141,6 +142,9 @@
 			"titleApproveText": "Aprovar esse titulo",
 			"subtitleEditText": "Editar a descrição",
 			"subtitleApproveText": "Aprovar esta descrição"
+		},
+		"Heritage": {
+			"headerTitle": "Elemetos de patrimônio"
 		},
 		"Locations": {
 			"headerTitle": "Neste local",

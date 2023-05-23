@@ -190,7 +190,7 @@
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Handelingen",
-				"menuTooltip": "Acties",
+				"menuTooltip": "Handelingen",
 				"doGeolocatingText": "Locatie instellen...",
 				"showImageText": "Toon afbeelding",
 				"selectFeatured": "Als hoofdafbeelding kiezen"

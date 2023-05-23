@@ -3,12 +3,16 @@
 		"authors": [
 			"Les Meloures",
 			"Robby",
-			"Soued031"
+			"Soued031",
+			"Volvox"
 		]
 	},
 	"LandingPage": {
 		"search": "Sichen",
 		"searchInputSearchOnly": "En Thema fannen",
+		"titleDescription": "Wat ass Wikidocumentaries?",
+		"titleStatus": "Status",
+		"status": "D'Säit ass an enger Demophas. Vill wichteg Funktioune sinn nach net disponibel an et ka sinn, datt d'Säit net sou gutt leeft, wéi een et erwaarde géif.",
 		"moreBelow": "Liest méi hei drënner",
 		"more": "Liest méi",
 		"moreLink": "Liest méi op",
@@ -18,7 +22,9 @@
 		"titleLanguages": "Sproochen",
 		"titleTechnology": "Technologie",
 		"titleTeam": "Ekipp",
+		"titleThanks": "Mat besonneschem Merci un",
 		"titlePartners": "Partner",
+		"titleFunding": "Mat frëndlecher Ënnerstëtzung vun",
 		"titleBy": "Projet vum",
 		"getInvolved": "Maacht mat!",
 		"titleTranslate": "Iwwersetzen",
@@ -40,6 +46,9 @@
 		},
 		"BaseMapDialog": {
 			"yearAbbreviation": "J."
+		},
+		"Cups": {
+			"headerTitle": "Spiller, Serien an Turnéieren"
 		},
 		"Depicted": {
 			"sortMenu": {

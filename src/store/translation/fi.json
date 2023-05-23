@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
+			"Nike",
 			"Pyscowicz",
 			"Susannaanas"
 		]
@@ -78,6 +79,10 @@
 			"headerTitle": "Teoksia kokoelmissa",
 			"intro": "Nämä teokset ovat tämän henkilön tai organisaation kokoelmissa. Voit näyttää ne listana, jolloin näet myös kohteet, joista ei ole kuvaa. Ne voi järjestää päivämäärän tai nimen perusteella. Kun tämä tieto puuttuu, aihe ei näe sillä perusteella järjestetyssä listassa."
 		},
+		"Cups": {
+			"headerTitle": "Pelit, sarjat ja turnaukset",
+			"intro": "Tämä seura on pelannut seuraavissa peleissä, sarjoissa ja turnauksissa"
+		},
 		"CV": {
 			"headerTitle": "CV",
 			"intro": "Nämä ovat aiheen henkilön ammatillisia tapahtumia."
@@ -134,6 +139,9 @@
 			"titleApproveText": "Hyväksy tämä otsikko",
 			"subtitleEditText": "Muokkaa kuvausta",
 			"subtitleApproveText": "Hyväksy tämä kuvaus"
+		},
+		"Heritage": {
+			"headerTitle": "Perintökohteet"
 		},
 		"Locations": {
 			"headerTitle": "Tässä paikassa",
@@ -218,6 +226,10 @@
 		"Subclasses": {
 			"headerTitle": "Tämän aiheen alaluokkia",
 			"intro": "Tarkastele tämän aiheen alaluokkia. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
+		"Teams": {
+			"headerTitle": "Osallistuvat joukkueet",
+			"intro": "Tähän peliin, sarjaan tai turnaukseen osallistuvat joukkueet."
 		},
 		"Things": {
 			"headerTitle": "Aiheita tähän liittyvässä projektissa",

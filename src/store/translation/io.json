@@ -1,0 +1,166 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joao Xavier"
+		]
+	},
+	"LandingPage": {
+		"search": "Serchez",
+		"searchInputPlaceHolder": "Trovez temo existanta, o kreez nova temo",
+		"searchInputSearchOnly": "Trovar ula temo",
+		"showMore": "Montrez plusa detali",
+		"createNew": "Kreez nova artiklo",
+		"intro": "''Wikidocumentaries'' esas utensilo wiki por kurta historii - loko por konektar parti de la historio e transformar ol en texti. Komencez serchanta temo di vua intereso!",
+		"titleDescription": "Quo esas ''Wikidocumentaries''?",
+		"description": "''Wikidocumentaries'' is a maker space for citizen historians. It combines information about topics – people, places, buildings, events and more. You can navigate between the topics by following any recorded connection such as family relations, locations, creators and creations or affiliation. A topic is illustrated with images and maps from connected museums, archives and libraries. In Wikidocumentaries, it will be possible to correct existing information and add new topics, bring in your own images and recollections, and use all the material for your own purposes.",
+		"titleStatus": "Stando",
+		"status": "Ca situo ne esas kompleta. Multa resursi importanta ankore ne esas disponebla, e la situo povas ne funcionar tam bone kam expektata.",
+		"moreBelow": "Lektez pluse, adinfre",
+		"more": "Lektez pluse",
+		"moreLink": "Lektez pluse en",
+		"titleTopics": "Temi",
+		"statusTopics": "On povas lektar temi de Wikidata. Vicee, nova temi povos kreesar en ''Wikidocumentaries'', se la kontenajo esas fore la skopo di Wikidata. It will still be equally possible to describe the topic with the rich options of Wikidata. Current articles are from Wikipedia, whereas articles can later be created locally for topics that exist in Wikidocumentaries only.",
+		"titleMedia": "'Media'",
+		"statusMedia": "Media is read from a growing number of media repositories serving openly licensed media files. We are working on finding images more accurately and displaying more and better metadata from each of the sources. New media sources are welcome!",
+		"titleTools": "Utensili",
+		"statusTools": "Wikidocumentaries has tasks and tools for working with the content. Articles can already be translated between languages with the Content Translation tool. We are preparing keywording with Wikidata and a geotagging tool for image locations. New fun and useful tools can be created or integrated.",
+		"titleLanguages": "Lingui",
+		"titleTechnology": "Teknologio",
+		"titleCreators": "Kreanti",
+		"titleTeam": "Kruo",
+		"titleThanks": "Specala danki a",
+		"titlePartners": "Parteneri",
+		"titleFunding": "Kun importanta suporto de",
+		"titleBy": "Projetita da",
+		"getInvolved": "Partoprenez!",
+		"titleTranslate": "Tradukez",
+		"joinTranslate": "Skribez en vua linguo che ''Wikidocumentaries''. Partoprenez la kruo di voluntala tradukeri, e helpez portar la kulturala heredo konektita a vua linguo.",
+		"titleContent": "Adjuntez vua kontenajo",
+		"joinContent": "If you have a photo, media, document, map or data collection that you would like to see here, let's have a look together if it can already connect through one of the existing channels or if we can create new connecting methods. We are also looking forward to arranging workshops for recording historical knowledge with communities of interest.",
+		"titleDevelop": "Kreez utensili e kunlaborema taski.",
+		"titleContact": "Mantenez kontakto!",
+		"facebook": "Grupo che ''Facebook''",
+		"wiki": "wiki di ''Wikidocumentaries''",
+		"blog": "Blogo",
+		"email": "E-posto",
+		"github": "depozeyo che Github"
+	},
+	"MainPage": {
+		"topicPageName": "Temala pagino",
+		"mapPlaceMatchPageName": "Kombinez loko-nomi",
+		"mapSearchPageName": "Serchez mapi",
+		"wikiTopicErrorMessage": "Sive ne existas pagino pri ca temo che Wikipedio, sive eventis eroro neexpektata."
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Adheri",
+			"intro": "Organizuri kun quin ca persono od organizuro havis irga ligilo."
+		},
+		"Awards": {
+			"headerTitle": "Premii"
+		},
+		"BaseMapDialog": {
+			"yearAbbreviation": "y."
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Ica esas profesional eventi di la persono mencionata."
+		},
+		"Depicted": {
+			"headerTitle": "Deskriptita en",
+			"intro": "Ca temo deskriptesis en ca verki. Organizes la verki segun diferanta kriterii, montrez li kom listo por vidar ti qui ne havas imaji.",
+			"sortMenu": {
+				"title": "Organizez verki",
+				"tooltip": "Organizez vorti",
+				"optionTime": "Segun tempo",
+				"optionAlpha": "Alfabetale",
+				"optionClear": "Efacez organizado"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionColl": "Kreero"
+			},
+			"displayMenu": {
+				"title": "Montrez quale",
+				"tooltip": "Selektez quale montrar",
+				"optionGallery": "Galerio",
+				"optionList": "Montrar listo"
+			},
+			"showAll": "Omna"
+		},
+		"Header": {
+			"titleEditText": "Redaktez la titulo",
+			"titleApproveText": "Aprobez ca titulo",
+			"subtitleEditText": "Redaktar la deskripto",
+			"subtitleApproveText": "Aprobar la deskripto"
+		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "Tipo"
+			}
+		},
+		"Partof": {
+			"headerTitle": "Parto de",
+			"intro": "Ca temo esas parto de la sequanta grupo di temi. Vu povas klasifikar li segun dato (di kreo) e nomo. Por vidar omna temi, inkluzite sen imaji, vu mustas vidar omna temi kom listo."
+		},
+		"TopicImages": {
+			"headerTitle": "Imaji del arkivi",
+			"intro": "These images are gathered from several sources and they might not always represent to topic accurately. You can view the original image and you can place the image a map if it has a location pin.",
+			"actionsMenu": {
+				"menuTitle": "Montrez od organizez l'imaji",
+				"tooltip": "Montrez od organizez l'imaji",
+				"showImagesOnMapMenuText": "Montrez omna imaji che mapo",
+				"showImagesOnTimelineMenuText": "Montrez omna imaji che tempo-lineo",
+				"selectPortraits": "Selektez bona portreti pri ca persono",
+				"arrangeByTime": "Organizez imaji segun tempo"
+			},
+			"facetMenu": {
+				"map": "mapo",
+				"people": "personi",
+				"places": "loki",
+				"topics": "temi",
+				"form": "formulario",
+				"imageSize": "grandeso dil imajo",
+				"large": "larja",
+				"medium": "meza",
+				"small": "mikra",
+				"type": "tipo di arkivo",
+				"creator": "kreinto",
+				"platform": "platformo",
+				"source": "fonto"
+			},
+			"imagesActionMenu": {
+				"menuTooltip": "Agadi",
+				"showImageText": "Montrez imajo"
+			},
+			"imagesRemoveMenu": {
+				"shortMenuTitle": "Removez imajo"
+			}
+		},
+		"Works": {
+			"showAll": "Omni"
+		},
+		"Wikipedia": {
+			"languageMenu": {
+				"translateArticleText": "Tradukez ca artiklo a vua idiomo"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"addData": "Adjuntez datumi"
+		},
+		"imageActions": {
+			"flip": "Inversigar"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTitle": "Segun titulo",
+			"optionCause": "Segun motivo"
+		}
+	},
+	"general": {
+		"cancel": "Interruptar"
+	}
+}
