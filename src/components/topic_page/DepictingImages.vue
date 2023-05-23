@@ -25,7 +25,7 @@
         </div>
         <div :class="isExpanded ? 'expanded' : ''" class="imagegrid-container">
             <ImageGrid v-if="results.length" class="image-grid" :items="results" @showItemGeolocation="showImageOnMap" />
-            <div class="haze">
+            <div v-if="results.length" class="haze">
                 <div class="toolbar-item block">
                     <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
                         <i
@@ -70,6 +70,7 @@ export default {
             this.$store.commit('setImagesShownOnMap', [image]);
             this.$emit('showImagesOnMap');
         },
+
         chooseValue(property, facetValue) {
             const clear = !facetValue || this.filters.find((item) =>
                 item.property === property && item.value === 'wd:' + facetValue
@@ -214,16 +215,41 @@ LIMIT 200
             sparql = sparql
                 .replace(/Q42/g, this.$store.state.wikidocumentaries.wikidataId)
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
-            return axios
-                .post("https://qlever.cs.uni-freiburg.de/api/wikimedia-commons", body);
+
+            return axios.post(
+                "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons",
+                body
+            ).catch(error => {
+                if (error.response) {
+                    const data = error.response.data;
+                    try {
+                        console.error(
+                            data.exception,
+                            `\n\nLine ${data.metadata.line}, column ${data.metadata.positionInLine}`,
+                            `\n\n${data.metadata.query}`
+                        );
+                    } catch(_error2) {
+                        console.error(error.response.data);
+                    }
+                }
+                throw error;
+            });
         },
+
         fetchPossibleValues(property) {
             this.fetchSparql({ property: property }).then(response => {
                 this.facetValues = { ...this.facetValues,
                     [property]: wdk.simplify.sparqlResults(response.data)
                 };
+            }).catch(error => {
+                console.error(error);
+                this.facetValues = {
+                    ...this.facetValues,
+                    [property]: [{ objectValue: null, label: "Query failed" }]
+                };
             });
         },
+
         fetchImages() {
             this.fetchSparql().then(response => {
                 this.status = "SUCCESS";
@@ -240,9 +266,9 @@ LIMIT 200
                     creators: "",
                     geoLocations: [],
                 })));
-                console.log(this.results)
+                console.log("SDC images", this.results)
             }).catch(error => {
-                console.log(error);
+                console.error(error);
                 this.status = "ERROR";
                 this.error = "Failed to fetch search results."
                 this.results = [];
