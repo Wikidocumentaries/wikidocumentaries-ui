@@ -10,7 +10,7 @@
                     <button
                         v-for="value in facetValues[property]"
                         :key="value.objectValue"
-                        :class="filters.find(item => item.property === property && item.value === 'wd:'+value.objectValue) ? 'selected' : ''"
+                        :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
                         @click="chooseValue(property, value.objectValue)">
                         <div class="label">{{ value.label || value.objectValue || "-" }}</div>
                         <div class="count">&nbsp;{{ value.count }}</div>
@@ -162,16 +162,29 @@ export default {
             this.$emit('showImagesOnMap');
         },
 
+        isFilterActive(property, objectValue) {
+            // XXX at this point we don't know if objectValue is url or literal
+            const url = "wd:" + objectValue;
+            const literal = JSON.stringify(objectValue);
+            return this.filters.find((item) => (
+                item.property === property && (
+                    item.value === url || item.value === literal
+                )
+            ));
+        },
+
         chooseValue(property, facetValue) {
-            const clear = !facetValue || this.filters.find((item) =>
-                item.property === property && item.value === 'wd:' + facetValue
-            );
+            const clear =
+                !facetValue || this.isFilterActive(property, facetValue);
             this.filters = this.filters.filter((item) => item.property !== property);
             if (!clear) {
-                this.filters = [ ...this.filters, {
+                const filter = {
                     property: property,
-                    value: 'wd:' + facetValue
-                }];
+                    value: facetValue.match(/^Q[0-9]+$/)
+                        ? 'wd:' + facetValue
+                        : JSON.stringify(facetValue)
+                };
+                this.filters = [ ...this.filters, filter ]
             }
 
             Object.keys(this.facetValues).forEach((property) => this.fetchPossibleValues(property));
