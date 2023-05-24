@@ -5,7 +5,7 @@
         </div>
         <div class="facets">
             <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
-                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] }}</h2>
+                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
                 <div class="value-list">
                     <button
                         v-for="value in facetValues[property]"
