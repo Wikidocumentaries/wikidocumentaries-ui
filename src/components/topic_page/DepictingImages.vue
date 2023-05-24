@@ -230,10 +230,38 @@ export default {
 
         fetchPossibleValues(property) {
             this.fetchSparql({ facetProperty: property }).then(response => {
-                this.facetValues = {
-                    ...this.facetValues,
-                    [property]: wdk.simplify.sparqlResults(response.data)
-                };
+                const values = wdk.simplify.sparqlResults(response.data);
+                const nonEmptyValues = values
+                      .filter(value => value.objectValue);
+
+                // Merge unknown and missing values
+                const emptyCount = values
+                      .filter(value => !value.objectValue)
+                      .map(value => value.count)
+                      .reduce(((a, b) => -(-a) + -(-b)), 0);
+
+                // Create an empty value only if we got some
+                const emptyValueOrNothing = !emptyCount ? [] : [{
+                    objectValue: undefined,
+                    label: undefined,
+                    count: emptyCount
+                }];
+
+                const cleanedUpValues = [
+                    ...emptyValueOrNothing,
+                    ...nonEmptyValues
+                ];
+
+                // Don't create a new entry if we only got empty values
+                if (this.facetValues[property] || nonEmptyValues.length) {
+                    this.facetValues = {
+                        ...this.facetValues,
+                        [property]: cleanedUpValues
+                    };
+                    console.log(property, JSON.parse(JSON.stringify(this.facetValues[property])));
+                } else {
+                    console.log(property, "- didn't create an empty facet");
+                }
             }).catch(error => {
                 console.error(error);
                 this.facetValues = {
