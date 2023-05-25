@@ -11,8 +11,7 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-// const BASE_URL = "http://localhost:3000/"
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
+const BASE_URL = process.env.API_URL || "https://wikidocumentaries-api.wmcloud.org/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
@@ -67,7 +66,7 @@ const wikidocumentaries = {
                 id: 'P625',
                 label: 'koordinaatit',
                 value: '60.175556, 24.944028',
-                url: 'https://tools.wmflabs.org/geohack/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
+                url: 'https://geohack.toolforge.org/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
             },
             {
                 id: 'P373',
@@ -1161,11 +1160,20 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        //console.log(response.data);
+                        const images = response.data;
 
-                        commit('setWikidocumentariesImages', response.data);
-                        commit('setImagesShownOnTimeline', response.data);
-                        resolve(response.data);
+                        // Shuffle the images array starting from the last index
+                        // (the Fisher-Yates shuffle)
+                        for (let i = images.length - 1; i > 0; i--) {
+                            // pick a random index from the remaining unshuffled ones
+                            let j = Math.floor(Math.random() * (i+1));
+                            // swap the last unshuffled element with the random element
+                            [images[j], images[i]] = [images[i], images[j]];
+                        }
+
+                        commit('setWikidocumentariesImages', images);
+                        commit('setImagesShownOnTimeline', images);
+                        resolve(images);
 
                     }).catch(function (error) {
                         console.log(error);

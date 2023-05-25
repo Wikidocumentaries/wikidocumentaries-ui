@@ -1,7 +1,7 @@
 <template>
     <footer>
         <ul>
-            <li><a href="https://wikidocumentaries.wmflabs.org/">Wikidocumentaries wiki</a></li>
+            <li><a href="https://wikidocumentaries.wmcloud.org/">Wikidocumentaries wiki</a></li>
             <li><a href="http://blog.wikidocumentaries.io/en/">Blog</a></li>
             <li><a href="https://www.facebook.com/groups/wikidocumentaries/">Facebook group</a></li>
             <li><a href="https://github.com/wikidocumentaries">Codebase</a></li>
