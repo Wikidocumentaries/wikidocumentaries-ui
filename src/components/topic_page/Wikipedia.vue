@@ -182,41 +182,21 @@ export default {
       // check if items data is stored
       if (this.items.length !== 0) return this.items;
       this.items = new Array(imgs.length);
-      await Promise.all(
-        imgs.map(async function(img, index) {
-          let requestConfig = {
+      const titles = imgs.map(img => parent.getImageTitleFromURL(img.parentNode.href));
+      let requestConfig = {
             baseURL: parent.$store.state.BASE_URL,
             url: "/wiki/imageinfo",
             method: "get",
             params: {
-              titles: parent.getImageTitleFromURL(img.parentNode.href),
+              titles: titles,
               language: parent.language
             }
           };
-          await axios
-            .request(requestConfig)
-            .then(function(response) {
-              let wikiImageInfo = response.data.wikiImageInfo;
-              // Process some data here because DOMParser is not available at backend
-              if (wikiImageInfo.datecreated && wikiImageInfo.datecreated[0]) {
-                wikiImageInfo.datecreated[0] = parent.convertHtmlToText(
-                  wikiImageInfo.datecreated[0]
-                );
-              }
-              if (wikiImageInfo.creators && wikiImageInfo.creators[0]) {
-                wikiImageInfo.creators[0] = parent.convertHtmlToText(
-                  wikiImageInfo.creators[0]
-                );
-              }
-              if (wikiImageInfo.description && wikiImageInfo.description[0]) {
-                wikiImageInfo.description[0] = parent.convertHtmlToText(
-                  wikiImageInfo.description[0]
-                );
-              }
-              parent.items[index] = wikiImageInfo;
-            })
-            .catch(function(error) {
-              // infer image info from the img element
+      let response = await axios.request(requestConfig);
+      for (var index = 0; index < response.data.wikiImageInfo.length; index++){
+        let imgInfo = response.data.wikiImageInfo[index];
+        if (!imgInfo){
+          let img = imgs[index];
               parent.items[index] = {
                 actors: [],
                 collection: "",
@@ -248,10 +228,26 @@ export default {
                 title: [img.parentElement.parentElement.outerText],
                 year: 0
               };
-              console.log(error);
-            });
-        })
-      );
+            }
+        else{
+        if (imgInfo.datecreated && imgInfo.datecreated[0]) {
+          imgInfo.datecreated[0] = parent.convertHtmlToText(
+            imgInfo.datecreated[0]
+                );
+              }
+              if (imgInfo.creators && imgInfo.creators[0]) {
+                imgInfo.creators[0] = parent.convertHtmlToText(
+                  imgInfo.creators[0]
+                );
+              }
+              if (imgInfo.description && imgInfo.description[0]) {
+                imgInfo.description[0] = parent.convertHtmlToText(
+                  imgInfo.description[0]
+                );
+              }
+              parent.items[index] = imgInfo;
+            }
+      }
       return this.items;
     },
     addLinksToImages() {
