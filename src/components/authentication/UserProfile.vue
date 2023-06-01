@@ -1,11 +1,21 @@
 
 <template>
-<div>{{name}}
+<div>
+    <ToolbarMenu
+        icon="wikiglyph-translation"
+        tooltip="Show profile"
+        :translateItems="false"
+        :items="[{id:'logout', text:'Log Out'}]"
+        @doMenuItemAction="logOut"
+    >
+        <div slot="menu-title">{{name}}</div>
+    </ToolbarMenu>
 </div>
 </template>
 
 
 <script>
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
 export default {
     name: 'UserProfile',
     data() {
@@ -17,5 +27,15 @@ export default {
       this.name = localStorage.username;
     }
   },
+  components: {
+        ToolbarMenu,
+    },
+  methods: {
+        logOut (){
+            localStorage.removeItem('access_token');
+            localStorage.removeItem('username');
+            location. reload();
+        },
+    }
 }
 </script>

@@ -12,7 +12,8 @@
             <a class="main-button" @click="goToLandingPage">{{ landingPageName }}</a>
             <TopicSearchBox class="topic-search-box"></TopicSearchBox>
             <UILanguageMenu class="language-menu"></UILanguageMenu>
-            <UserProfile></UserProfile>
+            <LoginButton v-if="notLogIn"></LoginButton>
+            <UserProfile v-else></UserProfile>
         </div>
     </div>
 </template>
@@ -20,6 +21,7 @@
 <script>
 import TopicSearchBox from '@/components/TopicSearchBox'
 import UILanguageMenu from '@/components/menu/UILanguageMenu'
+import LoginButton from '@/components/authentication/Login';
 import UserProfile from "../authentication/UserProfile.vue";
 
 export default {
@@ -27,11 +29,13 @@ export default {
     data () {
         return {
             landingPageName: "Wikidocumentaries",
+            notLogIn: localStorage.getItem("username") === null,
         }
     },
     components: {
         UILanguageMenu,
         TopicSearchBox,
+        LoginButton,
         UserProfile
     },
     methods: {

@@ -1,11 +1,17 @@
 <template>
-    <div>
-<a @click="getCode">Login Button</a>   
-
-</div>
+     <ToolbarMenu
+        icon="wikiglyph-translation"
+        tooltip="Login"
+        :translateItems="false"
+        :items="[{id:'login', text:'Log In'}]"
+        @doMenuItemAction="getCode"
+    >
+        <div slot="menu-title">User Profile</div>
+    </ToolbarMenu>
 </template>
 
 <script>
+import ToolbarMenu from '@/components/menu/ToolbarMenu'
 export default {
     name: 'LoginButton',
     data(){
@@ -14,7 +20,9 @@ export default {
             CLIENT_SECRET:"0b08788ef5274e77a8b4454422cb1866d2f6a30a"
         }
     },
-
+    components: {
+        ToolbarMenu,
+    },
     methods: {
         getCode (){
             let url = "https://meta.wikimedia.org/w/rest.php/oauth2/authorize?client_id=" + this.CLIENT_ID + "&response_type=code";

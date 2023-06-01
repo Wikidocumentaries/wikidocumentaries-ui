@@ -1,7 +1,6 @@
 <template>
   <div class="landing-page">
     <MainToolBar></MainToolBar>
-    <LoginButton></LoginButton>
 
     <div class="cover">
       <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
@@ -202,7 +201,6 @@
 // import WikimapsWarperLayer from '@/openlayersplugin/WikimapsWarperLayer'
 import TopicSearchBox from "@/components/TopicSearchBox";
 import MainToolBar from "@/components/menu/MainToolbar";
-import LoginButton from "@/components/authentication/Login";
 
 
 export default {
@@ -231,7 +229,6 @@ export default {
     TopicSearchBox,
     // WikimapsWarperLayer,
     MainToolBar,
-    LoginButton,
 },
   mounted: function() {
     this.$store.commit("resetState");
