@@ -1,5 +1,8 @@
 <template>
+    <div>
 <a @click="getCode">Login Button</a>   
+
+</div>
 </template>
 
 <script>
@@ -14,7 +17,6 @@ export default {
 
     methods: {
         getCode (){
-            console.log(111111111111);
             let url = "https://meta.wikimedia.org/w/rest.php/oauth2/authorize?client_id=" + this.CLIENT_ID + "&response_type=code";
             window.location.href = url;
         },

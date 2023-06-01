@@ -12,6 +12,7 @@
             <a class="main-button" @click="goToLandingPage">{{ landingPageName }}</a>
             <TopicSearchBox class="topic-search-box"></TopicSearchBox>
             <UILanguageMenu class="language-menu"></UILanguageMenu>
+            <UserProfile></UserProfile>
         </div>
     </div>
 </template>
@@ -19,6 +20,7 @@
 <script>
 import TopicSearchBox from '@/components/TopicSearchBox'
 import UILanguageMenu from '@/components/menu/UILanguageMenu'
+import UserProfile from "../authentication/UserProfile.vue";
 
 export default {
     name: 'MainToolbar',
@@ -29,7 +31,8 @@ export default {
     },
     components: {
         UILanguageMenu,
-        TopicSearchBox
+        TopicSearchBox,
+        UserProfile
     },
     methods: {
         goToLandingPage(event) {
