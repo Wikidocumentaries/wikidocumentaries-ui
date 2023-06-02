@@ -25,6 +25,7 @@ export default {
     },
     methods: {
         getCode (){
+            localStorage.setItem('previouspage', window. location. href);
             let url = "https://meta.wikimedia.org/w/rest.php/oauth2/authorize?client_id=" + this.CLIENT_ID + "&response_type=code";
             window.location.href = url;
         },

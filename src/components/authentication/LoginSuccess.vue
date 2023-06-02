@@ -1,6 +1,6 @@
 <template>
     <div>    Login Success 
-        <a @click="$router.go(-3)">Return to previous page</a>
+        <a @click="returnToPage">Return to previous page</a>
         
     </div>
     
@@ -19,6 +19,11 @@ export default {
     };
   },
   methods: {
+    returnToPage(){
+      let url = localStorage.getItem('previouspage');
+      localStorage.removeItem('previouspage');
+      window.location.href = url;
+    },
     async getAccessToken() {
       const code = this.$route.query.code;
       const params = new URLSearchParams();
