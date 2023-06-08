@@ -148,6 +148,7 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"addTopic": "Adjuntez temo",
 			"addData": "Adjuntez datumi"
 		},
 		"imageActions": {
