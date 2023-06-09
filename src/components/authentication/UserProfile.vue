@@ -2,7 +2,7 @@
 <template>
 <div>
     <ToolbarMenu
-        icon="wikiglyph-translation"
+        icon="wikiglyph-user-active"
         tooltip="Show profile"
         :translateItems="false"
         :items="[{id:'logout', text:'Log Out'}]"

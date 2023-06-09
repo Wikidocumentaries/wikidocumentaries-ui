@@ -1,6 +1,6 @@
 <template>
      <ToolbarMenu
-        icon="wikiglyph-translation"
+        icon="wikiglyph-user-inactive"
         tooltip="Login"
         :translateItems="false"
         :items="[{id:'login', text:'Log In'}]"
