@@ -36,7 +36,7 @@
                 <i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i>
               </a>
             </div>
-            <ImagesRemoveMenu></ImagesRemoveMenu>
+            <!-- <ImagesRemoveMenu></ImagesRemoveMenu> -->
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@
 <script>
 import ImageViewer from "@/components/image_viewer/ImageViewer";
 import ImagesActionMenu from '@/components/menu/ImagesActionMenu';
-import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu';
+// import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu';
 
 export default {
   name: "ImageGrid",
@@ -64,7 +64,7 @@ export default {
   components: {
     ImageViewer,
     ImagesActionMenu,
-    ImagesRemoveMenu,
+    // ImagesRemoveMenu,
   },
   methods: {
     getCredits(item) {

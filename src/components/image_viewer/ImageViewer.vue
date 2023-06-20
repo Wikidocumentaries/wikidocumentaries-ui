@@ -593,13 +593,11 @@ export default {
         //     break;
         // case MENU_ACTIONS.SELECT_HEADER:
         case MENU_ACTIONS.UPLOAD:
-          console.log("I click upload");
           this.showPopUp();
           break;
       }
     },
     showPopUp() {
-      console.log("hahaha");
       this.$refs.popup.show();
     },
     createMap() {
