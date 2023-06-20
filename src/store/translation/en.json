@@ -274,7 +274,8 @@
                 "menuTooltip": "Actions",
                 "doGeolocatingText": "Set the location...",
                 "showImageText": "Show image",
-                "selectFeatured": "Choose as a header image"
+                "selectFeatured": "Choose as a header image",
+                "upload" : "upload"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
