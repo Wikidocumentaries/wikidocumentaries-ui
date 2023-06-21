@@ -1,7 +1,7 @@
 <template>
     <div class="images-component">
         <div class="toolbar">
-            <h1 class="header-title">Depictions from Wikimedia Commons</h1>
+            <h1 class="header-title">{{ title }}</h1>
         </div>
         <div class="facets">
             <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
@@ -138,8 +138,25 @@ OPTIONAL {
     });
 }
 
+const defaultFacets = [
+    'wdt:P6731', // Commons quality assessment
+    'wdt:P180', // depicts
+    'wdt:P195' // collection
+];
+
 export default {
     name: 'DepictingImages',
+    props: {
+        topic: String,
+        title: {
+            type: String,
+            default: "Depictions from Wikimedia Commons"
+        },
+        facets: {
+            type: Array,
+            default: () => defaultFacets
+        }
+    },
     data () {
         return {
             results: [],
@@ -193,7 +210,7 @@ export default {
 
         fetchSparql({facetProperty: facetProperty} = {}) {
             const topicItem =
-                  "wd:" + this.$store.state.wikidocumentaries.wikidataId;
+                  "wd:" + this.topic;
             const filterTriples = this.filters
                 .filter(filter => filter.property !== facetProperty)
                 .map(({property, value}) => `?file ${property} ${value} .`);
@@ -297,9 +314,7 @@ export default {
         },
     },
     mounted() {
-        this.fetchPossibleValues('wdt:P6731');
-        this.fetchPossibleValues('wdt:P180');
-        this.fetchPossibleValues('wdt:P195');
+        this.facets.forEach((facet) => this.fetchPossibleValues(facet));
         this.fetchImages();
     },
     components: {

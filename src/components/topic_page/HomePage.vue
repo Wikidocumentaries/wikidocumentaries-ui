@@ -45,7 +45,9 @@
     <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
     <Similar id="similar"></Similar>
-    <DepictingImages></DepictingImages>
+    <DepictingImages
+      :topic="this.$store.state.wikidocumentaries.wikidataId"
+    />
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
