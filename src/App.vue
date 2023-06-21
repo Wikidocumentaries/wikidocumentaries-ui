@@ -187,8 +187,7 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   width: 45px;
-  padding-top: 9px; /* To adjust baseline to a good position */
-  padding-bottom: 6px; /* For visual symmetry */
+  line-height: 45px;
 }
 
 .toolbar-item-a {
@@ -342,7 +341,6 @@ a:hover {
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
   vertical-align: middle;
-  line-height: 45px;
 }
 
 .text {
