@@ -20,7 +20,7 @@
         </div>
         <div class="intro">
              <div v-if="status === 'LOADING'">Searching for images...</div>
-             <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in Structured Data on Commons.</div>
+             <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in {{useSDC ? "Structured Data on Commons" : "Wikidata" }}.</div>
              <div v-if="status === 'ERROR'">{{ error }}</div>
         </div>
         <div :class="isExpanded ? 'expanded' : ''" class="imagegrid-container">
@@ -55,18 +55,36 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     `.trim().split("\n");
 
-function buildQuery({ topicItem, selectVars, filterTriples, optionalStatements, modifiers }) {
+function buildQuery({ topicItem, useSDC, selectVars, filterTriples, optionalStatements, modifiers }) {
+    // ?image refers to the URL that can be fetched and rendered
+    // ?file refers to what is filtered
+    // ?item refers to what is depicted
+    let imageFileAndItemTriples;
+    if (useSDC) {
+        imageFileAndItemTriples =
+            `
+?file a schema:ImageObject .
+?file schema:url ?image .
+
+?file wdt:P180 ?item . # depicts
+            `.trim().split("\n");
+    } else {
+        imageFileAndItemTriples =
+            `
+# what is depicted and what is filtered are the same in Wikidata
+BIND(?item AS ?file)
+
+?file (wdt:P18) ?image . # image XXX: alternative properties
+            `.trim().split("\n");
+    }
     return `
 ${prefixes.join("\n")}
 
 SELECT ${selectVars.join(" ")} {
 
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
+    ${imageFileAndItemTriples.join("\n    ")}
 
-    ?file wdt:P180 ?item .
-
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
+    ${useSDC ? 'SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> ' : ''}{
         {
             VALUES ?item { ${topicItem} }
         }
@@ -84,13 +102,14 @@ ${modifiers.join("\n")}
     `.trim();
 }
 
-function buildFacetQuery(topicItem, filterTriples, facetProperty) {
+function buildFacetQuery(topicItem, useSDC, filterTriples, facetProperty) {
     return buildQuery({
+        useSDC: useSDC,
         topicItem: topicItem,
         selectVars: [
             "?objectValue",
             "(SAMPLE(?label_) AS ?label)",
-            "(COUNT(DISTINCT ?file) AS ?count)"
+            "(COUNT(DISTINCT ?image) AS ?count)"
         ],
         filterTriples: filterTriples,
         optionalStatements:
@@ -111,8 +130,9 @@ OPTIONAL {
     });
 }
 
-function buildImageQuery(topicItem, filterTriples) {
+function buildImageQuery(topicItem, useSDC, filterTriples) {
     return buildQuery({
+        useSDC: useSDC,
         topicItem: topicItem,
         selectVars: [
             "?file",
@@ -155,6 +175,10 @@ export default {
         facets: {
             type: Array,
             default: () => defaultFacets
+        },
+        useSDC: {
+            type: Boolean,
+            default: true,
         }
     },
     data () {
@@ -217,16 +241,18 @@ export default {
             let sparql;
             if (facetProperty) {
                 // Build a query for the values of the given facet property
-                sparql = buildFacetQuery(topicItem, filterTriples, facetProperty);
+                sparql = buildFacetQuery(topicItem, this.useSDC, filterTriples, facetProperty);
             } else {
                 // Build a query to fetch the result images
-                sparql = buildImageQuery(topicItem, filterTriples);
+                sparql = buildImageQuery(topicItem, this.useSDC, filterTriples);
             }
 
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
 
             return axios.post(
-                "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons",
+                this.useSDC
+                    ? "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons"
+                    : "https://query.wikidata.org/sparql",
                 body
             ).catch(error => {
                 if (error.response) {
@@ -293,7 +319,7 @@ export default {
                 this.status = "SUCCESS";
                 const results = wdk.simplify.sparqlResults(response.data);
                 this.results = results.map((result => ({
-                    id: result.file,
+                    id: result.image,
                     infoURL: result.file,
                     imageURL: result.image,
                     thumbURL: result.image+"?width=500",
