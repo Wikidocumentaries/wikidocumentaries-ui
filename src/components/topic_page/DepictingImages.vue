@@ -466,4 +466,33 @@ export default {
 .facet button .count {
     padding-left: 2px;
 }
+
+.facet .value-list {
+    scrollbar-color: var(--main-red) transparent;
+    scrollbar-width: 7px;
+    -webkit-overflow-scrolling: auto;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-red);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 7px;
+}
+
 </style>
