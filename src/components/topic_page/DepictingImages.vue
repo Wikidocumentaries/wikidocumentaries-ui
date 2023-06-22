@@ -232,7 +232,7 @@ export default {
             this.fetchImages();
         },
 
-        fetchSparql({facetProperty: facetProperty} = {}) {
+        fetchSparql({facetProperty: facetProperty, backoff: backoff = 0} = {}) {
             const topicItem =
                   "wd:" + this.topic;
             const filterTriples = this.filters
@@ -255,6 +255,12 @@ export default {
                     : "https://query.wikidata.org/sparql",
                 body
             ).catch(error => {
+                if (error.response && (error.response.status === 429 || error.response.status === 400)) {
+                    // Too many requests - sleep a while and retry
+                    const delay = (Math.random() * this.facets.length + 1) * 1000 * 2 ** backoff;
+                    console.log(`Retrying in ${ delay / 1000 } seconds`);
+                    setTimeout(() => this.fetchSparql({ facetProperty, backoff: backoff + 1 }), delay);
+                }
                 if (error.response) {
                     const data = error.response.data;
                     try {
@@ -340,7 +346,9 @@ export default {
         },
     },
     mounted() {
-        this.facets.forEach((facet) => this.fetchPossibleValues(facet));
+        this.facets.forEach((facet, i) => {
+            setTimeout(() => this.fetchPossibleValues(facet), (i+1) * 1000);
+        });
         this.fetchImages();
     },
     components: {
