@@ -44,7 +44,11 @@
 <!--     <TopicMap id="topicMap"></TopicMap> -->
     <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
-    <Similar id="similar"></Similar>
+    <Similar
+      v-if="this.$store.state.wikidocumentaries.wikidataId !== 'Q105501871'"
+      id="similar"
+    />
+    </Similar>
 
     <DepictingImages
       v-if="['Q105501871', 'Q119149823'].includes(this.$store.state.wikidocumentaries.wikidataId)"
