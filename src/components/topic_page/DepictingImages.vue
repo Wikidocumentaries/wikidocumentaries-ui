@@ -396,8 +396,9 @@ export default {
     color: white;
 }
 
+/* Less padding between the facets shadow and the image grid */
 .intro {
-    padding: 0 20px 10px 20px;
+    padding-bottom: 8px;
 }
 
 .facets {
@@ -405,6 +406,20 @@ export default {
     flex-direction: row;
     padding: 0 10px 0px 10px;
     gap: 1em;
+    box-shadow: var(--main-shadow);
+    position: relative;
+}
+
+/* Hide the the box shadow of the top edge */
+.facets:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 100%;
+    background: white;
+    height: 6px;
 }
 .facet {
     flex-shrink: 0;
