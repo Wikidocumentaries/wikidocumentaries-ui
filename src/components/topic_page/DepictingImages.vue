@@ -246,7 +246,10 @@ export default {
             this.fetchImages();
         },
 
-        fetchSparql({facetProperty: facetProperty, backoff: backoff = 0} = {}) {
+        async fetchSparql({
+            facetProperty: facetProperty,
+            backoff: backoff = 0
+        } = {}) {
             const topicItem =
                   "wd:" + this.topic;
             const filterTriples = this.filters
@@ -263,17 +266,21 @@ export default {
 
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
 
-            return axios.post(
-                this.useSDC
+            try {
+                const endpointURL = this.useSDC
                     ? "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons"
-                    : "https://query.wikidata.org/sparql",
-                body
-            ).catch(error => {
+                    : "https://query.wikidata.org/sparql";
+                return await axios.post(endpointURL, body);
+            } catch (error) {
                 if (error.response && (error.response.status === 429 || error.response.status === 400)) {
                     // Too many requests - sleep a while and retry
                     const delay = (Math.random() * this.facets.length + 1) * 1000 * 2 ** backoff;
                     console.log(`Retrying in ${ delay / 1000 } seconds`);
-                    setTimeout(() => this.fetchSparql({ facetProperty, backoff: backoff + 1 }), delay);
+                    await new Promise((resolve) => setTimeout(resolve, delay));
+                    return this.fetchSparql({
+                        facetProperty,
+                        backoff: backoff + 1
+                    });
                 }
                 if (error.response) {
                     const data = error.response.data;
@@ -288,7 +295,7 @@ export default {
                     }
                 }
                 throw error;
-            });
+            };
         },
 
         fetchPossibleValues(property) {
