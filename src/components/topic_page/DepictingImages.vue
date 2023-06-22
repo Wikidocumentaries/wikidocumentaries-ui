@@ -66,7 +66,8 @@ function buildQuery({ topicItem, useSDC, selectVars, filterTriples, optionalStat
 ?file a schema:ImageObject .
 ?file schema:url ?image .
 
-?file wdt:P180 ?item . # depicts
+# depicts | exhibition history
+?file (wdt:P180|wdt:P608) ?item .
             `.trim().split("\n");
     } else {
         imageFileAndItemTriples =
@@ -91,6 +92,11 @@ SELECT ${selectVars.join(" ")} {
         UNION
         {
             ?item wdt:P171+ ${topicItem} . # parent taxon
+        }
+        UNION
+        {
+            # depicts | exhibition history | discovery location
+            ?item (wdt:P180|wdt:P608|wdt:P189) ${topicItem} .
         }
     }
 
@@ -191,7 +197,15 @@ export default {
             labels: {
                 P180: "Depicts",
                 P195: "Collection",
-                P6731: "Assessment"
+                P6731: "Assessment",
+                P170: "Creator",
+                P189: "Location of discovery",
+                P127: "Owned by",
+                encodingFormat: "File format",
+                P31: "Type",
+                P276: "Current location",
+                P186: "Material",
+                P366: "Use"
             },
             isExpanded: false
         };
