@@ -520,6 +520,16 @@
             "optionList": "List"
         }
     },
+    "upload": {
+        "popup": {
+            "popupTitle": "Upload image",
+            "popupTip": "Verify the information and edit the texts if needed.",
+            "filename": "File name",
+            "upload": "Upload" ,
+            "closePopup": "Close"
+
+        }
+    },
     "general": {
         "wikidocumentaries": "Wikidocumentaries",
         "ok": "OK",

@@ -19,7 +19,7 @@
           <img class="icon" :src="getIcon(item)" align="right">
         </div>
         <div class="thumb-image-header">
-          <div class="left-align">
+          <div class="left-align" @click.stop.prevent>
             <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
             <div
               v-if="item.geoLocations != undefined && item.geoLocations.length > 0"

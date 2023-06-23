@@ -35,7 +35,6 @@
                       :tooltip="$t('general.menus.actionMenuTitle')"
                       :items="toolbarActionMenuItems"
                       @doMenuItemAction="onDoMenuItemAction"
-                      @click="showPopUp()"
                     >
                     <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                     </ToolbarMenu>
@@ -593,12 +592,12 @@ export default {
         //     break;
         // case MENU_ACTIONS.SELECT_HEADER:
         case MENU_ACTIONS.UPLOAD:
-          this.showPopUp();
+          this.showPopUp(this.element);
           break;
       }
     },
-    showPopUp() {
-      this.$refs.popup.show();
+    showPopUp(element) {
+      this.$refs.popup.show(element);
     },
     createMap() {
       var ol = this.$ol;
