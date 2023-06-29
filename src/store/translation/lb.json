@@ -9,7 +9,10 @@
 	},
 	"LandingPage": {
 		"search": "Sichen",
-		"searchInputSearchOnly": "En Thema fannen",
+		"searchInputPlaceHolder": "Fannt en Theema oder leet en neit Theema un",
+		"searchInputSearchOnly": "Fannt en Thema",
+		"showMore": "Méi Elementer weisen",
+		"createNew": "Neit Element uleeën",
 		"titleDescription": "Wat ass Wikidocumentaries?",
 		"titleStatus": "Status",
 		"status": "D'Säit ass an enger Demophas. Vill wichteg Funktioune sinn nach net disponibel an et ka sinn, datt d'Säit net sou gutt leeft, wéi een et erwaarde géif.",
@@ -32,9 +35,11 @@
 		"titleContact": "Kontakt ophuelen!",
 		"facebook": "Facebook-Grupp",
 		"blog": "Blog",
-		"email": "E-Mail"
+		"email": "E-Mail",
+		"github": "Github-Repository"
 	},
 	"MainPage": {
+		"topicPageName": "Theemesäit",
 		"mapSearchPageName": "Kaarten duerchsichen"
 	},
 	"topic_page": {
@@ -169,12 +174,22 @@
 				"menuTooltip": "D'Bild ewechhuelen",
 				"remDepicted": {
 					"search": "Nom Sujet sichen"
+				},
+				"remInappropriate": {
+					"menuTitle": "Et ass deplacéiert, well",
+					"shortMenuTitle": "Et ass deplacéiert",
+					"privacy": "Et verletzt d'Privatsphär vun den duergestallte Persounen",
+					"violence": "Et weist extrem Gewalt",
+					"sex": "Et weist explizitte Sex",
+					"copyvio": "Et verstéisst géint d'Urheberrecht",
+					"explain": "Hannerloosst ee Kommentar als Erklärung"
 				}
 			},
 			"imagesViewExternal": "D'Originalbild weisen",
 			"imagesViewOnMap": "Bild op enger Kaart weisen"
 		},
 		"TopicMap": {
+			"headerTitle": "Thema op der Kaart",
 			"hideImagesMenuText": "Biller verstoppen",
 			"showNearbyPlacesMenuText": "Plazen nobäi weisen"
 		},
@@ -205,6 +220,9 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
+			"missingArticleMissing": "An Ärer Sprooch gëtt et keen Artikel iwwert dëst Theema.",
+			"missingArticleCreate": "Dir kënnt dësen Artikel an Ärer Sprooch uleeën, andeems Dir op d'Plus-Symbol klickt.",
+			"missingArticleTranslate": "Dir kënnt dësen Artikel op Är Sprooch iwwersetzen, andeems Dir se am Sproochmenü auswielt.",
 			"extLink": {
 				"linkTitleWP": "Op Wikipedia liesen oder änneren"
 			},
@@ -230,7 +248,10 @@
 			"addFormat": "Format derbäisetzen",
 			"removeFormat": "Format ewechhuelen",
 			"technique": "Technik",
+			"addTechnique": "Technik derbäisetzen",
+			"removeTechnique": "Technik ewechhuelen",
 			"genre": "Genre",
+			"addGenre": "Genre derbäisetzen",
 			"removeGenre": "Genre ewechhuelen",
 			"addTopic": "Thema derbäisetzen",
 			"removeTopic": "Thema ewechhuelen",
@@ -241,8 +262,12 @@
 			"addPerson": "Persoun derbäisetzen",
 			"removePerson": "Persoun ewechhuelen",
 			"event": "Evenement",
+			"addEvent": "Evenement derbäisetzen",
+			"removeEvent": "Evenement ewechhuelen",
 			"institution": "Institutioun",
 			"collection": "Sammlung",
+			"addCollection": "Sammlung derbäisetzen",
+			"inventoryNumber": "Inventarnummer",
 			"inscriptions": "Opschrëften",
 			"measurements": "Dimensiounen",
 			"copyright": "Copyright",
@@ -301,6 +326,7 @@
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "OK",
 		"cancel": "Ofbriechen",
 		"helpText": "Hëllef",

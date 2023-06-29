@@ -39,7 +39,8 @@
 		"facebook": "Facebookgrupp",
 		"wiki": "Wikidocumentaries wiki",
 		"blog": "Blogg",
-		"email": "E-post"
+		"email": "E-post",
+		"github": "Github-förvaret"
 	},
 	"MainPage": {
 		"topicPageName": "Ämnesida",
@@ -53,21 +54,32 @@
 	},
 	"topic_page": {
 		"Affiliations": {
-			"headerTitle": "Anknytning"
+			"headerTitle": "Anknytning",
+			"intro": "Organisationer som denna person eller organisation har anknytning till."
 		},
 		"Awards": {
-			"headerTitle": "Utmärkelser"
+			"headerTitle": "Utmärkelser",
+			"intro": "Nomineringar och utmärkelser för ämnet på denna sida."
 		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Välj historisk baskarta eller baskartor",
 			"chooseMapHelpNote": "Tips: ctrl + klicka tillåter att du väljer många kartor",
 			"yearAbbreviation": "år"
 		},
+		"Collection": {
+			"headerTitle": "Verk i samlingen"
+		},
+		"Cups": {
+			"headerTitle": "Spel, serier och turneringar",
+			"intro": "Denna klubb har spelat i följande matcher, serier och turneringar."
+		},
 		"CV": {
-			"headerTitle": "CV"
+			"headerTitle": "CV",
+			"intro": "Dessa är professionella händelser av ämnets person."
 		},
 		"Depicted": {
 			"headerTitle": "Skildras i",
+			"intro": "Detta ämne skildras i dessa verk. Sortera verken efter olika kriterier, visa som lista för att se de verk som saknar bild.",
 			"sortMenu": {
 				"title": "Sortera verk",
 				"tooltip": "Sortera verk",
@@ -76,6 +88,8 @@
 				"optionClear": "Rensa sortering"
 			},
 			"facetMenu": {
+				"title": "Fasett verk enligt",
+				"tooltip": "Fasett verk enligt olika kriterier",
 				"optionType": "Typ",
 				"optionColl": "Skapare"
 			},
@@ -115,6 +129,9 @@
 			"subtitleEditText": "Redigera beskrivningen",
 			"subtitleApproveText": "Godkänn denna beskrivning"
 		},
+		"Heritage": {
+			"headerTitle": "Element av kulturarv"
+		},
 		"Locations": {
 			"headerTitle": "På denna plats",
 			"sortMenu": {
@@ -126,6 +143,8 @@
 				"optionClear": "Rensa sortering"
 			},
 			"facetMenu": {
+				"title": "Fasett platser enligt",
+				"tooltip": "Fasett platser enligt olika kriterier",
 				"optionType": "Typ",
 				"optionColl": "Skapare",
 				"optionCity": "Plats"
@@ -150,11 +169,23 @@
 		"Similar": {
 			"headerTitle": "Liknande ämnen"
 		},
+		"Familytree": {
+			"headerTitle": "Släktträd"
+		},
+		"Instances": {
+			"headerTitle": "Exempel på detta ämne",
+			"intro": "Se exempel på detta ämne. Visa som lista för att se även objekt utan bild."
+		},
 		"Links": {
 			"headerTitle": "Länkar från den här artikeln"
 		},
 		"Location": {
-			"headerTitle": "Plats"
+			"headerTitle": "Plats",
+			"intro": "Detta ämne är beläget i eller i samband med dessa ämnen."
+		},
+		"Names": {
+			"headerTitle": "Namn",
+			"intro": "Se namnen på detta ämne och alla tillgängliga alternativ."
 		},
 		"People": {
 			"headerTitle": "Människor relaterade till ämnet",
@@ -166,6 +197,7 @@
 			"sortMenuOptionFirst": "Efter förnamn",
 			"sortMenuOptionLast": "Efter efternamn",
 			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuTitle": "Fasett enligt",
 			"facetMenuOptionProfession": "Yrke",
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Kön"
@@ -361,6 +393,7 @@
 			"image": "Bild",
 			"photographer": "Fotograf",
 			"addPhotographData": "Lägg till information om fotografiet",
+			"attribution": "Erkännande",
 			"digitalCopy": "Digital kopia",
 			"publishingPlatform": "Plattformen",
 			"platformId": "ID",
@@ -427,6 +460,8 @@
 			"optionClear": "Rensa sortering"
 		},
 		"facetMenu": {
+			"title": "Fasett enligt",
+			"tooltip": "Fasett ämnen enligt olika kriterier",
 			"optionType": "Typ",
 			"optionColl": "Skapare",
 			"optionCity": "Plats"
@@ -464,6 +499,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografera denna kulturarvsplats och delta i fototävlingen i $2!",
 		"WLMButton": "Ladda upp bild"
 	}
 }
