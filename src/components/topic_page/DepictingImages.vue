@@ -3,18 +3,20 @@
         <div class="toolbar">
             <h1 class="header-title">{{ title }}</h1>
         </div>
-        <div class="facets">
-            <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
-                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
-                <div class="value-list">
-                    <button
-                        v-for="value in facetValues[property]"
-                        :key="value.objectValue"
-                        :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
-                        @click="chooseValue(property, value.objectValue)">
-                        <div class="label">{{ value.label || value.objectValue || "-" }}</div>
-                        <div class="count">&nbsp;{{ value.count }}</div>
-                    </button>
+        <div class="shadow-bottom">
+            <div class="facets">
+                <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
+                    <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
+                    <div class="value-list">
+                        <button
+                            v-for="value in facetValues[property]"
+                            :key="value.objectValue"
+                            :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
+                            @click="chooseValue(property, value.objectValue)">
+                            <div class="label">{{ value.label || value.objectValue || "-" }}</div>
+                            <div class="count">&nbsp;{{ value.count }}</div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -246,7 +248,10 @@ export default {
             this.fetchImages();
         },
 
-        fetchSparql({facetProperty: facetProperty, backoff: backoff = 0} = {}) {
+        async fetchSparql({
+            facetProperty: facetProperty,
+            backoff: backoff = 0
+        } = {}) {
             const topicItem =
                   "wd:" + this.topic;
             const filterTriples = this.filters
@@ -263,17 +268,21 @@ export default {
 
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
 
-            return axios.post(
-                this.useSDC
+            try {
+                const endpointURL = this.useSDC
                     ? "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons"
-                    : "https://query.wikidata.org/sparql",
-                body
-            ).catch(error => {
+                    : "https://query.wikidata.org/sparql";
+                return await axios.post(endpointURL, body);
+            } catch (error) {
                 if (error.response && (error.response.status === 429 || error.response.status === 400)) {
                     // Too many requests - sleep a while and retry
                     const delay = (Math.random() * this.facets.length + 1) * 1000 * 2 ** backoff;
                     console.log(`Retrying in ${ delay / 1000 } seconds`);
-                    setTimeout(() => this.fetchSparql({ facetProperty, backoff: backoff + 1 }), delay);
+                    await new Promise((resolve) => setTimeout(resolve, delay));
+                    return this.fetchSparql({
+                        facetProperty,
+                        backoff: backoff + 1
+                    });
                 }
                 if (error.response) {
                     const data = error.response.data;
@@ -288,7 +297,7 @@ export default {
                     }
                 }
                 throw error;
-            });
+            };
         },
 
         fetchPossibleValues(property) {
@@ -406,12 +415,17 @@ export default {
     flex-direction: row;
     padding: 0 10px 0px 10px;
     gap: 1em;
-    box-shadow: var(--main-shadow);
     position: relative;
+    overflow-x: auto;
+}
+
+.shadow-bottom {
+    position: relative;
+    box-shadow: var(--main-shadow);
 }
 
 /* Hide the the box shadow of the top edge */
-.facets:before {
+.shadow-bottom:before {
     content: "";
     display: block;
     position: absolute;
@@ -448,6 +462,7 @@ export default {
     padding-right: 10px;
     margin-top: 0.25em;
     max-width: 30vw;
+    min-width: min-content;
 }
 
 .facet button.selected, .facet button:hover { 
