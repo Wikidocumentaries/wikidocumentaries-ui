@@ -3,18 +3,20 @@
         <div class="toolbar">
             <h1 class="header-title">{{ title }}</h1>
         </div>
-        <div class="facets">
-            <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
-                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
-                <div class="value-list">
-                    <button
-                        v-for="value in facetValues[property]"
-                        :key="value.objectValue"
-                        :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
-                        @click="chooseValue(property, value.objectValue)">
-                        <div class="label">{{ value.label || value.objectValue || "-" }}</div>
-                        <div class="count">&nbsp;{{ value.count }}</div>
-                    </button>
+        <div class="shadow-bottom">
+            <div class="facets">
+                <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
+                    <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
+                    <div class="value-list">
+                        <button
+                            v-for="value in facetValues[property]"
+                            :key="value.objectValue"
+                            :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
+                            @click="chooseValue(property, value.objectValue)">
+                            <div class="label">{{ value.label || value.objectValue || "-" }}</div>
+                            <div class="count">&nbsp;{{ value.count }}</div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -413,12 +415,17 @@ export default {
     flex-direction: row;
     padding: 0 10px 0px 10px;
     gap: 1em;
-    box-shadow: var(--main-shadow);
     position: relative;
+    overflow-x: auto;
+}
+
+.shadow-bottom {
+    position: relative;
+    box-shadow: var(--main-shadow);
 }
 
 /* Hide the the box shadow of the top edge */
-.facets:before {
+.shadow-bottom:before {
     content: "";
     display: block;
     position: absolute;
@@ -455,6 +462,7 @@ export default {
     padding-right: 10px;
     margin-top: 0.25em;
     max-width: 30vw;
+    min-width: min-content;
 }
 
 .facet button.selected, .facet button:hover { 
