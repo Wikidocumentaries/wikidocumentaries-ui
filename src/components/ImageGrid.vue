@@ -18,8 +18,8 @@
           <div class="thumb-credit">{{ getCredits(item) }}</div>
           <img class="icon" :src="getIcon(item)" align="right">
         </div>
-        <div class="thumb-image-header">
-          <div class="left-align" @click.stop.prevent>
+        <div class="thumb-image-header"> 
+          <div class="left-align" @click.stop>
             <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
             <div
               v-if="item.geoLocations != undefined && item.geoLocations.length > 0"

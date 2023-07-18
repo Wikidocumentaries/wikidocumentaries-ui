@@ -33,10 +33,10 @@ export default {
   data() {
     return {
       iconActionMenuItems: [
-        {
-          id: MENU_ACTIONS.SHOW_IMAGE,
-          text: "topic_page.TopicImages.imagesActionMenu.showImageText"
-        },
+        // {
+        //   id: MENU_ACTIONS.SHOW_IMAGE,
+        //   text: "topic_page.TopicImages.imagesActionMenu.showImageText"
+        // },
         {
           id: MENU_ACTIONS.UPLOAD,
           text: "topic_page.TopicImages.imagesActionMenu.upload"

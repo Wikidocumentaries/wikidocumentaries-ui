@@ -89,16 +89,30 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <button class="button" @click="upload">
+        </div >
+        <div v-if="licenseTemplate"><button class="button" @click="upload">
         Upload
         </button>
+        <button class="button" @click="getCsrfToken">
+        test
+        </button>
+        </div>
+        <div v-else><button class="disable-button">
+        Upload
+        </button>
+        <div class="licenseMessage">
+        <div class="toolbar">
+            <h4 class="popupTip">{{ $t('upload.popup.cannotUpload') }}<a @click="upload" href='https://github.com/Wikidocumentaries/wikidocumentaries-ui/issues/new/choose'>Github</a></h4>
+        </div>
+    </div>
+    </div>
     </div>
 
 </div>
 </template>
 <script>
 import Dataselect from "@/components/Dataselect";
+import axios from "axios";
 
 export default{
     name: 'PopUp',  
@@ -112,6 +126,7 @@ export default{
             license: '',
             source: '',
             filename: '',
+            licenseTemplate: '',
         }
         },
         components:{
@@ -132,7 +147,8 @@ export default{
             }
             else{this.author = ''}
             if (element.datecreated[0]){
-                this.date = element.datecreated[0].replace(/\D/g, "");
+                this.date =
+                element.year != "" && element.year != null ? element.year : "";
                 this.filename += '_' + this.date;
             }
             else{this.date = ''}
@@ -145,6 +161,7 @@ export default{
             }
             else{this.source = ''}
             this.filename = this.filename.replace(/\s/g, "_");
+            this.getLicenseTemplate();
         },
         hide() {
             this.showModal = false;
@@ -152,13 +169,33 @@ export default{
         getLicenseTemplate(){
             switch (this.license) {
                 case 'CC BY 4.0':
-                    return '{{Cc-by-sa-4.0}}';
+                    this.licenseTemplate = '{{Cc-by-4.0}}';
+                    break;
+                case 'CC BY-SA 4.0':
+                    this.licenseTemplate = '{{Cc-by-sa-4.0}}';
+                    break;
+                case 'CC0':
+                    this.licenseTemplate = '{{Cc-zero}}';
+                    break;
+                case 'PDM':
+                    this.licenseTemplate = '{{PD-old}}';
+                    break;
             }
-            return ''; 
+        }, 
+        async getCsrfToken() {
+            let requestConfig = {
+            baseURL: this.$store.state.BASE_URL,
+            url: "/csrfToken",
+            method: "get",
+            params: {
+              token: localStorage.getItem("access_token"),
+            }
+            };
+        let response = await axios.request(requestConfig);
+        console.log(response);
         },
         upload(){
             let infoTemplate = `{{Information|description=${this.title}|date=${this.date}|source=${this.source}|author=${this.author}}}`;
-            let licenseTemplate = this.getLicenseTemplate();
             let category = '[[Category:Images uploaded from Wikidocumentaries]]';
             var params = {
                 action: 'upload',
@@ -166,9 +203,11 @@ export default{
                 ignorewarnings: '1',
                 token: 'csrf_token',
                 format: 'json',
-                text: infoTemplate + licenseTemplate + category,
+                text: infoTemplate + this.licenseTemplate + category,
             };
             console.log(params);
+            console.log(this.element.downloadScale);
+            console.log(this.element.downloadURL);
         },
 
     }
@@ -242,10 +281,33 @@ export default{
 .popupTip{
     font-weight:lighter;
     margin-top: 0px;
+    width: 600px;
+    text-align: left;
+}
+
+.licenseMessage{
+    margin-bottom: 0px;
+    width: 600px;
+    display: inline-block;
 }
 
 .button {
   background-color: #249ad1; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 4px 2px;
+  cursor: pointer;
+  align-items: left;
+}
+
+.disable-button{
+  background-color: #777; 
   border: none;
   color: white;
   padding: 15px 32px;

@@ -526,7 +526,8 @@
             "popupTip": "Verify the information and edit the texts if needed.",
             "filename": "File name",
             "upload": "Upload" ,
-            "closePopup": "Close"
+            "closePopup": "Close",
+            "cannotUpload": "This image cannot be uploaded to Wikimedia Commons because the license is not in the list of allowed licenses. If you think this is an error, please [file an issue] on "
 
         }
     },
