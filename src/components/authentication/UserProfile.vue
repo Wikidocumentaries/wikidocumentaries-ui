@@ -15,7 +15,9 @@
 
 
 <script>
-import ToolbarMenu from '@/components/menu/ToolbarMenu'
+import ToolbarMenu from '@/components/menu/ToolbarMenu';
+var request = require('request').defaults({jar: true});
+
 export default {
     name: 'UserProfile',
     data() {

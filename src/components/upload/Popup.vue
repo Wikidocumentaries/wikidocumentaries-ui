@@ -1,7 +1,36 @@
 <template>
 <div v-if="showModal" class="popup" >
-    <div class="popup-inner">
+    <div v-if="inUpload" class="popup-inner">
+        <div class="toolbar">
+            <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
+                <div class="toolbar-item">
+                      <a href="#" class="toolbar-item-a">
+                        <i class="wikiglyph wikiglyph-cross"></i>
+                      </a>
+                      <span class="tooltip">{{ $t('upload.popup.uploadInProgress') }}</span>
+                    </div>
+        </div>
+        <InUpload></InUpload>
+        <div class="message">{{ currentProcess }}</div>
+        <div class="message">{{ filenameNoUnderscore }}</div>
+        <div>
+        <button class="button" @click.prevent="hide">{{ $t('upload.popup.cancel') }}</button>
+        <button class="disable-button">Upload</button></div>
+    </div>
+    <div v-else class="popup-inner">
         <slot></slot>
+        <div v-if="showResult" class="popup-inner">
+        <div class="toolbar">
+                <div class="toolbar-item" @click.prevent="hide">
+                      <a href="#" class="toolbar-item-a">
+                        <i class="wikiglyph wikiglyph-cross"></i>
+                      </a>
+                      <span class="tooltip">{{ $t('upload.popup.closePopup') }}</span>
+                    </div>
+        </div>
+        <div class="message">{{ resultMessage }}</div>
+    </div>
+    <div v-else>
         <div class="toolbar">
             <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
                 <div class="toolbar-item" @click.prevent="hide">
@@ -67,6 +96,7 @@
                     </div>    
                 </div>
             </div>
+
             <div v-if="element.license" class="grid-row">
                 <div class="grid-icons">
                     <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
@@ -78,6 +108,19 @@
                     </div>
                 </div>
             </div>
+
+            <div v-if="this.category" class="grid-row">
+                <div class="grid-icons">
+                    <i class="wikiglyph wikiglyph-message metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                    <div class="grid-item">{{ $t('upload.popup.category') }}</div>
+                    <div class="data">
+                        <a :href="this.categoryLink">{{ category }}</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="grid-row">
                 <div class="grid-icons">
                     <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
@@ -89,12 +132,26 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Depicts -->
+            <div class="grid-row">
+                <div class="grid-icons">
+                    <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
+                </div>
+                <div class="grid-text">
+                    <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicted') }}</div>
+                    <div class="data">
+                        <div class="grid-body unedited">{{ imgDepict }}</div>
+                    </div>    
+                </div>
+            </div>
+
         </div >
-        <div v-if="licenseTemplate"><button class="button" @click="upload">
+        <div v-if="licenseTemplate"><button class="button" @click="getCsrfToken">
         Upload
         </button>
-        <button class="button" @click="getCsrfToken">
-        test
+        <button class="button" @click="depict">
+            depict
         </button>
         </div>
         <div v-else><button class="disable-button">
@@ -107,11 +164,13 @@
     </div>
     </div>
     </div>
+    </div>
 
 </div>
 </template>
 <script>
 import Dataselect from "@/components/Dataselect";
+import InUpload from "@/components/upload/InUpload";
 import axios from "axios";
 
 export default{
@@ -120,29 +179,41 @@ export default{
         return {
             element: {},
             showModal: false,
+            inUpload: false,
+            showResult: false,
+            currentProcess: "",
+            resultMessage: "",
             date: '',
             title: '',
             author: '',
             license: '',
             source: '',
             filename: '',
+            filenameNoUnderscore: '',
+            category: '',
+            categoryLink: '',
             licenseTemplate: '',
+            imgDepict: '',
+            response: '',
         }
         },
         components:{
             Dataselect,
+            InUpload,
         },
     methods: {
         show(element){
+            this.showResult = false;
             this.showModal = true;
             this.element = element;
             if (element.title){
-                this.title = element.title[0];
+                
+                this.title = element.title[0].replace(/[^\w\sÅÄÖåäö]/gi, "");
                 this.filename = this.title.charAt(0).toUpperCase() + this.title.slice(1);
             }
             else{this.title = ''}
             if (element.creators[0]){
-                this.author = element.creators[0].name.split(', ').reverse().join(' ');
+                this.author = element.creators[0].name.split(', ').reverse().join(' ').replace(/[^\w\sÅÄÖåäö]/gi, "");
                 this.filename += '_by_' + this.author;
             }
             else{this.author = ''}
@@ -160,8 +231,17 @@ export default{
                 this.source = element.infoURL;
             }
             else{this.source = ''}
+            this.filenameNoUnderscore = this.filename;
             this.filename = this.filename.replace(/\s/g, "_");
             this.getLicenseTemplate();
+            for (var statement of this.$store.state.wikidocumentaries.wikidata.statements) {
+                if (statement.id === "P373"){
+                    this.category = statement.values[0].value;
+                    this.categoryLink = statement.values[0].url;
+                    console.log(statement);
+                }
+            }
+            this.imgDepict = this.$store.state.wikidocumentaries.title;
         },
         hide() {
             this.showModal = false;
@@ -183,6 +263,8 @@ export default{
             }
         }, 
         async getCsrfToken() {
+            this.inUpload = true;
+            this.currentProcess = "Getting token";
             let requestConfig = {
             baseURL: this.$store.state.BASE_URL,
             url: "/csrfToken",
@@ -191,25 +273,99 @@ export default{
               token: localStorage.getItem("access_token"),
             }
             };
-        let response = await axios.request(requestConfig);
-        console.log(response);
-        },
-        upload(){
-            let infoTemplate = `{{Information|description=${this.title}|date=${this.date}|source=${this.source}|author=${this.author}}}`;
-            let category = '[[Category:Images uploaded from Wikidocumentaries]]';
-            var params = {
-                action: 'upload',
-                filename: this.filename,
-                ignorewarnings: '1',
-                token: 'csrf_token',
-                format: 'json',
-                text: infoTemplate + this.licenseTemplate + category,
-            };
-            console.log(params);
-            console.log(this.element.downloadScale);
-            console.log(this.element.downloadURL);
-        },
+            let response = await axios.request(requestConfig);
+            console.log(response.data.csrf_token);
+            console.log(this.currentProcess);
+            console.log(this.filenameNoUnderscore);
 
+            this.downloadImage(response.data.csrf_token);
+            
+        },
+        async downloadImage(csrf_token){
+            this.currentProcess = "Downloading";
+            let downloadURL = this.element.downloadURL;
+            let requestConfig = {
+            baseURL: this.$store.state.BASE_URL,
+            url: "/download",
+            method: "get",
+            params: {
+                filename: this.filename,
+                downloadURL: downloadURL
+            }
+            };
+            let response = await axios.request(requestConfig);
+            console.log(response.data);
+            if (this.showModal){
+                this.callupload(csrf_token);
+            }
+            else{
+                this.inUpload = false;
+                console.log('user cancel upload');
+                this.deleteCancledFile();
+            }
+        },
+        deleteCancledFile(){
+            let requestConfig = {
+            baseURL: this.$store.state.BASE_URL,
+            url: "/deleteFile",
+            method: "get",
+            params: {
+                filename: this.filename,
+            }
+            };
+            let response = axios.request(requestConfig);
+        },
+        async callupload(csrf_token){
+            this.currentProcess = "Uploading";
+            let infoTemplate = `{{Information|description=${this.title}|date=${this.date}|source=${this.source}|author=${this.author}}}`;
+            let category = `[[Category:Images uploaded from Wikidocumentaries]][[Category:${this.category}]]`;
+            let text = infoTemplate + this.licenseTemplate + category;
+            let downloadURL = this.element.downloadURL;
+            let requestConfig = {
+            baseURL: this.$store.state.BASE_URL,
+            url: "/upload",
+            method: "get",
+            params: {
+                token: localStorage.getItem("access_token"),
+                csrf_token: csrf_token,
+                filename: this.filename,
+                text: text,
+                downloadURL: downloadURL
+            }
+            };
+            let response = await axios.request(requestConfig);
+            console.log(1111111111111);
+            console.log(response.data.uploadResponse);
+            if (response.data.uploadResponse.upload){
+                console.log("depict start");
+                let title = `File:${response.data.uploadResponse.upload.filename}`;
+                console.log(title);
+                this.depict(title);
+            }
+            else{
+                this.inUpload = false;
+                this.showResult = true;
+                this.resultMessage = response.data.uploadResponse.error.info;
+            }
+        },
+        async depict(title){
+            this.currentProcess = "Depicting";
+            let requestConfig = {
+            baseURL: this.$store.state.BASE_URL,
+            url: "/depict",
+            method: "get",
+            params: {
+              token: localStorage.getItem("access_token"),
+              title: title,
+              depictId: this.$store.state.wikidocumentaries.wikidataId,
+            }
+            };
+            let response = await axios.request(requestConfig);
+            this.inUpload = false;
+            console.log(response);
+            this.showResult = true;
+            this.resultMessage = response.data;
+        },
     }
 }
 </script>
@@ -231,6 +387,7 @@ export default{
 .popup-inner{
     background: #FFF;
     padding:30px;
+    max-width: 1000px;
     }
 
 .grid-icons {
