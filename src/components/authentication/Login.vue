@@ -16,13 +16,9 @@ export default {
     name: 'LoginButton',
     data(){
         return{
-            // This is a public app with upload grant
-            CLIENT_ID : "fc15fabf0c4d39e070084bb2d5accd5e",
-            CLIENT_SECRET:"43a72c51df15d4219dd7ec59f174a673cc37be8f"
-
-            // This is a public app without upload grant
-            // CLIENT_ID : "c0860cd2f1a6e322e1b4f20597c2be7a",
-            // CLIENT_SECRET:"0b08788ef5274e77a8b4454422cb1866d2f6a30a"
+            // This is a public app with upload and edit grant
+            CLIENT_ID : "f2aa70edfeb48a0eb08614c69b9148b4",
+            CLIENT_SECRET:"48830e519cfc29240c9291a7f301e437d0355958"
         }
     },
     components: {
