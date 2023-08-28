@@ -1,3 +1,6 @@
+<!-- 
+ This component will show during the image upload process, indicating the upload process.
+  -->
 <template>
     <div class="wait-page">
       <div class="wait">
@@ -10,13 +13,11 @@
   </template>
   
   <script>
-  import axios from "axios";
   export default {
     name: "InUpload",
   };
   </script>
   
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   .wait {
     padding: 20px;

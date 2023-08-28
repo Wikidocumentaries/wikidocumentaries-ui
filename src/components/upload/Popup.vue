@@ -1,6 +1,11 @@
+<!-- 
+ This component defines the behavior and structure of the popup for image upload.
+ The popup presents various sections and information to the user about current image informaition.
+ The upload button is for user to upload image.
+  -->
 <template>
   <div v-if="showModal" class="popup">
-    <div v-if="inUpload" class="popup-inner">
+    <div v-if="inUpload" key="inUpload" class="popup-inner">
       <div class="toolbar">
         <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
         <div class="toolbar-item">
@@ -18,7 +23,7 @@
         <button class="disable-button">Upload</button>
       </div>
     </div>
-    <div v-else-if="showResult" class="popup-inner">
+    <div v-else-if="showResult" key="showResult" class="popup-inner">
       showresult
       <div class="toolbar">
         <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
@@ -31,7 +36,7 @@
       </div>
       <div class="message">{{ resultMessage }}</div>
     </div>
-    <div v-else-if="uploadFinish" class="popup-inner">
+    <div v-else-if="uploadFinish" key="uploadFinish" class="popup-inner">
       uploadfinish
       <h2 class="message">{{ $t('upload.popup.uploadSuccess') }}</h2>
       <h4 class="message">{{ $t('upload.popup.view') }}
@@ -258,7 +263,8 @@ export default {
         this.source = "";
       }
       this.filenameNoUnderscore = this.filename.replace(/[_]/g, " ");
-      this.filename = encodeURIComponent(this.filename.replace(/\s/g, "_"));
+      // this.filename = encodeURIComponent(this.filename.replace(/\s/g, "_"));
+      this.filename = this.filename.replace(/\s/g, "_");
       this.licenseTemplate = element.licenseTemplate;
       for (var statement of this.$store.state.wikidocumentaries.wikidata
         .statements) {
