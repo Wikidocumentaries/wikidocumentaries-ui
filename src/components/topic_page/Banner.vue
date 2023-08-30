@@ -109,9 +109,9 @@ export default {
         "country": "India",
         "qid": "Q668",
         "campaign": "wlm-in",
-        "start": "2021-09-01",
-        "end": "2021-09-30",
-        "web": "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2021_in_India"
+        "start": "2023-09-01",
+        "end": "2023-09-30",
+        "web": "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_India"
     },
 /*     {
         "country": "Iraq",
@@ -126,7 +126,15 @@ export default {
         "campaign": "wlm-ie",
         "start": "2020-09-01",
         "end": "2020-09-30"
-    },
+    },*/
+    {
+        "country": "Italy",
+        "qid": "Q38",
+        "campaign": "wlm-it",
+        "start": "2023-09-01",
+        "end": "2023-09-01",
+        "web": "https://commons.wikimedia.org/wiki/Category:Wiki_Loves_Monuments_2023_in_Italy"
+    },/*
     {
         "country": "Malaysia",
         "qid": "Q833",
