@@ -164,9 +164,6 @@
         <div v-if="licenseTemplate"><button class="button" @click="getCsrfToken">
             Upload
           </button>
-          <button class="button" @click="print">
-            print
-          </button>
         </div>
         <div v-else><button class="disable-button">
             Upload
@@ -213,7 +210,8 @@ export default {
       imgDepict: "",
       imgDepictUrl: "",
       response: "",
-      commonsUrl: ""
+      commonsUrl: "",
+      finnaId: ""
     };
   },
   components: {
@@ -276,6 +274,7 @@ export default {
       }
       this.imgDepict = this.$store.state.wikidocumentaries.title;
       this.imgDepictUrl = 'https://www.wikidata.org/wiki/' + this.$store.state.wikidocumentaries.wikidataId;
+      this.finnaId = element.id;
       console.log(element.id)
     },
     hide() {
@@ -307,8 +306,7 @@ export default {
         url: "/download",
         method: "get",
         params: {
-          filename: this.filename,
-          downloadURL: downloadURL
+          finnaId: this.finnaId,
         }
       };
       let response = await axios.request(requestConfig);
@@ -327,7 +325,7 @@ export default {
         url: "/deleteFile",
         method: "get",
         params: {
-          filename: this.filename
+          finnaId: this.finnaId,
         }
       };
       let response = axios.request(requestConfig);
@@ -347,9 +345,8 @@ export default {
         params: {
           token: localStorage.getItem("access_token"),
           csrf_token: csrf_token,
-          filename: this.filename,
+          finnaId: this.finnaId,
           text: text,
-          downloadURL: downloadURL
         }
       };
       let response = await axios.request(requestConfig);
