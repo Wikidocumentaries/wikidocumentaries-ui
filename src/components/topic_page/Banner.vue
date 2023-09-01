@@ -344,7 +344,7 @@ export default {
             let lat = this.$store.state.wikidocumentaries.wikidata.geo.lat ? this.$store.state.wikidocumentaries.wikidata.geo.lat : "";
             let lon = this.$store.state.wikidocumentaries.wikidata.geo.lon ? this.$store.state.wikidocumentaries.wikidata.geo.lon : "";
             let commonsCat = this.commonsCat ? encodeURIComponent(this.commonsCat) : "";
-            let uploadCat = "Images uploaded to WLM 2021 " + this.countryName + " from Wikidocumentaries";
+            let uploadCat = "Images uploaded to WLM 2023 " + this.countryName + " from Wikidocumentaries";
             let categories = [uploadCat, commonsCat];
             categories = categories.join("|");
             let campaignLink = 
