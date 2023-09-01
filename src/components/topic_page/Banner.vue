@@ -1,5 +1,13 @@
 <template>
-<div v-if="(isHeritage && active == true)">
+<div v-if="(isHeritageID && active == true)">
+  <div class="banner">
+      <div class="bannercontent"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LUSITANA_WLM_2011_d.svg">
+      <div class="message"><span class="gallery-title" v-html="campaignText"></span></div>
+      <a :href="campaignLink" class="noshadow" target="_blank"><div class="upload-button">{{ $t('Banner.WLMButton') }}</div></a>
+      </div>
+  </div>
+</div>
+<div v-else-if="(isHeritage && active == true)">
   <div class="banner">
       <div class="bannercontent"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/LUSITANA_WLM_2011_d.svg">
       <div class="message"><span class="gallery-title" v-html="campaignText"></span></div>
@@ -395,6 +403,13 @@ export default {
 .message {
     padding: 10px 2em;
     text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .message {
+        padding: 10px;
+        font-size: 0.6em;
+    }
 }
 
 .upload-button {
