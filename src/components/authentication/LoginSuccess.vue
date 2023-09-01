@@ -1,6 +1,8 @@
+<!-- The LoginSuccess Vue.js component manages the post-login process. It is responsible for acquiring
+an access token, retrieving user profile information, and redirecting the user back to the previous page.
+This component also provides a loading animation, which is modified from wait-page, with a success message. -->
 <template>
   <div class="wait-page">
-    <!--div class="wait-image"><img src="/static/svgs/testimage.svg"></div-->
     <div class="bars">
       <div class="yellow"></div>
       <div class="orange"></div>

@@ -1,4 +1,5 @@
-
+<!--  This Vue.js component represents a user profile element in a toolbar menu.
+ It displays the user's name and provides an option to log out. -->
 <template>
 <div>
     <ToolbarMenu

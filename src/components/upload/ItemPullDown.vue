@@ -1,5 +1,6 @@
 <!-- 
- This component is the pull down.
+ This component is the pull down in popup.
+ It is a modified version of src/components/Dataselect.vue.
  In this pull down, user can search for topics, select a value for
  the parent component and create a new topic.
   -->

@@ -1,3 +1,6 @@
+<!-- The Login component is implement for users to initiate the login process.
+It presents a "Login" button within the toolbar menu, which, when clicked, redirects the user to the
+authentication page. After successful login, the user is redirected back to the previous page. -->
 <template>
      <ToolbarMenu
         icon="wikiglyph-user-inactive"
