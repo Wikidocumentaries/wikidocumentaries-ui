@@ -241,7 +241,7 @@ export default {
 ]
     }
     },
-    mounted: {
+    mounted: function() {
     },
     computed: {
         commonsCat() {
