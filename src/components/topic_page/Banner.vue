@@ -22,6 +22,110 @@ export default {
     return {
       participating: [
         {
+          country: "Flanders",
+          qid: "Q9337",
+          campaign: "wlm-be-vlg",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://be.wikimedia.org/wiki/Wiki_Loves_Monuments/2023",
+        },
+        {
+          country: "Brussels",
+          qid: "Q240",
+          campaign: "wlm-be-bru",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://be.wikimedia.org/wiki/Wiki_Loves_Monuments/2023",
+        },
+        {
+          country: "Wallonia",
+          qid: "Q231",
+          campaign: "wlm-be-wal",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://be.wikimedia.org/wiki/Wiki_Loves_Monuments/2023",
+        },
+        {
+          country: "Belgium",
+          qid: "Q31",
+          campaign: "wlm-be",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://be.wikimedia.org/wiki/Wiki_Loves_Monuments/2023",
+        },
+        {
+          country: "Austria",
+          qid: "Q40",
+          campaign: "wlm-at",
+          start: "2023-07-01",
+          end: "2023-10-08",
+          web: "https://de.wikipedia.org/wiki/Wikipedia:Wiki_Loves_Monuments_2023/%C3%96sterreich",
+        },
+        {
+          country: "Armenia",
+          qid: "Q399",
+          campaign: "wlm-am",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023",
+        },
+        {
+          country: "Azerbaijan",
+          qid: "Q40",
+          campaign: "wlm-az",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Azerbaijan",
+        },
+        {
+          country: "Bangladesh",
+          qid: "Q902",
+          campaign: "wlm-bd",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Bangladesh",
+        },
+        {
+          country: "Bolivia",
+          qid: "Q750",
+          campaign: "wlm-bo",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://es.wikipedia.org/wiki/Wikipedia:Wiki_Loves_Monuments_2023/Bolivia",
+        },
+        {
+          country: "Brazil",
+          qid: "Q155",
+          campaign: "wlm-br",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Wiki_Loves_Monuments_2023/Brasil/Sobre",
+        },
+        {
+          country: "Croatia",
+          qid: "Q224",
+          campaign: "wlm-hr",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Croatia",
+        },
+        {
+          country: "Ghana",
+          qid: "Q117",
+          campaign: "wlm-gh",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Ghana",
+        },
+        {
+          country: "Greece",
+          qid: "Q41",
+          campaign: "wlm-gr",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "",
+        },
+        {
           country: "India",
           qid: "Q668",
           campaign: "wlm-in",
@@ -30,20 +134,228 @@ export default {
           web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_India",
         },
         {
+          country: "Iran",
+          qid: "Q794",
+          campaign: "wlm-ir",
+          start: "",
+          end: "",
+          web: "",
+        },
+        {
+          country: "Ireland",
+          qid: "Q27",
+          campaign: "wlm-ie",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Ireland",
+        },
+        {
           country: "Italy",
           qid: "Q38",
           campaign: "wlm-it",
           start: "2023-09-01",
           end: "2023-09-30",
-          web: "https://commons.wikimedia.org/wiki/Category:Wiki_Loves_Monuments_2023_in_Italy",
+          web: "https://www.wikimedia.it/wiki-loves-monuments/photographers/",
         },
         {
-          country: "Flanders",
-          qid: "Q231",
-          campaign: "wlm-be-vlg",
+          country: "Malaysia",
+          qid: "Q833",
+          campaign: "wlm-my",
           start: "2023-09-01",
           end: "2023-09-30",
-          web: "https://commons.wikimedia.org/wiki/Category:Wiki_Loves_Monuments_2023_in_Italy",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Malaysia",
+        },
+        {
+          country: "Malta",
+          qid: "Q233",
+          campaign: "wlm-mt",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Malta",
+        },
+        {
+          country: "Moldova",
+          qid: "Q217",
+          campaign: "wlm-md",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://ro.wikipedia.org/wiki/Wikipedia:Wiki_Loves_Monuments/Moldova",
+        },
+        {
+          country: "Nigeria",
+          qid: "Q1033",
+          campaign: "wlm-ng",
+          start: "2023-09-15",
+          end: "2023-09-15",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Nigeria",
+        },
+        {
+          country: "Norway",
+          qid: "Q20",
+          campaign: "wlm-no",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://www.wikimedia.no/en/2023/08/30/cultural-heritage-2023-photo-competition",
+        },
+        {
+          country: "Pakistan",
+          qid: "Q843",
+          campaign: "wlm-pk",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "",
+        },
+        {
+          country: "Peru",
+          qid: "Q419",
+          campaign: "wlm-pe",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/w/index.php?title=Commons:Wiki_Loves_Monuments_2023_in_Peru&uselang=en",
+        },
+        {
+          country: "Poland",
+          qid: "Q36",
+          campaign: "wlm-pl",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://wikimedia.pl/wiki-lubi-zabytki-2023-plen/",
+        },
+        {
+          country: "Portugal",
+          qid: "Q36",
+          campaign: "wlm-pl",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://wikilovesmonuments.org.pt/",
+        },
+        {
+          country: "Qatar",
+          qid: "Q846",
+          campaign: "wlm-qa",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://wikilovesmonuments.org.pt/",
+        },
+        {
+          country: "Russia",
+          qid: "Q159",
+          campaign: "wlm-ru",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Russia",
+        },
+        {
+          country: "Serbia",
+          qid: "Q403",
+          campaign: "wlm-rs",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Serbia",
+        },
+        {
+          country: "Slovenia",
+          qid: "Q215",
+          campaign: "wlm-si",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Serbia",
+        },
+        {
+          country: "Spain",
+          qid: "Q29",
+          campaign: "wlm-es",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://www.wikilm.es/en/",
+        },
+        {
+          country: "Suriname",
+          qid: "Q730",
+          campaign: "wlm-sr",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Suriname",
+        },
+        /*{
+          country: "Sweden",
+          qid: "Q34",
+          campaign: "wlm-sr",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Suriname",
+        }, We need a mechanism to display a different campaign based on different IDs. Similar idea has been created for countryId, where a region is chosen based on the ID used. This, however, is a different function.*/
+        {
+          country: "Taiwan",
+          qid: "Q865",
+          campaign: "wlm-tw",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Taiwan",
+        },
+        {
+          country: "Thailand",
+          qid: "Q869",
+          campaign: "wlm-th",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Thailand",
+        },
+        {
+          country: "Togo",
+          qid: "Q945",
+          campaign: "wlm-tg",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "",
+        },
+        {
+          country: "Uganda",
+          qid: "Q1036",
+          campaign: "wlm-ug",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_Uganda",
+        },
+        {
+          country: "Ukraine",
+          qid: "Q212",
+          campaign: "wlm-ua",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://uk.wikipedia.org/wiki/%D0%92%D1%96%D0%BA%D1%96%D0%BF%D0%B5%D0%B4%D1%96%D1%8F:%D0%92%D1%96%D0%BA%D1%96_%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D1%8C_%D0%BF%D0%B0%D0%BC%27%D1%8F%D1%82%D0%BA%D0%B8/English",
+        },
+        /*{
+          country: "United Kingdom",
+          qid: "Q145",
+          campaign: "",
+          start: "2023-09-01",
+          end: "2023-09-30",
+          web: "https://www.wikilovesmonuments.org.uk/",
+        },See how to decipher the different regions*/
+        {
+          country: "United States",
+          qid: "Q30",
+          campaign: "",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_the_United_States",
+        },
+        {
+          country: "Zambia",
+          qid: "Q953",
+          campaign: "wlm-zm",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "https://commons.wikimedia.org/wiki/Commons:Wiki_Loves_Monuments_2023_in_the_United_States",
+        },
+        {
+          country: "Egypt",
+          qid: "Q79",
+          campaign: "wlm-eg",
+          start: "2023-10-01",
+          end: "2023-10-31",
+          web: "",
         },
       ],
     };
@@ -67,15 +379,31 @@ export default {
       let heritageId;
       for (var index in statements) {
         if (statements[index].id == "P1435") {
-          heritageId = statements[index].values[0].id;
-        } else if (statements[index].id == "P1133") {
-          heritageId = statements[index].values[0].id; // Wallonia
-        } else if (statements[index].id == "P1764") {
-          heritageId = statements[index].values[0].id; // Flanders
+          heritageId = true;
+          break; 
+        } else if (statements[index].id == "P5008" && statements[index].values[0].id == 'Q73852346') { // on focus list of Wikimedia project Wiki Loves Monuments in India
+          heritageId = true;
+          break;
+        } else if (statements[index].id == "P3600") { // Brussels
+          heritageId = true;
+          break;
+        } else if (statements[index].id == "P1133") { // Wallonia
+          heritageId = true;
+          break;
+        } else if (statements[index].id == "P1764") { // Flanders
+          heritageId = true; 
+          break;
         } else if (statements[index].id == "P5942") {
-          heritageId = statements[index].values[0].id;
+          heritageId = true;
+          break;
+        } else if (statements[index].id == "P1799") { // Maltese Islands National Inventory of Cultural Property ID
+          heritageId = true; 
+          break;
+        } else if (statements[index].id == "P2186") { // Monuments ID
+          heritageId = true; 
+          break;
         }
-        }
+      }
       return heritageId;
     },
     countryId() {
@@ -84,13 +412,14 @@ export default {
       let countryId;
       for (var index in statements) {
         if (statements[index].id == "P3600") {
-          countryID = "Q240"; // Brussels
+          countryId = "Q240"; // Brussels
+          break;
         } else if (statements[index].id == "P1133") {
-          countryID = "Q231"; // Wallonia
+          countryId = "Q231"; // Wallonia
+          break;
         } else if (statements[index].id == "P1764") {
-          countryID = "Q231"; // Flanders
-        } else if (statements[index].id == "P5942") {
-          countryID = "Q90027";
+          countryId = "Q231"; // Flanders
+          break;
         } else if (statements[index].id == "P17") {
           countryId = statements[index].values[0].id;
         }
