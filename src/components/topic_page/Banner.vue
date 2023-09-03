@@ -71,7 +71,7 @@ export default {
         },
         {
           country: "Azerbaijan",
-          qid: "Q40",
+          qid: "Q227",
           campaign: "wlm-az",
           start: "2023-09-01",
           end: "2023-09-30",
@@ -378,29 +378,35 @@ export default {
         this.$store.state.wikidocumentaries.wikidata.statements;
       let heritageId;
       for (var index in statements) {
-        if (statements[index].id == "P1435") {
-          heritageId = true;
-          break; 
-        } else if (statements[index].id == "P5008" && statements[index].values[0].id == 'Q73852346') { // on focus list of Wikimedia project Wiki Loves Monuments in India
+        if (statements[index].id == "P5008" && statements[index].values[0].id == 'Q73852346') { // on focus list of Wikimedia project Wiki Loves Monuments in India
           heritageId = true;
           break;
-        } else if (statements[index].id == "P3600") { // Brussels
-          heritageId = true;
+        } else if (statements[index].id == "P3600") { // protected heritage site in Brussels ID
+          heritageId = statements[index].values[0];
           break;
-        } else if (statements[index].id == "P1133") { // Wallonia
-          heritageId = true;
+        } else if (statements[index].id == "P1133") { // Classified properties and protected areas of Wallonia ID
+          heritageId = statements[index].values[0];
           break;
-        } else if (statements[index].id == "P1764") { // Flanders
-          heritageId = true; 
+        } else if (statements[index].id == "P1764") { // Flemish Heritage Object ID
+          heritageId = statements[index].values[0]; 
           break;
-        } else if (statements[index].id == "P5942") {
-          heritageId = true;
+        } else if (statements[index].id == "P5942") { // Protected objects Ostbelgien ID
+          heritageId = statements[index].values[0];
+          break;
+        } else if (statements[index].id == "P2951") { // Cultural heritage database in Austria ObjektID
+          heritageId = statements[index].values[0];
           break;
         } else if (statements[index].id == "P1799") { // Maltese Islands National Inventory of Cultural Property ID
-          heritageId = true; 
+          heritageId = statements[index].values[0]; 
           break;
-        } else if (statements[index].id == "P2186") { // Monuments ID
-          heritageId = true; 
+        } else if (statements[index].id == "P1435") { // heritage designation
+          heritageId = statements[index].values[0].id;
+          break; 
+        } else if (statements[index].id == "P2186") { // Wiki Loves Monuments ID
+          heritageId = statements[index].values[0]; 
+          break;
+        } else if (statements[index].id == "P2817") { // appears in the heritage monument list
+          heritageId = statements[index].values[0].id; 
           break;
         }
       }
@@ -464,7 +470,8 @@ export default {
     idValue() {
       let idValue;
       switch (this.countryId) {
-        case "Q33":
+        case "Q40":
+          idValue = this.isHeritage;
         case "Q668":
           idValue = this.$store.state.wikidocumentaries.wikidataId;
           break;
