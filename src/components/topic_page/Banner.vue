@@ -399,6 +399,9 @@ export default {
         } else if (statements[index].id == "P1799") { // Maltese Islands National Inventory of Cultural Property ID
           heritageId = statements[index].values[0]; 
           break;
+        } else if (statements[index].id == "P3170") { // Cultural Heritage Armenia ID
+          heritageId = statements[index].values[0]; 
+          break;
         } else if (statements[index].id == "P1435") { // heritage designation
           heritageId = statements[index].values[0].id;
           break; 
@@ -470,8 +473,10 @@ export default {
     idValue() {
       let idValue;
       switch (this.countryId) {
+        case "Q399":
         case "Q40":
           idValue = this.isHeritage;
+          break;
         case "Q668":
           idValue = this.$store.state.wikidocumentaries.wikidataId;
           break;
