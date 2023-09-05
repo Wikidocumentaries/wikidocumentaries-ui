@@ -40,7 +40,7 @@
       uploadfinish
       <h2 class="message">{{ $t('upload.popup.uploadSuccess') }}</h2>
       <h4 class="message">{{ $t('upload.popup.view') }}
-        <a href={{ commonsUrl }} target="_blank">{{ filenameNoUnderscore }}</a>
+        <a :href="commonsUrl" target="_blank">{{ filenameNoUnderscore }}</a>
         {{ $t('upload.popup.inWikimediaCommons') }}
       </h4>
       <div><button class="button" @click.prevent="hide">
