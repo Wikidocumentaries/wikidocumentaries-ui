@@ -14,6 +14,8 @@ authentication page. After successful login, the user is redirected back to the 
 </template>
 
 <script>
+import pkceChallenge from "@/pkce-challenge";
+
 import ToolbarMenu from '@/components/menu/ToolbarMenu'
 export default {
     name: 'LoginButton',
@@ -28,9 +30,20 @@ export default {
         ToolbarMenu,
     },
     methods: {
-        getCode (){
-            localStorage.setItem('previouspage', window. location. href);
-            let url = "https://meta.wikimedia.org/w/rest.php/oauth2/authorize?client_id=" + this.CLIENT_ID + "&response_type=code";
+        async getCode() {
+            localStorage.setItem('previouspage', window.location.href);
+
+            const challenge = await pkceChallenge();
+            localStorage.setItem('codeVerifier', challenge.code_verifier);
+
+            const params = new URLSearchParams();
+            params.append("client_id", this.CLIENT_ID);
+            params.append("response_type", "code");
+            params.append("code_challenge", challenge.code_challenge);
+            params.append("code_challenge_method", "S256");
+
+            // Redirect the browser to the OAuth 2 login page
+            const url = "https://meta.wikimedia.org/w/rest.php/oauth2/authorize?" + params;
             window.location.href = url;
         },
     }

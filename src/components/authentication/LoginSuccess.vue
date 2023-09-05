@@ -40,6 +40,7 @@ export default {
       params.append("code", code);
       params.append("client_id", this.CLIENT_ID);
       params.append("client_secret", this.CLIENT_SECRET);
+      params.append("code_verifier", localStorage.codeVerifier);
       console.log(params);
       const fetchDataRes = await axios.request({
         url: "/w/rest.php/oauth2/access_token",
@@ -49,6 +50,7 @@ export default {
       });
       console.log(fetchDataRes.data.access_token);
       localStorage.setItem("access_token", fetchDataRes.data.access_token);
+      localStorage.removeItem('codeVerifier');
     },
     async getUserProfile() {
       let response = await fetch(this.profileUrl, {
