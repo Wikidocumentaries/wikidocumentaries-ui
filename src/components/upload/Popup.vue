@@ -332,11 +332,20 @@ export default {
     },
     async callupload(csrf_token) {
       this.currentProcess = "Uploading";
-      let infoTemplate = `{{Information|description=${this.title}|date=${this.date
-        }|source=${this.source}|author=${this.author}}}`;
-      let category = `[[Category:Images uploaded from Wikidocumentaries]][[Category:${this.category
-        }]]`;
-      let text = infoTemplate + this.licenseTemplate + category;
+      let infoTemplate = `
+{{Information
+|description=${this.title}
+|date=${this.date}
+|source=${this.source}
+|author=${this.author}
+}}`;
+      let category = `
+[[Category:Images uploaded from Wikidocumentaries]]
+[[Category:${this.category}]]`;
+      let text = `
+${infoTemplate}
+${this.licenseTemplate}
+${category}`;
       let downloadURL = this.element.downloadURL;
       let requestConfig = {
         baseURL: this.$store.state.BASE_URL,
