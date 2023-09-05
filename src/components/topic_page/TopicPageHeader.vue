@@ -126,6 +126,16 @@ export default {
                     return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+sailEmblem;
                 }
             }
+        },
+        seal () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let sealImg;
+            for (var index in statements) {
+                if (statements[index].id == 'P158') {
+                    sealImg = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+sealImg;
+                }
+            }
         }
     //     compactHeight() {
     //         return 'height:' + this.$refs.shade.clientHeight;
