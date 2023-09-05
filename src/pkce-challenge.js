@@ -1,8 +1,10 @@
 // Copy of pkce-challenge 4.0.1 from NPM for use in OAuth 2 login
+// The package as installed didn't work in our build system
+
 /*
 MIT License
 
-Copyright (c) 2019 
+Copyright (c) 2019
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -23,9 +25,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-const crypto = globalThis.crypto?.webcrypto ?? // Node.js 16 REPL has globalThis.crypto as node:crypto
-    globalThis.crypto ?? // web browsers and Node.js 18+ 
-    (await import("node:crypto")).webcrypto; // Node.js 16 non-REPL
+const crypto = globalThis.crypto; // WDX: modified to only work on browsers
+
 /**
  * Creates an array of length `size` of random bytes
  * @param size
