@@ -382,17 +382,6 @@ export default {
     onClickChild(value) {
       this.author = value;
     },
-    print() {
-      let infoTemplate = `{{Information|description=${this.title}|date=${this.date
-        }|source=${this.source}|author=${this.author}}}`;
-      let category = `[[Category:Images uploaded from Wikidocumentaries]][[Category:${this.category
-        }]]`;
-      console.log(infoTemplate);
-      console.log(this.licenseTemplate);
-      console.log(category);
-      console.log(this.filename);
-      console.log(this.filenameNoUnderscore);
-    }
   }
 };
 </script>
