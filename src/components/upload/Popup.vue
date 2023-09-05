@@ -243,7 +243,7 @@ export default {
       } else {
         this.author = "";
       }
-      if (element.datecreated[0]) {
+      if (element.year) {
         this.date =
           element.year != "" && element.year != null ? element.year : "";
         this.filename += "_" + this.date;
