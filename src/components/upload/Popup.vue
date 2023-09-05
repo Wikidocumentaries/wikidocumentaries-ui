@@ -345,6 +345,7 @@ export default {
       let text = `
 ${infoTemplate}
 ${this.licenseTemplate}
+{{FinnaReview}}
 ${category}`;
       let downloadURL = this.element.downloadURL;
       let requestConfig = {
