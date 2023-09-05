@@ -26,10 +26,9 @@ export default {
   name: "LoginSuccess",
   data() {
     return {
-      CLIENT_ID : "f2aa70edfeb48a0eb08614c69b9148b4",
-      CLIENT_SECRET:"48830e519cfc29240c9291a7f301e437d0355958",
-      profileUrl:
-        "https://meta.wikimedia.org/w/rest.php/oauth2/resource/profile"
+      CLIENT_ID: process.env.OAUTH_CLIENT_ID || "f2aa70edfeb48a0eb08614c69b9148b4",
+      CLIENT_SECRET: process.env.OAUTH_CLIENT_SECRET || "48830e519cfc29240c9291a7f301e437d0355958",
+      profileUrl: "https://meta.wikimedia.org/w/rest.php/oauth2/resource/profile",
     };
   },
   methods: {

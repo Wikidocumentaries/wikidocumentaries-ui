@@ -20,8 +20,7 @@ export default {
     data(){
         return{
             // This is a public app with upload and edit grant
-            CLIENT_ID : "f2aa70edfeb48a0eb08614c69b9148b4",
-            CLIENT_SECRET:"48830e519cfc29240c9291a7f301e437d0355958",
+            CLIENT_ID : process.env.OAUTH_CLIENT_ID || "f2aa70edfeb48a0eb08614c69b9148b4",
             itemtext: this.$t('login.loginMenu.item')
         }
     },
