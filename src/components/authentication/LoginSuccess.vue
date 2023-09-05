@@ -57,7 +57,8 @@ export default {
           Authorization: "Bearer " + localStorage.getItem("access_token")
         }
       });
-      response.json().then(c => localStorage.setItem("username", c.username));
+      const body = await response.json();
+      localStorage.setItem("username", body.username);
     },
     returnToPage(){
       let url = localStorage.getItem('previouspage');
