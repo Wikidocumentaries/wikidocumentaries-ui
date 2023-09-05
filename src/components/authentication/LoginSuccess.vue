@@ -1,4 +1,4 @@
-<!-- The LoginSuccess Vue.js component manages the post-login process. It is responsible for acquiring
+<!-- The LoginSuccess component manages the post-login process. It is responsible for acquiring
 an access token, retrieving user profile information, and redirecting the user back to the previous page.
 This component also provides a loading animation, which is modified from wait-page, with a success message. -->
 <template>
@@ -15,7 +15,7 @@ This component also provides a loading animation, which is modified from wait-pa
       <div class="lds-heart">
         <div></div>
       </div>
-      <div class="message">Login successful. You are being redirected back to Wikidocumentaries.</div>
+      <div class="message">{{ $t('login.loginSuccess') }}</div>
     </div>
   </div>
 </template>

@@ -20,7 +20,7 @@
       <div class="message">{{ filenameNoUnderscore }}</div>
       <div>
         <button class="button" @click.prevent="hide">{{ $t('upload.popup.cancel') }}</button>
-        <button class="disable-button">Upload</button>
+        <button class="disable-button">{{ $t('upload.popup.upload') }}</button>
       </div>
     </div>
     <div v-else-if="showResult" key="showResult" class="popup-inner">
@@ -162,17 +162,17 @@
 
         </div>
         <div v-if="licenseTemplate"><button class="button" @click="getCsrfToken">
-            Upload
+            {{ $t('upload.popup.upload') }}
           </button>
         </div>
         <div v-else><button class="disable-button">
-            Upload
+          {{ $t('upload.popup.upload') }}
           </button>
           <div class="licenseMessage">
             <div class="toolbar">
               <h4 class="popupTip">{{ $t('upload.popup.cannotUpload') }}
                 <a href='https://github.com/Wikidocumentaries/wikidocumentaries-ui/issues/new/choose'
-                  target="_blank">Github</a>
+                  target="_blank">{{ $t('upload.popup.Github') }}</a>
               </h4>
             </div>
           </div>

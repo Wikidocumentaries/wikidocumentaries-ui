@@ -38,7 +38,7 @@
             <br>
             <span class="topic-summary">{{ getSummary(topic) }}</span>
             <br>
-            <a :href="topic.wikidocumentarieslink" target="_blank">go to topic page</a>
+            <a :href="topic.wikidocumentarieslink" target="_blank">{{ $t('upload.popup.topicPage') }}</a>
             </div>
           </div>
           <a slot="menu-link" :href="newLink" class="create-new" target="_blank">{{ $t('LandingPage.createNew') }}</a>

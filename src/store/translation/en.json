@@ -534,8 +534,21 @@
             "uploadSuccess": "uploadSuccess",
             "view": "View",
             "inWikimediaCommons": "in Wikimedia Commons",
-            "ok": "OK"
+            "ok": "OK",
+            "Github": "Github",
+            "topicPage": "go to topic page"
         }
+    },
+    "login": {
+        "loginMenu": {
+            "title": "User Profile",
+            "tooltip": "Login",
+            "item": "Log In",
+            "logout": "Log Out",
+            "showProfile": "Show profile"
+
+        },
+        "loginSuccess": "Login successful. You are being redirected back to Wikidocumentaries."
     },
     "general": {
         "wikidocumentaries": "Wikidocumentaries",
