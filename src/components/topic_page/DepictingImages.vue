@@ -413,7 +413,7 @@ export default {
 .facets {
     display: flex;
     flex-direction: row;
-    padding: 0 10px 0px 10px;
+    padding: 0 10px 10px 10px;
     gap: 1em;
     position: relative;
     overflow-x: auto;
@@ -483,7 +483,7 @@ export default {
 }
 
 .facet .value-list {
-    scrollbar-color: var(--main-red) transparent;
+    scrollbar-color: var(--main-transp-gray) transparent;
     scrollbar-width: 7px;
     -webkit-overflow-scrolling: auto;
 }
@@ -501,7 +501,7 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-red);
+    background-color: var(--main-transp-gray);
     border-radius: 7px;
 }
 

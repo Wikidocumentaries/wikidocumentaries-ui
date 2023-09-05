@@ -24,6 +24,7 @@ export default {
   --main-dimmed: #777;
   --main-dark: #555;
   --main-link-color: #00a3cc;
+  --main-transp-gray: #7777;
   --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
