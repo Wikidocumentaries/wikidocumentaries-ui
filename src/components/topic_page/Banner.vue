@@ -394,6 +394,12 @@ export default {
           heritageId = statements[index].values[0];
           break;
         } else if (statements[index].id == "P2951") { // Cultural heritage database in Austria ObjektID
+          heritageId = statements[index].values[0]; 
+          break;
+        } else if (statements[index].id == "P3170") { // Cultural Heritage Armenia ID
+          heritageId = statements[index].values[0]; 
+          break;
+        } else if (statements[index].id == "P1587") { // Slovene Cultural Heritage Register ID
           heritageId = statements[index].values[0];
           break;
         } else if (statements[index].id == "P1799") { // Maltese Islands National Inventory of Cultural Property ID
