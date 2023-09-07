@@ -38,6 +38,7 @@
                     >
                     <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                     </ToolbarMenu>
+                    <PopUp ref="popup"></PopUp>
                     <HeaderLink
                       v-if="element.infoURL"
                       class="toolbar-item neg"
@@ -472,6 +473,7 @@
 import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
+import PopUp from "@/components/upload/Popup";
 
 const MENU_ACTIONS = {
   SELECT_HEADER: 0
@@ -500,14 +502,21 @@ export default {
         {
           id: MENU_ACTIONS.GEOLOCATE,
           text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
+        },
+        {
+          id: MENU_ACTIONS.UPLOAD,
+          text: "topic_page.TopicImages.imagesActionMenu.upload"
         }
-      ]
+      ],
+      clickPopUp: false,
     };
+  
   },
   components: {
     HeaderLink,
     Dataselect,
     ToolbarMenu,
+    PopUp,
   },
   props: {
     shouldShowDialog: Boolean
@@ -581,8 +590,14 @@ export default {
         // case MENU_ACTIONS.GEOLOCATE:
         //     ;
         //     break;
-        case MENU_ACTIONS.SELECT_HEADER:
+        // case MENU_ACTIONS.SELECT_HEADER:
+        case MENU_ACTIONS.UPLOAD:
+          this.showPopUp(this.element);
+          break;
       }
+    },
+    showPopUp(element) {
+      this.$refs.popup.show(element);
     },
     createMap() {
       var ol = this.$ol;

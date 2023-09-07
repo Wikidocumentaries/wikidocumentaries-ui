@@ -274,7 +274,8 @@
                 "menuTooltip": "Actions",
                 "doGeolocatingText": "Set the location...",
                 "showImageText": "Show image",
-                "selectFeatured": "Choose as a header image"
+                "selectFeatured": "Choose as a header image",
+                "upload" : "upload"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
@@ -518,6 +519,36 @@
             "optionGallery": "Gallery",
             "optionList": "List"
         }
+    },
+    "upload": {
+        "popup": {
+            "popupTitle": "Upload image",
+            "popupTip": "Verify the information and edit the texts if needed.",
+            "filename": "File name",
+            "upload": "Upload" ,
+            "closePopup": "Close",
+            "cannotUpload": "This image cannot be uploaded to Wikimedia Commons because the license is not in the list of allowed licenses. If you think this is an error, please [file an issue] on ",
+            "uploadInProgress": "Upload in progress",
+            "cancel": "cancel",
+            "category": "Category",
+            "uploadSuccess": "uploadSuccess",
+            "view": "View",
+            "inWikimediaCommons": "in Wikimedia Commons",
+            "ok": "OK",
+            "Github": "Github",
+            "topicPage": "go to topic page"
+        }
+    },
+    "login": {
+        "loginMenu": {
+            "title": "User Profile",
+            "tooltip": "Login",
+            "item": "Log In",
+            "logout": "Log Out",
+            "showProfile": "Show profile"
+
+        },
+        "loginSuccess": "Login successful. You are being redirected back to Wikidocumentaries."
     },
     "general": {
         "wikidocumentaries": "Wikidocumentaries",
