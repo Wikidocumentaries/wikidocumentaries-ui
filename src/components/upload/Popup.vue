@@ -56,12 +56,12 @@
         </div>
       </div>
       <div class="messages">
-      <div class="message">{{ $t("upload.popup.uploadSuccess") }}</div>
-      <div class="message break">
-        {{ $t("upload.popup.view") }}
-        <a :href="commonsUrl" target="_blank">{{ filenameNoUnderscore }}</a>
-        {{ $t("upload.popup.inWikimediaCommons") }}
-      </div>
+        <div class="message">{{ $t("upload.popup.uploadSuccess") }}</div>
+        <div class="message break">
+          {{ $t("upload.popup.view") }}
+          <a :href="commonsUrl" target="_blank">{{ filenameNoUnderscore }}</a>
+          {{ $t("upload.popup.inWikimediaCommons") }}
+        </div>
       </div>
       <div class="actions">
         <button class="button upload" @click.prevent="hide">
@@ -87,6 +87,7 @@
 
         <!-- Metadata section -->
         <div class="columns">
+          <!-- Filename -->
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-view-details metadata-glyph"></i>
@@ -98,7 +99,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Caption -->
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
@@ -112,7 +113,26 @@
               </div>
             </div>
           </div>
+          <div v-if="element.description" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-description metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.description") }}
+              </div>
+              <div
+                v-if="element.description && element.description.length > 0"
+                class="grid-body unedited"
+                v-html="element.description[0]"
+              ></div>
+              <div v-else class="grid-body action">
+                {{ $t("imageViewer.imageMetadata.addDescription") }}
+              </div>
+            </div>
+          </div>
 
+          <!-- Creator -->
           <div v-if="element.creators" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
@@ -202,6 +222,49 @@
                   <a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a>
                 </div>
               </div>
+            </div>
+          </div>
+          <!-- Institution -->
+          <div v-if="element.institutions" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-institution metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.institution") }}
+              </div>
+              <Dataselect
+                v-for="institution in element.institutions"
+                :key="institution.id"
+                class="grid-select"
+                v-bind:term="institution"
+              ></Dataselect>
+            </div>
+          </div>
+          <div v-if="element.collection" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-collection metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.collection") }}
+              </div>
+              <Dataselect
+                class="grid-select"
+                v-if="element.collection"
+                v-bind:term="element.collection"
+              ></Dataselect>
+            </div>
+          </div>
+          <div v-if="element.inventoryNumber" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.inventoryNumber") }}
+              </div>
+              <div class="data-text">{{ element.inventoryNumber }}</div>
             </div>
           </div>
         </div>
@@ -542,7 +605,6 @@ ${category}`;
   gap: 1em;
 }
 
-
 .message {
 }
 
@@ -559,7 +621,8 @@ ${category}`;
   font-size: var(--main-font-size);
   line-height: var(--main-line-height);
 }
-.upload, .cancel:hover {
+.upload,
+.cancel:hover {
   background-color: var(--main-link-color);
   color: white;
 }
@@ -569,12 +632,12 @@ ${category}`;
 }
 
 .disabled {
-  border:2px;
+  border: 2px;
   color: var(--main-blue);
 }
 
 .cancel {
-  border:2px solid var(--main-link-color);
+  border: 2px solid var(--main-link-color);
   color: var(--main-link-color);
   background-color: white;
 }

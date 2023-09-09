@@ -744,7 +744,6 @@ a:hover .upload-button {
 
 .data-select a {
   color:white;
-  font-size: 0.7em;
 }
 
 .data-select a:hover {
@@ -777,18 +776,18 @@ a:hover .upload-button {
 .data-button:hover,
 .key > .data-select:hover,
 .action > .data-select:hover {
-  background: black;
+  background: var(--main-txt-color);
   /* border-radius: 0;*/
   color: white;
   box-shadow: none;
 }
 
 .unedited {
-  color: var(--main-red);
+  color: var(--main-txt-color);
 }
 
 .unedited:hover {
-  color: black;
+  color: var(--main-red);
   cursor: pointer;
 }
 
