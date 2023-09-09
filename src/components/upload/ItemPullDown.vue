@@ -272,6 +272,15 @@
     background-color: var(--main-red);
     color: white;
   }
+
+  .drop-option:hover a {
+    color: var(--main-txt-color);
+  }
+
+  .drop-option:hover a:hover {
+    box-shadow:none;
+    color:white;
+  }
   
   .topic-title {
     font-weight: bold;

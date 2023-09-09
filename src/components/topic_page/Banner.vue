@@ -389,18 +389,6 @@ export default {
     text-align: center;
 }
 
-.upload-button {
-    padding: 10px 15px;
-    background-color: var(--main-red);
-    color: white;
-    font-weight: 600;
-    border-radius: 3px;
-    white-space: nowrap;
-}
-
-a:hover .upload-button {
-    background-color: var(--main-orange);
-}
 .noshadow  {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;

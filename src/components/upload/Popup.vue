@@ -5,95 +5,128 @@
   -->
 <template>
   <div v-if="showModal" class="popup">
+    <!-- While uploading -->
     <div v-if="inUpload" key="inUpload" class="popup-inner">
       <div class="toolbar">
-        <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
         <div class="toolbar-item">
           <a href="#" class="toolbar-item-a">
             <i class="wikiglyph wikiglyph-cross"></i>
           </a>
-          <span class="tooltip">{{ $t('upload.popup.uploadInProgress') }}</span>
+          <span class="tooltip">{{ $t("upload.popup.uploadInProgress") }}</span>
         </div>
       </div>
       <InUpload></InUpload>
-      <div class="message">{{ currentProcess }}</div>
-      <div class="message">{{ filenameNoUnderscore }}</div>
-      <div>
-        <button class="button" @click.prevent="hide">{{ $t('upload.popup.cancel') }}</button>
-        <button class="disable-button">{{ $t('upload.popup.upload') }}</button>
+      <div class="messages">
+        <div class="status">{{ currentProcess }}</div>
+        <div class="message break">{{ filenameNoUnderscore }}</div>
+      </div>
+      <div class="actions">
+        <div>
+          <button class="button cancel" @click.prevent="hide">
+            {{ $t("upload.popup.cancel") }}
+          </button>
+        </div>
       </div>
     </div>
+    <!-- Error: Upload response -->
     <div v-else-if="showResult" key="showResult" class="popup-inner">
-      showresult
       <div class="toolbar">
-        <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
         <div class="toolbar-item" @click.prevent="hide">
           <a href="#" class="toolbar-item-a">
             <i class="wikiglyph wikiglyph-cross"></i>
           </a>
-          <span class="tooltip">{{ $t('upload.popup.closePopup') }}</span>
+          <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
         </div>
       </div>
-      <div class="message">{{ resultMessage }}</div>
+      <div class="actions alert">
+        <div class="message">{{ resultMessage }}</div>
+      </div>
     </div>
+    <!-- Upload successfully completed -->
     <div v-else-if="uploadFinish" key="uploadFinish" class="popup-inner">
-      uploadfinish
-      <h2 class="message">{{ $t('upload.popup.uploadSuccess') }}</h2>
-      <h4 class="message">{{ $t('upload.popup.view') }}
+      <div class="toolbar">
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
+        <div class="toolbar-item" @click.prevent="hide">
+          <a href="#" class="toolbar-item-a">
+            <i class="wikiglyph wikiglyph-cross"></i>
+          </a>
+          <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
+        </div>
+      </div>
+      <div class="messages">
+      <div class="message">{{ $t("upload.popup.uploadSuccess") }}</div>
+      <div class="message break">
+        {{ $t("upload.popup.view") }}
         <a :href="commonsUrl" target="_blank">{{ filenameNoUnderscore }}</a>
-        {{ $t('upload.popup.inWikimediaCommons') }}
-      </h4>
-      <div><button class="button" @click.prevent="hide">
-          {{ $t('upload.popup.ok') }}
-        </button></div>
+        {{ $t("upload.popup.inWikimediaCommons") }}
+      </div>
+      </div>
+      <div class="actions">
+        <button class="button upload" @click.prevent="hide">
+          {{ $t("upload.popup.ok") }}
+        </button>
+      </div>
     </div>
+    <!-- Normal flow -->
     <div v-else class="popup-inner">
       <div>
         <div class="toolbar">
-          <h1 class="header-title">{{ $t('upload.popup.popupTitle') }}</h1>
+          <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
           <div class="toolbar-item" @click.prevent="hide">
             <a href="#" class="toolbar-item-a">
               <i class="wikiglyph wikiglyph-cross"></i>
             </a>
-            <span class="tooltip">{{ $t('upload.popup.closePopup') }}</span>
+            <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
           </div>
         </div>
-        <div class="toolbar">
-          <h4 class="popupTip">{{ $t('upload.popup.popupTip') }}</h4>
-        </div>
+
+        <!-- Introductory text -->
+        <div class="intro">{{ $t("upload.popup.intro") }}</div>
+
+        <!-- Metadata section -->
         <div class="columns">
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-view-details metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('upload.popup.filename') }}</div>
+              <div class="grid-item">{{ $t("upload.popup.filename") }}</div>
               <div class="data">
-                <div class="grid-body unedited">{{ filename }}</div>
+                <div class="grid-body unedited break">{{ filename }}</div>
               </div>
             </div>
-
           </div>
+
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.caption') }}</div>
-              <div class="data">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.caption") }}
+              </div>
+              <div class="data break">
                 <div class="grid-body unedited">{{ title }}</div>
               </div>
             </div>
-
           </div>
+
           <div v-if="element.creators" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.creator") }}
+              </div>
               <div class="grid-body unedited">
-                <ItemPullDown @clicked="onClickChild" class="grid-select value" v-bind:term="this.author">
+                <ItemPullDown
+                  @clicked="onClickChild"
+                  class="grid-select"
+                  v-bind:term="this.author"
+                >
                 </ItemPullDown>
               </div>
             </div>
@@ -104,7 +137,9 @@
               <i class="wikiglyph wikiglyph-production-date metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.dateCreated") }}
+              </div>
               <div class="data">
                 <div class="grid-body unedited">{{ date }}</div>
               </div>
@@ -116,9 +151,13 @@
               <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.license') }}</div>
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.license") }}
+              </div>
               <div class="data">
-                <a :href="element.license_link" target="_blank">{{ license }}</a>
+                <a :href="element.license_link" target="_blank">{{
+                  license
+                }}</a>
               </div>
             </div>
           </div>
@@ -128,7 +167,7 @@
               <i class="wikiglyph wikiglyph-message metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('upload.popup.category') }}</div>
+              <div class="grid-item">{{ $t("upload.popup.category") }}</div>
               <div class="data">
                 <a :href="this.categoryLink" target="_blank">{{ category }}</a>
               </div>
@@ -140,7 +179,9 @@
               <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.imageInfoPage") }}
+              </div>
               <div class="data break">
                 <a :href="element.infoURL" target="_blank">{{ source }}</a>
               </div>
@@ -153,27 +194,38 @@
               <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
             </div>
             <div class="grid-text">
-              <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicted') }}</div>
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.depicted") }}
+              </div>
               <div class="data">
-                <div class="grid-body unedited"><a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a></div>
+                <div class="grid-body unedited">
+                  <a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-        <div v-if="licenseTemplate"><button class="button" @click="getCsrfToken">
-            {{ $t('upload.popup.upload') }}
-          </button>
+        <!-- Show upload button(s) -->
+        <div v-if="licenseTemplate">
+          <div class="actions">
+            <button class="button cancel" @click.prevent="hide">
+              {{ $t("upload.popup.cancel") }}
+            </button>
+            <button class="button upload" @click="getCsrfToken">
+              {{ $t("upload.popup.upload") }}
+            </button>
+          </div>
         </div>
-        <div v-else><button class="disable-button">
-          {{ $t('upload.popup.upload') }}
-          </button>
-          <div class="licenseMessage">
-            <div class="toolbar">
-              <h4 class="popupTip">{{ $t('upload.popup.cannotUpload') }}
-                <a href='https://github.com/Wikidocumentaries/wikidocumentaries-ui/issues/new/choose'
-                  target="_blank">{{ $t('upload.popup.Github') }}</a>
-              </h4>
+        <!-- Error: Incompatible licence -->
+        <div v-else>
+          <div class="actions alert">
+            <div class="message">
+              {{ $t("upload.popup.cannotUpload") }}
+              <a
+                href="https://github.com/Wikidocumentaries/wikidocumentaries-ui/issues/new/choose"
+                target="_blank"
+                >{{ $t("upload.popup.Github") }}</a
+              >
             </div>
           </div>
         </div>
@@ -211,12 +263,12 @@ export default {
       imgDepictUrl: "",
       response: "",
       commonsUrl: "",
-      finnaId: ""
+      finnaId: "",
     };
   },
   components: {
     ItemPullDown,
-    InUpload
+    InUpload,
   },
   methods: {
     show(element) {
@@ -273,9 +325,11 @@ export default {
         }
       }
       this.imgDepict = this.$store.state.wikidocumentaries.title;
-      this.imgDepictUrl = 'https://www.wikidata.org/wiki/' + this.$store.state.wikidocumentaries.wikidataId;
+      this.imgDepictUrl =
+        "https://www.wikidata.org/wiki/" +
+        this.$store.state.wikidocumentaries.wikidataId;
       this.finnaId = element.id;
-      console.log(element.id)
+      console.log(element.id);
     },
     hide() {
       this.showModal = false;
@@ -288,8 +342,8 @@ export default {
         url: "/csrfToken",
         method: "get",
         params: {
-          token: localStorage.getItem("access_token")
-        }
+          token: localStorage.getItem("access_token"),
+        },
       };
       let response = await axios.request(requestConfig);
       console.log(response.data.csrf_token);
@@ -307,7 +361,7 @@ export default {
         method: "get",
         params: {
           finnaId: this.finnaId,
-        }
+        },
       };
       let response = await axios.request(requestConfig);
       console.log(response.data);
@@ -326,7 +380,7 @@ export default {
         method: "get",
         params: {
           finnaId: this.finnaId,
-        }
+        },
       };
       let response = axios.request(requestConfig);
     },
@@ -357,7 +411,7 @@ ${category}`;
           csrf_token: csrf_token,
           finnaId: this.finnaId,
           text: text,
-        }
+        },
       };
       let response = await axios.request(requestConfig);
       console.log(response.data.uploadResponse);
@@ -383,8 +437,8 @@ ${category}`;
         params: {
           token: localStorage.getItem("access_token"),
           title: title,
-          depictId: this.$store.state.wikidocumentaries.wikidataId
-        }
+          depictId: this.$store.state.wikidocumentaries.wikidataId,
+        },
       };
       let response = await axios.request(requestConfig);
       this.inUpload = false;
@@ -392,7 +446,7 @@ ${category}`;
     onClickChild(value) {
       this.author = value;
     },
-  }
+  },
 };
 </script>
 <style scoped>
@@ -411,7 +465,6 @@ ${category}`;
 
 .popup-inner {
   background: #fff;
-  padding: 30px;
   max-width: 1000px;
 }
 
@@ -445,7 +498,7 @@ ${category}`;
 .columns {
   column-width: 400px;
   column-gap: 1.5em;
-  padding: 10px 20px 15px 20px;
+  padding: 10px 20px 0 20px;
 }
 
 .break {
@@ -461,45 +514,68 @@ ${category}`;
   text-align: left;
 }
 
-.popupTip {
-  font-weight: lighter;
-  margin-top: 0px;
-  width: 600px;
-  text-align: left;
+.actions {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-end;
 }
 
-.licenseMessage {
-  margin-bottom: 0px;
-  width: 600px;
-  display: inline-block;
+.alert {
+  background-color: var(--main-yellow);
+}
+
+.alert a {
+  color: var(--main-red);
+}
+
+.status {
+  font-weight: 600;
+  color: var(--main-red);
+}
+
+.messages {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+.message {
 }
 
 .button {
-  background-color: #249ad1;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  border-radius: 3px;
+  white-space: nowrap;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 4px 2px;
+  font-weight: 600;
   cursor: pointer;
-  align-items: left;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+}
+.upload, .cancel:hover {
+  background-color: var(--main-link-color);
+  color: white;
 }
 
-.disable-button {
-  background-color: #777;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 4px 2px;
-  cursor: pointer;
+.upload:hover {
+  background-color: var(--main-blue);
+}
+
+.disabled {
+  border:2px;
+  color: var(--main-blue);
+}
+
+.cancel {
+  border:2px solid var(--main-link-color);
+  color: var(--main-link-color);
+  background-color: white;
 }
 </style>

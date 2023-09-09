@@ -495,14 +495,14 @@ export default {
       topicVectorLayer: null,
       // showLinks: true,
       toolbarActionMenuItems: [
-        {
+/*         {
           id: MENU_ACTIONS.SELECT_HEADER,
           text: "topic_page.TopicImages.imagesActionMenu.selectFeatured"
         },
         {
           id: MENU_ACTIONS.GEOLOCATE,
           text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
-        },
+        }, */
         {
           id: MENU_ACTIONS.UPLOAD,
           text: "topic_page.TopicImages.imagesActionMenu.upload"

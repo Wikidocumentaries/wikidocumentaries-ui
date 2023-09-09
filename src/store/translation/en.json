@@ -275,7 +275,7 @@
                 "doGeolocatingText": "Set the location...",
                 "showImageText": "Show image",
                 "selectFeatured": "Choose as a header image",
-                "upload" : "upload"
+                "upload" : "Upload to Commons"
             },
             "imagesRemoveMenu": {
                 "menuTitle": "Remove the image because...",
@@ -523,29 +523,29 @@
     "upload": {
         "popup": {
             "popupTitle": "Upload image",
-            "popupTip": "Verify the information and edit the texts if needed.",
+            "intro": "Verify the information and edit if needed.",
             "filename": "File name",
-            "upload": "Upload" ,
+            "upload": "Upload image" ,
             "closePopup": "Close",
-            "cannotUpload": "This image cannot be uploaded to Wikimedia Commons because the license is not in the list of allowed licenses. If you think this is an error, please [file an issue] on ",
+            "cannotUpload": "This image cannot be uploaded to Wikimedia Commons because the license is not in the list of allowed licenses. If you think this is an error, please file an issue on ",
             "uploadInProgress": "Upload in progress",
-            "cancel": "cancel",
+            "cancel": "Cancel",
             "category": "Category",
-            "uploadSuccess": "uploadSuccess",
+            "uploadSuccess": "Upload successful.",
             "view": "View",
             "inWikimediaCommons": "in Wikimedia Commons",
             "ok": "OK",
             "Github": "Github",
-            "topicPage": "go to topic page"
+            "topicPage": "View topic"
         }
     },
     "login": {
         "loginMenu": {
-            "title": "User Profile",
-            "tooltip": "Login",
-            "item": "Log In",
-            "logout": "Log Out",
-            "showProfile": "Show profile"
+            "title": "User profile",
+            "tooltip": "Log in",
+            "item": "Log in",
+            "logout": "Log out",
+            "showProfile": "Log out"
 
         },
         "loginSuccess": "Login successful. You are being redirected back to Wikidocumentaries."

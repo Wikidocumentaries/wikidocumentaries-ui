@@ -169,7 +169,7 @@ a:hover {
 .toolbar {
   display: flex;
   color: #333;
-  padding: 0 20px;
+  padding-left: 20px;
   min-height: 45px; /* Normal height, but line wrap can grow this */
   align-items: flex-start; /* We want multiple lines to align to the top */
   line-height: 1.2;
@@ -187,8 +187,8 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   width: 45px;
-  padding-top: 9px; /* To adjust baseline to a good position */
-  padding-bottom: 6px; /* For visual symmetry */
+  height: 45px;
+  align-items: center;
 }
 
 .toolbar-item-a {
@@ -717,6 +717,19 @@ i.wikiglyph {
   -webkit-column-break-inside: avoid;
 }
 
+.upload-button {
+    padding: 10px 15px;
+    background-color: var(--main-red);
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+a:hover .upload-button {
+    background-color: var(--main-orange);
+}
+
 .data-select {
   display: block;
   background: var(--main-red);
@@ -727,6 +740,16 @@ i.wikiglyph {
   cursor: pointer;
   margin-right: 3px;
   /* transition: background 80ms ease-in, color 80ms ease-in; */
+}
+
+.data-select a {
+  color:white;
+  font-size: 0.7em;
+}
+
+.data-select a:hover {
+  box-shadow: none;
+  text-decoration: underline;
 }
 
 .data-button {
