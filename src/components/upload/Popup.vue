@@ -87,6 +87,22 @@
 
         <!-- Metadata section -->
         <div class="columns">
+          <!-- Depicts: Add also other keywords from source. Upload original text as a qualifier. Remove false match from this and other related sections (category). Add all keywords in a separate section. Choose property for this section: depicts / creator / location. -->
+          <div class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.depicted") }}
+              </div>
+              <div class="data">
+                <div class="grid-body unedited">
+                  <a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Filename -->
           <div class="grid-row">
             <div class="grid-icons">
@@ -99,7 +115,7 @@
               </div>
             </div>
           </div>
-          <!-- Caption -->
+          <!-- Caption: Edit option needed, upload missing -->
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
@@ -113,6 +129,7 @@
               </div>
             </div>
           </div>
+          <!-- Description: Edit option needed, upload missing -->
           <div v-if="element.description" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-description metadata-glyph"></i>
@@ -131,8 +148,7 @@
               </div>
             </div>
           </div>
-
-          <!-- Creator -->
+          <!-- Creator: Upload missing, change style after reconciling, adding to crosswalk table-->
           <div v-if="element.creators" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
@@ -151,7 +167,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Date created: Normalized, based on year. No editing-->
           <div class="grid-row" v-if="element.datecreated">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-production-date metadata-glyph"></i>
@@ -165,7 +181,7 @@
               </div>
             </div>
           </div>
-
+          <!-- License: No editing-->
           <div v-if="element.license" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
@@ -181,7 +197,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Category: Based on Wikidata. No editing, maybe a good idea?-->
           <div v-if="this.category" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-message metadata-glyph"></i>
@@ -193,7 +209,7 @@
               </div>
             </div>
           </div>
-
+          <!-- Source: Source url, no editing-->
           <div class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
@@ -207,24 +223,7 @@
               </div>
             </div>
           </div>
-
-          <!-- Depicts -->
-          <div class="grid-row">
-            <div class="grid-icons">
-              <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
-            </div>
-            <div class="grid-text">
-              <div class="grid-item">
-                {{ $t("imageViewer.imageMetadata.depicted") }}
-              </div>
-              <div class="data">
-                <div class="grid-body unedited">
-                  <a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Institution -->
+          <!-- Institution: Reconcile possible, upload missing, style change after reconciling. Possible to add to Information as well as SDC, adding to crosswalk table-->
           <div v-if="element.institutions" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-institution metadata-glyph"></i>
@@ -233,14 +232,15 @@
               <div class="grid-item">
                 {{ $t("imageViewer.imageMetadata.institution") }}
               </div>
-              <Dataselect
+              <ItemPullDown
                 v-for="institution in element.institutions"
                 :key="institution.id"
                 class="grid-select"
                 v-bind:term="institution"
-              ></Dataselect>
+              ></ItemPullDown>
             </div>
           </div>
+          <!-- Collection: Upload missing, style change after reconciling, adding to crosswalk table-->
           <div v-if="element.collection" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-collection metadata-glyph"></i>
@@ -249,13 +249,14 @@
               <div class="grid-item">
                 {{ $t("imageViewer.imageMetadata.collection") }}
               </div>
-              <Dataselect
+              <ItemPullDown
                 class="grid-select"
                 v-if="element.collection"
                 v-bind:term="element.collection"
-              ></Dataselect>
+              ></ItemPullDown>
             </div>
           </div>
+          <!-- Inventory number, upload missing, add to both Information and SDC -->
           <div v-if="element.inventoryNumber" class="grid-row">
             <div class="grid-icons">
               <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
