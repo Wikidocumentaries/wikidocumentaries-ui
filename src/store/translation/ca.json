@@ -5,6 +5,7 @@
 			"Fitoschido",
 			"Mguix",
 			"Qllach",
+			"SMP",
 			"Skurz0"
 		]
 	},
@@ -80,6 +81,10 @@
 			"headerTitle": "Feines en la col·lecció",
 			"intro": "Aquestes obres són a la col·lecció d'aquesta persona o institució.  Podeu triar mostrar-los com a llista, que també mostra obres sense imatges.  Es poden ordenar per dates o noms.  Tingueu en compte que només es mostraran aquells que tinguin aquesta informació."
 		},
+		"Cups": {
+			"headerTitle": "Jocs, sèries i tornejos",
+			"intro": "Aquest club ha participat en els següents jocs, sèries i tornejos"
+		},
 		"CV": {
 			"headerTitle": "CV",
 			"intro": "Aquests són esdeveniments professionals de la persona del tema."
@@ -136,6 +141,9 @@
 			"titleApproveText": "Aprovar aquest títol",
 			"subtitleEditText": "Modifica la descripció",
 			"subtitleApproveText": "Aprovar aquesta descripció"
+		},
+		"Heritage": {
+			"headerTitle": "Elements de patrimoni"
 		},
 		"Locations": {
 			"headerTitle": "En aquesta ubicació",
@@ -217,9 +225,17 @@
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Gènere"
 		},
+		"Seasons": {
+			"headerTitle": "Temporades",
+			"intro": "Vegeu les temporades d'aquesta activitat."
+		},
 		"Subclasses": {
 			"headerTitle": "Subclasses d'aquest tema",
 			"intro": "Vegeu subclasses d'aquest tema.  Visualitza com a llista per veure també elements sense una imatge."
+		},
+		"Teams": {
+			"headerTitle": "Equips participants",
+			"intro": "Equips que participen en aquest joc, sèrie o torneig."
 		},
 		"Things": {
 			"headerTitle": "Temes de la llista de focus",
@@ -536,6 +552,7 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
 		"WLMText": "Fotografia aquest lloc de patrimoni cultural i participa en la $2 competició de fotografia!",
 		"WLMButton": "Puja la imatge"
 	}

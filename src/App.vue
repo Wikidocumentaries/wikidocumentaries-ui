@@ -25,6 +25,7 @@ export default {
   --main-dark: #555;
   --main-light-bg: #fafafa;
   --main-link-color: #00a3cc;
+  --main-transp-gray: #7777;
   --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
   --main-orange: #ea8e43;
@@ -343,7 +344,6 @@ a:hover {
   background: rgba(255, 255, 255, 0.95);
   text-align: center;
   vertical-align: middle;
-  line-height: 45px;
 }
 
 .text {

@@ -44,8 +44,30 @@
 <!--     <TopicMap id="topicMap"></TopicMap> -->
     <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
 <!--     <EventList id="events"></EventList> -->
-    <Similar id="similar"></Similar>
-    <DepictingImages></DepictingImages>
+
+    <!-- Hide "Similar topics" for Q105501871 Pargas house (based on feedback) -->
+    <Similar
+      v-if="this.$store.state.wikidocumentaries.wikidataId !== 'Q105501871'"
+      id="similar"
+    />
+    </Similar>
+
+    <!--
+      Show images for Q105501871 Pargas house on the basis of
+      its exhibition Q119149823 and hardcode facets for the exhibition.
+    -->
+    <DepictingImages
+      v-if="['Q105501871', 'Q119149823'].includes(this.$store.state.wikidocumentaries.wikidataId)"
+      topic="Q119149823"
+      :facets="'wdt:P180, wdt:P186, wdt:P366, wdt:P189, wdt:P127'.split(', ')"
+      :useSDC="true"
+    />
+    <DepictingImages
+      v-else
+      :topic="this.$store.state.wikidocumentaries.wikidataId"
+      :useSDC="true"
+    />
+
     <TopicImages
       @showImagesOnMap="onShowImagesOnMap"
       @showImagesOnTimeline="onShowImagesOnTimeline"
