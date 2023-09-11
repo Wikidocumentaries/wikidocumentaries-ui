@@ -23,6 +23,7 @@ export default {
   --main-txt-color: #333;
   --main-dimmed: #777;
   --main-dark: #555;
+  --main-light-bg: #fafafa;
   --main-link-color: #00a3cc;
   --main-modal-color: #ececec;
   --main-yellow: #ffd76e;
@@ -656,9 +657,10 @@ i.wikiglyph {
 .gallery {
   height: 40vh;
   display: flex;
-  padding: 0 0 10px 10px;
+  padding: 0 0 0 10px;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: var(--main-light-bg);
 }
 
 .gallery-item {
