@@ -123,6 +123,10 @@ a:hover {
   text-transform: capitalize;
 }
 
+.break {
+  word-break: break-all;
+}
+
 .left-align {
   display: flex;
   height: 100%;

@@ -935,10 +935,6 @@ export default {
   text-transform: uppercase;
 }
 
-.break {
-  word-break: break-all;
-}
-
 /*
 .main-toolbar {
   display: -ms-flexbox;
@@ -959,7 +955,7 @@ export default {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.25) 100%
   );
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   box-sizing: border-box;
 }
 

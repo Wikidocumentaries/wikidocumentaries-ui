@@ -349,6 +349,7 @@ export default {
       } else {
         this.title = "";
       }
+      //further work: multiple creators and their roles
       if (element.creators[0]) {
         this.author = element.creators[0].name
           .split(", ")
@@ -529,7 +530,7 @@ ${category}`;
 
 .popup-inner {
   background: #fff;
-  max-width: 1000px;
+  max-width: calc(100% - 40px);
 }
 
 .grid-icons {
