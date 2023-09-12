@@ -20,6 +20,7 @@
 		"moreLink": "Preberite več v",
 		"titleTopics": "Teme",
 		"titleTools": "Orodja",
+		"statusLanguages": "Po Wikidokumentarcih je mogoče krmariti v katerem koli jeziku, ki je na voljo v Wikipodatkih. To je odlična priložnost za majhne jezike. Prevodi se izvajajo v TranslateWikiju.",
 		"titleTranslate": "Prevedi"
 	},
 	"MainPage": {
@@ -142,7 +143,10 @@
 			"noTopicFoundText": "Tema ni najdena"
 		},
 		"Wikipedia": {
-			"missingArticleCreate": "Ta članek lahko v svojem jeziku ustvarite tako, da kliknete ikono plus."
+			"missingArticleCreate": "Ta članek lahko v svojem jeziku ustvarite tako, da kliknete ikono plus.",
+			"languageMenu": {
+				"otherLanguagestext": "Drugi jeziki"
+			}
 		}
 	},
 	"imageViewer": {
@@ -150,6 +154,9 @@
 			"description": "Opis",
 			"addDescription": "Dodaj opis",
 			"creatorUnknown": "Neznano",
+			"format": "Format",
+			"addFormat": "Dodaj format",
+			"removeFormat": "Odstrani format",
 			"depicted": "Slika prikazuje",
 			"depicts": "Slika prikazuje",
 			"location": "Lokacija",
@@ -161,6 +168,7 @@
 			"image": "Slika",
 			"copyrightNotePD": "Slika ima licenco $1, vendar je glede na metapodatke v javni domeni.",
 			"imageDimensions": "Mere slike",
+			"fileFormat": "Datotečni format",
 			"moveTo": "Prestavitev v drugo polje"
 		},
 		"imageActions": {

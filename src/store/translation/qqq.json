@@ -26,6 +26,8 @@
 		"statusTools": "Introductory text about tools of the site in the site main page.",
 		"titleLanguages": "{{Identical|Language}}",
 		"titleTechnology": "Subheading in the subsection \"Status\" in the introductory section",
+		"titleCreators": "The creators of the project",
+		"titleTeam": "Production team",
 		"titleTranslate": "{{Identical|Translate}}",
 		"email": "{{Identical|Email}}"
 	},
@@ -142,6 +144,9 @@
 			"facetMenuOptionProfession": "Menu item for faceting by profession",
 			"facetMenuOptionCountry": "Menu item for faceting by country",
 			"facetMenuOptionCity": "Menu item for faceting by gender"
+		},
+		"Seasons": {
+			"headerTitle": "Seasons in team games"
 		},
 		"TopicImages": {
 			"headerTitle": "Main title for the Images section",

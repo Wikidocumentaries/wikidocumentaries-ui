@@ -106,7 +106,7 @@
 			"displayMenu": {
 				"title": "Näytä",
 				"tooltip": "Valitse esitysmuoto",
-				"optionGallery": "Galleriana",
+				"optionGallery": "Kuvagalleriana",
 				"optionList": "Luettelona"
 			},
 			"showAll": "Kaikki"
@@ -222,6 +222,10 @@
 			"facetMenuOptionProfession": "Ammatin mukaan",
 			"facetMenuOptionCountry": "Maan mukaan",
 			"facetMenuOptionCity": "Sukupuolen mukaan"
+		},
+		"Seasons": {
+			"headerTitle": "Kaudet",
+			"intro": "Tarkastele tämän aktiviteetin kausia."
 		},
 		"Subclasses": {
 			"headerTitle": "Tämän aiheen alaluokkia",

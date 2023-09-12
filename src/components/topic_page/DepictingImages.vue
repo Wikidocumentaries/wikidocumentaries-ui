@@ -1,31 +1,33 @@
 <template>
     <div class="images-component">
         <div class="toolbar">
-            <h1 class="header-title">Depictions from Wikimedia Commons</h1>
+            <h1 class="header-title">{{ title }}</h1>
         </div>
-        <div class="facets">
-            <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
-                <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] }}</h2>
-                <div class="value-list">
-                    <button
-                        v-for="value in facetValues[property]"
-                        :key="value.objectValue"
-                        :class="filters.find(item => item.property === property && item.value === 'wd:'+value.objectValue) ? 'selected' : ''"
-                        @click="chooseValue(property, value.objectValue)">
-                        <div class="label">{{ value.label || value.objectValue || "-" }}</div>
-                        <div class="count">&nbsp;{{ value.count }}</div>
-                    </button>
+        <div class="shadow-bottom">
+            <div class="facets">
+                <div class="facet" v-for="property in Object.keys(facetValues)" :key="property">
+                    <h2 v-if="facetValues[property].length">{{ labels[property.split(":")[1]] || property }}</h2>
+                    <div class="value-list">
+                        <button
+                            v-for="value in facetValues[property]"
+                            :key="value.objectValue"
+                            :class="isFilterActive(property, value.objectValue) ? 'selected' : ''"
+                            @click="chooseValue(property, value.objectValue)">
+                            <div class="label">{{ value.label || value.objectValue || "-" }}</div>
+                            <div class="count">&nbsp;{{ value.count }}</div>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="intro">
              <div v-if="status === 'LOADING'">Searching for images...</div>
-             <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in Structured Data on Commons.</div>
+             <div v-if="status === 'SUCCESS' && !results.length">No images with matching depiction statements found in {{useSDC ? "Structured Data on Commons" : "Wikidata" }}.</div>
              <div v-if="status === 'ERROR'">{{ error }}</div>
         </div>
         <div :class="isExpanded ? 'expanded' : ''" class="imagegrid-container">
             <ImageGrid v-if="results.length" class="image-grid" :items="results" @showItemGeolocation="showImageOnMap" />
-            <div class="haze">
+            <div v-if="results.length" class="haze">
                 <div class="toolbar-item block">
                     <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
                         <i
@@ -47,8 +49,146 @@ import wdk from "wikidata-sdk";
 
 import ImageGrid from '@/components/ImageGrid'
 
+const prefixes =
+    `
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    `.trim().split("\n");
+
+function buildQuery({ topicItem, useSDC, selectVars, filterTriples, optionalStatements, modifiers }) {
+    // ?image refers to the URL that can be fetched and rendered
+    // ?file refers to what is filtered
+    // ?item refers to what is depicted
+    let imageFileAndItemTriples;
+    if (useSDC) {
+        imageFileAndItemTriples =
+            `
+?file a schema:ImageObject .
+?file schema:url ?image .
+
+# depicts | exhibition history
+?file (wdt:P180|wdt:P608) ?item .
+            `.trim().split("\n");
+    } else {
+        imageFileAndItemTriples =
+            `
+# what is depicted and what is filtered are the same in Wikidata
+BIND(?item AS ?file)
+
+?file (wdt:P18) ?image . # image XXX: alternative properties
+            `.trim().split("\n");
+    }
+    return `
+${prefixes.join("\n")}
+
+SELECT ${selectVars.join(" ")} {
+
+    ${imageFileAndItemTriples.join("\n    ")}
+
+    ${useSDC ? 'SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> ' : ''}{
+        {
+            VALUES ?item { ${topicItem} }
+        }
+        UNION
+        {
+            ?item wdt:P171+ ${topicItem} . # parent taxon
+        }
+        UNION
+        {
+            # depicts | exhibition history | discovery location
+            ?item (wdt:P180|wdt:P608|wdt:P189) ${topicItem} .
+        }
+    }
+
+    ${filterTriples.join("\n    ")}
+
+    ${optionalStatements.join("\n    ")}
+}
+${modifiers.join("\n")}
+    `.trim();
+}
+
+function buildFacetQuery(topicItem, useSDC, filterTriples, facetProperty) {
+    return buildQuery({
+        useSDC: useSDC,
+        topicItem: topicItem,
+        selectVars: [
+            "?objectValue",
+            "(SAMPLE(?label_) AS ?label)",
+            "(COUNT(DISTINCT ?image) AS ?count)"
+        ],
+        filterTriples: filterTriples,
+        optionalStatements:
+            `
+OPTIONAL {
+    ?file ${facetProperty} ?objectValue .
+    OPTIONAL {
+        ?objectValue rdfs:label ?label_ .
+        FILTER (LANG(?label_) = "en") .
+    }
+}
+            `.trim().split("\n"),
+        modifiers: [
+            "GROUP BY ?objectValue",
+            "ORDER BY DESC(?count)",
+            "LIMIT 20"
+        ]
+    });
+}
+
+function buildImageQuery(topicItem, useSDC, filterTriples) {
+    return buildQuery({
+        useSDC: useSDC,
+        topicItem: topicItem,
+        selectVars: [
+            "?file",
+            "?image",
+            "?caption",
+            "(MAX(?commonsQualityAssessment) AS ?quality_)"
+        ],
+        filterTriples: filterTriples,
+        optionalStatements: [
+            "OPTIONAL { ?file wdt:P6731 ?commonsQualityAssessment . }",
+            ...`
+OPTIONAL {
+    ?file schema:caption ?caption .
+    FILTER (LANG(?caption) = "en") .
+}
+            `.trim().split("\n")
+        ],
+        modifiers: [
+            "GROUP BY ?file ?image ?caption",
+            "ORDER BY DESC(?quality_)",
+            "LIMIT 200"
+        ]
+    });
+}
+
+const defaultFacets = [
+    'wdt:P6731', // Commons quality assessment
+    'wdt:P180', // depicts
+    'wdt:P195' // collection
+];
+
 export default {
     name: 'DepictingImages',
+    props: {
+        topic: String,
+        title: {
+            type: String,
+            default: "Depictions from Wikimedia Commons"
+        },
+        facets: {
+            type: Array,
+            default: () => defaultFacets
+        },
+        useSDC: {
+            type: Boolean,
+            default: true,
+        }
+    },
     data () {
         return {
             results: [],
@@ -59,7 +199,15 @@ export default {
             labels: {
                 P180: "Depicts",
                 P195: "Collection",
-                P6731: "Assessment"
+                P6731: "Assessment",
+                P170: "Creator",
+                P189: "Location of discovery",
+                P127: "Owned by",
+                encodingFormat: "File format",
+                P31: "Type",
+                P276: "Current location",
+                P186: "Material",
+                P366: "Use"
             },
             isExpanded: false
         };
@@ -70,166 +218,137 @@ export default {
             this.$store.commit('setImagesShownOnMap', [image]);
             this.$emit('showImagesOnMap');
         },
+
+        isFilterActive(property, objectValue) {
+            // XXX at this point we don't know if objectValue is url or literal
+            const url = "wd:" + objectValue;
+            const literal = JSON.stringify(objectValue);
+            return this.filters.find((item) => (
+                item.property === property && (
+                    item.value === url || item.value === literal
+                )
+            ));
+        },
+
         chooseValue(property, facetValue) {
-            const clear = !facetValue || this.filters.find((item) =>
-                item.property === property && item.value === 'wd:' + facetValue
-            );
+            const clear =
+                !facetValue || this.isFilterActive(property, facetValue);
             this.filters = this.filters.filter((item) => item.property !== property);
             if (!clear) {
-                this.filters = [ ...this.filters, {
+                const filter = {
                     property: property,
-                    value: 'wd:' + facetValue
-                }];
+                    value: facetValue.match(/^Q[0-9]+$/)
+                        ? 'wd:' + facetValue
+                        : JSON.stringify(facetValue)
+                };
+                this.filters = [ ...this.filters, filter ]
             }
 
             Object.keys(this.facetValues).forEach((property) => this.fetchPossibleValues(property));
             this.fetchImages();
         },
-        fetchSparql({property: property} = {}) {
+
+        async fetchSparql({
+            facetProperty: facetProperty,
+            backoff: backoff = 0
+        } = {}) {
+            const topicItem =
+                  "wd:" + this.topic;
             const filterTriples = this.filters
-                .filter(filter => filter.property !== property)
-                .map(({property, value}) => `?file ${property} ${value} .`)
-                .join("\n");
-            const prefixes = `
-PREFIX schema: <http://schema.org/>
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-            `
+                .filter(filter => filter.property !== facetProperty)
+                .map(({property, value}) => `?file ${property} ${value} .`);
             let sparql;
-            if (property === "wdt:P6731") {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P6731 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-                `;
-            } else if(property === "wdt:P180") {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P180 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-LIMIT 20
-                `;
-            } else if (property) {
-                sparql = `
-${prefixes}
-SELECT ?objectValue (SAMPLE(?label_) AS ?label) (COUNT(DISTINCT ?file) AS ?count) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL {
-        ?file wdt:P195 ?objectValue .
-        OPTIONAL {
-            ?objectValue rdfs:label ?label_ .
-            FILTER (LANG(?label_) = "en") .
-        }
-    }
-}
-GROUP BY ?objectValue
-ORDER BY DESC(?count)
-LIMIT 20
-                `.replace(/wdt:P195/g, property);
+            if (facetProperty) {
+                // Build a query for the values of the given facet property
+                sparql = buildFacetQuery(topicItem, this.useSDC, filterTriples, facetProperty);
             } else {
-                sparql = `
-${prefixes}
-SELECT ?file ?image ?caption (SAMPLE(?commonsQualityAssessment) AS ?quality_) {
-    ?file a schema:ImageObject .
-    ?file schema:url ?image .
-    ?file wdt:P180 ?item .
-    SERVICE <https://qlever.cs.uni-freiburg.de/api/wikidata> {
-        {
-            VALUES ?item { wd:Q42 }
-        }
-        UNION
-        {
-            ?item wdt:P171+ wd:Q42 . # parent taxon
-        }
-    }
-    ${filterTriples}
-    OPTIONAL { ?file wdt:P6731 ?commonsQualityAssessment . }
-    OPTIONAL {
-        ?file schema:caption ?caption.
-        FILTER (LANG(?caption) = "en") .
-    }
-}
-GROUP BY ?file ?image ?caption
-ORDER BY DESC(?quality_)
-LIMIT 200
-                `;
+                // Build a query to fetch the result images
+                sparql = buildImageQuery(topicItem, this.useSDC, filterTriples);
             }
-            sparql = sparql
-                .replace(/Q42/g, this.$store.state.wikidocumentaries.wikidataId)
+
             const [url, body] = wdk.sparqlQuery(sparql).split("?");
-            return axios
-                .post("https://qlever.cs.uni-freiburg.de/api/wikimedia-commons", body);
+
+            try {
+                const endpointURL = this.useSDC
+                    ? "https://qlever.cs.uni-freiburg.de/api/wikimedia-commons"
+                    : "https://query.wikidata.org/sparql";
+                return await axios.post(endpointURL, body);
+            } catch (error) {
+                if (error.response && (error.response.status === 429 || error.response.status === 400)) {
+                    // Too many requests - sleep a while and retry
+                    const delay = (Math.random() * this.facets.length + 1) * 1000 * 2 ** backoff;
+                    console.log(`Retrying in ${ delay / 1000 } seconds`);
+                    await new Promise((resolve) => setTimeout(resolve, delay));
+                    return this.fetchSparql({
+                        facetProperty,
+                        backoff: backoff + 1
+                    });
+                }
+                if (error.response) {
+                    const data = error.response.data;
+                    try {
+                        console.error(
+                            data.exception,
+                            `\n\nLine ${data.metadata.line}, column ${data.metadata.positionInLine}`,
+                            `\n\n${data.metadata.query}`
+                        );
+                    } catch(_error2) {
+                        console.error(error.response.data);
+                    }
+                }
+                throw error;
+            };
         },
+
         fetchPossibleValues(property) {
-            this.fetchSparql({ property: property }).then(response => {
-                this.facetValues = { ...this.facetValues,
-                    [property]: wdk.simplify.sparqlResults(response.data)
+            this.fetchSparql({ facetProperty: property }).then(response => {
+                const values = wdk.simplify.sparqlResults(response.data);
+                const nonEmptyValues = values
+                      .filter(value => value.objectValue);
+
+                // Merge unknown and missing values
+                const emptyCount = values
+                      .filter(value => !value.objectValue)
+                      .map(value => value.count)
+                      .reduce(((a, b) => -(-a) + -(-b)), 0);
+
+                // Create an empty value only if we got some
+                const emptyValueOrNothing = !emptyCount ? [] : [{
+                    objectValue: undefined,
+                    label: undefined,
+                    count: emptyCount
+                }];
+
+                const cleanedUpValues = [
+                    ...emptyValueOrNothing,
+                    ...nonEmptyValues
+                ];
+
+                // Don't create a new entry if we only got empty values
+                if (this.facetValues[property] || nonEmptyValues.length) {
+                    this.facetValues = {
+                        ...this.facetValues,
+                        [property]: cleanedUpValues
+                    };
+                    console.log(property, JSON.parse(JSON.stringify(this.facetValues[property])));
+                } else {
+                    console.log(property, "- didn't create an empty facet");
+                }
+            }).catch(error => {
+                console.error(error);
+                this.facetValues = {
+                    ...this.facetValues,
+                    [property]: [{ objectValue: null, label: "Query failed" }]
                 };
             });
         },
+
         fetchImages() {
             this.fetchSparql().then(response => {
                 this.status = "SUCCESS";
                 const results = wdk.simplify.sparqlResults(response.data);
                 this.results = results.map((result => ({
-                    id: result.file,
+                    id: result.image,
                     infoURL: result.file,
                     imageURL: result.image,
                     thumbURL: result.image+"?width=500",
@@ -240,9 +359,9 @@ LIMIT 200
                     creators: "",
                     geoLocations: [],
                 })));
-                console.log(this.results)
+                console.log("SDC images", this.results)
             }).catch(error => {
-                console.log(error);
+                console.error(error);
                 this.status = "ERROR";
                 this.error = "Failed to fetch search results."
                 this.results = [];
@@ -250,9 +369,9 @@ LIMIT 200
         },
     },
     mounted() {
-        this.fetchPossibleValues('wdt:P6731');
-        this.fetchPossibleValues('wdt:P180');
-        this.fetchPossibleValues('wdt:P195');
+        this.facets.forEach((facet, i) => {
+            setTimeout(() => this.fetchPossibleValues(facet), (i+1) * 1000);
+        });
         this.fetchImages();
     },
     components: {
@@ -286,15 +405,35 @@ LIMIT 200
     color: white;
 }
 
+/* Less padding between the facets shadow and the image grid */
 .intro {
-    padding: 0 20px 10px 20px;
+    padding-bottom: 8px;
 }
 
 .facets {
     display: flex;
     flex-direction: row;
-    padding: 0 10px 0px 10px;
+    padding: 0 10px 10px 10px;
     gap: 1em;
+    position: relative;
+    overflow-x: auto;
+}
+
+.shadow-bottom {
+    position: relative;
+    box-shadow: var(--main-shadow);
+}
+
+/* Hide the the box shadow of the top edge */
+.shadow-bottom:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 100%;
+    background: white;
+    height: 6px;
 }
 .facet {
     flex-shrink: 0;
@@ -323,6 +462,7 @@ LIMIT 200
     padding-right: 10px;
     margin-top: 0.25em;
     max-width: 30vw;
+    min-width: min-content;
 }
 
 .facet button.selected, .facet button:hover { 
@@ -341,4 +481,33 @@ LIMIT 200
 .facet button .count {
     padding-left: 2px;
 }
+
+.facet .value-list {
+    scrollbar-color: var(--main-transp-gray) transparent;
+    scrollbar-width: 7px;
+    -webkit-overflow-scrolling: auto;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-transp-gray);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 7px;
+}
+
 </style>
