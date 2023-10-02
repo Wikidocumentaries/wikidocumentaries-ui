@@ -7,6 +7,7 @@
 			"A Retired User",
 			"GuoPC",
 			"Lantianjialiang",
+			"LittlePaw365",
 			"Shuiwater",
 			"列维劳德",
 			"沈澄心",
@@ -126,9 +127,9 @@
 		},
 		"Header": {
 			"titleEditText": "编辑标题",
-			"titleApproveText": "批准此标题",
+			"titleApproveText": "核准该标题",
 			"subtitleEditText": "编辑描述",
-			"subtitleApproveText": "批准此描述"
+			"subtitleApproveText": "核准该描述"
 		},
 		"Locations": {
 			"headerTitle": "在此位置",
