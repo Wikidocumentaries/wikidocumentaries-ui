@@ -75,8 +75,16 @@
 			"yearAbbreviation": "år"
 		},
 		"Collection": {
-			"headerTitle": "Værk i samlingen",
+			"headerTitle": "Værker i samlingen",
 			"intro": "Disse værker er i denne persons eller institutions samling. Du kan vælge at se dem som en liste, hvilket også vil vise værker uden billeder. De kan sorteres efter dato eller navn. Bemærk at kun værker med disse informationer vil blive vist."
+		},
+		"Cups": {
+			"headerTitle": "Spil, serier og turneringer",
+			"intro": "Denne klub har spillet i følgende kampe, serier og turneringer"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Disse er professionelle begivenheder for den pågældende person."
 		},
 		"Depicted": {
 			"headerTitle": "Vist i",
@@ -127,9 +135,12 @@
 		},
 		"Header": {
 			"titleEditText": "Rediger titlen",
-			"titleApproveText": "Godkend denne titeæ",
+			"titleApproveText": "Godkend denne titel",
 			"subtitleEditText": "Rediger beskrivelsen",
 			"subtitleApproveText": "Godkend denne beskrivelse"
+		},
+		"Heritage": {
+			"headerTitle": "Element af kulturarv"
 		},
 		"Locations": {
 			"headerTitle": "På denne plads",
@@ -166,7 +177,7 @@
 		},
 		"Partof": {
 			"headerTitle": "Del af",
-			"intro": "Dette element er placeret i relation til disse elementer. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du vælge listevisning."
+			"intro": "Dette element er en del af disse elementer. Du kan sortere dem efter tid og navn. For at se alle elementer, inklusiv dem uden billede, skal du vælge listevisning."
 		},
 		"Similar": {
 			"headerTitle": "Lignende emner",
@@ -191,7 +202,8 @@
 			"intro": "Dette emne er placeret i eller i kontekst til disse emner."
 		},
 		"Names": {
-			"headerTitle": "Navne"
+			"headerTitle": "Navne",
+			"intro": "Se navnene på dette emne og alle tilgængelige alternativer."
 		},
 		"People": {
 			"headerTitle": "Personer relateret til dette emne",
@@ -210,9 +222,17 @@
 			"facetMenuOptionCountry": "Land",
 			"facetMenuOptionCity": "Køn"
 		},
+		"Seasons": {
+			"headerTitle": "Sæsoner",
+			"intro": "Se sæsonerne for denne aktivitet."
+		},
 		"Subclasses": {
 			"headerTitle": "Underklasser af dette emne",
 			"intro": "Se dette emnes underklasser. Vælg listevisning for også at se emner uden et billede."
+		},
+		"Teams": {
+			"headerTitle": "Deltagende hold",
+			"intro": "Hold, der deltager i dette spil, serie eller turnering."
 		},
 		"Things": {
 			"headerTitle": "Fokuslisteemner",
@@ -226,8 +246,8 @@
 			"headerTitle": "Billeder fra arkiverne",
 			"intro": "Disse billeder er samlet fra flere forskellige kilder og de repræsenterer muligvis ikke emnet korrekt. Du kan se det originale billede og dets placering på et kort, hvis det har en lokeringsnål.",
 			"actionsMenu": {
-				"menuTitle": "Vis eller arrangere billeder",
-				"tooltip": "Vis eller arrangere billeder",
+				"menuTitle": "Vis eller arrangér billeder",
+				"tooltip": "Vis eller arrangér billeder",
 				"showImagesOnMapMenuText": "Vis alle billederne på kortet",
 				"showImagesOnTimelineMenuText": "Vis alle billeder på tidslinjen",
 				"selectPortraits": "Vælg portrætter af denne person i god kvalitet",
@@ -272,14 +292,14 @@
 					"browse": "Gennemse relaterede emner"
 				},
 				"remCreator": {
-					"menuTitle": "Det er af denne skaber istedet",
+					"menuTitle": "Det er af denne skaber i stedet",
 					"shortMenuTitle": "Det er af en anden skaber",
 					"search": "Søg efter skaberen",
 					"browse": "Gennemse relaterede aktører"
 				},
 				"remInappropriate": {
-					"menuTitle": "Den er upassende fordi",
-					"shortMenuTitle": "Den er upassende",
+					"menuTitle": "Det er upassende fordi",
+					"shortMenuTitle": "Det er upassende",
 					"privacy": "Det viste overtræder privatlivsforhold",
 					"violence": "Det viser ekstrem vold",
 					"sex": "Den viser eksplicit sex",
@@ -297,7 +317,10 @@
 			"hideImagesMenuText": "Skjul billeder",
 			"chooseTimelineMapsMenuText": "Vælg kort til tidslinje...",
 			"showNearbyPlacesMenuText": "Vis steder i nærheden",
-			"hideNearbyPlacesMenuText": "Skjul steder i nærheden"
+			"hideNearbyPlacesMenuText": "Skjul steder i nærheden",
+			"extLink": {
+				"menuTooltip": "Se eller rediger i OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Avisudklip",
@@ -312,8 +335,8 @@
 		"Works": {
 			"headerTitle": "Værker",
 			"intro": "Dette er værker af den person, gruppe eller organisation, som er denne sides emne. Du kan gå videre til en side med informationer om selve værket, ved at klikke på det. Kun værker med et billede er vist her. Vælg listevisning for at se alle relaterede værker, der er gemt.",
-			"sortMenuTitle": "Sorter",
-			"sortMenuTooltip": "Sorter emner",
+			"sortMenuTitle": "Sortér",
+			"sortMenuTooltip": "Sortér emner",
 			"sortMenuOptionTime": "Efter tid",
 			"sortMenuOptionAlpha": "Alfabetisk",
 			"sortMenuOptionDist": "Efter afstand",
@@ -342,7 +365,7 @@
 			"missingArticle": "Der er ingen artikel om dette emne på dit sprog. Du kan læse artiklen i et andet tilgængeligt sprog ved at vælge sprogmenuen øverst. Du kan oprette artiklen på dit sprog ved at vælge plus-ikonet.",
 			"missingArticleMissing": "Der findes ingen artikler om dette emne på dit sprog.",
 			"missingArticleChoose": "Du kan læse artiklen i et andet tilgængeligt sprog ved at vælge sprogmenuen øverst eller du kan oprette artiklen på dit sprog ved at vælge plus-ikonet.",
-			"missingArticleCreate": "Du kan oprette denne artikel på dit sprog ved at trykke på plusikonet.",
+			"missingArticleCreate": "Du kan oprette denne artikel på dit sprog ved at trykke på plus-ikonet.",
 			"missingArticleFallback": "Denne artikel på et andet sprog er vist, baseret på de sproglige preferencer du har.",
 			"missingArticleTranslate": "Du kan oversætte denne artikel til dit sprog ved at vælge det i sprogmenuen.",
 			"missingArticleAuto": "Denne korte tekst er blevet oprettet automatisk fra de givne fakta. Du kan gemme denne kladde og begynde redigering af artiklen.",
@@ -373,7 +396,7 @@
 			"addDateDepicted": "Tilføj afbildet dato",
 			"removeDateDepicted": "Fjern afbildet dato",
 			"dateCreated": "Oprettelsesdato",
-			"addDateCreated": "Tilføj skabelsesdato",
+			"addDateCreated": "Tilføj oprettelsesdato",
 			"removeDateCreated": "Fjern skabelsesdato",
 			"publisher": "Udgiver",
 			"addPublisher": "Tilføj udgiver",
@@ -406,6 +429,7 @@
 			"removeEvent": "Fjern begivenhed",
 			"institution": "Institution",
 			"collection": "Samling",
+			"addCollection": "Tilføj samling",
 			"inventoryNumber": "Inventarnummer",
 			"inscriptions": "Inskriptioner",
 			"measurements": "Mål",
@@ -418,6 +442,8 @@
 			"addPhotographData": "Tilføj information om fotografet",
 			"copyrightNotePD": "Billedet er licenseret med $1, men ud fra billedet metadata befinder værket sig i Public Domain.",
 			"copyrightNoteSame": "Det samme billede er licenseret mere åbent med $1, derfor tilføjes denne licens ligeledes.",
+			"creditline": "Krediteringslinje",
+			"attribution": "Kreditering",
 			"digitalCopy": "Digital kopi",
 			"publishingPlatform": "Udgivelsesplatform",
 			"platformId": "ID",
@@ -430,10 +456,10 @@
 			"moveTo": "Flyt til et andet felt",
 			"addData": "Tilføj data",
 			"uploader": "Uploader",
-			"rotate": "Roter"
+			"rotate": "Rotér"
 		},
 		"imageActions": {
-			"rotateImage": "Roter billedet",
+			"rotateImage": "Rotér billede",
 			"clockwise": "med uret",
 			"counterclockwise": "mod uret",
 			"flip": "Flip",
@@ -468,8 +494,8 @@
 	},
 	"menus": {
 		"sortMenu": {
-			"title": "Sorter emner",
-			"tooltip": "Sorter emner",
+			"title": "Sortér emner",
+			"tooltip": "Sortér emner",
 			"optionTime": "Efter tid",
 			"optionStart": "Efter starttidspunkt",
 			"optionEnd": "Efter sluttidspunkt",
@@ -511,7 +537,7 @@
 			"languageMenuTitle": "Vælg sprog",
 			"languageMenuTooltip": "Vælg dit sprog",
 			"myLanguagesItem": "Mine sprog",
-			"languageMenuTranslate": "Oversæt denne artikel til dansk"
+			"languageMenuTranslate": "Oversæt denne artikel til Dansk"
 		},
 		"languageMenu": {
 			"TranslateUI": "Oversæt til dit sprog"
@@ -524,6 +550,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografer dette kulturarvssted og deltag i fotokonkurrencen på $2 !",
 		"WLMButton": "Upload billede"
 	}
 }
