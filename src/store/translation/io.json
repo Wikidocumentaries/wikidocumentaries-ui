@@ -141,6 +141,9 @@
 			"showAll": "Omni"
 		},
 		"Wikipedia": {
+			"addLink": {
+				"linkTitleWP": "Krear artiklo che Wikipedio"
+			},
 			"languageMenu": {
 				"translateArticleText": "Tradukez ca artiklo a vua idiomo"
 			}
