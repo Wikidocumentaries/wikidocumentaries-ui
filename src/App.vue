@@ -23,6 +23,7 @@ export default {
   --main-txt-color: #333;
   --main-dimmed: #777;
   --main-dark: #555;
+  --main-light-bg: #fafafa;
   --main-link-color: #00a3cc;
   --main-transp-gray: #7777;
   --main-modal-color: #ececec;
@@ -123,6 +124,10 @@ a:hover {
   text-transform: capitalize;
 }
 
+.break {
+  word-break: break-all;
+}
+
 .left-align {
   display: flex;
   height: 100%;
@@ -170,7 +175,7 @@ a:hover {
 .toolbar {
   display: flex;
   color: #333;
-  padding: 0 20px;
+  padding-left: 20px;
   min-height: 45px; /* Normal height, but line wrap can grow this */
   align-items: flex-start; /* We want multiple lines to align to the top */
   line-height: 1.2;
@@ -188,7 +193,8 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   width: 45px;
-  line-height: 45px;
+  height: 45px;
+  align-items: center;
 }
 
 .toolbar-item-a {
@@ -655,9 +661,10 @@ i.wikiglyph {
 .gallery {
   height: 40vh;
   display: flex;
-  padding: 0 0 10px 10px;
+  padding: 0 0 0 10px;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: var(--main-light-bg);
 }
 
 .gallery-item {
@@ -716,6 +723,19 @@ i.wikiglyph {
   -webkit-column-break-inside: avoid;
 }
 
+.upload-button {
+    padding: 10px 15px;
+    background-color: var(--main-red);
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+a:hover .upload-button {
+    background-color: var(--main-orange);
+}
+
 .data-select {
   display: block;
   background: var(--main-red);
@@ -726,6 +746,15 @@ i.wikiglyph {
   cursor: pointer;
   margin-right: 3px;
   /* transition: background 80ms ease-in, color 80ms ease-in; */
+}
+
+.data-select a {
+  color:white;
+}
+
+.data-select a:hover {
+  box-shadow: none;
+  text-decoration: underline;
 }
 
 .data-button {
@@ -753,18 +782,18 @@ i.wikiglyph {
 .data-button:hover,
 .key > .data-select:hover,
 .action > .data-select:hover {
-  background: black;
+  background: var(--main-txt-color);
   /* border-radius: 0;*/
   color: white;
   box-shadow: none;
 }
 
 .unedited {
-  color: var(--main-red);
+  color: var(--main-txt-color);
 }
 
 .unedited:hover {
-  color: black;
+  color: var(--main-red);
   cursor: pointer;
 }
 
