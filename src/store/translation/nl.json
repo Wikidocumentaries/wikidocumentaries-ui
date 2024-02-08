@@ -1,0 +1,293 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aranka",
+			"Elroy",
+			"Mainframe98",
+			"McDutchie",
+			"Nickthijssen1994",
+			"Optilete",
+			"PonkoSasuke",
+			"Rots61",
+			"Spinster",
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Zoeken",
+		"searchInputPlaceHolder": "Vind een onderwerp, of maak een nieuw onderwerp aan",
+		"searchInputSearchOnly": "Zoek een onderwerp",
+		"showMore": "Meer items tonen",
+		"createNew": "Nieuw item aanmaken",
+		"intro": "Wikidocumentaries is een wiki voor geschiedschrijving - een plaats om sporen en bronnen te verzamelen, en om verhalen te schrijven. Om te beginnen: zoek een onderwerp dat je interesseert!",
+		"titleDescription": "Wat is Wikidocumentaries?",
+		"description": "Wikidocumentaries is een makersruimte voor burgerhistorici. Het combineert informatie over onderwerpen -  mensen, plaatsen, gebouwen, gebeurtenissen en meer. Je kan navigeren tussen de onderwerpen door opgenomen koppelingen te volgen zoals familieleden, locaties, makers en creaties of aanverwanten. Een onderwerp wordt geïllustreerd met afbeeldingen en kaarten met gekoppelde musea, archieven en bibliotheken. Het zal mogelijk zijn om in Wikidocumentaries bestaande informatie te corrigeren en nieuwe onderwerpen toe te voegen, je eigen afbeeldingen en herinneringen in te brengen en al het materiaal kan worden gebruikt voor je eigen doeleinden.",
+		"titleStatus": "Status",
+		"status": "Deze site is nog in een demofase. Veel belangrijke functies zijn nog niet beschikbaar, en de site kan mogelijks niet helemaal naar verwachting werken.",
+		"moreBelow": "Lees hieronder meer",
+		"more": "Meer lezen",
+		"moreLink": "Meer lezen",
+		"titleTopics": "Onderwerpen",
+		"statusTopics": "De onderwerpen worden gelezen uit Wikidata. Nieuwe onderwerpen kunnen later in Wikidocumentaries worden gecreëerd ter vervanging, wanneer de inhoud buiten het bereik van Wikidata valt. Het zal nog steeds mogelijk zijn om het onderwerp te beschrijven met de rijke opties van Wikidata. Huidige artikelen zijn afkomstig van Wikipedia, terwijl artikelen later lokaal kunnen worden aangemaakt voor onderwerpen die alleen in Wikidocumentaries bestaan.",
+		"titleMedia": "Media",
+		"statusMedia": "Media wordt gelezen uit een groeiend aantal mediaregisters die mediabestanden met vrije licenties aanbieden. We werken aan het nauwkeuriger vinden van beelden en het weergeven van meer en betere metadata uit elk van deze bronnen. Nieuwe mediabronnen zijn welkom!",
+		"titleTools": "Tools",
+		"statusTools": "Wikidocumentaries heeft taken en hulpmiddelen voor het werken met de inhoud. Met het Content Translation hulpmiddel kunnen artikels reeds nu worden vertaald naar andere talen. Momenteel zijn we bezig met het ontwikkelen van keywording met Wikidata, en een geotagging hulpmiddel voor de plaatsbepaling van afbeeldingen. Nieuwe leuke en nuttige hulpmiddelen zullen worden ontwikkeld of geïntegreerd.",
+		"titleLanguages": "Talen",
+		"statusLanguages": "Het is mogelijk om Wikidocumentaries te navigeren in elke taal beschikbaar in Wikidata. Dit is een uitgelezen kans voor kleine talen. De vertalingen worden gemaakt in TranslateWiki.",
+		"titleTechnology": "Technologie",
+		"statusTechnology": "Wikidocumentaries leest de kerngegevens uit Wikidata. Bovendien zal Wikidocumentaries een eigen Wikibase hebben voor onderwerpen die buiten het bereik van Wikidata vallen. De bedoeling is dat Wikidata en Wikidocumentaires als gefedereerde Wikibases synchroniseren. In de tweede plaats wordt de metadata van de afbeeldingen gekoppeld met Wikidata-items, en deze gegevens kunnen gesynchroniseerd worden met de Structured Data op Wikimedia Commons. De site wordt gebouwd met Vue.js en wordt gehost bij Wikimedia Cloud Services.",
+		"titleCreators": "Makers",
+		"titleTeam": "Team",
+		"titleThanks": "Speciale dank aan:",
+		"titlePartners": "Partners",
+		"titleFunding": "Ondersteund door",
+		"titleBy": "Project door",
+		"getInvolved": "Doe mee!",
+		"titleTranslate": "Vertaal",
+		"joinTranslate": "Kom langs met je eigen taal bij Wikidocumentaries. Sluit je aan bij het vrijwillig vertaalteam en breng het verbonden culturele erfgoed tot leven in jouw taal.",
+		"titleContent": "Voeg je inhoud toe",
+		"joinContent": "Als je een foto, medium, document, kaart of dataverzameling hebt die je hier wilt zien, laten we dan samen kijken of het al kan gekoppeld worden via een van de bestaande kanalen of dat we nieuwe koppelingsmethodes kunnen creëren. We zien er ook naar uit om workshops te organiseren voor het vastleggen van geschiedkundige kennis met belangengemeenschappen.",
+		"titleDevelop": "Hulpmiddelen aanmaken en taken crowdsourcen",
+		"joinDevelop": "We zouden graag meer hulpmiddelen toevoegen en nieuwe crowdsourcing taken aanmaken in samenwerking met organisaties en bouwers van hulpmiddelen. Laten we de krachten bundelen voor de volgende coole crowdsourcing app!",
+		"titleContact": "Neem contact op!",
+		"facebook": "Facebook-groep",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "Blog",
+		"email": "E-mail",
+		"github": "Github repository"
+	},
+	"MainPage": {
+		"topicPageName": "Onderwerp pagina",
+		"mapPlaceMatchPageName": "Combineer plaatsnamen",
+		"mapSearchPageName": "Doorzoek kaarten",
+		"wikiTopicErrorMessage": "Er kon geen Wikipediapagina voor dit onderwerp worden gevonden in de huidige taal, ofwel trad een onvoorziene fout op.",
+		"returnToHomeMessage": "Terug naar de startpagina"
+	},
+	"WaitPage": {
+		"waitMessage": "Een ogenblik... Data wordt opgehaald van Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "Onderscheidingen",
+			"intro": "Benoemingen en onderscheidingen van het onderwerp van deze pagina."
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "Kies historische basiskaart(en)",
+			"chooseMapHelpNote": "Tip: met ctrl+klikken kan je meerdere kaarten selecteren",
+			"yearAbbreviation": "y."
+		},
+		"Cups": {
+			"intro": "Deze club heeft in de volgende wedstrijden, series en toernooien gespeeld"
+		},
+		"Depicted": {
+			"headerTitle": "Afgebeeld in",
+			"intro": "Dit onderwerp wordt afgebeeld in deze werken. De werken volgens verschillende criteria ordenen, weergeven als een lijst zonder afbeeldingen.",
+			"sortMenu": {
+				"title": "Werken ordenen",
+				"tooltip": "Werken ordenen",
+				"optionTime": "Op tijd",
+				"optionAlpha": "Alfabetisch"
+			},
+			"facetMenu": {
+				"optionType": "Type"
+			},
+			"displayMenu": {
+				"tooltip": "Weergave kiezen",
+				"optionGallery": "Galerij",
+				"optionList": "Lijst"
+			},
+			"showAll": "Alle"
+		},
+		"Depicts": {
+			"headerTitle": "Verwijzingen"
+		},
+		"Events": {
+			"headerTitle": "Evenementen",
+			"displayMenu": {
+				"menuTitle": "Weergaveopties",
+				"menuTooltip": "Weergaveopties"
+			},
+			"optionsMenu": {
+				"menuTitle": "Instellingen",
+				"optionWorks": "Werk weergeven"
+			}
+		},
+		"Header": {
+			"titleEditText": "Bewerk de titel",
+			"titleApproveText": "Bevestig deze titel",
+			"subtitleEditText": "De beschrijving bewerken",
+			"subtitleApproveText": "Deze beschrijving goedkeuren"
+		},
+		"Heritage": {
+			"headerTitle": "Erfgoed-elementen"
+		},
+		"Locations": {
+			"sortMenu": {
+				"title": "Locaties ordenen",
+				"tooltip": "Locaties ordenen",
+				"optionTime": "Op tijd",
+				"optionAlpha": "Alfabetisch",
+				"optionDist": "Op afstand"
+			},
+			"facetMenu": {
+				"optionType": "Type",
+				"optionCity": "Locatie"
+			},
+			"displayMenu": {
+				"title": "Weergeven als",
+				"tooltip": "Weergave kiezen",
+				"optionGallery": "Galerij",
+				"optionList": "Lijst"
+			},
+			"showAll": "Alle"
+		},
+		"Parts": {
+			"headerTitle": "Gedeelte"
+		},
+		"Partof": {
+			"headerTitle": "Onderdeel van"
+		},
+		"Effects": {
+			"headerTitle": "Effecten",
+			"intro": "Dit zijn de effecten van het onderwerp,"
+		},
+		"Location": {
+			"headerTitle": "Locatie"
+		},
+		"Teams": {
+			"intro": "Teams die aan deze wedstrijd, serie of toernooi deelnemen."
+		},
+		"TopicImages": {
+			"headerTitle": "Beelden uit archieven",
+			"intro": "Deze beelden zijn verzameld uit verschillende bronnen en het is mogelijk dat ze het onderwerp niet altijd accuraat illustreren. Je kan de oorspronkelijke afbeelding bekijken en je kan het een plaats op de kaart geven als het een locatiepin heeft.",
+			"actionsMenu": {
+				"menuTitle": "Toon of rangschik afbeeldingen",
+				"tooltip": "Toon of rangschik afbeeldingen",
+				"showImagesOnMapMenuText": "Toon alle afbeeldingen op de kaart",
+				"showImagesOnTimelineMenuText": "Toon alle afbeeldingen op de tijdlijn",
+				"selectPortraits": "Kies één of meer goed(e) portret(ten) van deze persoon",
+				"arrangeByTime": "Sorteer beelden op tijd",
+				"selectWorks": "Selecteer afbeeldingen van werken"
+			},
+			"facetMenu": {
+				"menuTitle": "Facetafbeeldingen door",
+				"time": "tijd",
+				"map": "kaart",
+				"people": "personen",
+				"places": "plaatsen",
+				"topics": "onderwerpen",
+				"form": "formulier",
+				"imageSize": "afbeeldingsgrootte",
+				"large": "groot",
+				"medium": "medium",
+				"small": "klein",
+				"type": "mediatype",
+				"creator": "auteur",
+				"platform": "platform",
+				"source": "bron",
+				"saveSelection": "Bewaar deze selectie als een collectie"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Handelingen",
+				"menuTooltip": "Handelingen",
+				"doGeolocatingText": "Locatie instellen...",
+				"showImageText": "Toon afbeelding",
+				"selectFeatured": "Als hoofdafbeelding kiezen"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "De afbeelding verwijderen omdat...",
+				"shortMenuTitle": "Afbeelding verwijderen",
+				"menuTooltip": "De afbeelding verwijderen",
+				"remDepicted": {
+					"menuTitle": "Het toont dit onderwerp in plaats daarvan",
+					"shortMenuTitle": "Het toont een ander onderwerp",
+					"search": "Zoeken naar het onderwerp",
+					"browse": "Aanverwante onderwerpen doorbladeren"
+				},
+				"remCreator": {
+					"menuTitle": "Het is door deze maker in plaats daarvan"
+				},
+				"remInappropriate": {
+					"shortMenuTitle": "Het is ongepast"
+				}
+			}
+		},
+		"TopicMap": {
+			"showNearbyPlacesMenuText": "Toon plaatsen in de buurt",
+			"hideNearbyPlacesMenuText": "Verberg plaatsen in de buurt"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Tijdlijn"
+		},
+		"Wikipedia": {
+			"headerTitle": "Onderwerp"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"addCaption": "Bijschrift toevoegen",
+			"creatorUnknown": "Onbekend",
+			"addDateDepicted": "Weergavedatum toevoegen",
+			"removeDateCreated": "Maakdatum verwijderen",
+			"format": "Indeling",
+			"addFormat": "Indeling toevoegen",
+			"technique": "Techniek",
+			"removeTechnique": "Techniek verwijderen",
+			"addGenre": "Soort toevoegen",
+			"addTopic": "Onderwerp toevoegen",
+			"removeTopic": "Onderwerp verwijderen",
+			"location": "Locatie",
+			"locationMap": "Plek op de kaart",
+			"addLocation": "Locatie toevoegen",
+			"address": "Straat",
+			"addPerson": "Persoon toevoegen",
+			"removePerson": "Persoon verwijderen",
+			"event": "Gebeurtenis",
+			"addEvent": "Gebeurtenis toevoegen",
+			"institution": "Instelling",
+			"collection": "Verzameling",
+			"inscriptions": "Beschriften",
+			"measurements": "Metingen",
+			"copyright": "Auteursrecht",
+			"license": "Auteursrechtvergunning",
+			"photograph": "Fotograaf",
+			"digitalCopy": "Digitaal kopiëren",
+			"platformId": "Nummer",
+			"fileFormat": "Bestandsindeling",
+			"remove": "Verwijderen",
+			"addData": "Gegevens toevoegen"
+		},
+		"imageActions": {
+			"horizontal": "horizontaal"
+		},
+		"closeViewer": "Weergaveprogramma sluiten"
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Onderwerpen rangschikken",
+			"optionTime": "Op tijd",
+			"optionAlpha": "Alfabetisch",
+			"optionRev": "Rangschikking omkeren"
+		},
+		"facetMenu": {
+			"title": "Onder ogen gezien door",
+			"optionType": "Soort",
+			"optionColl": "Maker",
+			"optionCity": "Locatie"
+		},
+		"displayMenu": {
+			"title": "Weergeven als",
+			"optionGallery": "Galerie",
+			"optionList": "Lijst"
+		}
+	},
+	"general": {
+		"menus": {
+			"languageMenuTooltip": "Uw taal kiezen"
+		},
+		"languageMenu": {
+			"TranslateUI": "In uw taal vertalen"
+		}
+	}
+}

@@ -1,8 +1,8 @@
 <template>
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.Gallery.headerTitle') }}</div>
-            <ToolbarMenu icon="wikiglyph-funnel" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <h1 class="header-title">{{ $t('topic_page.Gallery.headerTitle') }}</h1>
+            <ToolbarMenu icon="wikiglyph-sort" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Gallery.menuTitle') }}</div>
             </ToolbarMenu>
         </div>
