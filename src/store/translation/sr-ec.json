@@ -3,6 +3,7 @@
 		"authors": [
 			"BadDog",
 			"Kizule",
+			"Milicevic01",
 			"Zenfiric",
 			"Милан Јелисавчић"
 		]
@@ -50,6 +51,9 @@
 		"BaseMapDialog": {
 			"yearAbbreviation": "г."
 		},
+		"Collection": {
+			"headerTitle": "Радови у колекцији"
+		},
 		"Depicted": {
 			"sortMenu": {
 				"optionTime": "По времену",
@@ -66,6 +70,9 @@
 				"optionList": "Списак"
 			},
 			"showAll": "Све"
+		},
+		"Depicts": {
+			"headerTitle": "Приказује"
 		},
 		"Events": {
 			"headerTitle": "Догађаји",
@@ -279,6 +286,7 @@
 			"photographer": "Фотограф",
 			"addPhotographData": "Додај информацију о фотографу",
 			"copyrightNotePD": "Слика је лиценцирана под лиценцом $1, али на основу метаподатака, слика је у јавном власништву.",
+			"attribution": "Ауторство",
 			"digitalCopy": "Дигитална копија",
 			"publishingPlatform": "Платформа објављивања",
 			"provider": "Добављач садржаја",
