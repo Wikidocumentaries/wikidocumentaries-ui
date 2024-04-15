@@ -156,7 +156,7 @@
 				"tooltip": "Тюрлю-тюрлю ышанлагъа кёре локациясын чеклендир",
 				"optionType": "Тип",
 				"optionColl": "Автор",
-				"optionCity": "Тургъан джер"
+				"optionCity": "Локация"
 			},
 			"displayMenu": {
 				"title": "Кёргюз",
@@ -196,7 +196,7 @@
 			"headerTitle": "Бу статьядагъы джибериуле"
 		},
 		"Location": {
-			"headerTitle": "Тургъан джер",
+			"headerTitle": "Локация",
 			"intro": "Бу тема, бу темаланы ичинде неда контекстиндеди."
 		},
 		"Names": {
@@ -343,7 +343,7 @@
 			"facetMenuTooltip": "Чеклендириу тюрлю-тюрлю ышанлагъа кёре ишлейди",
 			"facetMenuOptionType": "Тип",
 			"facetMenuOptionColl": "Коллекция",
-			"facetMenuOptionCity": "Тургъан джер",
+			"facetMenuOptionCity": "Локация",
 			"displayMenuTitle": "Кёргюз",
 			"displayMenuTooltip": "Кёрюнюмню сайла",
 			"displayMenuOptionGallery": "Галерея",
@@ -382,7 +382,7 @@
 	},
 	"imageViewer": {
 		"imageMetadata": {
-			"caption": "Къол салыу",
+			"caption": "Тюб джазыу",
 			"addCaption": "Къол салыу къош",
 			"description": "Ачыкълау",
 			"addDescription": "Ачыкълау къош",
@@ -412,7 +412,7 @@
 			"depicts": "Суратда кёрюннген",
 			"addTopic": "Тема къош",
 			"removeTopic": "Теманы кетер",
-			"location": "Тургъан джер",
+			"location": "Локация",
 			"locationMap": "Картада тургъан джер",
 			"addLocation": "Тургъан джерни къош",
 			"removeLocation": "Тургъан джерни кетер",
@@ -513,7 +513,7 @@
 			"tooltip": "Тюрлю-тюрлю ышанлагъа кёре темаланы чеклендир",
 			"optionType": "Тип",
 			"optionColl": "Автор",
-			"optionCity": "Тургъан джер"
+			"optionCity": "Локация"
 		},
 		"displayMenu": {
 			"title": "Кёргюз",
