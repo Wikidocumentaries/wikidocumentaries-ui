@@ -130,6 +130,7 @@
 				"source": "fonto"
 			},
 			"imagesActionMenu": {
+				"menuTitle": "Agadi",
 				"menuTooltip": "Agadi",
 				"showImageText": "Montrez imajo"
 			},
@@ -165,6 +166,10 @@
 		}
 	},
 	"general": {
-		"cancel": "Interruptar"
+		"cancel": "Interruptar",
+		"menus": {
+			"actionMenuTitle": "Agadi",
+			"actionMenuTooltip": "Agadi"
+		}
 	}
 }
