@@ -198,6 +198,9 @@
 			"facetMenuOptionCountry": "国家",
 			"facetMenuOptionCity": "性别"
 		},
+		"Twins": {
+			"headerTitle": "双城"
+		},
 		"TopicImages": {
 			"facetMenu": {
 				"time": "时间",
