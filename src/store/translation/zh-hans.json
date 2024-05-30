@@ -16,7 +16,7 @@
 	},
 	"LandingPage": {
 		"search": "搜索",
-		"searchInputPlaceHolder": "找到一个主题或创建一个新主题",
+		"searchInputPlaceHolder": "查找话题或创建新话题",
 		"searchInputSearchOnly": "寻找主题",
 		"showMore": "显示更多项目",
 		"createNew": "创建新项",
