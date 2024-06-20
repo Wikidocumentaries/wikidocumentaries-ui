@@ -91,7 +91,7 @@
 				"title": "Чыгъарлмаланы айыр",
 				"tooltip": "Чыгъармаланы айыр",
 				"optionTime": "Заманнга кёре",
-				"optionAlpha": "Алфавит тизим бла",
+				"optionAlpha": "Алфавит тизме бла",
 				"optionClear": "Айырыуну кетер"
 			},
 			"facetMenu": {
@@ -147,7 +147,7 @@
 				"title": "Тургъан джерлени айыр",
 				"tooltip": "Тургъан джерлени айыр",
 				"optionTime": "Заманнга кёре",
-				"optionAlpha": "Алфавит тизим бла",
+				"optionAlpha": "Алфавит тизме бла",
 				"optionDist": "Узакълыкъгъа кёре",
 				"optionClear": "Айырыуну кетер"
 			},
@@ -336,7 +336,7 @@
 			"sortMenuTitle": "Айыр",
 			"sortMenuTooltip": "Элементлени айыр",
 			"sortMenuOptionTime": "Заманнга кёре",
-			"sortMenuOptionAlpha": "Алфавит тизим бла",
+			"sortMenuOptionAlpha": "Алфавит тизме бла",
 			"sortMenuOptionDist": "Узакълыкъгъа кёре",
 			"sortMenuOptionClear": "Айырыуну кетер",
 			"facetMenuTitle": "Чеклендириу",
@@ -501,9 +501,9 @@
 			"optionCause": "Чурумуна кёре",
 			"optionPartof": "Элементге кёре бу бир кесегиди",
 			"optionSuperclass": "Классына кёре, бу тюб классды",
-			"optionAlpha": "Алфавит тизим бла",
-			"optionTitleAlpha": "Алфавит тизим бла башлыкъгъа кёре",
-			"optionCreatorAlpha": "Авторуна кёре алфавит тизим бла",
+			"optionAlpha": "Алфавит тизме бла",
+			"optionTitleAlpha": "Алфавит тизме бла башлыкъгъа кёре",
+			"optionCreatorAlpha": "Авторуна кёре алфавит тизме бла",
 			"optionDist": "Узакълыкъгъа кёре",
 			"optionRev": "Чюйре айырыу",
 			"optionClear": "Айырыуну кетер"
