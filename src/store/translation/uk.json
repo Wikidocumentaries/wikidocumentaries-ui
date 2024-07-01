@@ -4,6 +4,7 @@
 			"DDPAT",
 			"Gzhegozh",
 			"Ice bulldog",
+			"Ignatgg",
 			"Movses",
 			"Shybetsky"
 		]
@@ -140,6 +141,9 @@
 			"titleApproveText": "Підтвердити цей заголовок",
 			"subtitleEditText": "Редагування опису",
 			"subtitleApproveText": "Підтвердити цей опис"
+		},
+		"Heritage": {
+			"headerTitle": "Елементи спадщини"
 		},
 		"Locations": {
 			"headerTitle": "В цьому місці",
