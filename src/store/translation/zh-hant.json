@@ -108,7 +108,7 @@
 				"optionGallery": "圖庫",
 				"optionList": "清單"
 			},
-			"showAll": "所有"
+			"showAll": "全部"
 		},
 		"Depicts": {
 			"headerTitle": "描述",
@@ -166,7 +166,7 @@
 				"optionGallery": "圖庫",
 				"optionList": "清單"
 			},
-			"showAll": "所有"
+			"showAll": "全部"
 		},
 		"Map": {
 			"headerTitle": "在地圖上的位置"
@@ -351,7 +351,7 @@
 			"displayMenuOptionGallery": "圖庫",
 			"displayMenuOptionList": "清單",
 			"displayMenuOptionMap": "地圖",
-			"showAll": "所有"
+			"showAll": "全部"
 		},
 		"Wikidata": {
 			"headerTitle": "詳情",
