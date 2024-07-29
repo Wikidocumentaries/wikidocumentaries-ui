@@ -1,13 +1,59 @@
 {
 	"@metadata": {
 		"authors": [
+			"BaRaN6161 TURK",
+			"Grkn gll",
 			"Hedda",
-			"Abijeet Patro"
+			"Joseph",
+			"Mirzali",
+			"MuratTheTurkish",
+			"SaldırganSincap",
+			"Stonecy"
 		]
 	},
 	"LandingPage": {
 		"search": "Ara",
-		"searchInputPlaceHolder": "Bir konu bul veya yeni bir konu oluştur"
+		"searchInputPlaceHolder": "Bir konu bul veya yeni bir konu oluştur",
+		"searchInputSearchOnly": "Konu bul",
+		"showMore": "Daha fazla öge göster",
+		"createNew": "Yeni öge oluştur",
+		"intro": "Vikibelge, tarihin izlerini bir araya getirmek ve onları hikâyelere dönüştürmek için bir yerdir. İlgilendiğiniz bir konu arayarak başlayın!",
+		"titleDescription": "Vikibelge nedir?",
+		"description": "Vikibelge, vatandaş tarihçiler için yaratıcı bir alandır. İnsanlar, yerler, binalar, olaylar ve daha fazlası gibi konular hakkındaki bilgileri birleştirir. Aile ilişkileri, konumlar, yaratıcılar ve kreasyonlar veya üyelik gibi kayıtlı herhangi bir bağlantıyı takip ederek konular arasında gezinebilirsiniz. Bir konu, bağlantılı müzelerden, arşivlerden ve kütüphanelerden alınan görüntüler ve haritalarla gösterilir. Vikibelgelerde, mevcut bilgileri düzeltip yeni konular eklemek, kendi görüntülerinizi ve anılarınızı getirmek ve tüm materyalleri kendi amaçlarınız için kullanmak mümkün olacaktır.",
+		"titleStatus": "Durum",
+		"status": "Site demo aşamasındadır. Birçok önemli özellik henüz mevcut değildir ve site beklendiği gibi çalışmayabilir.",
+		"moreBelow": "Aşağıda daha fazlasını okuyun",
+		"more": "Devamını oku",
+		"moreLink": "Devamını oku",
+		"titleTopics": "Konular",
+		"statusTopics": "Konular Vikiveri'den okunur. Vikiveri içeriğinin kapsamı dışındaysa, bunun yerine Vikibelge'de yeni konular oluşturulabilir. Konuyu Vikiveri'nin zengin seçenekleriyle tanımlamak yine de mümkün olacak. Güncel makaleler Vikipedi'den gelirken makaleler daha sonra yalnızca Vikibelge'de bulunan konular için yerel olarak oluşturulabilir.",
+		"titleMedia": "Medya",
+		"statusMedia": "Medya, açık lisanslı medya dosyalarına hizmet veren artan sayıda medya deposundan okunur. Görüntüleri daha doğru bulmak ve her bir kaynaktan daha fazla ve daha iyi meta veriler görüntülemek için çalışıyoruz. Yeni medya kaynakları özgürdür!",
+		"titleTools": "Araçlar",
+		"statusTools": "Vikibelge, içerikle çalışmak için görev ve araçlara sahiptir. İçerik Çeviri aracıyla makaleler zaten diller arasında çevrilebilir. Vikiveri ve görüntü konumlar için bir coğrafi etiketleme aracı ile anahtar kelimeler hazırlıyoruz. Yeni eğlenceli ve kullanışlı araçlar oluşturulabilir veya entegre edilebilir.",
+		"titleLanguages": "Diller",
+		"statusLanguages": "Vikibelge, Vikiveri'de bulunan herhangi bir dilde gezilebilir. Bu küçük diller için harika bir fırsat. Çeviriler TranslateWiki'de yapılır.",
+		"titleTechnology": "Teknoloji",
+		"statusTechnology": "Vikibelge, temel verileri Vikiveri'den okunur. Ek olarak Vikibelge, Vikiveri'nin kapsamı dışında kalan konular için kendi Wikibase'ine sahip olacaktır. Vikiveri ve Vikibelge'nin federe Wikibase olarak eşitlenmesi bekleniyor. İkincisi, resim meta verileri Vikiveri öğeleriyle bağlantılıdır ve bu veriler Wikimedia Commons'daki Structured Data ile senkronize edilebilir. Site Vue.js ile oluşturulmuştur ve Wikimedia Cloud Services'da barındırılmaktadır.",
+		"titleCreators": "Yaratıcılar",
+		"titleTeam": "Ekip",
+		"titleThanks": "Özel teşekkürler",
+		"titlePartners": "Ortaklar",
+		"titleFunding": "Nazik desteğiyle",
+		"titleBy": "Projeyi hazırlayan",
+		"getInvolved": "Katılın!",
+		"titleTranslate": "Çevir",
+		"joinTranslate": "Gelin ve dilinizi Vikibelge'ye getirin. Gönüllü çeviri ekibine katılın ve bağlı kültürel mirasın kendi dilinizde hayata geçtiğini görün.",
+		"titleContent": "İçeriğinizi ekleyin",
+		"joinContent": "Burada görmek istediğiniz bir fotoğrafınız, medyanız, belgeniz, haritanız veya veri koleksiyonunuz varsa, mevcut kanallardan birinden daha önce bağlanabiliyorsa veya yeni bağlantı yöntemleri oluşturabiliyorsak birlikte bir göz atalım. Ayrıca, tarihsel bilgiyi ilgilenen topluluklarla kaydetmek için atölye çalışmaları düzenlemek için sabırsızlanıyoruz.",
+		"titleDevelop": "Araçlar ve kitle kaynaklı görevler oluşturun.",
+		"joinDevelop": "Daha fazla araç eklemek ve kuruluşlarla ve araç geliştiricilerle işbirliği içinde yeni kalabalık kaynak yaratma görevlerini oluşturmak istiyoruz. Bir sonraki güzel crowdsourcing uygulaması için güçlerini birleştirelim!",
+		"titleContact": "İletişime geçin!",
+		"facebook": "Facebook grubu",
+		"wiki": "Wikidocumentaries viki",
+		"blog": "Blog",
+		"email": "E-posta",
+		"github": "Github deposu"
 	},
 	"MainPage": {
 		"topicPageName": "Konu sayfası",
@@ -17,13 +63,80 @@
 		"returnToHomeMessage": "Açılış sayfasına dön"
 	},
 	"WaitPage": {
-		"waitMessage": "Bir dakika, lütfen... Vikipedi, Vikiveri, Wikimedia Commons, Map Warper, Finna, Flickr'dan veri alınıyor..."
+		"waitMessage": "Bir dakika lütfen... Vikipedi, Vikiveri, Wikimedia Commons, MapWarper, Finna, Flickr'dan veri alınıyor..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Bağlantılar",
+			"intro": "Bu kişi veya kuruluşun bağlı olduğu kuruluşlar."
+		},
+		"Awards": {
+			"headerTitle": "Ödüller",
+			"intro": "Bu sayfanın konusunun adaylıkları ve ödülleri."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Tarihsel harita seç",
-			"chooseMapHelpNote": "İpucu: ctrl+click birçok harita seçmenize izin verir",
+			"chooseMapHelpNote": "İpucu: ctrl+tıklama birçok harita seçmenize izin verir",
 			"yearAbbreviation": "y."
+		},
+		"Collection": {
+			"headerTitle": "Koleksiyondaki eserler",
+			"intro": "Bu eserler bu kişi veya kurumun koleksiyonundadır. Bunları liste olarak görüntülemeyi seçebilirsiniz, bu da görüntüler olmadan da çalışır. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın."
+		},
+		"Cups": {
+			"headerTitle": "Oyunlar, seriler ve turnuvalar",
+			"intro": "Bu kulüp aşağıdaki oyunlarda, serilerde ve turnuvalarda oynamıştır."
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Bunlar, konu kişisinin profesyonel olaylarıdır."
+		},
+		"Depicted": {
+			"headerTitle": "Tasvir edilen",
+			"intro": "Bu konu bu eserlerde tasvir edilmiştir. İşleri farklı kriterlere göre sıralayın, resimsiz olanları görmek için liste halinde görüntüleyin.",
+			"sortMenu": {
+				"title": "Sıralama işleri",
+				"tooltip": "Sıralama işleri",
+				"optionTime": "Saat olarak",
+				"optionAlpha": "Alfabetik olarak",
+				"optionClear": "Sıralamayı temizle"
+			},
+			"facetMenu": {
+				"title": "Faset işlerine göre",
+				"tooltip": "Faset farklı kriterlere göre çalışır",
+				"optionType": "Tür",
+				"optionColl": "Oluşturan"
+			},
+			"displayMenu": {
+				"title": "Görüntüle",
+				"tooltip": "Görüntü seçin",
+				"optionGallery": "Galeri",
+				"optionList": "Liste"
+			},
+			"showAll": "Hepsi"
+		},
+		"Depicts": {
+			"headerTitle": "Tasvir",
+			"intro": "Bu çalışma bu konuları gösteriyor. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemeniz gerektiğini unutmayın."
+		},
+		"Events": {
+			"headerTitle": "Olaylar",
+			"displayMenu": {
+				"menuTitle": "Görüntüleme seçenekleri",
+				"menuTooltip": "Görüntüleme seçenekleri",
+				"optionShowTimeline": "Bir zaman çizelgesindeki etkinlikleri göster",
+				"optionShowList": "Etkinlikleri liste olarak göster"
+			},
+			"optionsMenu": {
+				"menuTitle": "Seçenekler",
+				"menuTooltip": "Görüntülenecek gerçekleri seçin",
+				"optionWorks": "İşleri göster",
+				"optionRelatedPeople": "İlgili kişilerin etkinliklerini göster",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Yapılandır"
+				},
+				"optionRelatedTopics": "İlgili konuların etkinlikleri göster"
+			}
 		},
 		"Header": {
 			"titleEditText": "Başlığı düzenle",
@@ -31,58 +144,219 @@
 			"subtitleEditText": "Açıklamayı düzenle",
 			"subtitleApproveText": "Bu açıklamayı onayla"
 		},
+		"Heritage": {
+			"headerTitle": "Miras öğeleri"
+		},
+		"Locations": {
+			"headerTitle": "Bu konumda",
+			"intro": "Burada bu sayfanın başlığında yer alan herhangi bir şeyi görüyorsunuz. Depolanan tüm konumları görmek için liste halinde göster.",
+			"sortMenu": {
+				"title": "Yerleri sırala",
+				"tooltip": "Yerleri sırala",
+				"optionTime": "Saat olarak",
+				"optionAlpha": "Alfabetik olarak",
+				"optionDist": "Mesafe olarak",
+				"optionClear": "Sıralamayı temizle"
+			},
+			"facetMenu": {
+				"title": "Faset konumlarına göre",
+				"tooltip": "Farklı ölçütlere göre faset konumları",
+				"optionType": "Tür",
+				"optionColl": "Oluşturan",
+				"optionCity": "Konum"
+			},
+			"displayMenu": {
+				"title": "Görüntüle",
+				"tooltip": "Görüntü seçin",
+				"optionGallery": "Galeri",
+				"optionList": "Liste"
+			},
+			"showAll": "Hepsi"
+		},
+		"Map": {
+			"headerTitle": "Haritadaki konum"
+		},
+		"Parts": {
+			"headerTitle": "Parçalar",
+			"intro": "Bu parçalar bu konuya aittir. Bunları zamana ve isme göre sıralayabilirsiniz. Resimsiz olanlar da dahil tüm konuları görmek için, konuları liste halinde görüntülemelisiniz."
+		},
+		"Partof": {
+			"headerTitle": "Parçası",
+			"intro": "Bu konu, bu diğer konuların bir parçasıdır. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+		},
+		"Similar": {
+			"headerTitle": "Benzer konular",
+			"intro": "Bu konuyla ilgili bazı ortak anahtar özelliklere sahip konuları bulun."
+		},
+		"Effects": {
+			"headerTitle": "Etkiler",
+			"intro": "Bunlar konunun etkileri."
+		},
+		"Familytree": {
+			"headerTitle": "Aile ağacı"
+		},
+		"Instances": {
+			"headerTitle": "Bu konunun örnekleri",
+			"intro": "Bu konunun örneklerine bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Links": {
+			"headerTitle": "Bu maddedeki bağlantılar"
+		},
+		"Location": {
+			"headerTitle": "Konum",
+			"intro": "Bu konu, bu konuların içinde veya bağlamında bulunmaktadır."
+		},
+		"Names": {
+			"headerTitle": "İsimler",
+			"intro": "Bu konunun isimlerini ve tüm mevcut seçenekleri görün."
+		},
+		"People": {
+			"headerTitle": "Konu ile ilgili kişiler",
+			"intro": "Bu insanlar bu sayfanın konusu ile ilişkili. Onları resim olarak göstermeyen insanları da gösteren liste olarak görüntülemeyi seçebilirsiniz. Tarihlere veya adlara göre sıralanabilirler. Yalnızca bu bilgilere sahip olanların gösterileceğini unutmayın.",
+			"sortMenuTitle": "Sırala",
+			"sortMenuTooltip": "Sıralama düzenini değiştirin",
+			"sortMenuOptionBirth": "Doğum tarihi olarak",
+			"sortMenuOptionDeath": "Ölüm tarihi olarak",
+			"sortMenuOptionName": "İsim olarak",
+			"sortMenuOptionFirst": "İlk isime göre",
+			"sortMenuOptionLast": "Son isime göre",
+			"sortMenuOptionClear": "Sıralamayı temizle",
+			"facetMenuTitle": "Faset olarak",
+			"facetMenuTooltip": "Farklı yönlerden faset insanları",
+			"facetMenuOptionProfession": "Meslek",
+			"facetMenuOptionCountry": "Ülke",
+			"facetMenuOptionCity": "Cinsiyet"
+		},
+		"Seasons": {
+			"headerTitle": "Sezonlar",
+			"intro": "Bu etkinliğin sezonuna bakın."
+		},
+		"Subclasses": {
+			"headerTitle": "Bu konunun alt sınıfları",
+			"intro": "Bu konunun alt sınıflarına bakın. Görüntüsüz öğeleri de görmek için liste olarak görüntüle."
+		},
+		"Teams": {
+			"headerTitle": "Katılan takımlar",
+			"intro": "Bu oyuna, seriye ya da turnuvaya katılan takımlar."
+		},
+		"Things": {
+			"headerTitle": "Odak listesi konuları",
+			"intro": "Bu konular, bu Vikiproje'nin odak listesidir."
+		},
+		"Twins": {
+			"headerTitle": "İkiz şehirler",
+			"intro": "İkiz kasabalar, kardeş şehirler, ikizleştirilmiş belediyeler ve hükumetleri tarafından yasal veya gayri resmi olarak kabul edilen bir ortaklık veya işbirliği anlaşması olan diğer yerler. Bunları zamana ve isme göre sıralayabilirsiniz. Görüntüsüz olanlar da dahil olmak üzere tüm konuları görmek için, konuları bir liste olarak görüntülemeniz gerekir."
+		},
 		"TopicImages": {
 			"headerTitle": "Arşivden görüntüler",
+			"intro": "Bu görüntüler birkaç kaynaktan toplanmıştır ve her zaman konuyu doğru bir şekilde temsil etmeyebilir. Orijinal görüntüyü görüntüleyebilir ve görüntüde bir konum iğnesi varsa görüntüyü yerleştirebilirsiniz.",
 			"actionsMenu": {
+				"menuTitle": "Görüntüleri gösterme veya düzenleme",
+				"tooltip": "Görüntüleri gösterme veya düzenleme",
 				"showImagesOnMapMenuText": "Tüm görüntüleri haritada göster",
-				"showImagesOnTimelineMenuText": "Tüm görüntüleri zaman çizelgesinde göster"
+				"showImagesOnTimelineMenuText": "Tüm görüntüleri zaman çizelgesinde göster",
+				"selectPortraits": "Bu kişinin kaliteli portrelerini seçin",
+				"arrangeByTime": "Görüntüleri zamana göre düzenleyin",
+				"selectWorks": "Eserlerin resimlerini seçin"
+			},
+			"facetMenu": {
+				"menuTitle": "Faset görüntüleri",
+				"menuTooltip": "Farklı ölçütlere göre faset görüntüleri",
+				"time": "zaman",
+				"map": "harita",
+				"people": "insanlar",
+				"places": "yerler",
+				"topics": "konular",
+				"form": "form",
+				"imageSize": "resim boyutu",
+				"large": "büyük",
+				"medium": "orta",
+				"small": "küçük",
+				"type": "medya türü",
+				"creator": "oluşturan",
+				"platform": "platform",
+				"source": "kaynak",
+				"saveSelection": "Seçimi koleksiyon olarak kaydet",
+				"clear": "Seçimleri temizle"
 			},
 			"imagesActionMenu": {
-				"menuTitle": "İşlemler",
-				"menuTooltip": "İşlemler",
+				"menuTitle": "Eylemler",
+				"menuTooltip": "Eylemler",
 				"doGeolocatingText": "Konumu ayarla...",
-				"showImageText": "Görüntüyü göster"
+				"showImageText": "Görüntüyü göster",
+				"selectFeatured": "Başlık resmi olarak seç"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Görüntüyü kaldır çünkü...",
-				"menuTooltip": "Bu görüntüyü kaldır",
+				"shortMenuTitle": "Resmi kaldır",
+				"menuTooltip": "Resmi kaldır",
 				"remDepicted": {
-					"menuTitle": "Bunun yerine bu konuyu gösteriyor",
+					"menuTitle": "Bunun yerine bu konuyu tasvir ediyor",
+					"shortMenuTitle": "Başka bir konuyu tasvir ediyor",
 					"search": "Konu ara",
 					"browse": "İlgili konulara göz at"
 				},
 				"remCreator": {
-					"menuTitle": "Onun yerine oluşturanı tarafından",
+					"menuTitle": "Bunun yerine bu oluşturucu tarafından",
+					"shortMenuTitle": "Başka bir oluşturucu tarafından",
 					"search": "Oluşturanı ara",
 					"browse": "İlgili aktörlere göz at"
 				},
 				"remInappropriate": {
 					"menuTitle": "Uygunsuz çünkü",
+					"shortMenuTitle": "Uygunsuz",
 					"privacy": "Tasvir edilenlerin gizliliğini ihlal ediyor",
 					"violence": "Aşırı şiddet içeriyor",
 					"sex": "Belirgin seks görüntüleri barındırıyor",
 					"copyvio": "Telif hakkını ihlal ediyor",
 					"explain": "Açıklamak için bir not bırakın"
 				}
-			}
+			},
+			"imagesViewExternal": "Orijinal resmi görüntüle",
+			"imagesViewOnMap": "Resmi haritada görüntüle"
 		},
 		"TopicMap": {
 			"headerTitle": "Haritadaki konu",
+			"intro": "Konunun yeri haritada gösterilir. Ayrıca görüntüleri ve diğer verileri harita üzerinde görüntüleyebilir veya temel katman olarak geçmiş bir harita seçebilirsiniz.",
 			"chooseHistoricalBasemapMenuText": "Tarihsel harita seç...",
 			"hideImagesMenuText": "Görüntüleri gizle",
 			"chooseTimelineMapsMenuText": "Zaman çizelgesi haritalarını seç...",
 			"showNearbyPlacesMenuText": "Yakındaki yerleri göster",
-			"hideNearbyPlacesMenuText": "Yakındaki yerleri gizle"
+			"hideNearbyPlacesMenuText": "Yakındaki yerleri gizle",
+			"extLink": {
+				"menuTooltip": "OpenStreetMap ile görüntüle ya da düzenle"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Gazete kupürleri",
 			"searhTopicFromArchivesMenuText": "Finlandiya Milli Kütüphanesi'ndeki gazetelerde arama yap",
-			"addClipFromArchivesMenuText": "Küpür ekle..."
+			"addClipFromArchivesMenuText": "Kırpma ekle..."
 		},
 		"TopicTimeline": {
 			"headerTitle": "Zaman çizelgesi",
 			"showEventsOnTimelineMenuText": "Zaman çizelgesinde konu olaylarını göster",
 			"centuryText": "YY"
+		},
+		"Works": {
+			"headerTitle": "Çalışanlar",
+			"intro": "Bunlar bu sayfanın konusu olan kişi, kolektif veya kuruluş tarafından yapılan eserlerdir. İşle ilgili tüm bilgileri toplayarak bir sayfaya tıklayarak girebilirsiniz. Sadece görüntülü çalışmalar gösterilir. Saklanan ilgili tüm çalışmaları görmek için liste halinde görüntüleyin.",
+			"sortMenuTitle": "Sırala",
+			"sortMenuTooltip": "Öğeleri sırala",
+			"sortMenuOptionTime": "Saat olarak",
+			"sortMenuOptionAlpha": "Alfabetik olarak",
+			"sortMenuOptionDist": "Mesafe olarak",
+			"sortMenuOptionClear": "Sıralamayı temizle",
+			"facetMenuTitle": "Faset olarak",
+			"facetMenuTooltip": "Faset farklı kriterlere göre çalışır",
+			"facetMenuOptionType": "Tür",
+			"facetMenuOptionColl": "Koleksiyon",
+			"facetMenuOptionCity": "Konum",
+			"displayMenuTitle": "Görüntüle",
+			"displayMenuTooltip": "Görüntü seçin",
+			"displayMenuOptionGallery": "Galeri",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Harita",
+			"showAll": "Hepsi"
 		},
 		"Wikidata": {
 			"headerTitle": "Gerçekler",
@@ -93,7 +367,13 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Madde",
-			"missingArticle": "Bu konuyla ilgili dilinizde yazı bulunmamaktadır. Yukarıdaki dil menüsünde başka dillerde maddeler olup olmadığına bakın veya artı simgesine tıklayarak maddeyi oluşturun.",
+			"missingArticle": "Bu konuyla ilgili kendi dilinizde madde yok. Yukarıdaki dil menüsünden seçim yaparak makaleyi başka bir dilde okuyabilirsiniz. Artı simgesine tıklayarak maddeyi kendi dilinizde oluşturabilirsiniz.",
+			"missingArticleMissing": "Bu konu hakkında kendi dilinizde madde yok.",
+			"missingArticleChoose": "Yukarıdaki dil menüsünden seçim yaparak makaleyi başka bir dilde okuyabilir veya artı simgesine tıklayarak makaleyi kendi dilinizde oluşturabilirsiniz.",
+			"missingArticleCreate": "Bu maddeyi kendi dilinizde artı simgesine tıklayarak oluşturabilirsiniz.",
+			"missingArticleFallback": "Başka bir dilde bu madde, dil geri dönüş tercihlerinize dayanarak size gösterilmektedir.",
+			"missingArticleTranslate": "Bu maddeyi dil menüsünden seçerek kendi dilinize çevirebilirsiniz.",
+			"missingArticleAuto": "Bu kısa metin kaydedilen verilerden otomatik olarak oluşturulmuştur. Bu taslağı kaydedebilir ve maddeyi düzenlemeye başlayabilirsiniz.",
 			"extLink": {
 				"linkTitleWP": "Vikipedi'de oku veya düzenle"
 			},
@@ -102,19 +382,96 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Maddeyi başka bir dilde oku",
-				"translateArticleText": "Bu maddeyi diline çevir",
+				"translateArticleText": "Bu maddeyi dilinize çevirin",
 				"otherLanguagestext": "Diğer diller"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Konu ile ilgili kişiler",
-			"menuTitle": "Göster",
-			"showBorn": "Burada doğdu",
-			"showDied": "Burada öldü",
-			"showBuried": "Buraya gömüldü",
-			"showRelated": "Bunun dışında ilgili",
-			"showAll": "Hepsi"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Başlık",
+			"addCaption": "Başlık ekle",
+			"description": "Açıklama",
+			"addDescription": "Açıklama ekle",
+			"creator": "Oluşturan",
+			"creatorUnknown": "Bilinmiyor",
+			"addCreator": "Oluşturan oluştur",
+			"removeCreator": "Oluşturanı kaldır",
+			"dateDepicted": "Tasvir tarihi",
+			"addDateDepicted": "Tasvir tarihi ekle",
+			"removeDateDepicted": "Tasvir tarihi kaldır",
+			"dateCreated": "Oluşturulma tarihi",
+			"addDateCreated": "Oluşturma tarihi ekle",
+			"removeDateCreated": "Oluşturma tarihi kaldır",
+			"publisher": "Yayıncı",
+			"addPublisher": "Yayıncı ekle",
+			"removePublisher": "Yayıncıyı kaldır",
+			"format": "Biçim",
+			"addFormat": "Biçim ekle",
+			"removeFormat": "Biçimi kaldır",
+			"technique": "Teknik",
+			"addTechnique": "Teknik ekle",
+			"removeTechnique": "Tekniği kaldır",
+			"depicted": "Görüntü gösterisi",
+			"genre": "Tür",
+			"addGenre": "Tür ekle",
+			"removeGenre": "Türü kaldır",
+			"depicts": "Görüntü gösterisi",
+			"addTopic": "Konu ekle",
+			"removeTopic": "Konuyu kaldır",
+			"location": "Konum",
+			"locationMap": "Haritadaki yeri",
+			"addLocation": "Konum ekle",
+			"removeLocation": "Konumu kaldır",
+			"address": "Sokak adresi",
+			"addAddress": "Sokak adresi ekle",
+			"removeAddress": "Sokak adresini kaldır",
+			"depictedPeople": "Tasvir insanlar",
+			"addPerson": "Kişi ekle",
+			"removePerson": "Kişiyi kaldır",
+			"event": "Olay",
+			"addEvent": "Olay ekle",
+			"removeEvent": "Olayı kaldır",
+			"institution": "Kurum",
+			"collection": "Koleksiyon",
+			"addCollection": "Koleksiyon ekle",
+			"inventoryNumber": "Envanter numarası",
+			"inscriptions": "Yazıtlar",
+			"measurements": "Ölçümler",
+			"copyright": "Telif hakkı",
+			"license": "Telif hakkı lisansı",
+			"work": "Resimde gösterilen eser",
+			"photograph": "Fotoğraf",
+			"image": "Resim",
+			"photographer": "Fotoğrafçı",
+			"addPhotographData": "Fotoğraf hakkında bilgi ekleyin",
+			"copyrightNotePD": "Resim $1 ile lisanslanmıştır, ancak resmin Kamu Malı daki meta verilerine göre.",
+			"copyrightNoteSame": "Aynı resim $1 ile daha açık bir şekilde lisanslanmıştır, bu nedenle bu resim için de geçerlidir.",
+			"creditline": "Sağlayıcı bilgileri",
+			"attribution": "Atıf",
+			"digitalCopy": "Dijital kopya",
+			"publishingPlatform": "Platform yayınlıyor",
+			"platformId": "Kimlik",
+			"provider": "İçerik sağlayıcı",
+			"imageInfoPage": "Resim bilgisi sayfası",
+			"imageDimensions": "Görüntü boyutları",
+			"fileSize": "Dosya boyutu",
+			"fileFormat": "Dosya biçimi",
+			"remove": "Kaldır",
+			"moveTo": "Başka bir alana taşı",
+			"addData": "Veri ekle",
+			"uploader": "Yükleyen",
+			"rotate": "Döndür"
+		},
+		"imageActions": {
+			"rotateImage": "Resmi döndür",
+			"clockwise": "saat yönünde",
+			"counterclockwise": "saat yönünün",
+			"flip": "Çevir",
+			"horizontal": "yatay",
+			"vertical": "dikey"
+		},
+		"closeViewer": "Görüntüleyiciyi kapat"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -140,15 +497,55 @@
 			"transparencyLabel": "Tarihi haritanın şeffaflığı:"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "Konuları sırala",
+			"tooltip": "Konuları sırala",
+			"optionTime": "Saat olarak",
+			"optionStart": "Başlangıç zamanına göre",
+			"optionEnd": "Bitiş zamanına göre",
+			"optionTitle": "Başlığa göre",
+			"optionCause": "Nedenle",
+			"optionPartof": "Öğeye göre bu bir parçası",
+			"optionSuperclass": "Sınıfa göre bu alt sınıf",
+			"optionAlpha": "Alfabetik olarak",
+			"optionTitleAlpha": "Alfabetik olarak başlığa göre",
+			"optionCreatorAlpha": "Yaratıcı tarafından alfabetik olarak",
+			"optionDist": "Mesafe olarak",
+			"optionRev": "Ters sıralama",
+			"optionClear": "Sıralamayı temizle"
+		},
+		"facetMenu": {
+			"title": "Faset olarak",
+			"tooltip": "Farklı kriterlere göre faset konuları",
+			"optionType": "Tür",
+			"optionColl": "Oluşturan",
+			"optionCity": "Konum"
+		},
+		"displayMenu": {
+			"title": "Görüntüle",
+			"tooltip": "Görüntü seçin",
+			"optionGallery": "Galeri",
+			"optionList": "Liste"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "Tamam",
 		"cancel": "İptal",
 		"helpText": "Yardım",
+		"expand": "Bu bölümü genişlet",
+		"collapse": "Bu bölümü daralt",
 		"menus": {
-			"actionMenuTitle": "İşlemler",
-			"actionMenuTooltip": "İşlemler",
+			"actionMenuTitle": "Eylemler",
+			"actionMenuTooltip": "Eylemler",
 			"languageMenuTitle": "Dil seç",
-			"myLanguagesItem": "Dillerim"
+			"languageMenuTooltip": "Dilinizi seçin",
+			"myLanguagesItem": "Dillerim",
+			"languageMenuTranslate": "Bu maddeyi Türkçe'ye çevir"
+		},
+		"languageMenu": {
+			"TranslateUI": "Dilinize çevirin"
 		},
 		"languages": {
 			"fi": "Fince",
@@ -156,5 +553,10 @@
 			"sv": "İsveççe",
 			"es": "İspanyolca"
 		}
+	},
+	"Banner": {
+		"WLM": "Viki Anıtları Seviyor $1",
+		"WLMText": "Bu kültürel mirası fotoğraflayın ve $2 fotoğraf yarışmasına katılın!",
+		"WLMButton": "Resim yükle"
 	}
 }
