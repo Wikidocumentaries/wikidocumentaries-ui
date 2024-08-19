@@ -10,7 +10,7 @@
 	"LandingPage": {
 		"search": "Sichen",
 		"searchInputPlaceHolder": "Fannt en Theema oder leet en neit Theema un",
-		"searchInputSearchOnly": "Fannt en Thema",
+		"searchInputSearchOnly": "En Theema fannen",
 		"showMore": "Méi Elementer weisen",
 		"createNew": "Neit Element uleeën",
 		"titleDescription": "Wat ass Wikidocumentaries?",
@@ -19,7 +19,7 @@
 		"moreBelow": "Liest méi hei drënner",
 		"more": "Liest méi",
 		"moreLink": "Liest méi op",
-		"titleTopics": "Themen",
+		"titleTopics": "Theemen",
 		"titleMedia": "Medien",
 		"titleTools": "Geschierkëscht",
 		"titleLanguages": "Sproochen",
@@ -154,7 +154,7 @@
 				"map": "Kaart",
 				"people": "Leit",
 				"places": "Plazen",
-				"topics": "Themen",
+				"topics": "Theemen",
 				"form": "Formulaire",
 				"imageSize": "Gréisst vum Bild",
 				"large": "grouss",
@@ -189,7 +189,7 @@
 			"imagesViewOnMap": "Bild op enger Kaart weisen"
 		},
 		"TopicMap": {
-			"headerTitle": "Thema op der Kaart",
+			"headerTitle": "Theema op der Kaart",
 			"hideImagesMenuText": "Biller verstoppen",
 			"showNearbyPlacesMenuText": "Plazen nobäi weisen"
 		},
@@ -253,8 +253,8 @@
 			"genre": "Genre",
 			"addGenre": "Genre derbäisetzen",
 			"removeGenre": "Genre ewechhuelen",
-			"addTopic": "Thema derbäisetzen",
-			"removeTopic": "Thema ewechhuelen",
+			"addTopic": "Theema derbäisetzen",
+			"removeTopic": "Theema ewechhuelen",
 			"location": "Plaz",
 			"addLocation": "Plaz derbäisetzen",
 			"removeLocation": "Plaz ewechhuelen",
