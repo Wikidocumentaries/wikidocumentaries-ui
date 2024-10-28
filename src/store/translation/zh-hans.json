@@ -131,6 +131,9 @@
 			"subtitleEditText": "编辑描述",
 			"subtitleApproveText": "核准该描述"
 		},
+		"Heritage": {
+			"headerTitle": "遗产元素"
+		},
 		"Locations": {
 			"headerTitle": "在此位置",
 			"sortMenu": {
@@ -197,6 +200,13 @@
 			"facetMenuOptionProfession": "职业",
 			"facetMenuOptionCountry": "国家",
 			"facetMenuOptionCity": "性别"
+		},
+		"Seasons": {
+			"headerTitle": "季节",
+			"intro": "查看此活动的季节"
+		},
+		"Subclasses": {
+			"headerTitle": "此主题的子类别"
 		},
 		"Twins": {
 			"headerTitle": "双城"
