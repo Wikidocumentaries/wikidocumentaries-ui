@@ -9,14 +9,10 @@
                 <div class="turquoise"></div>
                 <div class="green"></div>
             </div>
-             <div id="main-toolbar" class="main-toolbar">
-                <div class="left-align">
-                    <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
-                </div>
-                <div class="right-align">
-                    <TopicSearchBox class="topic-search-box"></TopicSearchBox>
-                    <UILanguageMenu class="language-menu"></UILanguageMenu>
-                </div>
+            <div id="main-toolbar" class="main-toolbar">
+                <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
+                <TopicSearchBox class="topic-search-box"></TopicSearchBox>
+                <UILanguageMenu class="language-menu"></UILanguageMenu>
             </div>
           <component
               v-bind:is="currentTabComponentName"
@@ -38,8 +34,6 @@ import store from '@/store/store'
 import WIKI from '../store/constants'
 
 import TopicPage from '@/components/topic_page/HomePage'
-import MapPlaceMatchPage from '@/components/map_place_match_page/MapPlaceMatchPage'
-import MapSearchPage from '@/components/map_search_page/MapSearchPage'
 import WaitPage from '@/components/WaitPage'
 import TopicSearchBox from '@/components/TopicSearchBox'
 import UILanguageMenu from '@/components/menu/UILanguageMenu'
@@ -67,8 +61,6 @@ export default {
     },
     components: {
         TopicPage,
-        MapPlaceMatchPage,
-        MapSearchPage,
         WaitPage,
         UILanguageMenu,
         TopicSearchBox
@@ -97,18 +89,6 @@ export default {
 
         store.dispatch('updateWikidocumentaries', params).then(res => next());
     },
-    created () {
-        //console.log(window.location);
-        var langParam = null;
-        var langParamIndex = window.location.search.indexOf('language');
-        if (langParamIndex != -1) {
-            langParam = window.location.search.substr(langParamIndex + 9, 2);
-        }
-        //console.log/(langParam);
-
-        var language = (langParam != null ? langParam : this.$i18n.locale);
-        this.$i18n.locale = language;
-    },
     methods: {
         goToLandingPage(event) {
             this.$router.push('/');
@@ -130,9 +110,11 @@ export default {
 .main-button {
     font-weight: bold;
     font-size: 16pt;
-    margin-left: 20px;
     color: #333;
     cursor: pointer;
+    min-width: 0;
+    overflow: hidden;
+    flex-shrink: 1;
 }
 
 a.main-button:hover {
@@ -170,6 +152,7 @@ a.main-button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 /*. main-toolbar-buttons {
@@ -185,6 +168,7 @@ a.main-button:hover {
 .topic-search-box {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .language-bar {

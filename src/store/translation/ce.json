@@ -1,0 +1,242 @@
+{
+	"@metadata": {
+		"authors": [
+			"Умар"
+		]
+	},
+	"LandingPage": {
+		"search": "Лаха",
+		"searchInputPlaceHolder": "Карайе тема йа керланиг кхолла",
+		"searchInputSearchOnly": "Карайе тема",
+		"showMore": "Гайта кхин элементаш",
+		"createNew": "Керла элемент кхолла",
+		"titleStatus": "Статус",
+		"moreBelow": "Мадарра деша лахахь",
+		"more": "Мадарра деша",
+		"moreLink": "Мадарра деша",
+		"titleTopics": "Темаш",
+		"titleMedia": "Медиа",
+		"titleTools": "ГӀирсаш",
+		"titleLanguages": "Меттанаш",
+		"titleTechnology": "Технологи",
+		"titleCreators": "Кхоллархой",
+		"titleTeam": "Команда",
+		"titleThanks": "Къаьстина баркалла",
+		"titlePartners": "Партнёраш",
+		"titleBy": "Проект йу",
+		"titleTranslate": "Гочйе",
+		"titleContent": "ТӀетоха хьай контент",
+		"blog": "Блог",
+		"github": "Репозитори GitHub тӀехь"
+	},
+	"MainPage": {
+		"topicPageName": "Темин агӀо",
+		"mapPlaceMatchPageName": "Вовшахтоха географин цӀерш",
+		"mapSearchPageName": "лаха картанаш",
+		"wikiTopicErrorMessage": "Википедехь темица агӀо карарчу маттахь цакарий, йа кхий девзаш доцу гӀалат даьлла.",
+		"returnToHomeMessage": "Коьртачу агӀонга дехьагӀо"
+	},
+	"WaitPage": {
+		"waitMessage": "Минотехь, собар де… Схьайоьцуш бу хаамаш Википедера, Викихаамашкара, Викилармера, MapWarper, Finna, Flickr…"
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "СовгӀаташ"
+		},
+		"BaseMapDialog": {
+			"yearAbbreviation": "ш."
+		},
+		"Depicted": {
+			"headerTitle": "Гайтина",
+			"sortMenu": {
+				"optionTime": "Хенаца",
+				"optionAlpha": "Абатан рогӀехь"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа",
+				"optionColl": "Автор"
+			},
+			"displayMenu": {
+				"title": "Гайта санна",
+				"tooltip": "Гайтар харжар",
+				"optionGallery": "Галерей",
+				"optionList": "МогӀам"
+			},
+			"showAll": "Йерриге"
+		},
+		"Depicts": {
+			"headerTitle": "Гойту"
+		},
+		"Events": {
+			"headerTitle": "Хиламаш",
+			"displayMenu": {
+				"menuTitle": "Гайтар нисдар",
+				"menuTooltip": "Гайтар нисдар",
+				"optionShowTimeline": "Гайта хиламаш хенан шкалехь"
+			},
+			"optionsMenu": {
+				"menuTitle": "Нисдаран гӀирс",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Нисйан"
+				}
+			}
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "Хенаца",
+				"optionAlpha": "Абатан рогӀехь"
+			},
+			"facetMenu": {
+				"optionType": "Тайпа"
+			},
+			"displayMenu": {
+				"optionGallery": "Галерей"
+			},
+			"showAll": "Йерриге"
+		},
+		"Map": {
+			"headerTitle": "Лаьтта меттиг картин тӀехь"
+		},
+		"Parts": {
+			"headerTitle": "Дакъош"
+		},
+		"Names": {
+			"headerTitle": "ЦӀерш"
+		},
+		"People": {
+			"facetMenuOptionProfession": "Професси",
+			"facetMenuOptionCountry": "Пачхьалкх",
+			"facetMenuOptionCity": "Стен-боьршалла"
+		},
+		"Seasons": {
+			"headerTitle": "Шеран хенаш",
+			"intro": "Хьажа кху сезонан жигаралла."
+		},
+		"Twins": {
+			"headerTitle": "ДоттагӀий-гӀаланаш"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "хан",
+				"map": "карта",
+				"people": "нах",
+				"places": "меттигаш",
+				"topics": "темаш",
+				"form": "форма",
+				"imageSize": "суьртан барам",
+				"large": "сов",
+				"medium": "йукъара",
+				"small": "жима",
+				"type": "медиа тайпа",
+				"creator": "кхоллархо",
+				"platform": "платформа",
+				"source": "хьост",
+				"clear": "Харжар дӀацӀандар"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Ардамаш",
+				"menuTooltip": "Ардамаш",
+				"showImageText": "Гайта сурт"
+			}
+		},
+		"TopicMap": {
+			"hideImagesMenuText": "Къайладаккха сурт",
+			"chooseTimelineMapsMenuText": "Харжа хронологин картанаш…",
+			"showNearbyPlacesMenuText": "Гайта гергахьара меттигаш"
+		},
+		"TopicTimeline": {
+			"centuryText": "Чохь"
+		},
+		"Works": {
+			"headerTitle": "Белхаш",
+			"sortMenuOptionTime": "Хенаца",
+			"sortMenuOptionAlpha": "Абатан рогӀехь",
+			"facetMenuOptionType": "Тайпа",
+			"facetMenuOptionColl": "Коллекци",
+			"facetMenuOptionCity": "Лаьтта меттиг",
+			"displayMenuTitle": "Гайта санна",
+			"displayMenuTooltip": "Гайтар харжар",
+			"displayMenuOptionGallery": "Галерей",
+			"displayMenuOptionList": "МогӀам",
+			"displayMenuOptionMap": "Карта",
+			"showAll": "Йерриге"
+		},
+		"Wikidata": {
+			"headerTitle": "Факташ"
+		},
+		"Wikipedia": {
+			"headerTitle": "Йаззам",
+			"languageMenu": {
+				"otherLanguagestext": "Кхин меттанаш"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Куьг",
+			"addCaption": "ТӀетоха куьг",
+			"description": "Цуьнах лаьцна",
+			"addDescription": "ТӀетоха хаам",
+			"creator": "Кхоллархо",
+			"creatorUnknown": "Хууш дац",
+			"addCreator": "ТӀетоха кхоллархо",
+			"removeCreator": "ДӀаваккха(йаккха) кхоллархо",
+			"addTopic": "Тема тӀетоха",
+			"removeTopic": "Тема дӀайаккха",
+			"location": "Лаьтта меттиг",
+			"locationMap": "Лаьтта меттиг картин тӀехь",
+			"addLocation": "ТӀетоха лаьтта меттиг",
+			"removeLocation": "ДӀайаккха лаьтта меттиг",
+			"address": "Адрес",
+			"addAddress": "ТӀетоха адрес",
+			"removeAddress": "ДӀадаккха адрес",
+			"addPerson": "ТӀетоха адам",
+			"removePerson": "ДӀаваккха(йаккха) адам",
+			"event": "Хилам",
+			"addEvent": "ТӀетоха хилам",
+			"removeEvent": "ДӀабаккха хилам",
+			"institution": "Учреждени",
+			"collection": "Коллекци",
+			"addCollection": "ТӀетоха коллекци",
+			"inventoryNumber": "Инвентаран лоьмар",
+			"inscriptions": "ДӀайаздарш",
+			"image": "Сурт",
+			"photographer": "Суртдоккхург",
+			"attribution": "Атрибуци",
+			"remove": "ДӀайаккха",
+			"addData": "ТӀетоха хаамаш",
+			"uploader": "Хьа чуйаьккхина"
+		}
+	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "Тайпа",
+			"optionColl": "Кхоллархо",
+			"optionCity": "Лаьтта меттиг"
+		},
+		"displayMenu": {
+			"title": "Гайта санна",
+			"optionGallery": "Галерей"
+		}
+	},
+	"general": {
+		"cancel": "Йухайаккхар",
+		"helpText": "ГӀо",
+		"menus": {
+			"actionMenuTitle": "Ардамаш",
+			"actionMenuTooltip": "Ардамаш",
+			"languageMenuTitle": "Харжа мотт",
+			"languageMenuTooltip": "Харжа мотт",
+			"myLanguagesItem": "Сан меттанаш"
+		},
+		"languages": {
+			"fi": "Финнийн",
+			"en": "Ингалсан",
+			"sv": "Шведийн",
+			"es": "Испанхойн"
+		}
+	},
+	"Banner": {
+		"WLMButton": "Сурт чудаккха"
+	}
+}
