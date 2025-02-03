@@ -351,6 +351,7 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
 		"WLMButton": "Bild eroplueden"
 	}
 }
