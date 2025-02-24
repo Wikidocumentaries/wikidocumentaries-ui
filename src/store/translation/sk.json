@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Oujon",
 			"Yardom78"
 		]
 	},
@@ -136,6 +137,9 @@
 			"titleApproveText": "Schváliť tento názov",
 			"subtitleEditText": "Upraviť popis",
 			"subtitleApproveText": "Schváliť tento popis"
+		},
+		"Heritage": {
+			"headerTitle": "Prvky dedičstva"
 		},
 		"Locations": {
 			"headerTitle": "Na tejto lokalizácii",

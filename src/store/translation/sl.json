@@ -169,7 +169,8 @@
 			"copyrightNotePD": "Slika ima licenco $1, vendar je glede na metapodatke v javni domeni.",
 			"imageDimensions": "Mere slike",
 			"fileFormat": "Datotečni format",
-			"moveTo": "Prestavitev v drugo polje"
+			"moveTo": "Prestavitev v drugo polje",
+			"uploader": "Naložnik"
 		},
 		"imageActions": {
 			"rotateImage": "Zavrti sliko"
