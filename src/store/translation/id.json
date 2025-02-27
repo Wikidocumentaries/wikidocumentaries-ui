@@ -3,6 +3,7 @@
 		"authors": [
 			"Agam Riyandana",
 			"Akmaie Ajam",
+			"Boesenbergia",
 			"DARMAS BUDI SANTOSO",
 			"Daud I.F. Argana",
 			"Herryz",
@@ -43,7 +44,7 @@
 		"titleFunding": "Dengan dukungan dari",
 		"titleBy": "Proyek oleh",
 		"getInvolved": "Ayo ikut terlibat!",
-		"titleTranslate": "Terjemahkan",
+		"titleTranslate": "Pertalaghi",
 		"joinTranslate": "Mari bawa bahasa Anda ke Wikidocumentaries. Gabung dengan tim relawan penerjemahan dan lihat keterhubungan warisan budaya hidup dalam bahasa Anda.",
 		"titleContent": "Tambahkan konten",
 		"joinContent": "Jika Anda memiliki foto, media, dokumen, peta, atau koleksi data yang ingin anda lihat di sini, mari lihat bersama jika itu dapat langsung dihubungkan melalui salah satu kanal yang tersedia atau jika kami dapat membuat metode penghubungan baru. Kami juga berniat menyelenggarakan lokakarya untuk merekam pengetahuan tentang sejarah dengan komunitas terkait.",
@@ -543,10 +544,10 @@
 			"languageMenuTitle": "Pilih bahasa",
 			"languageMenuTooltip": "Pilih bahasa",
 			"myLanguagesItem": "Bahasa saya",
-			"languageMenuTranslate": "Terjemahkan artikel ini ke bahasa Inggris"
+			"languageMenuTranslate": "Pertal serradhân arèya ka bhâsa Inggris"
 		},
 		"languageMenu": {
-			"TranslateUI": "Terjemahkan ke bahasa Anda"
+			"TranslateUI": "Pertal ka bhâsana Bâ'na"
 		},
 		"languages": {
 			"fi": "Finnish",
