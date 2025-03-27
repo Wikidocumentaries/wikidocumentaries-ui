@@ -1,12 +1,29 @@
 {
 	"@metadata": {
 		"authors": [
+			"Csega",
+			"Luckylukee81",
+			"Misibacsi",
 			"R-Joe"
 		]
 	},
 	"LandingPage": {
 		"search": "Keresés",
-		"searchInputPlaceHolder": "Keressen egy témát, vagy hozzon létre egy új témát"
+		"searchInputPlaceHolder": "Keressen egy témát, vagy hozzon létre egy új témát",
+		"searchInputSearchOnly": "Téma keresése",
+		"titleStatus": "Állapot",
+		"more": "Olvass tovább",
+		"titleTopics": "Témák",
+		"titleTools": "Eszközök",
+		"titleLanguages": "Nyelvek",
+		"titleTechnology": "Technológia",
+		"titleTeam": "Csapat",
+		"titlePartners": "Partnerek",
+		"getInvolved": "Kapcsolódj be!",
+		"titleTranslate": "Fordítás",
+		"facebook": "Facebook csoport",
+		"blog": "Blog",
+		"email": "E-mail"
 	},
 	"MainPage": {
 		"topicPageName": "Téma lap",
@@ -16,9 +33,12 @@
 		"returnToHomeMessage": "Vissza a nyitóoldalra"
 	},
 	"WaitPage": {
-		"waitMessage": "Egy pillanatot, kérlek ... Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
+		"waitMessage": "Adatok letöltése Wikipédiából, Wikidatából, Wikimedia Commonsból, Map Warperből, Finnából, Flickrből ..."
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Díjak"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Válasszon történelmi alaptérképe(ke)t",
 			"chooseMapHelpNote": "Tipp: A ctrl + klikk lehetővé teszi több térkép kiválasztását",
@@ -29,6 +49,19 @@
 			"titleApproveText": "Jóváhagyja ezt a címet",
 			"subtitleEditText": "Leírás szerkesztése",
 			"subtitleApproveText": "Leírás eltávolítása"
+		},
+		"People": {
+			"sortMenuTitle": "Rendezés",
+			"sortMenuTooltip": "Rendezési sorrend módosítása",
+			"sortMenuOptionBirth": "Születési dátum szerint",
+			"sortMenuOptionDeath": "Elhalálozási dátum szerint",
+			"sortMenuOptionName": "Név szerint",
+			"sortMenuOptionFirst": "Keresztnév szerint",
+			"sortMenuOptionLast": "Családi név szerint",
+			"sortMenuOptionClear": "Rendezés törlése",
+			"facetMenuOptionProfession": "Szakma",
+			"facetMenuOptionCountry": "Ország",
+			"facetMenuOptionCity": "Nem"
 		},
 		"TopicImages": {
 			"headerTitle": "Képek az archivumból",
@@ -88,19 +121,18 @@
 		"TopicMap": {
 			"headerTitle": "Téma a térképen"
 		},
-		"People": {
-			"sortMenuTitle": "Rendezés",
-			"sortMenuTooltip": "Rendezési sorrend módosítása",
-			"sortMenuOptionBirth": "Születési dátum szerint",
-			"sortMenuOptionDeath": "Elhalálozási dátum szerint",
-			"sortMenuOptionName": "Név szerint",
-			"sortMenuOptionFirst": "Keresztnév szerint",
-			"sortMenuOptionLast": "Családi név szerint",
-			"sortMenuOptionRev": "Rendezési sorrend megfordítása",
-			"sortMenuOptionClear": "Rendezés törlése",
-			"facetMenuOptionProfession": "Szakma",
-			"facetMenuOptionCountry": "Ország",
-			"facetMenuOptionCity": "Nem"
+		"Wikipedia": {
+			"languageMenu": {
+				"translateArticleText": "Szócikk lefordítása angol nyelvre"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"image": "Kép",
+			"creditline": "Hitelkeret",
+			"attribution": "Attribútum",
+			"uploader": "Feltöltő"
 		}
 	},
 	"map_place_match_page": {
@@ -113,6 +145,23 @@
 			"headerTitle": "Történelmi térkép keresése",
 			"filterBySourceMenuText": "Szűrés forrás szerint...",
 			"filterByTimeMenuText": "Szűrés idő alapján..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"tooltip": "Témák rendezése",
+			"optionAlpha": "Betűrendben",
+			"optionDist": "Távolság szerint",
+			"optionRev": "Fordított sorrend",
+			"optionClear": "Rendezés törlése"
+		},
+		"facetMenu": {
+			"optionType": "Típus",
+			"optionColl": "Készítő",
+			"optionCity": "Hely"
+		},
+		"displayMenu": {
+			"optionGallery": "Galéria"
 		}
 	},
 	"general": {

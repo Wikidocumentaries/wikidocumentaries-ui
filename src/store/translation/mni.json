@@ -1,0 +1,192 @@
+{
+	"@metadata": {
+		"authors": [
+			"Awangba Mangang"
+		]
+	},
+	"LandingPage": {
+		"search": "ꯊꯤꯕꯥ"
+	},
+	"topic_page": {
+		"Depicted": {
+			"sortMenu": {
+				"title": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
+				"tooltip": "ꯑꯇꯦꯟꯕ ꯊꯕꯛꯁꯤꯡ",
+				"optionTime": "ꯃꯇꯝꯅꯥ",
+				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ"
+			},
+			"facetMenu": {
+				"optionType": "ꯃꯈꯜ",
+				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ"
+			},
+			"displayMenu": {
+				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
+				"optionGallery": "ꯊꯝꯐꯝ",
+				"optionList": "ꯄꯥꯔꯤꯡ"
+			},
+			"showAll": "ꯄꯨꯂꯞ"
+		},
+		"Events": {
+			"headerTitle": "ꯇꯧꯒꯗꯕꯁꯤꯡ",
+			"displayMenu": {
+				"menuTitle": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ",
+				"menuTooltip": "ꯈꯟꯐꯝꯁꯤꯡ ꯎꯠꯄ"
+			},
+			"optionsMenu": {
+				"menuTitle": "ꯃꯌꯥꯝꯒꯤꯃꯔꯛꯇꯥ",
+				"menuTooltip": "ꯎꯠꯊꯣꯛꯅꯕ ꯑꯆꯨꯝꯕ ꯈꯟꯂꯨ",
+				"optionWorks": "ꯊꯕꯛꯁꯤꯡ ꯎꯠꯂꯨ"
+			}
+		},
+		"Header": {
+			"titleEditText": "ꯃꯃꯤꯡ ꯁꯦꯝꯒꯠꯄꯥ"
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "ꯃꯇꯝꯅꯥ",
+				"optionAlpha": "ꯃꯌꯦꯛꯅꯥ",
+				"optionDist": "ꯑꯔꯥꯞꯄꯅꯥ"
+			},
+			"facetMenu": {
+				"optionType": "ꯃꯈꯜ",
+				"optionColl": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ",
+				"optionCity": "ꯃꯐꯝ"
+			},
+			"displayMenu": {
+				"tooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
+				"optionGallery": "ꯊꯝꯐꯝ",
+				"optionList": "ꯄꯥꯔꯤꯡ"
+			},
+			"showAll": "ꯄꯨꯂꯞ"
+		},
+		"People": {
+			"sortMenuOptionBirth": "ꯄꯣꯛꯄꯥ ꯆꯩꯆꯠꯅꯥ",
+			"sortMenuOptionDeath": "ꯁꯤꯕꯒꯤ ꯆꯩꯆꯠꯅꯥ",
+			"sortMenuOptionName": "ꯃꯃꯤꯡꯅꯥ",
+			"sortMenuOptionFirst": "ꯑꯍꯥꯟꯕ ꯃꯃꯤꯡꯅꯥ",
+			"sortMenuOptionLast": "ꯑꯔꯣꯏꯕ ꯃꯃꯤꯡꯅꯥ",
+			"facetMenuOptionProfession": "ꯁꯤꯟꯐꯝ",
+			"facetMenuOptionCountry": "ꯂꯩꯄꯥꯛ",
+			"facetMenuOptionCity": "ꯅꯨꯄꯥ/ꯅꯨꯄꯤ"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "ꯃꯇꯝ",
+				"map": "ꯃꯦꯞ",
+				"people": "ꯃꯤꯌꯥꯝ",
+				"places": "ꯃꯐꯝꯁꯤꯡ",
+				"imageSize": "ꯃꯤꯔꯦꯜ ꯆꯥꯎꯕꯒꯤ ꯆꯥꯡ",
+				"large": "ꯑꯆꯧꯕ",
+				"medium": "ꯃꯌꯥꯏꯑꯣꯏꯔꯞ",
+				"small": "ꯑꯄꯤꯛꯄ",
+				"type": "ꯃꯦꯗꯤꯌꯥ ꯃꯈꯜ",
+				"creator": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ",
+				"platform": "ꯐꯝꯄꯥꯛ",
+				"source": "ꯍꯧꯔꯛꯐꯛ"
+			},
+			"imagesActionMenu": {
+				"showImageText": "ꯃꯤꯔꯦꯜ ꯎꯠꯂꯨ"
+			},
+			"imagesRemoveMenu": {
+				"shortMenuTitle": "ꯃꯤꯔꯦꯜ ꯂꯧꯊꯣꯛꯎ",
+				"menuTooltip": "ꯃꯤꯔꯦꯜ ꯂꯧꯊꯣꯛꯎ",
+				"remDepicted": {
+					"search": "ꯃꯁꯤꯒꯤ ꯃꯃꯤꯡꯁꯤꯒꯤ ꯃꯇꯥꯡꯗ ꯊꯤꯌꯨ"
+				}
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "ꯆꯠꯊꯔꯛꯂꯤꯕ ꯃꯇꯝ",
+			"centuryText": "ꯆ"
+		},
+		"Works": {
+			"headerTitle": "ꯊꯕꯛꯁꯤꯡ",
+			"sortMenuTitle": "ꯑꯇꯦꯟꯕ",
+			"sortMenuTooltip": "ꯑꯇꯦꯟꯕ ꯄꯣꯠꯂꯝꯁꯤꯡ",
+			"sortMenuOptionTime": "ꯃꯇꯝꯅꯥ",
+			"sortMenuOptionAlpha": "ꯃꯌꯦꯛꯅꯥ",
+			"sortMenuOptionDist": "ꯑꯔꯥꯞꯄꯅꯥ",
+			"facetMenuOptionType": "ꯃꯈꯜ",
+			"facetMenuOptionColl": "ꯈꯣꯝꯖꯤꯟꯂꯛꯄꯥ",
+			"facetMenuOptionCity": "ꯃꯐꯝ",
+			"displayMenuTooltip": "ꯗꯤꯁꯄꯂꯦ ꯈꯟꯂꯨ",
+			"displayMenuOptionGallery": "ꯊꯝꯐꯝ",
+			"displayMenuOptionList": "ꯄꯥꯔꯤꯡ",
+			"showAll": "ꯄꯨꯂꯞ"
+		},
+		"Wikidata": {
+			"headerTitle": "ꯑꯆꯨꯝꯕꯁꯤꯡ",
+			"extLink": {
+				"linkTitleWD": "ꯎꯠꯂꯨ ꯅꯠꯇ꯭ꯔꯒ ꯋꯤꯀꯤꯗꯥꯇꯥ ꯗ ꯁꯦꯝꯒꯠꯂꯨ"
+			},
+			"noTopicFoundText": "ꯃꯃꯤꯡꯁꯤ ꯊꯤꯕꯗ ꯐꯪꯗꯦ"
+		},
+		"Wikipedia": {
+			"headerTitle": "ꯋꯥꯔꯦꯡ"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "ꯁꯟꯗꯣꯛꯅꯥ ꯇꯥꯛꯄꯥ",
+			"addDescription": "ꯁꯟꯗꯣꯛꯅꯥ ꯇꯥꯛꯄꯥ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"creator": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ",
+			"creatorUnknown": "ꯁꯛꯈꯪꯗꯕ",
+			"addCreator": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removeCreator": "ꯁꯥꯔꯤꯕꯥ ꯃꯤꯑꯣꯏ ꯂꯧꯊꯣꯛꯎ",
+			"dateCreated": "ꯁꯥꯈꯤꯕꯥ ꯆꯩꯆꯠ",
+			"publisher": "ꯐꯣꯡꯗꯣꯛꯂꯤꯕꯥ ꯃꯤꯑꯣꯏ",
+			"addPublisher": "ꯐꯣꯡꯗꯣꯛꯂꯤꯕꯥ ꯃꯤꯑꯣꯏ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removePublisher": "ꯐꯣꯡꯗꯣꯛꯂꯤꯕꯥ ꯃꯤꯑꯣꯏ ꯂꯧꯊꯣꯛꯎ",
+			"format": "ꯃꯑꯣꯡ",
+			"addFormat": "ꯃꯑꯣꯡ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removeFormat": "ꯃꯑꯣꯡ ꯂꯧꯊꯣꯛꯎ",
+			"technique": "ꯊꯕꯛꯇꯨ ꯇꯧꯕꯒꯤ ꯃꯑꯣꯡ",
+			"addTechnique": "ꯊꯕꯛꯇꯨ ꯇꯧꯕꯒꯤ ꯃꯑꯣꯡ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removeTechnique": "ꯊꯕꯛꯇꯨ ꯇꯧꯕꯒꯤ ꯃꯑꯣꯡ ꯂꯧꯊꯣꯛꯎ",
+			"location": "ꯃꯐꯝ",
+			"addLocation": "ꯃꯐꯝ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removeLocation": "ꯃꯐꯝꯗꯨ ꯂꯧꯊꯛꯎ",
+			"address": "ꯂꯩꯔꯛ ꯃꯃꯤꯡ",
+			"addAddress": "ꯂꯩꯔꯛ ꯃꯃꯤꯡ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removeAddress": "ꯂꯩꯔꯛ ꯃꯃꯤꯡ ꯂꯧꯊꯣꯛꯎ",
+			"addPerson": "ꯃꯤꯑꯣꯏꯗꯨ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"removePerson": "ꯃꯤꯑꯣꯏ ꯂꯧꯊꯣꯛꯎ",
+			"remove": "ꯂꯧꯊꯣꯛꯄ",
+			"moveTo": "ꯑꯇꯣꯞꯄꯥ ꯐꯥꯏꯜꯗ ꯂꯦꯡꯍꯟꯕ",
+			"addData": "ꯗꯥꯇꯥ ꯍꯥꯞꯆꯤꯟꯂꯨ",
+			"uploader": "ꯊꯥꯒꯠꯂꯛꯂꯤꯕꯥ ꯃꯤꯑꯣꯏ"
+		},
+		"imageActions": {
+			"rotateImage": "ꯃꯤꯔꯦꯜ ꯎꯪꯍꯟꯂꯨ",
+			"clockwise": "ꯌꯦꯠꯂꯣꯝꯗꯥ",
+			"counterclockwise": "ꯑꯣꯏꯔꯣꯝꯗꯥ",
+			"flip": "ꯂꯣꯟꯈꯠꯄꯥ",
+			"horizontal": "ꯐꯩꯅꯥ",
+			"vertical": "ꯌꯨꯡꯅꯥ"
+		}
+	},
+	"general": {
+		"ok": "ꯌꯥꯔꯦ",
+		"cancel": "ꯇꯣꯛꯄ",
+		"helpText": "ꯃꯇꯦꯡ",
+		"expand": "ꯃꯁꯤꯒꯤ ꯁꯔꯨꯛꯁꯤ ꯄꯥꯛꯊꯣꯛꯍꯟꯂꯨ",
+		"collapse": "ꯃꯁꯤꯒꯤ ꯁꯔꯨꯛꯁꯤ ꯄꯤꯛꯁꯤꯟꯍꯟꯂꯨ",
+		"menus": {
+			"actionMenuTitle": "ꯊꯕꯛ ꯄꯥꯡꯊꯣꯛꯄ",
+			"actionMenuTooltip": "ꯊꯕꯛ ꯄꯥꯡꯊꯣꯛꯄ",
+			"languageMenuTitle": "ꯂꯣꯟ ꯈꯟꯂꯨ",
+			"languageMenuTooltip": "ꯅꯪꯒꯤ ꯂꯣꯟ ꯈꯟꯂꯨ",
+			"myLanguagesItem": "ꯑꯩꯒꯤ ꯂꯣꯟ",
+			"languageMenuTranslate": "ꯃꯁꯤꯒꯤ ꯋꯥꯔꯦꯡꯁꯤ ꯃꯤꯇꯩꯂꯣꯟ ꯗ ꯍꯟꯗꯣꯛꯎ"
+		},
+		"languageMenu": {
+			"TranslateUI": "ꯅꯪꯒꯤ ꯂꯣꯟꯗ ꯍꯟꯗꯣꯛꯎ"
+		},
+		"languages": {
+			"fi": "ꯐꯤꯅꯤꯛ ꯂꯣꯟ",
+			"en": "ꯏꯪꯂꯤꯁ ꯂꯣꯟ",
+			"sv": "ꯁꯋꯤꯗꯤꯁ ꯂꯣꯟ",
+			"es": "ꯁ꯭ꯄꯦꯟ ꯂꯣꯟ"
+		}
+	}
+}
