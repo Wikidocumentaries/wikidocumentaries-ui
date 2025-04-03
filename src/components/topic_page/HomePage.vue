@@ -1,137 +1,182 @@
 <template>
   <div class="home-page">
     <TopicPageHeader></TopicPageHeader>
-    <div class="row" :class="[isExpanded ? 'expanded' : '']">
+    <Banner id="banner"></Banner>
+    <Colours id="colours"></Colours>
+    <div ref="wikirow" class="row" :class="[isExpanded ? 'expanded' : 'notexpanded']">
       <WikipediaArticle class="column one"></WikipediaArticle>
       <WikidataItem class="column two"></WikidataItem>
-      <div class="haze"><div class="toolbar-item block">
-        <a @click='isExpanded = !isExpanded' class="toolbar-item-a"><i class="wikiglyph" :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"></i></a><span class="tooltip">{{ tooltip }}</span>
-    </div></div>
+      <div class="haze" id="wiki">
+        <div class="toolbar-item block">
+          <a @click="isExpanded = !isExpanded" class="toolbar-item-a">
+            <i
+              class="wikiglyph"
+              :class="[isExpanded ? 'wikiglyph-caret-up' : 'wikiglyph-caret-down']"
+            ></i>
+          </a>
+          <span class="tooltip">{{ isExpanded ? $t('general.collapse') : $t('general.expand') }}</span>
+        </div>
+      </div>
     </div>
-    <!-- <SampoGallery></SampoGallery> -->
+    <Teams id="teams"></Teams>
+    <Kartta id="kartta"></Kartta>
+    <Location id="location"></Location>
+<!--     <Names id="names"></Names> -->
+    <Heritage id="heritage"></Heritage>
+    <Collection id=collection></Collection>
+    <Instances id="instances"></Instances>
+    <Subclasses id="subclasses"></Subclasses>
+    <Partof id="partof"></Partof>
+    <Parts id="parts"></Parts>
+    <Twins id="twins"></Twins>
     <Locations id="locations"></Locations>
-    <Works id="works"></Works>
-    <Depicted id="locations"></Depicted>
+    <!-- <CV id="cv"></CV> -->
     <People id="people"></People>
-    <EventList></EventList>
-    <TopicMap id="topicMap"></TopicMap>
-    <TopicImages @showImagesOnMap="onShowImagesOnMap" @showImagesOnTimeline="onShowImagesOnTimeline"></TopicImages>
-    <!--TopicTimeline id="topicTimeline"></TopicTimeline-->
-    <!--TopicNewspapers id="topicNewspapers"></TopicNewspapers-->
+    <Effects id="effects"></Effects>
+    <Works id="works"></Works>
+    <Awards id="awards"></Awards>
+    <Seasons id="seasons"></Seasons>
+    <Cups id="cups"></Cups>
+    <Depicts id="depicts"></Depicts>
+    <Things id="things"></Things>
+    <Affiliations id="affiliations"></Affiliations>
+    <Depicted id="depicted"></Depicted>
+<!--     <TopicMap id="topicMap"></TopicMap> -->
+    <!-- <TopicTimeline id="topicTimeline"></TopicTimeline> -->
+<!--     <EventList id="events"></EventList> -->
+
+    <!-- Hide "Similar topics" for Q105501871 Pargas house (based on feedback) -->
+    <Similar
+      v-if="this.$store.state.wikidocumentaries.wikidataId !== 'Q105501871'"
+      id="similar"
+    />
+    </Similar>
+
+    <!--
+      Show images for Q105501871 Pargas house on the basis of
+      its exhibition Q119149823 and hardcode facets for the exhibition.
+    -->
+    <DepictingImages
+      v-if="['Q105501871', 'Q119149823'].includes(this.$store.state.wikidocumentaries.wikidataId)"
+      topic="Q119149823"
+      :facets="'wdt:P180, wdt:P186, wdt:P366, wdt:P189, wdt:P127'.split(', ')"
+      :useSDC="true"
+    />
+    <DepictingImages
+      v-else
+      :topic="this.$store.state.wikidocumentaries.wikidataId"
+      :useSDC="true"
+    />
+
+    <TopicImages
+      @showImagesOnMap="onShowImagesOnMap"
+      @showImagesOnTimeline="onShowImagesOnTimeline"
+    ></TopicImages>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-
-import TopicPageHeader from '@/components/topic_page/TopicPageHeader'
-import WikipediaArticle from '@/components/topic_page/Wikipedia'
-import WikidataItem from '@/components/topic_page/Wikidata'
-import TopicMap from '@/components/topic_page/TopicMap'
-import TopicImages from '@/components/topic_page/TopicImages'
-import TopicTimeline from '@/components/topic_page/TopicTimeline'
-// import SampoGallery from '@/components/topic_page/SampoGallery'
-import EventList from '@/components/topic_page/EventList'
-import Works from '@/components/topic_page/Works'
-import People from '@/components/topic_page/People'
-import Locations from '@/components/topic_page/Locations'
-import Depicted from '@/components/topic_page/Depicted'
+import Affiliations from "@/components/topic_page/Affiliations";
+import Awards from "@/components/topic_page/Awards";
+import Banner from "@/components/topic_page/Banner";
+import Cups from "@/components/topic_page/Cups";
+import Collection from "@/components/topic_page/Collection";
+import Colours from "@/components/topic_page/Colours";
+import Depicted from "@/components/topic_page/Depicted";
+import DepictingImages from "@/components/topic_page/DepictingImages";
+import Depicts from "@/components/topic_page/Depicts";
+import Effects from "@/components/topic_page/Effects";
+import Footer from "@/components/Footer";
+import Heritage from "@/components/topic_page/Heritage";
+import Instances from "@/components/topic_page/Instances";
+import Location from "@/components/topic_page/Location";
+import Locations from "@/components/topic_page/Locations";
+import Kartta from "@/components/topic_page/Kartta";
+/* import Names from "@/components/topic_page/Names"; */
+import People from "@/components/topic_page/People";
+import Partof from "@/components/topic_page/Partof";
+import Parts from "@/components/topic_page/Parts";
+import Seasons from "@/components/topic_page/Seasons";
+import Similar from "@/components/topic_page/Similar";
+import Subclasses from "@/components/topic_page/Subclasses";
+import Things from "@/components/topic_page/Things";
+import TopicImages from "@/components/topic_page/TopicImages";
+/* import TopicMap from "@/components/topic_page/TopicMap"; */
+import TopicPageHeader from "@/components/topic_page/TopicPageHeader";
+import Teams from "@/components/topic_page/Teams";
+import Twins from "@/components/topic_page/Twins";
+import WikipediaArticle from "@/components/topic_page/Wikipedia";
+import WikidataItem from "@/components/topic_page/Wikidata";
+import TopicTimeline from "@/components/topic_page/TopicTimeline";
+//import EventList from "@/components/topic_page/EventList";
+import Works from "@/components/topic_page/Works";
+//import Colours from './Colours.vue';
 //import TopicNewspapers from '@/components/topic_page/TopicNewspapers'
 
 export default {
-    name: 'TopicPage',
-    props: {
+  name: "TopicPage",
+  props: {},
+  data() {
+    return {
+      isExpanded: false
+    };
+  },
+  components: {
+    Affiliations,
+    Awards,
+    Banner,
+    Collection,
+    Colours,
+    Cups,
+    Depicted,
+    DepictingImages,
+    Depicts,
+    Effects,
+    Footer,
+/*     EventList, */
+    Heritage,
+    Instances,
+    Location,
+    Locations,
+    Kartta,
+/*     Names, */
+    People,
+    Parts,
+    Partof,
+    Seasons,
+    Similar,
+    Subclasses,
+    Teams,
+    Things,
+    TopicPageHeader,
+/*     TopicMap, */
+    TopicImages,
+    TopicTimeline,
+    Twins,
+    WikidataItem,
+    WikipediaArticle,
+    Works
+  },
+  computed: {},
+  mounted: {
+  },
+  methods: {
+    onShowImagesOnMap() {
+      this.$nextTick(function() {
+        //console.log("HomePage.onShowImagesOnMap");
+        this.$scrollTo("#topicMap");
+      });
     },
-    data () {
-        return {
-            isExpanded: false
-        }
-    },
-    components: {
-        TopicPageHeader,
-        WikipediaArticle,
-        WikidataItem,
-        TopicMap,
-        TopicImages,
-        TopicTimeline,
-        // SampoGallery,
-        EventList,
-        Works,
-        People,
-        Locations,
-        Depicted
-        //TopicNewspapers
-    },
-    computed: {
-    },
-    methods: {
-        onShowImagesOnMap() {
-          this.$nextTick(function() {
-            //console.log("HomePage.onShowImagesOnMap");
-            this.$scrollTo("#topicMap");
-          });
-        },
-        onShowImagesOnTimeline() {
-            //console.log("HomePage.onShowImagesOnTimeline");
+    onShowImagesOnTimeline() {
+      //console.log("HomePage.onShowImagesOnTimeline");
 
-            this.$scrollTo("#topicTimeline");
-        }
+      this.$scrollTo("#topicTimeline");
     }
-}
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-/* .home-page {
-    width: calc(100% - 5px);
-} */
-
-.row {
-	position: relative;
-    display: flex;
-    flex-direction: row;
-    overflow-y: hidden;
-    align-items: start;
-    padding-bottom: 45px;
-    max-height: 50vh;
-}
-
-.expanded {
-    max-height:unset;
-}
-
-.column {
-	display: flex;
-	flex-direction: column;
-}
-
-.one {
-	flex: 0 1 66%;
-}
-
-.two {
-	flex: 1 1 34%;
-}
-
-.divider {
-    width: 1px;
-    margin: 6px 0;
-    background: rgb(0, 0, 0);
-}
-
-.haze {
-    height: 45px;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    text-align: center;
-vertical-align: middle;
-line-height: 45px;
-}
-
-.block {
-    display: inline-block;
-}
-
 </style>
