@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"ABPMAB",
 			"Aranka",
 			"Elroy",
 			"Mainframe98",
@@ -156,6 +157,16 @@
 		"Location": {
 			"headerTitle": "Locatie"
 		},
+		"People": {
+			"sortMenuTitle": "Sorteren",
+			"sortMenuTooltip": "De sorteervolgorde wijzigen",
+			"sortMenuOptionBirth": "Op geboortedatum",
+			"sortMenuOptionDeath": "Op sterfdatum",
+			"sortMenuOptionName": "Op naam",
+			"sortMenuOptionFirst": "Op voornaam",
+			"sortMenuOptionLast": "Op achternaam",
+			"sortMenuOptionClear": "Sortering wissen"
+		},
 		"Teams": {
 			"intro": "Teams die aan deze wedstrijd, serie of toernooi deelnemen."
 		},
@@ -221,8 +232,19 @@
 		"TopicTimeline": {
 			"headerTitle": "Tijdlijn"
 		},
+		"Works": {
+			"sortMenuTitle": "Sorteren",
+			"sortMenuTooltip": "Items sorteren",
+			"sortMenuOptionTime": "Op tijd",
+			"sortMenuOptionAlpha": "Alfabetisch",
+			"sortMenuOptionDist": "Op afstand",
+			"sortMenuOptionClear": "Sortering wissen"
+		},
 		"Wikipedia": {
-			"headerTitle": "Onderwerp"
+			"headerTitle": "Onderwerp",
+			"languageMenu": {
+				"otherLanguagestext": "Andere talen"
+			}
 		}
 	},
 	"imageViewer": {
@@ -253,6 +275,9 @@
 			"copyright": "Auteursrecht",
 			"license": "Auteursrechtvergunning",
 			"photograph": "Fotograaf",
+			"image": "Afbeelding",
+			"photographer": "Fotograaf",
+			"addPhotographData": "Voeg informatie over de foto toe",
 			"digitalCopy": "Digitaal kopiëren",
 			"platformId": "Nummer",
 			"fileFormat": "Bestandsindeling",
@@ -267,7 +292,12 @@
 	"menus": {
 		"sortMenu": {
 			"title": "Onderwerpen rangschikken",
+			"tooltip": "Onderwerpen sorteren",
 			"optionTime": "Op tijd",
+			"optionStart": "Op starttijd",
+			"optionEnd": "Op eindtijd",
+			"optionTitle": "Op titel",
+			"optionCause": "Op oorzaak",
 			"optionAlpha": "Alfabetisch",
 			"optionRev": "Rangschikking omkeren"
 		},
@@ -284,11 +314,25 @@
 		}
 	},
 	"general": {
+		"cancel": "Annuleren",
+		"helpText": "Hulp",
 		"menus": {
-			"languageMenuTooltip": "Uw taal kiezen"
+			"languageMenuTitle": "Taal kiezen",
+			"languageMenuTooltip": "Uw taal kiezen",
+			"myLanguagesItem": "Mijn talen",
+			"languageMenuTranslate": "Vertaal dit artikel naar het Nederlands"
 		},
 		"languageMenu": {
 			"TranslateUI": "In uw taal vertalen"
+		},
+		"languages": {
+			"fi": "Fins",
+			"en": "Engels",
+			"sv": "Zweeds",
+			"es": "Spaans"
 		}
+	},
+	"Banner": {
+		"WLMButton": "Afbeelding uploaden"
 	}
 }
