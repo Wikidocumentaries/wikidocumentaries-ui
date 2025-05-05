@@ -17,10 +17,14 @@
               ref="viewer-image"
               v-on:load="onimageload"
               class="viewer-image"
-            >
+            />
             <div class="viewer-contents">
               <!-- <div class="viewer-contents" :class="showLinks ? 'show-links' : ''"> -->
-              <div v-if="index < items.length-1" @click="stepRight" class="step-right">
+              <div
+                v-if="index < items.length - 1"
+                @click="stepRight"
+                class="step-right"
+              >
                 <i class="wikiglyph wikiglyph-caret-right step-glyph"></i>
               </div>
               <div v-if="index > 0" @click="stepLeft" class="step-left">
@@ -36,8 +40,11 @@
                       :items="toolbarActionMenuItems"
                       @doMenuItemAction="onDoMenuItemAction"
                     >
-                    <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
+                      <div slot="menu-title">
+                        {{ $t("general.menus.actionMenuTitle") }}
+                      </div>
                     </ToolbarMenu>
+                    <PopUp ref="popup"></PopUp>
                     <HeaderLink
                       v-if="element.infoURL"
                       class="toolbar-item neg"
@@ -49,15 +56,25 @@
                       <a href="#" class="toolbar-item-a">
                         <i class="wikiglyph wikiglyph-cross"></i>
                       </a>
-                      <span class="tooltip">{{ $t('imageViewer.closeViewer') }}</span>
+                      <span class="tooltip">{{
+                        $t("imageViewer.closeViewer")
+                      }}</span>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="bottomshade">
                 <div class="titlebox white">
-                  <div v-for="title in element.title" :key="title.id" class="titlebox-title">{{ title }}</div>
-                  <div class="titlebox-subtitle white">{{ getCredits(element) }}</div>
+                  <div
+                    v-for="title in element.title"
+                    :key="title.id"
+                    class="titlebox-title"
+                  >
+                    {{ title }}
+                  </div>
+                  <div class="titlebox-subtitle white">
+                    {{ getCredits(element) }}
+                  </div>
                 </div>
               </div>
             </div>
@@ -67,16 +84,28 @@
         <div class="metadata-area">
           <div class="metadata-original">
             <div class="toolbar">
-              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.image') }}</h1>
+              <h1 class="header-title">
+                {{ $t("imageViewer.imageMetadata.image") }}
+              </h1>
             </div>
             <div class="columns">
               <div class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
+                  <i
+                    class="wikiglyph wikiglyph-stripe-summary metadata-glyph"
+                  ></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.caption') }}</div>
-                  <div v-for="title in element.title" :key="title.id" class="grid-body unedited">{{ title }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.caption") }}
+                  </div>
+                  <div
+                    v-for="title in element.title"
+                    :key="title.id"
+                    class="grid-body unedited"
+                  >
+                    {{ title }}
+                  </div>
                 </div>
               </div>
               <div class="grid-row">
@@ -84,15 +113,17 @@
                   <i class="wikiglyph wikiglyph-description metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.description') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.description") }}
+                  </div>
                   <div
-                    v-if="element.description && element.description.length>0"
-                    class="grid-body unedited" v-html="element.description[0]"
+                    v-if="element.description && element.description.length > 0"
+                    class="grid-body unedited"
+                    v-html="element.description[0]"
                   ></div>
-                  <div
-                    v-else
-                    class="grid-body action"
-                  >{{ $t('imageViewer.imageMetadata.addDescription') }}</div>
+                  <div v-else class="grid-body action">
+                    {{ $t("imageViewer.imageMetadata.addDescription") }}
+                  </div>
                 </div>
               </div>
               <div v-show="element.inscriptions" class="grid-row">
@@ -100,14 +131,18 @@
                   <i class="wikiglyph wikiglyph-signature metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.inscriptions') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.inscriptions") }}
+                  </div>
                   <div
                     class="grid-body unedited"
                     v-for="item in element.inscriptions"
                     :key="item.id"
                   >
                     <div class="line" v-for="block in item" :key="block.id">
-                      <div class="line-type" v-if="block.type">{{ block.type }}:</div>
+                      <div class="line-type" v-if="block.type">
+                        {{ block.type }}:
+                      </div>
                       <div class="line-content">{{ block.content }}</div>
                     </div>
                   </div>
@@ -118,15 +153,32 @@
                   <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.creator') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.creator") }}
+                  </div>
                   <template v-if="element.source == 'Finna'">
-                    <div class="compound" v-for="creator in element.creators" :key="creator.id">
-                      <Dataselect class="grid-select key" v-bind:term="creator.role"></Dataselect>
-                      <Dataselect class="grid-select value" v-bind:term="creator.name"></Dataselect>
+                    <div
+                      class="compound"
+                      v-for="creator in element.creators"
+                      :key="creator.id"
+                    >
+                      <Dataselect
+                        class="grid-select key"
+                        v-bind:term="creator.role"
+                      ></Dataselect>
+                      <Dataselect
+                        class="grid-select value"
+                        v-bind:term="creator.name"
+                      ></Dataselect>
                     </div>
                   </template>
                   <template v-else>
-                    <Dataselect class="grid-select" v-for="creator in element.creators" :key="creator.id" v-bind:term="creator"></Dataselect>
+                    <Dataselect
+                      class="grid-select"
+                      v-for="creator in element.creators"
+                      :key="creator.id"
+                      v-bind:term="creator"
+                    ></Dataselect>
                   </template>
                   <Dataselect
                     class="grid-select action"
@@ -136,10 +188,14 @@
               </div>
               <div class="grid-row" v-if="element.datecreated">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-production-date metadata-glyph"></i>
+                  <i
+                    class="wikiglyph wikiglyph-production-date metadata-glyph"
+                  ></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.dateCreated') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.dateCreated") }}
+                  </div>
                   <Dataselect
                     v-for="item in element.datecreated"
                     :key="item.id"
@@ -148,11 +204,15 @@
                   ></Dataselect>
                   <Dataselect
                     class="grid-select action"
-                    v-bind:title="$t('imageViewer.imageMetadata.addDateCreated')"
+                    v-bind:title="
+                      $t('imageViewer.imageMetadata.addDateCreated')
+                    "
                   ></Dataselect>
                   <Dataselect
                     class="grid-select action"
-                    v-bind:title="$t('imageViewer.imageMetadata.addDateDepicted')"
+                    v-bind:title="
+                      $t('imageViewer.imageMetadata.addDateDepicted')
+                    "
                   ></Dataselect>
                 </div>
               </div>
@@ -161,7 +221,9 @@
                   <i class="wikiglyph wikiglyph-image metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.format') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.format") }}
+                  </div>
                   <Dataselect
                     v-if="element.formats"
                     class="grid-select"
@@ -178,12 +240,16 @@
                   <i class="wikiglyph wikiglyph-measures metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.measurements') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.measurements") }}
+                  </div>
                   <div
                     class="grid-body unedited"
                     v-for="measurement in element.measurements"
                     :key="measurement.id"
-                  >{{ measurement }}</div>
+                  >
+                    {{ measurement }}
+                  </div>
                 </div>
               </div>
               <div v-if="element.genre" class="grid-row">
@@ -191,8 +257,14 @@
                   <i class="wikiglyph wikiglyph-genre metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.genre') }}</div>
-                  <Dataselect v-if="element.genre" class="grid-select" v-bind:term="element.genre"></Dataselect>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.genre") }}
+                  </div>
+                  <Dataselect
+                    v-if="element.genre"
+                    class="grid-select"
+                    v-bind:term="element.genre"
+                  ></Dataselect>
                   <Dataselect
                     class="grid-select action"
                     v-bind:title="$t('imageViewer.imageMetadata.addGenre')"
@@ -204,7 +276,9 @@
                   <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depicts') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.depicts") }}
+                  </div>
                   <Dataselect
                     v-for="subject in element.subjects"
                     class="grid-select"
@@ -222,7 +296,9 @@
                   <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.location') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.location") }}
+                  </div>
                   <Dataselect
                     v-for="place in element.places"
                     class="grid-select"
@@ -238,7 +314,8 @@
                     v-bind:title="$t('imageViewer.imageMetadata.addAddress')"
                   ></Dataselect>
                 </div>
-              </div><!-- 
+              </div>
+              <!-- 
               <div v-if="element.address" class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-map-pin metadata-glyph"></i>
@@ -254,10 +331,14 @@
               </div> -->
               <div v-if="element.actors" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-depicted-person metadata-glyph"></i>
+                  <i
+                    class="wikiglyph wikiglyph-depicted-person metadata-glyph"
+                  ></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.depictedPeople') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.depictedPeople") }}
+                  </div>
                   <Dataselect
                     v-for="actor in element.actors"
                     class="grid-select"
@@ -275,7 +356,9 @@
                   <i class="wikiglyph wikiglyph-event metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.event') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.event") }}
+                  </div>
                   <Dataselect
                     class="grid-select"
                     v-if="element.events"
@@ -292,8 +375,11 @@
                   <i class="wikiglyph wikiglyph-institution metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.institution') }}</div>
-                  <Dataselect v-for="institution in element.institutions"
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.institution") }}
+                  </div>
+                  <Dataselect
+                    v-for="institution in element.institutions"
                     :key="institution.id"
                     class="grid-select"
                     v-bind:term="institution"
@@ -305,7 +391,9 @@
                   <i class="wikiglyph wikiglyph-collection metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.collection') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.collection") }}
+                  </div>
                   <Dataselect
                     class="grid-select"
                     v-if="element.collection"
@@ -318,7 +406,9 @@
                   <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.inventoryNumber') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.inventoryNumber") }}
+                  </div>
                   <div class="data-text">{{ element.inventoryNumber }}</div>
                 </div>
               </div>
@@ -335,7 +425,7 @@
               </div>
               <div v-if="element.geoLocations.length > 0" class="grid-row">
                 <div class="metadata-map">
-                  {{ $t('imageViewer.imageMetadata.locationMap') }}
+                  {{ $t("imageViewer.imageMetadata.locationMap") }}
                   <div id="imagemap" class="map-component"></div>
                 </div>
               </div>
@@ -348,15 +438,21 @@
           </div-->
           <div class="metadata-copyright">
             <div class="toolbar">
-              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.copyright') }}</h1>
+              <h1 class="header-title">
+                {{ $t("imageViewer.imageMetadata.copyright") }}
+              </h1>
             </div>
             <div class="columns">
               <div v-if="element.license" class="grid-row">
                 <div class="grid-icons">
-                  <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
+                  <i
+                    class="wikiglyph wikiglyph-public-domain metadata-glyph"
+                  ></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.license') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.license") }}
+                  </div>
                   <div class="data-text">
                     <a :href="element.license_link">{{ element.license }}</a>
                   </div>
@@ -367,9 +463,13 @@
                   <i class="wikiglyph wikiglyph-attribution metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.attribution') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.attribution") }}
+                  </div>
                   <div class="data-text">
-                    <i v-for="title in element.title" :key="title.id">{{ title }}</i>
+                    <i v-for="title in element.title" :key="title.id">{{
+                      title
+                    }}</i>
                     {{ getCredits(element) }}
                   </div>
                 </div>
@@ -390,7 +490,9 @@
           </div>
           <div class="metadata-digital">
             <div class="toolbar">
-              <h1 class="header-title">{{ $t('imageViewer.imageMetadata.digitalCopy') }}</h1>
+              <h1 class="header-title">
+                {{ $t("imageViewer.imageMetadata.digitalCopy") }}
+              </h1>
             </div>
             <div class="columns">
               <div class="grid-row">
@@ -398,7 +500,9 @@
                   <i class="wikiglyph wikiglyph-browser metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.publishingPlatform') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.publishingPlatform") }}
+                  </div>
                   <div class="data-text">
                     <a href="#">{{ element.source }}</a>
                   </div>
@@ -409,7 +513,9 @@
                   <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
                 </div>
                 <div v-if="element.id" class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.platformId') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.platformId") }}
+                  </div>
                   <div class="data-text break">{{ element.id }}</div>
                 </div>
               </div>
@@ -418,9 +524,13 @@
                   <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageInfoPage') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.imageInfoPage") }}
+                  </div>
                   <div class="data-text break">
-                    <a :href="element.infoURL" target="_blank">{{ element.infoURL }}</a>
+                    <a :href="element.infoURL" target="_blank">{{
+                      element.infoURL
+                    }}</a>
                   </div>
                 </div>
               </div>
@@ -429,8 +539,12 @@
                   <i class="wikiglyph wikiglyph-imagesize metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.imageDimensions') }}</div>
-                  <div class="data-text">{{ dimension.x }} X {{ dimension.y }} px</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.imageDimensions") }}
+                  </div>
+                  <div class="data-text">
+                    {{ dimension.x }} X {{ dimension.y }} px
+                  </div>
                 </div>
               </div>
               <div v-if="element.uploader" class="grid-row">
@@ -438,11 +552,13 @@
                   <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
                 </div>
                 <div class="grid-text">
-                  <div class="grid-item">{{ $t('imageViewer.imageMetadata.uploader') }}</div>
+                  <div class="grid-item">
+                    {{ $t("imageViewer.imageMetadata.uploader") }}
+                  </div>
                   <div class="data-text">{{ element.uploader }}</div>
                 </div>
               </div>
-<!--               <div class="grid-row">
+              <!--               <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-filesize metadata-glyph"></i>
                 </div>
@@ -451,7 +567,7 @@
                   <div class="data-text">2,1 MB</div>
                 </div>
               </div> -->
-<!--               <div class="grid-row">
+              <!--               <div class="grid-row">
                 <div class="grid-icons">
                   <i class="wikiglyph wikiglyph-filetype metadata-glyph"></i>
                 </div>
@@ -472,9 +588,10 @@
 import HeaderLink from "@/components/HeaderLink";
 import Dataselect from "@/components/Dataselect";
 import ToolbarMenu from "@/components/menu/ToolbarMenu";
+import PopUp from "@/components/upload/Popup";
 
 const MENU_ACTIONS = {
-  SELECT_HEADER: 0
+  SELECT_HEADER: 0,
   // GEOLOCATE: 1,
   // ADD_TO_COLLECTION: 0,
 };
@@ -493,24 +610,30 @@ export default {
       topicVectorLayer: null,
       // showLinks: true,
       toolbarActionMenuItems: [
-        {
+        /*         {
           id: MENU_ACTIONS.SELECT_HEADER,
           text: "topic_page.TopicImages.imagesActionMenu.selectFeatured"
         },
         {
           id: MENU_ACTIONS.GEOLOCATE,
           text: "topic_page.TopicImages.imagesActionMenu.doGeolocatingText"
-        }
-      ]
+        }, */
+        {
+          id: MENU_ACTIONS.UPLOAD,
+          text: "topic_page.TopicImages.imagesActionMenu.upload",
+        },
+      ],
+      clickPopUp: false,
     };
   },
   components: {
     HeaderLink,
     Dataselect,
     ToolbarMenu,
+    PopUp,
   },
   props: {
-    shouldShowDialog: Boolean
+    shouldShowDialog: Boolean,
   },
   mounted() {
     // this.$el.addEventListener("mousemove", () => {
@@ -520,7 +643,7 @@ export default {
     // });
   },
   methods: {
-    handleCancel: function() {
+    handleCancel: function () {
       this.$emit("close");
     },
     show(items, index) {
@@ -529,7 +652,7 @@ export default {
       this.element = items[index];
       // console.log("Element: ", this.element);
       this.showModal = true;
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         this.createMap();
       });
     },
@@ -545,7 +668,7 @@ export default {
       this.element = this.items[this.index];
     },
     onimageload() {
-      this.$nextTick(function() {
+      this.$nextTick(function () {
         this.dimension.x = this.$refs["viewer-image"].naturalWidth;
         this.dimension.y = this.$refs["viewer-image"].naturalHeight;
       });
@@ -581,8 +704,14 @@ export default {
         // case MENU_ACTIONS.GEOLOCATE:
         //     ;
         //     break;
-        case MENU_ACTIONS.SELECT_HEADER:
+        // case MENU_ACTIONS.SELECT_HEADER:
+        case MENU_ACTIONS.UPLOAD:
+          this.showPopUp(this.element);
+          break;
       }
+    },
+    showPopUp(element) {
+      this.$refs.popup.show(element);
     },
     createMap() {
       var ol = this.$ol;
@@ -592,12 +721,12 @@ export default {
       if (this.getFirstGeoLocationAsPoint() != null) {
         view = new ol.View({
           center: ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint()),
-          zoom: 14
+          zoom: 14,
         });
       } else {
         view = new ol.View({
           center: ol.proj.fromLonLat([0, 0]),
-          zoom: 1
+          zoom: 1,
         });
       }
 
@@ -605,10 +734,10 @@ export default {
         target: "imagemap",
         layers: [
           new ol.layer.Tile({
-            source: new this.$ol.source.OSM()
-          })
+            source: new this.$ol.source.OSM(),
+          }),
         ],
-        view: view
+        view: view,
       });
 
       this.setTopicOnMap();
@@ -621,7 +750,7 @@ export default {
         this.topicFeature = new ol.Feature({
           geometry: new ol.geom.Point(
             ol.proj.fromLonLat(this.getFirstGeoLocationAsPoint())
-          )
+          ),
         });
         var iconStyle = new ol.style.Style({
           image: new ol.style.Icon({
@@ -629,13 +758,13 @@ export default {
             anchorXUnits: "fraction",
             anchorYUnits: "fraction",
             src: "/static/wikifont/svgs/mod/uniE851 - mapPin - red.svg",
-            scale: 1.4
-          })
+            scale: 1.4,
+          }),
         });
         this.topicFeature.setStyle(iconStyle);
 
         var vectorSource = new ol.source.Vector({
-          features: [this.topicFeature]
+          features: [this.topicFeature],
         });
 
         if (this.topicVectorLayer != null) {
@@ -645,7 +774,7 @@ export default {
 
         this.topicVectorLayer = new ol.layer.Vector({
           source: vectorSource,
-          zIndex: 1000
+          zIndex: 1000,
         });
 
         this.map.addLayer(this.topicVectorLayer);
@@ -719,12 +848,7 @@ export default {
             var pointParts = partsWithoutParenthesis[i].split(",");
             var polygonPart = [];
             for (var j = 0; j < pointParts.length; j++) {
-              polygonPart.push(
-                pointParts[j]
-                  .trim()
-                  .split(" ")
-                  .map(Number)
-              );
+              polygonPart.push(pointParts[j].trim().split(" ").map(Number));
             }
             geoLocation.push(polygonPart);
           }
@@ -739,7 +863,7 @@ export default {
             [pointParts[0], pointParts[2]],
             [pointParts[1], pointParts[2]],
             [pointParts[1], pointParts[3]],
-            [pointParts[0], pointParts[3]]
+            [pointParts[0], pointParts[3]],
           ];
           //console.log(envelopePolygon);
           geoLocation = [envelopePolygon];
@@ -777,14 +901,14 @@ export default {
     },
     getCentroid(coords) {
       var center = coords.reduce(
-        function(x, y) {
+        function (x, y) {
           return [x[0] + y[0] / coords.length, x[1] + y[1] / coords.length];
         },
         [0, 0]
       );
       return center;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -811,10 +935,6 @@ export default {
   text-transform: uppercase;
 }
 
-.break {
-  word-break: break-all;
-}
-
 /*
 .main-toolbar {
   display: -ms-flexbox;
@@ -835,7 +955,7 @@ export default {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.25) 100%
   );
-  padding: 0 20px;
+  padding: 0 0 0 20px;
   box-sizing: border-box;
 }
 
