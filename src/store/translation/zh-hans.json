@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			")8",
+			"22593",
 			"500000000006城",
 			"A Chinese Wikipedian",
 			"A Retired User",
@@ -51,6 +52,7 @@
 		"titleContent": "添加您的评论",
 		"joinContent": "如果您有照片、媒体、文档、地图或数据集合希望在这里看到，让我们一起看看它是否已经可以通过现有渠道之一进行连接，或者我们是否可以创建新的连接方法。我们也期待安排出与与感兴趣的社区一同记录历史知识的研讨会。",
 		"titleDevelop": "创建工具和群众外包任务。",
+		"joinDevelop": "我们希望与各组织和工具开发者合作，不断添加更多工具，并创造新的众包任务。让我们携手打造下一个精彩的众包应用！",
 		"titleContact": "取得联系！",
 		"facebook": "脸书群组",
 		"wiki": "Wikidocumentaries wiki",
@@ -79,12 +81,15 @@
 		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "选择历史底图",
+			"chooseMapHelpNote": "提示：按住 Ctrl 键并单击可以选择多张地图",
 			"yearAbbreviation": "年"
 		},
 		"Collection": {
-			"headerTitle": "收藏里的作品"
+			"headerTitle": "收藏里的作品",
+			"intro": "这些作品由此人或机构收藏。您可以选择以列表形式显示，可以显示不带图片的作品。您可以按日期或名称排序。注意只有拥有这些信息的人员才会显示。"
 		},
 		"Cups": {
+			"headerTitle": "游戏、系列赛和锦标赛",
 			"intro": "该俱乐部参加了以下比赛、系列赛和锦标赛"
 		},
 		"CV": {
