@@ -98,6 +98,7 @@
 		},
 		"Depicted": {
 			"headerTitle": "描述于",
+			"intro": "这些作品描绘了此主题。按不同标准对作品进行排序，以列表显示查看没有图像的作品。",
 			"sortMenu": {
 				"title": "排序作品",
 				"tooltip": "排序作品",
