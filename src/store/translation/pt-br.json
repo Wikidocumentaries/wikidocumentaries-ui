@@ -1,14 +1,58 @@
 {
 	"@metadata": {
 		"authors": [
+			"Chicocvenancio",
+			"Duke of Wikipädia",
 			"Eduardo Addad de Oliveira",
+			"Eduardoaddad",
 			"Fitoschido",
-			"Abijeet Patro"
+			"Jhonnatanricardo",
+			"Re demz"
 		]
 	},
 	"LandingPage": {
 		"search": "Pesquisar",
-		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico"
+		"searchInputPlaceHolder": "Encontre um tópico ou crie um novo tópico",
+		"searchInputSearchOnly": "Encontre um tópico",
+		"showMore": "Mostrar mais itens",
+		"createNew": "Criar um novo item",
+		"intro": "Wikidocumentários é uma wiki para a pequena história - um lugar para juntar traços de história e transformá-los em histórias. Comece procurando por um tópico de interesse!",
+		"titleDescription": "O que são Wikidocumentários?",
+		"description": "Wikidocumentários é um espaço de criação para historiadores cidadãos. Ele combina informações sobre tópicos - pessoas, lugares, edifícios, eventos e muito mais. Você pode navegar entre os tópicos seguindo qualquer conexão registrada, como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conectados. Nos Wikidocumentários, será possível corrigir as informações existentes e adicionar novos tópicos, trazer suas próprias imagens e lembranças e usar todo o material para seus próprios propósitos.",
+		"titleStatus": "Status",
+		"status": "O site está em fase de demonstração. Muitos recursos importantes ainda não estão disponíveis e o site pode não ter o desempenho esperado.",
+		"moreBelow": "Leia mais abaixo",
+		"more": "Leia mais",
+		"moreLink": "Leia mais em",
+		"titleTopics": "Tópicos",
+		"statusTopics": "Os tópicos são lidos no Wikidata. Novos tópicos podem ser criados mais tarde em Wikidocumentários, se o conteúdo estiver fora do escopo do Wikidata. Ainda será possível descrever o tópico com as ricas opções do Wikidata. Os artigos atuais são da Wikipedia, enquanto artigos podem ser criados localmente para tópicos que existem apenas em Wikidocumentários.",
+		"titleMedia": "Mídia",
+		"statusMedia": "A mídia é lida em um número crescente de repositórios de mídia que atendem a arquivos de mídia licenciados abertamente. Estamos trabalhando para encontrar imagens com mais precisão e exibir mais e melhores metadados de cada uma das fontes. Novas fontes de mídia são bem-vindas!",
+		"titleTools": "Ferramentas",
+		"statusTools": "Wikidocumentários tem tarefas e ferramentas para trabalhar com o conteúdo. Os artigos já podem ser traduzidos entre idiomas com a ferramenta de tradução de conteúdo. Estamos preparando palavras-chave com o Wikidata e uma ferramenta de marcação geográfica para localizações de imagens. Novas ferramentas divertidas e úteis podem ser criadas ou integradas.",
+		"titleLanguages": "Idiomas",
+		"statusLanguages": "Wikidocumentários podem ser navegados em qualquer idioma disponível no Wikidata. Esta é uma ótima oportunidade para pequenos idiomas. As traduções são feitas no TranslateWiki.",
+		"titleTechnology": "Tecnologia",
+		"statusTechnology": "Wikidocumentários lê os dados principais do Wikidata. Além disso, os Wikidocumentários terão seu próprio Wikibase para tópicos que estão fora do escopo do Wikidata. Os Wikidata e os Wikidocumentários devem ser sincronizados como Wikibases federados. Em segundo lugar, os metadados da imagem são vinculados a itens do Wikidata, e esses dados podem ser sincronizados com os dados estruturados no Wikimedia Commons. O site é construído com o Vue.js e está hospedado no Serviços de nuvem da Wikimedia.",
+		"titleCreators": "Criadores",
+		"titleTeam": "Equipe",
+		"titleThanks": "Com um agradecimento especial a",
+		"titlePartners": "Parceiros",
+		"titleFunding": "Com o apoio gentil de",
+		"titleBy": "Projeto por",
+		"getInvolved": "Envolver-se!",
+		"titleTranslate": "Traduzir",
+		"joinTranslate": "Venha e traga sua linguagem para os Wikidocumentaries. Junte-se à equipe de tradução de voluntários e veja o patrimônio cultural conectado ganhar vida em seu idioma.",
+		"titleContent": "Adicione seu conteúdo",
+		"joinContent": "Se você tem uma foto, mídia, documento, mapa ou coleção de dados que gostaria de ver aqui, vamos dar uma olhada juntos se já pudermos nos conectar através de um dos canais existentes ou se pudermos criar novos métodos de conexão. Também estamos ansiosos para organizar workshops para registrar conhecimento histórico com comunidades de interesse.",
+		"titleDevelop": "Crie ferramentas e tarefas de crowdsourcing.",
+		"joinDevelop": "Gostamos de adicionar mais ferramentas e criar novas tarefas de crowdsourcing em colaboração com organizações e construtores de ferramentas. Vamos unir forças para o próximo aplicativo legal de crowdsourcing!",
+		"titleContact": "Entre em contato!",
+		"facebook": "Grupo do Facebook",
+		"wiki": "Wikidocumentários wiki",
+		"blog": "Blog",
+		"email": "E-mail",
+		"github": "Repositório no Github"
 	},
 	"MainPage": {
 		"topicPageName": "Página do tópico",
@@ -18,13 +62,80 @@
 		"returnToHomeMessage": "Voltar para a página de destino"
 	},
 	"WaitPage": {
-		"waitMessage": "Um momento, por favor... Recuperando dados da Wikipedia, Wikidata, Wikimedia Commons, Mapa Warper, Finna, Flickr ..."
+		"waitMessage": "Um momento, por favor... Recuperando dados da Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliações",
+			"intro": "Organizações com as quais essa pessoa ou organização tem uma afiliação."
+		},
+		"Awards": {
+			"headerTitle": "Prémios",
+			"intro": "Nomeações e prêmios do tópico desta página."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Escolha o(s) mapa(s) de base histórico",
 			"chooseMapHelpNote": "Dica: ctrl+ clique permite selecionar muitos mapas",
 			"yearAbbreviation": "a."
+		},
+		"Collection": {
+			"headerTitle": "Obras na coleção",
+			"intro": "Estes trabalhos estão na coleção desta pessoa ou instituição. Você pode optar por exibi-los como lista, o que mostra também funciona sem imagens. Eles podem ser classificados por datas ou nomes. Observe que apenas aqueles que possuem essas informações serão mostrados."
+		},
+		"Cups": {
+			"headerTitle": "Jogos, séries e torneios",
+			"intro": "Este clube jogou nos seguintes jogos, séries e torneios"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Estes são eventos profissionais da pessoa do tópico."
+		},
+		"Depicted": {
+			"headerTitle": "Retratado em",
+			"intro": "Este tópico é descrito nesses trabalhos. Classifique os trabalhos por critérios diferentes, exiba como lista para ver os sem imagem.",
+			"sortMenu": {
+				"title": "Ordenar trabalhos",
+				"tooltip": "Ordenar trabalhos",
+				"optionTime": "Por tempo",
+				"optionAlpha": "Alfabética",
+				"optionClear": "Tipo claro"
+			},
+			"facetMenu": {
+				"title": "Trabalho faceto por",
+				"tooltip": "Faceta funciona por diferentes critérios",
+				"optionType": "Tipo",
+				"optionColl": "Criador"
+			},
+			"displayMenu": {
+				"title": "Mostrar como",
+				"tooltip": "Escolha a exibição",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todos"
+		},
+		"Depicts": {
+			"headerTitle": "Descreve",
+			"intro": "Este trabalho descreve esses tópicos. Você pode classificá-los por hora e nome. Observe que para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
+		},
+		"Events": {
+			"headerTitle": "Eventos",
+			"displayMenu": {
+				"menuTitle": "Opções de exibição",
+				"menuTooltip": "Opções de exibição",
+				"optionShowTimeline": "Mostrar eventos em uma linha do tempo",
+				"optionShowList": "Mostrar eventos como uma lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opções",
+				"menuTooltip": "Selecione fatos para exibir",
+				"optionWorks": "Mostrar trabalhos",
+				"optionRelatedPeople": "Mostrar eventos de pessoas relacionadas",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurar"
+				},
+				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
+			}
 		},
 		"Header": {
 			"titleEditText": "Editar o título",
@@ -32,9 +143,112 @@
 			"subtitleEditText": "Editar a descrição",
 			"subtitleApproveText": "Aprovar esta descrição"
 		},
+		"Heritage": {
+			"headerTitle": "Elemetos de patrimônio"
+		},
+		"Locations": {
+			"headerTitle": "Neste local",
+			"intro": "Aqui você vê tudo o que está localizado no tópico desta página. Exibir como lista para ver todos os locais que foram armazenados.",
+			"sortMenu": {
+				"title": "Ordenar localizações",
+				"tooltip": "Ordenar localizações",
+				"optionTime": "Por tempo",
+				"optionAlpha": "Alfabeticamente",
+				"optionDist": "Pela distância",
+				"optionClear": "Tipo claro"
+			},
+			"facetMenu": {
+				"title": "Localizações de facetas por",
+				"tooltip": "Localizações de facetas por diferentes critérios",
+				"optionType": "Tipo",
+				"optionColl": "Criador",
+				"optionCity": "Localização"
+			},
+			"displayMenu": {
+				"title": "Mostrar como",
+				"tooltip": "Escolha a exibição",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todos"
+		},
+		"Map": {
+			"headerTitle": "Localização no mapa"
+		},
+		"Parts": {
+			"headerTitle": "Partes",
+			"intro": "Essas partes pertencem a este tópico. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem uma imagem, você deve visualizar os tópicos como uma lista."
+		},
+		"Partof": {
+			"headerTitle": "Parte de",
+			"intro": "Este tópico faz parte desses outros tópicos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve exibir os tópicos como uma lista."
+		},
+		"Similar": {
+			"headerTitle": "Tópicos similares",
+			"intro": "Encontre tópicos que possuem algumas características-chave comuns com este tópico."
+		},
+		"Effects": {
+			"headerTitle": "Efeitos",
+			"intro": "Estes são os efeitos do tópico."
+		},
+		"Familytree": {
+			"headerTitle": "Árvore genealógica"
+		},
+		"Instances": {
+			"headerTitle": "Instâncias deste tópico",
+			"intro": "Ver instâncias deste tópico. Visualize como lista para ver também itens sem uma imagem"
+		},
+		"Links": {
+			"headerTitle": "Links deste artigo"
+		},
+		"Location": {
+			"headerTitle": "Localização",
+			"intro": "Este tópico está dentro ou no contexto desses tópicos."
+		},
+		"Names": {
+			"headerTitle": "Nome",
+			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
+		},
+		"People": {
+			"headerTitle": "Pessoas relacionadas ao tópico",
+			"intro": "Essas pessoas estão associadas ao tópico desta página. Você pode optar por exibi-las como lista, o que também mostra pessoas sem imagens. Eles podem ser classificados por datas ou nomes. Observe que somente aqueles que tiverem essa informação serão mostrados.",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Alterar a ordem de classificação",
+			"sortMenuOptionBirth": "Por data de nascimento",
+			"sortMenuOptionDeath": "Por data de morte",
+			"sortMenuOptionName": "Por nome",
+			"sortMenuOptionFirst": "Pelo primeiro nome",
+			"sortMenuOptionLast": "Pelo sobrenome",
+			"sortMenuOptionClear": "Tipo claro",
+			"facetMenuTitle": "Faceta por",
+			"facetMenuTooltip": "Faceta pessoas por diferentes aspectos",
+			"facetMenuOptionProfession": "Profissão",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Gênero"
+		},
+		"Seasons": {
+			"headerTitle": "Temporadas",
+			"intro": "Veja as temporadas desta atividade."
+		},
+		"Subclasses": {
+			"headerTitle": "Subclasses deste tópico",
+			"intro": "Veja subclasses deste tópico. Veja como lista para ver também itens sem imagem."
+		},
+		"Teams": {
+			"headerTitle": "Equipes participantes",
+			"intro": "Equipes participantes deste jogo, série ou torneio."
+		},
+		"Things": {
+			"headerTitle": "Tópicos da lista de foco",
+			"intro": "Estes tópicos estão na lista de foco deste projeto Wiki."
+		},
+		"Twins": {
+			"headerTitle": "Cidades gêmeas",
+			"intro": "Cidades gêmeas, cidades irmãs, municípios geminados e outras localidades que tenham um acordo de parceria ou cooperação, reconhecido legal ou informalmente por seus governos. Você pode classificá-los por hora e nome. Para ver todos os tópicos, incluindo aqueles sem imagem, você deve visualizá-los como uma lista."
+		},
 		"TopicImages": {
 			"headerTitle": "Imagens dos arquivos",
-			"intro": "Essas imagens são coletadas de várias fontes e nem sempre representam o tópico com precisão. Você pode favoritar uma imagem ou removê-la da página, se ela não pertencer.",
+			"intro": "Essas imagens são coletadas de várias fontes e nem sempre representam o tópico com precisão. Você pode ver a imagem original e pode colocar a imagem em um mapa se tiver um pino de localização.",
 			"actionsMenu": {
 				"menuTitle": "Exibir ou organizar imagens",
 				"tooltip": "Exibir ou organizar imagens",
@@ -96,7 +310,9 @@
 					"copyvio": "Viola os direitos autorais",
 					"explain": "Deixe uma nota para explicar"
 				}
-			}
+			},
+			"imagesViewExternal": "Visualizar a imagem original",
+			"imagesViewOnMap": "Ver imagem num mapa"
 		},
 		"TopicMap": {
 			"headerTitle": "Tópico no mapa",
@@ -105,7 +321,10 @@
 			"hideImagesMenuText": "Ocultar imagens",
 			"chooseTimelineMapsMenuText": "Escolha os mapas da linha do tempo...",
 			"showNearbyPlacesMenuText": "Mostrar locais próximos",
-			"hideNearbyPlacesMenuText": "Ocultar lugares próximos"
+			"hideNearbyPlacesMenuText": "Ocultar lugares próximos",
+			"extLink": {
+				"menuTooltip": "Ver ou editar no OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Recortes de jornais",
@@ -116,6 +335,27 @@
 			"headerTitle": "Linha do tempo",
 			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha do tempo",
 			"centuryText": "C"
+		},
+		"Works": {
+			"headerTitle": "Trabalho",
+			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Ordenar itens",
+			"sortMenuOptionTime": "Por tempo",
+			"sortMenuOptionAlpha": "Alfabeticamente",
+			"sortMenuOptionDist": "Pela distância",
+			"sortMenuOptionClear": "Tipo claro",
+			"facetMenuTitle": "Faceta por",
+			"facetMenuTooltip": "Faceta funciona por diferentes critérios",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionColl": "Coleção",
+			"facetMenuOptionCity": "Localização",
+			"displayMenuTitle": "Mostrar como",
+			"displayMenuTooltip": "Escolha a exibição",
+			"displayMenuOptionGallery": "Galeria",
+			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Mapa",
+			"showAll": "Todos"
 		},
 		"Wikidata": {
 			"headerTitle": "Fatos",
@@ -141,110 +381,96 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Leia o artigo em outro idioma",
-				"translateArticleText": "Traduzir este artigo para o seu idioma",
+				"translateArticleText": "Traduzir este artigo para seu idioma",
 				"otherLanguagestext": "Outros idiomas"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Pessoas relacionadas ao tópico",
-			"menuTitle": "Mostrar",
-			"showBorn": "Nascido aqui",
-			"showDied": "Morreu aqui",
-			"showBuried": "Enterrado aqui",
-			"showRelated": "Relacionado de outra forma",
-			"showAll": "Todos"
-		},
-		"Locations": {
-			"headerTitle": "Localizações",
-			"intro": "Aqui você vê tudo o que está localizado no tópico desta página. Exibir como lista para ver todos os locais que foram armazenados.",
-			"sortMenu": {
-				"title": "Ordenar localizações",
-				"tooltip": "Ordenar localizações",
-				"optionTime": "Por tempo",
-				"optionAlpha": "Alfabeticamente",
-				"optionDist": "Pela distância",
-				"optionRev": "Ordenação reversa",
-				"optionClear": "Tipo claro"
-			},
-			"facetMenu": {
-				"title": "Localizações de facetas por",
-				"tooltip": "Localizações de facetas por diferentes critérios",
-				"optionType": "Tipo",
-				"optionColl": "Criador",
-				"optionCity": "Localização"
-			},
-			"displayMenu": {
-				"title": "Mostrar como",
-				"tooltip": "Escolha a exibição",
-				"optionGallery": "Galeria",
-				"optionList": "Lista"
-			},
-			"showAll": "Todos"
-		},
-		"Depicted": {
-			"headerTitle": "Retratado em",
-			"intro": "Este tópico é descrito nesses trabalhos. Classifique os trabalhos por critérios diferentes, exiba como lista para ver os sem imagem.",
-			"sortMenu": {
-				"title": "Ordenar trabalhos",
-				"tooltip": "Ordenar trabalhos",
-				"optionTime": "Por tempo",
-				"optionAlpha": "Alfabética",
-				"optionRev": "Ordenação reversa",
-				"optionClear": "Tipo claro"
-			},
-			"facetMenu": {
-				"title": "Trabalho faceto por",
-				"tooltip": "Faceta funciona por diferentes critérios",
-				"optionType": "Tipo",
-				"optionColl": "Criador"
-			},
-			"displayMenu": {
-				"title": "Mostrar como",
-				"tooltip": "Escolha a exibição",
-				"optionGallery": "Galeria",
-				"optionList": "Lista"
-			},
-			"showAll": "Todos"
-		},
-		"Works": {
-			"headerTitle": "Trabalho",
-			"intro": "São trabalhos da pessoa, coletivo ou organização, que é o tópico desta página. Você pode entrar em uma página coletando todas as informações sobre o trabalho clicando nele. Só funciona com imagens são mostradas. Exibir como lista para ver todos os trabalhos relacionados que foram armazenados.",
-			"sortMenuTitle": "Ordenar",
-			"sortMenuTooltip": "Ordenar itens",
-			"sortMenuOptionTime": "Por tempo",
-			"sortMenuOptionAlpha": "Alfabeticamente",
-			"sortMenuOptionDist": "Pela distância",
-			"sortMenuOptionRev": "Ordenação reversa",
-			"sortMenuOptionClear": "Tipo claro",
-			"facetMenuTitle": "Faceta por",
-			"facetMenuTooltip": "Faceta funciona por diferentes critérios",
-			"facetMenuOptionType": "Tipo",
-			"facetMenuOptionColl": "Coleção",
-			"facetMenuOptionCity": "Localização",
-			"displayMenuTitle": "Mostrar como",
-			"displayMenuTooltip": "Escolha a exibição",
-			"displayMenuOptionGallery": "Galeria",
-			"displayMenuOptionList": "Lista",
-			"showAll": "Todos"
-		},
-		"People": {
-			"headerTitle": "Pessoas relacionadas ao tópico",
-			"intro": "Estas são pessoas relacionadas ao tópico desta página. Você pode inserir uma página coletando todas as informações sobre a pessoa clicando nela. Você pode exibir as pessoas também como uma lista.",
-			"sortMenuTitle": "Ordenar",
-			"sortMenuTooltip": "Alterar a ordem de classificação",
-			"sortMenuOptionBirth": "Por data de nascimento",
-			"sortMenuOptionDeath": "Por data de morte",
-			"sortMenuOptionName": "Por nome",
-			"sortMenuOptionFirst": "Pelo primeiro nome",
-			"sortMenuOptionLast": "Pelo sobrenome",
-			"sortMenuOptionRev": "Ordem de classificação inversa",
-			"sortMenuOptionClear": "Tipo claro",
-			"facetMenuTitle": "Faceta por",
-			"facetMenuTooltip": "Faceta pessoas por diferentes aspectos",
-			"facetMenuOptionProfession": "Profissão",
-			"facetMenuOptionCountry": "País",
-			"facetMenuOptionCity": "Gênero"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Legenda",
+			"addCaption": "Adicionar legenda",
+			"description": "Descrição",
+			"addDescription": "Adicionar descrição",
+			"creator": "Criador",
+			"creatorUnknown": "Desconhecido",
+			"addCreator": "Adicionar criador",
+			"removeCreator": "Remover criador",
+			"dateDepicted": "Data retratada",
+			"addDateDepicted": "Adicionar data representada",
+			"removeDateDepicted": "Remover a data representada",
+			"dateCreated": "Data de criação",
+			"addDateCreated": "Adicionar data de criação",
+			"removeDateCreated": "Remover data de criação",
+			"publisher": "Editor",
+			"addPublisher": "Adicionar editor",
+			"removePublisher": "Remover editor",
+			"format": "Formato",
+			"addFormat": "Adicionar formato",
+			"removeFormat": "Remover formato",
+			"technique": "Técnica",
+			"addTechnique": "Adicionar técnica",
+			"removeTechnique": "Remover técnica",
+			"depicted": "Imagem retrata",
+			"genre": "Gênero",
+			"addGenre": "Adicionar gênero",
+			"removeGenre": "Remover gênero",
+			"depicts": "Imagem retrata",
+			"addTopic": "Adicionar tópico",
+			"removeTopic": "Remover o tópico",
+			"location": "Localização",
+			"locationMap": "Localização no mapa",
+			"addLocation": "Adicionar local",
+			"removeLocation": "Remover localização",
+			"address": "Rua",
+			"addAddress": "Adicione o endereço da rua",
+			"removeAddress": "Remover endereço",
+			"depictedPeople": "Pessoas retratadas",
+			"addPerson": "Adicionar pessoa",
+			"removePerson": "Remover pessoa",
+			"event": "Evento",
+			"addEvent": "Adicionar evento",
+			"removeEvent": "Remover evento",
+			"institution": "Instituição",
+			"collection": "Coleção",
+			"addCollection": "Adicionar coleção",
+			"inventoryNumber": "Número de inventário",
+			"inscriptions": "Inscrições",
+			"measurements": "Medidas",
+			"copyright": "Direitos autorais",
+			"license": "Licença de direitos autorais",
+			"work": "Trabalho representado na imagem",
+			"photograph": "Fotografia",
+			"image": "Imagem",
+			"photographer": "Fotógrafo",
+			"addPhotographData": "Adicionar informações sobre a fotografia",
+			"copyrightNotePD": "A imagem é licenciada com $1, mas com base nos metadados que a imagem está em domínio público.",
+			"copyrightNoteSame": "A mesma imagem é licenciada mais abertamente com $1, portanto, também se aplica a essa imagem.",
+			"creditline": "Linha de crédito",
+			"attribution": "Atribuição",
+			"digitalCopy": "Copia digital",
+			"publishingPlatform": "Plataforma de publicação",
+			"platformId": "ID",
+			"provider": "Provedor de conteúdos",
+			"imageInfoPage": "Página de informações da imagem",
+			"imageDimensions": "Dimensões da imagem",
+			"fileSize": "Tamanho do arquivo",
+			"fileFormat": "Formato de arquivo",
+			"remove": "Remover",
+			"moveTo": "Mover para outro campo",
+			"addData": "Adicionar dados",
+			"uploader": "Carregador",
+			"rotate": "Girar"
+		},
+		"imageActions": {
+			"rotateImage": "Rodar imagem",
+			"clockwise": "sentido horário",
+			"counterclockwise": "sentido anti-horário",
+			"flip": "Virar",
+			"horizontal": "horizontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Fechar visualizador"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -270,16 +496,55 @@
 			"transparencyLabel": "Transparência do mapa base histórico:"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "Ordenar tópicos",
+			"tooltip": "Ordenar tópicos",
+			"optionTime": "Por tempo",
+			"optionStart": "Por hora de início",
+			"optionEnd": "Por hora de término",
+			"optionTitle": "Por título",
+			"optionCause": "Por causa",
+			"optionPartof": "Por item, isso faz parte de",
+			"optionSuperclass": "Por classe, esta é uma subclasse de",
+			"optionAlpha": "Alfabeticamente",
+			"optionTitleAlpha": "Por título em ordem alfabética",
+			"optionCreatorAlpha": "Por criador em ordem alfabética",
+			"optionDist": "Pela distância",
+			"optionRev": "Ordenação reversa",
+			"optionClear": "Tipo claro"
+		},
+		"facetMenu": {
+			"title": "Faceta por",
+			"tooltip": "Tópicos de faceta por diferentes critérios",
+			"optionType": "Tipo",
+			"optionColl": "Criador",
+			"optionCity": "Localização"
+		},
+		"displayMenu": {
+			"title": "Mostrar como",
+			"tooltip": "Escolha a exibição",
+			"optionGallery": "Galeria",
+			"optionList": "Lista"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentários",
 		"ok": "OK",
 		"cancel": "Cancelar",
 		"helpText": "Ajuda",
+		"expand": "Expandir essa seção",
+		"collapse": "Recolher esta seção",
 		"menus": {
 			"actionMenuTitle": "Ações",
 			"actionMenuTooltip": "Ações",
 			"languageMenuTitle": "Escolher idioma",
+			"languageMenuTooltip": "Escolha seu idioma",
 			"myLanguagesItem": "Meus idiomas",
-			"languageMenuTranslate": "Traduzir este artigo"
+			"languageMenuTranslate": "Traduzir este artigo para Português brasileiro"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduzir para o seu idioma"
 		},
 		"languages": {
 			"fi": "Finlandês",
@@ -287,5 +552,10 @@
 			"sv": "Sueco",
 			"es": "Espanhol"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografe este patrimônio cultural e participe do concurso de fotografia $2!",
+		"WLMButton": "Enviar imagem"
 	}
 }
