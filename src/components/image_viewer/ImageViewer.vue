@@ -12,7 +12,31 @@
         </div>
         <div class="contentarea">
           <div class="image-area">
+            <video
+              v-if="['webm', 'ogv', 'mpg'].includes(element.imageURL.split('.').at(-1))"
+              :src="element.imageURL"
+              controls
+              ref="viewer-image"
+              v-on:load="onimageload"
+              class="viewer-image"
+            />
+            <audio
+              v-else-if="['ogg', 'mp3', 'wav', 'flac'].includes(element.imageURL.split('.').at(-1))"
+              :src="element.imageURL"
+              controls
+              ref="viewer-image"
+              v-on:load="onimageload"
+              class="viewer-image"
+            />
+            <iframe
+              v-else-if="'pdf' === element.imageURL.split('.').at(-1)"
+              :src="element.imageURL"
+              ref="viewer-image"
+              v-on:load="onimageload"
+              class="viewer-image"
+            />
             <img
+              v-else
               :src="element.imageURL"
               ref="viewer-image"
               v-on:load="onimageload"
@@ -1035,6 +1059,11 @@ export default {
   height: calc(100vh - 18px);
   opacity: 0;
   transition: opacity 500ms;
+  pointer-events: none;
+}
+
+.viewer-contents > *:not(.bottomshade) {
+  pointer-events: auto;
 }
 
 .contentarea:hover .viewer-contents,
