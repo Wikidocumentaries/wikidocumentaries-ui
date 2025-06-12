@@ -5,6 +5,7 @@
 			"Hamilton Abreu",
 			"Mansil",
 			"Mansil alfalb",
+			"O andras",
 			"Susannaanas"
 		]
 	},
@@ -131,7 +132,7 @@
 			"headerTitle": "Partes"
 		},
 		"Partof": {
-			"headerTitle": "Contexto"
+			"headerTitle": "Parte de"
 		},
 		"Similar": {
 			"headerTitle": "Tópicos semelhantes"
