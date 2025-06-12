@@ -1,0 +1,332 @@
+{
+	"@metadata": {
+		"authors": [
+			"Emma Franzen",
+			"Hamilton Abreu",
+			"Mansil",
+			"Mansil alfalb",
+			"O andras",
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Pesquisar",
+		"searchInputPlaceHolder": "Encontrar um tópico ou criar um tópico novo",
+		"searchInputSearchOnly": "Encontrar um tópico",
+		"showMore": "Mostrar mais elementos",
+		"createNew": "Criar um elemento novo",
+		"intro": "Wikidocumentários é uma wiki para a pequena história - um local para reunir vestígios históricos e transformá-los em histórias. Comece por procurar um tema de interesse!",
+		"titleDescription": "O que são Wikidocumentários?",
+		"titleStatus": "Estado",
+		"moreBelow": "Leia mais abaixo",
+		"more": "Ler mais",
+		"moreLink": "Ler mais em",
+		"titleTopics": "Tópicos",
+		"titleMedia": "Multimédia",
+		"titleTools": "Ferramentas",
+		"titleLanguages": "Línguas",
+		"titleTechnology": "Tecnologia",
+		"titleCreators": "Criadores",
+		"titleTeam": "Equipa",
+		"titleThanks": "Com agradecimentos especiais para",
+		"titlePartners": "Parceiros",
+		"titleBy": "Projeto de",
+		"getInvolved": "Participe!",
+		"titleTranslate": "Traduzir",
+		"titleContent": "Adicione o seu conteúdo",
+		"titleContact": "Entre em contacto!",
+		"facebook": "Grupo do Facebook",
+		"wiki": "Wiki de Wikidocumentários",
+		"blog": "Blogue",
+		"email": "Correio eletrónico",
+		"github": "Repositório do GitHub"
+	},
+	"MainPage": {
+		"topicPageName": "Página do tópico",
+		"mapSearchPageName": "Pesquisar mapas",
+		"returnToHomeMessage": "Voltar à página inicial"
+	},
+	"WaitPage": {
+		"waitMessage": "Um momento, por favor... A obter dados da Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliações"
+		},
+		"Awards": {
+			"headerTitle": "Prémios"
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "Escolher um ou mais mapas de base históricos",
+			"chooseMapHelpNote": "Dica: ctrl+clique permite selecionar muitos mapas",
+			"yearAbbreviation": "a."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "Ordenar obras",
+				"tooltip": "Ordenar obras",
+				"optionTime": "Por hora",
+				"optionAlpha": "Por ordem alfabética",
+				"optionClear": "Limpar ordenação"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionColl": "Criador"
+			},
+			"displayMenu": {
+				"title": "Apresentar como",
+				"tooltip": "Escolher apresentação",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Tudo"
+		},
+		"Events": {
+			"headerTitle": "Eventos",
+			"displayMenu": {
+				"menuTitle": "Opções de apresentação",
+				"menuTooltip": "Opções de apresentação",
+				"optionShowTimeline": "Mostrar eventos numa linha cronológica",
+				"optionShowList": "Mostrar eventos como uma lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opções",
+				"optionWorks": "Mostrar obras",
+				"optionRelatedPeople": "Mostrar eventos de pessoas relacionadas",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configurar"
+				},
+				"optionRelatedTopics": "Mostrar eventos de tópicos relacionados"
+			}
+		},
+		"Header": {
+			"titleEditText": "Editar o título",
+			"titleApproveText": "Aprovar este título",
+			"subtitleEditText": "Editar a descrição",
+			"subtitleApproveText": "Aprovar esta descrição"
+		},
+		"Locations": {
+			"headerTitle": "Nesta localização",
+			"sortMenu": {
+				"title": "Ordenar localizações",
+				"tooltip": "Ordenar localizações",
+				"optionTime": "Por hora",
+				"optionAlpha": "Por ordem alfabética",
+				"optionDist": "Por distância",
+				"optionClear": "Limpar ordenação"
+			},
+			"facetMenu": {
+				"optionType": "Tipo",
+				"optionColl": "Criador",
+				"optionCity": "Localização"
+			},
+			"displayMenu": {
+				"title": "Apresentar como",
+				"tooltip": "Escolher a apresentação",
+				"optionGallery": "Galeria",
+				"optionList": "Lista"
+			},
+			"showAll": "Todas"
+		},
+		"Parts": {
+			"headerTitle": "Partes"
+		},
+		"Partof": {
+			"headerTitle": "Parte de"
+		},
+		"Similar": {
+			"headerTitle": "Tópicos semelhantes"
+		},
+		"People": {
+			"headerTitle": "Pessoas relacionadas com o tópico",
+			"sortMenuTitle": "Ordenar",
+			"sortMenuTooltip": "Alterar a ordenação",
+			"sortMenuOptionBirth": "Por data de nascimento",
+			"sortMenuOptionDeath": "Por data de falecimento",
+			"sortMenuOptionName": "Por nome",
+			"sortMenuOptionFirst": "Por primeiro nome",
+			"sortMenuOptionLast": "Por apelido",
+			"sortMenuOptionClear": "Limpar ordenação",
+			"facetMenuTitle": "Dividir por",
+			"facetMenuTooltip": "Dividir as pessoas por aspetos diferentes",
+			"facetMenuOptionProfession": "Profissão",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Sexo"
+		},
+		"Twins": {
+			"headerTitle": "Cidades geminadas"
+		},
+		"TopicImages": {
+			"headerTitle": "Imagens dos arquivos",
+			"actionsMenu": {
+				"menuTitle": "Apresentar ou organizar imagens",
+				"tooltip": "Apresentar ou organizar imagens",
+				"showImagesOnMapMenuText": "Mostrar todas as imagens no mapa",
+				"showImagesOnTimelineMenuText": "Mostrar todas as imagens na linha cronológica",
+				"selectPortraits": "Selecionar retratos de boa qualidade desta pessoa",
+				"arrangeByTime": "Organizar imagens por data",
+				"selectWorks": "Selecionar imagens de obras"
+			},
+			"facetMenu": {
+				"time": "hora",
+				"map": "mapa",
+				"people": "pessoas",
+				"places": "lugares",
+				"topics": "tópicos",
+				"imageSize": "tamanho da imagem",
+				"large": "grande",
+				"medium": "médio",
+				"small": "pequeno",
+				"type": "tipo de multimédia",
+				"creator": "criador",
+				"platform": "plataforma",
+				"source": "fonte",
+				"saveSelection": "Gravar seleção como uma coleção",
+				"clear": "Limpar escolhas"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Ações",
+				"menuTooltip": "Ações",
+				"doGeolocatingText": "Definir a localização…",
+				"showImageText": "Mostrar imagem",
+				"selectFeatured": "Escolher como uma imagem de cabeçalho"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Remover a imagem porque...",
+				"shortMenuTitle": "Remover a imagem",
+				"menuTooltip": "Remover a imagem",
+				"remDepicted": {
+					"menuTitle": "Representa antes este tópico",
+					"shortMenuTitle": "Representa outro tópico",
+					"search": "Pesquisar pelo tópico",
+					"browse": "Explorar os tópicos relacionados"
+				},
+				"remCreator": {
+					"menuTitle": "É antes por este criador",
+					"shortMenuTitle": "É de outro criador",
+					"search": "Pesquisar pelo criador",
+					"browse": "Explorar os atores relacionados"
+				},
+				"remInappropriate": {
+					"menuTitle": "É inapropriado porque",
+					"shortMenuTitle": "É inapropriado",
+					"privacy": "Viola a privacidade dos retratados",
+					"violence": "Apresenta violência extrema",
+					"sex": "Mostra sexo explícito",
+					"copyvio": "Viola os direitos de autor",
+					"explain": "Deixar uma nota a explicar"
+				}
+			},
+			"imagesViewExternal": "Ver a imagem original",
+			"imagesViewOnMap": "Ver imagem num mapa"
+		},
+		"TopicMap": {
+			"headerTitle": "Tópico no mapa",
+			"hideImagesMenuText": "Ocultar imagens",
+			"showNearbyPlacesMenuText": "Mostrar locais próximos",
+			"hideNearbyPlacesMenuText": "Ocultar locais próximos"
+		},
+		"TopicTimeline": {
+			"headerTitle": "Linha cronológica",
+			"showEventsOnTimelineMenuText": "Mostrar eventos do tópico na linha cronológica",
+			"centuryText": "S"
+		},
+		"Works": {
+			"headerTitle": "Obras",
+			"sortMenuTitle": "Ordenação",
+			"sortMenuTooltip": "Ordenar elementos",
+			"sortMenuOptionTime": "Por hora",
+			"sortMenuOptionAlpha": "Por ordem alfabética",
+			"sortMenuOptionDist": "Por distância",
+			"sortMenuOptionClear": "Limpar ordenação",
+			"facetMenuTitle": "Dividir por",
+			"facetMenuTooltip": "Dividir as obras por diferentes critérios",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionColl": "Coleção",
+			"facetMenuOptionCity": "Localização",
+			"displayMenuTitle": "Apresentar como",
+			"displayMenuTooltip": "Escolher a apresentação",
+			"displayMenuOptionGallery": "Galeria",
+			"displayMenuOptionList": "Lista",
+			"showAll": "Todos"
+		},
+		"Wikidata": {
+			"headerTitle": "Factos",
+			"extLink": {
+				"linkTitleWD": "Ver ou editar na wiki Wikidata"
+			},
+			"noTopicFoundText": "Tópico não encontrado"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artigo",
+			"languageMenu": {
+				"menuTitle": "Ler o artigo noutra língua",
+				"translateArticleText": "Traduza este artigo para a sua língua",
+				"otherLanguagestext": "Outras línguas"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Legenda",
+			"addCaption": "Adicionar legenda",
+			"description": "Descrição",
+			"addDescription": "Adicionar descrição",
+			"creator": "Criador",
+			"creatorUnknown": "Desconhecido",
+			"addCreator": "Adicionar criador",
+			"removeCreator": "Remover criador",
+			"dateDepicted": "Data de retrato",
+			"addDateDepicted": "Adicionar data de retrato",
+			"removeDateDepicted": "Remover data de retrato",
+			"dateCreated": "Data de criação",
+			"addDateCreated": "Adicionar data de criação",
+			"removeDateCreated": "Remover data de criação",
+			"publisher": "Autor",
+			"addPublisher": "Adicionar autor",
+			"removePublisher": "Remover autor",
+			"format": "Formato",
+			"addFormat": "Adicionar formato",
+			"removeFormat": "Remover formato",
+			"technique": "Técnica",
+			"addTechnique": "Adicionar técnica",
+			"removeTechnique": "Remover técnica",
+			"genre": "Género",
+			"addGenre": "Adicionar género",
+			"removeGenre": "Remover género",
+			"addTopic": "Adicionar tópico",
+			"removeTopic": "Remover tópico",
+			"locationMap": "Localização no mapa",
+			"publishingPlatform": "Plataforma de publicação",
+			"provider": "Fornecedor de conteúdos"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Procurar mapas históricos"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionCreatorAlpha": "Por criador em ordem alfabética",
+			"optionRev": "Inverter ordenação"
+		}
+	},
+	"general": {
+		"menus": {
+			"languageMenuTitle": "Escolher língua",
+			"languageMenuTooltip": "Escolher a sua língua",
+			"myLanguagesItem": "As minhas línguas",
+			"languageMenuTranslate": "Traduzir este artigo para português"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduzir para português"
+		},
+		"languages": {
+			"fi": "Finlandês",
+			"en": "Inglês",
+			"sv": "Sueco",
+			"es": "Espanhol"
+		}
+	}
+}
