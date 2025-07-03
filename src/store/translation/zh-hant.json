@@ -27,7 +27,7 @@
 		"titleTools": "工具",
 		"statusTools": "Wikidocumentaries 擁有用於內容處理上的任務與工具。條目能以 Content Translation 工具在語言之間翻譯。我們正籌備著以維基數據關鍵詞與地理標記工具來用於圖片位置上。會建立或整合出新的有趣、有用的工具。",
 		"titleLanguages": "語言",
-		"statusLanguages": "Wikidocumentaries 可被在維基數據裡任何可用的語言來引導內容，對於小眾語言來說會是一個很好的機會。Wikidocumentaries 使用介面上的翻譯則是在 TranslateWiki 網站裡完成。",
+		"statusLanguages": "Wikidocumentaries 可被在維基數據裡任何可用的語言來引導內容，對於小眾語言來說會是一個很好的機會。Wikidocumentaries 使用介面上的翻譯則是在 translatewiki 網站裡完成。",
 		"titleTechnology": "技術",
 		"statusTechnology": "Wikidocumentaries 讀取來自維基數據的核心資料。除此之外，Wikidocumentaries 也將會有用於維基數據以外範圍主題的自用 Wikibase。維基數據與 Wikidocumentaries 預期會同步為聯合的 Wikibases。其次，圖片詮釋資料是連結到維基數據的項目上，該資料會與維基共享資源上的結構化資料同步。本網站是以 Vue.js 框架建置，並託管於維基多媒體雲端服務上。",
 		"titleCreators": "創作者",
