@@ -57,7 +57,7 @@
 		},
 		"Depicted": {
 			"sortMenu": {
-				"title": "Wierker zortéieren",
+				"title": "Wierker sortéieren",
 				"optionTime": "No der Zäit",
 				"optionAlpha": "Alphabetesch"
 			},
@@ -130,7 +130,7 @@
 			"headerTitle": "Nimm"
 		},
 		"People": {
-			"sortMenuTitle": "Zortéieren",
+			"sortMenuTitle": "Sortéieren",
 			"sortMenuOptionBirth": "Nom Gebuertsdatum",
 			"sortMenuOptionDeath": "Nom Doudesdatum",
 			"sortMenuOptionName": "Nom Numm",
@@ -199,7 +199,7 @@
 		},
 		"Works": {
 			"headerTitle": "Wierker",
-			"sortMenuTitle": "Zortéieren",
+			"sortMenuTitle": "Sortéieren",
 			"sortMenuOptionTime": "No der Zäit",
 			"sortMenuOptionAlpha": "Alphabetesch",
 			"sortMenuOptionDist": "No Distanz",
