@@ -15,14 +15,18 @@
 		"searchInputSearchOnly": "Encontrar um tópico",
 		"showMore": "Mostrar mais elementos",
 		"createNew": "Criar um elemento novo",
-		"intro": "Wikidocumentários é uma wiki para a pequena história - um local para reunir vestígios históricos e transformá-los em histórias. Comece por procurar um tema de interesse!",
-		"titleDescription": "O que são Wikidocumentários?",
+		"intro": "Wikidocumentários é uma wiki para uma história pequena - um local para reunir vestígios históricos e transformá-los em histórias. Comece por procurar um tópico de interesse!",
+		"titleDescription": "O que é a Wikidocumentários?",
+		"description": "Wikidocumentários é um espaço de criação para os historiadores cidadãos. Este combina informação sobre tópicos – pessoas, lugares, edifícios, eventos e muito mais. Pode navegar entre os tópicos seguindo qualquer ligação gravada, tais como relações familiares, locais, criadores e criações ou afiliação. Um tópico é ilustrado com imagens e mapas de museus, arquivos e bibliotecas conetados. Em Wikidocumentários, será possível corrigir a informação existente e adicionar novos tópicos, trazer as suas próprias imagens e lembranças, e utilizar todo o material para os seus próprios fins.",
 		"titleStatus": "Estado",
-		"moreBelow": "Leia mais abaixo",
+		"status": "O ''site'' está em fase de demonstração. Muitas funcionalidades importantes ainda não estão disponíveis e o ''site'' pode não apresentar o desempenho esperado.",
+		"moreBelow": "Leia mais em baixo",
 		"more": "Ler mais",
 		"moreLink": "Ler mais em",
 		"titleTopics": "Tópicos",
+		"statusTopics": "Os tópicos são lidos da Wikidados. Novos tópicos podem ser criados mais tarde na Wikidocumentários, se o conteúdo estiver fora do escopo da Wikidados. Ainda será igualmente possível descrever o tópico com as ricas opções da Wikidados. Os artigos atuais são da Wikipédia, enquanto os artigos podem ser criados localmente para tópicos que existem apenas nos Wikidocumentários.",
 		"titleMedia": "Multimédia",
+		"statusMedia": "A multimédia é lida a partir de um número crescente de repositórios de multimédia que servem os ficheiros de v licenciados abertamente. Nós estamos a trabalhar para encontrar imagens com mais precisão e exibir mais e melhores metadados de cada uma das fontes. Novas fontes de multimédia são bem-vindas!",
 		"titleTools": "Ferramentas",
 		"titleLanguages": "Línguas",
 		"titleTechnology": "Tecnologia",
@@ -30,10 +34,13 @@
 		"titleTeam": "Equipa",
 		"titleThanks": "Com agradecimentos especiais para",
 		"titlePartners": "Parceiros",
+		"titleFunding": "Com o gentil apoio de",
 		"titleBy": "Projeto de",
 		"getInvolved": "Participe!",
 		"titleTranslate": "Traduzir",
+		"joinTranslate": "Venha trazer o seu idioma para a Wikidocumentários. Junte-se à equipa de tradução voluntária e veja o património cultural ligado ganhar vida no seu idioma.",
 		"titleContent": "Adicione o seu conteúdo",
+		"joinContent": "Se tem uma fotografia, multimédia, documento, mapa ou coleção de dados que gostaria de ver aqui, vamos verificar juntos se já é possível conetá-los por meio de um dos canais existentes ou se nós podemos criar novos métodos de ligação. Nós também estamos ansiosos para organizar ''workshops'' para registar o conhecimento histórico com as comunidades de interesse.",
 		"titleContact": "Entre em contacto!",
 		"facebook": "Grupo do Facebook",
 		"wiki": "Wiki de Wikidocumentários",
@@ -60,6 +67,9 @@
 			"chooseMapTitle": "Escolher um ou mais mapas de base históricos",
 			"chooseMapHelpNote": "Dica: ctrl+clique permite selecionar muitos mapas",
 			"yearAbbreviation": "a."
+		},
+		"CV": {
+			"headerTitle": "CV"
 		},
 		"Depicted": {
 			"sortMenu": {
@@ -137,8 +147,31 @@
 		"Similar": {
 			"headerTitle": "Tópicos semelhantes"
 		},
+		"Effects": {
+			"headerTitle": "Efeitos",
+			"intro": "Estes são os efeitos do tópico."
+		},
+		"Familytree": {
+			"headerTitle": "Árvore genealógica"
+		},
+		"Instances": {
+			"headerTitle": "Instâncias deste tópico",
+			"intro": "Ver instâncias deste tópico. Visualize como lista para ver também os itens sem uma imagem."
+		},
+		"Links": {
+			"headerTitle": "Hiperligações deste artigo"
+		},
+		"Location": {
+			"headerTitle": "Localização",
+			"intro": "Este tópico está situado dentro ou no contexto destes tópicos."
+		},
+		"Names": {
+			"headerTitle": "Nomes",
+			"intro": "Veja os nomes deste tópico e todas as alternativas disponíveis."
+		},
 		"People": {
 			"headerTitle": "Pessoas relacionadas com o tópico",
+			"intro": "Estas pessoas estão associadas ao tópico desta página. Pode optar por exibi-las como uma lista, que também mostra as pessoas sem imagens. Elas podem ser classificadas por datas ou nomes. Note que apenas aquelas que possuem essa informação serão exibidas.",
 			"sortMenuTitle": "Ordenar",
 			"sortMenuTooltip": "Alterar a ordenação",
 			"sortMenuOptionBirth": "Por data de nascimento",
@@ -152,6 +185,13 @@
 			"facetMenuOptionProfession": "Profissão",
 			"facetMenuOptionCountry": "País",
 			"facetMenuOptionCity": "Sexo"
+		},
+		"Subclasses": {
+			"headerTitle": "Subclasse deste tópico"
+		},
+		"Teams": {
+			"headerTitle": "Equipas participantes",
+			"intro": "As equipas participantes neste jogo, séries ou torneio."
 		},
 		"Twins": {
 			"headerTitle": "Cidades geminadas"
@@ -173,9 +213,10 @@
 				"people": "pessoas",
 				"places": "lugares",
 				"topics": "tópicos",
+				"form": "formulário",
 				"imageSize": "tamanho da imagem",
 				"large": "grande",
-				"medium": "médio",
+				"medium": "unidade",
 				"small": "pequeno",
 				"type": "tipo de multimédia",
 				"creator": "criador",
@@ -248,6 +289,7 @@
 			"displayMenuTooltip": "Escolher a apresentação",
 			"displayMenuOptionGallery": "Galeria",
 			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Mapa",
 			"showAll": "Todos"
 		},
 		"Wikidata": {
@@ -259,6 +301,12 @@
 		},
 		"Wikipedia": {
 			"headerTitle": "Artigo",
+			"extLink": {
+				"linkTitleWP": "Ler ou editar na Wikipédia"
+			},
+			"addLink": {
+				"linkTitleWP": "Crie um artigo na Wikipédia"
+			},
 			"languageMenu": {
 				"menuTitle": "Ler o artigo noutra língua",
 				"translateArticleText": "Traduza este artigo para a sua língua",
@@ -296,24 +344,102 @@
 			"removeGenre": "Remover género",
 			"addTopic": "Adicionar tópico",
 			"removeTopic": "Remover tópico",
+			"location": "Localização",
 			"locationMap": "Localização no mapa",
+			"addLocation": "Adicionar localização",
+			"removeLocation": "Remover localização",
+			"address": "Morada",
+			"addAddress": "Adicionar morada",
+			"removeAddress": "Remover morada",
+			"addPerson": "Adicionar pessoa",
+			"removePerson": "Remover pessoa",
+			"event": "Evento",
+			"addEvent": "Adicionar evento",
+			"removeEvent": "Remover evento",
+			"institution": "Instituição",
+			"collection": "Coleção",
+			"addCollection": "Adicionar coleção",
+			"inventoryNumber": "Número de inventário",
+			"inscriptions": "Inscrições",
+			"measurements": "Medidas",
+			"copyright": "Direitos de Autor",
+			"license": "Licença de Direitos de Autor",
+			"photograph": "Fotografia",
+			"image": "Imagem",
+			"photographer": "Fotógrafo",
+			"attribution": "Atribuição",
+			"digitalCopy": "Cópia digital",
 			"publishingPlatform": "Plataforma de publicação",
-			"provider": "Fornecedor de conteúdos"
+			"platformId": "Id.",
+			"provider": "Fornecedor de conteúdos",
+			"imageInfoPage": "Página de informação da imagem",
+			"imageDimensions": "Dimensões da imagem",
+			"fileSize": "Tamanho do ficheiro",
+			"fileFormat": "Formato do ficheiro",
+			"remove": "Remover",
+			"moveTo": "Mover para outro campo",
+			"addData": "Adicionar dados",
+			"uploader": "Carregador",
+			"rotate": "Rodar"
+		},
+		"imageActions": {
+			"rotateImage": "Rodar imagem",
+			"flip": "Inverter",
+			"horizontal": "horizontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Fechar visualizador"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combinar nomes de lugares"
 		}
 	},
 	"map_search_page": {
 		"HistoricalMapsSearch": {
-			"headerTitle": "Procurar mapas históricos"
+			"headerTitle": "Procurar mapas históricos",
+			"filterBySourceMenuText": "Filtrar por fonte...",
+			"filterByTimeMenuText": "Filtrar com base na hora...",
+			"filterByMapMenuText": "Filtrar via mapa..."
 		}
 	},
 	"menus": {
 		"sortMenu": {
+			"title": "Ordenar tópicos",
+			"tooltip": "Ordenar tópicos",
+			"optionTime": "Por hora",
+			"optionStart": "Por hora de início",
+			"optionTitle": "Por título",
+			"optionCause": "Por causa",
+			"optionAlpha": "Alfabeticamente",
+			"optionTitleAlpha": "Por título alfabeticamente",
 			"optionCreatorAlpha": "Por criador em ordem alfabética",
-			"optionRev": "Inverter ordenação"
+			"optionDist": "Por distância",
+			"optionRev": "Inverter ordenação",
+			"optionClear": "Limpar ordenação"
+		},
+		"facetMenu": {
+			"optionType": "Tipo",
+			"optionColl": "Criador",
+			"optionCity": "Localização"
+		},
+		"displayMenu": {
+			"title": "Exibir como",
+			"tooltip": "Escolha a exibição",
+			"optionGallery": "Galeria",
+			"optionList": "Lista"
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentários",
+		"ok": "OK",
+		"cancel": "Cancelar",
+		"helpText": "Ajuda",
+		"expand": "Expandir esta secção",
+		"collapse": "Ocultar esta secção",
 		"menus": {
+			"actionMenuTitle": "Ações",
+			"actionMenuTooltip": "Ações",
 			"languageMenuTitle": "Escolher língua",
 			"languageMenuTooltip": "Escolher a sua língua",
 			"myLanguagesItem": "As minhas línguas",
@@ -328,5 +454,9 @@
 			"sv": "Sueco",
 			"es": "Espanhol"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki Gosta de Monumentos $1",
+		"WLMButton": "Enviar imagem"
 	}
 }
