@@ -1,13 +1,30 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Beta16",
+			"Ciampix",
+			"JackLantern",
+			"Senpremì",
 			"Susannaanas"
 		]
 	},
 	"LandingPage": {
 		"search": "Cerca",
-		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento"
+		"searchInputPlaceHolder": "Trova un argomento o crea un nuovo argomento",
+		"searchInputSearchOnly": "Trova un argomento",
+		"showMore": "Mostra più elementi",
+		"titleStatus": "Stato",
+		"more": "Per saperne di più",
+		"titleTools": "Strumenti",
+		"titleLanguages": "Lingue",
+		"titlePartners": "Partner",
+		"getInvolved": "Partecipa!",
+		"titleTranslate": "Traduci",
+		"titleContent": "Aggiungi il tuo contenuto",
+		"facebook": "Gruppo Facebook",
+		"blog": "Blog",
+		"email": "Email"
 	},
 	"MainPage": {
 		"topicPageName": "Pagina dell'argomento",
@@ -17,13 +34,36 @@
 		"returnToHomeMessage": "Tornare alla pagina di benvenuto"
 	},
 	"WaitPage": {
-		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Attenti un momento... sto recuperando dati da Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
+		"Awards": {
+			"headerTitle": "Premi"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Scegli mappa/e storica di base",
 			"chooseMapHelpNote": "Suggerimento: ctrl+click permette selezionare più mappe",
 			"yearAbbreviation": "a."
+		},
+		"Depicted": {
+			"headerTitle": "Rappresentato in",
+			"facetMenu": {
+				"optionType": "Tipo"
+			},
+			"displayMenu": {
+				"optionGallery": "Galleria",
+				"optionList": "Elenco"
+			},
+			"showAll": "Tutto"
+		},
+		"Events": {
+			"headerTitle": "Eventi",
+			"optionsMenu": {
+				"menuTitle": "Opzioni",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configura"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Modifica il titolo",
@@ -31,8 +71,41 @@
 			"subtitleEditText": "Modifica la descrizione",
 			"subtitleApproveText": "Approva questa descrizione"
 		},
+		"Locations": {
+			"facetMenu": {
+				"optionType": "Tipo"
+			},
+			"showAll": "Tutto"
+		},
+		"Partof": {
+			"headerTitle": "Parte di"
+		},
+		"Similar": {
+			"headerTitle": "Argomenti simili"
+		},
+		"Effects": {
+			"headerTitle": "Effetti"
+		},
+		"Names": {
+			"headerTitle": "Nomi"
+		},
+		"People": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuOptionBirth": "Per data di nascita",
+			"sortMenuOptionDeath": "Per data di morte",
+			"facetMenuOptionCountry": "Stato",
+			"facetMenuOptionCity": "Sesso"
+		},
+		"Seasons": {
+			"headerTitle": "Stagioni"
+		},
+		"Twins": {
+			"headerTitle": "Città gemellate"
+		},
 		"TopicImages": {
 			"actionsMenu": {
+				"menuTitle": "Mostra o organizza le immagini",
+				"tooltip": "Mostra o organizza le immagini",
 				"showImagesOnMapMenuText": "Mostra tutte le immagini nella mappa",
 				"showImagesOnTimelineMenuText": "Mostra tutte le immagini nella linea temporale"
 			},
@@ -89,7 +162,10 @@
 			"hideImagesMenuText": "Nascondi immagini",
 			"chooseTimelineMapsMenuText": "Scegli le mappe della linea temporale...",
 			"showNearbyPlacesMenuText": "Mostra luoghi nelle vicinanze",
-			"hideNearbyPlacesMenuText": "Nascondi luoghi nelle vicinanze"
+			"hideNearbyPlacesMenuText": "Nascondi luoghi nelle vicinanze",
+			"extLink": {
+				"menuTooltip": "Vedi o modifica in OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Ritagli di giornale",
@@ -100,14 +176,16 @@
 			"headerTitle": "Linea temporale",
 			"showEventsOnTimelineMenuText": "Mostra eventi dell'argomento nella linea temporale"
 		},
-		"Events": {
-			"headerTitle": "Eventi",
-			"optionsMenu": {
-				"menuTitle": "Opzioni",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Configura"
-				}
-			}
+		"Works": {
+			"sortMenuTitle": "Ordina",
+			"sortMenuTooltip": "Ordina elementi",
+			"facetMenuOptionType": "Tipo",
+			"facetMenuOptionCity": "Località",
+			"displayMenuTitle": "Mostra come",
+			"displayMenuOptionGallery": "Galleria",
+			"displayMenuOptionList": "Elenco",
+			"displayMenuOptionMap": "Mappa",
+			"showAll": "Tutto"
 		},
 		"Wikidata": {
 			"headerTitle": "Dati",
@@ -133,36 +211,6 @@
 				"translateArticleText": "Traduci questa voce nella tua lingua",
 				"otherLanguagestext": "Altre lingue"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Persone legate all'argomento",
-			"menuTitle": "Mostra",
-			"showBorn": "Nato qui",
-			"showDied": "Morto qui",
-			"showBuried": "Sotterrato qui",
-			"showRelated": "Riguardanti di un'altra maniera",
-			"showAll": "Tutti"
-		},
-		"Depicted": {
-			"headerTitle": "Rappresentato in"
-		},
-		"Works": {
-			"sortMenuTitle": "Ordina",
-			"sortMenuTooltip": "Ordina elementi",
-			"sortMenuOptionRev": "Ordinamento inverso",
-			"facetMenuOptionType": "Tipo",
-			"facetMenuOptionCity": "Località",
-			"displayMenuTitle": "Mostra come",
-			"displayMenuOptionGallery": "Galleria",
-			"displayMenuOptionList": "Elenco",
-			"showAll": "Tutto"
-		},
-		"People": {
-			"sortMenuTitle": "Ordina",
-			"sortMenuOptionBirth": "Per data di nascita",
-			"sortMenuOptionDeath": "Per data di morte",
-			"facetMenuOptionCountry": "Stato",
-			"facetMenuOptionCity": "Sesso"
 		}
 	},
 	"imageViewer": {
@@ -177,38 +225,80 @@
 			"addFormat": "Aggiungi formato",
 			"technique": "Tecnica",
 			"addTechnique": "Aggiungi tecnica",
+			"genre": "Genere",
+			"addGenre": "Aggiungi genere",
+			"removeGenre": "Rimuovi genere",
 			"addTopic": "Aggiungi argomento",
 			"addPerson": "Aggiungi persona",
 			"removePerson": "Rimuovi persona",
 			"event": "Evento",
 			"addEvent": "Aggiungi evento",
 			"removeEvent": "Rimuovi evento",
-			"institution": "Istituto",
+			"institution": "Istituzione",
+			"addCollection": "Aggiungi collezione",
 			"inscriptions": "Iscrizioni",
-			"measurements": "Misurazioni",
+			"measurements": "Misure",
+			"copyright": "Copyright",
+			"license": "Copyright e licenza",
 			"photograph": "Fotografia",
+			"image": "Immagine",
 			"photographer": "Fotografo",
 			"addPhotographData": "Aggiungi informazioni sulla fotografia",
+			"attribution": "Attribuzione",
 			"digitalCopy": "Copia digitale",
+			"platformId": "ID",
 			"fileSize": "Dimensione del file",
 			"fileFormat": "Formato file",
-			"remove": "Rimuovi"
+			"remove": "Rimuovi",
+			"uploader": "Caricato da",
+			"rotate": "Ruota"
 		},
 		"imageActions": {
-			"clockwise": "orario",
-			"counterclockwise": "antiorario",
+			"clockwise": "in senso orario",
+			"counterclockwise": "in senso antiorario",
 			"horizontal": "orizzontale",
 			"vertical": "verticale"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"optionRev": "Ordinamento inverso"
+		},
+		"facetMenu": {
+			"optionType": "Tipo"
+		},
+		"displayMenu": {
+			"title": "Mostra come",
+			"optionGallery": "Galleria",
+			"optionList": "Elenco"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentari",
+		"ok": "OK",
 		"cancel": "Annulla",
+		"helpText": "Aiuto",
+		"expand": "Espandi questa sezione",
+		"collapse": "Comprimi questa sezione",
 		"menus": {
-			"actionMenuTitle": "Azioni"
+			"actionMenuTitle": "Azioni",
+			"actionMenuTooltip": "Azioni",
+			"languageMenuTitle": "Scegli la lingua",
+			"languageMenuTooltip": "Scegli la tua lingua",
+			"myLanguagesItem": "Le mie lingue",
+			"languageMenuTranslate": "Traduci questa voce in italiano"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduci nella tua lingua"
 		},
 		"languages": {
+			"fi": "Finlandese",
+			"en": "Inglese",
 			"sv": "Svedese",
 			"es": "Spagnolo"
 		}
+	},
+	"Banner": {
+		"WLMButton": "Carica immagine"
 	}
 }
