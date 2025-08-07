@@ -4,6 +4,7 @@
 			"Gongsoonyee",
 			"Songhee",
 			"Suleiman the Magnificent Television",
+			"YeBoy371",
 			"Ykhwong"
 		]
 	},
@@ -283,6 +284,7 @@
 			"image": "이미지",
 			"photographer": "촬영자",
 			"addPhotographData": "사진에 관한 정보 추가",
+			"attribution": "저작자표시",
 			"platformId": "ID",
 			"provider": "콘텐츠 제공자",
 			"imageInfoPage": "이미지 정보 페이지",
