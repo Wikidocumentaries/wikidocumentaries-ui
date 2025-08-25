@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Albertoleoncio",
 			"Emma Franzen",
 			"Hamilton Abreu",
 			"Mansil",
@@ -24,7 +25,7 @@
 		"more": "Ler mais",
 		"moreLink": "Ler mais em",
 		"titleTopics": "Tópicos",
-		"statusTopics": "Os tópicos são lidos da Wikidados. Novos tópicos podem ser criados mais tarde na Wikidocumentários, se o conteúdo estiver fora do escopo da Wikidados. Ainda será igualmente possível descrever o tópico com as ricas opções da Wikidados. Os artigos atuais são da Wikipédia, enquanto os artigos podem ser criados localmente para tópicos que existem apenas nos Wikidocumentários.",
+		"statusTopics": "Os tópicos são lidos do Wikidata. Novos tópicos podem ser criados mais tarde na Wikidocumentários, se o conteúdo estiver fora do escopo do Wikidata. Ainda será igualmente possível descrever o tópico com as ricas opções do Wikidata. Os artigos atuais são da Wikipédia, enquanto os artigos podem ser criados localmente para tópicos que existem apenas nos Wikidocumentários.",
 		"titleMedia": "Multimédia",
 		"statusMedia": "A multimédia é lida a partir de um número crescente de repositórios de multimédia que servem os ficheiros de v licenciados abertamente. Nós estamos a trabalhar para encontrar imagens com mais precisão e exibir mais e melhores metadados de cada uma das fontes. Novas fontes de multimédia são bem-vindas!",
 		"titleTools": "Ferramentas",
