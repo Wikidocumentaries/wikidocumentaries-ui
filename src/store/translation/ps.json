@@ -1,0 +1,404 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"LandingPage": {
+		"search": "پلټل",
+		"searchInputPlaceHolder": "سکالو موندل يا نوې سکالو جوړول",
+		"searchInputSearchOnly": "سکالو موندل",
+		"showMore": "نور توکي ښودل",
+		"createNew": "نوی توکی جوړول",
+		"titleStatus": "دريځ",
+		"moreBelow": "نور لاندې ولولئ",
+		"more": "نور لوستل",
+		"moreLink": "نور ولولئ په",
+		"titleTopics": "سکالوگانې",
+		"titleMedia": "رسنۍ",
+		"titleTools": "اوزارونه",
+		"titleLanguages": "ژبې",
+		"titleTechnology": "تېکنالوژي",
+		"titleCreators": "جوړوونکي",
+		"titleTeam": "ډله",
+		"titlePartners": "شريکان",
+		"titleBy": "پروژه د",
+		"getInvolved": "گډون کول!",
+		"titleTranslate": "ژباړل",
+		"titleContent": "خپله منځپانگه ورگډول",
+		"titleContact": "اړيکه نيول!",
+		"facebook": "فيسبوک ډله",
+		"blog": "بلاگ",
+		"email": "برېښليک"
+	},
+	"MainPage": {
+		"topicPageName": "سکالو مخ"
+	},
+	"topic_page": {
+		"Depicted": {
+			"headerTitle": "انځورشوې په",
+			"sortMenu": {
+				"title": "کارونه اوډل",
+				"tooltip": "کارونه اوډل",
+				"optionTime": "د وخت له مخې",
+				"optionAlpha": "د ابېڅې له مخې",
+				"optionClear": "اوډل سپاکول"
+			},
+			"facetMenu": {
+				"optionType": "ډول",
+				"optionColl": "جوړوونکی"
+			},
+			"displayMenu": {
+				"title": "ښکارول لکه د",
+				"tooltip": "ښکارېدنه خوښول",
+				"optionGallery": "انځورتون",
+				"optionList": "لړليک"
+			},
+			"showAll": "ټول"
+		},
+		"Depicts": {
+			"headerTitle": "انځورونې"
+		},
+		"Events": {
+			"headerTitle": "پېښې",
+			"displayMenu": {
+				"menuTitle": "د ښکارېدو خوښنې",
+				"menuTooltip": "د ښکارېدو خوښنې",
+				"optionShowTimeline": "پېښې په مهالوېش کې ښودل",
+				"optionShowList": "پېښې د لړليک په توگه ښودل"
+			},
+			"optionsMenu": {
+				"menuTitle": "خوښنې",
+				"menuTooltip": "ښودلو لپاره حقايق غوره‌کول",
+				"optionWorks": "کارونه ښودل",
+				"optionRelatedPeople": "د اړوند خلکو پېښې ښودل",
+				"subRelatedPeopleConf": {
+					"menuTitle": "ترتيبول"
+				},
+				"optionRelatedTopics": "د اړوند سکالوگانو پېښې ښودل"
+			}
+		},
+		"Header": {
+			"titleEditText": "سرليک سمول",
+			"titleApproveText": "دا سرليک منل",
+			"subtitleEditText": "څرگنداوی سمول",
+			"subtitleApproveText": "دا څرگنداوی منل"
+		},
+		"Locations": {
+			"headerTitle": "په دې ځای کې",
+			"sortMenu": {
+				"title": "ځايونه اوډل",
+				"tooltip": "ځايونه اوډل",
+				"optionTime": "د وخت له مخې",
+				"optionAlpha": "د ابېڅې له مخې",
+				"optionDist": "د واټن له مخې",
+				"optionClear": "اوډل سپاکول"
+			},
+			"facetMenu": {
+				"optionType": "ډول",
+				"optionColl": "جوړوونکی",
+				"optionCity": "ځای"
+			},
+			"displayMenu": {
+				"title": "ښکارول لکه د",
+				"tooltip": "ښکارېنده خوښول",
+				"optionGallery": "انځورتون",
+				"optionList": "لړليک"
+			},
+			"showAll": "ټول"
+		},
+		"Map": {
+			"headerTitle": "په نخچه کې ځای"
+		},
+		"Parts": {
+			"headerTitle": "برخې"
+		},
+		"Partof": {
+			"headerTitle": "برخه د"
+		},
+		"Similar": {
+			"headerTitle": "ورته سکالوگانې"
+		},
+		"Effects": {
+			"headerTitle": "اغېزې"
+		},
+		"Familytree": {
+			"headerTitle": "کورنۍ لړۍ"
+		},
+		"Instances": {
+			"headerTitle": "د دې سکالو نمونې"
+		},
+		"Links": {
+			"headerTitle": "له دې ليکنې څخه تړوني"
+		},
+		"Location": {
+			"headerTitle": "ځای"
+		},
+		"Names": {
+			"headerTitle": "نومونه"
+		},
+		"People": {
+			"headerTitle": "د سکالو اړوند وگړي",
+			"sortMenuTitle": "اوډل",
+			"sortMenuTooltip": "د اوډلو ترتيب بدلول",
+			"sortMenuOptionBirth": "زېږون نېټې له مخې",
+			"sortMenuOptionDeath": "مرگ نېټې له مخې",
+			"sortMenuOptionName": "نوم له مخې",
+			"sortMenuOptionFirst": "لومړي نوم له مخې",
+			"sortMenuOptionLast": "وروستي نوم له مخې",
+			"sortMenuOptionClear": "اوډل سپاکول",
+			"facetMenuOptionProfession": "مسلک",
+			"facetMenuOptionCountry": "هېواد",
+			"facetMenuOptionCity": "جنس"
+		},
+		"Seasons": {
+			"headerTitle": "څپرکي",
+			"intro": "د دې چارې څپرکي وگورئ."
+		},
+		"Subclasses": {
+			"headerTitle": "د دې سکالو څنگ‌ټولگې"
+		},
+		"Teams": {
+			"headerTitle": "گډون‌کوونکې لوبډلې"
+		},
+		"Things": {
+			"headerTitle": "پام‌وړ لړليک سکالوگانې"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "وخت",
+				"map": "نخشه",
+				"people": "وگړي",
+				"places": "ځايونه",
+				"topics": "سکالوگانې",
+				"form": "فورمه",
+				"imageSize": "انځور کچه",
+				"large": "لوی",
+				"medium": "منځوي",
+				"small": "کوچنی",
+				"type": "رسنۍ ډول",
+				"creator": "پنځوونکی",
+				"platform": "پليټ‌فارم",
+				"source": "سرچينه",
+				"clear": "خوښونې سپاکول"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "چارې",
+				"menuTooltip": "چارې",
+				"doGeolocatingText": "ځای ټاکل...",
+				"showImageText": "انځور ښودل",
+				"selectFeatured": "د سرليک انځور په توگه يې ټاکل"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "انځور لرې‌کړئ ځکه چې...",
+				"shortMenuTitle": "انځور لرې‌کول",
+				"menuTooltip": "انځور لرې‌کول",
+				"remInappropriate": {
+					"explain": "سپيناو لپاره ياداښت پرېښودل"
+				}
+			},
+			"imagesViewExternal": "ار انځور کتل",
+			"imagesViewOnMap": "انځور په نخچه کې کتل"
+		},
+		"TopicMap": {
+			"headerTitle": "سکالو په نخچه کې",
+			"chooseHistoricalBasemapMenuText": "تاريخي بنسټونو نخچه(ې) غوره‌کول...",
+			"hideImagesMenuText": "انځورونه پټول",
+			"chooseTimelineMapsMenuText": "مهالوېش نخچې غوره‌کول..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "مهالوېش",
+			"centuryText": "پېړۍ"
+		},
+		"Works": {
+			"headerTitle": "کارونه",
+			"sortMenuTitle": "اوډل",
+			"sortMenuTooltip": "توکي اوډل",
+			"sortMenuOptionTime": "وخت له مخې",
+			"sortMenuOptionAlpha": "ابېڅې له مخې",
+			"sortMenuOptionDist": "واټن له مخې",
+			"sortMenuOptionClear": "اوډل سپاکول",
+			"facetMenuOptionType": "ډول",
+			"facetMenuOptionColl": "ټولگه",
+			"facetMenuOptionCity": "ځای",
+			"displayMenuTitle": "ښکارول لکه د",
+			"displayMenuTooltip": "ښکارېدنه خوښول",
+			"displayMenuOptionGallery": "انځورتون",
+			"displayMenuOptionList": "لړليک",
+			"displayMenuOptionMap": "نخشه",
+			"showAll": "ټول"
+		},
+		"Wikidata": {
+			"headerTitle": "حقایق",
+			"extLink": {
+				"linkTitleWD": "ويکي‌اومتوک کې کتل يا سمول"
+			},
+			"noTopicFoundText": "سکالو ونه موندل شوه"
+		},
+		"Wikipedia": {
+			"headerTitle": "ليکنه",
+			"extLink": {
+				"linkTitleWP": "په ويکيپېډيا کې يې لوستل يا سمول"
+			},
+			"addLink": {
+				"linkTitleWP": "په ويکيپېډيا کې يوه ليکنه جوړول"
+			},
+			"languageMenu": {
+				"menuTitle": "ليکنه په بله ژبه لوستل",
+				"translateArticleText": "دا ليکنه خپلې ژبې ته راژباړل",
+				"otherLanguagestext": "نورې ژبې"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "نيونگ",
+			"addCaption": "نيونگ ورگډول",
+			"description": "څرگنداوی",
+			"addDescription": "څرگنداوی ورگډول",
+			"creator": "جوړوونکی",
+			"creatorUnknown": "ناجوت",
+			"addCreator": "جوړوونکی ورگډول",
+			"removeCreator": "جوړوونکی لرې‌کول",
+			"dateDepicted": "انځورونې نېټه",
+			"addDateDepicted": "انځورونې نېټه ورگډول",
+			"removeDateDepicted": "انځورونې نېټه لرې‌کول",
+			"dateCreated": "جوړولو نېټه",
+			"addDateCreated": "جوړوولو نېټه ورگډول",
+			"removeDateCreated": "جوړوولو نېټه لرې‌کول",
+			"publisher": "خپروونکی",
+			"addPublisher": "خپروونکی ورگډول",
+			"removePublisher": "خپروونکی لرې‌کول",
+			"format": "بڼه",
+			"addFormat": "بڼه ورگډول",
+			"removeFormat": "بڼه لرې‌کول",
+			"technique": "تخنيک",
+			"addTechnique": "تخنيک ورگډول",
+			"removeTechnique": "تخنيک لرې‌کول",
+			"depicted": "انځور انځورونې",
+			"genre": "ځېل",
+			"addGenre": "ځېل ورگډول",
+			"removeGenre": "ځېل لرې‌کول",
+			"depicts": "انځور انځورونې",
+			"addTopic": "سکالو ورگډول",
+			"removeTopic": "سکالو لرې‌کول",
+			"location": "ځای",
+			"locationMap": "په نخچه کې ځای",
+			"addLocation": "ځای ورگډول",
+			"removeLocation": "ځای لرې‌کول",
+			"address": "د کوڅې پته",
+			"addAddress": "د کوڅې پته ورگډول",
+			"removeAddress": "د کوڅې پته لرې‌کول",
+			"depictedPeople": "انځورشوي وگړي",
+			"addPerson": "کس ورگډول",
+			"removePerson": "کس لرې‌کول",
+			"event": "پېښه",
+			"addEvent": "پېښه ورگډول",
+			"removeEvent": "پېښه لرې‌کول",
+			"institution": "اداره",
+			"collection": "ټولگه",
+			"addCollection": "ټولگه ورگډول",
+			"inventoryNumber": "شته‌والي شمېره",
+			"inscriptions": "ليکنې",
+			"measurements": "اندازه‌کول",
+			"copyright": "لمېسل‌رښتې",
+			"license": "لمېسل‌رښتې او منښتليک",
+			"work": "په انځور کې ښودل شوی کار",
+			"photograph": "انځورکښنه",
+			"image": "انځور",
+			"photographer": "انځورکښونکی",
+			"addPhotographData": "د انځورکښنې اړوند مالومات ورگډول",
+			"attribution": "ځانگړی‌کونگ",
+			"digitalCopy": "ډيجيټل لمېسه",
+			"publishingPlatform": "خپروونکی پليټ‌فارم",
+			"platformId": "پېژند",
+			"provider": "منځپانگې چمتوکوونکی",
+			"imageInfoPage": "انځور مالوماتي مخ",
+			"imageDimensions": "د انځور اړخونه",
+			"fileSize": "دوتنې کچه",
+			"fileFormat": "دوتنې بڼه",
+			"remove": "لرې‌کول",
+			"moveTo": "بل ډگر ته لېږدول",
+			"addData": "اومتوکي ورگډول",
+			"uploader": "راپورته‌کوونکی",
+			"rotate": "تاوول"
+		},
+		"imageActions": {
+			"rotateImage": "انځور تاوول",
+			"clockwise": "پرگړۍ‌لوري",
+			"counterclockwise": "د‌گړۍ‌بل‌پلو",
+			"horizontal": "پروت",
+			"vertical": "ولاړ"
+		},
+		"closeViewer": "کتونکی تړل"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "ځای نومونه يوځای‌کول"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "تاريخي نخچو پلټل",
+			"filterBySourceMenuText": "د سرچينې له مخې چاڼول...",
+			"filterByTimeMenuText": "د وخت پربنسټ چاڼول...",
+			"filterByMapMenuText": "د نخچې له مخې چاڼول..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "سکالوگانې اوډل",
+			"tooltip": "سکالوگانې اوډل",
+			"optionTime": "وخت له مخې",
+			"optionStart": "پيل وخت له مخې",
+			"optionEnd": "پای وخت له مخې",
+			"optionTitle": "سرليک له مخې",
+			"optionCause": "لامل له مخې",
+			"optionAlpha": "ابېڅې له مخې",
+			"optionTitleAlpha": "د ابېڅې سرليک له مخې",
+			"optionDist": "واټن له مخې",
+			"optionRev": "سرچپه اوډل",
+			"optionClear": "اوډل سپاکول"
+		},
+		"facetMenu": {
+			"optionType": "ډول",
+			"optionColl": "جوړوونکی",
+			"optionCity": "ځای"
+		},
+		"displayMenu": {
+			"title": "ښکارول لکه د",
+			"tooltip": "ښکارېدنه خوښول",
+			"optionGallery": "انځورتون",
+			"optionList": "لړليک"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "ويکي‌لاسوندونه",
+		"ok": "ښه",
+		"cancel": "ناگارل",
+		"helpText": "لارښود",
+		"expand": "دا برخه غځول",
+		"collapse": "دا برخه پرځول",
+		"menus": {
+			"actionMenuTitle": "چارې",
+			"actionMenuTooltip": "چارې",
+			"languageMenuTitle": "ژبه ټاکل",
+			"languageMenuTooltip": "خپله ژبه ټاکل",
+			"myLanguagesItem": "زما ژبې",
+			"languageMenuTranslate": "دا ليکنه انگليسي ته ژباړل"
+		},
+		"languageMenu": {
+			"TranslateUI": "خپلې ژبې ته ژباړل"
+		},
+		"languages": {
+			"fi": "فينلينډي",
+			"en": "انگليسي",
+			"sv": "سوېډني",
+			"es": "سپانيايي"
+		}
+	},
+	"Banner": {
+		"WLM": "ويکي‌يادگارونو سره مينه $1",
+		"WLMButton": "انځور راپورته‌کول"
+	}
+}

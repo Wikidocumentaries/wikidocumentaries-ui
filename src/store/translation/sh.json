@@ -1,13 +1,42 @@
 {
 	"@metadata": {
 		"authors": [
-			"Vlad5250",
-			"Abijeet Patro"
+			"Vlad5250"
 		]
 	},
 	"LandingPage": {
 		"search": "Traži",
-		"searchInputPlaceHolder": "Pronađite temu ili izradite novu"
+		"searchInputPlaceHolder": "Pronađite temu ili izradite novu",
+		"searchInputSearchOnly": "Nađi temu",
+		"showMore": "Prikaži više stavki",
+		"createNew": "Napravi novu stavku",
+		"intro": "Wikidokumentari su wiki za malu povijest — mjesto za skupljanje tragova povijesti i njihovo pretvaranje u priče. Započnite traženjem teme koja vas zanima!",
+		"titleStatus": "Status",
+		"status": "Sajt je u probnoj fazi (demo). Mnoge od najvažnijih mogućnosti za sada nisu dostupne; također, sajt možda neće raditi prema svim očekivanjima.",
+		"moreBelow": "Pročitajte više u nastavku",
+		"more": "Pročitajte više",
+		"moreLink": "Pročitajte više na",
+		"titleTopics": "Teme",
+		"titleMedia": "Slike i snimke",
+		"statusMedia": "Slike i snimke za sada se preuzimaju s Finna.fi, Flickr i Ostave. Radimo na točnijem pronalaženju slika i poboljšanju metapodataka za svaki od izvora. Svi novi izvori slike i snimci su dobrodošli!",
+		"titleTools": "Alati",
+		"titleLanguages": "Jezici",
+		"titleTechnology": "Tehnologija",
+		"titleCreators": "Tvoritelji",
+		"titleTeam": "Tim",
+		"titleThanks": "S posebnom zahvalnošću",
+		"titlePartners": "Partneri",
+		"titleFunding": "S ljubaznom podrškom",
+		"titleBy": "Projekt na",
+		"titleTranslate": "Prevođenje",
+		"titleContent": "Dodavajte svoj sadržaj",
+		"joinContent": "Ako imate sliku, snimak, dokument, mapu ili zbirku podataka što želite da bude ovdje, tada dajte pogledati ih zajedno da vidimo jesu li dovoljno podobni se uklopiti u neki od postojećih dovodnika, ili trebamo pronaći novi način povezivanja. Radujemo se organiziranju radionica za predstavljanje povijesnog saznanja zajedno sa zajednicama od interesa.",
+		"titleDevelop": "Stvarajte alate i općonastavne zadatke.",
+		"joinDevelop": "Želimo dodati više alata i stvoriti nove zadatke opće namjene u suradnji s organizacijama i razvojnicima alata.",
+		"facebook": "Grupa na Facebooku",
+		"blog": "Blog",
+		"email": "E-pošta",
+		"github": "Skaldište Github"
 	},
 	"MainPage": {
 		"topicPageName": "Tematska stranica",
@@ -17,7 +46,7 @@
 		"returnToHomeMessage": "Nazad na početnu stranicu"
 	},
 	"WaitPage": {
-		"waitMessage": "Molimo pričekajte... Preuzimam podaci iz Wikipedije, Wikipodataka, Ostave, Map Warper, Finna, Flickr ..."
+		"waitMessage": "Molimo pričekajte... Preuzimam podatke iz Wikipedije, Wikipodataka, Ostave, MapWarper, Finna, Flickr ..."
 	},
 	"topic_page": {
 		"BaseMapDialog": {
@@ -33,31 +62,62 @@
 		},
 		"TopicImages": {
 			"headerTitle": "Slike iz arhiva",
+			"intro": "Ove slike se skupljaju iz nekoliko izvora i ne moraju uvijek biti točne i reprezentativne za temu. Možete vidjeti izvornu sliku i smjestiti je na kartu, ako postoji postavna igla.",
 			"actionsMenu": {
+				"menuTitle": "Prikaži i rasporedi slike",
+				"tooltip": "Prikaži ili rasporedi slike",
 				"showImagesOnMapMenuText": "Prikaži sve slike na mapi",
-				"showImagesOnTimelineMenuText": "Prikaži sve slike u vrijemeslijedu"
+				"showImagesOnTimelineMenuText": "Prikaži sve slike u vrijemeslijedu",
+				"selectPortraits": "Odaberite kvalitetne portrete ove osobe",
+				"arrangeByTime": "Sortiraj slike po vremenu",
+				"selectWorks": "Izaberite slike s radova"
+			},
+			"facetMenu": {
+				"menuTitle": "Aspektne slike iz",
+				"menuTooltip": "Aspektne slike prema drugim kriterijima",
+				"time": "vrijeme",
+				"map": "karta",
+				"people": "ljudi",
+				"places": "mjesta",
+				"topics": "teme",
+				"form": "oblik",
+				"imageSize": "veličina slike",
+				"large": "velika",
+				"medium": "srednja",
+				"small": "mala",
+				"type": "vrsta medija",
+				"creator": "tvorac",
+				"platform": "platforma",
+				"source": "izvor",
+				"saveSelection": "Spremi izabrano kao zbirka",
+				"clear": "Poništi izbor"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Radnje",
 				"menuTooltip": "Radnje",
 				"doGeolocatingText": "Zadaj lokaciju...",
-				"showImageText": "Prikaži sliku"
+				"showImageText": "Prikaži sliku",
+				"selectFeatured": "Napravi je slikom zaglavlja"
 			},
 			"imagesRemoveMenu": {
 				"menuTitle": "Ukloni sliku jer...",
+				"shortMenuTitle": "Ukloni sliku",
 				"menuTooltip": "Ukloni sliku",
 				"remDepicted": {
 					"menuTitle": "Prikazuje ovu temu umjesto navedene",
+					"shortMenuTitle": "Prikazuje drugu",
 					"search": "Pretraži temu",
 					"browse": "Pregledaj povezane teme"
 				},
 				"remCreator": {
-					"menuTitle": "Je djelo ovog kreatora, umjesto navedenog",
-					"search": "Pretraži kreatora",
+					"menuTitle": "Je djelo ovog tvoritelja, umjesto navedenog",
+					"shortMenuTitle": "Djelo je drugog tvoritelja",
+					"search": "Pretraži tvoritelja",
 					"browse": "Pregledaj povezane stvaraoce"
 				},
 				"remInappropriate": {
 					"menuTitle": "Neugodna jer",
+					"shortMenuTitle": "Neugodna je",
 					"privacy": "Ona krši privatnost prikazane osobe",
 					"violence": "To pokazuje brutalno nasilje",
 					"sex": "Prikazuje očigledan spolni odnos",
@@ -102,18 +162,9 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Pročitajte članak na drugom jeziku",
-				"translateArticleText": "Prevedite članak na svoj jezik",
+				"translateArticleText": "Prevedite ovaj članak na svoj jezik",
 				"otherLanguagestext": "Drugi jezici"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Osobe povezane s ovom temom",
-			"menuTitle": "Prikaži",
-			"showBorn": "Rođeni ovdje",
-			"showDied": "Umrli su ovdje",
-			"showBuried": "Sahranjeni ovdje",
-			"showRelated": "Inače povezani",
-			"showAll": "Sve"
 		}
 	},
 	"map_place_match_page": {
@@ -148,7 +199,18 @@
 			"actionMenuTitle": "Radnje",
 			"actionMenuTooltip": "Radnje",
 			"languageMenuTitle": "Izaberite jezik",
-			"myLanguagesItem": "Moji jezici"
+			"myLanguagesItem": "Moji jezici",
+			"languageMenuTranslate": "Prevedite ovaj članak na srpskohrvatski"
+		},
+		"languages": {
+			"fi": "finski",
+			"en": "engleski",
+			"sv": "švedski",
+			"es": "spanski"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki voli spomenike $1",
+		"WLMButton": "Otpremi sliku"
 	}
 }
