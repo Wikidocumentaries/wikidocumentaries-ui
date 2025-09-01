@@ -4,6 +4,7 @@
 			"Abijeet Patro",
 			"Ajeje Brazorf",
 			"BaRaN6161 TURK",
+			"McDutchie",
 			"Robby",
 			"Susannaanas"
 		]
@@ -58,7 +59,7 @@
 				"optionClear": "Menu option clear sort order in the Sort menu of the 'Depicted in' section"
 			},
 			"facetMenu": {
-				"title": "Menu title of the Facet menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"title": "“Facet” is a verb. Menu title of the Facet menu of the “Depicted in” section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.Depicted.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-topic page.Depicted.facetMenu.optionColl}}",
 				"tooltip": "Menu tooltip of the Facet menu of the 'Depicted in' section",
 				"optionType": "Menu option to facet by item type in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound\n\n{{Identical|Type}}",
 				"optionColl": "Menu option to facet by creator in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound"
@@ -108,7 +109,7 @@
 				"optionClear": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound"
 			},
 			"facetMenu": {
-				"title": "Menu title of the Facet menu in the Locations section - The menu title and the option form a compound",
+				"title": "“Facet” is a verb. Menu title of the Facet menu in the Locations section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionColl}}\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionCity}}",
 				"tooltip": "The Facet menu tooltip of the Locations section",
 				"optionType": "Option to facet by type of location in the Facet menu of the Locations section - The menu title and the option form a compound\n{{Identical|Type}}",
 				"optionColl": "Option to facet by creator in the Facet menu of the Locations section - The menu title and the option form a compound",
@@ -139,7 +140,7 @@
 			"sortMenuOptionFirst": "Menu item for sorting by first name",
 			"sortMenuOptionLast": "Menu item for sorting by last name",
 			"sortMenuOptionClear": "Menu item for clearing the current sort order",
-			"facetMenuTitle": "Menu title of the Facet menu in the People component",
+			"facetMenuTitle": "“Facet” is a verb. Menu title of the Facet menu in the People component. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionProfession}}\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionCountry}}\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionCity}}",
 			"facetMenuTooltip": "Menu tooltip of the Facet menu in the People section",
 			"facetMenuOptionProfession": "Menu item for faceting by profession",
 			"facetMenuOptionCountry": "Menu item for faceting by country",
@@ -161,7 +162,7 @@
 				"selectWorks": "Menu item in the Actions menu for the Images section"
 			},
 			"facetMenu": {
-				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
+				"menuTitle": "“Facet” is a verb. Menu title of the Facet menu in the Images section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.time}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.map}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.people}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.places}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.topics}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.form}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.imageSize}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.large}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.medium}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.small}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.type}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.creator}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.platform}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.source}}",
 				"menuTooltip": "Menu tooltip of the Facet menu in the Images section",
 				"time": "Menu option in the Facet menu in the Images section to facet by time - the title and the option form a compound\n{{Identical|Time}}",
 				"map": "Option Map in the Faceting menu\n\n{{Identical|Map}}",
@@ -387,6 +388,7 @@
 	},
 	"menus": {
 		"facetMenu": {
+			"title": "“Facet” is a verb. Menu title for facetting by type, creator, or location. See:\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionColl}}\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionCity}}",
 			"optionType": "{{Identical|Type}}",
 			"optionCity": "{{Identical|Location]}"
 		},
@@ -403,7 +405,7 @@
 			"actionMenuTooltip": "Tooltip text for the Actions menu\n{{Identical|Action}}",
 			"languageMenuTitle": "Menu title for the Language menu",
 			"myLanguagesItem": "Menu item for the My languages menu",
-			"languageMenuTranslate": "Option to translate the article in the Languages menu. Use the name of your language instead of English"
+			"languageMenuTranslate": "Option to translate the article in the Languages menu. <span style=\"color:red\">'''Use the name of your language instead of English!'''</span>"
 		},
 		"languageMenu": {
 			"TranslateUI": "Use the name of your language in place of <your language>"

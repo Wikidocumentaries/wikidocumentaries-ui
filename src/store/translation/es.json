@@ -12,6 +12,7 @@
 			"JenyxGym",
 			"Juenti el toju",
 			"MarcoAurelio",
+			"McDutchie",
 			"Ryo567",
 			"Susannaanas",
 			"Yel Martinez Seo"
@@ -108,8 +109,8 @@
 				"optionClear": "Borrar clasificación"
 			},
 			"facetMenu": {
-				"title": "facetas funciona mediante",
-				"tooltip": "facetas funciona mediante diferentes criterios",
+				"title": "Facetar a los obras por",
+				"tooltip": "Facetar a los obras por diferentes criterios",
 				"optionType": "Tipo",
 				"optionColl": "Creador"
 			},
@@ -162,8 +163,8 @@
 				"optionClear": "Borrar clasificación"
 			},
 			"facetMenu": {
-				"title": "ubicación de la faceta por",
-				"tooltip": "ubicación de la faceta por diferentes criterios",
+				"title": "Facetar a las ubicaciónes por",
+				"tooltip": "Facetar a las ubicaciónes por diferentes criterios",
 				"optionType": "Tipo",
 				"optionColl": "Creador",
 				"optionCity": "Ubicación"
@@ -224,7 +225,7 @@
 			"sortMenuOptionFirst": "Por nombre de pila",
 			"sortMenuOptionLast": "Por apellidos",
 			"sortMenuOptionClear": "Borrar clasificación",
-			"facetMenuTitle": "Faceta por",
+			"facetMenuTitle": "Facetar por",
 			"facetMenuTooltip": "Facetar a las personas por diferentes aspectos",
 			"facetMenuOptionProfession": "Profesión",
 			"facetMenuOptionCountry": "País",
@@ -263,8 +264,8 @@
 				"selectWorks": "Seleccionar imágenes de obras"
 			},
 			"facetMenu": {
-				"menuTitle": "Imágenes facetadas por",
-				"menuTooltip": "Imágenes facetadas por diferentes criterios",
+				"menuTitle": "Facetar a las imágenes por",
+				"menuTooltip": "Facetar a las imágenes por diferentes criterios",
 				"time": "tiempo",
 				"map": "mapa",
 				"people": "personas",
@@ -349,8 +350,8 @@
 			"sortMenuOptionAlpha": "Por orden alfabético",
 			"sortMenuOptionDist": "Por distancia",
 			"sortMenuOptionClear": "Borrar clasificación",
-			"facetMenuTitle": "Facetas por",
-			"facetMenuTooltip": "facetas funciona mediante diferentes criterios",
+			"facetMenuTitle": "Facetar por",
+			"facetMenuTooltip": "Facetar a los obras por otros criterios",
 			"facetMenuOptionType": "Tipo",
 			"facetMenuOptionColl": "Colección",
 			"facetMenuOptionCity": "Ubicación",
@@ -519,8 +520,8 @@
 			"optionClear": "Borrar clasificación"
 		},
 		"facetMenu": {
-			"title": "Facetas por",
-			"tooltip": "Temas facetados por diferentes criterios",
+			"title": "Facetar por",
+			"tooltip": "Facetar a los temas por diferentes criterios",
 			"optionType": "Tipo",
 			"optionColl": "Creador",
 			"optionCity": "Ubicación"

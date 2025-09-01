@@ -537,7 +537,7 @@
 			"languageMenuTitle": "選擇語言",
 			"languageMenuTooltip": "選擇您的語言",
 			"myLanguagesItem": "我的語言",
-			"languageMenuTranslate": "翻譯此條目成英語"
+			"languageMenuTranslate": "翻譯此條目成繁體中文"
 		},
 		"languageMenu": {
 			"TranslateUI": "翻譯成您使用的語言"

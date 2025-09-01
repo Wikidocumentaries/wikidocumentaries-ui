@@ -227,8 +227,8 @@
 		"menus": {
 			"actionMenuTitle": "Ардамаш",
 			"actionMenuTooltip": "Ардамаш",
-			"languageMenuTitle": "Харжа мотт",
-			"languageMenuTooltip": "Харжа мотт",
+			"languageMenuTitle": "Мотт харжа",
+			"languageMenuTooltip": "Хьайн мотт харжа",
 			"myLanguagesItem": "Сан меттанаш"
 		},
 		"languages": {

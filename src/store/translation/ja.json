@@ -5,6 +5,7 @@
 			"Funa-enpitu",
 			"Higa4",
 			"MathXplore",
+			"McDutchie",
 			"Mogumin",
 			"Omotecho",
 			"Shirayuki"
@@ -523,7 +524,7 @@
 			"languageMenuTitle": "言語を選択",
 			"languageMenuTooltip": "あなたの言語を選択",
 			"myLanguagesItem": "自分の言語",
-			"languageMenuTranslate": "この記事を英語に翻訳する"
+			"languageMenuTranslate": "この記事を日本語に翻訳する"
 		},
 		"languageMenu": {
 			"TranslateUI": "あなたの言語に翻訳する"

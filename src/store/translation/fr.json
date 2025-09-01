@@ -6,6 +6,7 @@
 			"Florian COLLIN",
 			"Gomoko",
 			"JenyxGym",
+			"McDutchie",
 			"Pols12",
 			"Thibaut120094",
 			"Trizek (WMF)",
@@ -546,7 +547,7 @@
 			"languageMenuTitle": "Choisir la langue",
 			"languageMenuTooltip": "Choisissez votre langue",
 			"myLanguagesItem": "Mes langues",
-			"languageMenuTranslate": "Traduire cet article en anglais"
+			"languageMenuTranslate": "Traduire cet article en français"
 		},
 		"languageMenu": {
 			"TranslateUI": "Traduisez dans votre langue"
