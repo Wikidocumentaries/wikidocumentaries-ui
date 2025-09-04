@@ -232,10 +232,24 @@
 			"facetMenuOptionCity": "Geslacht"
 		},
 		"Seasons": {
-			"headerTitle": "Seizoenen"
+			"headerTitle": "Seizoenen",
+			"intro": "Zie de seizoenen van deze activiteit."
+		},
+		"Subclasses": {
+			"headerTitle": "Subklassen van dit onderwerp",
+			"intro": "Zie subklassen van dit onderwerp. Bekijk als lijst om ook vermeldingen zonder afbeelding te zien."
 		},
 		"Teams": {
+			"headerTitle": "Deelnemende teams",
 			"intro": "Teams die aan deze wedstrijd, serie of toernooi deelnemen."
+		},
+		"Things": {
+			"headerTitle": "Focuslijstonderwerpen",
+			"intro": "Deze onderwerpen staan op de focuslijst van dit Wikiproject."
+		},
+		"Twins": {
+			"headerTitle": "Partnersteden",
+			"intro": "Partnersteden, zustersteden, zustergemeenten en andere plaatsen met een partnerschap of samenwerkingsovereenkomst, wettelijk of informeel erkend door hun overheid. U kunt ze sorteren op tijd en naam. Om alle onderwerpen te zien, ook die zonder afbeelding, moet u ze als lijst weergeven."
 		},
 		"TopicImages": {
 			"headerTitle": "Beelden uit archieven",
@@ -287,21 +301,49 @@
 					"browse": "Aanverwante onderwerpen doorbladeren"
 				},
 				"remCreator": {
-					"menuTitle": "In plaats daarvan is dit de auteur"
+					"menuTitle": "In plaats daarvan is dit de auteur",
+					"shortMenuTitle": "Het is van een andere maker",
+					"search": "Naar de maker zoeken",
+					"browse": "Aanverwante actoren doorbladeren"
 				},
 				"remInappropriate": {
-					"shortMenuTitle": "Het is ongepast"
+					"menuTitle": "Het is ongepast want",
+					"shortMenuTitle": "Het is ongepast",
+					"privacy": "Het schendt de privacy van de afgebeelde persoon",
+					"violence": "Het vertoont extreem geweld",
+					"sex": "Het vertoont expliciete seks",
+					"copyvio": "Het schendt het auteursrecht",
+					"explain": "Laat een notitie achter om uit te leggen"
 				}
-			}
+			},
+			"imagesViewExternal": "Oorspronkelijke afbeelding bekijken",
+			"imagesViewOnMap": "Afbeelding op een kaart bekijken"
 		},
 		"TopicMap": {
+			"headerTitle": "Onderwerp op de kaart",
+			"intro": "De plek van het onderwerp wordt op de kaart weergegeven. U kunt ook de afbeeldingen en andere gegevens op de kaart weergeven of een historische kaart als basislaag kiezen.",
+			"chooseHistoricalBasemapMenuText": "Historische basiskaart(en) kiezen…",
+			"hideImagesMenuText": "Afbeeldingen verbergen",
+			"chooseTimelineMapsMenuText": "Tijdlijnkaarten kiezen…",
 			"showNearbyPlacesMenuText": "Toon plaatsen in de buurt",
-			"hideNearbyPlacesMenuText": "Verberg plaatsen in de buurt"
+			"hideNearbyPlacesMenuText": "Verberg plaatsen in de buurt",
+			"extLink": {
+				"menuTooltip": "Bekijken of bewerken in OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Krantenknipsels",
+			"searhTopicFromArchivesMenuText": "In de kranten van de Nationale Bibliotheek van Finland zoeken",
+			"addClipFromArchivesMenuText": "Knipsel toevoegen…"
 		},
 		"TopicTimeline": {
-			"headerTitle": "Tijdlijn"
+			"headerTitle": "Tijdlijn",
+			"showEventsOnTimelineMenuText": "Onderwerpgebeurtenissen op de tijdlijn weergeven",
+			"centuryText": "Eeuw"
 		},
 		"Works": {
+			"headerTitle": "Werken",
+			"intro": "Dit zijn werken van de persoon, het collectief of de organisatie die het onderwerp van deze pagina is. U kunt een pagina openen met alle informatie over het werk door erop te klikken. Alleen werken met afbeeldingen worden getoond. Geef als lijst weer om alle gerelateerde werken te zien die zijn opgeslagen.",
 			"sortMenuTitle": "Ordenen",
 			"sortMenuTooltip": "Items sorteren",
 			"sortMenuOptionTime": "Op tijd",
@@ -312,56 +354,152 @@
 			"facetMenuTooltip": "Werken facetteren op verschillende criteria",
 			"facetMenuOptionType": "Type",
 			"facetMenuOptionColl": "Collectie",
-			"facetMenuOptionCity": "Locatie"
+			"facetMenuOptionCity": "Locatie",
+			"displayMenuTitle": "Weergeven als",
+			"displayMenuTooltip": "Weergave kiezen",
+			"displayMenuOptionGallery": "Galerij",
+			"displayMenuOptionList": "Lijst",
+			"displayMenuOptionMap": "Kaart",
+			"showAll": "Alle"
+		},
+		"Wikidata": {
+			"headerTitle": "Feiten",
+			"extLink": {
+				"linkTitleWD": "Bekijken of bewerken in Wikidata"
+			},
+			"noTopicFoundText": "Onderwerp niet gevonden"
 		},
 		"Wikipedia": {
 			"headerTitle": "Onderwerp",
+			"missingArticle": "Er is geen artikel over dit onderwerp in uw taal. U kunt het artikel in een andere beschikbare taal lezen door uit het taalmenu hierboven een taal te kiezen. U kunt het artikel in uw eigen taal aanmaken door op het pluspictogram te klikken.",
+			"missingArticleMissing": "Er is geen artikel over dit onderwerp in uw taal.",
+			"missingArticleChoose": "U kunt het artikel in een andere beschikbare taal lezen door een keuze te maken uit het taalmenu hierboven. U kunt het artikel ook in uw eigen taal aanmaken door op het pluspictogram te klikken.",
+			"missingArticleCreate": "U kunt dit artikel in uw taal aanmaken door op het plus-pictogram te klikken.",
+			"missingArticleFallback": "Dit artikel in een andere taal wordt u getoond op basis van uw taalvoorkeuren.",
+			"missingArticleTranslate": "U kunt dit artikel in uw taal vertalen door het uit te kiezen in het taalmenu.",
+			"missingArticleAuto": "Deze korte tekst is automatisch gegenereerd op basis van de geregistreerde feiten. U kunt deze conceptversie opslaan en beginnen met het bewerken van het artikel.",
+			"extLink": {
+				"linkTitleWP": "In Wikipedia lezen of bewerken"
+			},
+			"addLink": {
+				"linkTitleWP": "Een artikel in Wikipedia aanmaken"
+			},
 			"languageMenu": {
+				"menuTitle": "Het artikel in een andere taal lezen",
+				"translateArticleText": "Dit artikel in het Nederlands vertalen",
 				"otherLanguagestext": "Andere talen"
 			}
 		}
 	},
 	"imageViewer": {
 		"imageMetadata": {
+			"caption": "Bijschrift",
 			"addCaption": "Bijschrift toevoegen",
+			"description": "Beschrijving",
+			"addDescription": "Beschrijving toevoegen",
+			"creator": "Maker",
 			"creatorUnknown": "Onbekend",
+			"addCreator": "Maker toevoegen",
+			"removeCreator": "Maker verwijderen",
+			"dateDepicted": "Afbeeldingsdatum",
 			"addDateDepicted": "Afbeeldingsdatum toevoegen",
+			"removeDateDepicted": "Afbeeldingsdatum verwijderen",
+			"dateCreated": "Aanmaakdatum",
+			"addDateCreated": "Aanmaakdatum toevoegen",
 			"removeDateCreated": "Aanmaakdatum verwijderen",
+			"publisher": "Uitgever",
+			"addPublisher": "Uitgever toevoegen",
+			"removePublisher": "Uitgever verwijderen",
 			"format": "Indeling",
 			"addFormat": "Indeling toevoegen",
+			"removeFormat": "Opmaak verwijderen",
 			"technique": "Techniek",
+			"addTechnique": "Techniek toevoegen",
 			"removeTechnique": "Techniek verwijderen",
+			"depicted": "Afbeelding toont",
+			"genre": "Genre",
 			"addGenre": "Soort toevoegen",
+			"removeGenre": "Genre verwijderen",
+			"depicts": "Afbeelding toont",
 			"addTopic": "Onderwerp toevoegen",
 			"removeTopic": "Onderwerp verwijderen",
 			"location": "Locatie",
 			"locationMap": "Plek op de kaart",
 			"addLocation": "Locatie toevoegen",
+			"removeLocation": "Locatie verwijderen",
 			"address": "Straatadres",
+			"addAddress": "Straatadres toevoegen",
+			"removeAddress": "Straatadres verwijderen",
+			"depictedPeople": "Afgebeelde mensen",
 			"addPerson": "Persoon toevoegen",
 			"removePerson": "Persoon verwijderen",
 			"event": "Gebeurtenis",
 			"addEvent": "Gebeurtenis toevoegen",
+			"removeEvent": "Gebeurtenis verwijderen",
 			"institution": "Instelling",
 			"collection": "Collectie",
+			"addCollection": "Collectie toevoegen",
+			"inventoryNumber": "Inventarisnummer",
 			"inscriptions": "Inscripties",
 			"measurements": "Afmetingen",
 			"copyright": "Auteursrecht",
 			"license": "Auteursrechtelijke licentie",
+			"work": "Werk weergegeven in de afbeelding",
 			"photograph": "Fotograaf",
 			"image": "Afbeelding",
 			"photographer": "Fotograaf",
 			"addPhotographData": "Voeg informatie over de foto toe",
+			"copyrightNotePD": "De afbeelding is onder de licentie $1 ingedeeld, maar op basis van de metagegevens valt de afbeelding onder het publieke domein.",
+			"copyrightNoteSame": "Dezelfde afbeelding valt onder de vrijere licentie $1, dus dit geldt ook voor deze afbeelding.",
+			"creditline": "Naamsvermeldingsregel",
+			"attribution": "Naamsvermelding",
 			"digitalCopy": "Digitale kopie",
+			"publishingPlatform": "Publicatieplatform",
 			"platformId": "ID",
+			"provider": "Inhoudsaanbieder",
+			"imageInfoPage": "Afbeeldingsinfopagina",
+			"imageDimensions": "Afbeeldingsafmetingen",
+			"fileSize": "Bestandsgrootte",
 			"fileFormat": "Bestandsindeling",
 			"remove": "Verwijderen",
-			"addData": "Gegevens toevoegen"
+			"moveTo": "Naar een ander veld verplaatsen",
+			"addData": "Gegevens toevoegen",
+			"uploader": "Uploader",
+			"rotate": "Draaien"
 		},
 		"imageActions": {
-			"horizontal": "horizontaal"
+			"rotateImage": "Afbeelding roteren",
+			"clockwise": "rechtsom",
+			"counterclockwise": "linksom",
+			"flip": "Spiegelen",
+			"horizontal": "horizontaal",
+			"vertical": "verticaal"
 		},
 		"closeViewer": "Weergaveprogramma sluiten"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Plaatsnamen combineren"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Historische kaarten doorzoeken",
+			"filterBySourceMenuText": "Op bron filteren…",
+			"filterByTimeMenuText": "Op tijd filteren…",
+			"filterByMapMenuText": "Via kaart filteren…"
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Voor de historische basiskaart, zie naamsvermeldingen en auteursrecht van",
+			"attribution2PrefixText": "Gecorrigeerde kaart van"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparantie van de historische basiskaart:"
+		}
 	},
 	"menus": {
 		"sortMenu": {
@@ -372,8 +510,14 @@
 			"optionEnd": "Op eindtijd",
 			"optionTitle": "Op titel",
 			"optionCause": "Op oorzaak",
+			"optionPartof": "Op item waar dit deel van uitmaakt",
+			"optionSuperclass": "Op klasse waar dit een subklasse van is",
 			"optionAlpha": "Alfabetisch",
-			"optionRev": "Rangschikking omkeren"
+			"optionTitleAlpha": "Alfabetisch op titel",
+			"optionCreatorAlpha": "Alfabetisch op maker",
+			"optionDist": "Op afstand",
+			"optionRev": "Rangschikking omkeren",
+			"optionClear": "Ordening wissen"
 		},
 		"facetMenu": {
 			"title": "Facetteren op",
@@ -384,14 +528,21 @@
 		},
 		"displayMenu": {
 			"title": "Weergeven als",
+			"tooltip": "Weergave kiezen",
 			"optionGallery": "Galerij",
 			"optionList": "Lijst"
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
+		"ok": "OK",
 		"cancel": "Annuleren",
 		"helpText": "Hulp",
+		"expand": "Deze sectie uitklappen",
+		"collapse": "Deze sectie inklappen",
 		"menus": {
+			"actionMenuTitle": "Handelingen",
+			"actionMenuTooltip": "Handelingen",
 			"languageMenuTitle": "Taal kiezen",
 			"languageMenuTooltip": "Uw taal kiezen",
 			"myLanguagesItem": "Mijn talen",
@@ -408,6 +559,8 @@
 		}
 	},
 	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Maak foto's van dit culturele erfgoed en doe mee aan de fotowedstrijd $2!",
 		"WLMButton": "Afbeelding uploaden"
 	}
 }
