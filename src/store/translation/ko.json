@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bisang",
 			"Gongsoonyee",
 			"McDutchie",
 			"Songhee",
@@ -355,7 +356,7 @@
 			"languageMenuTitle": "언어 선택",
 			"languageMenuTooltip": "내 언어 선택",
 			"myLanguagesItem": "내 언어",
-			"languageMenuTranslate": "이 문서를 영어로 번역"
+			"languageMenuTranslate": "이 문서를 한국어로 번역"
 		},
 		"languageMenu": {
 			"TranslateUI": "내 언어로 번역하기"
