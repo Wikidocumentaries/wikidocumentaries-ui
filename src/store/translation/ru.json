@@ -549,7 +549,7 @@
 			"languageMenuTitle": "Выбрать язык",
 			"languageMenuTooltip": "Выберите язык",
 			"myLanguagesItem": "Мои языки",
-			"languageMenuTranslate": "Перевести статью на английский"
+			"languageMenuTranslate": "Перевести эту статью на русский"
 		},
 		"languageMenu": {
 			"TranslateUI": "Переведите на свой язык"
