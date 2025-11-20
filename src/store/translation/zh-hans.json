@@ -1,0 +1,569 @@
+{
+	"@metadata": {
+		"authors": [
+			")8",
+			"22593",
+			"500000000006城",
+			"A Chinese Wikipedian",
+			"A Retired User",
+			"GuoPC",
+			"Lantianjialiang",
+			"LittlePaw365",
+			"Shuiwater",
+			"TFX202X",
+			"Winston Sung",
+			"七八年再来一次",
+			"列维劳德",
+			"沈澄心",
+			"科劳"
+		]
+	},
+	"LandingPage": {
+		"search": "搜索",
+		"searchInputPlaceHolder": "查找话题或创建新话题",
+		"searchInputSearchOnly": "寻找主题",
+		"showMore": "显示更多项目",
+		"createNew": "创建新项",
+		"intro": "Wikidocumentaries是一个关于小历史的wiki—一个汇集历史痕迹并把它们变成故事的地方。从寻找一个感兴趣的话题开始",
+		"titleDescription": "什么是维基纪录片？",
+		"description": "Wikidocumentaries 是一个让公众史学家利用的创作空间。 它结合了有关主题的信息 — 人物、地点、建筑、活动等等。 您可以通过以下任何记录连接来在主题之间穿越，例如家族关系、创作者、创作内容或是隶属。 主题会以图片以及来自于关联博物馆、存档、或图书馆的地图来说明。 在 Wikidocumentaries 里，可做出纠正现有信息与添加新主题、带入您个人持有的图片和记事，以及使用所有素材在您个人的目的上。",
+		"titleStatus": "状态",
+		"status": "本站点尚在试运行。请注意，某些功能暂时不可用，页面可能无法正常运行。",
+		"moreBelow": "阅读以下更多",
+		"more": "阅读更多",
+		"moreLink": "阅读更多于",
+		"titleTopics": "主题",
+		"statusTopics": "主题取自 Wikidata 。如果内容超出 Wikidata 的范围，则稍后可以在 Wikidocumentaries 中创建新主题。仍然可以使用 Wikidata 的丰富选项来描述主题。当前文章来自维基百科，而稍后可以为仅存在于 Wikidocumentaries 中的主题在本地创建文章。",
+		"titleMedia": "媒体",
+		"statusMedia": "多媒体内容读取自提供开放许可媒体文件的越来越多的媒体存储库。 我们正在努力更准确地查找图像，以及从各来源展示出更多与更好的诠释数据。 另外我们也欢迎新的多媒体来源！",
+		"titleTools": "工具",
+		"statusTools": "Wikidocumentaries 拥有处理内容的任务和工具。条目已能使用 Content Translation 在不同语言之间进行翻译。我们正在准备使用 Wikidata 进行的关键字标注和一个用于图像位置的地理标记工具。会创建或集成出新的有趣且实用的工具。",
+		"titleLanguages": "语言",
+		"statusLanguages": "Wikidocumentaries 可以被 Wikidata 中的任何语言导航。这对小语种来说是一个绝佳的机会。翻译工作在 translateWiki 中完成。",
+		"titleTechnology": "技术",
+		"statusTechnology": "Wikidocumentaries 从 Wikidata 读取核心数据。此外，Wikidocumentaries 将拥有自己的 Wikibase，用于 Wikidata 范围之外的主题。Wikidata 和 Wikidocumentaries 有望作为联合 Wikibase 同步。其次，图像元数据链接到 Wikidata 项目，并且这些数据可以与 Wikimedia Commons 上的结构化数据同步。该网站使用 Vue.js 构建，并托管在 Wikimedia Cloud Services 上。",
+		"titleCreators": "创建者",
+		"titleTeam": "学期",
+		"titleThanks": "特别感谢",
+		"titlePartners": "合作伙伴",
+		"titleFunding": "友善支持来自",
+		"titleBy": "项目来自",
+		"getInvolved": "参与！",
+		"titleTranslate": "翻译",
+		"joinTranslate": "快来将您的语言带入 Wikidocumentaries 吧。加入翻译志愿者团队，让相关的文化遗产在您的语言中焕发新生。",
+		"titleContent": "添加您的评论",
+		"joinContent": "如果您有照片、媒体、文档、地图或数据集合希望在这里看到，让我们一起看看它是否已经可以通过现有渠道之一进行连接，或者我们是否可以创建新的连接方法。我们也期待安排出与与感兴趣的社区一同记录历史知识的研讨会。",
+		"titleDevelop": "创建工具和群众外包任务。",
+		"joinDevelop": "我们希望与各组织和工具开发者合作，不断添加更多工具，并创造新的众包任务。让我们携手打造下一个精彩的众包应用！",
+		"titleContact": "取得联系！",
+		"facebook": "脸书群组",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "博客",
+		"email": "邮箱",
+		"github": "Github代码池"
+	},
+	"MainPage": {
+		"topicPageName": "主题页面",
+		"mapPlaceMatchPageName": "结合地点名称",
+		"mapSearchPageName": "搜索地图",
+		"wikiTopicErrorMessage": "在当前语言中找不到该主题的维基百科页面，或者发生了其他意外错误。",
+		"returnToHomeMessage": "返回着陆页"
+	},
+	"WaitPage": {
+		"waitMessage": "请稍等；五湖四海的数据正鱼贯而出维基百科、维基数据、维基媒体公共领域、MapWarper，Finna，Flickr……"
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "附属",
+			"intro": "此人或组织有所属组织。"
+		},
+		"Awards": {
+			"headerTitle": "奖项",
+			"intro": "此页面主题的题名与奖项。"
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "选择历史底图",
+			"chooseMapHelpNote": "提示：按住 Ctrl 键并单击可以选择多张地图",
+			"yearAbbreviation": "年"
+		},
+		"Collection": {
+			"headerTitle": "收藏里的作品",
+			"intro": "这些作品由此人或机构收藏。您可以选择以列表形式显示，可以显示不带图片的作品。您可以按日期或名称排序。注意只有拥有这些信息的人员才会显示。"
+		},
+		"Cups": {
+			"headerTitle": "游戏、系列赛和锦标赛",
+			"intro": "该俱乐部参加了以下比赛、系列赛和锦标赛"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "这些是主题人物的专门活动。"
+		},
+		"Depicted": {
+			"headerTitle": "描述于",
+			"intro": "这些作品描绘了此主题。按不同标准对作品进行排序，以列表显示查看没有图像的作品。",
+			"sortMenu": {
+				"title": "排序作品",
+				"tooltip": "排序作品",
+				"optionTime": "按时间",
+				"optionAlpha": "按字母顺序",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"title": "分面作品依",
+				"tooltip": "分面作品依不同标准",
+				"optionType": "样式",
+				"optionColl": "创作者"
+			},
+			"displayMenu": {
+				"title": "显示为",
+				"tooltip": "选择展示方式",
+				"optionGallery": "略图排列",
+				"optionList": "列表"
+			},
+			"showAll": "全部"
+		},
+		"Depicts": {
+			"headerTitle": "描述",
+			"intro": "本作品描绘了这些主题。您可以按时间和名称排序。请注意，要查看所有主题（包括没有图片的主题），您必须以列表形式查看。"
+		},
+		"Events": {
+			"headerTitle": "重要事件",
+			"displayMenu": {
+				"menuTitle": "显示选项",
+				"menuTooltip": "显示选项",
+				"optionShowTimeline": "在时间轴上展示事件",
+				"optionShowList": "以列表形式展示事件"
+			},
+			"optionsMenu": {
+				"menuTitle": "选项",
+				"menuTooltip": "选择要显示的详情",
+				"optionWorks": "展示作品",
+				"optionRelatedPeople": "展示相关人物的事件",
+				"subRelatedPeopleConf": {
+					"menuTitle": "配置"
+				},
+				"optionRelatedTopics": "展示相关主题的事件"
+			}
+		},
+		"Header": {
+			"titleEditText": "编辑标题",
+			"titleApproveText": "核准该标题",
+			"subtitleEditText": "编辑描述",
+			"subtitleApproveText": "核准该描述"
+		},
+		"Heritage": {
+			"headerTitle": "遗产元素"
+		},
+		"Locations": {
+			"headerTitle": "在此位置",
+			"intro": "您可以在这里看到与本页主题相关的所有内容。以列表形式显示，以查看已存储的所有位置。",
+			"sortMenu": {
+				"title": "排序位置",
+				"tooltip": "排序位置",
+				"optionTime": "按时间",
+				"optionAlpha": "按字母顺序",
+				"optionDist": "按距离",
+				"optionClear": "清除排序"
+			},
+			"facetMenu": {
+				"title": "分面位置依",
+				"tooltip": "分面位置依不同标准",
+				"optionType": "类型",
+				"optionColl": "创作者",
+				"optionCity": "位置"
+			},
+			"displayMenu": {
+				"title": "显示为",
+				"tooltip": "选择展示方式",
+				"optionGallery": "画廊",
+				"optionList": "列表"
+			},
+			"showAll": "全部"
+		},
+		"Map": {
+			"headerTitle": "地图上的位置"
+		},
+		"Parts": {
+			"headerTitle": "部分",
+			"intro": "这些部分属于此主题。您可以按时间和名称对它们进行排序。要查看所有主题（包括没有图片的主题），您必须以列表形式查看主题。"
+		},
+		"Partof": {
+			"headerTitle": "一部分的",
+			"intro": "此主题包含在这些其他主题中。您可以按时间和名称对它们进行排序。要查看所有主题（包括没有图片的主题），您必须以列表形式查看主题。"
+		},
+		"Similar": {
+			"headerTitle": "相似主题",
+			"intro": "查找与该主题具有一些共同关键特征的主题。"
+		},
+		"Effects": {
+			"headerTitle": "影响",
+			"intro": "这些就是该主题的效果。"
+		},
+		"Familytree": {
+			"headerTitle": "谱系图"
+		},
+		"Instances": {
+			"headerTitle": "此主题的实例",
+			"intro": "查看此主题的实例。以列表形式查看，还可查看不带图片的项目。"
+		},
+		"Links": {
+			"headerTitle": "来自此条目的链接"
+		},
+		"Location": {
+			"headerTitle": "位置",
+			"intro": "该主题位于这些主题之中或在这些主题的背景下。"
+		},
+		"Names": {
+			"headerTitle": "名称",
+			"intro": "查看此主题的名称和所有可用的替代方案。"
+		},
+		"People": {
+			"headerTitle": "与主题相关的人物",
+			"intro": "这些人与此页面的主题相关。您可以选择以列表形式显示他们，这样也会显示没有图片的人员。您可以按日期或姓名排序。请注意，只有包含这些信息的人员才会显示。",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "更改排序顺序",
+			"sortMenuOptionBirth": "按出生日期",
+			"sortMenuOptionDeath": "按逝世日期",
+			"sortMenuOptionName": "按名称",
+			"sortMenuOptionFirst": "按名字",
+			"sortMenuOptionLast": "按姓氏",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面人物依不同外貌",
+			"facetMenuOptionProfession": "职业",
+			"facetMenuOptionCountry": "国家",
+			"facetMenuOptionCity": "性别"
+		},
+		"Seasons": {
+			"headerTitle": "季节",
+			"intro": "查看此活动的季节"
+		},
+		"Subclasses": {
+			"headerTitle": "此主题的子类别",
+			"intro": "查看此主题的子类别。以列表形式查看，还可查看不带图片的项目。"
+		},
+		"Teams": {
+			"headerTitle": "参赛队伍",
+			"intro": "参加此比赛、系列赛或锦标赛的队伍。"
+		},
+		"Things": {
+			"headerTitle": "焦点列表主题",
+			"intro": "这些主题都在本维基专题的重点列表中。"
+		},
+		"Twins": {
+			"headerTitle": "双城",
+			"intro": "友好城镇、姊妹城市、友好城市及其他已建立伙伴关系或合作协议的地方，这些协议或协议已获得其政府的正式或非正式承认。您可以按时间和名称排序。要查看所有主题（包括没有图片的主题），您必须以列表形式查看主题。"
+		},
+		"TopicImages": {
+			"headerTitle": "档案中的图片",
+			"intro": "这些图片来自多个来源，可能并非总是准确反映主题。您可以查看原始图片，如果图片带有位置标记，还可以将其放置在地图上。",
+			"actionsMenu": {
+				"menuTitle": "显示或排列图像",
+				"tooltip": "显示或排列图像",
+				"showImagesOnMapMenuText": "在地图上显示所有图像",
+				"showImagesOnTimelineMenuText": "显示时间轴上的所有图像",
+				"selectPortraits": "选择此人的高质量肖像",
+				"arrangeByTime": "按时间排列图像",
+				"selectWorks": "选择作品图片"
+			},
+			"facetMenu": {
+				"menuTitle": "分面图片依",
+				"menuTooltip": "分面图片依不同标准",
+				"time": "时间",
+				"map": "地图",
+				"people": "人物",
+				"places": "地区",
+				"topics": "主题",
+				"form": "型",
+				"imageSize": "图像大小",
+				"large": "大",
+				"medium": "中等",
+				"small": "小号",
+				"type": "媒体类型",
+				"creator": "内容作者",
+				"platform": "车站",
+				"source": "源",
+				"saveSelection": "将选择内容保存为收藏",
+				"clear": "清除选择"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "选项",
+				"menuTooltip": "选项",
+				"doGeolocatingText": "设置位置...",
+				"showImageText": "显示图像",
+				"selectFeatured": "选择作为标题图像"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "删除图像，因为...",
+				"shortMenuTitle": "移除图像",
+				"menuTooltip": "移除图像",
+				"remDepicted": {
+					"menuTitle": "它转而描绘这一主题",
+					"shortMenuTitle": "它描绘了另一个主题",
+					"search": "搜索主题",
+					"browse": "浏览相关主题"
+				},
+				"remCreator": {
+					"menuTitle": "该内容由这位创作者提供",
+					"shortMenuTitle": "这是另一位创作者的作品",
+					"search": "寻找创作者",
+					"browse": "浏览相关行为者"
+				},
+				"remInappropriate": {
+					"menuTitle": "这是不合适的，因为",
+					"shortMenuTitle": "这是不合适的",
+					"privacy": "它侵犯了被描绘者的隐私",
+					"violence": "它展示了极端暴力",
+					"sex": "它展示出露骨的性行为",
+					"copyvio": "这侵犯了版权",
+					"explain": "留个备注说明一下"
+				}
+			},
+			"imagesViewExternal": "查看原始图片",
+			"imagesViewOnMap": "在地图上查看图片"
+		},
+		"TopicMap": {
+			"headerTitle": "地图上的主题",
+			"intro": "主题所在位置显示在地图上。您还可以在地图上显示图像和其他数据，或选择历史地图作为基础图层。",
+			"chooseHistoricalBasemapMenuText": "选择历史底图...",
+			"hideImagesMenuText": "隐藏图像",
+			"chooseTimelineMapsMenuText": "选择时间线地图...",
+			"showNearbyPlacesMenuText": "显示附近地点",
+			"hideNearbyPlacesMenuText": "隐藏附近地点",
+			"extLink": {
+				"menuTooltip": "在OpenStreetMap中查看或编辑"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "报纸剪报",
+			"searhTopicFromArchivesMenuText": "在芬兰国家图书馆的报纸中搜索",
+			"addClipFromArchivesMenuText": "添加剪报..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "时间轴",
+			"showEventsOnTimelineMenuText": "在时间线上显示主题事件",
+			"centuryText": "C"
+		},
+		"Works": {
+			"headerTitle": "作品",
+			"intro": "这些作品出自本页主题的个人、集体或组织。点击作品可进入收集相关作品全部信息的页面。仅展示包含图像的作品。以列表形式查看所有已存储的相关作品。",
+			"sortMenuTitle": "排序",
+			"sortMenuTooltip": "对项目进行排序",
+			"sortMenuOptionTime": "按时间",
+			"sortMenuOptionAlpha": "按字母顺序",
+			"sortMenuOptionDist": "按距离",
+			"sortMenuOptionClear": "清除排序",
+			"facetMenuTitle": "分面按",
+			"facetMenuTooltip": "分面作品依不同标准",
+			"facetMenuOptionType": "类型",
+			"facetMenuOptionColl": "收藏",
+			"facetMenuOptionCity": "地方",
+			"displayMenuTitle": "显示到",
+			"displayMenuTooltip": "选择显示器",
+			"displayMenuOptionGallery": "图库",
+			"displayMenuOptionList": "列表",
+			"displayMenuOptionMap": "地图",
+			"showAll": "全部"
+		},
+		"Wikidata": {
+			"headerTitle": "事实",
+			"extLink": {
+				"linkTitleWD": "在维基数据中查看或编辑"
+			},
+			"noTopicFoundText": "未找到主题"
+		},
+		"Wikipedia": {
+			"headerTitle": "条目",
+			"missingArticle": "您的语言中没有关于此主题的文章。您可以通过上方的语言菜单选择其他可用语言阅读文章。点击加号图标即可创建您语言版本的文章。",
+			"missingArticleMissing": "您的语言中没有关于此主题的文章。",
+			"missingArticleChoose": "您可以从上面的“语言”菜单中选择另一种可用语言阅读文章，或者单击加号图标以您的语言创建文章。",
+			"missingArticleCreate": "您可以点击加号图标用您的语言创建这篇文章。",
+			"missingArticleFallback": "根据您的语言后备偏好设置，将向您显示另一种语言的本文。",
+			"missingArticleTranslate": "您可以在语言菜单中选择该文章并将其翻译成您的语言。",
+			"missingArticleAuto": "这篇短文是根据记录的事实自动创建的。您可以保存此草稿并开始编辑文章。",
+			"extLink": {
+				"linkTitleWP": "在维基百科中阅读或编辑"
+			},
+			"addLink": {
+				"linkTitleWP": "在维基百科中创建一篇条目"
+			},
+			"languageMenu": {
+				"menuTitle": "阅读其他语言的条目",
+				"translateArticleText": "将这篇条目翻译成您的语言",
+				"otherLanguagestext": "其他语言"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "说明文字",
+			"addCaption": "添加说明文字",
+			"description": "描述",
+			"addDescription": "添加描述",
+			"creator": "创建者",
+			"creatorUnknown": "未知",
+			"addCreator": "添加创建者",
+			"removeCreator": "移除创建者",
+			"dateDepicted": "描述日期",
+			"addDateDepicted": "添加描述日期",
+			"removeDateDepicted": "移除描述日期",
+			"dateCreated": "创建日期",
+			"addDateCreated": "添加创建日期",
+			"removeDateCreated": "删除创建日期",
+			"publisher": "发布者",
+			"addPublisher": "添加发布者",
+			"removePublisher": "删除发布者",
+			"format": "格式",
+			"addFormat": "添加格式",
+			"removeFormat": "移除格式",
+			"technique": "技术",
+			"addTechnique": "添加技术",
+			"removeTechnique": "删除技术",
+			"depicted": "图片描述",
+			"genre": "类型",
+			"addGenre": "添加类型",
+			"removeGenre": "删除类型",
+			"depicts": "图片描述",
+			"addTopic": "添加主题",
+			"removeTopic": "删除主题",
+			"location": "位置",
+			"locationMap": "地图上的位置",
+			"addLocation": "添加位置",
+			"removeLocation": "移除位置",
+			"address": "街道地址",
+			"addAddress": "添加街道地址",
+			"removeAddress": "删除街道地址",
+			"depictedPeople": "描述的人物",
+			"addPerson": "添加人物",
+			"removePerson": "移除人物",
+			"event": "事件",
+			"addEvent": "添加事件",
+			"removeEvent": "删除事件",
+			"institution": "学院",
+			"collection": "收藏",
+			"addCollection": "添加收藏",
+			"inventoryNumber": "库存编号",
+			"inscriptions": "题记",
+			"measurements": "测量",
+			"copyright": "著作权",
+			"license": "版权许可",
+			"work": "图片中所展示的作品",
+			"photograph": "照片",
+			"image": "图片",
+			"photographer": "摄影师",
+			"addPhotographData": "添加有关照片的信息",
+			"copyrightNotePD": "该图像的许可价格为$1 ，但根据元数据，该图像属于公共领域。",
+			"copyrightNoteSame": "同一张图片以$1更公开的方式获得许可，因此它也适用于此图片。",
+			"creditline": "荣誉行",
+			"attribution": "署名",
+			"digitalCopy": "数字拷贝",
+			"publishingPlatform": "发布平台",
+			"platformId": "编号",
+			"provider": "内容提供者",
+			"imageInfoPage": "图片信息页面",
+			"imageDimensions": "图像尺寸",
+			"fileSize": "文件大小",
+			"fileFormat": "文件格式",
+			"remove": "删除",
+			"moveTo": "移至另一个字段",
+			"addData": "添加数据",
+			"uploader": "上传者",
+			"rotate": "旋转"
+		},
+		"imageActions": {
+			"rotateImage": "旋转图像",
+			"clockwise": "顺时针",
+			"counterclockwise": "逆时针",
+			"flip": "翻转",
+			"horizontal": "水平",
+			"vertical": "垂直"
+		},
+		"closeViewer": "关闭绘画器"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "结合地点名称"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "搜索历史地图",
+			"filterBySourceMenuText": "按来源过滤...",
+			"filterByTimeMenuText": "根据时间过滤...",
+			"filterByMapMenuText": "通过地图过滤..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "有关历史底图，请参阅版权和版权",
+			"attribution2PrefixText": "校正后的地图"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "历史底图透明度："
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "排序主题",
+			"tooltip": "排序主题",
+			"optionTime": "按时间",
+			"optionStart": "按开始时间",
+			"optionEnd": "按结束时间",
+			"optionTitle": "按标题",
+			"optionCause": "按原因",
+			"optionPartof": "按项目分类，这是属于",
+			"optionSuperclass": "按类别，这是",
+			"optionAlpha": "按字母顺序",
+			"optionTitleAlpha": "标题按字母顺序排列",
+			"optionCreatorAlpha": "按创作者字母顺序",
+			"optionDist": "按距离",
+			"optionRev": "反向排序",
+			"optionClear": "清除排序"
+		},
+		"facetMenu": {
+			"title": "分面按",
+			"tooltip": "按不同标准划分主题",
+			"optionType": "类型",
+			"optionColl": "创建者",
+			"optionCity": "位置"
+		},
+		"displayMenu": {
+			"title": "显示到",
+			"tooltip": "选择显示器",
+			"optionGallery": "图库",
+			"optionList": "列表"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "维基纪录片",
+		"ok": "确定",
+		"cancel": "取消",
+		"helpText": "帮助",
+		"expand": "展开此部分",
+		"collapse": "折叠此部分",
+		"menus": {
+			"actionMenuTitle": "操作",
+			"actionMenuTooltip": "操作",
+			"languageMenuTitle": "选择语言",
+			"languageMenuTooltip": "选择您的语言",
+			"myLanguagesItem": "我的语言",
+			"languageMenuTranslate": "将这篇条目翻译成英文"
+		},
+		"languageMenu": {
+			"TranslateUI": "翻译成您使用的语言"
+		},
+		"languages": {
+			"fi": "芬兰语",
+			"en": "英语",
+			"sv": "瑞典语",
+			"es": "西班牙语"
+		}
+	},
+	"Banner": {
+		"WLM": "维基爱古迹$1",
+		"WLMText": "拍摄这个文化遗产地点，并参加在$2的摄影比赛！",
+		"WLMButton": "上传图像"
+	}
+}
