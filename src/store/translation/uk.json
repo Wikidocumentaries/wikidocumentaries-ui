@@ -143,6 +143,9 @@
 			"subtitleEditText": "Редагування опису",
 			"subtitleApproveText": "Підтвердити цей опис"
 		},
+		"Heritage": {
+			"headerTitle": "Об’єкти культурної спадщини"
+		},
 		"Locations": {
 			"headerTitle": "В цьому місці",
 			"intro": "Тут ви бачите усе, що відноситься до теми цієї сторінки. Перегляньте списком, щоб побачити усе, що було збережено.",
@@ -538,7 +541,7 @@
 			"languageMenuTitle": "Вибрати мову",
 			"languageMenuTooltip": "Оберіть мову",
 			"myLanguagesItem": "Мої мови",
-			"languageMenuTranslate": "Перекласти цю статтю англійською"
+			"languageMenuTranslate": "Перекласти цю статтю українською"
 		},
 		"languageMenu": {
 			"TranslateUI": "Перекласти своєю мовою"
