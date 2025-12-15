@@ -10,6 +10,7 @@
 			"Herryz",
 			"McDutchie",
 			"Pebaryan",
+			"Penyuwangi",
 			"RXerself",
 			"Rahmatdenas",
 			"Veracious"
@@ -53,7 +54,7 @@
 		"titleDevelop": "Kembangkan kakas dan tugas-tugas urun daya.",
 		"joinDevelop": "Kami akan menambahkan kakas-kakas lagi dan membuat tugas urun daya baru dengan kolaborasi dengan organisasi dan para pembuat kakas. Mari gabungkan tenaga untuk aplikasi urun daya keren berikutnya!",
 		"titleContact": "Kontak!",
-		"facebook": "Grup Facebook",
+		"facebook": "Kelompok Facebook",
 		"wiki": "Wiki Wikidocumentaries",
 		"blog": "Blog",
 		"email": "Surel",
@@ -108,7 +109,7 @@
 			"facetMenu": {
 				"title": "Kelompokkan karya berdasarkan",
 				"tooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
-				"optionType": "Tipe",
+				"optionType": "Jenis",
 				"optionColl": "Pembuat"
 			},
 			"displayMenu": {
@@ -165,7 +166,7 @@
 			"facetMenu": {
 				"title": "Kelompokkan lokasi berdasarkan",
 				"tooltip": "Kelompokkan lokasi berdasarkan kriteria lainnya",
-				"optionType": "Tipe",
+				"optionType": "Jenis",
 				"optionColl": "Pembuat",
 				"optionCity": "Lokasi"
 			},
@@ -352,7 +353,7 @@
 			"sortMenuOptionClear": "Abaikan urutan",
 			"facetMenuTitle": "Kelompokkan berdasarkan",
 			"facetMenuTooltip": "Kelompokkan karya berdasarkan kriteria lainnya",
-			"facetMenuOptionType": "Tipe",
+			"facetMenuOptionType": "Jenis",
 			"facetMenuOptionColl": "Koleksi",
 			"facetMenuOptionCity": "Lokasi",
 			"displayMenuTitle": "Tampilkan sebagai",
@@ -379,7 +380,7 @@
 			"missingArticleTranslate": "Anda dapat menerjemahkan artikel ini dalam bahasa Anda dengan memilih pada menu bahasa.",
 			"missingArticleAuto": "Teks pendek ini tellah dibuat secara otomatis berdasarkan fakta yang tersimpan. Anda dapat menyimpan rekaan dan mulai menyunting artikel ini.",
 			"extLink": {
-				"linkTitleWP": "Baca atau edit di Wikipedia"
+				"linkTitleWP": "Baca atau sunting di Wikipedia"
 			},
 			"addLink": {
 				"linkTitleWP": "Buat sebuah artikel di Wikipedia"
@@ -522,7 +523,7 @@
 		"facetMenu": {
 			"title": "Kelompokkan berdasarkan",
 			"tooltip": "Kelompokkan topik berdasarkan kriteria lainnya",
-			"optionType": "Tipe",
+			"optionType": "Jenis",
 			"optionColl": "Pembuat",
 			"optionCity": "Lokasi"
 		},

@@ -1,0 +1,555 @@
+{
+	"@metadata": {
+		"authors": [
+			"Duongvu",
+			"Nguyễn Mạnh An"
+		]
+	},
+	"LandingPage": {
+		"search": "Tìm kiếm",
+		"searchInputPlaceHolder": "Tìm chủ đề hoặc tạo chủ đề mới",
+		"searchInputSearchOnly": "Tìm một chủ đề",
+		"showMore": "Hiển thị nhiều mặt hàng hơn",
+		"createNew": "Tạo mục mới",
+		"intro": "Wikidocumentaries là một wiki dành cho những câu chuyện lịch sử ngắn - nơi tập hợp những dấu vết lịch sử và biến chúng thành những câu chuyện. Hãy bắt đầu bằng cách tìm kiếm chủ đề bạn quan tâm!",
+		"titleDescription": "Wikidocumentaries là gì?",
+		"description": "Wikidocumentaries là một không gian tạo ra cho các nhà sử học công dân. Nó kết hợp thông tin về các chủ đề - người, địa điểm, tòa nhà, sự kiện và nhiều hơn nữa. Bạn có thể đi qua các chủ đề bằng cách theo dõi bất kỳ kết nối nào được ghi lại như mối quan hệ gia đình, địa điểm, người sáng tạo và sáng tạo hoặc liên kết. Một chủ đề được minh họa bằng hình ảnh và bản đồ từ các bảo tàng, lưu trữ và thư viện kết nối. Trong Wikidocumentaries, bạn có thể sửa chữa thông tin hiện có và thêm các chủ đề mới, mang lại hình ảnh và ký ức của riêng bạn, và sử dụng tất cả các tài liệu cho mục đích của riêng bạn.",
+		"titleStatus": "Trạng thái",
+		"status": "Trang web hiện đang trong giai đoạn thử nghiệm. Nhiều tính năng quan trọng chưa có sẵn và trang web có thể không hoạt động tốt như mong đợi.",
+		"moreBelow": "Đọc thêm dưới đây",
+		"more": "Đọc thêm",
+		"moreLink": "Đọc thêm",
+		"titleTopics": "Chủ đề",
+		"statusTopics": "Các chủ đề được đọc từ Wikidata. Các chủ đề mới có thể được tạo sau này trong Wikidocumentaries nếu nội dung nằm ngoài phạm vi của Wikidata. Việc mô tả chủ đề vẫn hoàn toàn khả thi với các tùy chọn phong phú của Wikidata. Các bài viết hiện tại được lấy từ Wikipedia, trong khi các bài viết có thể được tạo cục bộ sau này cho các chủ đề chỉ tồn tại trong Wikidocumentaries.",
+		"statusMedia": "Dữ liệu đa phương tiện được lấy từ ngày càng nhiều kho lưu trữ đa phương tiện cung cấp các tệp đa phương tiện được cấp phép mở. Chúng tôi đang nỗ lực tìm kiếm hình ảnh chính xác hơn và hiển thị nhiều siêu dữ liệu tốt hơn từ mỗi nguồn. Chúng tôi hoan nghênh các nguồn đa phương tiện mới!",
+		"titleTools": "Công cụ",
+		"statusTools": "Wikidocumentaries có các tác vụ và công cụ để làm việc với nội dung. Các bài viết hiện đã có thể được dịch giữa các ngôn ngữ bằng công cụ Dịch nội dung. Chúng tôi đang chuẩn bị công cụ gắn từ khóa với Wikidata và công cụ gắn thẻ địa lý cho vị trí hình ảnh. Các công cụ mới thú vị và hữu ích có thể được tạo ra hoặc tích hợp.",
+		"titleLanguages": "Ngôn ngữ",
+		"statusLanguages": "Bạn có thể xem Wikidocumentaries bằng bất kỳ ngôn ngữ nào có sẵn trong Wikidata. Đây là một cơ hội tuyệt vời cho các ngôn ngữ ít người sử dụng. Việc dịch thuật được thực hiện bằng TranslateWiki.",
+		"titleTechnology": "Công nghệ",
+		"statusTechnology": "Wikidocumentaries đọc dữ liệu cốt lõi từ Wikidata. Ngoài ra, Wikidocumentaries sẽ có Wikibase riêng cho các chủ đề nằm ngoài phạm vi của Wikidata. Wikidata và Wikidocumentaries dự kiến ​​sẽ đồng bộ hóa như các Wikibase liên kết. Thứ hai, siêu dữ liệu hình ảnh được liên kết với các mục Wikidata, và dữ liệu này có thể đồng bộ với Dữ liệu có cấu trúc trên Wikimedia Commons. Trang web được xây dựng bằng Vue.js và được lưu trữ trên Wikimedia Cloud Services.",
+		"titleCreators": "Người sáng tạo",
+		"titleTeam": "Nhóm",
+		"titleThanks": "Với lời cảm ơn đặc biệt đến",
+		"titlePartners": "Nhà bảo trợ",
+		"titleFunding": "Với sự hỗ trợ tử tế từ",
+		"titleBy": "Dự án của",
+		"getInvolved": "Hãy tham gia!",
+		"titleTranslate": "Biên dịch",
+		"joinTranslate": "Hãy đến và mang ngôn ngữ của bạn đến với Wikidocumentaries. Tham gia nhóm dịch thuật tình nguyện và chứng kiến ​​di sản văn hóa kết nối trở nên sống động bằng ngôn ngữ của bạn.",
+		"titleContent": "Thêm nội dung của bạn",
+		"joinContent": "Nếu bạn có ảnh, phương tiện truyền thông, tài liệu, bản đồ hoặc bộ sưu tập dữ liệu nào muốn chia sẻ tại đây, hãy cùng xem liệu chúng đã có thể kết nối thông qua một trong những kênh hiện có hay chúng ta có thể tạo ra các phương pháp kết nối mới. Chúng tôi cũng mong muốn tổ chức các hội thảo về ghi chép kiến ​​thức lịch sử với các cộng đồng quan tâm.",
+		"titleDevelop": "Tạo ra các công cụ và triển khai các nhiệm vụ thông qua hình thức huy động cộng đồng.",
+		"joinDevelop": "Chúng tôi muốn bổ sung thêm nhiều công cụ và tạo ra các nhiệm vụ huy động cộng đồng mới, hợp tác với các tổ chức và nhà phát triển công cụ. Hãy cùng nhau hợp tác để tạo ra ứng dụng huy động cộng đồng tuyệt vời tiếp theo!",
+		"titleContact": "Hãy liên lạc !",
+		"facebook": "Nhóm Facebook",
+		"wiki": "Tài liệu Wiki",
+		"blog": "Blog",
+		"email": "Thư điện tử",
+		"github": "Kho lưu trữ Github"
+	},
+	"MainPage": {
+		"topicPageName": "Tên chủ đề",
+		"mapPlaceMatchPageName": "Kết hợp tên địa điểm",
+		"mapSearchPageName": "Tìm kiếm bản đồ",
+		"wikiTopicErrorMessage": "Không tìm thấy trang Wikipedia về chủ đề này bằng ngôn ngữ hiện tại hoặc xảy ra lỗi không mong muốn khác.",
+		"returnToHomeMessage": "Trở lại trang đích"
+	},
+	"WaitPage": {
+		"waitMessage": "Vui lòng đợi một lát... Đang lấy dữ liệu từ Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Tổ chức",
+			"intro": "Các tổ chức mà cá nhân hoặc tổ chức này có liên kết."
+		},
+		"Awards": {
+			"headerTitle": "Giải thưởng",
+			"intro": "Các đề cử và giải thưởng liên quan đến chủ đề của trang này."
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "Chọn (các) bản đồ cơ sở lịch sử",
+			"chooseMapHelpNote": "Mẹo: ctrl+click cho phép chọn nhiều bản đồ",
+			"yearAbbreviation": "y."
+		},
+		"Collection": {
+			"headerTitle": "Các tác phẩm trong bộ sưu tập",
+			"intro": "Những tác phẩm này thuộc bộ sưu tập của cá nhân hoặc tổ chức này. Bạn có thể chọn hiển thị chúng dưới dạng danh sách, bao gồm cả các tác phẩm không có hình ảnh. Bạn có thể sắp xếp chúng theo ngày tháng hoặc tên tác giả. Lưu ý rằng chỉ những tác phẩm có đầy đủ thông tin này mới được hiển thị."
+		},
+		"Cups": {
+			"headerTitle": "Các trò chơi, loạt trận và giải đấu",
+			"intro": "Câu lạc bộ này đã tham gia các trận đấu, loạt trận và giải đấu sau đây:"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Đây là những sự kiện chuyên môn của người được đề cập."
+		},
+		"Depicted": {
+			"headerTitle": "Được miêu tả trong",
+			"intro": "Chủ đề này được thể hiện trong các tác phẩm sau. Sắp xếp các tác phẩm theo các tiêu chí khác nhau, hiển thị dưới dạng danh sách để xem những tác phẩm không có hình ảnh.",
+			"sortMenu": {
+				"title": "Sắp xếp tác phẩm",
+				"tooltip": "Sắp xếp tác phẩm",
+				"optionTime": "Theo thời gian",
+				"optionAlpha": "Theo thứ tự bảng chữ cái",
+				"optionClear": "Định dạng rõ ràng"
+			},
+			"facetMenu": {
+				"title": "Facet hoạt động bởi",
+				"tooltip": "Facet hoạt động dựa trên các tiêu chí khác nhau.",
+				"optionType": "Loại",
+				"optionColl": "Người sáng tạo"
+			},
+			"displayMenu": {
+				"title": "Hiển thị cho",
+				"tooltip": "Chọn màn hình",
+				"optionGallery": "Tập ảnh",
+				"optionList": "Danh sách"
+			},
+			"showAll": "Tất cả"
+		},
+		"Depicts": {
+			"headerTitle": "Hình ảnh",
+			"intro": "Tác phẩm này minh họa các chủ đề trên. Bạn có thể sắp xếp chúng theo thời gian và tên. Lưu ý rằng để xem tất cả các chủ đề, bao gồm cả những chủ đề không có hình ảnh, bạn phải xem các chủ đề dưới dạng danh sách."
+		},
+		"Events": {
+			"headerTitle": "Sự kiện",
+			"displayMenu": {
+				"menuTitle": "Tùy chọn hiển thị",
+				"menuTooltip": "Tùy chọn hiển thị",
+				"optionShowTimeline": "Hình ảnh các sự kiện trên một dòng thời gian",
+				"optionShowList": "Hình ảnh các sự kiện như một danh sách"
+			},
+			"optionsMenu": {
+				"menuTitle": "Tùy chọn",
+				"menuTooltip": "Chọn các thông tin để hiển thị",
+				"optionWorks": "Các tác phẩm trưng bày",
+				"optionRelatedPeople": "Hình ảnh các sự kiện của người thân",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Thiết lập"
+				},
+				"optionRelatedTopics": "Hình ảnh các sự kiện về các chủ đề liên quan"
+			}
+		},
+		"Header": {
+			"titleEditText": "Chỉnh sửa tiêu đề",
+			"titleApproveText": "Thỏa thuận tiêu đề này",
+			"subtitleEditText": "Sửa đổi miêu tả",
+			"subtitleApproveText": "Xóa miêu tả này"
+		},
+		"Heritage": {
+			"headerTitle": "Các yếu tố di sản"
+		},
+		"Locations": {
+			"headerTitle": "Ở nơi này",
+			"intro": "Tại đây bạn sẽ thấy mọi thứ nằm trong chủ đề của trang này. Hiển thị dưới dạng danh sách để xem tất cả các vị trí đã được lưu trữ.",
+			"sortMenu": {
+				"title": "Tùy chọn sắp xếp",
+				"tooltip": "Tùy chọn sắp xếp",
+				"optionTime": "Theo thời gian",
+				"optionAlpha": "Theo thứ tự bảng chữ cái",
+				"optionDist": "Theo khoảng cách",
+				"optionClear": "Định dạng rõ ràng"
+			},
+			"facetMenu": {
+				"title": "Vị trí mặt bằng",
+				"tooltip": "Vị trí mặt theo các tiêu chí khác nhau",
+				"optionType": "Kiểu",
+				"optionColl": "Người sáng tạo",
+				"optionCity": "Vị trí"
+			},
+			"displayMenu": {
+				"title": "Hiển thị cho",
+				"tooltip": "Chọn màn hình",
+				"optionGallery": "Tập ảnh",
+				"optionList": "Danh sách"
+			},
+			"showAll": "Tất cả"
+		},
+		"Map": {
+			"headerTitle": "Vị trí trên bản đồ"
+		},
+		"Parts": {
+			"headerTitle": "Các bộ phận",
+			"intro": "Những phần này thuộc chủ đề này. Bạn có thể sắp xếp chúng theo thời gian và tên. Để xem tất cả các chủ đề, bao gồm cả những chủ đề không có hình ảnh, bạn phải xem các chủ đề dưới dạng danh sách."
+		},
+		"Partof": {
+			"headerTitle": "Trực thuộc",
+			"intro": "Chủ đề này là một phần của các chủ đề khác. Bạn có thể sắp xếp chúng theo thời gian và tên. Để xem tất cả các chủ đề, bao gồm cả những chủ đề không có hình ảnh, bạn phải xem các chủ đề dưới dạng danh sách."
+		},
+		"Similar": {
+			"headerTitle": "Chủ đề tương tự",
+			"intro": "Tìm các chủ đề có một số đặc điểm chính chung với chủ đề này."
+		},
+		"Effects": {
+			"headerTitle": "Các hiệu ứng",
+			"intro": "Đây là những tác động của chủ đề này."
+		},
+		"Familytree": {
+			"headerTitle": "Cây gia phả"
+		},
+		"Instances": {
+			"headerTitle": "Các trường hợp thuộc chủ đề này",
+			"intro": "Xem các ví dụ về chủ đề này. Xem dưới dạng danh sách để xem cả các mục không có hình ảnh."
+		},
+		"Links": {
+			"headerTitle": "Các liên kết từ bài viết này"
+		},
+		"Location": {
+			"headerTitle": "Vị trí",
+			"intro": "Chủ đề này nằm trong hoặc liên quan đến các chủ đề này."
+		},
+		"Names": {
+			"headerTitle": "Tên",
+			"intro": "Xem tên của chủ đề này và tất cả các lựa chọn thay thế có sẵn."
+		},
+		"People": {
+			"headerTitle": "Những người có liên quan đến chủ đề này",
+			"intro": "Những người này có liên quan đến chủ đề của trang này. Bạn có thể chọn hiển thị họ dưới dạng danh sách, bao gồm cả những người không có ảnh. Bạn có thể sắp xếp họ theo ngày tháng hoặc tên. Lưu ý rằng chỉ những người có thông tin đó mới được hiển thị.",
+			"sortMenuTitle": "Sắp xếp",
+			"sortMenuTooltip": "Thay đổi thứ tự sắp xếp",
+			"sortMenuOptionBirth": "Theo ngày sinh",
+			"sortMenuOptionDeath": "Theo ngày chết",
+			"sortMenuOptionName": "Tên",
+			"sortMenuOptionFirst": "Theo tên đầu tiên",
+			"sortMenuOptionLast": "Theo họ",
+			"sortMenuOptionClear": "Định dạng rõ ràng",
+			"facetMenuTitle": "Mặt trước",
+			"facetMenuTooltip": "Nhìn người theo các khía cạnh khác nhau",
+			"facetMenuOptionProfession": "Nghề nghiệp",
+			"facetMenuOptionCountry": "Quốc gia",
+			"facetMenuOptionCity": "Giới"
+		},
+		"Seasons": {
+			"headerTitle": "Mùa",
+			"intro": "Xem các mùa của hoạt đọng này"
+		},
+		"Subclasses": {
+			"headerTitle": "Các lớp phụ của chủ đề này",
+			"intro": "Xem các lớp con của chủ đề này. Xem dưới dạng danh sách để xem cả các mục không có hình ảnh."
+		},
+		"Teams": {
+			"headerTitle": "Các đội tham gia",
+			"intro": "Các đội tham gia trận đấu, loạt trận hoặc giải đấu này."
+		},
+		"Things": {
+			"headerTitle": "Các đội tham gia trận đấu, loạt trận hoặc giải đấu này.",
+			"intro": "Những chủ đề này nằm trong danh sách trọng tâm của dự án Wiki này."
+		},
+		"Twins": {
+			"headerTitle": "Thành phố sinh đôi",
+			"intro": "Các thị trấn kết nghĩa, thành phố kết nghĩa, đô thị kết nghĩa và các địa phương khác có thỏa thuận hợp tác hoặc đối tác, được chính phủ công nhận về mặt pháp lý hoặc không chính thức. Bạn có thể sắp xếp chúng theo thời gian và tên. Để xem tất cả các chủ đề, bao gồm cả những chủ đề không có hình ảnh, bạn phải xem các chủ đề dưới dạng danh sách."
+		},
+		"TopicImages": {
+			"headerTitle": "Hình ảnh từ hồ sơ",
+			"intro": "Những hình ảnh này được thu thập từ nhiều nguồn khác nhau và có thể không phải lúc nào cũng thể hiện chính xác chủ đề. Bạn có thể xem hình ảnh gốc và đặt hình ảnh lên bản đồ nếu nó có ghim vị trí.",
+			"actionsMenu": {
+				"menuTitle": "Hiển thị hoặc sắp xếp hình ảnh",
+				"tooltip": "Hiển thị hoặc sắp xếp hình ảnh",
+				"showImagesOnMapMenuText": "Hiển thị tất cả hình ảnh trên bản đồ",
+				"showImagesOnTimelineMenuText": "Hiển thị tất cả hình ảnh trên dòng thời gian",
+				"selectPortraits": "Hãy chọn những bức chân dung chất lượng tốt của người này.",
+				"arrangeByTime": "Sắp xếp hình ảnh theo thời gian",
+				"selectWorks": "Lựa chọn hình ảnh tác phẩm"
+			},
+			"facetMenu": {
+				"menuTitle": "Hình ảnh khía cạnh của",
+				"menuTooltip": "Hình ảnh các mặt cắt theo các tiêu chí khác nhau",
+				"time": "Thời gian",
+				"map": "Bản đồ",
+				"people": "Mọi người",
+				"places": "Địa điểm",
+				"topics": "Chủ đề",
+				"form": "Dạng",
+				"imageSize": "Kích thước phương tiện",
+				"large": "Lớn",
+				"medium": "Vừa",
+				"small": "Nhỏ",
+				"type": "Kiểu phương tiện",
+				"creator": "Người sáng tạo",
+				"platform": "Nền tảng",
+				"source": "Nguồn",
+				"saveSelection": "Lưu lựa chọn dưới dạng bộ sưu tập",
+				"clear": "Lựa chọn rõ ràng"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Hành động",
+				"menuTooltip": "Hành động",
+				"doGeolocatingText": "Đặt vị trí...",
+				"showImageText": "Hiển thị hình ảnh",
+				"selectFeatured": "Chọn một hình ảnh trên tiêu đề"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Tránh hình ảnh đi vì...",
+				"shortMenuTitle": "Loại bỏ hình",
+				"menuTooltip": "Loại bỏ hình",
+				"remDepicted": {
+					"menuTitle": "Nó mô tả chủ đề này thay vào đó",
+					"shortMenuTitle": "Nó mô tả một chủ đề khác",
+					"search": "Tìm đề tài",
+					"browse": "Duyệt các chủ đề liên quan"
+				},
+				"remCreator": {
+					"menuTitle": "Thay vào đó, nó là tác phẩm của người sáng tạo này.",
+					"shortMenuTitle": "Tác phẩm này do một người sáng tạo khác thực hiện.",
+					"search": "Tìm kiếm người sáng tạo",
+					"browse": "Duyệt các tác nhân liên quan"
+				},
+				"remInappropriate": {
+					"menuTitle": "Nó không phù hợp vì",
+					"shortMenuTitle": "Nó không phù hợp",
+					"privacy": "Nó vi phạm quyền riêng tư của những người được mô tả",
+					"violence": "Nó hiển thị bạo lực cực độ",
+					"sex": "Nó hiển thị tình dục rõ ràng",
+					"copyvio": "Nó vi phạm bản quyền",
+					"explain": "Để lại một ghi chú để giải thích"
+				}
+			},
+			"imagesViewExternal": "Xem hình ảnh gốc",
+			"imagesViewOnMap": "Xem hình ảnh trên bản đồ"
+		},
+		"TopicMap": {
+			"headerTitle": "Chủ đề trên bản đồ",
+			"intro": "Vị trí của chủ đề được hiển thị trên bản đồ. Bạn cũng có thể hiển thị hình ảnh và dữ liệu khác trên bản đồ hoặc chọn một bản đồ lịch sử như là lớp cơ sở.",
+			"chooseHistoricalBasemapMenuText": "Chọn (các) bản đồ cơ sở lịch sử",
+			"hideImagesMenuText": "Cất giấu hình ảnh",
+			"chooseTimelineMapsMenuText": "Chọn bản đồ thời gian...",
+			"showNearbyPlacesMenuText": "Xem các trang lân cận",
+			"hideNearbyPlacesMenuText": "Ẩn các địa điểm lân cận",
+			"extLink": {
+				"menuTooltip": "Xem hoặc chỉnh sửa trên OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Những mẩu báo",
+			"searhTopicFromArchivesMenuText": "Tìm kiếm từ các tờ báo trong Thư viện Quốc gia Phần Lan",
+			"addClipFromArchivesMenuText": "Thêm phần cắt..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Thời biểu",
+			"showEventsOnTimelineMenuText": "Hình bày các sự kiện chủ đề trên dòng thời gian",
+			"centuryText": "C"
+		},
+		"Works": {
+			"headerTitle": "Công việc",
+			"intro": "Đây là các tác phẩm của cá nhân, nhóm hoặc tổ chức được đề cập trên trang này. Bạn có thể truy cập trang chứa đầy đủ thông tin về tác phẩm bằng cách nhấp vào đó. Chỉ những tác phẩm có hình ảnh mới được hiển thị. Hiển thị dưới dạng danh sách để xem tất cả các tác phẩm liên quan đã được lưu trữ.",
+			"sortMenuTitle": "Sắp xếp",
+			"sortMenuTooltip": "Các mục phân loại",
+			"sortMenuOptionTime": "Theo thời gian",
+			"sortMenuOptionAlpha": "Theo thứ tự bảng chữ cái",
+			"sortMenuOptionDist": "Theo khoảng cách",
+			"sortMenuOptionClear": "Định dạng rõ ràng",
+			"facetMenuTitle": "Mặt trước",
+			"facetMenuTooltip": "Facet hoạt động dựa trên các tiêu chí khác nhau.",
+			"facetMenuOptionType": "Kiểu",
+			"facetMenuOptionColl": "Bộ sưu tập",
+			"facetMenuOptionCity": "Vị trí",
+			"displayMenuTitle": "Hiển thị cho",
+			"displayMenuTooltip": "Chọn màn hình",
+			"displayMenuOptionGallery": "Tập ảnh",
+			"displayMenuOptionList": "Danh sách",
+			"displayMenuOptionMap": "Bản đồ",
+			"showAll": "Tất cả"
+		},
+		"Wikidata": {
+			"headerTitle": "Sự thật",
+			"extLink": {
+				"linkTitleWD": "Xem hoặc chỉnh sửa trong Wikidata"
+			},
+			"noTopicFoundText": "Chủ đề không được tìm thấy"
+		},
+		"Wikipedia": {
+			"headerTitle": "Bài viết",
+			"missingArticle": "Hiện chưa có bài viết nào về chủ đề này bằng ngôn ngữ của bạn. Bạn có thể đọc bài viết bằng ngôn ngữ khác bằng cách chọn ngôn ngữ từ menu phía trên. Bạn cũng có thể tạo bài viết bằng ngôn ngữ của mình bằng cách nhấp vào biểu tượng dấu cộng.",
+			"missingArticleMissing": "Hiện không có bài viết nào về chủ đề này bằng ngôn ngữ của bạn.",
+			"missingArticleChoose": "Bạn có thể đọc bài viết bằng ngôn ngữ khác bằng cách chọn ngôn ngữ từ menu phía trên hoặc bạn có thể tạo bài viết bằng ngôn ngữ của mình bằng cách nhấp vào biểu tượng dấu cộng.",
+			"missingArticleCreate": "Bạn có thể đọc bài viết bằng ngôn ngữ khác bằng cách chọn ngôn ngữ từ menu phía trên hoặc bạn có thể tạo bài viết bằng ngôn ngữ của mình bằng cách nhấp vào biểu tượng dấu cộng.",
+			"missingArticleFallback": "Bài viết này được hiển thị bằng ngôn ngữ khác dựa trên tùy chọn ngôn ngữ dự phòng của bạn.",
+			"missingArticleTranslate": "Bạn có thể dịch bài viết này sang ngôn ngữ của mình bằng cách chọn ngôn ngữ đó trong menu ngôn ngữ.",
+			"missingArticleAuto": "Đoạn văn ngắn này được tạo tự động từ các thông tin đã ghi lại. Bạn có thể lưu bản nháp này và bắt đầu chỉnh sửa bài viết.",
+			"extLink": {
+				"linkTitleWP": "Đọc hoặc chỉnh sửa trên Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Tạo một bài viết trên Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Đọc bài viết bằng ngôn ngữ khác",
+				"translateArticleText": "Dịch bài viết này sang ngôn ngữ của bạn",
+				"otherLanguagestext": "Ngôn ngữ khác"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Chú thích",
+			"addCaption": "Thêm chú thích",
+			"description": "Miêu tả",
+			"addDescription": "Sửa miêu tả",
+			"creator": "Người sáng tạo",
+			"creatorUnknown": "Không rõ",
+			"addCreator": "Thêm người sáng tạo",
+			"removeCreator": "Tắt người sáng tạo",
+			"dateDepicted": "Ngày được mô tả",
+			"addDateDepicted": "Thêm ngày được mô tả",
+			"removeDateDepicted": "Xóa ngày được hiển thị",
+			"dateCreated": "Ngày tạo",
+			"addDateCreated": "Thêm ngày tạo",
+			"removeDateCreated": "Xóa ngày tạo",
+			"publisher": "Nhà xuất bản",
+			"addPublisher": "Thêm nhà xuất bản",
+			"removePublisher": "Xóa nhà xuất bản",
+			"format": "Định dạng :",
+			"addFormat": "Thêm định dạng",
+			"removeFormat": "Xóa định dạng",
+			"technique": "Kỹ thuật",
+			"addTechnique": "Thêm kỹ thuật",
+			"removeTechnique": "Kỹ thuật loại bỏ",
+			"depicted": "Hình ảnh",
+			"genre": "Thể loại",
+			"addGenre": "Thêm thể loại",
+			"removeGenre": "Xóa thể loại",
+			"depicts": "Hình ảnh",
+			"addTopic": "Thêm đề tài",
+			"removeTopic": "Phục hồi đề tài",
+			"location": "Vị trí",
+			"locationMap": "Vị trí trên bản đồ",
+			"addLocation": "Thêm chú thích",
+			"removeLocation": "Xóa vị trí",
+			"address": "Địa chỉ đường",
+			"addAddress": "thêm địa chỉ đường",
+			"removeAddress": "Xóa địa chỉ đường",
+			"depictedPeople": "Những người được mô tả",
+			"addPerson": "Thêm người",
+			"removePerson": "Tắt người",
+			"event": "Sự kiện",
+			"addEvent": "Thêm sự kiện",
+			"removeEvent": "Xóa sự kiện",
+			"institution": "Tổ chức",
+			"collection": "Bộ sưu tập",
+			"addCollection": "Thêm bộ sưu tập",
+			"inventoryNumber": "Số hàng tồn kho",
+			"inscriptions": "Miêu tả",
+			"measurements": "Các phép đo",
+			"copyright": "Bản quyền",
+			"license": "Bản quyền và giấy phép",
+			"work": "Công việc được biểu diễn trên hình ảnh",
+			"photograph": "Nhiếp ảnh",
+			"image": "Hình ảnh",
+			"photographer": "Nhiếp ảnh gia",
+			"addPhotographData": "Thêm thông tin về bức ảnh",
+			"copyrightNotePD": "Hình ảnh này được cấp phép với giá 1 đô la, nhưng dựa trên siêu dữ liệu, hình ảnh này thuộc phạm vi công cộng.",
+			"copyrightNoteSame": "Hình ảnh tương tự được cấp phép sử dụng rộng rãi hơn với giá 1 đô la, do đó điều này cũng áp dụng cho hình ảnh này.",
+			"creditline": "Hạn mức tín dụng",
+			"attribution": "Ghi công",
+			"digitalCopy": "Bản sao kỹ thuật số",
+			"publishingPlatform": "Nền tảng xuất bản",
+			"platformId": "ID",
+			"provider": "Nhà cung cấp nội dung",
+			"imageInfoPage": "Trang thông tin hình ảnh",
+			"imageDimensions": "Cỡ hình ảnh",
+			"fileSize": "Kích thước tập tin",
+			"fileFormat": "Định dạng tập tin",
+			"remove": "Loại bỏ",
+			"moveTo": "Thêm vào danh sách khác.",
+			"addData": "Thêm dữ liệu",
+			"uploader": "Người tải lên",
+			"rotate": "Chuyển"
+		},
+		"imageActions": {
+			"rotateImage": "Hình quay",
+			"clockwise": "Hướng đồng hồ",
+			"counterclockwise": "Hướng ngược đồng hồ",
+			"flip": "Chuyển",
+			"horizontal": "Ngang",
+			"vertical": "Thẳng đứng"
+		},
+		"closeViewer": "Nhìn gần"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Kết hợp tên địa điểm"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Tìm kiếm các bản đồ lịch sử",
+			"filterBySourceMenuText": "Lọc theo chủ đề",
+			"filterByTimeMenuText": "Trình lọc dựa trên thời gian...",
+			"filterByMapMenuText": "Trình lọc qua bản đồ..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Đối với bản đồ cơ bản lịch sử, xem tín dụng và bản quyền từ",
+			"attribution2PrefixText": "Bản đồ được sử đổi từ"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Độ minh bạch của bản đồ cơ sở lịch sử:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Chủ đề nóng",
+			"tooltip": "Chủ đề nóng",
+			"optionTime": "Theo thời gian",
+			"optionStart": "Theo thời gian bắt đầu",
+			"optionEnd": "Đến cuối thời gian",
+			"optionTitle": "Theo thời gian",
+			"optionCause": "Vì lý do",
+			"optionPartof": "Theo mục này là một phần của",
+			"optionSuperclass": "Theo lớp này là tiểu lớp của",
+			"optionAlpha": "Theo thứ tự của bảng chữ cái",
+			"optionTitleAlpha": "Theo tiêu đề theo thứ tự bảng chữ cái",
+			"optionCreatorAlpha": "Theo người sáng tạo theo bảng chữ cái",
+			"optionDist": "Theo khoảng cách",
+			"optionRev": "Phân loại ngược",
+			"optionClear": "Định dạng rõ ràng"
+		},
+		"facetMenu": {
+			"title": "Mặt trước",
+			"tooltip": "Facet hoạt động dựa trên các tiêu chí khác nhau.",
+			"optionType": "Kiểu",
+			"optionColl": "Người sáng tạo",
+			"optionCity": "Vị trí"
+		},
+		"displayMenu": {
+			"title": "Hiển thị cho",
+			"tooltip": "Chọn màn hình",
+			"optionGallery": "Tập ảnh",
+			"optionList": "Danh sách"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "Tài liệu Wiki",
+		"ok": "OK",
+		"cancel": "Hủy bỏ",
+		"helpText": "Trợ giúp",
+		"expand": "Tăng phần này",
+		"collapse": "Bỏ đoạn này xuống",
+		"menus": {
+			"actionMenuTitle": "Hành động",
+			"actionMenuTooltip": "Hành động",
+			"languageMenuTitle": "Chọn ngôn ngữ",
+			"languageMenuTooltip": "Chọn ngôn ngữ",
+			"myLanguagesItem": "Ngôn ngữ của tôi",
+			"languageMenuTranslate": "Dịch bài viết này sang tiếng Anh"
+		},
+		"languageMenu": {
+			"TranslateUI": "Dịch sang ngôn ngữ của bạn"
+		},
+		"languages": {
+			"fi": "Tiếng phần lan",
+			"en": "Tiếng Anh",
+			"sv": "Tiếng Thụy Điển",
+			"es": "Tây Ban Nha"
+		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Tạo ảnh trang web di sản văn hóa này và tham gia cuộc thi nhiếp ảnh 2 đô la!",
+		"WLMButton": "Hình đã tải lên"
+	}
+}
