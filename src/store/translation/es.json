@@ -15,6 +15,7 @@
 			"McDutchie",
 			"Ryo567",
 			"Susannaanas",
+			"Tecbs",
 			"Yel Martinez Seo"
 		]
 	},
@@ -150,6 +151,9 @@
 			"titleApproveText": "Aprobar este título",
 			"subtitleEditText": "Editar descripción",
 			"subtitleApproveText": "Aprobar esta descripción"
+		},
+		"Heritage": {
+			"headerTitle": "Elementos patrimoniales"
 		},
 		"Locations": {
 			"headerTitle": "En esta ubicación",
