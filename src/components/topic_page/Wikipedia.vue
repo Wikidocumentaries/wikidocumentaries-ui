@@ -25,13 +25,13 @@
     </div>
     <div :class="[isExpanded ? 'expanded' : '']" class="text-container">
       <div v-if="wikipedia.wikipediaURL" class="text wiki-html">
-        <div class="excerpt" v-html="wikipedia.excerptHTML"></div>
-        <div class="remain" v-html="wikipedia.remainingHTML"></div>
+        <div class="excerpt" ref="excerpt" v-html="wikipedia.excerptHTML"></div>
+        <div class="remain" ref="remain" v-html="wikipedia.remainingHTML"></div>
       </div>
       <div v-else class="text wiki-html">
         <p>{{ $t('topic_page.Wikipedia.missingArticle') }}</p>
       </div>
-<!--       <Links 
+    <!--<Links 
     class="wplinks" 
     :currentLanguage="this.language"
     ></Links> -->
@@ -48,6 +48,7 @@
         <span v-else class="tooltip">{{ $t('general.collapse') }}</span>
       </div>
     </div>
+    <ImageViewer ref="imageviewer"></ImageViewer>
   </div>
 </template>
 
@@ -56,6 +57,7 @@ import axios from "axios";
 import HeaderLink from "@/components/HeaderLink";
 import ArticleLanguageMenu from "@/components/menu/ArticleLanguageMenu";
 import Links from "@/components/topic_page/Links";
+import ImageViewer from "@/components/image_viewer/ImageViewer";
 export default {
   name: "WikipediaArticle",
   props: {},
@@ -114,13 +116,15 @@ export default {
     return {
       isExpanded: false,
       language: this.$i18n.locale,
-      wikipedia: this.$store.state.wikidocumentaries.wikipedia
+      wikipedia: this.$store.state.wikidocumentaries.wikipedia,
+      items: []
     };
   },
   components: {
     HeaderLink,
     ArticleLanguageMenu,
-    Links
+    Links,
+    ImageViewer
   },
   methods: {
     onLanguageChange(language) {
@@ -147,9 +151,135 @@ export default {
           this.wikipedia.remainingHTML = response.data.wikipediaRemainingHTML;
           this.wikipedia.wikipediaURL =
             response.data.wikipedia.content_urls.desktop.page;
+          this.items = [];
         }
       });
+    },
+    // check if an element is n decendant of the article
+    isArticleDescendant(child) {
+      let node = child.parentNode;
+      while (node) {
+        if (node === this.$refs.excerpt || node === this.$refs.remain) {
+          return true;
+        }
+        node = node.parentNode;
+      }
+      return false;
+    },
+    // get the image title from wiki imageURL
+    getImageTitleFromURL(imgURL) {
+      return imgURL.slice(imgURL.lastIndexOf("/") + 1);
+    },
+    // convert item field htmlString to regular text
+    convertHtmlToText(htmlString) {
+      const parser = new DOMParser();
+      const floatingElement = parser.parseFromString(htmlString, "text/html");
+      const text = floatingElement.activeElement.innerText;
+      return text;
+    },
+    async getImageDetailsInfo(imgs) {
+      const parent = this;
+      // check if items data is stored
+      if (this.items.length !== 0) return this.items;
+      this.items = new Array(imgs.length);
+      const titles = imgs.map(img => parent.getImageTitleFromURL(img.parentNode.href));
+      let requestConfig = {
+            baseURL: parent.$store.state.BASE_URL,
+            url: "/wiki/imageinfo",
+            method: "get",
+            params: {
+              titles: titles,
+              language: parent.language
+            }
+          };
+      let response = await axios.request(requestConfig);
+      for (var index = 0; index < response.data.wikiImageInfo.length; index++){
+        let imgInfo = response.data.wikiImageInfo[index];
+        if (!imgInfo){
+          let img = imgs[index];
+              parent.items[index] = {
+                actors: [],
+                collection: "",
+                creators: [],
+                datecreated: [],
+                description: [],
+                details: [],
+                downloadURL: "",
+                formats: [],
+                geoLocations: [],
+                id: "",
+                imageURL: img.currentSrc
+                  .slice(0, img.currentSrc.lastIndexOf("/"))
+                  .replace("/thumb", ""),
+                infoURL: img.parentElement.href,
+                inscriptions: [],
+                institutions: [],
+                inventoryNumber: "",
+                license: "",
+                license_link: "",
+                materials: [],
+                measurements: [],
+                places: [],
+                publisher: null,
+                rightsstatement: "",
+                source: "",
+                subjects: [],
+                thumbURL: img.currentSrc,
+                title: [img.parentElement.parentElement.outerText],
+                year: 0
+              };
+            }
+        else{
+        if (imgInfo.datecreated && imgInfo.datecreated[0]) {
+          imgInfo.datecreated[0] = parent.convertHtmlToText(
+            imgInfo.datecreated[0]
+                );
+              }
+              if (imgInfo.creators && imgInfo.creators[0]) {
+                imgInfo.creators[0] = parent.convertHtmlToText(
+                  imgInfo.creators[0]
+                );
+              }
+              if (imgInfo.description && imgInfo.description[0]) {
+                imgInfo.description[0] = parent.convertHtmlToText(
+                  imgInfo.description[0]
+                );
+              }
+              parent.items[index] = imgInfo;
+            }
+      }
+      return this.items;
+    },
+    addLinksToImages() {
+      // query all images in the wikipedia article
+      const imgs = Array.from(document.querySelectorAll("img")).filter(
+        img =>
+          img.parentElement &&
+          img.parentElement.nodeName == "A" &&
+          this.isArticleDescendant(img.parentElement)
+      );
+      const parent = this;
+      for (let i = 0; i < imgs.length; i++) {
+        let img = imgs[i];
+        // suppress orginal image click action
+        img.parentElement.addEventListener("click", e => {
+          e.preventDefault();
+        });
+        // when the image is clicked, the image viewer is opened
+        img.addEventListener("click", async e => {
+          const items = await parent.getImageDetailsInfo(imgs);
+          parent.$refs.imageviewer.show(items, i);
+        });
+      }
     }
+  },
+  mounted() {
+    // add links on page mounted
+    this.addLinksToImages();
+  },
+  updated() {
+    // add links on language changed
+    this.addLinksToImages();
   }
 };
 </script>
@@ -209,7 +339,6 @@ export default {
 } */
 
 .expanded .remain {
-  display:initial;
+  display: initial;
 }
-
 </style>
