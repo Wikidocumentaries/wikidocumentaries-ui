@@ -135,7 +135,8 @@
 				"showImageText": "Montrez imajo"
 			},
 			"imagesRemoveMenu": {
-				"shortMenuTitle": "Removez imajo"
+				"shortMenuTitle": "Removez imajo",
+				"menuTooltip": "Removar l'imajo"
 			}
 		},
 		"Works": {
