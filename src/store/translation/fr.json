@@ -1,123 +1,128 @@
 {
 	"@metadata": {
 		"authors": [
+			"DreZhsh",
+			"Eneelk",
+			"Florian COLLIN",
 			"Gomoko",
-			"Wladek92",
-			"Abijeet Patro"
+			"JenyxGym",
+			"McDutchie",
+			"Pols12",
+			"Thibaut120094",
+			"Trizek (WMF)",
+			"Urhixidur",
+			"VIGNERON",
+			"Verdy p",
+			"Wladek92"
 		]
 	},
 	"LandingPage": {
 		"search": "Rechercher",
-		"searchInputPlaceHolder": "Trouver un sujet ou créer un nouveau sujet"
+		"searchInputPlaceHolder": "Trouver un sujet ou créer un nouveau sujet",
+		"searchInputSearchOnly": "Trouver un sujet",
+		"showMore": "Afficher plus d’éléments",
+		"createNew": "Créer un nouvel élément",
+		"intro": "Wikidocumentaries est un wiki pour la petite histoire — un endroit pour réunir les traces historiques et les transformer en histoires. Commencer à chercher un sujet d’intérêt !",
+		"titleDescription": "Qu’est-ce que Wikidocumentaries ?",
+		"description": "Wikidocumentaries est un espace de création pour les historiens citoyens. Il combine des informations sur des sujets — personnes, lieux, bâtiments, événements et autres. Vous pouvez naviguer entre les sujets en suivant tout lien enregistré comme des relations de famille, des emplacements, des créateurs, des créations ou des affiliations. Un sujet est illustré avec des images et des cartes provenant des musées, archives et bibliothèques connectés. Dans Wikidocumentaries, il est possible de corriger l’information existante et d’ajouter de nouveaux sujets, d’apporter ses propres images ou collections et d’utiliser tout le contenu selon votre propre objectif.",
+		"titleStatus": "État",
+		"status": "Le site est en phase de démonstration. De nombreuses fonctionnalités importantes ne sont pas encore disponibles et le site peut ne pas fonctionner aussi bien qu’attendu.",
+		"moreBelow": "Lire davantage ci-dessous",
+		"more": "Lire la suite",
+		"moreLink": "Lire la suite sur",
+		"titleTopics": "Sujets",
+		"statusTopics": "Les sujets sont lus depuis Wikidata. De nouveaux sujets pourront être créés ultérieurement plutôt dans Wikidocumentaries, si le contenu sort du périmètre de Wikidata. Il sera aussi possible de décrire le sujet avec la richesse d’options de Wikidata. Les articles actuels viennent de Wikidata, bien que des articles puissent plus tard être créés localement pour des sujets qui n’existent que dans Wikidocumentaries.",
+		"titleMedia": "Média",
+		"statusMedia": "Le média est lu depuis un nombre croissant de dépôts qui diffusent des fichiers média sous licence ouverte. Nous travaillons pour trouver des images plus précises et afficher des métadonnées meilleures et plus nombreuses, depuis chacune des sources. De nouvelles sources de médias sont les bienvenues !",
+		"titleTools": "Outils",
+		"statusTools": "Wikidocumentaries a des tâches et des outils pour travailler sur le contenu. Les articles peuvent être déjà traduits en diverses langues avec l’outil de traduction. Nous préparons un système de mots-clés basé sur Wikidata et un outil de géolocalisation pour les images. De nouveaux outils amusants et utiles peuvent être créés ou intégrés.",
+		"titleLanguages": "Langues",
+		"statusLanguages": "Wikidocumentaries peut être parcouru dans toute langue disponible sur Wikidata. C’est une grande opportunité pour les langues plus rares. Les traductions sont faites dans TranslateWiki.",
+		"titleTechnology": "Technologie",
+		"statusTechnology": "Wikidocumentaries lit les données de base depuis Wikidata. De plus, il dispose de sa propre wikibase pour les sujets qui sortent du périmètre de Wikidata. Wikidata et Wikidocumentaries sont censés être synchronisés en tant que wikibases fédérées. En second lieu, les métadonnées d’image sont liées aux éléments de Wikidata et ces données peuvent être synchronisées avec les Données structurées de Wikimedia Commons. Le site est construit avec Vue.js et est hébergé dans les Services cloud de Wikimedia.",
+		"titleCreators": "Créateurs",
+		"titleTeam": "Équipe",
+		"titleThanks": "Avec nos remerciements spéciaux à",
+		"titlePartners": "Partenaires",
+		"titleFunding": "Avec l’aimable soutien de",
+		"titleBy": "Projet par",
+		"getInvolved": "Impliquez-vous !",
+		"titleTranslate": "Traduire",
+		"joinTranslate": "Venez et amenez votre langue dans Wikidocumentaries. Rejoignez l’équipe de traduction bénévole et voyez l’héritage culturel connecté naître à la vie dans votre langue.",
+		"titleContent": "Ajouter votre commentaire",
+		"joinContent": "Si vous avez une photo, un média, un document, une carte ou une collection de données que vous aimeriez voir ici, regardons ensemble si cela peut être connecté déjà via un des canaux existants ou si nous pouvons créer de nouvelles méthodes de connexion. Nous prévoyons aussi d’organiser des ateliers dans des communautés d’intérêt pour enregistrer la connaissance historique.",
+		"titleDevelop": "Créer des outils et des tâches de production participative.",
+		"joinDevelop": "Nous aimons ajouter plus d’outils et créer de nouvelles tâches de participation collaborative avec les organisations et les constructeurs d’outil. Joignons nos forces pour la prochaine application sympa de production participative !",
+		"titleContact": "Restez en contact !",
+		"facebook": "Groupe Facebook",
+		"wiki": "Wiki de Wikidocumentaries",
+		"blog": "Blogue",
+		"email": "Courriel",
+		"github": "Dépôt Github"
 	},
 	"MainPage": {
 		"topicPageName": "Page du sujet",
-		"mapPlaceMatchPageName": "Combiner les noms d’endroits",
+		"mapPlaceMatchPageName": "Combiner les noms de lieux",
 		"mapSearchPageName": "Rechercher les cartes",
-		"wikiTopicErrorMessage": "Une page Wikipédia pour le sujet n’a pas pu être trouvée dans la langue actuelle, ou une autre erreur s’est produite.",
+		"wikiTopicErrorMessage": "Une page Wikipédia pour le sujet n’a pas pu être trouvée dans la langue actuelle, ou bien une autre erreur s’est produite.",
 		"returnToHomeMessage": "Retour à la page d’accueil"
 	},
 	"WaitPage": {
-		"waitMessage": "Un moment, svp… Récupération des données depuis Wikipédia, Wikidata, Wikimédia Communs, Map Warper, Finna, Flickr…"
+		"waitMessage": "Veuillez patienter : récupération en cours des données depuis Wikipédia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Affiliations",
+			"intro": "Organisations avec lesquelles cette personne ou cette organisation sont affiliées."
+		},
+		"Awards": {
+			"headerTitle": "Récompenses",
+			"intro": "Nominations et récompenses du sujet de cette page."
+		},
 		"BaseMapDialog": {
-			"chooseMapTitle": "Choisir les cartes de base historiques",
-			"chooseMapHelpNote": "Conseil : ctrl+clic permet de sélectionner plusieurs cartes",
+			"chooseMapTitle": "Choisir une ou plusieurs cartes de base historiques",
+			"chooseMapHelpNote": "Conseil : Ctrl + Clic permet de sélectionner plusieurs cartes",
 			"yearAbbreviation": "a."
 		},
-		"Header": {
-			"titleEditText": "Modifier le titre",
-			"titleApproveText": "Approuver ce titre",
-			"subtitleEditText": "Modifier la description",
-			"subtitleApproveText": "Approuver cette description"
+		"Collection": {
+			"headerTitle": "Travaux dans la collection",
+			"intro": "Les travaux suivants sont dans la collection de cette personne ou de cette institution. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les travaux sans image. Ils peuvent être triés par dates ou noms. Remarquez que seuls seront affichés les travaux qui ont cette information."
 		},
-		"TopicImages": {
-			"headerTitle": "Images d'archives",
-			"intro": "Ces images sont réunies depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez favoriser une image ou la supprimer de la page si elle n’y a pas sa place.",
-			"actionsMenu": {
-				"menuTitle": "Afficher ou arranger les images",
-				"tooltip": "Afficher ou arranger les images",
-				"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
-				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
-				"selectPortraits": "Sélectionner les portraits de bonne qualité de cette personne",
-				"arrangeByTime": "Classer les images selon l'heure",
-				"selectWorks": "Sélectionner les images de travaux"
+		"Cups": {
+			"headerTitle": "Jeux, séries et tournois",
+			"intro": "Ce club a participé aux jeux, championnats et tournois suivants :"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Voici les événements professionnels de la personne du sujet."
+		},
+		"Depicted": {
+			"headerTitle": "Dépeint dans",
+			"intro": "Ce sujet est dépeint dans les œuvres suivantes, triées selon différents critères et affichées sous forme de liste pour voir celles sans image.",
+			"sortMenu": {
+				"title": "Trier les travaux",
+				"tooltip": "Trier les travaux",
+				"optionTime": "Chronologiquement",
+				"optionAlpha": "Alphabétiquement",
+				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
-				"menuTitle": "Images Facet par",
-				"menuTooltip": "Images Facet selon différents critères",
-				"time": "horodatage",
-				"map": "carte",
-				"people": "personnes",
-				"places": "lieux",
-				"topics": "sujets",
-				"form": "formulaire",
-				"imageSize": "taille d’image",
-				"large": "grand",
-				"medium": "moyen",
-				"small": "petit",
-				"type": "type de média",
-				"creator": "créateur",
-				"platform": "plateforme",
-				"source": "source",
-				"saveSelection": "Enregistrer la sélection sous forme de collection",
-				"clear": "Effacer les choix"
+				"title": "Facetter les travaux par",
+				"tooltip": "Facetter les travaux selon différents critères",
+				"optionType": "Type",
+				"optionColl": "Créateur"
 			},
-			"imagesActionMenu": {
-				"menuTitle": "Actions",
-				"menuTooltip": "Actions",
-				"doGeolocatingText": "Définir l’emplacement…",
-				"showImageText": "Afficher l’image",
-				"selectFeatured": "Choisir comme image d’entête"
+			"displayMenu": {
+				"title": "Afficher comme",
+				"tooltip": "Choisir l’affichage",
+				"optionGallery": "Galerie",
+				"optionList": "Liste"
 			},
-			"imagesRemoveMenu": {
-				"menuTitle": "Supprimer l’image parce que…",
-				"shortMenuTitle": "Supprimer l’image",
-				"menuTooltip": "Supprimer l’image",
-				"remDepicted": {
-					"menuTitle": "Il représente plutôt le sujet",
-					"shortMenuTitle": "Elle dépeint un autre sujet",
-					"search": "Rechercher le sujet",
-					"browse": "Naviguer dans les sujets associés"
-				},
-				"remCreator": {
-					"menuTitle": "C’est plutôt par ce créateur",
-					"shortMenuTitle": "Elle est d’un autre créateur",
-					"search": "Rechercher le créateur",
-					"browse": "Naviguer parmi les acteurs associés"
-				},
-				"remInappropriate": {
-					"menuTitle": "Ce n’est pas approprié parce que",
-					"shortMenuTitle": "Elle est inappropriée",
-					"privacy": "Cela viole la confidentialité de ce qui est représenté",
-					"violence": "Cela affiche une violence extrême",
-					"sex": "Cela affiche du sexe explicite",
-					"copyvio": "Cela viole le droit d’auteur",
-					"explain": "Laisser une note pour expliquer"
-				}
-			},
-			"imagesViewExternal": "Afficher l’image d’origine",
-			"imagesViewOnMap": "Afficher l’image sur une carte"
+			"showAll": "Tous"
 		},
-		"TopicMap": {
-			"headerTitle": "Sujet sur la carte",
-			"intro": "L’endroit du sujet est affiché sur la carte. Vous pouvez aussi afficher les images et d’autres données sur la carte ou choisir une carte historique comme couche de base.",
-			"chooseHistoricalBasemapMenuText": "Choisir les cartes de base historiques…",
-			"hideImagesMenuText": "Masquer les images",
-			"chooseTimelineMapsMenuText": "Choisir les cartes de la frise temporelle…",
-			"showNearbyPlacesMenuText": "Afficher les lieux à proximité",
-			"hideNearbyPlacesMenuText": "Masquer les lieux à proximité"
-		},
-		"TopicNewspapers": {
-			"headerTitle": "Coupures de journaux",
-			"searhTopicFromArchivesMenuText": "Rechercher dans les journaux de la Bibliothèque nationale de Finlande",
-			"addClipFromArchivesMenuText": "Ajouter une coupure…"
-		},
-		"TopicTimeline": {
-			"headerTitle": "Frise temporelle",
-			"showEventsOnTimelineMenuText": "Afficher les événements du sujet sur la frise temporelle",
-			"centuryText": "S"
+		"Depicts": {
+			"headerTitle": "Dépeint",
+			"intro": "Cette œuvre décrit ces sujets. Vous pouvez les trier par date et par nom. Notez que pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
 		},
 		"Events": {
 			"headerTitle": "Événements",
@@ -138,58 +143,29 @@
 				"optionRelatedTopics": "Afficher les événements des sujets associés"
 			}
 		},
-		"Wikidata": {
-			"headerTitle": "Faits",
-			"extLink": {
-				"linkTitleWD": "Afficher ou modifier dans Wikidata"
-			},
-			"noTopicFoundText": "Sujet non trouvé"
+		"Header": {
+			"titleEditText": "Modifier le titre",
+			"titleApproveText": "Approuver ce titre",
+			"subtitleEditText": "Modifier la description",
+			"subtitleApproveText": "Approuver cette description"
 		},
-		"Wikipedia": {
-			"headerTitle": "Article",
-			"missingArticle": "Il n’y a pas d’article sur ce sujet dans votre langue. Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu de langues ci-dessus. Vous pouvez créer l’article dans votre langue en cliquant sur l’icône plus.",
-			"missingArticleMissing": "Il n’y a pas d’article sur ce sujet dans votre langue.",
-			"missingArticleChoose": "Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu de langue ci-dessus, ou vous pouvez créer l’article dans votre langue en cliquant sur l’icône plus.",
-			"missingArticleCreate": "Vous pouvez créer cet article dans votre langue en cliquant sur l’icône plus.",
-			"missingArticleFallback": "Cet article dans une autre langue vous est montré d’après vos préférences de langues en remplacement.",
-			"missingArticleTranslate": "Vous pouvez traduire cet article dans votre langue en la choisissant dans le menu des langues.",
-			"missingArticleAuto": "Ce texte bref a été créé automatiquement depuis les faits enregistrés. Vous pouvez sauvegarder ce brouillon et commencer la modification de l’article.",
-			"extLink": {
-				"linkTitleWP": "Lire ou modifier dans Wikipédia"
-			},
-			"addLink": {
-				"linkTitleWP": "Créer un article dans Wikipédia"
-			},
-			"languageMenu": {
-				"menuTitle": "Lire l’article dans une autre langue",
-				"translateArticleText": "Traduire cet article dans votre langue",
-				"otherLanguagestext": "Autres langues"
-			}
-		},
-		"Gallery": {
-			"headerTitle": "Personnes liées au sujet",
-			"menuTitle": "Afficher",
-			"showBorn": "Né ici",
-			"showDied": "Décédé ici",
-			"showBuried": "Enterré ici",
-			"showRelated": "Autre relation",
-			"showAll": "Tous"
+		"Heritage": {
+			"headerTitle": "Éléments patrimoniaux"
 		},
 		"Locations": {
-			"headerTitle": "Emplacements",
+			"headerTitle": "À cet endroit",
 			"intro": "Ici vous voyez tout ce qui est localisé dans le sujet de cette page. Afficher comme une liste pour voir tous les emplacements qui ont été enregistrés.",
 			"sortMenu": {
 				"title": "Trier les emplacements",
 				"tooltip": "Trier les emplacements",
-				"optionTime": "Selon l'heure",
-				"optionAlpha": "Par ordre alphabétique",
+				"optionTime": "Chronologiquement",
+				"optionAlpha": "Alphabétiquement",
 				"optionDist": "Selon la distance",
-				"optionRev": "Inverser le tri",
 				"optionClear": "Ne pas trier"
 			},
 			"facetMenu": {
-				"title": "Emplacements Facet par",
-				"tooltip": "Emplacements Facet selon différents critères",
+				"title": "Facetter les emplacements par",
+				"tooltip": "Facetter les emplacements selon différents critères",
 				"optionType": "Type",
 				"optionColl": "Créateur",
 				"optionCity": "Emplacement"
@@ -202,55 +178,46 @@
 			},
 			"showAll": "Tous"
 		},
-		"Depicted": {
-			"headerTitle": "Dépeint dans",
-			"intro": "Ce sujet est dépeint dans ces travaux. Trier les travaux selon divers critères, affichés sous forme de liste pour voir ceux sans image.",
-			"sortMenu": {
-				"title": "Tri activé",
-				"tooltip": "Tri activé",
-				"optionTime": "Selon l'heure",
-				"optionAlpha": "Par ordre alphabétique",
-				"optionRev": "Tri inversé",
-				"optionClear": "Ne pas trier"
-			},
-			"facetMenu": {
-				"title": "Travaux Facet par",
-				"tooltip": "Travaux Facet selon différents critères",
-				"optionType": "Type",
-				"optionColl": "Créateur"
-			},
-			"displayMenu": {
-				"title": "Afficher comme",
-				"tooltip": "Choisir l’affichage",
-				"optionGallery": "Galerie",
-				"optionList": "Liste"
-			},
-			"showAll": "Tous"
+		"Map": {
+			"headerTitle": "Emplacement sur la carte"
 		},
-		"Works": {
-			"headerTitle": "Works",
-			"intro": "Ce sont les travaux faits par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur le travail en cliquant dessus. Seuls les travaux avec des images sont affichés. Afficher comme une liste pour voir tous les travaux reliés qui ont été stockés.",
-			"sortMenuTitle": "Trier",
-			"sortMenuTooltip": "Trier les éléments",
-			"sortMenuOptionTime": "Selon l'heure",
-			"sortMenuOptionAlpha": "Par ordre alphabétique",
-			"sortMenuOptionDist": "Selon la distance",
-			"sortMenuOptionRev": "Tri inversé",
-			"sortMenuOptionClear": "Ne pas trier",
-			"facetMenuTitle": "Facet par",
-			"facetMenuTooltip": "Travaux Facet selon différents critères",
-			"facetMenuOptionType": "Type",
-			"facetMenuOptionColl": "Collection",
-			"facetMenuOptionCity": "Emplacement",
-			"displayMenuTitle": "Afficher comme",
-			"displayMenuTooltip": "Choisir l’affichage",
-			"displayMenuOptionGallery": "Galerie",
-			"displayMenuOptionList": "Lister",
-			"showAll": "Tout"
+		"Parts": {
+			"headerTitle": "Parties",
+			"intro": "Ces éléments appartiennent à ce sujet. Vous pouvez les trier selon la date et le nom. Pour voir tous les sujets, y compris ceux sans image, vous devez les afficher sous forme de liste."
+		},
+		"Partof": {
+			"headerTitle": "Partie de",
+			"intro": "Ce sujet fait partie de ces autres sujets. Vous pouvez les trier par horodatage ou par nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
+		"Similar": {
+			"headerTitle": "Sujets similaires",
+			"intro": "Trouver les sujets qui ont des caractéristiques clés communes avec ce sujet."
+		},
+		"Effects": {
+			"headerTitle": "Effets",
+			"intro": "Ce sont les effets du sujet."
+		},
+		"Familytree": {
+			"headerTitle": "Arbre généalogique"
+		},
+		"Instances": {
+			"headerTitle": "Instances de ce sujet",
+			"intro": "Voir les instances de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Links": {
+			"headerTitle": "Liens depuis cet article"
+		},
+		"Location": {
+			"headerTitle": "Emplacement",
+			"intro": "Ce sujet est inclus parmi les sujets suivants ou dans leur contexte."
+		},
+		"Names": {
+			"headerTitle": "Noms",
+			"intro": "Voir les noms de ce sujet et toutes les autres alternatives."
 		},
 		"People": {
 			"headerTitle": "Personnes liées au sujet",
-			"intro": "Ce sont les personnes liées au sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur la personne en cliquant dessus. Vous pouvez aussi afficher les gens sous forme de liste.",
+			"intro": "Les personnes suivantes sont associées au sujet de cette page. Vous pouvez choisir de les afficher sous forme de liste, ce qui montrera aussi les personnes sans image. Elles peuvent être triées par date ou nom. Notez que seules celles qui ont cette information seront affichées.",
 			"sortMenuTitle": "Trier",
 			"sortMenuTooltip": "Modifier l'ordre de tri",
 			"sortMenuOptionBirth": "Par date de naissance",
@@ -258,13 +225,171 @@
 			"sortMenuOptionName": "Par nom",
 			"sortMenuOptionFirst": "Par prénom",
 			"sortMenuOptionLast": "Par nom de famille",
-			"sortMenuOptionRev": "Ordre de tri inverse",
 			"sortMenuOptionClear": "Ne pas trier",
-			"facetMenuTitle": "Facet par",
-			"facetMenuTooltip": "Personnes de Facet selon différents aspects",
+			"facetMenuTitle": "Facetter par",
+			"facetMenuTooltip": "Facetter les personnes selon différents aspects",
 			"facetMenuOptionProfession": "Profession",
 			"facetMenuOptionCountry": "Pays",
 			"facetMenuOptionCity": "Genre"
+		},
+		"Seasons": {
+			"headerTitle": "Saisons",
+			"intro": "Voir les saisons de cette activité."
+		},
+		"Subclasses": {
+			"headerTitle": "Sous-classes de ce sujet",
+			"intro": "Voir les sous-classes de ce sujet. Afficher sous forme de liste pour voir aussi les éléments sans image."
+		},
+		"Teams": {
+			"headerTitle": "Équipes participantes",
+			"intro": "Équipes qui participent à ce jeu, ce championnat ou ce tournois."
+		},
+		"Things": {
+			"headerTitle": "Sujets de la liste de focalisation",
+			"intro": "La liste de focalisation de ce Wikiprojet traite des sujets suivants."
+		},
+		"Twins": {
+			"headerTitle": "Villes jumelées",
+			"intro": "Villes jumelées, villes sœurs, municipalités jumelées et autres localités qui ont un partenariat ou un accord de coopération, reconnu de façon légale ou informelle par leurs gouvernements. Vous pouvez les trier par date et nom. Pour voir tous les sujets, y compris ceux sans image, vous devez afficher les sujets sous forme de liste."
+		},
+		"TopicImages": {
+			"headerTitle": "Images des archives",
+			"intro": "Ces images sont rassemblées depuis plusieurs sources et peuvent ne pas toujours se rapporter précisément au sujet. Vous pouvez afficher l’image originale et placer l’image sur une carte si elle possède un identifiant de lieu.",
+			"actionsMenu": {
+				"menuTitle": "Afficher ou arranger les images",
+				"tooltip": "Afficher ou arranger les images",
+				"showImagesOnMapMenuText": "Afficher toutes les images sur la carte",
+				"showImagesOnTimelineMenuText": "Afficher toutes les images sur la frise temporelle",
+				"selectPortraits": "Sélectionner les portraits de bonne qualité de cette personne",
+				"arrangeByTime": "Classer les images chronologiquement",
+				"selectWorks": "Sélectionner les images de travaux"
+			},
+			"facetMenu": {
+				"menuTitle": "Images facettes par",
+				"menuTooltip": "Images facettes selon différents critères",
+				"time": "horodatage",
+				"map": "carte",
+				"people": "personnes",
+				"places": "lieux",
+				"topics": "sujets",
+				"form": "formulaire",
+				"imageSize": "taille d’image",
+				"large": "grand",
+				"medium": "moyen",
+				"small": "petit",
+				"type": "type de média",
+				"creator": "créateur",
+				"platform": "plateforme",
+				"source": "source",
+				"saveSelection": "Enregistrer la sélection sous forme de collection",
+				"clear": "Effacer les choix"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Actions",
+				"menuTooltip": "Actions",
+				"doGeolocatingText": "Définir l’emplacement...",
+				"showImageText": "Afficher l’image",
+				"selectFeatured": "Choisir comme image d’entête"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Supprimer l’image parce que...",
+				"shortMenuTitle": "Supprimer l’image",
+				"menuTooltip": "Supprimer l’image",
+				"remDepicted": {
+					"menuTitle": "Elle représente plutôt ce sujet",
+					"shortMenuTitle": "Elle représente un autre sujet",
+					"search": "Rechercher le sujet",
+					"browse": "Naviguer dans les sujets associés"
+				},
+				"remCreator": {
+					"menuTitle": "C’est plutôt par ce créateur",
+					"shortMenuTitle": "Elle est d’un autre créateur",
+					"search": "Rechercher le créateur",
+					"browse": "Naviguer parmi les acteurs associés"
+				},
+				"remInappropriate": {
+					"menuTitle": "Elle n’est pas appropriée parce que",
+					"shortMenuTitle": "Elle est inappropriée",
+					"privacy": "Elle viole la confidentialité ou la vie privée de ce qui est représenté",
+					"violence": "Elle affiche une violence extrême",
+					"sex": "Elle affiche du sexe explicite",
+					"copyvio": "Elle viole le droit d’auteur",
+					"explain": "Laisser une note pour expliquer"
+				}
+			},
+			"imagesViewExternal": "Afficher l’image d’origine",
+			"imagesViewOnMap": "Afficher l’image sur une carte"
+		},
+		"TopicMap": {
+			"headerTitle": "Sujet sur la carte",
+			"intro": "L’endroit du sujet est affiché sur la carte. Vous pouvez aussi afficher les images et d’autres données sur la carte ou choisir une carte historique comme couche de base.",
+			"chooseHistoricalBasemapMenuText": "Choisir ou ou plusieurs cartes historiques de base...",
+			"hideImagesMenuText": "Masquer les images",
+			"chooseTimelineMapsMenuText": "Choisir les cartes de la frise temporelle...",
+			"showNearbyPlacesMenuText": "Afficher les lieux à proximité",
+			"hideNearbyPlacesMenuText": "Masquer les lieux à proximité",
+			"extLink": {
+				"menuTooltip": "Afficher ou modifier dans OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Coupures de journaux",
+			"searhTopicFromArchivesMenuText": "Rechercher dans les journaux de la Bibliothèque nationale de Finlande",
+			"addClipFromArchivesMenuText": "Ajouter une coupure..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Chronologie",
+			"showEventsOnTimelineMenuText": "Afficher les événements du sujet sur la frise chronologique",
+			"centuryText": "S"
+		},
+		"Works": {
+			"headerTitle": "Works",
+			"intro": "Voici les œuvres réalisées par la personne, la collectivité ou l’organisation qui est le sujet de cette page. Vous pouvez saisir une page collectant toutes les informations sur une œuvre en cliquant dessus. Seules les œuvres avec des images sont affichées. Afficher comme une liste pour voir toutes les œuvres reliées qui ont été stockées.",
+			"sortMenuTitle": "Trier",
+			"sortMenuTooltip": "Trier les éléments",
+			"sortMenuOptionTime": "Chronologiquement",
+			"sortMenuOptionAlpha": "Dans l’ordre alphabétique",
+			"sortMenuOptionDist": "Selon la distance",
+			"sortMenuOptionClear": "Ne pas trier",
+			"facetMenuTitle": "Facettes par",
+			"facetMenuTooltip": "Travaux facettes selon différents critères",
+			"facetMenuOptionType": "Type",
+			"facetMenuOptionColl": "Collection",
+			"facetMenuOptionCity": "Emplacement",
+			"displayMenuTitle": "Afficher comme",
+			"displayMenuTooltip": "Choisir l’affichage",
+			"displayMenuOptionGallery": "Galerie",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Carte",
+			"showAll": "Tout"
+		},
+		"Wikidata": {
+			"headerTitle": "Faits",
+			"extLink": {
+				"linkTitleWD": "Afficher ou modifier dans Wikidata"
+			},
+			"noTopicFoundText": "Sujet non trouvé"
+		},
+		"Wikipedia": {
+			"headerTitle": "Article",
+			"missingArticle": "Il n’y a aucun article sur ce sujet dans votre langue. Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu de langues ci-dessus. Vous pouvez créer l’article dans votre langue en cliquant sur l’icône plus.",
+			"missingArticleMissing": "Il n’y a pas d’article sur ce sujet dans votre langue.",
+			"missingArticleChoose": "Vous pouvez lire l’article dans une autre langue disponible en choisissant dans le menu de langue ci-dessus, ou vous pouvez créer l’article dans votre langue en cliquant sur l’icône plus.",
+			"missingArticleCreate": "Vous pouvez créer cet article dans votre langue en cliquant sur l’icône plus.",
+			"missingArticleFallback": "Cet article écrit dans une autre langue vous est montré d’après vos préférences de langues de repli.",
+			"missingArticleTranslate": "Vous pouvez traduire cet article dans votre langue en la choisissant dans le menu des langues.",
+			"missingArticleAuto": "Ce texte bref a été créé automatiquement depuis les faits enregistrés. Vous pouvez enregistrer ce brouillon et commencer la modification de l’article.",
+			"extLink": {
+				"linkTitleWP": "Lire ou modifier dans Wikipédia"
+			},
+			"addLink": {
+				"linkTitleWP": "Créer un article dans Wikipédia"
+			},
+			"languageMenu": {
+				"menuTitle": "Lire l’article dans une autre langue",
+				"translateArticleText": "Traduire cet article dans votre langue",
+				"otherLanguagestext": "Autres langues"
+			}
 		}
 	},
 	"imageViewer": {
@@ -281,11 +406,11 @@
 			"addDateDepicted": "Ajouter une date dépeinte",
 			"removeDateDepicted": "Supprimer une date dépeinte",
 			"dateCreated": "Date de création",
-			"addDateCreated": "Ajouter une date de création",
+			"addDateCreated": "Ajouter la date de création",
 			"removeDateCreated": "Supprimer une date de création",
-			"publisher": "Éditeur",
-			"addPublisher": "Ajouter un éditeur",
-			"removePublisher": "Supprimer un éditeur",
+			"publisher": "Éditeur de publication",
+			"addPublisher": "Ajouter un éditeur de publication",
+			"removePublisher": "Supprimer un éditeur de publication",
 			"format": "Format",
 			"addFormat": "Ajouter un format",
 			"removeFormat": "Supprimer un format",
@@ -303,9 +428,9 @@
 			"locationMap": "Emplacement sur la carte",
 			"addLocation": "Ajouter un emplacement",
 			"removeLocation": "Supprimer un emplacement",
-			"address": "Adresse de la rue",
-			"addAddress": "Ajouter l’adresse de la rue",
-			"removeAddress": "Supprimer l’adresse la rue",
+			"address": "Adresse de rue",
+			"addAddress": "Ajouter l’adresse de rue",
+			"removeAddress": "Supprimer l’adresse de rue",
 			"depictedPeople": "Personnes décrites",
 			"addPerson": "Ajouter une personne",
 			"removePerson": "Supprimer une personne",
@@ -313,33 +438,40 @@
 			"addEvent": "Ajouter un événement",
 			"removeEvent": "Supprimer un événement",
 			"institution": "Institution",
-			"callNumber": "Numéro d’appel",
 			"collection": "Collection",
+			"addCollection": "Ajouter une collection",
 			"inventoryNumber": "Numéro d’inventaire",
 			"inscriptions": "Inscriptions",
 			"measurements": "Mesures",
-			"copyright": "Droit d’auteur",
-			"work": "Œuvre",
+			"copyright": "Droits d’auteur",
+			"license": "Licence de droits d'auteur",
+			"work": "Œuvre représentée dans cette image",
 			"photograph": "Photographie",
+			"image": "Image",
 			"photographer": "Photographe",
 			"addPhotographData": "Ajouter des informations sur le photographe",
 			"copyrightNotePD": "L’image est sous licence avec $1, mais d’après ses métadonnées, l’image est dans le domaine public.",
 			"copyrightNoteSame": "La même image est sous une licence plus ouverte avec $1, donc cela s’applique aussi à l’image.",
+			"creditline": "Ligne de crédit",
+			"attribution": "Attribution",
 			"digitalCopy": "Copie numérique",
 			"publishingPlatform": "Plateforme de publication",
-			"platformId": "ID",
+			"platformId": "Identifiant",
+			"provider": "Fournisseur de contenu",
 			"imageInfoPage": "Page d’info de l’image",
 			"imageDimensions": "Dimensions de l’image",
 			"fileSize": "Taille du fichier",
 			"fileFormat": "Format du fichier",
 			"remove": "Supprimer",
 			"moveTo": "Déplacer vers un autre champ",
-			"addData": "Ajouter des données"
+			"addData": "Ajouter des données",
+			"uploader": "Téléverseur",
+			"rotate": "Pivoter"
 		},
 		"imageActions": {
 			"rotateImage": "Faire pivoter l’image",
-			"clockwise": "sens des aiguilles d’une montre",
-			"counterclockwise": "sens trigonométrique",
+			"clockwise": "dans le sens horaire",
+			"counterclockwise": "dans le sens trigonométrique",
 			"flip": "Retourner",
 			"horizontal": "horizontalement",
 			"vertical": "verticalement"
@@ -367,25 +499,69 @@
 	},
 	"menu": {
 		"TransparencySliderMenuItem": {
-			"transparencyLabel": "Transparence de la carte de base historique :"
+			"transparencyLabel": "Transparence de la carte de base historique :"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Trier les sujets",
+			"tooltip": "Trier les sujets",
+			"optionTime": "Chronologiquement",
+			"optionStart": "Par date de début",
+			"optionEnd": "Par date de fin",
+			"optionTitle": "Par titre",
+			"optionCause": "Par cause",
+			"optionPartof": "Par élément dont il fait partie",
+			"optionSuperclass": "Par classe dont il est une sous-classe",
+			"optionAlpha": "Alphabétiquement",
+			"optionTitleAlpha": "Par titre, alphabétiquement",
+			"optionCreatorAlpha": "Par créateur, alphabétiquement",
+			"optionDist": "Selon la distance",
+			"optionRev": "Tri inversé",
+			"optionClear": "Effacer le tri"
+		},
+		"facetMenu": {
+			"title": "Facetter par",
+			"tooltip": "Facetter les sujets selon divers critères",
+			"optionType": "Type",
+			"optionColl": "Créateur",
+			"optionCity": "Emplacement"
+		},
+		"displayMenu": {
+			"title": "Afficher comme",
+			"tooltip": "Choisir l’affichage",
+			"optionGallery": "Galerie",
+			"optionList": "Liste"
 		}
 	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "OK",
 		"cancel": "Annuler",
 		"helpText": "Aide",
+		"expand": "Développer cette section",
+		"collapse": "Replier cette section",
 		"menus": {
 			"actionMenuTitle": "Actions",
 			"actionMenuTooltip": "Actions",
 			"languageMenuTitle": "Choisir la langue",
+			"languageMenuTooltip": "Choisissez votre langue",
 			"myLanguagesItem": "Mes langues",
-			"languageMenuTranslate": "Traduire cet article"
+			"languageMenuTranslate": "Traduire cet article en français"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduisez dans votre langue"
 		},
 		"languages": {
-			"fi": "Finnois",
-			"en": "Anglais",
-			"sv": "Suédois",
-			"es": "Espagnol"
+			"fi": "finnois",
+			"en": "anglais",
+			"sv": "suédois",
+			"es": "espagnol"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki aime les monuments $1",
+		"WLMText": "Photographier ce site d’héritage culturel et participer au concours de photographie $2 !",
+		"WLMButton": "Téléverser une image"
 	}
 }

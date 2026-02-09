@@ -1,0 +1,222 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Jakub Fabijan",
+			"Mirin",
+			"Robin van der Vliet"
+		]
+	},
+	"LandingPage": {
+		"search": "Serĉi",
+		"searchInputPlaceHolder": "Trovi temon aŭ krei novan temon",
+		"searchInputSearchOnly": "Trovi temon",
+		"titleStatus": "Stato",
+		"more": "Legi pli",
+		"moreLink": "Legi pli en",
+		"titleTopics": "Temoj",
+		"titleTools": "Iloj",
+		"titleLanguages": "Lingvoj",
+		"titleTechnology": "Teknologio",
+		"titleCreators": "Kreintoj",
+		"titleTeam": "Teamo",
+		"titlePartners": "Partneroj",
+		"titleBy": "Projekto far",
+		"getInvolved": "Partoprenu!",
+		"titleTranslate": "Traduki",
+		"blog": "Blogo",
+		"email": "Retpoŝto",
+		"github": "Github-deponejo"
+	},
+	"MainPage": {
+		"topicPageName": "Paĝo pri temo",
+		"mapSearchPageName": "Serĉi mapojn"
+	},
+	"topic_page": {
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Laŭ tempo",
+				"optionAlpha": "Alfabete"
+			},
+			"facetMenu": {
+				"optionType": "Speco",
+				"optionColl": "Kreinto"
+			},
+			"displayMenu": {
+				"title": "Prezenti kiel",
+				"optionGallery": "Galerio",
+				"optionList": "Listo"
+			},
+			"showAll": "Ĉiuj"
+		},
+		"Depicts": {
+			"headerTitle": "Prezentas"
+		},
+		"Events": {
+			"headerTitle": "Eventoj",
+			"optionsMenu": {
+				"subRelatedPeopleConf": {
+					"menuTitle": "Agordi"
+				}
+			}
+		},
+		"Locations": {
+			"sortMenu": {
+				"optionTime": "Laŭ tempo",
+				"optionAlpha": "Alfabete"
+			},
+			"facetMenu": {
+				"optionType": "Speco",
+				"optionColl": "Kreinto",
+				"optionCity": "Loko"
+			},
+			"displayMenu": {
+				"title": "Prezenti kiel",
+				"optionGallery": "Galerio",
+				"optionList": "Listo"
+			},
+			"showAll": "Ĉiuj"
+		},
+		"Parts": {
+			"headerTitle": "Partoj"
+		},
+		"Location": {
+			"headerTitle": "Loko"
+		},
+		"Names": {
+			"headerTitle": "Nomoj"
+		},
+		"People": {
+			"sortMenuTitle": "Ordigi",
+			"sortMenuOptionBirth": "Laŭ naskiĝdato",
+			"sortMenuOptionDeath": "Laŭ mortdato",
+			"sortMenuOptionName": "Laŭ nomo",
+			"sortMenuOptionFirst": "Laŭ persona nomo",
+			"sortMenuOptionLast": "Laŭ familia nomo",
+			"facetMenuOptionProfession": "Profesio",
+			"facetMenuOptionCountry": "Lando",
+			"facetMenuOptionCity": "Genro"
+		},
+		"Twins": {
+			"headerTitle": "Ĝemelaj urboj"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "tempo",
+				"map": "mapo",
+				"people": "homoj",
+				"places": "lokoj",
+				"topics": "temoj",
+				"form": "formo",
+				"imageSize": "grando de bildo",
+				"large": "granda",
+				"medium": "meza",
+				"small": "malgranda",
+				"creator": "kreinto",
+				"source": "fonto"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Agoj",
+				"menuTooltip": "Agoj"
+			}
+		},
+		"Works": {
+			"headerTitle": "Verkoj",
+			"sortMenuTitle": "Ordigi",
+			"facetMenuOptionType": "Speco",
+			"displayMenuOptionGallery": "Galerio"
+		},
+		"Wikidata": {
+			"headerTitle": "Faktoj"
+		},
+		"Wikipedia": {
+			"headerTitle": "Artikolo",
+			"extLink": {
+				"linkTitleWP": "Legi aŭ redakti ĉe Vikipedio"
+			},
+			"addLink": {
+				"linkTitleWP": "Krei artikolon ĉe Vikipedio"
+			},
+			"languageMenu": {
+				"menuTitle": "Legi artikolon en alia lingvo",
+				"translateArticleText": "Traduki ĉi tiun artikolon al via lingvo",
+				"otherLanguagestext": "Aliaj lingvoj"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "Priskribo",
+			"addDescription": "Aldoni priskribon",
+			"creator": "Kreinto",
+			"publisher": "Eldonejo",
+			"addPublisher": "Aldoni eldonejon",
+			"removePublisher": "Forigi eldonejon",
+			"technique": "Tekniko",
+			"addTechnique": "Aldoni teknikon",
+			"removeTechnique": "Forigi teknikon",
+			"depicted": "Bildo prezentas",
+			"genre": "Ĝenro",
+			"addGenre": "Aldoni ĝenron",
+			"removeGenre": "Forigi ĝenron",
+			"depicts": "Bildo prezentas",
+			"addTopic": "Aldoni temon",
+			"removeTopic": "Forigi temon",
+			"location": "Loko",
+			"event": "Evento",
+			"copyright": "Kopirajto",
+			"photograph": "Fotografaĵo",
+			"image": "Bildo",
+			"platformId": "Identigilo",
+			"fileSize": "Grando de dosiero",
+			"fileFormat": "Dosieraranĝo",
+			"remove": "Forigi",
+			"addData": "Aldoni datenon",
+			"uploader": "Alŝutinto"
+		},
+		"imageActions": {
+			"clockwise": "Dekstrume",
+			"counterclockwise": "Maldekstrume",
+			"horizontal": "horizonte",
+			"vertical": "vertikale"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "Laŭ tempo",
+			"optionAlpha": "Alfabete",
+			"optionTitleAlpha": "Laŭ titolo alfabete",
+			"optionCreatorAlpha": "Laŭ kreinto alfabete"
+		},
+		"facetMenu": {
+			"optionType": "Speco",
+			"optionColl": "Kreito",
+			"optionCity": "Loko"
+		},
+		"displayMenu": {
+			"title": "Prezenti kiel",
+			"optionGallery": "Galerio",
+			"optionList": "Listo"
+		}
+	},
+	"general": {
+		"ok": "Bone",
+		"cancel": "Nuligi",
+		"helpText": "Helpo",
+		"menus": {
+			"languageMenuTitle": "Elekti lingvon",
+			"languageMenuTooltip": "Elekti vian lingvon",
+			"myLanguagesItem": "Miaj lingvoj",
+			"languageMenuTranslate": "Traduki Esperanten"
+		},
+		"languageMenu": {
+			"TranslateUI": "Traduki al via lingvo"
+		},
+		"languages": {
+			"fi": "Finna",
+			"en": "Angla",
+			"sv": "Sveda",
+			"es": "Hispana"
+		}
+	}
+}

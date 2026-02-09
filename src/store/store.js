@@ -11,12 +11,13 @@ Vue.use(VueAxios, axios)
 
 import WIKI from './constants'
 
-const BASE_URL = "https://wikidocumentaries-api.wmflabs.org/"
-//const BASE_URL = "http://localhost:3000/"
+const BASE_URL = process.env.API_URL || "https://wikidocumentaries-api.wmcloud.org/"
 
 const wikidocumentaries = {
     title: 'Vapaamuurarin hauta',
     description: 'Muistomerkki Helsingissä',
+    labels: ['suomi', 'englanti'],
+    aliases: ["majuri Fredrik Granatenhjelmin (1708-84) hauta", "Vapaamuurarin muistokivi"],
     headerImageURL: 'https://upload.wikimedia.org/wikipedia/commons/b/bf/Helsinki_Kaisaniemi_Freemason%27s_grave_1908_I_K_Inha.png',
     wikipedia: {
         excerptHTML: '<p><strong>Vapaamuurarin hauta</strong> on <a href="https://fi.wikipedia.org/wiki/Helsinki" title="Helsinki">Helsingin</a> <a href="https://fi.wikipedia.org/wiki/Kaisaniemen_puisto" title="Kaisaniemen puisto">Kaisaniemen puistossa</a> sijaitseva yksinäinen nimetön hautakivi, joka on peräisin 1700-luvun lopulta. Hauta sijaitsee nykyisen Kaisaniemen urheilukentän koilliskulman tuntumassa <a href="https://fi.wikipedia.org/wiki/Helsingin_yliopiston_kasvitieteellinen_puutarha" title="Helsingin yliopiston kasvitieteellinen puutarha">Kasvitieteellisen puutarhan</a> ympärysaidan vieressä.</p><p>Hautakivessä ei ole vainajan nimeä vaan salaperäinen kirjoitus: &quot;Lika godt / om verlden vet hvem här hvilar / alt nog / Gud käńer hvad Han gjort / och / Uſlingen välſignar / HANS minne&quot;. (&quot;Yhdentekevää, tietääkö maailma, kuka tässä lepää. Joka tapauksessa Jumala tuntee hänen tekonsa ja kurja siunaa hänen muistoaan.&quot;)<a href="https://fi.wikipedia.org/wiki/Vapaamuurarin_hauta#cite_note-1">[1]</a> Vapaamuurarin hauta on Helsingin vanhin julkinen muistomerkki.</p><p>Haudassa lepää majuri <a href="https://fi.wikipedia.org/wiki/Fredrik_Granatenhjelm" title="Fredrik Granatenhjelm">Fredrik Granatenhjelm</a> (1708–1784), joka oli toivonut saada tulla haudatuksi juuri tälle paikalle, koska siinä hänen oli tapana levätä päiväkävelyllään silloisessa Edbomin puutarhassa. Granatenhjelmin on oletettu kuuluneen <a href="https://fi.wikipedia.org/wiki/Vapaamuurarit" title="Vapaamuurarit">vapaamuurareihin</a> ja osallistuneen järjestön hyväntekeväisyystoimintaan,<a href="https://fi.wikipedia.org/wiki/Vapaamuurarin_hauta#cite_note-2">[2]</a> mutta mahdollisesti hän ei eläessään kuulunut mihinkään seuraan, vaikka kuoltuaan saikin arvostusta monessa. <a href="https://fi.wikipedia.org/wiki/Valhalla-seura" title="Valhalla-seura">Valhalla-seuran</a> jäsenet kantoivat hänen arkkunsa hautaan ja olivat olleet aloitteentekijöinä, että kuningas <a href="https://fi.wikipedia.org/wiki/Kustaa_III" title="Kustaa III">Kustaa III</a> oli Parolan joukkojentarkastuksensa yhteydessä antanut erivapauden haudata Granatenhjelm hautausmaan ulkopuolelle; ja myös Valhalla-seura postuumisti korotti Granatenhjelmin kunniajäsenekseen. Muistomerkin pystytti eversti Lars <a href="https://fi.wikipedia.org/wiki/J%C3%A4gerhorn_af_Storby" title="Jägerhorn af Storby">Jägerhorn af Storby</a>, kun toiveet patsaan pystyttämisestä olivat hiipuneet. Hautaa ympäröi takorautainen aita, jossa on vapaamuurarien ja Granatenhjelmin aselajin, <a href="https://fi.wikipedia.org/wiki/Tykist%C3%B6" title="Tykistö">tykistön</a>, tunnukset.</p>',
@@ -65,7 +66,7 @@ const wikidocumentaries = {
                 id: 'P625',
                 label: 'koordinaatit',
                 value: '60.175556, 24.944028',
-                url: 'https://tools.wmflabs.org/geohack/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
+                url: 'https://geohack.toolforge.org/geohack.php?params=60.17555556_N_24.94402778_E_globe:earth&language=en'
             },
             {
                 id: 'P373',
@@ -759,7 +760,7 @@ export default new Vuex.Store({
     },
     getters: {
         topicStartYear: state => {
-            
+
             var startYear = (new Date()).getFullYear();
 
             if (state.wikidocumentaries.topicStartYear != undefined) {
@@ -791,6 +792,8 @@ export default new Vuex.Store({
             state.wikidocumentaries = {
                 title: null,
                 description: null,
+                labels: null,
+                aliases: null,
                 headerImageURL: null,
                 wikipedia: {
                     excerptHTML: null,
@@ -858,6 +861,12 @@ export default new Vuex.Store({
         setWikidocumentariesTopicDescription(state, description) {
             state.wikidocumentaries.description = description;
         },
+        setWikidocumentariesTopicLabels(state, labels) {
+            state.wikidocumentaries.labels = labels;
+        },
+        setWikidocumentariesTopicAliases(state, aliases) {
+            state.wikidocumentaries.aliases = aliases;
+        },
         setWikidata(state, wikidata) {
             state.wikidocumentaries.wikidata = wikidata;
         },
@@ -902,7 +911,7 @@ export default new Vuex.Store({
 
     },
     actions: {
-        updateWikidocumentaries({dispatch, commit}, params) {
+        updateWikidocumentaries({ dispatch, commit }, params) {
             //console.log('actions.updateWikidocumentaries');
             commit('resetState');
             commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_WIKI_EXTERNAL);
@@ -914,7 +923,7 @@ export default new Vuex.Store({
 
                 //console.log(data);
 
-                if (data.wikidata  == null ) {
+                if (data.wikidata == null) {
                     commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                 }
                 else {
@@ -925,12 +934,12 @@ export default new Vuex.Store({
 
                     params.wikidata = data.wikidata.id;
                     commit('setWikidataId', params.wikidata);
-		    
+
                     commit('setWikidocumentariesDataState', WIKI.STATES.LOADING_IMAGES_EXTERNAL);
 
                     // hide /wikipedia/ path from user now that we know the wikidata ID
                     if (window.location.pathname.indexOf("/wikipedia/") == 0) {
-                        window.history.replaceState(null, "", "/"+params.wikidata+window.location.search);
+                        window.history.replaceState(null, "", "/" + params.wikidata + window.location.search);
                     }
 
                     dispatch('getTopicImages', params).then((result) => {
@@ -942,7 +951,7 @@ export default new Vuex.Store({
                         if (data.wikipedia != undefined && data.wikipedia.originalimage != undefined && data.wikipedia.originalimage.source != null) {
                             commit('setHeaderImageURL', data.wikipedia.originalimage.source);
                         }
-                        else if (result.length > 0) { 
+                        else if (result.length > 0) {
                             // Set the first image (not pdf) in the results as header image
                             for (var i = 0; i < result.length; i++) {
                                 if (result[i].imageURL.indexOf('.pdf') == -1) {
@@ -987,7 +996,7 @@ export default new Vuex.Store({
                     then(function (response) {
                         //console.log(response.data);
 
-                        if (response.data.wikidata == null ) {
+                        if (response.data.wikidata == null) {
                             console.log("response.data.wikipedia == null");
                             context.commit('setWikidocumentariesDataState', WIKI.STATES.FAIL_WIKI_EXTERNAL);
                         }
@@ -996,21 +1005,22 @@ export default new Vuex.Store({
                             context.commit('setWikidata', response.data.wikidata);
                             context.commit('setWikidocumentariesTopicTitle', response.data.wikidata.title);
                             context.commit('setWikidocumentariesTopicDescription', response.data.wikidata.description);
+                            context.commit('setWikidocumentariesTopicLabels', response.data.wikidata.labels);
+                            context.commit('setWikidocumentariesTopicAliases', response.data.wikidata.aliases);
                             //console.log(response.data.wikidata.statements);
                             var startYear = calculateTopicStartYearFromWikidata(response.data.wikidata, context.state.wikidocumentaries.topicStartYear);
                             context.commit('setTopicStartYear', startYear);
-                            
+
                             context.commit('setWikipediaExcerptHTML', response.data.wikipediaExcerptHTML);
                             context.commit('setWikipediaRemainingHTML', response.data.wikipediaRemainingHTML);
-                            if (response.data.wikipedia != undefined ) {
+                            if (response.data.wikipedia != undefined) {
                                 context.commit('setWikipediaURL', response.data.wikipedia.content_urls.desktop.page);
                             }
-                            else
-                            {
+                            else {
                                 context.commit('setWikipediaURL', "");
                             }
 
-                            if (response.data.wikipedia != undefined && response.data.wikipedia.coordinates != undefined ) {
+                            if (response.data.wikipedia != undefined && response.data.wikipedia.coordinates != undefined) {
                                 context.commit('setTopicGeoLocation', response.data.wikipedia.coordinates);
                             }
                             else if (response.data.wikidata != undefined) {
@@ -1050,10 +1060,10 @@ export default new Vuex.Store({
                     });
             });
         },
-        async getTopicImages({dispatch, commit}, params) {
+        async getTopicImages({ dispatch, commit }, params) {
 
             //console.log('getTopicImages', params);
-            
+
             return new Promise((resolve, reject) => {
 
                 //console.log(params);
@@ -1070,15 +1080,71 @@ export default new Vuex.Store({
 
                 if (params.wiki.wikidata != null) {
                     var statements = params.wiki.wikidata.statements;
+                    const terms = new Set([requestConfig.params.topic]);
                     for (var i = 0; i < statements.length; i++) {
-                        if (statements[i].id == "P373") {
-                            // Pass on Commons category, if any
-                            requestConfig.params.commons_category = statements[i].values[0].value;
-                        } else if (statements[i].id == "P131") {
-                            // Add administrative territorial entity to topic, if any
-                            requestConfig.params.topic += ", " + statements[i].values[0].value;
+                        switch (statements[i].id) {
+                            case 'P373':
+                                requestConfig.params.commons_category = statements[i].values[0].value;
+                            case 'P1477': //birth name
+                            case 'P1559': //name in native language
+                            case 'P1635': //religious name
+                            case 'P1680': //subtitle
+                            case 'P1705': //native label
+                            case 'P1782': //courtesy name
+                            case 'P1785': //temple name
+                            case 'P1786': //posthumous name
+                            case 'P1787': //art-name
+                            case 'P1810': //named as
+                            case 'P1813': //short name
+                            case 'P1814': //name in kana
+                            case 'P1843': //taxon common name
+                            case 'P2561': //name
+                            case 'P2562': //married name
+                            case 'P4633': //name of the character role
+                            case 'P4970': //alternate names
+                            case 'P561': //NATO reporting name
+                            case 'P6375': //street address
+                            case 'P742': //pseudonym
+                            case 'P8927': //kunya
+                            for (let statement of statements[i].values) {
+                                terms.add(statement.value);
+                            }
+                            break;
                         }
                     }
+
+                    if (params.wiki.wikidata.labels != null) {
+                        var labels = params.wiki.wikidata.labels;
+                        for (let label in labels) {
+                            //for (var i = 0; i < labels[label].length; i++) {
+                                //console.log(entries[entry][i].value);
+                                terms.add(labels[label].value);
+                            //}
+                        }
+                    }
+
+                    if (params.wiki.wikidata.aliases != null) {
+                        var aliases = params.wiki.wikidata.aliases;
+                        for (let alias in aliases) {
+                            for (var i = 0; i < aliases[alias].length; i++) {
+                                //console.log(entries[entry][i].value);
+                                terms.add(aliases[alias][i].value);
+                            }
+                        }
+                    }
+
+/*                     if (params.wiki.wikidata.instance_of.id == 'Q5') {
+                        const surnames = new Set();
+                        const firstnames = new Set();
+                        var statements = params.wiki.wikidata.statements;
+                        for (var i = 0; i < statements.length; i++) {
+                            switch (statements[i].id) {
+                                case 'P373':
+                    }
+ */
+/*                     requestConfig.params.topic = "'" + Array.from(terms).join("' OR '") + "'"; */
+                    requestConfig.params.topic = terms;
+                    console.log('requestConfig@store: ', requestConfig);
                 }
 
                 // pass on coordinates from wikidata or wikipedia, if any
@@ -1094,11 +1160,20 @@ export default new Vuex.Store({
 
                 axios.request(requestConfig).
                     then(function (response) {
-                        //console.log(response.data);
+                        const images = response.data;
 
-                        commit('setWikidocumentariesImages', response.data);
-                        commit('setImagesShownOnTimeline', response.data);
-                        resolve(response.data);
+                        // Shuffle the images array starting from the last index
+                        // (the Fisher-Yates shuffle)
+                        for (let i = images.length - 1; i > 0; i--) {
+                            // pick a random index from the remaining unshuffled ones
+                            let j = Math.floor(Math.random() * (i+1));
+                            // swap the last unshuffled element with the random element
+                            [images[j], images[i]] = [images[i], images[j]];
+                        }
+
+                        commit('setWikidocumentariesImages', images);
+                        commit('setImagesShownOnTimeline', images);
+                        resolve(images);
 
                     }).catch(function (error) {
                         console.log(error);
@@ -1107,7 +1182,7 @@ export default new Vuex.Store({
                     });
             });
         },
-        async getHistoricalBasemaps({dispatch, commit}, params) {
+        async getHistoricalBasemaps({ dispatch, commit }, params) {
 
             var requestConfig = {
                 baseURL: BASE_URL,
@@ -1126,17 +1201,17 @@ export default new Vuex.Store({
                     console.log(error);
                 });
         },
-        async getHistoricalMaps({dispatch, commit}, locationParams) {
+        async getHistoricalMaps({ dispatch, commit }, locationParams) {
             //commit('setHistoricalMaps', maps);
             commit('setHistoricalMaps',
                 await dispatch('getHistoricalMapsFromCommons', {
                     locationParams: locationParams,
                     maps: []
                 })
-                .then((maps) => dispatch('getHistoricalMapsFromFinna', {
-                    locationParams: locationParams,
-                    maps: maps
-                })));
+                    .then((maps) => dispatch('getHistoricalMapsFromFinna', {
+                        locationParams: locationParams,
+                        maps: maps
+                    })));
         },
         async getHistoricalMapsFromCommons(context, params) {
             return new Promise((resolve, reject) => {
@@ -1215,7 +1290,7 @@ export default new Vuex.Store({
                                 var thumbURL = info.imageinfo[0].thumburl;
                                 var parts = imageURL.split('.');
                                 var imageExtension = parts[parts.length - 1].toLowerCase();
-                                if (imageExtension == 'bmp' || imageExtension == 'jpg' || imageExtension == 'jpeg' || imageExtension == 'png' || imageExtension == 'gif') {
+                                if (imageExtension == 'bmp' || imageExtension == 'jpg' || imageExtension == 'jpeg' || imageExtension == 'png' || imageExtension == 'gif') {
                                     // nothing to do
                                 }
                                 else {
@@ -1240,7 +1315,7 @@ export default new Vuex.Store({
                                 }
                                 maps.push(map);
                             }
-                        
+
                             context.commit('setHistoricalMaps', maps);
                             resolve(maps);
                         });
@@ -1345,7 +1420,7 @@ export default new Vuex.Store({
                                 }
                                 else { // Handle Doria Fennica maps differently
                                     if (record.onlineUrls != undefined &&
-                                        record.onlineUrls[0].source != undefined && 
+                                        record.onlineUrls[0].source != undefined &&
                                         record.onlineUrls[0].source.value != undefined &&
                                         record.onlineUrls[0].source.value == "fennica" &&
                                         record.onlineUrls[0].url != undefined
@@ -1381,7 +1456,7 @@ export default new Vuex.Store({
                                             source: "finna_fennica",
                                             license: "Ks. lähde"
                                         }
-        
+
                                         maps.push(map);
                                     }
                                 }
@@ -1477,7 +1552,7 @@ function calculateTopicStartYearFromWikidata(wikidata, currentStartYear) {
 
 function createGetCommonsMapInfoTask(fileName) {
     return new Promise((resolve, reject) => {
-                                
+
         var url = "https://commons.wikimedia.org/w/api.php?" +
             "action=query" +
             "&titles=" + fileName +
@@ -1542,8 +1617,28 @@ const locationRelatedProperties = [
     //'P103',    //P103 native language --> indigenous to P2341
 ];
 
+const alternativeNames = [
+    'P1477', //syntymänimi
+    'P2562', //married name
+    'P1705', //nimi alkuperäiskielellä
+    'P1559', //nimi äidinkielellä
+    'P742', //salanimi
+    'P1448', //virallinen nimi
+    'P1449', //lempinimi
+    'P1635', //religious name
+    'P1782', //courtesy name
+    'P1785', //temple name
+    'P1786', //posthumous name
+    'P1787', //art-name
+    'P1810', //named as
+    'P1813', //lyhyt nimi
+    'P2561', //nimi
+    'P4970', //vaihtoehtoiset nimet
+    'P5056' //henkilön patronyymi tai matronyymi
+]
+
 function guessTopicGeoLocationFromWikidata(topic, wikidata) {
-    
+
     //console.log(wikidata);
 
     return new Promise((resolve, reject) => {
@@ -1584,7 +1679,7 @@ function guessTopicGeoLocationFromWikidata(topic, wikidata) {
 }
 
 function guessTopicGeoLocationFromProperties(topic, wikidata) {
- 
+
     for (var i = 0; i < wikidata.statements.length; i++) {
         var statement = wikidata.statements[i];
         for (var j = 0; j < locationRelatedProperties.length; j++) {
@@ -1619,7 +1714,7 @@ function geocode(place) {
     return axios.request(requestConfig).then((response) => {
         //console.log(response.data);
         return response.data;
-        
+
     }).catch(error => {
         console.log("error in geocode");
         return null;
@@ -1629,8 +1724,8 @@ function geocode(place) {
 }
 
 function calculateLocationFromImages(images) {
-    
-    
+
+
     var centerCoordinates = null;
 
     // if (images.length > 0) {
@@ -1695,7 +1790,7 @@ function getFirstGeoLocation(image) {
     var geoLocation = null;
     if (image.geoLocations.length > 0) {
         var wkt = image.geoLocations[0];
-        if (wkt.indexOf("POINT") != -1) { 
+        if (wkt.indexOf("POINT") != -1) {
             // "POINT(24.9600002 60.1796223)"
             var coordPart = wkt.split('(')[1].split(')')[0];
             //console.log(coordPart);
@@ -1762,7 +1857,7 @@ function getFirstGeoLocationAsPoint(image) {
     var geoLocation = getFirstGeoLocation(image)
     if (image.geoLocations.length > 0) {
         var wkt = image.geoLocations[0];
-        if (wkt.indexOf("POINT") != -1) { 
+        if (wkt.indexOf("POINT") != -1) {
             // "POINT(24.9600002 60.1796223)"
             var coordPart = wkt.split('(')[1].split(')')[0];
             //console.log(coordPart);
@@ -1791,9 +1886,9 @@ function getFirstGeoLocationAsPoint(image) {
 }
 
 function getCentroid(coords) {
-    var center = coords.reduce(function (x,y) {
-        return [x[0] + y[0]/coords.length, x[1] + y[1]/coords.length]; 
-    }, [0,0])
+    var center = coords.reduce(function (x, y) {
+        return [x[0] + y[0] / coords.length, x[1] + y[1] / coords.length];
+    }, [0, 0])
     return center;
 }
 
@@ -1828,4 +1923,4 @@ function getCentroid(coords) {
             });
         },
         */
-       
+

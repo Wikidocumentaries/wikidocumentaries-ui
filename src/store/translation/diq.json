@@ -1,14 +1,43 @@
 {
 	"@metadata": {
 		"authors": [
+			"1917 Ekim Devrimi",
+			"GolyatGeri",
 			"Mirzali",
-			"Orbot707",
-			"Abijeet Patro"
+			"Orbot707"
 		]
 	},
 	"LandingPage": {
 		"search": "Cı geyre",
-		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze"
+		"searchInputPlaceHolder": "Yew mewzu bıvêne ya zi yew mewzuyê neweyi vıraze",
+		"searchInputSearchOnly": "Yew mewzu bıvêne",
+		"showMore": "Zêde obceya bımocne",
+		"createNew": "Obceyo newe vırazê",
+		"titleDescription": "Wikidocumentaries çıçiya?",
+		"titleStatus": "Weziyet",
+		"moreBelow": "Cêr tayêna bıwane",
+		"more": "Tayêna bıwane",
+		"moreLink": "Tayêna bıwane",
+		"titleTopics": "Mewzuyi",
+		"titleMedia": "Medya",
+		"titleTools": "Haceti",
+		"titleLanguages": "Zıwani",
+		"titleTechnology": "Teknolociye",
+		"titleCreators": "Vıraştoği",
+		"titleTeam": "Taxım",
+		"titleThanks": "Ebe teşekurê xısusiyi ra",
+		"titlePartners": "Partneri",
+		"titleFunding": "Tewrê destegi ra",
+		"titleBy": "Proceyê êdê",
+		"getInvolved": "Tewr bê!",
+		"titleTranslate": "Bıçarne",
+		"titleContent": "Zerrekê ho dekerê",
+		"titleContact": "Şo irtibat",
+		"facebook": "Gruba Facebooki",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "Qeyd",
+		"email": "E-poste",
+		"github": "Depoyê Githubi"
 	},
 	"MainPage": {
 		"topicPageName": "Pela mewzuyi",
@@ -17,16 +46,85 @@
 		"returnToHomeMessage": "Peyser şo pela akerdışi"
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Aleqerın"
+		},
+		"Awards": {
+			"headerTitle": "Xelati"
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Xeritanê tarixiyê bıngehınan weçine",
 			"chooseMapHelpNote": "Tip: ctrl+click weçinayışê zehf xeritan dano",
 			"yearAbbreviation": "s."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Ebe wext ra",
+				"optionAlpha": "Alfabetik"
+			},
+			"facetMenu": {
+				"optionType": "Babet",
+				"optionColl": "Vıraştoğ"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeriye",
+				"optionList": "Liste"
+			},
+			"showAll": "Pêro"
+		},
+		"Events": {
+			"headerTitle": "Fealiyeti",
+			"optionsMenu": {
+				"menuTitle": "Weçinıteki",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Awan ke"
+				}
+			}
 		},
 		"Header": {
 			"titleEditText": "Sernameyi bıvurne",
 			"titleApproveText": "Nê sernameyi tesdiq ke",
 			"subtitleEditText": "Şınasiye bıvurne",
 			"subtitleApproveText": "Nê şınasnayışi tesdiq ke"
+		},
+		"Locations": {
+			"headerTitle": "Naca de",
+			"sortMenu": {
+				"optionTime": "Ebe wext ra",
+				"optionAlpha": "Alfabetik"
+			},
+			"facetMenu": {
+				"optionType": "Babet",
+				"optionColl": "Vıraştoğ",
+				"optionCity": "Lokasyon"
+			},
+			"displayMenu": {
+				"optionGallery": "Galeriye",
+				"optionList": "Liste"
+			},
+			"showAll": "Pêro"
+		},
+		"Parts": {
+			"headerTitle": "Leteyi"
+		},
+		"Effects": {
+			"headerTitle": "Tesiri",
+			"intro": "Nê tesirê mewzuyê"
+		},
+		"Instances": {
+			"intro": "Bıewni rê misalê nê mewzuy. Bêasaye obceyan vinayışi rê zê lista bımocne"
+		},
+		"People": {
+			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
+			"sortMenuTitle": "Weçine",
+			"sortMenuOptionBirth": "Gorey bıyayışi",
+			"sortMenuOptionDeath": "Gorey merdışi",
+			"sortMenuOptionName": "Ebe name ra",
+			"sortMenuOptionFirst": "Gorey namey",
+			"sortMenuOptionLast": "Gorey peynamey",
+			"facetMenuOptionProfession": "Mesleg",
+			"facetMenuOptionCountry": "Dewlete",
+			"facetMenuOptionCity": "Cınsiyet"
 		},
 		"TopicImages": {
 			"headerTitle": "Arşivan ra resımi",
@@ -48,7 +146,8 @@
 				"type": "tewrê medya",
 				"creator": "vıraştoğ",
 				"platform": "platform",
-				"source": "çıme"
+				"source": "çıme",
+				"clear": "Weçinıtışa pak kerê"
 			},
 			"imagesActionMenu": {
 				"menuTitle": "Hereketi",
@@ -70,7 +169,8 @@
 				"remInappropriate": {
 					"menuTitle": "Hewl niyo, çıke"
 				}
-			}
+			},
+			"imagesViewExternal": "Resımo oricinal bıvêne"
 		},
 		"TopicMap": {
 			"chooseHistoricalBasemapMenuText": "Xeritanê tarixiyê bıngehınan weçine",
@@ -80,10 +180,23 @@
 			"headerTitle": "Wareyê saete",
 			"centuryText": "SS"
 		},
+		"Works": {
+			"sortMenuTitle": "Weçine",
+			"sortMenuOptionTime": "Gorey demi",
+			"sortMenuOptionAlpha": "Alfabetik",
+			"sortMenuOptionDist": "Gorey mesafey",
+			"facetMenuOptionType": "Babet",
+			"facetMenuOptionColl": "Koleksiyon",
+			"facetMenuOptionCity": "Lokasyon",
+			"displayMenuOptionGallery": "Galeriye",
+			"displayMenuOptionList": "Liste",
+			"displayMenuOptionMap": "Xerita",
+			"showAll": "Pêro"
+		},
 		"Wikidata": {
 			"headerTitle": "Raşti",
 			"extLink": {
-				"linkTitleWD": "Wikidata de bıvêne ya zi bıvurne"
+				"linkTitleWD": "Wikidayıt de bıvêne ya zi bıvurne"
 			},
 			"noTopicFoundText": "Mewzu nêvêniya"
 		},
@@ -96,70 +209,47 @@
 				"linkTitleWP": "Wikipediya de yew meqale vıraze"
 			},
 			"languageMenu": {
-				"menuTitle": "Meqaleyi yewna zıwan de bıwane",
-				"translateArticleText": "Nê meqaleyi bıçarne ra zıwanê xo",
+				"menuTitle": "Meqaleyi yewna zıwan de bıwanê",
+				"translateArticleText": "Enê meqaley tadê zıwanê ho",
 				"otherLanguagestext": "Zıwanê bini"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
-			"menuTitle": "Bımocne",
-			"showBorn": "Tiya ameyo dınya",
-			"showDied": "Tiya merdo",
-			"showBuried": "Tiya dariyo we",
-			"showRelated": "Maneyo bin",
-			"showAll": "Pêro"
-		},
-		"Locations": {
-			"headerTitle": "Lokasyoni",
-			"sortMenu": {
-				"optionTime": "Ebe wext ra",
-				"optionAlpha": "Alfabetik"
-			},
-			"facetMenu": {
-				"optionType": "Babet",
-				"optionColl": "Vıraştoğ",
-				"optionCity": "Lokasyon"
-			},
-			"displayMenu": {
-				"optionGallery": "Galeriye",
-				"optionList": "Liste"
-			},
-			"showAll": "Pêro"
-		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "Ebe wext ra",
-				"optionAlpha": "Alfabetik"
-			},
-			"facetMenu": {
-				"optionType": "Babet",
-				"optionColl": "Vıraştoğ"
-			},
-			"displayMenu": {
-				"optionGallery": "Galeriye",
-				"optionList": "Liste"
-			},
-			"showAll": "Pêro"
-		},
-		"Works": {
-			"sortMenuTitle": "Weçine",
-			"sortMenuOptionAlpha": "Alfabetik",
-			"facetMenuOptionType": "Babet",
-			"facetMenuOptionColl": "Koleksiyon",
-			"facetMenuOptionCity": "Lokasyon",
-			"displayMenuOptionGallery": "Galeriye",
-			"displayMenuOptionList": "Liste",
-			"showAll": "Pêro"
-		},
-		"People": {
-			"headerTitle": "Merdumê ke be mewzuyi ra eleqadarê",
-			"sortMenuTitle": "Weçine",
-			"sortMenuOptionName": "Ebe name ra",
-			"facetMenuOptionProfession": "Mesleg",
-			"facetMenuOptionCountry": "Dewlete",
-			"facetMenuOptionCity": "Cınsiyet"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Bınnuşte",
+			"description": "Şınasnayış",
+			"creator": "Vıraştoğ",
+			"creatorUnknown": "Nêzanaye",
+			"addCreator": "Vıraştoğ dekere",
+			"removeCreator": "Vıraştoği wedarne",
+			"publisher": "Weşanayoğ",
+			"format": "Format",
+			"genre": "Tewır",
+			"location": "Lokasyon",
+			"address": "Adresa kuçeyi",
+			"addPerson": "Merdum cı ke",
+			"event": "Fealiyet",
+			"collection": "Koleksiyon",
+			"measurements": "Pêmeyi",
+			"copyright": "Heqa telifi",
+			"license": "Lisansê heqa telifi",
+			"photograph": "Fotraf",
+			"image": "Resım",
+			"photographer": "Fotrafkar",
+			"digitalCopy": "Kopyaya dicitale",
+			"platformId": "Kamiye",
+			"fileSize": "Ebadê dosya",
+			"fileFormat": "Formatê dosya",
+			"remove": "Wedare",
+			"uploader": "Barkerdoğ",
+			"rotate": "Bıçerexne"
+		},
+		"imageActions": {
+			"horizontal": "horizontal",
+			"vertical": "Vertikal"
+		},
+		"closeViewer": "Çımeyi cade"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -179,6 +269,23 @@
 			"attribution2PrefixText": "Xeritaya rektifiye"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "Mewzuyan abırne",
+			"tooltip": "Mewzuyan abırne",
+			"optionTime": "Ebe wext ra",
+			"optionAlpha": "Alfabetik"
+		},
+		"facetMenu": {
+			"optionType": "Babet",
+			"optionColl": "Vıraştoğ",
+			"optionCity": "Herune"
+		},
+		"displayMenu": {
+			"optionGallery": "Galeriye",
+			"optionList": "Liste"
+		}
+	},
 	"general": {
 		"ok": "TEMAM",
 		"cancel": "Bıtexelne",
@@ -187,8 +294,12 @@
 			"actionMenuTitle": "Hereketi",
 			"actionMenuTooltip": "Hereketi",
 			"languageMenuTitle": "Zıwan weçine",
+			"languageMenuTooltip": "Zıwane xo weçine",
 			"myLanguagesItem": "Zıwanê mı",
-			"languageMenuTranslate": "Enê meqaleyi açarne"
+			"languageMenuTranslate": "Enê meqaley tadê Zazaki"
+		},
+		"languageMenu": {
+			"TranslateUI": "Êra zıwanê xo çarne"
 		},
 		"languages": {
 			"fi": "Finki",

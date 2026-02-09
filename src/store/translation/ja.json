@@ -1,0 +1,542 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf",
+			"Funa-enpitu",
+			"Higa4",
+			"MathXplore",
+			"McDutchie",
+			"Mogumin",
+			"Omotecho",
+			"Shirayuki"
+		]
+	},
+	"LandingPage": {
+		"search": "検索",
+		"searchInputPlaceHolder": "トピックを探す/作成する",
+		"searchInputSearchOnly": "トピックを探す",
+		"showMore": "項目をさらに表示",
+		"createNew": "新しい項目を作成",
+		"intro": "ウィキドキュメンタリーはささやかな歴史を扱うウィキで - 歴史の痕跡をまとめてストーリーに変える場所です。まず、興味をひかれるトピックを探してみましょう！",
+		"titleDescription": "ウィキドキュメンタリーとは？",
+		"description": "ウィキドキュメンタリーは、市民歴史家が集う制作の場です。トピックに関連する – 人物、場所、建築物、出来事などの情報を組み合わせます。家族関係や場所、作成者や作品、所属などの記録をたどってトピックとトピックの関連性をたどることができます。トピックの描写には、提携する美術館や文書館、図書館の提供する画像や地図が使われます。利用者はウィキドキュメントで既存の情報を修正したり新しいトピックを追加したり、利用者自身の画像と回想録を持ち込んだり、入手できる素材を使って自身の目的のために使うことが認められています。",
+		"titleStatus": "状態",
+		"status": "このサイトはデモの段階です。重要な機能の多くがまだ準備段階であったり、サイト自体、機能の実装が済んでいない部分があります。",
+		"moreBelow": "さらに続けて読む",
+		"more": "詳細情報",
+		"moreLink": "別の言語で詳細を参照する",
+		"titleTopics": "トピック",
+		"statusTopics": "トピックの出どころはウィキデータです。コンテンツがウィキデータに照会して対象範囲外だった場合、将来的にウィキドキュメンタリー上に新規トピックが作成される場合があります。それでもウィキデータの豊富な選択肢を用いて、同様にトピックの説明ができるはずです。現状では記事はウィキペディアから読み込んでおり、将来的にはウィキドキュメンタリー固有のトピックを、ローカルに作成することができるようになります。",
+		"titleMedia": "メデイア",
+		"statusMedia": "メディアとはオープンライセンスの条件のもとで公開された素材であり、日々、増え続けるリポジトリから読み込んでいます。私たちはより適格で、それぞれに付随するメタデータがより豊富で質が高い画像の検出に取り組んでいます。既に提携している以外のメディアの提供元をぜひご紹介ください！",
+		"titleTools": "ツール",
+		"statusTools": "ウィキドキュメンタリーでは、タスクとツールを使ってコンテンツを操作します。記事の翻訳にはすでにコンテンツ翻訳ツールを採用し、多くの言語ペアで訳出ができます。画像に位置情報を付与するため、ウィキデータとジオタグツールをむすびつける対応語彙表作りが進行中です。今後とも、使って楽しく便利なツールの開発を続ける予定です。",
+		"titleLanguages": "対応言語",
+		"statusLanguages": "ウィキドキュメンタリーの操作には、ウィキデータが採用する言語であればどれでも利用できます。話者人口が少ない言語群にとっては素晴らしい機会です。翻訳作業はTranslateWiki上で行われています。",
+		"titleTechnology": "技術",
+		"statusTechnology": "ウィキドキュメンタリーはウィキデータからコアデータを取得します。さらにウィキデータが対象範囲外とするトピック用に、このサイト固有のウィキベース（データベース）を構築する予定です。また連合ウィキベースとして、ウィキデータとの相互同期を実行する計画があります。第二に、画像に付随するメタデータはリンクするウィキデータの項目群を介して、ウィキメディア・コモンズの構造化データと同期させることができます。ウィキドキュメンタリーのサイト構築にはVue.jsを採用、ホスト先はウィキメディア財団のクラウドサービス上です。",
+		"titleCreators": "作成者",
+		"titleTeam": "担当チーム",
+		"titleThanks": "以下の人々のおかげです",
+		"titlePartners": "提携先",
+		"titleFunding": "次の協賛組織のお世話になっています",
+		"titleBy": "プロジェクト運営",
+		"getInvolved": "参加しよう！",
+		"titleTranslate": "翻訳する",
+		"joinTranslate": "皆さんの言語がウィキドキュメンタリーで使えるよう、ぜひ参加してください。ボランティアの翻訳チームではメンバーを募集中で、皆さんの言語で文化遺産群が次々につながり、生き生きと輝く様子を一緒に眺めませんか。",
+		"titleContent": "利用者がコンテンツを追加する",
+		"joinContent": "皆さんが自分で撮影した写真やメディア、文書や地図またはデータ集のオーナーで、ここで見せたいとお考えの場合、既存のチャンネルのどれかを介して接続するか、あるいはまた、こちらで新しい接続法を作成するか、一緒に確かめさせてください。また感心を寄せられるコミュニティがあればワークショップを開催し、歴史の知識の記録手段を扱いたいとも考えています。",
+		"titleDevelop": "ツール作成とクラウドソーシングのタスク設定を担当しませんか。",
+		"joinDevelop": "私たちは組織やツールの作成者と協力し、ツールを追加したり、クラウドソーシングの新規タスク作りにとりくみたいと望んでいます。未来のクールなクラウドソーシングアプリ開発に、ぜひ協働作業に取りかかりませんか！",
+		"titleContact": "ご連絡をお待ちしています！",
+		"facebook": "Facebookグループ",
+		"wiki": "ウィキドキュメンタリーのウィキ",
+		"blog": "ブログ",
+		"email": "メールアドレス",
+		"github": "Github リポジトリ"
+	},
+	"MainPage": {
+		"topicPageName": "トピックのページ",
+		"mapPlaceMatchPageName": "場所の名前や地名を連携させる",
+		"mapSearchPageName": "地図を検索",
+		"wikiTopicErrorMessage": "このトピックに対応するページをウィキペディアで検索しましたが、現在の設定言語では該当するページが存在しないか、予期しないエラーが発生しました。",
+		"returnToHomeMessage": "メインページに戻る"
+	},
+	"WaitPage": {
+		"waitMessage": "しばらくお待ち下さい……ウィキペディア、ウィキデータ、ウィキメディア・コモンズ、MapWarper、Finna、Flickrその他にデータを照会中……"
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "所有・帰属するもの",
+			"intro": "この人物や組織などが所有・帰属する組織"
+		},
+		"Awards": {
+			"headerTitle": "賞",
+			"intro": "このページのトピックのノミネートと受賞"
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "歴史的ベース地図（複数可能）を選択",
+			"chooseMapHelpNote": "ヒント: ctrl+click で複数地図を選択可",
+			"yearAbbreviation": "年"
+		},
+		"Collection": {
+			"headerTitle": "コレクション内の作品",
+			"intro": "これらの作品はこの人物や組織のコレクション内にあります。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。"
+		},
+		"Depicted": {
+			"headerTitle": "題材にしているもの",
+			"intro": "このトピックは以下の作品の題材になっています。作品を様々な基準でソートしたり、画像の無いものを見つける際には一覧表示してください。",
+			"sortMenu": {
+				"title": "作品をソート",
+				"tooltip": "作品をソート",
+				"optionTime": "日時順",
+				"optionAlpha": "アルファベット順",
+				"optionClear": "ソートをクリア"
+			},
+			"facetMenu": {
+				"title": "区分ごとの作品",
+				"tooltip": "異なる基準による区分ごとの作品",
+				"optionType": "種類",
+				"optionColl": "作成者"
+			},
+			"displayMenu": {
+				"title": "表示方式",
+				"tooltip": "表示方式を選択",
+				"optionGallery": "ギャラリー",
+				"optionList": "一覧"
+			},
+			"showAll": "すべて"
+		},
+		"Depicts": {
+			"headerTitle": "題材",
+			"intro": "この作品にはこれらのトピックが題材として描かれています。日時や名前順のソートできます。画像の無いものも含め、全てのトピックを見るには一覧として閲覧しなければならないことに注意してください。"
+		},
+		"Events": {
+			"headerTitle": "出来事",
+			"displayMenu": {
+				"menuTitle": "表示の設定",
+				"menuTooltip": "表示の設定",
+				"optionShowTimeline": "タイムライン上に出来事を表示",
+				"optionShowList": "出来事をリスト表示する"
+			},
+			"optionsMenu": {
+				"menuTitle": "オプション",
+				"menuTooltip": "表示する事実情報を選択",
+				"optionWorks": "作品を表示する",
+				"optionRelatedPeople": "関連する人々の出来事を表示する",
+				"subRelatedPeopleConf": {
+					"menuTitle": "設定"
+				},
+				"optionRelatedTopics": "関連するトピックの出来事を表示する"
+			}
+		},
+		"Header": {
+			"titleEditText": "タイトルを編集",
+			"titleApproveText": "このタイトルを承認",
+			"subtitleEditText": "説明を編集",
+			"subtitleApproveText": "この説明を承認"
+		},
+		"Locations": {
+			"headerTitle": "この場所にあるもの",
+			"intro": "このページのトピックの位置にあるものは全て見ることができます。保存された全ての場所を見る際には一覧表示を選んでください。",
+			"sortMenu": {
+				"title": "位置をソート",
+				"tooltip": "位置をソート",
+				"optionTime": "日時順",
+				"optionAlpha": "アルファベット順",
+				"optionDist": "距離順",
+				"optionClear": "ソートをクリア"
+			},
+			"facetMenu": {
+				"title": "区分ごとの位置",
+				"tooltip": "異なる基準による区分ごとの位置",
+				"optionType": "種類",
+				"optionColl": "作成者",
+				"optionCity": "位置"
+			},
+			"displayMenu": {
+				"title": "表示方式",
+				"tooltip": "表示方式を選択",
+				"optionGallery": "ギャラリー",
+				"optionList": "一覧"
+			},
+			"showAll": "すべて"
+		},
+		"Map": {
+			"headerTitle": "地図上の位置"
+		},
+		"Parts": {
+			"headerTitle": "含まれるもの",
+			"intro": "以下はこのトピックの一部分です。日時や名前順にソートできます。画像が無いものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
+		},
+		"Partof": {
+			"headerTitle": "位置",
+			"intro": "このトピックは下記トピックに関連した位置にあります。日時や名前順にソートできます。画像がないものも含め全てのトピックを見る際には、表示形式を一覧にして閲覧してください。"
+		},
+		"Similar": {
+			"headerTitle": "類似トピック",
+			"intro": "このトピックと主要な特徴が共通するトピックを探す。"
+		},
+		"Effects": {
+			"headerTitle": "影響",
+			"intro": "この主題の影響範囲は次の通りです。"
+		},
+		"Familytree": {
+			"headerTitle": "系統樹"
+		},
+		"Instances": {
+			"headerTitle": "この主題の実例",
+			"intro": "この主題の実例をご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
+		},
+		"Links": {
+			"headerTitle": "この記事からのリンク"
+		},
+		"Location": {
+			"headerTitle": "位置づけ",
+			"intro": "このトピックは以下のトピック（の文脈）内に位置しています。"
+		},
+		"Names": {
+			"headerTitle": "名前"
+		},
+		"People": {
+			"headerTitle": "トピックに関連する人々",
+			"intro": "これらの人々はこのページのトピックに関連しています。一覧表示を選ぶこともでき、その場合画像なしで人々を表示します。日付や名前でソートすることもできます。その情報を持っているものだけが表示されることに注意してください。",
+			"sortMenuTitle": "ソート",
+			"sortMenuTooltip": "ソート順を変更",
+			"sortMenuOptionBirth": "誕生日順",
+			"sortMenuOptionDeath": "死亡日順",
+			"sortMenuOptionName": "名前順",
+			"sortMenuOptionFirst": "ファーストネーム順",
+			"sortMenuOptionLast": "ラストネーム順",
+			"sortMenuOptionClear": "ソートをクリア",
+			"facetMenuTitle": "区分",
+			"facetMenuTooltip": "異なる基準による区分ごと人々",
+			"facetMenuOptionProfession": "職業",
+			"facetMenuOptionCountry": "国",
+			"facetMenuOptionCity": "性別"
+		},
+		"Seasons": {
+			"headerTitle": "季節",
+			"intro": "この活動のシーズンをご覧ください。"
+		},
+		"Subclasses": {
+			"headerTitle": "このトピックのサブクラス",
+			"intro": "このトピックのサブクラスをご参照ください。また合わせて、一覧形式で表示させると、画像のない項目をご確認いただけます。"
+		},
+		"Teams": {
+			"headerTitle": "参加しているチーム",
+			"intro": "このゲーム、シリーズ、トーナメントに参加するチーム。"
+		},
+		"Things": {
+			"headerTitle": "特定の主題の一覧",
+			"intro": "このウィキプロジェクトには、これらの主題を含む特定の主題の一覧があります。"
+		},
+		"Twins": {
+			"headerTitle": "ツインシティ",
+			"intro": "行政機関により承認された法的もしくは広報上の措置として、提携協議書もしくは協定協議書を取りかわす提携都市、姉妹都市あるいは地方自治体単位の提携関係。設立年もしくは自治体名から検索できます。画像のない件名を含めた全件名を表示するには、リスト表示への切り替えが必要です。"
+		},
+		"TopicImages": {
+			"headerTitle": "アーカイブにある画像",
+			"intro": "これらの画像には複数の情報源があり、必ずしもトピックと正確に対応しないものが含まれるかもしれません。位置ピンが表示される場合、オリジナル画像や、対応する位置図を表示できます。",
+			"actionsMenu": {
+				"menuTitle": "画像を表示または調整する",
+				"tooltip": "画像の表示または調整",
+				"showImagesOnMapMenuText": "全ての画像を地図上に表示する",
+				"showImagesOnTimelineMenuText": "全ての画像をタイムライン上に表示する",
+				"selectPortraits": "この人物の高品質な肖像を選ぶ",
+				"arrangeByTime": "画像を日時順に並べる",
+				"selectWorks": "作品の画像を選ぶ"
+			},
+			"facetMenu": {
+				"menuTitle": "画像を区分ごとにまとめる",
+				"menuTooltip": "基準ごとに画像をまとめる",
+				"time": "日時",
+				"map": "地図",
+				"people": "人物",
+				"places": "場所",
+				"topics": "トピック",
+				"form": "フォーム",
+				"imageSize": "画像サイズ",
+				"large": "大",
+				"medium": "中",
+				"small": "小",
+				"type": "メディアの種類",
+				"creator": "作成者",
+				"platform": "プラットフォーム",
+				"source": "収蔵元",
+				"saveSelection": "選んだものをコレクションとして保存",
+				"clear": "選択をクリア"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "操作",
+				"menuTooltip": "操作",
+				"doGeolocatingText": "位置を設定……",
+				"showImageText": "画像を表示",
+				"selectFeatured": "ヘッダー画像として選択"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "画像の除去とその理由……",
+				"shortMenuTitle": "画像を除去",
+				"menuTooltip": "画像を除去",
+				"remDepicted": {
+					"menuTitle": "代わりにこのトピックを描写している",
+					"shortMenuTitle": "表現するトピックが異なる",
+					"search": "トピックを検索",
+					"browse": "関連するトピックをブラウズ"
+				},
+				"remCreator": {
+					"menuTitle": "正しい作成者はこちら",
+					"shortMenuTitle": "作成者が異なる",
+					"search": "作成者を検索",
+					"browse": "関連する俳優をブラウズ"
+				},
+				"remInappropriate": {
+					"menuTitle": "適切ではない理由",
+					"shortMenuTitle": "適切ではない",
+					"privacy": "題材のプライバシーを侵害している",
+					"violence": "極端な暴力を示している",
+					"sex": "明示的なセックスを示している",
+					"copyvio": "著作権を侵害している",
+					"explain": "説明メモを残す"
+				}
+			},
+			"imagesViewExternal": "オリジナル画像を閲覧",
+			"imagesViewOnMap": "地図上で画像を閲覧"
+		},
+		"TopicMap": {
+			"headerTitle": "地図上のトピック",
+			"intro": "トピックの場所は地図上に表示されます。地図上には画像や他のデータも表示したり、ベースレイヤとして歴史的な地図を選ぶこともできます。",
+			"chooseHistoricalBasemapMenuText": "歴史的ベース地図を選択...",
+			"hideImagesMenuText": "画像を隠す",
+			"chooseTimelineMapsMenuText": "タイムライン地図を選ぶ",
+			"showNearbyPlacesMenuText": "近くの場所を表示",
+			"hideNearbyPlacesMenuText": "近くの場所を隠す"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "新聞の切り抜き",
+			"searhTopicFromArchivesMenuText": "フィンランド国立図書館内の新聞を検索",
+			"addClipFromArchivesMenuText": "切り抜きを追加..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "タイムライン",
+			"showEventsOnTimelineMenuText": "トピックの出来事をタイムライン上に表示",
+			"centuryText": "世紀"
+		},
+		"Works": {
+			"headerTitle": "作品",
+			"intro": "これらの作品は、このページのトピックである人物、集団、組織による作品です。その上をクリックすると、作品に関する全ての情報を集めたページに入ることができます。画像のあるページだけが表示されます。ストアされた全ての関連作品を見るには一覧として表示します。",
+			"sortMenuTitle": "ソート",
+			"sortMenuTooltip": "項目をソートする",
+			"sortMenuOptionTime": "日時順",
+			"sortMenuOptionAlpha": "アルファベット順",
+			"sortMenuOptionDist": "距離順",
+			"sortMenuOptionClear": "ソートをクリア",
+			"facetMenuTitle": "区分",
+			"facetMenuTooltip": "異なる基準による区分ごとの作品",
+			"facetMenuOptionType": "種類",
+			"facetMenuOptionColl": "コレクション",
+			"facetMenuOptionCity": "位置",
+			"displayMenuTitle": "表示方式",
+			"displayMenuTooltip": "表示方式を選択",
+			"displayMenuOptionGallery": "ギャラリー",
+			"displayMenuOptionList": "一覧",
+			"displayMenuOptionMap": "地図",
+			"showAll": "すべて"
+		},
+		"Wikidata": {
+			"headerTitle": "事実情報",
+			"extLink": {
+				"linkTitleWD": "ウィキデータで表示/編集"
+			},
+			"noTopicFoundText": "トピックが見つかりません"
+		},
+		"Wikipedia": {
+			"headerTitle": "記事",
+			"missingArticle": "あなたの言語ではこのトピックに関する記事はありません。上部の言語メニューから別の言語を選んで記事を読むこともできます。プラスのアイコンを選んで自分の言語で記事を作ることもできます。",
+			"missingArticleMissing": "あなたの言語ではこの「トピックについての記事はありません。",
+			"missingArticleChoose": "上部の言語メニューで別の言語を選んで記事を読んだり、プラスのアイコンをクリックして自分の言語で記事を作成することができます。",
+			"missingArticleCreate": "プラスのアイコンをクリックして自分の言語でこの記事を作成できます。",
+			"missingArticleFallback": "この記事は、あなたの言語フォールバック設定により、別の言語で表示されています。",
+			"missingArticleTranslate": "言語メニューで選んで自分の援護に翻訳することができます。",
+			"missingArticleAuto": "この短いメッセージは記録された事実情報により自動生成されたものです。このドラフトを保存して記事の編集を始めることができます。",
+			"extLink": {
+				"linkTitleWP": "ウィキペディアで読む/編集する"
+			},
+			"addLink": {
+				"linkTitleWP": "ウィキペディアで記事を作成する"
+			},
+			"languageMenu": {
+				"menuTitle": "記事を別の言語で読む",
+				"translateArticleText": "この記事をご使用の言語に翻訳する",
+				"otherLanguagestext": "他の言語"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "キャプション",
+			"addCaption": "キャプションを追加",
+			"description": "説明",
+			"addDescription": "説明を追加",
+			"creator": "作成者",
+			"creatorUnknown": "不明",
+			"addCreator": "作成者を追加",
+			"removeCreator": "作成者を除去",
+			"dateDepicted": "描かれた日付",
+			"addDateDepicted": "描かれた日付を追加",
+			"removeDateDepicted": "描かれた日付を除去",
+			"dateCreated": "作成日",
+			"addDateCreated": "作成日を追加",
+			"removeDateCreated": "作成日を除去",
+			"publisher": "出版者",
+			"addPublisher": "出版者を追加",
+			"removePublisher": "出版者を除去",
+			"format": "形式",
+			"addFormat": "形式を追加",
+			"removeFormat": "形式を除去",
+			"technique": "技法",
+			"addTechnique": "技法を追加",
+			"removeTechnique": "技法を除去",
+			"depicted": "画像の題材",
+			"genre": "ジャンル",
+			"addGenre": "ジャンルを追加",
+			"removeGenre": "ジャンルを除去",
+			"depicts": "画像の題材",
+			"addTopic": "トピックを追加",
+			"removeTopic": "トピックを除去",
+			"location": "位置",
+			"locationMap": "地図上の位置",
+			"addLocation": "位置を追加",
+			"removeLocation": "位置を除去",
+			"address": "通り住所",
+			"addAddress": "通り住所を追加",
+			"removeAddress": "通り住所を除去",
+			"depictedPeople": "描かれた人々",
+			"addPerson": "人物を追加",
+			"removePerson": "人物を除去",
+			"event": "出来事",
+			"addEvent": "出来事を追加",
+			"removeEvent": "出来事を除去",
+			"institution": "施設",
+			"collection": "コレクション",
+			"inventoryNumber": "所蔵番号",
+			"inscriptions": "銘文",
+			"measurements": "寸法",
+			"copyright": "著作権",
+			"license": "著作権とライセンス",
+			"work": "画像が表す作品",
+			"photograph": "写真",
+			"image": "画像",
+			"photographer": "撮影者",
+			"addPhotographData": "写真についての情報を追加",
+			"copyrightNotePD": "画像は $1 でライセンスされていますが、メターデータによれば画像はパブリック・ドメインにあります。",
+			"copyrightNoteSame": "同じ画像がよりオープンな $1 でライセンスされているので、この画像にもそれが同様に適用されます。",
+			"digitalCopy": "デジタルコピー",
+			"publishingPlatform": "公開プラットフォーム",
+			"platformId": "ID",
+			"provider": "コンテンツ提供者",
+			"imageInfoPage": "画像情報のページ",
+			"imageDimensions": "画像の寸法",
+			"fileSize": "ファイルサイズ",
+			"fileFormat": "ファイル形式",
+			"remove": "除去",
+			"moveTo": "別のフィールドに移動",
+			"addData": "データを追加",
+			"uploader": "アップロード者",
+			"rotate": "回転"
+		},
+		"imageActions": {
+			"rotateImage": "画像を回転",
+			"clockwise": "時計回り",
+			"counterclockwise": "反時計回り",
+			"flip": "フリップ",
+			"horizontal": "横",
+			"vertical": "縦"
+		},
+		"closeViewer": "ビューアを閉じる"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "場所の名前を組み合わせる"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "歴史的地図を探す",
+			"filterBySourceMenuText": "情報源でフィルター...",
+			"filterByTimeMenuText": "日時でフィルター...",
+			"filterByMapMenuText": "地図でフィルター..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "歴史的地図用には以下のクレジットと著作権を参照",
+			"attribution2PrefixText": "以下から位置合わせした地図"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "歴史的ベース地図の透明度:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "トピックをソート",
+			"tooltip": "トピックをソート",
+			"optionTime": "日時順",
+			"optionStart": "開始時刻順",
+			"optionEnd": "終了時刻順",
+			"optionTitle": "主題順",
+			"optionCause": "原因順",
+			"optionPartof": "属する上位項目順",
+			"optionSuperclass": "属する上位属性順",
+			"optionAlpha": "アルファベット順",
+			"optionTitleAlpha": "タイトルのアルファベット順",
+			"optionCreatorAlpha": "作成者のアルファベット順",
+			"optionDist": "距離順",
+			"optionRev": "ソートを反転",
+			"optionClear": "ソートをクリア"
+		},
+		"facetMenu": {
+			"title": "区分",
+			"tooltip": "異なる基準による区分ごとのトピック",
+			"optionType": "種類",
+			"optionColl": "作成者",
+			"optionCity": "位置"
+		},
+		"displayMenu": {
+			"title": "表示方式",
+			"tooltip": "表示方式を選択",
+			"optionGallery": "ギャラリー",
+			"optionList": "一覧"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "ウィキドキュメンタリー",
+		"ok": "OK",
+		"cancel": "キャンセル",
+		"helpText": "ヘルプ",
+		"expand": "この節を展開",
+		"collapse": "この節を閉じる",
+		"menus": {
+			"actionMenuTitle": "操作",
+			"actionMenuTooltip": "操作",
+			"languageMenuTitle": "言語を選択",
+			"languageMenuTooltip": "あなたの言語を選択",
+			"myLanguagesItem": "自分の言語",
+			"languageMenuTranslate": "この記事を日本語に翻訳する"
+		},
+		"languageMenu": {
+			"TranslateUI": "あなたの言語に翻訳する"
+		},
+		"languages": {
+			"fi": "フィンランド語",
+			"en": "英語",
+			"sv": "スウェーデン語",
+			"es": "スペイン語"
+		}
+	},
+	"Banner": {
+		"WLMButton": "画像をアップロード"
+	}
+}

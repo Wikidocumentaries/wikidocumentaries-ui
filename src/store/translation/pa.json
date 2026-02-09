@@ -1,0 +1,337 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cabal"
+		]
+	},
+	"LandingPage": {
+		"search": "ਲੱਭੋ",
+		"searchInputPlaceHolder": "ਕੋਈ ਵਿਸ਼ਾ ਲੱਭੋ ਜਾਂ ਕੋਈ ਨਵਾਂ ਵਿਸ਼ਾ ਬਣਾਓ",
+		"searchInputSearchOnly": "ਇੱਕ ਵਿਸ਼ਾ ਲੱਭੋ",
+		"showMore": "ਹੋਰ ਵਸਤਾਂ ਵਿਖਾਓ",
+		"createNew": "ਇੱਕ ਨਵੀਂ ਵਸਤੁ ਬਣਾਓ",
+		"titleStatus": "ਦਰਜਾ",
+		"moreBelow": "ਹੇਠਾਂ ਹੋਰ ਪੜੋਂ",
+		"more": "ਹੋਰ ਪੜ੍ਹੋ",
+		"moreLink": "ਵਿੱਚ ਹੋਰ ਪੜ੍ਹੋ",
+		"titleTopics": "ਵਿਸ਼ੇ",
+		"titleTools": "ਸੰਦ",
+		"titleLanguages": "ਬੋਲੀਆਂ",
+		"titleTechnology": "ਤਕਨਾਲੋਜੀ",
+		"titleCreators": "ਸਿਰਜਣਹਾਰ",
+		"titleTeam": "ਟੀਮ",
+		"titleThanks": "ਦਾ ਵਿਸ਼ੇਸ਼ ਧੰਨਵਾਦ ਸਹਿਤ",
+		"titlePartners": "ਸਾਂਝੀਦਾਰ",
+		"titleFunding": "ਦੇ ਸਹਿਯੋਗ ਨਾਲ",
+		"getInvolved": "ਨਾਲ ਜੁੜੋ!",
+		"titleTranslate": "ਤਰਜਮਾ ਕਰੋ",
+		"titleContent": "ਆਪਣੀ ਸਮੱਗਰੀ ਸ਼ਾਮਲ ਕਰੋ",
+		"titleContact": "ਰਾਬਤਾ ਕਾਇਮ ਕਰੋ!",
+		"email": "ਈਮੇਲ"
+	},
+	"MainPage": {
+		"topicPageName": "ਵਿਸ਼ਾ ਵਰਕਾ",
+		"mapPlaceMatchPageName": "ਥਾਂਵਾਂ ਦੇ ਨਾਂ ਜੋੜੋ",
+		"mapSearchPageName": "ਨਕਸ਼ੇ ਤੇ ਲੱਭੋ"
+	},
+	"topic_page": {
+		"BaseMapDialog": {
+			"yearAbbreviation": "ਸਾਲ।"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionClear": "ਛਾਂਟੀ ਸਾਫ਼ ਕਰੋ"
+			},
+			"facetMenu": {
+				"optionType": "ਕਿਸਮ",
+				"optionColl": "ਸਿਰਜਣਹਾਰ"
+			},
+			"displayMenu": {
+				"title": "ਇਸ ਤਰ੍ਹਾਂ ਵੇਖਾਓ",
+				"optionGallery": "ਚਿੱਤਰਸ਼ਾਲਾ",
+				"optionList": "ਸੂਚੀ"
+			},
+			"showAll": "ਸਾਰੇ"
+		},
+		"Depicts": {
+			"headerTitle": "ਦਰਸਾਉਂਦਾ ਏ"
+		},
+		"Events": {
+			"headerTitle": "ਸਮਾਗਮ",
+			"displayMenu": {
+				"menuTitle": "ਵੇਖਾਉਣ ਚੋਣਾਂ",
+				"menuTooltip": "ਵੇਖਾਉਣ ਚੋਣਾਂ"
+			},
+			"optionsMenu": {
+				"menuTitle": "ਚੋਣਾਂ",
+				"menuTooltip": "ਵਿਖਾਉਣ ਲਈ ਤੱਥ ਚੁਣੋ",
+				"optionWorks": "ਕੰਮ ਵਿਖਾਓ",
+				"subRelatedPeopleConf": {
+					"menuTitle": "ਤਰਜੀਹਾਂ"
+				}
+			}
+		},
+		"Header": {
+			"titleEditText": "ਸਿਰਲੇਖ ਸੋਧੋ",
+			"titleApproveText": "ਇਸ ਸਿਰਲੇਖ ਨੂੰ ਪ੍ਰਵਾਨਗੀ ਦਿਓ",
+			"subtitleEditText": "ਵੇਰਵਾ ਸੋਧੋ",
+			"subtitleApproveText": "ਇਸ ਵਰਵੇ ਨੂੰ ਮਨਜ਼ੂਰ ਕਰੋ"
+		},
+		"Heritage": {
+			"headerTitle": "ਵਿਰਸੇ ਦੇ ਤੱਤ"
+		},
+		"Locations": {
+			"headerTitle": "ਇਸ ਟਿਕਾਣੇ 'ਤੇ",
+			"sortMenu": {
+				"optionTime": "ਸਮੇਂ ਦੇ ਹਿਸਾਬ ਨਾਲ।"
+			},
+			"facetMenu": {
+				"optionType": "ਕਿਸਮ",
+				"optionColl": "ਸਿਰਜਣਹਾਰ",
+				"optionCity": "ਟਿਕਾਣਾ"
+			},
+			"displayMenu": {
+				"title": "ਇਸ ਤਰ੍ਹਾਂ ਵੇਖਾਓ",
+				"optionGallery": "ਚਿੱਤਰਸ਼ਾਲਾ",
+				"optionList": "ਸੂਚੀ"
+			},
+			"showAll": "ਸਾਰੇ"
+		},
+		"Map": {
+			"headerTitle": "ਨਕਸ਼ੇ ਉੱਤੇ ਟਿਕਾਣਾਂ"
+		},
+		"Parts": {
+			"headerTitle": "ਹਿੱਸੇ"
+		},
+		"Partof": {
+			"headerTitle": "ਦਾ ਹਿੱਸਾ"
+		},
+		"Similar": {
+			"headerTitle": "ਮਿਲਦੇ-ਜੁਲਦੇ ਵਿਸ਼ੇ"
+		},
+		"Effects": {
+			"headerTitle": "ਪ੍ਰਭਾਵ"
+		},
+		"Familytree": {
+			"headerTitle": "ਪਰਿਵਾਰ ਦਾ ਰੁੱਖ"
+		},
+		"Instances": {
+			"headerTitle": "ਇਸ ਵਿਸ਼ੇ ਦੀਆਂ ਉਦਾਹਰਣਾਂ"
+		},
+		"Location": {
+			"headerTitle": "ਟਿਕਾਣਾ"
+		},
+		"Names": {
+			"headerTitle": "ਨਾਂ"
+		},
+		"People": {
+			"sortMenuTitle": "ਛਾਂਟੋ",
+			"sortMenuTooltip": "ਛਾਂਟੀ ਦਾ ਕ੍ਰਮ ਬਦਲੋ",
+			"sortMenuOptionBirth": "ਜਨਮ ਮਿਤੀ ਮੁਤਾਬਕ",
+			"sortMenuOptionDeath": "ਮੌਤ ਦੀ ਮਿਤੀ ਮੁਤਾਬਕ",
+			"sortMenuOptionName": "ਨਾਂ ਮੁਤਾਬਕ",
+			"sortMenuOptionFirst": "ਪਹਿਲੇ ਨਾਂ ਮੁਤਾਬਕ",
+			"sortMenuOptionLast": "ਅਖ਼ੀਰਲੇ ਨਾਂ ਮੁਤਾਬਕ",
+			"sortMenuOptionClear": "ਛਾਂਟੀ ਸਾਫ਼ ਕਰੋ",
+			"facetMenuTitle": "ਪੱਖੋਂ",
+			"facetMenuTooltip": "ਲੋਕਾਂ ਨੂੰ ਵੱਖ-ਵੱਖ ਪਹਿਲੂਆਂ ਤੋਂ ਦੇਖੋ",
+			"facetMenuOptionProfession": "ਪੇਸ਼ਾ",
+			"facetMenuOptionCountry": "ਮੁਲਕ",
+			"facetMenuOptionCity": "ਲਿੰਗ"
+		},
+		"Twins": {
+			"headerTitle": "ਜੁੜਵਾਂ ਸ਼ਹਿਰ"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "ਵਕਤ",
+				"map": "ਨਕਸ਼ਾ",
+				"people": "ਲੋਕ",
+				"places": "ਥਾਂਵਾਂ",
+				"topics": "ਵਿਸ਼ੇ",
+				"form": "ਰੂਪ",
+				"imageSize": "ਤਸਵੀਰ ਦਾ ਅਕਾਰ",
+				"large": "ਵੱਡਾ",
+				"medium": "ਦਰਮਿਆਨਾ",
+				"small": "ਛੋਟਾ",
+				"type": "ਮੀਡੀਆ ਦੀ ਕਿਸਮ",
+				"creator": "ਸਿਰਜਣਹਾਰ",
+				"platform": "ਅੱਡਾ",
+				"source": "ਸਰੋਤ",
+				"saveSelection": "ਚੋਣ ਨੂੰ ਸੰਗ੍ਰਹਿ ਵਜੋਂ ਸੰਭਾਲੋ"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "ਕਾਰਵਾਈਆਂ",
+				"menuTooltip": "ਕਾਰਵਾਈਆਂ",
+				"doGeolocatingText": "ਟਿਕਾਣਾ ਕਾਇਮ ਕਰੋ...",
+				"showImageText": "ਤਸਵੀਰ ਵਿਖਾਓ",
+				"selectFeatured": "ਸਿਰਲੇਖ ਚਿੱਤਰ ਦੇ ਰੂਪ ਵਿੱਚ ਚੁਣੋ"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "ਚਿੱਤਰ ਹਟਾਓ ਕਿਉਂਕਿ...",
+				"shortMenuTitle": "ਚਿੱਤਰ ਹਟਾਓ",
+				"menuTooltip": "ਚਿੱਤਰ ਹਟਾਓ",
+				"remDepicted": {
+					"menuTitle": "ਇਸ ਦੀ ਬਜਾਏ ਇਸ ਵਿਸ਼ੇ ਨੂੰ ਦਰਸਾਇਆ ਗਿਆ ਏ",
+					"shortMenuTitle": "ਇਹ ਇੱਕ ਹੋਰ ਵਿਸ਼ੇ ਨੂੰ ਦਰਸਾਉਂਦਾ ਏ।",
+					"search": "ਕਿਸੇ ਵਿਸ਼ੇ ਲਈ ਖੋਜ ਕਰੋ",
+					"browse": "ਸਬੰਧਤ ਵਿਸ਼ਿਆਂ ਨੂੰ ਫਰੋਲੋ"
+				},
+				"remCreator": {
+					"menuTitle": "ਇਸ ਦੀ ਬਜਾਏ ਇਸ ਸਿਰਜਣਹਾਰ ਵੱਲੋਂ",
+					"shortMenuTitle": "ਇਹ ਕਿਸੇ ਹੋਰ ਸਿਰਜਣਹਾਰ ਵੱਲੋਂ ਏ",
+					"search": "ਸਿਰਜਣਹਾਰ ਦੀ ਭਾਲ ਕਰੋ"
+				}
+			},
+			"imagesViewExternal": "ਅਸਲੀ ਚਿੱਤਰ ਵੇਖੋ",
+			"imagesViewOnMap": "ਨਕਸ਼ੇ ਉੱਤੇ ਚਿੱਤਰ ਵੇਖੋ"
+		},
+		"TopicMap": {
+			"headerTitle": "ਨਕਸ਼ੇ 'ਤੇ ਵਿਸ਼ਾ",
+			"hideImagesMenuText": "ਚਿੱਤਰ ਲੁਕਾਓ",
+			"showNearbyPlacesMenuText": "ਨੇੜਲੇ ਥਾਂ ਵਿਖਾਓ",
+			"hideNearbyPlacesMenuText": "ਨੇੜਲੇ ਥਾਂ ਲੁਕਾਓ"
+		},
+		"TopicTimeline": {
+			"centuryText": "ਸਦੀ"
+		},
+		"Works": {
+			"headerTitle": "ਕੰਮ",
+			"sortMenuTitle": "ਤਰਤੀਬਵਾਰ ਕਰੋ",
+			"sortMenuOptionTime": "ਸਮੇਂ ਦੇ ਹਿਸਾਬ ਨਾਲ।",
+			"sortMenuOptionAlpha": "ਵਰਣਮਾਲਾ ਮੁਤਾਬਕ",
+			"facetMenuOptionType": "ਕਿਸਮ",
+			"facetMenuOptionColl": "ਸੰਗ੍ਰਹਿ",
+			"facetMenuOptionCity": "ਟਿਕਾਣਾ",
+			"displayMenuTitle": "ਇਸ ਤਰ੍ਹਾਂ ਵੇਖਾਓ",
+			"displayMenuOptionGallery": "ਚਿੱਤਰਸ਼ਾਲਾ",
+			"displayMenuOptionList": "ਸੂਚੀ",
+			"displayMenuOptionMap": "ਨਕਸ਼ਾ",
+			"showAll": "ਸਾਰੇ"
+		},
+		"Wikidata": {
+			"headerTitle": "ਤੱਥ",
+			"extLink": {
+				"linkTitleWD": "ਵਿਕੀਡਾਟਾ ਵਿੱਚ ਵੇਖੋ ਜਾਂ ਸੋਧੋ"
+			},
+			"noTopicFoundText": "ਵਿਸ਼ਾ ਨਹੀਂ ਲੱਭਿਆ"
+		},
+		"Wikipedia": {
+			"headerTitle": "ਲੇਖ",
+			"languageMenu": {
+				"otherLanguagestext": "ਹੋਰ ਬੋਲੀਆਂ"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "ਸੁਰਖੀ",
+			"addCaption": "ਸੁਰਖੀ ਸ਼ਾਮਲ ਕਰੋ",
+			"description": "ਵੇਰਵਾ",
+			"addDescription": "ਵੇਰਵਾ ਜੋੜੋ",
+			"creator": "ਸਿਰਜਣਹਾਰ",
+			"creatorUnknown": "ਅਣਜਾਣ",
+			"addCreator": "ਸਿਰਜਣਹਾਰ ਜੋੜੋ",
+			"removeCreator": "ਸਿਰਜਣਹਾਰ ਹਟਾਓ",
+			"dateDepicted": "ਦਰਸਾਈ ਮਿੱਤੀ",
+			"addDateDepicted": "ਦਰਸਾਈ ਮਿੱਤੀ ਪਾਓ",
+			"removeDateDepicted": "ਦਰਸਾਈ ਮਿੱਤੀ ਹਟਾਓ",
+			"dateCreated": "ਬਣਾਉਣ ਦੀ ਮਿਤੀ",
+			"addDateCreated": "ਬਣਾਉਣ ਦੀ ਮਿਤੀ ਪਾਓ",
+			"removeDateCreated": "ਸਿਰਜਣ ਮਿਤੀ ਹਟਾਓ",
+			"format": "ਰੂਪ-ਰੇਖਾ",
+			"technique": "ਤਕਨੀਕ",
+			"addTechnique": "ਤਕਨੀਕ ਸ਼ਾਮਲ ਕਰੋ",
+			"removeTechnique": "ਤਕਨੀਕ ਹਟਾਓ",
+			"depicted": "ਚਿੱਤਰ ਦਰਸਾਉਂਦਾ ਏ",
+			"genre": "ਸ਼ੈਲੀ",
+			"depicts": "ਚਿੱਤਰ ਦਰਸਾਉਂਦਾ ਏ",
+			"addTopic": "ਵਿਸ਼ਾ ਜੋੜੋ",
+			"removeTopic": "ਵਿਸ਼ਾ ਹਟਾਓ",
+			"location": "ਟਿਕਾਣਾ",
+			"locationMap": "ਨਕਸ਼ੇ ਉੱਤੇ ਟਿਕਾਣਾਂ",
+			"addLocation": "ਟਿਕਾਣਾ ਪਾਓ",
+			"removeLocation": "ਟਿਕਾਣਾ ਹਟਾਓ",
+			"address": "ਗਲੀ ਦਾ ਪਤਾ",
+			"addAddress": "ਗਲੀ ਪਤਾ ਪਾਓ",
+			"removeAddress": "ਗਲੀ ਪਤਾ ਹਟਾਓ",
+			"event": "ਸਮਾਗਮ",
+			"institution": "ਸੰਸਥਾ",
+			"collection": "ਸੰਗ੍ਰਹਿ",
+			"measurements": "ਮਾਪ",
+			"copyright": "ਨਕਲ-ਹੱਕ",
+			"license": "ਨਕਲ-ਹੱਕ ਤੇ ਲਸੰਸ",
+			"work": "ਚਿੱਤਰ ਵਿੱਚ ਦਰਸਾਇਆ ਗਿਆ ਕੰਮ",
+			"image": "ਚਿੱਤਰ",
+			"creditline": "ਸੇਹਰਾ ਲਕੀਰ",
+			"attribution": "ਗੁਣਾਂ ਦੀ ਦੱਸ",
+			"platformId": "ਸ਼ਨਾਖ਼ਤ",
+			"imageInfoPage": "ਚਿੱਤਰ ਜਾਣਕਾਰੀ ਸਫ਼ਾ",
+			"imageDimensions": "ਚਿੱਤਰ ਮਾਪ",
+			"fileSize": "ਫਾਇਲ ਆਕਾਰ",
+			"fileFormat": "ਫ਼ਾਈਲਾਂ ਦੇ ਰੂਪ",
+			"remove": "ਹਟਾਓ",
+			"moveTo": "ਕਿਸੇ ਹੋਰ ਖੇਤਰ ਵਿੱਚ ਜਾਓ",
+			"addData": "ਡਾਟਾ ਸ਼ਾਮਲ ਕਰੋ",
+			"uploader": "ਚੜ੍ਹਾਉਣ ਵਾਲੇ",
+			"rotate": "ਘੁੰਮਾਓ"
+		},
+		"imageActions": {
+			"rotateImage": "ਚਿੱਤਰ ਘੁੰਮਾਓ",
+			"clockwise": "ਘੜੀ ਦੀ ਦਿਸ਼ਾ ਵਿੱਚ",
+			"counterclockwise": "ਘੜੀ ਦੇ ਉਲਟ ਦਿਸ਼ਾ ਵਿੱਚ",
+			"flip": "ਪਰਤਾਉਣਾ",
+			"vertical": "ਲੰਬਕਾਰੀ"
+		},
+		"closeViewer": "ਝਲਕ ਬੰਦ ਕਰੋ"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "ਥਾਂਵਾਂ ਦੇ ਨਾਂ ਜੋੜੋ"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "ਇਤਿਹਾਸਕ ਨਕਸ਼ੇ ਲੱਭੋ"
+		}
+	},
+	"menus": {
+		"facetMenu": {
+			"optionType": "ਕਿਸਮ",
+			"optionColl": "ਸਿਰਜਣਹਾਰ",
+			"optionCity": "ਟਿਕਾਣਾ"
+		},
+		"displayMenu": {
+			"title": "ਇਸ ਤਰ੍ਹਾਂ ਵੇਖਾਓ",
+			"optionGallery": "ਚਿੱਤਰਸ਼ਾਲਾ",
+			"optionList": "ਸੂਚੀ"
+		}
+	},
+	"general": {
+		"ok": "ਠੀਕ ਏ",
+		"cancel": "ਰੱਦ ਕਰੋ",
+		"helpText": "ਮਦਦ",
+		"expand": "ਇਸ ਭਾਗ ਨੂੰ ਫੈਲਾਓ",
+		"collapse": "ਇਸ ਭਾਗ ਨੂੰ ਢਾਓ",
+		"menus": {
+			"actionMenuTitle": "ਕਾਰਵਾਈਆਂ",
+			"actionMenuTooltip": "ਕਾਰਵਾਈਆਂ",
+			"languageMenuTitle": "ਬੋਲੀ ਚੁਣੋ",
+			"languageMenuTooltip": "ਆਪਣੀ ਬੋਲੀ ਚੁਣੋ",
+			"myLanguagesItem": "ਸਾਰੀਆਂ ਬੋਲੀਆਂ",
+			"languageMenuTranslate": "ਇਸ ਲੇਖ ਦਾ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਉਲਥਾ ਕਰੋ"
+		},
+		"languageMenu": {
+			"TranslateUI": "ਆਪਣੀ ਬੋਲੀ ਵਿੱਚ ਤਰਜਮਾ ਕਰੋ"
+		},
+		"languages": {
+			"fi": "ਫਿਨਿਸ਼",
+			"en": "ਅੰਗਰੇਜ਼ੀ",
+			"sv": "ਸਵੀਡਿਸ਼",
+			"es": "ਸਪੇਨੀ"
+		}
+	},
+	"Banner": {
+		"WLMButton": "ਤਸਵੀਰ ਚੜ੍ਹਾਓ"
+	}
+}

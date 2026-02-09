@@ -1,0 +1,401 @@
+{
+	"@metadata": {
+		"authors": [
+			"Anupamdutta73",
+			"Bodhisattwa",
+			"Greatder",
+			"Titodutta",
+			"আফতাবুজ্জামান"
+		]
+	},
+	"LandingPage": {
+		"search": "অনুসন্ধান করুন",
+		"searchInputPlaceHolder": "একটি বিষয় অনুসন্ধান করুন বা  একটি নতুন বিষয় তৈরি করুন",
+		"searchInputSearchOnly": "একটি বিষয় অনুসন্ধান করুন",
+		"showMore": "আরও আইটেম দেখান",
+		"createNew": "নতুন আইটেম তৈরি করুন",
+		"intro": "উইকিদস্তাবেজ ইতিহাসের টুকরো সম্বন্ধীয় উইকি - এখানে ইতিহাসের খণ্ডচিত্রগুলিকে একত্র করে গল্পের রূপ দেওয়া হয়। আপনার পছন্দের বিষয় অনুসন্ধান করে শুরু করুন।",
+		"titleDescription": "উইকিদস্তাবেজ কি?",
+		"description": "উইকিদস্তাবেজ নাগরিক ঐতিহাসিকদের স্থান। এখানে লোকজন, স্থান, অট্টালিকা, ঘটনা এবং আরও বহু বিষয় সম্বন্ধে তথ্য একত্র করা হয়। পারিবারিক সম্পর্ক, অবস্থান, নির্মাতা ও নির্মাণ ইত্যাদি বিভিন্ন নথিভুক্ত সম্পর্কগুলিকে নজরে রেখে আপনি বিভিন্ন বিষয়ের মধ্যে ঘুরে বেড়াতে পারবেন। সম্পর্কিত সংগ্রহশালা ও গ্রন্থাগার হতে ছবি ও মানচিত্র দিয়ে বিষয়গুলিকে সাজানো রয়েছে। উইকিদস্তাবেজে তথ্যগুলিকে যেমন সংশোধন করা যা, তেমনি নতুন বিষয় যোগ করা যাবে, আপনার তোলা ছবি যোগ করা যাবে এবং সমস্ত তথ্য আপনার প্রয়োজন মত ব্যবহার করতে পারবেন।",
+		"titleStatus": "অবস্থা",
+		"status": "এই সাইটটি পরীক্ষামূলক অবস্থায় রয়েছে। এখনো বহু গুরুত্বপূর্ণ উপাদান উপলব্ধ নয় এবং এই সাইটটি প্রত্যাশামত কাজ নাও করতে পারে।",
+		"moreBelow": "নীচে আরও পড়ুন",
+		"more": "আরও পড়ুন",
+		"moreLink": "আরও পড়ুন",
+		"titleTopics": "বিষয়",
+		"statusTopics": "উইকিউপাত্ত থেকে বিষয়গুলিকে নেওয়া হয়েছে। উইকিউপাত্তে কোন বিষয় সম্পর্কে তথ্য থাকার সুযোগ না থাকলে উইকিদস্তাবেজে ভবিষ্যতে তা তৈরি করা যেতে পারে। বর্তমান নিবন্ধগুলি উইকিপিডিয়া থেকে নেওয়া হচ্ছে, কিন্তু ভবিষ্যতে উইকিদস্তাবেজেও নিবন্ধ তৈরি করা সম্ভব হবে।",
+		"titleMedia": "মিডিয়া",
+		"statusMedia": "মিডিয়া ফাইলগুলি ফিনা.ফি, ফ্লিকার ও উইকিমিডিয়া কমন্স থেকে নেওয়া হয়েছে। আরও সঠিক ভাবে ছবি খোঁজার এবং প্রত্যেক উৎস থেকে আরও ভালো মেটাউপাত্ত প্রদর্শন করার কাজ আমরা করছি।",
+		"titleTools": "সরঞ্জাম",
+		"titleLanguages": "ভাষাসমূহ",
+		"titleTechnology": "প্রযুক্তি",
+		"titleCreators": "নির্মাতা",
+		"titleTeam": "দল",
+		"titleThanks": "সবিশেষ ধন্যবাদ যাদের প্রাপ্য",
+		"titlePartners": "অংশীদার",
+		"titleFunding": "এটি সাহায্য করেছেন...",
+		"titleBy": "এটি সাহায্য করেছেন",
+		"getInvolved": "জড়িত হোন!",
+		"titleTranslate": "অনুবাদ করুন",
+		"joinTranslate": "আপনার ভাষা উইকিডকুমেন্টারিতে নিয়ে আসুন। স্বেচ্ছাসেবী অনুবাদ দলে যোগ দিন এবং সংযুক্ত সাংস্কৃতিক ঐতিহ্য আপনার ভাষায় জীবিত হয়ে উঠুক",
+		"titleContent": "আপনার লেখা যোগ করুন",
+		"titleContact": "যোগাযোগ করুন!",
+		"facebook": "ফেসবুক গ্রুপ",
+		"wiki": "উইকিদস্তাবেজ উইকি",
+		"blog": "ব্লগ",
+		"email": "ইমেইল",
+		"github": "গিটহাব"
+	},
+	"MainPage": {
+		"topicPageName": "বিষয় সম্পর্কিত পাতা",
+		"mapPlaceMatchPageName": "জায়গার নাম একত্রিত করুন",
+		"mapSearchPageName": "মানচিত্র অনুসন্ধান করুন",
+		"returnToHomeMessage": "প্রধান পাতায় ফিরে যান"
+	},
+	"WaitPage": {
+		"waitMessage": "দয়া করে একটু অপেক্ষা করুন... উইকিপিডিয়া, উইকিউপাত্ত, উইকিমিডিয়া কমন্স, ম্যাপওয়ার্পার, ফিনা, ফ্লিকার থেকে উপাত্ত আনা হচ্ছে"
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "পুরস্কার"
+		},
+		"BaseMapDialog": {
+			"chooseMapHelpNote": "পরামর্শ: ctrl+click আপনাকে আরো বেশি মানচিত্র নির্বাচন করতে সাহায্য করবে",
+			"yearAbbreviation": "বছর"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "সময় অনুসারে",
+				"optionAlpha": "বর্ণানুক্রমিক",
+				"optionClear": "বাছাই পরিষ্কার করুন"
+			},
+			"facetMenu": {
+				"optionType": "ধরন",
+				"optionColl": "নির্মাতা"
+			},
+			"displayMenu": {
+				"optionGallery": "চিত্রশালা",
+				"optionList": "তালিকা"
+			},
+			"showAll": "সকল"
+		},
+		"Depicts": {
+			"headerTitle": "যা বোঝানো হয়েছে"
+		},
+		"Events": {
+			"headerTitle": "ঘটনা",
+			"displayMenu": {
+				"menuTitle": "পছন্দসমূহ দেখুন",
+				"menuTooltip": "বিকল্প দেখান",
+				"optionShowTimeline": "সময়সারণিতে ঘটনাগুলি দেখুন",
+				"optionShowList": "ঘটনাগুলি তালিকা হিসেবে দেখুন"
+			},
+			"optionsMenu": {
+				"menuTitle": "বিকল্পসমূহ",
+				"menuTooltip": "তথ্য নির্বাচন করুন দেখার জন্য"
+			}
+		},
+		"Header": {
+			"titleEditText": "শিরোনাম সম্পাদনা করুন",
+			"titleApproveText": "এই শিরোনাম নিশ্চিত করুন",
+			"subtitleEditText": "বিবরণ সম্পাদনা করুন",
+			"subtitleApproveText": "এই বিবরণটি নিশ্চিত করুন"
+		},
+		"Locations": {
+			"headerTitle": "এই অবস্থানে",
+			"sortMenu": {
+				"title": "অবস্থান অনুসারে বাছুন",
+				"tooltip": "অবস্থান অনুসারে বাছুন",
+				"optionTime": "সময় অনুসারে",
+				"optionAlpha": "বর্ণানুক্রমিক",
+				"optionDist": "দূরত্ব অনুসারে",
+				"optionClear": "বাছাই পরিষ্কার করুন"
+			},
+			"facetMenu": {
+				"optionType": "ধরণ",
+				"optionColl": "নির্মাতা",
+				"optionCity": "অবস্থান"
+			},
+			"displayMenu": {
+				"title": "যেভাবে দেখবেন",
+				"optionGallery": "চিত্রশালা",
+				"optionList": "তালিকা"
+			},
+			"showAll": "সকল"
+		},
+		"Map": {
+			"headerTitle": "মানচিত্রে অবস্থান"
+		},
+		"Parts": {
+			"headerTitle": "অংশ"
+		},
+		"Partof": {
+			"headerTitle": "এটি যার অংশ"
+		},
+		"Similar": {
+			"headerTitle": "অনুরূপ প্রসঙ্গ",
+			"intro": "এই প্রসঙ্গের সাথে কিছু সাধারণ বৈশিষ্ট্য মিল রয়েছে এমন প্রসঙ্গ।"
+		},
+		"Effects": {
+			"headerTitle": "প্রভাব"
+		},
+		"Familytree": {
+			"headerTitle": "বংশলতা"
+		},
+		"Links": {
+			"headerTitle": "এই নিবন্ধ থেকে সংযোগ করা হয়েছে"
+		},
+		"Location": {
+			"headerTitle": "অবস্থান"
+		},
+		"Names": {
+			"headerTitle": "নাম"
+		},
+		"People": {
+			"headerTitle": "প্রসঙ্গটির সাথে সম্পর্কিত ব্যক্তি",
+			"sortMenuTitle": "বাছাই করুন",
+			"sortMenuTooltip": "বাছাইয়ের ক্রম পাল্টান",
+			"sortMenuOptionBirth": "জন্মদিন অনুসারে",
+			"sortMenuOptionDeath": "মৃত্যুদিন অনুসারে",
+			"sortMenuOptionName": "নাম অনুসারে",
+			"sortMenuOptionFirst": "প্রথম নাম অনুসারে",
+			"sortMenuOptionLast": "পদবী অনুসারে",
+			"sortMenuOptionClear": "বাছাই পরিষ্কার করুন",
+			"facetMenuOptionProfession": "পেশা",
+			"facetMenuOptionCountry": "দেশ",
+			"facetMenuOptionCity": "লিঙ্গ"
+		},
+		"Twins": {
+			"headerTitle": "যমজ শহর"
+		},
+		"TopicImages": {
+			"headerTitle": "আর্কাইভগুলি হতে প্রাপ্ত ছবি",
+			"intro": "এই চিত্রগুলি বেশ কয়েকটি উৎস থেকে সংগ্রহ করা হয়েছে এবং এগুলি সর্বদা সঠিক প্রতিনিধিত্ব নাও করতে পারে। আপনি আসল চিত্রটি দেখতে পারেন এবং চিত্রটির কোনও অবস্থান পিন নং থাকলে আপনি তাতে মানচিত্র যোগ করতে পারেন।",
+			"actionsMenu": {
+				"menuTitle": "চিত্রগুলো দেখুন বা সাজান",
+				"tooltip": "চিত্রগুলো দেখুন বা সাজান",
+				"showImagesOnMapMenuText": "মানচিত্রে সকল চিত্র দেখান",
+				"showImagesOnTimelineMenuText": "সময়রেখায় সকল চিত্র দেখান",
+				"selectPortraits": "এই ব্যক্তির উচ্চ মানের ছবি বাছুন",
+				"arrangeByTime": "চিত্রগুলি সময় অনুযায়ী সাজান"
+			},
+			"facetMenu": {
+				"time": "সময়",
+				"map": "মানচিত্র",
+				"people": "ব্যক্তি",
+				"places": "স্থান",
+				"topics": "বিষয়",
+				"form": "ফর্ম",
+				"imageSize": "চিত্রের আকার",
+				"large": "বড়",
+				"medium": "মাঝারি",
+				"small": "ছোট",
+				"type": "মিডিয়ার ধরন",
+				"creator": "নির্মাতা",
+				"platform": "প্ল্যাটফর্ম",
+				"source": "উৎস",
+				"clear": "আপনার পছন্দগুলি মুছে ফেলুন"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "কর্ম",
+				"menuTooltip": "কার্যসমূহ",
+				"doGeolocatingText": "অবস্থান নির্ধারন করুন...",
+				"showImageText": "চিত্র প্রদর্শন করুন",
+				"selectFeatured": "প্রধান চিত্র হিসেবে নির্বাচিত করুন"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "চিত্রটি সরিয়ে দিন, কারণ....",
+				"shortMenuTitle": "ছবি সরান",
+				"menuTooltip": "ছবি সরান",
+				"remDepicted": {
+					"shortMenuTitle": "এটি অন্য বিষয় দেখাচ্ছে",
+					"search": "বিষয় অনুসন্ধান করুন",
+					"browse": "নির্দিষ্ট বিষয় খুঁজুন"
+				},
+				"remCreator": {
+					"menuTitle": "এটি তৈরি করেছেন",
+					"shortMenuTitle": "এটি অন্য কেউ তৈরী করেছেন",
+					"search": "প্রণেতার খোঁজ করুন",
+					"browse": "নির্দিষ্ট কলাকুশলীদের খুঁজুন"
+				},
+				"remInappropriate": {
+					"menuTitle": "এটি অনুপযুক্ত, কারণ...",
+					"shortMenuTitle": "এটি অনুপযুক্ত",
+					"copyvio": "এটি কপিরাইট লঙ্ঘন করছে",
+					"explain": "বিষয়টি বুঝিয়ে দিন"
+				}
+			},
+			"imagesViewExternal": "আসল চিত্রটি দেখুন",
+			"imagesViewOnMap": "চিত্রটি মানচিত্রের দেখুন"
+		},
+		"TopicMap": {
+			"headerTitle": "মানচিত্রের বিষয়",
+			"hideImagesMenuText": "চিত্র আড়াল করুন",
+			"showNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি দেখান",
+			"hideNearbyPlacesMenuText": "কাছাকাছি স্থানগুলি লুকান",
+			"extLink": {
+				"menuTooltip": "ওপেনষ্ট্রিটম্যাপে দেখুন বা সম্পাদনা করুন"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "সংবাদপত্রের ক্লিপিং",
+			"searhTopicFromArchivesMenuText": "ফিনল্যান্ডের জাতীয় গ্ৰন্থাগারে অবস্থিত সংবাদপত্র থেকে খুঁজুন",
+			"addClipFromArchivesMenuText": "ক্লিপিং যোগ করুন"
+		},
+		"TopicTimeline": {
+			"headerTitle": "সময়রেখা",
+			"showEventsOnTimelineMenuText": "বিষয় ঘটনাগুলি সময়সারণিতে দেখুন"
+		},
+		"Works": {
+			"headerTitle": "কর্ম",
+			"sortMenuTitle": "বাছাই করুন",
+			"sortMenuOptionTime": "সময় অনুসারে",
+			"sortMenuOptionAlpha": "বর্ণানুক্রমিক",
+			"sortMenuOptionDist": "দূরত্ব অনুসারে",
+			"sortMenuOptionClear": "বাছাই পরিষ্কার করুন",
+			"facetMenuOptionType": "ধরন",
+			"facetMenuOptionColl": "সংগ্রহ",
+			"facetMenuOptionCity": "অবস্থান",
+			"displayMenuOptionGallery": "চিত্রশালা",
+			"displayMenuOptionList": "তালিকা",
+			"displayMenuOptionMap": "মানচিত্র",
+			"showAll": "সকল"
+		},
+		"Wikidata": {
+			"headerTitle": "তথ্য",
+			"extLink": {
+				"linkTitleWD": "উইকিউপাত্তে দেখুন বা সম্পাদনা করুন"
+			},
+			"noTopicFoundText": "বিষয় পাওয়া যায়নি"
+		},
+		"Wikipedia": {
+			"headerTitle": "নিবন্ধ",
+			"missingArticle": "এই বিষয় সম্বন্ধে আপনার ভাষায় কোন নিবন্ধ নেই। আপনি ওপরের মেনু হতে নির্বাচন করে অন্যান্য উপলব্ধ ভাষায় এই নিবন্ধ পড়তে পারেন। আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
+			"missingArticleMissing": "এই বিষয় সম্বন্ধে আপনার ভাষায় কোন নিবন্ধ নেই।",
+			"missingArticleChoose": "আপনি ওপরের মেনু হতে নির্বাচন করে অন্যান্য উপলব্ধ ভাষায় এই নিবন্ধ পড়তে পারেন। আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
+			"missingArticleCreate": "আপনার ভাষায় নিবন্ধ তৈরি করতে + চিহ্নে ক্লিক করুন।",
+			"extLink": {
+				"linkTitleWP": "উইকিপিডিয়ায় পড়ুন আর সম্পাদনা করুন"
+			},
+			"addLink": {
+				"linkTitleWP": "উইকিপিডিয়ায় নিবন্ধ তৈরি করুন"
+			},
+			"languageMenu": {
+				"menuTitle": "অন্য ভাষায় এই নিবন্ধ পড়ুন",
+				"translateArticleText": "আপনার ভাষায় এই নিবন্ধটি অনুবাদ করুন",
+				"otherLanguagestext": "অন্যান্য ভাষাসমূহ"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "ক্যাপশন",
+			"addCaption": "ক্যাপশন যোগ করুন",
+			"description": "বিবরণ",
+			"addDescription": "বিবরণ যোগ করুন",
+			"creator": "নির্মাতা",
+			"creatorUnknown": "অজানা",
+			"addCreator": "নির্মাতা যোগ করুন",
+			"removeCreator": "নির্মাতা সরান",
+			"dateDepicted": "নির্ধারিত তারিখ",
+			"addDateDepicted": "নির্ধারিত তারিখ যোগ করুন",
+			"removeDateDepicted": "নির্ধারিত তারিখ সরান",
+			"dateCreated": "তৈরির তারিখ",
+			"addDateCreated": "তৈরির তারিখ যোগ করুন",
+			"removeDateCreated": "তৈরির তারিখ অপসারণ করুন",
+			"publisher": "প্রকাশক",
+			"addPublisher": "প্রকাশক যোগ করুন",
+			"removePublisher": "প্রকাশক অপসারণ করুন",
+			"format": "বিন্যাস",
+			"genre": "ধরণ",
+			"depicts": "ছবিতে যা বোঝানো হয়েছে",
+			"addTopic": "প্রসঙ্গ যোগ করুন",
+			"removeTopic": "প্রসঙ্গ সরান",
+			"location": "অবস্থান",
+			"locationMap": "মানচিত্রে অবস্থান",
+			"addLocation": "অবস্থান যোগ করুন",
+			"removeLocation": "অবস্থান সরান",
+			"address": "রাস্তার ঠিকানা",
+			"addAddress": "রাস্তার ঠিকানা যোগ করুন",
+			"removeAddress": "রাস্তার ঠিকানা সরান",
+			"depictedPeople": "যে ব্যক্তি(দের) বোঝানো হয়েছে",
+			"addPerson": "ব্যক্তি যোগ করুন",
+			"removePerson": "ব্যক্তি সরান",
+			"event": "ঘটনা",
+			"addEvent": "ঘটনা যোগ করুন",
+			"removeEvent": "ঘটনা সরান",
+			"institution": "প্রতিষ্ঠান",
+			"collection": "সংগ্রহ",
+			"copyright": "কপিরাইট",
+			"license": "কপিরাইট লাইসেন্স",
+			"photograph": "আলোকচিত্ৰ",
+			"image": "চিত্র",
+			"photographer": "আলোকচিত্ৰকর",
+			"platformId": "আইডি",
+			"fileSize": "ফাইলের আকার",
+			"remove": "অপসারণ করুন",
+			"addData": "উপাত্ত যোগ করুন",
+			"uploader": "আপলোডকারী",
+			"rotate": "ঘোরান"
+		},
+		"imageActions": {
+			"rotateImage": "ছবি ঘোরান",
+			"clockwise": "ঘড়ির কাঁটার দিকে",
+			"counterclockwise": "ঘড়ির কাঁটার বিপরীত দিকে",
+			"flip": "ওল্টান",
+			"horizontal": "অনুভূমিক",
+			"vertical": "উল্লম্ব"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "জায়গার নাম একত্রিত করুন"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"tooltip": "প্রসঙ্গ অনুসারে বাছুন",
+			"optionTime": "সময় অনুসারে",
+			"optionStart": "শুরুর সময় অনুসারে",
+			"optionEnd": "শেষের সময় অনুসারে",
+			"optionTitle": "শিরোনাম অনুসারে",
+			"optionCause": "কারণ অনুসারে",
+			"optionAlpha": "বর্ণানুক্রমিক",
+			"optionTitleAlpha": "বর্ণানুক্রমিক শিরোনাম অনুসারে",
+			"optionDist": "দূরত্ব অনুসারে"
+		},
+		"facetMenu": {
+			"optionType": "ধরন",
+			"optionColl": "নির্মাতা",
+			"optionCity": "অবস্থান"
+		},
+		"displayMenu": {
+			"optionGallery": "চিত্রশালা",
+			"optionList": "তালিকা"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "উইকিদস্তাবেজ",
+		"ok": "ঠিক আছে",
+		"cancel": "বাতিল",
+		"helpText": "সাহায্য",
+		"expand": "অনুচ্ছেদটি বিস্তৃত করুন",
+		"menus": {
+			"languageMenuTitle": "ভাষা নির্বাচন করুন",
+			"languageMenuTooltip": "আপনার ভাষা চয়ন করুন",
+			"myLanguagesItem": "আমার ভাষাসমূহ",
+			"languageMenuTranslate": "বাংলায় এই নিবন্ধটি অনুবাদ করুন"
+		},
+		"languageMenu": {
+			"TranslateUI": "আপনার ভাষায় অনুবাদ করুন"
+		},
+		"languages": {
+			"fi": "ফিনীয়",
+			"en": "ইংরেজি",
+			"es": "স্পেনীয়"
+		}
+	},
+	"Banner": {
+		"WLMButton": "চিত্র আপলোড করুন"
+	}
+}

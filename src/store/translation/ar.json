@@ -1,14 +1,60 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dr-Taher",
+			"Hhaboh162002",
 			"Meno25",
+			"Michel Bakni",
+			"Mohammed Qays",
+			"NEHAOUA",
+			"Tala Ali",
 			"ديفيد",
-			"Abijeet Patro"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"LandingPage": {
 		"search": "بحث",
-		"searchInputPlaceHolder": "ابحث عن موضوع أو أنشئ موضوعا جديدا"
+		"searchInputPlaceHolder": "ابحث عن موضوع أو أنشئ موضوعا جديدا",
+		"searchInputSearchOnly": "إيجاد موضوع",
+		"showMore": "عرض المزيد من العناصر",
+		"createNew": "إنشاء عنصر جديد",
+		"intro": "الويكي الوثائقي هو ويكي للتاريخ الصغير - مكان يجمع آثار التاريخ ويحولها إلى قصص، ابدأ بالبحث عن موضوع مهم!",
+		"titleDescription": "ما هي وثائق ويكي الوثائق؟",
+		"description": "\\الويكي الوثائقي هي مساحة صانع للمؤرخين المواطنين؛ فهو يجمع بين معلومات حول الموضوعات - الأشخاص والأماكن والمباني والأحداث والمزيد، يمكنك التنقل بين الموضوعات باتباع أي اتصال مسجل مثل العلاقات الأسرية والمواقع والمنشئين والإبداعات أو الانتماء، يتم توضيح الموضوع بالصور والخرائط من المتاحف والمحفوظات والمكتبات المتصلة، في الويكي الوثائقي، سيكون من الممكن تصحيح المعلومات الحالية وإضافة مواضيع جديدة، وإحضار الصور والتذكرات الخاصة بك، واستخدام جميع المواد لأغراضك الخاصة.",
+		"titleStatus": "الحالة",
+		"status": "الموقع في المرحلة التجريبية؛ العديد من الميزات المهمة ليست متاحة بعد وقد لا يعمل الموقع بالشكل المتوقع.",
+		"moreBelow": "قراءة المزيد أدناه",
+		"more": "قراءة المزيد",
+		"moreLink": "اقرأ المزيد في",
+		"titleTopics": "المواضيع",
+		"statusTopics": "تتم قراءة المواضيع من ويكي بيانات. يمكن إنشاء موضوعات جديدة لاحقا في الويكي الوثائقي بدلا من ذلك، إذا كان المحتوى خارج نطاق ويكي بيانات، سيظل من الممكن على قدم المساواة وصف الموضوع بخيارات غنية من ويكي بيانات، المقالات الحالية من ويكيبيديا، في حين أن المقالات يمكن إنشاؤها في وقت لاحق محليا للمواضيع الموجودة في ويكي الوثائق فقط.",
+		"titleMedia": "الوسائط",
+		"statusMedia": "تتم قراءة الوسائط من عدد متزايد من مستودعات الوسائط التي تقدم ملفات الوسائط المرخصة بشكل مفتوح، نحن نعمل على العثور على صور أكثر دقة وعرض بيانات وصفية أكثر وأفضل من كل من المصادر، مصادر الوسائط الجديدة مرحب بها!",
+		"titleTools": "أدوات",
+		"statusTools": "تحتوي مستندات الويكي الوثائقي على أدوات وأدوات للعمل مع المحتوى، يمكن بالفعل ترجمة المقالات بين اللغات باستخدام أداة ترجمة المحتوى، نحن نعد إعداد الكلمات الأساسية باستخدام ويكي بيانات وأداة تحديد الموقع الجغرافي لمواقع الصور، متعة جديدة وأدوات مفيدة يمكن إنشاؤها أو دمجها.",
+		"titleLanguages": "اللغات",
+		"statusLanguages": "يمكن تصفح الويكي الوثائقي بأية لغة متاحة في ويكي بيانات، هذه فرصة عظيمة للغات الصغيرة، تتم الترجمات في ترانسليت ويكي.",
+		"titleTechnology": "تقنية",
+		"statusTechnology": "تقرأ صفحات الويكي الوثائقي البيانات الأساسية من ويكي بيانات، بالإضافة إلى ذلك، ستحتوي الويكي الوثائقي على أنها قاعدة ويكي خاصة بالمواضيع الخارجة عن نطاق ويكي بيانات، من المتوقع أن تتم مزامنة ويكي بيانات والويكي الوثائقي كأوراق قاعدة ويكي متحدة، ثانيا: البيانات الوصفية للصور مرتبطة بعناصر ويكي بيانات، ويمكن أن تتزامن هذه البيانات مع البيانات المهيكلة على ويكيميديا ​​كومنز، تم بناء الموقع باستخدام Vue.js واستضافته في خدمات سحابة ويكيميديا.",
+		"titleCreators": "المبدعون",
+		"titleTeam": "الفريق",
+		"titleThanks": "مع شكر خاص لـ",
+		"titlePartners": "الشركاء",
+		"titleFunding": "بدعم طيب من",
+		"titleBy": "مشروع من قبل",
+		"getInvolved": "شارك!",
+		"titleTranslate": "ترجم",
+		"joinTranslate": "تعال واجلب لغتك إلى ويكي الوثائق، انضم إلى فريق ترجمة المتطوعين وشاهد التراث الثقافي المترابط الذي ينبض بالحياة بلغتك.",
+		"titleContent": "أضف محتواك",
+		"joinContent": "إذا كانت لديك صورة أو وسائط أو مستند أو خريطة أو مجموعة بيانات ترغب في رؤيتها هنا، فلنلقِ نظرة معا على ما إذا كان بإمكانها الاتصال بالفعل عبر إحدى القنوات الحالية أو إذا كان بإمكاننا إنشاء طرق اتصال جديدة، نتطلع أيضا إلى ترتيب ورش عمل لتسجيل المعرفة التاريخية مع المجتمعات ذات الاهتمام.",
+		"titleDevelop": "إنشاء أدوات ومهام التعهيد الجماعي.",
+		"joinDevelop": "نود إضافة المزيد من الأدوات وإنشاء مهام التعهيد الجماعي الجديدة بالتعاون مع المنظمات وبناة الأدوات، دعونا نتكاتف من أجل التطبيق التعهيد الجماعي الرائع القادم!",
+		"titleContact": "اتصل!",
+		"facebook": "مجموعة فيسبوك",
+		"wiki": "ويكي الوثائق",
+		"blog": "مدونة",
+		"email": "البريد الإلكتروني",
+		"github": "مستودع غيت هب"
 	},
 	"MainPage": {
 		"topicPageName": "صفحة موضوع",
@@ -18,13 +64,80 @@
 		"returnToHomeMessage": "العودة إلى صفحة الهبوط"
 	},
 	"WaitPage": {
-		"waitMessage": "لحظة، من فضلك... جارٍ استرجاع البيانات من ويكيبيديا، ويكييداتا ، ويكيميديا ​​كومنز، ماب واربر ، فنا، فليكر ..."
+		"waitMessage": "لحظة، من فضلك... جارٍ استرجاع البيانات من ويكيبيديا، ويكيي بيانات، ويكيميديا ​​كومنز، ماب واربر ، فنا، فليكر ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "الانتماءات",
+			"intro": "المنظمات التي ينتمي إليها هذا الشخص أو المنظمة."
+		},
+		"Awards": {
+			"headerTitle": "جوائز",
+			"intro": "ترشيحات وجوائز موضوع هذه الصفحة."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "اختر خريطة(خرائط) أساسية تاريخية",
 			"chooseMapHelpNote": "نصيحة: ctrl+click يسمح لك بتحديد العديد من الخرائط",
 			"yearAbbreviation": "س."
+		},
+		"Collection": {
+			"headerTitle": "الأعمال في المجموعة",
+			"intro": "هذه الأعمال موجودة في مجموعة هذا الشخص أو المؤسسة. يمكنك اختيار عرضها كقائمة، والتي تظهر أيضا تعمل بدون صور. يمكن فرزها حسب التواريخ أو الأسماء. لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات."
+		},
+		"Cups": {
+			"headerTitle": "الألعاب والمسلسلات والبطولات",
+			"intro": "لقد لعب هذا النادي في المباريات ، والبطولات التالية"
+		},
+		"CV": {
+			"headerTitle": "السيرة الذاتية",
+			"intro": "هذه أحداث مهنية لشخص الموضوع."
+		},
+		"Depicted": {
+			"headerTitle": "المصور في",
+			"intro": "هذا الموضوع مصور في هذه الأعمال، افرز الأعمال حسب معايير مختلفة، واعرضها كقائمة لرؤيتها دون صورة.",
+			"sortMenu": {
+				"title": "ترتيب الأعمال",
+				"tooltip": "ترتيب الأعمال",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "أعمال الوجه حسب",
+				"tooltip": "أعمال الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
+		"Depicts": {
+			"headerTitle": "يصور",
+			"intro": "هذا العمل يصور هذه المواضيع، يمكنك فرزها حسب الوقت والاسم، لاحظ أنه لمشاهدة جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض الموضوعات كقائمة."
+		},
+		"Events": {
+			"headerTitle": "الأحداث",
+			"displayMenu": {
+				"menuTitle": "خيارات العرض",
+				"menuTooltip": "خيارات العرض",
+				"optionShowTimeline": "عرض الأحداث على جدول زمني",
+				"optionShowList": "عرض الأحداث كقائمة"
+			},
+			"optionsMenu": {
+				"menuTitle": "خيارات",
+				"menuTooltip": "حدد حقائق لعرضها",
+				"optionWorks": "عرض الأعمال",
+				"optionRelatedPeople": "عرض أحداث الأشخاص ذوي الصلة",
+				"subRelatedPeopleConf": {
+					"menuTitle": "تهيئة"
+				},
+				"optionRelatedTopics": "عرض أحداث الموضوعات ذات الصلة"
+			}
 		},
 		"Header": {
 			"titleEditText": "تحرير العنوان",
@@ -32,9 +145,112 @@
 			"subtitleEditText": "تعديل الوصف",
 			"subtitleApproveText": "الموافقة على هذا الوصف"
 		},
+		"Heritage": {
+			"headerTitle": "العناصر الموروثة"
+		},
+		"Locations": {
+			"headerTitle": "في هذا الموقع",
+			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
+			"sortMenu": {
+				"title": "فرز المواقع",
+				"tooltip": "فرز المواقع",
+				"optionTime": "حسب الوقت",
+				"optionAlpha": "أبجديا",
+				"optionDist": "حسب المسافة",
+				"optionClear": "مسح الفرز"
+			},
+			"facetMenu": {
+				"title": "مواقع الوجه حسب",
+				"tooltip": "مواقع الوجه بمعايير مختلفة",
+				"optionType": "النوع",
+				"optionColl": "المنشئ",
+				"optionCity": "الموقع"
+			},
+			"displayMenu": {
+				"title": "عرض كـ",
+				"tooltip": "اختيار العرض",
+				"optionGallery": "معرض",
+				"optionList": "قائمة"
+			},
+			"showAll": "الكل"
+		},
+		"Map": {
+			"headerTitle": "الموقع على الخريطة"
+		},
+		"Parts": {
+			"headerTitle": "الأجزاء",
+			"intro": "هذه الأجزاء تنتمي إلى هذا الموضوع، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
+		},
+		"Partof": {
+			"headerTitle": "جزء من",
+			"intro": "هذا الموضوع جزء من هذه المواضيع الأخرى. يمكنك فرزها حسب الوقت والاسم. كي ترى كافة المواضيع، من بينها تلك التي لا تحتوي على صور، يتعين عليك أ تعرض المواضيع في هيئة قائمة."
+		},
+		"Similar": {
+			"headerTitle": "مواضيع مماثلة",
+			"intro": "ابحث عن مواضيع لها بعض الخصائص الأساسية الشائعة مع هذا الموضوع."
+		},
+		"Effects": {
+			"headerTitle": "تأثيرات",
+			"intro": "هذه هي تأثيرات الموضوع"
+		},
+		"Familytree": {
+			"headerTitle": "شجرة العائلة"
+		},
+		"Instances": {
+			"headerTitle": "مثيلات هذا الموضوع",
+			"intro": "انظر أمثلة لهذا الموضوع. عرض كقائمة لرؤية العناصر أيضا بدون صور."
+		},
+		"Links": {
+			"headerTitle": "وصلات من هذه المقالة"
+		},
+		"Location": {
+			"headerTitle": "الموقع",
+			"intro": "هذا الموضوع هو في سياق هذه المواضيع."
+		},
+		"Names": {
+			"headerTitle": "الأسماء",
+			"intro": "طالع أسماء هذه المواضيع وكافة البدائل المتاحة."
+		},
+		"People": {
+			"headerTitle": "أشخاص مرتبطون بالموضوع",
+			"intro": "هؤلاء الأشخاص مرتبطون بموضوع هذه الصفحة، يمكنك اختيار عرضهم كقائمة، والتي تعرض أيضا الأشخاص بدون صور، يمكن فرزها حسب التواريخ أو الأسماء، لاحظ أنه سيتم عرض فقط أولئك الذين لديهم هذه المعلومات.",
+			"sortMenuTitle": "ترتيب",
+			"sortMenuTooltip": "تغيير ترتيب الفرز",
+			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
+			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
+			"sortMenuOptionName": "حسب الاسم",
+			"sortMenuOptionFirst": "حسب الاسم الأول",
+			"sortMenuOptionLast": "حسب الاسم الأخير",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",
+			"facetMenuOptionProfession": "المهنة",
+			"facetMenuOptionCountry": "البلد",
+			"facetMenuOptionCity": "الجنس"
+		},
+		"Seasons": {
+			"headerTitle": "مواسم",
+			"intro": "انظر مواسم هذا النشاط."
+		},
+		"Subclasses": {
+			"headerTitle": "رتب فرعية لهذا الموضوع",
+			"intro": "انظر الرتب الفرعية لهذا الموضوع. عرض كقائمة لترى أيضا العناصر بدون صورة."
+		},
+		"Teams": {
+			"headerTitle": "الفرق المشاركة",
+			"intro": "الفرق المشاركة في هذه اللعبة ، والبطولة."
+		},
+		"Things": {
+			"headerTitle": "ركز موضوعات القائمة",
+			"intro": "   هذه المواضيع على قائمة التركيز لمشروع ويكي"
+		},
+		"Twins": {
+			"headerTitle": "مدن توائم",
+			"intro": "المدن التوائم والمدن الشقيقة والبلديات التوائم وغيرها من المواقع التي لها شراكة أو اتفاقية تعاونية، إما معترف بها قانونا أو غير رسمية من قبل حكوماتها، يمكنك فرزها حسب الوقت والاسم، لرؤية جميع المواضيع، بما في ذلك المواضيع التي لا تحتوي على صورة؛ يجب عليك عرض المواضيع كقائمة."
+		},
 		"TopicImages": {
 			"headerTitle": "صور من الأرشيف",
-			"intro": "يتم جمع هذه الصور من عدة مصادر وقد لا تمثل دائما الموضوع بدقة، يمكنك تفضيل صورة أو إزالتها من الصفحة إذا لم تكن تنتمي.",
+			"intro": "يتم جمع هذه الصور من عدة مصادر وقد لا تمثل دائما الموضوع بدقة، يمكنك رؤية الصورة الأصلية أو يمكنك وضع الصورة في خريطة لو كان لها موقع إحداثيات.",
 			"actionsMenu": {
 				"menuTitle": "عرض أو ترتيب الصور",
 				"tooltip": "عرض أو ترتيب الصور",
@@ -96,7 +312,9 @@
 					"copyvio": "ينتهك حقوق الطبع والنشر",
 					"explain": "ترك ملاحظة للشرح"
 				}
-			}
+			},
+			"imagesViewExternal": "عرض الصورة الأصلية",
+			"imagesViewOnMap": "عرض الصورة على خريطة"
 		},
 		"TopicMap": {
 			"headerTitle": "الموضوع على الخريطة",
@@ -105,7 +323,10 @@
 			"hideImagesMenuText": "إخفاء الصور",
 			"chooseTimelineMapsMenuText": "اختر خرائط الجدول الزمني...",
 			"showNearbyPlacesMenuText": "عرض الأماكن القريبة",
-			"hideNearbyPlacesMenuText": "إخفاء الأماكن القريبة"
+			"hideNearbyPlacesMenuText": "إخفاء الأماكن القريبة",
+			"extLink": {
+				"menuTooltip": "عرض أو تعديل في OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "قصاصات صحفية",
@@ -116,6 +337,27 @@
 			"headerTitle": "الجدول الزمني",
 			"showEventsOnTimelineMenuText": "عرض أحداث الموضوع على المخطط الزمني",
 			"centuryText": "ق"
+		},
+		"Works": {
+			"headerTitle": "الأعمال",
+			"intro": "هذه هي أعمال الشخص أو الجماعة أو المنظمة، التي هي موضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات حول العمل من خلال النقر عليه، يعمل فقط مع الصور، اعرض كقائمة لرؤية جميع الأعمال ذات الصلة، التي تم تخزينها.",
+			"sortMenuTitle": "الترتيب",
+			"sortMenuTooltip": "فرز العناصر",
+			"sortMenuOptionTime": "حسب الوقت",
+			"sortMenuOptionAlpha": "أبجديا",
+			"sortMenuOptionDist": "حسب المسافة",
+			"sortMenuOptionClear": "مسح الفرز",
+			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
+			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
+			"facetMenuOptionType": "النوع",
+			"facetMenuOptionColl": "المجموعة",
+			"facetMenuOptionCity": "الموقع",
+			"displayMenuTitle": "العرض",
+			"displayMenuTooltip": "اختيار العرض",
+			"displayMenuOptionGallery": "معرض",
+			"displayMenuOptionList": "قائمة",
+			"displayMenuOptionMap": "خريطة",
+			"showAll": "الكل"
 		},
 		"Wikidata": {
 			"headerTitle": "حقائق",
@@ -144,107 +386,93 @@
 				"translateArticleText": "ترجمة هذه المقالة إلى لغتك",
 				"otherLanguagestext": "لغات أخرى"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "الناس المرتبطون بالموضوع",
-			"menuTitle": "أظهر",
-			"showBorn": "وُلِد هنا",
-			"showDied": "تُوفِّي هنا",
-			"showBuried": "دُفِن هنا",
-			"showRelated": "ذو صلة خلاف ذلك",
-			"showAll": "الكل"
-		},
-		"Locations": {
-			"headerTitle": "المواقع",
-			"intro": "هنا ترى أي شيء موجود في موضوع هذه الصفحة، اعرض كقائمة لرؤية جميع المواقع التي تم تخزينها.",
-			"sortMenu": {
-				"title": "فرز المواقع",
-				"tooltip": "فرز المواقع",
-				"optionTime": "حسب الوقت",
-				"optionAlpha": "أبجديا",
-				"optionDist": "حسب المسافة",
-				"optionRev": "عكس الترتيب",
-				"optionClear": "مسح الفرز"
-			},
-			"facetMenu": {
-				"title": "مواقع الوجه حسب",
-				"tooltip": "مواقع الوجه بمعايير مختلفة",
-				"optionType": "النوع",
-				"optionColl": "المنشئ",
-				"optionCity": "الموقع"
-			},
-			"displayMenu": {
-				"title": "عرض كـ",
-				"tooltip": "اختيار العرض",
-				"optionGallery": "معرض",
-				"optionList": "قائمة"
-			},
-			"showAll": "الكل"
-		},
-		"Depicted": {
-			"headerTitle": "المصور في",
-			"intro": "هذا الموضوع مصور في هذه الأعمال، افرز الأعمال حسب معايير مختلفة، واعرضها كقائمة لرؤيتها دون صورة.",
-			"sortMenu": {
-				"title": "ترتيب الأعمال",
-				"tooltip": "ترتيب الأعمال",
-				"optionTime": "حسب الوقت",
-				"optionAlpha": "أبجديا",
-				"optionRev": "عكس الترتيب",
-				"optionClear": "مسح الفرز"
-			},
-			"facetMenu": {
-				"title": "أعمال الوجه حسب",
-				"tooltip": "أعمال الوجه بمعايير مختلفة",
-				"optionType": "النوع",
-				"optionColl": "المنشئ"
-			},
-			"displayMenu": {
-				"title": "عرض كـ",
-				"tooltip": "اختيار العرض",
-				"optionGallery": "معرض",
-				"optionList": "قائمة"
-			},
-			"showAll": "الكل"
-		},
-		"Works": {
-			"headerTitle": "الأعمال",
-			"intro": "هذه هي أعمال الشخص أو الجماعة أو المنظمة، التي هي موضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات حول العمل من خلال النقر عليه، يعمل فقط مع الصور، اعرض كقائمة لرؤية جميع الأعمال ذات الصلة، التي تم تخزينها.",
-			"sortMenuTitle": "الترتيب",
-			"sortMenuTooltip": "فرز العناصر",
-			"sortMenuOptionTime": "حسب الوقت",
-			"sortMenuOptionAlpha": "أبجديا",
-			"sortMenuOptionDist": "حسب المسافة",
-			"sortMenuOptionRev": "عكس النوع",
-			"sortMenuOptionClear": "مسح الفرز",
-			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
-			"facetMenuTooltip": "أعمال الوجه بمعايير مختلفة",
-			"facetMenuOptionType": "النوع",
-			"facetMenuOptionColl": "المجموعة",
-			"facetMenuOptionCity": "الموقع",
-			"displayMenuTitle": "العرض",
-			"displayMenuTooltip": "اختيار العرض",
-			"displayMenuOptionGallery": "معرض",
-			"displayMenuOptionList": "قائمة",
-			"showAll": "الكل"
-		},
-		"People": {
-			"headerTitle": "أشخاص مرتبطون بالموضوع",
-			"intro": "هؤلاء هم الأشخاص الذين يرتبطون بموضوع هذه الصفحة، يمكنك إدخال صفحة تجمع كل المعلومات عن الشخص من خلال النقر عليها، يمكنك عرض الأشخاص أيضا كقائمة.",
-			"sortMenuTitle": "ترتيب",
-			"sortMenuTooltip": "تغيير ترتيب الفرز",
-			"sortMenuOptionBirth": "حسب تاريخ الميلاد",
-			"sortMenuOptionDeath": "حسب تاريخ الوفاة",
-			"sortMenuOptionName": "حسب الاسم",
-			"sortMenuOptionFirst": "حسب الاسم الأول",
-			"sortMenuOptionLast": "حسب الاسم الأخير",
-			"sortMenuOptionRev": "عكس الترتيب",
-			"sortMenuOptionClear": "مسح الفرز",
-			"facetMenuTitle": "يعتبر جانبا من الجوانب بواسطة",
-			"facetMenuTooltip": "وجوه الناس من جوانب مختلفة",
-			"facetMenuOptionProfession": "المهنة",
-			"facetMenuOptionCountry": "البلد",
-			"facetMenuOptionCity": "الجنس"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "شرح",
+			"addCaption": "إضافة شرح",
+			"description": "الوصف",
+			"addDescription": "أضف وصفا",
+			"creator": "المنشئ",
+			"creatorUnknown": "غير معروف",
+			"addCreator": "إضافة المنشئ",
+			"removeCreator": "إزالة المنشئ",
+			"dateDepicted": "تاريخ التصوير",
+			"addDateDepicted": "إضافة تاريخ المصور",
+			"removeDateDepicted": "إزالة تاريخ التصوير",
+			"dateCreated": "تاريخ الإنشاء",
+			"addDateCreated": "إضافة تاريخ الإنشاء",
+			"removeDateCreated": "إزالة تاريخ الإنشاء",
+			"publisher": "الناشر",
+			"addPublisher": "إضافة الناشر",
+			"removePublisher": "إزالة الناشر",
+			"format": "الصيغة",
+			"addFormat": "إضافة الصيغة",
+			"removeFormat": "إزالة الصيغة",
+			"technique": "تقنية",
+			"addTechnique": "إضافة تقنية",
+			"removeTechnique": "إزالة التقنية",
+			"depicted": "الصورة تصور",
+			"genre": "النوع",
+			"addGenre": "أضف النوع",
+			"removeGenre": "إزالة النوع",
+			"depicts": "الصورة تصور",
+			"addTopic": "أضِف موضوعاً",
+			"removeTopic": "إزالة الموضوع",
+			"location": "الموقع",
+			"locationMap": "الموقع على الخريطة",
+			"addLocation": "أضف الموقع",
+			"removeLocation": "إزالة الموقع",
+			"address": "عنوان الشارع",
+			"addAddress": "أضف عنوان الشارع",
+			"removeAddress": "إزالة عنوان الشارع",
+			"depictedPeople": "الناس المصورون",
+			"addPerson": "إضافة شخص",
+			"removePerson": "أزل الشخص",
+			"event": "الحدث",
+			"addEvent": "إضافة حدث",
+			"removeEvent": "إزالة الحدث",
+			"institution": "المؤسسة",
+			"collection": "المجموعة",
+			"addCollection": "إضافة مجموعة",
+			"inventoryNumber": "رقم المخزون",
+			"inscriptions": "النقوش",
+			"measurements": "قياسات",
+			"copyright": "حقوق النشر",
+			"license": "رخصة حقوق النسخ",
+			"work": "العمل ممثل في الصورة",
+			"photograph": "الصورة",
+			"image": "صورة",
+			"photographer": "المصور",
+			"addPhotographData": "إضافة معلومات حول الصورة",
+			"copyrightNotePD": "تم ترخيص الصورة بـ$1، ولكن استنادا إلى البيانات الوصفية، الصورة في الملكية العامة.",
+			"copyrightNoteSame": "يتم ترخيص الصورة نفسها بشكل أكثر صراحة بـ $1، وبالتالي فهي تنطبق على هذه الصورة أيضا.",
+			"creditline": "الإشادة",
+			"attribution": "نسب العمل لمُؤَلِّفه",
+			"digitalCopy": "نسخة رقمية",
+			"publishingPlatform": "منصة النشر",
+			"platformId": "المعرف",
+			"provider": "مزود المحتوى",
+			"imageInfoPage": "صفحة معلومات الصورة",
+			"imageDimensions": "أبعاد الصورة",
+			"fileSize": "حجم الملف",
+			"fileFormat": "صيغة الملف",
+			"remove": "إزالة",
+			"moveTo": "الانتقال إلى حقل آخر",
+			"addData": "إضافة بيانات",
+			"uploader": "الرافع",
+			"rotate": "تدوير"
+		},
+		"imageActions": {
+			"rotateImage": "تدوير الصورة",
+			"clockwise": "باتجاه عقارب الساعة",
+			"counterclockwise": "عكس عقارب الساعه",
+			"flip": "قلب",
+			"horizontal": "أفقي",
+			"vertical": "رأسي"
+		},
+		"closeViewer": "إغلاق العارض"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -262,7 +490,7 @@
 	"openlayersplugin": {
 		"WikimapsWarperLayer": {
 			"attribution1PrefixText": "بالنسبة لخريطة الأساس التاريخية، راجع الإحالات وحقوق الطبع والنشر من",
-			"attribution2PrefixText": "تم تصحيح الخريطة من"
+			"attribution2PrefixText": "الخريطة المصححة من"
 		}
 	},
 	"menu": {
@@ -270,16 +498,55 @@
 			"transparencyLabel": "شفافية الخريطة الأساسية التاريخية:"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "فرز المواضيع",
+			"tooltip": "فرز المواضيع",
+			"optionTime": "حسب الوقت",
+			"optionStart": "حسب وقت البدء",
+			"optionEnd": "حسب وقت النهاية",
+			"optionTitle": "بواسطة عنوان",
+			"optionCause": "بسبب",
+			"optionPartof": "حسب هذا جزء من",
+			"optionSuperclass": "هذه الفئة هي فئة فرعية ل",
+			"optionAlpha": "أبجديا",
+			"optionTitleAlpha": "حسب العنوان أبجديا",
+			"optionCreatorAlpha": "حسب المنشئ أبجديا",
+			"optionDist": "حسب المسافة",
+			"optionRev": "عكس الترتيب",
+			"optionClear": "مسح الفرز"
+		},
+		"facetMenu": {
+			"title": "الوجه بواسطة",
+			"tooltip": "مواضيع الوجه حسب معايير مختلفة",
+			"optionType": "النوع",
+			"optionColl": "المنشئ",
+			"optionCity": "الموقع"
+		},
+		"displayMenu": {
+			"title": "عرض كـ",
+			"tooltip": "اختيار العرض",
+			"optionGallery": "معرض",
+			"optionList": "قائمة"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "ويكي الوثائق",
 		"ok": "موافق",
 		"cancel": "إلغاء",
 		"helpText": "مساعدة",
+		"expand": "توسيع هذا القسم",
+		"collapse": "طي هذا القسم",
 		"menus": {
 			"actionMenuTitle": "أفعال",
 			"actionMenuTooltip": "أفعال",
 			"languageMenuTitle": "اختر اللغة",
+			"languageMenuTooltip": "اختر لغتك",
 			"myLanguagesItem": "لغتي",
-			"languageMenuTranslate": "ترجمة هذه المقالة"
+			"languageMenuTranslate": "ترجمة هذه المقالة إلى العربية"
+		},
+		"languageMenu": {
+			"TranslateUI": "ترجم للغتك"
 		},
 		"languages": {
 			"fi": "الفنلندية",
@@ -287,5 +554,10 @@
 			"sv": "السويدية",
 			"es": "الإسبانية"
 		}
+	},
+	"Banner": {
+		"WLM": "الويكي تهوى المعالم $1",
+		"WLMText": "قم بتصوير موقع التراث الثقافي هذا وشارك في مسابقة التصوير $2!",
+		"WLMButton": "رفع صورة"
 	}
 }
