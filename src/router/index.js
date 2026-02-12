@@ -13,6 +13,7 @@ import 'ol/ol.css'
 import MainPage from '@/components/MainPage'
 import LandingPage from '@/components/landing_page/LandingPage'
 import devpage from '@/components/landing_page/Developer'
+import LoginSuccess from '@/components/authentication/LoginSuccess'
 
 Vue.use(Router)
 Vue.use(VueMasonryPlugin)
@@ -36,6 +37,11 @@ export default new Router({
       path: '/',
       name: 'LandingPage',
       component: LandingPage
+    },
+    {
+      path: '/logged-in',
+      name: 'LoginSuccess',
+      component: LoginSuccess
     },
     {
       path: '/wikipedia/:language/:topic',

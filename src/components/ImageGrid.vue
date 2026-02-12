@@ -18,9 +18,9 @@
           <div class="thumb-credit">{{ getCredits(item) }}</div>
           <img class="icon" :src="getIcon(item)" align="right">
         </div>
-        <div class="thumb-image-header">
-          <div class="left-align">
-            <!-- <ImagesActionMenu v-bind:element="item"></ImagesActionMenu> -->
+        <div class="thumb-image-header"> 
+          <div v-if="item.source == 'Finna'" class="left-align" @click.stop>
+            <ImagesActionMenu v-bind:element="item"></ImagesActionMenu>
             <div
               v-if="item.geoLocations != undefined && item.geoLocations.length > 0"
               class="header-item"
@@ -36,7 +36,7 @@
                 <i class="wikiglyph wikiglyph-new-window thumb-image-glyph"></i>
               </a>
             </div>
-            <!--ImagesRemoveMenu></ImagesRemoveMenu-->
+            <!-- <ImagesRemoveMenu></ImagesRemoveMenu> -->
           </div>
         </div>
       </div>
@@ -48,8 +48,8 @@
 
 <script>
 import ImageViewer from "@/components/image_viewer/ImageViewer";
-// import ImagesActionMenu from '@/components/menu/ImagesActionMenu'
-// import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu'
+import ImagesActionMenu from '@/components/menu/ImagesActionMenu';
+// import ImagesRemoveMenu from '@/components/menu/ImagesRemoveMenu';
 
 export default {
   name: "ImageGrid",
@@ -62,8 +62,8 @@ export default {
     }
   },
   components: {
-    ImageViewer
-    // ImagesActionMenu,
+    ImageViewer,
+    ImagesActionMenu,
     // ImagesRemoveMenu,
   },
   methods: {

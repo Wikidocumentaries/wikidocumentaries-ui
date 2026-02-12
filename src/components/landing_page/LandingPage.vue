@@ -1,6 +1,7 @@
 <template>
   <div class="landing-page">
     <MainToolBar></MainToolBar>
+
     <div class="cover">
       <!-- <img v-bind:src="photoOfTheDay" class="cover-image"> -->
       <!-- https://upload.wikimedia.org/wikipedia/commons/a/ad/Kulutusosuuskuntien_Keskusliiton_kokoelma_D1974_11333A_%2830804608561%29.jpg -->
@@ -201,6 +202,7 @@
 import TopicSearchBox from "@/components/TopicSearchBox";
 import MainToolBar from "@/components/menu/MainToolbar";
 
+
 export default {
   name: "LandingPage",
   props: {},
@@ -226,8 +228,8 @@ export default {
   components: {
     TopicSearchBox,
     // WikimapsWarperLayer,
-    MainToolBar
-  },
+    MainToolBar,
+},
   mounted: function() {
     this.$store.commit("resetState");
     // this.$store.commit('setSelectedBasemap', this.mapOfTheDay);
