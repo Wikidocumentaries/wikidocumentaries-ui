@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ella Lachow",
 			"Malaalaa"
 		]
 	},
 	"LandingPage": {
 		"search": "Koyya",
-		"searchInputPlaceHolder": "Huuphe yohuwa koyya woykko ooratta medhdha",
-		"searchInputSearchOnly": "Huuphe yohuwa koyya"
+		"searchInputPlaceHolder": "Huuphe yohuwa demma woykko ooratta medhdha",
+		"searchInputSearchOnly": "Huuphe yohuwa demma"
 	},
 	"topic_page": {
 		"Depicted": {
@@ -96,7 +97,7 @@
 			"sortMenuOptionFirst": "Xeessa sunttan",
 			"sortMenuOptionLast": "Wurssetta sunttan",
 			"sortMenuOptionClear": "Maarayuwa qucca",
-			"facetMenuOptionProfession": "Oosuwa",
+			"facetMenuOptionProfession": "Hiillaa",
 			"facetMenuOptionCountry": "Biittaa",
 			"facetMenuOptionCity": "Mattumaa"
 		},
@@ -176,10 +177,10 @@
 		"cancel": "Agga",
 		"helpText": "Maaduwa",
 		"expand": "Ha shaahuwa aassa",
-		"collapse": "Shaahuwa shiishsha",
+		"collapse": "Ha shaahuwa shiishsha",
 		"menus": {
-			"actionMenuTitle": "Oosota",
-			"actionMenuTooltip": "Oosota",
+			"actionMenuTitle": "Tanggota",
+			"actionMenuTooltip": "Tanggota",
 			"languageMenuTitle": "Doonaa doora",
 			"languageMenuTooltip": "Ne doonaa doora",
 			"myLanguagesItem": "Ta doonata",
