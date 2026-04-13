@@ -256,9 +256,9 @@
 			"intro": "Deze afbeeldingen zijn afkomstig van verschillende bronnen en geven het onderwerp mogelijk niet altijd nauwkeurig weer. U kunt de oorspronkelijke afbeelding bekijken en de afbeelding op een kaart plaatsen als deze een locatiepin heeft.",
 			"actionsMenu": {
 				"menuTitle": "Afbeeldingen weergeven of rangschikken",
-				"tooltip": "Toon of rangschik afbeeldingen",
-				"showImagesOnMapMenuText": "Toon alle afbeeldingen op de kaart",
-				"showImagesOnTimelineMenuText": "Toon alle afbeeldingen op de tijdlijn",
+				"tooltip": "Afbeeldingen weergeven of rangschikken",
+				"showImagesOnMapMenuText": "Alle afbeeldingen op de kaart weergeven",
+				"showImagesOnTimelineMenuText": "Alle afbeeldingen op de tijdlijn weergeven",
 				"selectPortraits": "Kies goede portretten van deze persoon",
 				"arrangeByTime": "Afbeeldingen op tijd rangschikken",
 				"selectWorks": "Selecteer afbeeldingen van werken"
@@ -325,7 +325,7 @@
 			"chooseHistoricalBasemapMenuText": "Historische basiskaart(en) kiezen…",
 			"hideImagesMenuText": "Afbeeldingen verbergen",
 			"chooseTimelineMapsMenuText": "Tijdlijnkaarten kiezen…",
-			"showNearbyPlacesMenuText": "Toon plaatsen in de buurt",
+			"showNearbyPlacesMenuText": "Plaatsen in de buurt weergeven",
 			"hideNearbyPlacesMenuText": "Verberg plaatsen in de buurt",
 			"extLink": {
 				"menuTooltip": "Bekijken of bewerken in OpenStreetMap"
