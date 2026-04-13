@@ -1,0 +1,384 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aca",
+			"BadDog",
+			"Kizule",
+			"Milicevic01",
+			"Zenfiric",
+			"Милан Јелисавчић"
+		]
+	},
+	"LandingPage": {
+		"search": "Претражи",
+		"searchInputPlaceHolder": "Пронађи или направи нову тему",
+		"searchInputSearchOnly": "Пронађи тему",
+		"showMore": "Прикажи више ставки",
+		"createNew": "Креирај нову ставку",
+		"titleStatus": "Статус",
+		"status": "Овај сајт је у демо фази. Многе важне могућности тренутно нису доступне и сајт се можда неће понашати као што се очекује.",
+		"moreBelow": "Прочитај више испод",
+		"more": "Детаљније",
+		"moreLink": "Прочитај више у",
+		"titleTopics": "Теме",
+		"titleMedia": "Медији",
+		"titleTools": "Алатке",
+		"titleLanguages": "Језици",
+		"titleTechnology": "Технологија",
+		"titleCreators": "Творци",
+		"titleTeam": "Тим",
+		"titleThanks": "Са специјалном захвалношћу",
+		"titlePartners": "Партнери",
+		"titleFunding": "Уз љубазну подршку од",
+		"titleBy": "Пројекат од",
+		"getInvolved": "Укључите се!",
+		"titleTranslate": "Превођење",
+		"titleContent": "Додајте Ваш садржај",
+		"facebook": "Група на Facebook-у",
+		"blog": "Блог",
+		"email": "Имејл"
+	},
+	"MainPage": {
+		"topicPageName": "Страница теме",
+		"mapSearchPageName": "Претрага мапа"
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Афилијације"
+		},
+		"Awards": {
+			"headerTitle": "Награде"
+		},
+		"BaseMapDialog": {
+			"yearAbbreviation": "г."
+		},
+		"Collection": {
+			"headerTitle": "Радови у колекцији"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "По времену",
+				"optionAlpha": "По абецеди"
+			},
+			"facetMenu": {
+				"optionType": "Тип",
+				"optionColl": "Аутор"
+			},
+			"displayMenu": {
+				"title": "Прикажи као",
+				"tooltip": "Изаберите приказ",
+				"optionGallery": "Галерија",
+				"optionList": "Списак"
+			},
+			"showAll": "Све"
+		},
+		"Depicts": {
+			"headerTitle": "Приказује"
+		},
+		"Events": {
+			"headerTitle": "Догађаји",
+			"displayMenu": {
+				"menuTitle": "Опције приказа",
+				"menuTooltip": "Опције приказа",
+				"optionShowTimeline": "Прикажи догађаје на хронологији",
+				"optionShowList": "Прикажи догађаје као списак"
+			},
+			"optionsMenu": {
+				"menuTitle": "Опције",
+				"menuTooltip": "Изаберите чињенице за приказ",
+				"optionWorks": "Прикажи радове",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Конфигурисање"
+				}
+			}
+		},
+		"Header": {
+			"titleEditText": "Измени наслов",
+			"titleApproveText": "Одобри наслов",
+			"subtitleEditText": "Измени опис",
+			"subtitleApproveText": "Одобри опис"
+		},
+		"Locations": {
+			"headerTitle": "На овој локацији",
+			"sortMenu": {
+				"title": "Сортирање локације",
+				"tooltip": "Сортирање локације",
+				"optionTime": "По времену",
+				"optionAlpha": "Азбучним редом",
+				"optionDist": "По удаљености"
+			},
+			"facetMenu": {
+				"optionType": "Врста",
+				"optionColl": "Творац",
+				"optionCity": "Локација"
+			},
+			"displayMenu": {
+				"title": "Прикажи као",
+				"tooltip": "Изаберите приказ",
+				"optionGallery": "Галерија",
+				"optionList": "Списак"
+			},
+			"showAll": "Све"
+		},
+		"Map": {
+			"headerTitle": "Локација на мапи"
+		},
+		"Parts": {
+			"headerTitle": "Делови"
+		},
+		"Partof": {
+			"headerTitle": "Део"
+		},
+		"Similar": {
+			"headerTitle": "Сличне теме"
+		},
+		"Effects": {
+			"headerTitle": "Ефекти"
+		},
+		"Instances": {
+			"headerTitle": "Инстанце ове теме"
+		},
+		"Links": {
+			"headerTitle": "Везе из овог чланка"
+		},
+		"Location": {
+			"headerTitle": "Локације"
+		},
+		"Names": {
+			"headerTitle": "Имена"
+		},
+		"People": {
+			"headerTitle": "Људи везани за тему",
+			"sortMenuTitle": "Сортирај",
+			"sortMenuOptionBirth": "По датуму рођења",
+			"sortMenuOptionDeath": "По датуму смрти",
+			"sortMenuOptionName": "По имену",
+			"sortMenuOptionFirst": "По имену",
+			"sortMenuOptionLast": "По презимену",
+			"facetMenuOptionProfession": "Занимање",
+			"facetMenuOptionCountry": "Земља",
+			"facetMenuOptionCity": "Пол"
+		},
+		"Subclasses": {
+			"headerTitle": "Подкласе ове теме"
+		},
+		"TopicImages": {
+			"headerTitle": "Слике из архива",
+			"facetMenu": {
+				"time": "време",
+				"map": "мапа",
+				"people": "људи",
+				"places": "места",
+				"topics": "теме",
+				"form": "облик",
+				"imageSize": "величина слике",
+				"large": "велика",
+				"medium": "средња",
+				"small": "мала",
+				"type": "врста медија",
+				"creator": "творац",
+				"platform": "платформа",
+				"source": "извор"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Радње",
+				"menuTooltip": "Радње",
+				"showImageText": "Прикажои слику"
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "Хронологија"
+		},
+		"Works": {
+			"headerTitle": "Радови",
+			"sortMenuTitle": "Сортирај",
+			"sortMenuTooltip": "Сортирај ставке",
+			"sortMenuOptionTime": "По времену",
+			"sortMenuOptionAlpha": "Азбучно",
+			"sortMenuOptionDist": "По удаљености",
+			"facetMenuOptionType": "Врста",
+			"facetMenuOptionColl": "Збирка",
+			"facetMenuOptionCity": "Локација",
+			"displayMenuTitle": "Прикажи као",
+			"displayMenuTooltip": "Изаберите приказ",
+			"displayMenuOptionGallery": "Галерија",
+			"displayMenuOptionList": "Списак",
+			"displayMenuOptionMap": "Мапа",
+			"showAll": "Све"
+		},
+		"Wikidata": {
+			"headerTitle": "Чињенице",
+			"extLink": {
+				"linkTitleWD": "Погледај или измени на Википодацима"
+			},
+			"noTopicFoundText": "Тема није пронађена"
+		},
+		"Wikipedia": {
+			"headerTitle": "Чланак",
+			"extLink": {
+				"linkTitleWP": "Прочитајте или уредите на Википедији"
+			},
+			"addLink": {
+				"linkTitleWP": "Направите чланак на Википедији"
+			},
+			"languageMenu": {
+				"menuTitle": "Прочитајте чланак на другом језику",
+				"translateArticleText": "Преведите чланак на српски",
+				"otherLanguagestext": "Други језици"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Натпис",
+			"addCaption": "Додај натпис",
+			"description": "Опис",
+			"addDescription": "Додај опис",
+			"creator": "Аутор",
+			"creatorUnknown": "Непознато",
+			"addCreator": "Додај креатора",
+			"removeCreator": "Уклони креатора",
+			"dateDepicted": "Приказан датум",
+			"addDateDepicted": "Додај датум приказа",
+			"removeDateDepicted": "Уклони датум приказа",
+			"dateCreated": "Датум прављења",
+			"addDateCreated": "Додај датум прављења",
+			"removeDateCreated": "Уклони датум прављења",
+			"publisher": "Издавач",
+			"addPublisher": "Додај издавача",
+			"removePublisher": "Уклони издавача",
+			"format": "Формат",
+			"addFormat": "Додај формат",
+			"removeFormat": "Уклони формат",
+			"technique": "Техника",
+			"addTechnique": "Додај технику",
+			"removeTechnique": "Уклони технику",
+			"depicted": "Прикази слике",
+			"genre": "Жанр",
+			"addGenre": "Додај жанр",
+			"removeGenre": "Уклони жанр",
+			"depicts": "Прикази слике",
+			"addTopic": "Додај тему",
+			"removeTopic": "Уклони тему",
+			"location": "Локација",
+			"locationMap": "Локација на мапи",
+			"addLocation": "Додај локацију",
+			"removeLocation": "Уклони локацију",
+			"address": "Улица и број",
+			"addAddress": "Додај улицу и број",
+			"removeAddress": "Уклони улицу и број",
+			"depictedPeople": "Приказани људи",
+			"addPerson": "Додај особу",
+			"removePerson": "Уклони особу",
+			"event": "Догађај",
+			"addEvent": "Додај догађај",
+			"removeEvent": "Уклони догађај",
+			"institution": "Установа",
+			"collection": "Збирка",
+			"addCollection": "Додај колекцију",
+			"inventoryNumber": "Број инвентара",
+			"inscriptions": "Натписи",
+			"measurements": "Мерења",
+			"copyright": "Ауторско право",
+			"license": "Лиценца ауторских права",
+			"work": "Рад представљен на слици",
+			"photograph": "Форограф",
+			"image": "Слика",
+			"photographer": "Фотограф",
+			"addPhotographData": "Додај информацију о фотографу",
+			"copyrightNotePD": "Слика је лиценцирана под лиценцом $1, али на основу метаподатака, слика је у јавном власништву.",
+			"attribution": "Ауторство",
+			"digitalCopy": "Дигитална копија",
+			"publishingPlatform": "Платформа објављивања",
+			"provider": "Добављач садржаја",
+			"imageInfoPage": "Страница с информацијама о слици",
+			"imageDimensions": "Димензије слике",
+			"fileSize": "Величина датотеке",
+			"fileFormat": "Формат датотеке",
+			"remove": "Уклони",
+			"moveTo": "Премести у друго поље",
+			"addData": "Додај податке",
+			"uploader": "Отпремалац",
+			"rotate": "Ротирање"
+		},
+		"imageActions": {
+			"rotateImage": "Ротирај слику",
+			"clockwise": "удесно",
+			"counterclockwise": "улево",
+			"flip": "Окрени",
+			"horizontal": "водоравно",
+			"vertical": "усправно"
+		},
+		"closeViewer": "Затвори прегледач"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Комбиновање имена места"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Претражи историјске мапе",
+			"filterBySourceMenuText": "Филтер по извору...",
+			"filterByTimeMenuText": "Филтер на основу времена...",
+			"filterByMapMenuText": "Филтер према мапи..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Сортирање тема",
+			"tooltip": "Сортирај теме",
+			"optionTime": "По времену",
+			"optionStart": "По времену почетка",
+			"optionEnd": "По времену завршетка",
+			"optionTitle": "По наслову",
+			"optionCause": "По случају",
+			"optionPartof": "По ставци која је део",
+			"optionSuperclass": "По класи која је подкласа",
+			"optionAlpha": "По абецеди",
+			"optionTitleAlpha": "По наслову абецедно",
+			"optionCreatorAlpha": "По аутору абецедно",
+			"optionDist": "По удаљености",
+			"optionRev": "Обрнуто соритрање",
+			"optionClear": "Јасно сортирање"
+		},
+		"facetMenu": {
+			"optionType": "Тип",
+			"optionColl": "Аутор",
+			"optionCity": "Локација"
+		},
+		"displayMenu": {
+			"title": "Прикажи као",
+			"tooltip": "Одабери приказ",
+			"optionGallery": "Галерија",
+			"optionList": "Списак"
+		}
+	},
+	"general": {
+		"ok": "У реду",
+		"cancel": "Откажи",
+		"helpText": "Помоћ",
+		"expand": "Прошири овај одељак",
+		"collapse": "Скупи овај одељак",
+		"menus": {
+			"actionMenuTitle": "Радње",
+			"actionMenuTooltip": "Радње",
+			"languageMenuTitle": "Изаберите језик",
+			"languageMenuTooltip": "Изаберите језик",
+			"myLanguagesItem": "Моји језици",
+			"languageMenuTranslate": "Преведи чланак на српски"
+		},
+		"languageMenu": {
+			"TranslateUI": "Преведите на српски"
+		},
+		"languages": {
+			"fi": "фински",
+			"en": "енглески",
+			"sv": "шведски",
+			"es": "шпански"
+		}
+	},
+	"Banner": {
+		"WLMButton": "Отпреми слику"
+	}
+}
