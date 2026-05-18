@@ -1,31 +1,35 @@
 <template>
-    <div :class="( wikidocumentaries.headerImageURL ? 'header' : 'header-compact')">
-        <img :src="coatOfArms" class="header-coa" />
-        <img :src="wikidocumentaries.headerImageURL" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
-        <!--<img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Kaisaniemi_Freemason%27s-Grave.JPG" class="header-image"/> -->
+    <div :class="( headerImage ? 'header' : 'header-compact')">
+        <img :src="headerImage" class="header-image" :class="( isHumanTopic ? 'header-human' : 'header-nonhuman')"/>
         <div class="header-contents">
-        <div id="shade" :class="(wikidocumentaries.headerImageURL ? 'bottomshade' : 'noshade')">
-            <div class="titlebox">
-                <div class="titlecont">
-                    <div class="title">{{ wikidocumentaries.title }}</div>
-                    <!--span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-check wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleApproveText') }}</span>
+            <div id="marks" class="header-marks">
+                <img :src="logoImage" class="header-logo" />
+                <img :src="signature" class="header-neg" />
+                <img :src="sailEmblem" class="header-logo" />
+                <a :href="getCoaURL"><img :src="coatOfArms" class="header-coa" /></a>
+            </div>
+            <div id="shade" :class="(headerImage ? 'bottomshade' : 'noshade')">
+                <div class="titlebox">
+                    <div class="titlecont">
+                        <div class="title">{{ wikidocumentaries.title }}</div>
+                        <!--span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-check wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleApproveText') }}</span>
+                        </div>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-edit wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
+                        </div-->
                     </div>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-edit wikiglyph-titlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.titleEditText') }}</span>
-                    </div-->
-                </div>
-                <div class="subtitlecont">
-                    <div class="subtitle">{{ wikidocumentaries.description }}</div>
-                    <!--span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-check wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleApproveText') }}</span>
+                    <div class="subtitlecont">
+                        <div class="subtitle">{{ wikidocumentaries.description }}</div>
+                        <!--span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-check wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleApproveText') }}</span>
+                        </div>
+                        <div class="buttons">
+                            <i class="wikiglyph wikiglyph-edit wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
+                        </div-->
                     </div>
-                    <div class="buttons">
-                        <i class="wikiglyph wikiglyph-edit wikiglyph-subtitlebutton"></i><span class="tooltip">{{ $t('topic_page.Header.subtitleEditText') }}</span>
-                    </div-->
-                </div>
                 </div>
             </div>
         </div>
@@ -47,20 +51,89 @@ export default {
             return this.$store.state.wikidocumentaries;
         },
         isHumanTopic () {
-            if (this.$store.state.wikidocumentaries.wikidata != undefined && this.$store.state.wikidocumentaries.wikidata.instance_of.id == 'Q5') {
+            let typeid = this.$store.state.wikidocumentaries.wikidata.instance_of.id;
+            let conditionsArray = ['Q5', 'Q3305213'];
+            if (this.$store.state.wikidocumentaries.wikidata != undefined && conditionsArray.includes(typeid) === true) {
                 return true;
             }
             else {
                 return false;
             }
         },
+        headerImage () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let imageid;
+            let imageurl;
+            for (var index in statements) {
+                if (statements[index].id == 'P18') {
+                    imageid = statements[index].values[0].value;
+                }
+            }
+            if (imageid) {
+                imageid = encodeURIComponent(imageid);
+                imageurl = "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+imageid;
+            } else {
+                imageurl = this.wikidocumentaries.headerImageURL;
+            }
+            return imageurl;
+        },
         coatOfArms () {
-            const statements = this.$store.state.wikidocumentaries.wikidata.statements
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
             let coaid;
             for (var index in statements) {
                 if (statements[index].id == 'P94') {
                     coaid = statements[index].values[0].value;
                     return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+coaid;
+                }
+            }
+        },
+        getCoaURL() {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let coaartid;
+            for (var index in statements) {
+                if (statements[index].id == 'P237') {
+                    coaartid = statements[index].values[0].id;
+                    return "/" + coaartid + "?language=" + this.$i18n.locale;
+                }
+            }
+        },
+        logoImage () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let logoImg;
+            for (var index in statements) {
+                if (statements[index].id == 'P154') {
+                    logoImg = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+logoImg;
+                }
+            }
+        },
+        signature () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let signature;
+            for (var index in statements) {
+                if (statements[index].id == 'P109') {
+                    signature = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+signature;
+                }
+            }
+        },
+        sailEmblem () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let sailEmblem;
+            for (var index in statements) {
+                if (statements[index].id == 'P5962') {
+                    sailEmblem = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+sailEmblem;
+                }
+            }
+        },
+        seal () {
+            const statements = this.$store.state.wikidocumentaries.wikidata.statements;
+            let sealImg;
+            for (var index in statements) {
+                if (statements[index].id == 'P158') {
+                    sealImg = statements[index].values[0].value;
+                    return "https://commons.wikimedia.org/w/index.php?title=Special:Redirect/file/"+sealImg;
                 }
             }
         }
@@ -75,10 +148,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+a {
+    box-shadow: none;
+}
+
 .header {
     position:relative;
-    background: var(--main-modal-color);
-    height: 70vh;
+    background: var(--main-txt-color);
+    height: calc(100vh - 170px);
     transition: height 0.5s;
 }
 
@@ -100,39 +177,6 @@ export default {
 
 .header-human {
     object-fit: contain;
-}
-
-.header-coa {
-    position: absolute;
-    right: 0;
-    height: 35%;
-    margin: 20px;
-}
-
-.bottomshade {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.17) 50%, rgba(0, 0, 0, 0) 100%);
-    padding-top: 35px;
-}
-
-.noshade {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    padding-top: 35px;
-}
-
-.titlebox {
-    position:relative;
-    color: #fff;
-    margin: 0 20px;
-    bottom: 20px;
 }
 
 .titlecont, .subtitlecont {

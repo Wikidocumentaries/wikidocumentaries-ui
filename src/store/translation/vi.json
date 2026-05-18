@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Duongvu",
+			"Nguyễn Mạnh An"
+		]
+	},
+	"topic_page": {
+		"CV": {
+			"headerTitle": "CV"
+		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1"
+	}
+}

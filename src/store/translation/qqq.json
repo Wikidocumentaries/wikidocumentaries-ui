@@ -1,14 +1,36 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby",
 			"Abijeet Patro",
+			"Ajeje Brazorf",
+			"BaRaN6161 TURK",
+			"McDutchie",
+			"Robby",
 			"Susannaanas"
 		]
 	},
 	"LandingPage": {
 		"search": "Search button text, currently not in use\n{{Identical|Search}}",
-		"searchInputPlaceHolder": "Search input field placeholder text"
+		"searchInputPlaceHolder": "Search input field placeholder text",
+		"searchInputSearchOnly": "Placeholder text in the search box",
+		"showMore": "Text in the search pulldown",
+		"createNew": "Option in the search pulldown for creating a missing item",
+		"intro": "The subtitle of the front page",
+		"titleDescription": "Subheading in the introductory section",
+		"description": "The text under the subheading \"What is Wikidocumentaries?\" in the introductory section",
+		"titleStatus": "Subheading in the introductory section",
+		"status": "The text under the subheading \"Status\" in the introductory section",
+		"titleTopics": "Subheading in the subsection \"Status\" in the introductory section\n\n{{Identical|Topic}}",
+		"statusTopics": "The text under the subheading \"Topics\" in the subsection \"Status\" in the introductory section",
+		"titleMedia": "Subheading in the subsection \"Status\" in the introductory section",
+		"titleTools": "Subheading in the subsection \"Status\" in the introductory section\n\n{{Identical|Tool}}",
+		"statusTools": "Introductory text about tools of the site in the site main page.",
+		"titleLanguages": "{{Identical|Language}}",
+		"titleTechnology": "Subheading in the subsection \"Status\" in the introductory section",
+		"titleCreators": "The creators of the project",
+		"titleTeam": "Production team",
+		"titleTranslate": "{{Identical|Translate}}",
+		"email": "{{Identical|Email}}"
 	},
 	"MainPage": {
 		"topicPageName": "Topic tab name, currently not in use",
@@ -26,11 +48,106 @@
 			"chooseMapHelpNote": "Help text for the base map modal",
 			"yearAbbreviation": "Abbreviation for year in the base maps modal"
 		},
+		"Depicted": {
+			"headerTitle": "Title of the 'Depicted in' section",
+			"intro": "Introductory text to the 'Depicted in' section",
+			"sortMenu": {
+				"title": "Menu title of the 'Sort works' menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"tooltip": "Menu tooltip of the 'Sort works' menu of the 'Depicted in' section",
+				"optionTime": "Menu option to sort by time in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"optionAlpha": "Menu option to sort alphabetically in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"optionClear": "Menu option clear sort order in the Sort menu of the 'Depicted in' section"
+			},
+			"facetMenu": {
+				"title": "“Facet” is a verb. Menu title of the Facet menu of the “Depicted in” section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.Depicted.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-topic page.Depicted.facetMenu.optionColl}}",
+				"tooltip": "Menu tooltip of the Facet menu of the 'Depicted in' section",
+				"optionType": "Menu option to facet by item type in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound\n\n{{Identical|Type}}",
+				"optionColl": "Menu option to facet by creator in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound"
+			},
+			"displayMenu": {
+				"title": "Menu title of the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"tooltip": "Menu tooltip of the 'Display as' menu of the 'Depicted in' section",
+				"optionGallery": "Menu option to display as gallery in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound",
+				"optionList": "Menu option to display as list in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound\n\n{{Identical|List}}"
+			},
+			"showAll": "Generic menu option to display all in the 'Depicted in' section\n{{Identical|All}}"
+		},
+		"Events": {
+			"headerTitle": "Events section header title",
+			"displayMenu": {
+				"menuTitle": "Display options menu title in the Events section",
+				"menuTooltip": "Display menu tooltip in the Events section",
+				"optionShowTimeline": "Display menu option to display as timeline in the Events section",
+				"optionShowList": "Display menu option in the Events section to display as a list"
+			},
+			"optionsMenu": {
+				"menuTitle": "Options menu title in the Events section\n{{Identical|Options}}",
+				"menuTooltip": "Options menu tooltip in the Events section",
+				"optionWorks": "Menu option to Show works as events in the Options menu in the Events section",
+				"optionRelatedPeople": "Menu option to Show events of related people in the Options menu in the Events section",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Submenu title for the Show events of related people option in the Options menu in the Events section\n{{Identical|Configure}}"
+				},
+				"optionRelatedTopics": "Menu option to Show events for related topics in the Options menu in the Events section"
+			}
+		},
 		"Header": {
 			"titleEditText": "Help text for the main title edit field",
 			"titleApproveText": "Help text for approving the main title",
 			"subtitleEditText": "Help text for editing the main description",
 			"subtitleApproveText": "Help text for approving the main description"
+		},
+		"Locations": {
+			"headerTitle": "Header title in the Locations section",
+			"intro": "Introductory text in the Locations section",
+			"sortMenu": {
+				"title": "Sort menu title in the Location section",
+				"tooltip": "Sort menu tooltip in the Locations section",
+				"optionTime": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
+				"optionAlpha": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
+				"optionDist": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
+				"optionClear": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound"
+			},
+			"facetMenu": {
+				"title": "“Facet” is a verb. Menu title of the Facet menu in the Locations section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionColl}}\n* {{msg-wikidocumentaries|ui-topic page.Locations.facetMenu.optionCity}}",
+				"tooltip": "The Facet menu tooltip of the Locations section",
+				"optionType": "Option to facet by type of location in the Facet menu of the Locations section - The menu title and the option form a compound\n{{Identical|Type}}",
+				"optionColl": "Option to facet by creator in the Facet menu of the Locations section - The menu title and the option form a compound",
+				"optionCity": "Option to facet by location in the Facet menu of the Locations section - The menu title and the option form a compound"
+			},
+			"displayMenu": {
+				"title": "Menu title of the 'Display as' menu of the Locations section - The menu title and the option form a compound",
+				"tooltip": "Menu tooltip of the 'Display as' menu of the Locations section",
+				"optionGallery": "Menu option to display as gallery of the 'Display as' menu of the Locations section - The menu title and the option form a compound",
+				"optionList": "Menu option to display as list of the 'Display as' menu of the Locations section - The menu title and the option form a compound"
+			},
+			"showAll": "{{Identical|All}}"
+		},
+		"Links": {
+			"headerTitle": "Title for a section listing links from the current Wikipedia article."
+		},
+		"Names": {
+			"headerTitle": "{{identical|Name}}"
+		},
+		"People": {
+			"headerTitle": "Main title of the People section",
+			"intro": "Introductory text of the People section",
+			"sortMenuTitle": "Menu title of the sort menu\n{{Identical|Sort}}",
+			"sortMenuTooltip": "Tooltip of the sort menu",
+			"sortMenuOptionBirth": "Menu item for sorting by birth date",
+			"sortMenuOptionDeath": "Menu item for sorting by death date",
+			"sortMenuOptionName": "Option to sort by name in the Sort menu of the People section",
+			"sortMenuOptionFirst": "Menu item for sorting by first name",
+			"sortMenuOptionLast": "Menu item for sorting by last name",
+			"sortMenuOptionClear": "Menu item for clearing the current sort order",
+			"facetMenuTitle": "“Facet” is a verb. Menu title of the Facet menu in the People component. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionProfession}}\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionCountry}}\n* {{msg-wikidocumentaries|ui-topic page.People.facetMenuOptionCity}}",
+			"facetMenuTooltip": "Menu tooltip of the Facet menu in the People section",
+			"facetMenuOptionProfession": "Menu item for faceting by profession",
+			"facetMenuOptionCountry": "Menu item for faceting by country",
+			"facetMenuOptionCity": "Menu item for faceting by gender"
+		},
+		"Seasons": {
+			"headerTitle": "Seasons in team games"
 		},
 		"TopicImages": {
 			"headerTitle": "Main title for the Images section",
@@ -42,16 +159,16 @@
 				"showImagesOnTimelineMenuText": "Menu item for showing images on the timeline",
 				"selectPortraits": "Menu item in the Actions menu in the Images section",
 				"arrangeByTime": "Menu item for arranging images by time",
-				"selectWorks": "Menu item in the Actions menu in the Images section"
+				"selectWorks": "Menu item in the Actions menu for the Images section"
 			},
 			"facetMenu": {
-				"menuTitle": "Menu title of the Facet menu in the Images section - the title and the option form a compound",
+				"menuTitle": "“Facet” is a verb. Menu title of the Facet menu in the Images section. The menu title and the option form a compound with:\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.time}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.map}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.people}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.places}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.topics}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.form}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.imageSize}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.large}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.medium}}\n** {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.small}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.type}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.creator}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.platform}}\n* {{msg-wikidocumentaries|ui-topic page.TopicImages.facetMenu.source}}",
 				"menuTooltip": "Menu tooltip of the Facet menu in the Images section",
 				"time": "Menu option in the Facet menu in the Images section to facet by time - the title and the option form a compound\n{{Identical|Time}}",
-				"map": "Option Map in the Faceting menu",
+				"map": "Option Map in the Faceting menu\n\n{{Identical|Map}}",
 				"people": "Menu option in the Facet menu in the Images section to facet by people - the title and the option form a compound",
 				"places": "Option Places inthe Faceting menu",
-				"topics": "Option Topics in the Faceting menu",
+				"topics": "Option Topics in the Faceting menu\n\n{{Identical|Topic}}",
 				"form": "Menu option in the Facet menu in the Images section to facet by image form - the title and the option form a compound",
 				"imageSize": "Menu option in the Facet menu in the Images section to facet by image size - the title and the option form a compound",
 				"large": "Option Large in the Image size option in the Faceting menu",
@@ -65,7 +182,7 @@
 				"clear": "Option in the Facet menu in the Images section to clear the choices"
 			},
 			"imagesActionMenu": {
-				"menuTitle": "Menu title for the Images Actions menu",
+				"menuTitle": "Menu title for the Images Actions menu\n\n{{Identical|Action}}",
 				"menuTooltip": "Tooltip text for the Actions menu",
 				"doGeolocatingText": "Menu item for Geolocating",
 				"showImageText": "Menu item for showing the image",
@@ -119,24 +236,26 @@
 			"showEventsOnTimelineMenuText": "Menu item for showing events in the Timeline section",
 			"centuryText": "Abbreviation for showing the Century in the Timeline section"
 		},
-		"Events": {
-			"headerTitle": "Events section header title",
-			"displayMenu": {
-				"menuTitle": "Display options menu title in the Events section",
-				"menuTooltip": "Display menu tooltip in the Events section",
-				"optionShowTimeline": "Display menu option to display as timeline in the Events section",
-				"optionShowList": "Display menu option in the Events section to display as a list"
-			},
-			"optionsMenu": {
-				"menuTitle": "Options menu title in the Events section",
-				"menuTooltip": "Options menu tooltip in the Events section",
-				"optionWorks": "Menu option to Show works as events in the Options menu in the Events section",
-				"optionRelatedPeople": "Menu option to Show events of related people in the Options menu in the Events section",
-				"subRelatedPeopleConf": {
-					"menuTitle": "Submenu title for the Show events of related people option in the Options menu in the Events section"
-				},
-				"optionRelatedTopics": "Menu option to Show events for related topics in the Options menu in the Events section"
-			}
+		"Works": {
+			"headerTitle": "Main title of the Works section",
+			"intro": "Introductory text of the Works section",
+			"sortMenuTitle": "Menu title of the Sort menu\n{{Identical|Sort}}",
+			"sortMenuTooltip": "Tooltip of the Sort menu",
+			"sortMenuOptionTime": "Menu item for sorting by time",
+			"sortMenuOptionAlpha": "Menu item for sorting alphabetically",
+			"sortMenuOptionDist": "Menu item for sorting by distance",
+			"sortMenuOptionClear": "Menu item for clearing the current sort order",
+			"facetMenuTitle": "Menu title of the Facet menu in the Works component",
+			"facetMenuTooltip": "Menu tooltip of the Facet menu in the Works section",
+			"facetMenuOptionType": "Menu item for faceting by type\n\n{{Identical|Type}}",
+			"facetMenuOptionColl": "Menu item for faceting by collection\n{{Identical|Collection}}",
+			"facetMenuOptionCity": "Menu item for faceting by city\n{{Identical|City}}",
+			"displayMenuTitle": "Menu title of the Display menu",
+			"displayMenuTooltip": "Display menu tooltip in the Works section",
+			"displayMenuOptionGallery": "Menu option for displaying as gallery",
+			"displayMenuOptionList": "Menu option for displaying as list\n{{Identical|List}}",
+			"displayMenuOptionMap": "{{identical|Map}}",
+			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
 		},
 		"Wikidata": {
 			"headerTitle": "Main title in the Data section\n{{Identical|Fact}}",
@@ -146,135 +265,35 @@
 			"noTopicFoundText": "Error message for content not found in the Data section"
 		},
 		"Wikipedia": {
-			"headerTitle": "Main title for the Article section\n{{Identical|Article}}",
-			"missingArticle": "Error message for a missing article in the Article section",
+			"headerTitle": "Main title for the Article section (Wikipedia/encyclopedic article)\n{{Identical|Article}}",
+			"missingArticle": "Error message for a missing article in the Article section (Wikipedia/encyclopedic article)",
 			"missingArticleMissing": "General message about a missing article",
-			"missingArticleChoose": "Extended message about a missing article, prompt to read another language article.",
+			"missingArticleChoose": "Extended message about a missing article, prompt to read another language article. (Wikipedia/encyclopedic article)",
 			"missingArticleCreate": "Extended message about a missing article, prompt to create a new article.",
-			"missingArticleFallback": "Notice text in the Article section explaining the article shown is in a fallback language",
-			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article.",
-			"missingArticleAuto": "Notice text in the Article section explaining the article shown is automatically generated",
+			"missingArticleFallback": "Notice text in the Article section explaining the article shown is in a fallback language (Wikipedia/encyclopedic article)",
+			"missingArticleTranslate": "Extended message about a missing article, prompt to translate the article. Use the name of your language in the message. (Wikipedia/encyclopedic article)",
+			"missingArticleAuto": "Notice text in the Article section explaining the article shown is automatically generated (Wikipedia/encyclopedic article)",
 			"extLink": {
 				"linkTitleWP": "Tooltip message for viewing an article in the Article section"
 			},
 			"addLink": {
-				"linkTitleWP": "Tooltip message for creating an article in the Article section"
+				"linkTitleWP": "Tooltip message for creating an article in the Article section (Wikipedia/encyclopedic article)"
 			},
 			"languageMenu": {
 				"menuTitle": "Menu title for the Article Language menu",
-				"translateArticleText": "Menu item for translating the article in the Article Language menu",
+				"translateArticleText": "Menu item for translating the article in the Article Language menu. Replace \"your language\" with the name of your language. (article = Wikipedia/encyclopedic article)",
 				"otherLanguagestext": "Menu item for reading the article in another language in the Article Language menu"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Main title for the Gallery section",
-			"menuTitle": "Menu title for the Gallery menu\n{{Identical|Show}}",
-			"showBorn": "Menu item for people born in a place in the Gallery menu",
-			"showDied": "Menu item for people died in a place in the Gallery menu",
-			"showBuried": "Menu item for people buried in a place in the Gallery menu",
-			"showRelated": "Menu item for people related to a place in the Gallery menu",
-			"showAll": "All\n{{Identical|all}}"
-		},
-		"Locations": {
-			"headerTitle": "Header title in the Locations section",
-			"intro": "Introductory text in the Locations section",
-			"sortMenu": {
-				"title": "Sort menu title in the Location section",
-				"tooltip": "Sort menu tooltip in the Locations section",
-				"optionTime": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
-				"optionAlpha": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
-				"optionDist": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
-				"optionRev": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound",
-				"optionClear": "Menu option in the Sort menu in the Locations section - The menu title and the option form a compound"
-			},
-			"facetMenu": {
-				"title": "Menu title of the Facet menu in the Locations section - The menu title and the option form a compound",
-				"tooltip": "The Facet menu tooltip of the Locations section",
-				"optionType": "Option to facet by type of location in the Facet menu of the Locations section - The menu title and the option form a compound\n{{Identical|Type}}",
-				"optionColl": "Option to facet by creator in the Facet menu of the Locations section - The menu title and the option form a compound",
-				"optionCity": "Option to facet by location in the Facet menu of the Locations section - The menu title and the option form a compound"
-			},
-			"displayMenu": {
-				"title": "Menu title of the 'Display as' menu of the Locations section - The menu title and the option form a compound",
-				"tooltip": "Menu tooltip of the 'Display as' menu of the Locations section",
-				"optionGallery": "Menu option to display as gallery of the 'Display as' menu of the Locations section - The menu title and the option form a compound",
-				"optionList": "Menu option to display as list of the 'Display as' menu of the Locations section - The menu title and the option form a compound"
-			},
-			"showAll": "{{Identical|All}}"
-		},
-		"Depicted": {
-			"headerTitle": "Title of the 'Depicted in' section",
-			"intro": "Introductory text to the 'Depicted in' section",
-			"sortMenu": {
-				"title": "Menu title of the 'Sort works' menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"tooltip": "Menu tooltip of the 'Sort works' menu of the 'Depicted in' section",
-				"optionTime": "Menu option to sort by time in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"optionAlpha": "Menu option to sort alphabetically in the Sort menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"optionRev": "Menu option reverse sort order in the Sort menu of the 'Depicted in' section",
-				"optionClear": "Menu option clear sort order in the Sort menu of the 'Depicted in' section"
-			},
-			"facetMenu": {
-				"title": "Menu title of the Facet menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"tooltip": "Menu tooltip of the Facet menu of the 'Depicted in' section",
-				"optionType": "Menu option to facet by item type in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"optionColl": "Menu option to facet by creator in the Facet menu of the 'Depicted in' section - The menu title and the option form a compound"
-			},
-			"displayMenu": {
-				"title": "Menu title of the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"tooltip": "Menu tooltip of the 'Display as' menu of the 'Depicted in' section",
-				"optionGallery": "Menu option to display as gallery in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound",
-				"optionList": "Menu option to display as list in the 'Display as' menu of the 'Depicted in' section - The menu title and the option form a compound"
-			},
-			"showAll": "Generic menu option to display all in the 'Depicted in' section\n{{Identical|All}}"
-		},
-		"Works": {
-			"headerTitle": "Main title of the Works section",
-			"intro": "Introductory text of the Works section",
-			"sortMenuTitle": "Menu title of the Sort menu\n{{Identical|Sort}}",
-			"sortMenuTooltip": "Tooltip of the Sort menu",
-			"sortMenuOptionTime": "Menu item for sorting by time",
-			"sortMenuOptionAlpha": "Menu item for sorting alphabetically",
-			"sortMenuOptionDist": "Menu item for sorting by distance",
-			"sortMenuOptionRev": "Menu item for reversing the current sort order",
-			"sortMenuOptionClear": "Menu item for clearing the current sort order",
-			"facetMenuTitle": "Menu title of the Facet menu in the Works component",
-			"facetMenuTooltip": "Menu tooltip of the Facet menu in the Works section",
-			"facetMenuOptionType": "Menu item for faceting by type",
-			"facetMenuOptionColl": "Menu item for faceting by collection\n{{Identical|Collection}}",
-			"facetMenuOptionCity": "Menu item for faceting by city\n{{Identical|City}}",
-			"displayMenuTitle": "Menu title of the Display menu",
-			"displayMenuTooltip": "Display menu tooltip in the Works section",
-			"displayMenuOptionGallery": "Menu option for displaying as gallery",
-			"displayMenuOptionList": "Menu option for displaying as list\n{{Identical|List}}",
-			"showAll": "Option to clear all filters and showing all items\n{{Identical|All}}"
-		},
-		"People": {
-			"headerTitle": "Main title of the People section",
-			"intro": "Introductory text of the People section",
-			"sortMenuTitle": "Menu title of the sort menu\n{{Identical|Sort}}",
-			"sortMenuTooltip": "Tooltip of the sort menu",
-			"sortMenuOptionBirth": "Menu item for sorting by birth date",
-			"sortMenuOptionDeath": "Menu item for sorting by death date",
-			"sortMenuOptionName": "Option to sort by name in the Sort menu of the People section",
-			"sortMenuOptionFirst": "Menu item for sorting by first name",
-			"sortMenuOptionLast": "Menu item for sorting by last name",
-			"sortMenuOptionRev": "Menu item for reversing the current sort order",
-			"sortMenuOptionClear": "Menu item for clearing the current sort order",
-			"facetMenuTitle": "Menu title of the Facet menu in the People component",
-			"facetMenuTooltip": "Menu tooltip of the Facet menu in the People section",
-			"facetMenuOptionProfession": "Menu item for faceting by profession",
-			"facetMenuOptionCountry": "Menu item for faceting by country",
-			"facetMenuOptionCity": "Menu item for faceting by gender"
 		}
 	},
 	"imageViewer": {
 		"imageMetadata": {
-			"caption": "Field label for the Caption in the Metadata section in the Image viewer",
+			"caption": "Field label for the Caption in the Metadata section in the Image viewer\n{{Identical|Caption}}",
 			"addCaption": "Button text to Add a caption in the Caption part in the Metadata section in the Image viewer",
-			"description": "Field label for the Description in the Metadata section in the Image viewer",
+			"description": "Field label for the Description in the Metadata section in the Image viewer\n\n{{Identical|Description}}",
 			"addDescription": "Button text to Add description in the Description part in the Metadata section in the Image viewer",
 			"creator": "Field label for Creator in the Metadata section in the Image viewer",
-			"creatorUnknown": "Field value for an unknown person Creator field in the Metadata section in the Image viewer",
+			"creatorUnknown": "Field value for an unknown person Creator field in the Metadata section in the Image viewer\n{{Identical|Unknown}}",
 			"addCreator": "Button text to Add a creator in the Metadata section in the Image viewer",
 			"removeCreator": "Button text to Remove a creator in the Metadata section in the Image viewer",
 			"dateDepicted": "Field label for Depicted date of an image in the Metadata section in the Image viewer",
@@ -312,15 +331,16 @@
 			"event": "Field label for the Event of an image in the Metadata section in the Image viewer",
 			"addEvent": "Button text to Add an event of an image in the Metadata section in the Image viewer",
 			"removeEvent": "Button text to Remove an event of an image in the Metadata section in the Image viewer",
-			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer",
-			"callNumber": "obsolete, will remove",
+			"institution": "Field label for the Institution who hosts the image in the Metadata section in the Image viewer\n{{Identical|Institution}}",
+			"collection": "{{Identical|Collection}}",
 			"inventoryNumber": "Field label for the Inventory number of an image in the Metadata section in the Image viewer",
 			"inscriptions": "Field label for Inscriptions in an image in the Metadata section in the Image viewer",
 			"measurements": "Field label for the Measurements of an image in the Metadata section in the Image viewer",
 			"copyright": "Field label for the Copyright and licensing information of an image in the Metadata section in the Image viewer",
-			"work": "Section title for Information about the work about an image in the Metadata section in the Image viewer",
-			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer",
-			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer",
+			"work": "Section title for Information about the artwork represented in the image in the Metadata section in the Image viewer",
+			"photograph": "Section title for information about the Photograph in the Metadata section in the Image viewer\n{{Identical|Photograph}}",
+			"image": "{{Identical|Image}}",
+			"photographer": "Field label for the name of the Photographer of an image in the Metadata section in the Image viewer\n{{Identical|Photographer}}",
 			"digitalCopy": "Section title for the information about the Digital copy of an image in the Metadata section in the Image viewer",
 			"publishingPlatform": "Field label for the Publishing platform of an image in the Metadata section in the Image viewer",
 			"platformId": "Field label for the ID on the publishing platform of an image in the Metadata section in the Image viewer",
@@ -328,7 +348,7 @@
 			"imageDimensions": "Field label for Image dimensions of an image in the Metadata section in the Image viewer",
 			"fileSize": "Field label for File size of an image in the Metadata section in the Image viewer",
 			"fileFormat": "Field label for File format of an image in the Metadata section in the Image viewer",
-			"remove": "Menu option to remove a metadata item in the Image viewer",
+			"remove": "Menu option to remove a metadata item in the Image viewer\n{{Identical|Remove}}",
 			"moveTo": "Menu option to transfer the contents of a metadata field to another field",
 			"addData": "Option to add a new data field in the Metadata section in the Image viewer"
 		},
@@ -336,7 +356,7 @@
 			"rotateImage": "Submenu title to Rotate the image in the Actions menu in the Image viewer",
 			"clockwise": "Submenu option to Rotate the image clockwise in the Actions menu in the Image viewer",
 			"counterclockwise": "Submenu option to Rotate the image counterclockwise in the Actions menu in the Image viewer",
-			"flip": "Submenu title to Flip the image in the Actions menu in the Image viewer",
+			"flip": "Submenu title to Flip the image in the actions menu in the image viewer.\n{{Identical|Flip}}",
 			"horizontal": "Submenu option to Horizontally flip an image in the Actions menu in the Image viewer",
 			"vertical": "Submenu option to Vertically flip an image in the Actions menu in the Image viewer"
 		},
@@ -366,6 +386,16 @@
 			"transparencyLabel": "Menu item for Transparency of the historical base map"
 		}
 	},
+	"menus": {
+		"facetMenu": {
+			"title": "“Facet” is a verb. Menu title for facetting by type, creator, or location. See:\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionType}}\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionColl}}\n* {{msg-wikidocumentaries|ui-menus.facetMenu.optionCity}}",
+			"optionType": "{{Identical|Type}}",
+			"optionCity": "{{Identical|Location]}"
+		},
+		"displayMenu": {
+			"optionList": "{{Identical|List}}"
+		}
+	},
 	"general": {
 		"ok": "OK - general button text\n{{Identical|OK}}",
 		"cancel": "Cancel - general button text\n{{Identical|Cancel}}",
@@ -375,7 +405,10 @@
 			"actionMenuTooltip": "Tooltip text for the Actions menu\n{{Identical|Action}}",
 			"languageMenuTitle": "Menu title for the Language menu",
 			"myLanguagesItem": "Menu item for the My languages menu",
-			"languageMenuTranslate": "Option to translate the article in the Languages menu"
+			"languageMenuTranslate": "Option to translate the article in the Languages menu. <span style=\"color:red\">'''Use the name of your language instead of English!'''</span>"
+		},
+		"languageMenu": {
+			"TranslateUI": "Use the name of your language in place of <your language>"
 		},
 		"languages": {
 			"fi": "Finnish language option",

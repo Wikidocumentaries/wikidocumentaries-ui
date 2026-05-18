@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import {VueMasonryPlugin} from 'vue-masonry';
-import 'viewerjs/dist/viewer.css'
-import Viewer from 'v-viewer'
 //import VueLayers from 'vuelayers'
 //import 'vuelayers/lib/style.css'
 import VueScrollTo from 'vue-scrollto'
@@ -18,7 +16,6 @@ import devpage from '@/components/landing_page/Developer'
 
 Vue.use(Router)
 Vue.use(VueMasonryPlugin)
-Vue.use(Viewer)
 //Vue.use(VueLayers, {
 //  dataProjection: 'EPSG:4326',
 //})
@@ -41,8 +38,8 @@ export default new Router({
       component: LandingPage
     },
     {
-	path: '/wikipedia/:language/:topic',
-	component: MainPage
+      path: '/wikipedia/:language/:topic',
+      component: MainPage
 	/*
 	redirect: to => {
 	  return "/Q5501061"
