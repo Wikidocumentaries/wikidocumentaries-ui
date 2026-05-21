@@ -164,8 +164,8 @@
 				"clear": "선택 항목 지우기"
 			},
 			"imagesActionMenu": {
-				"menuTitle": "동작",
-				"menuTooltip": "동작",
+				"menuTitle": "작업",
+				"menuTooltip": "작업",
 				"doGeolocatingText": "위치 설정...",
 				"showImageText": "이미지 표시",
 				"selectFeatured": "헤더 이미지를 선택합니다"
@@ -353,8 +353,8 @@
 		"expand": "이 문단 펼치기",
 		"collapse": "이 문단 접기",
 		"menus": {
-			"actionMenuTitle": "동작",
-			"actionMenuTooltip": "동작",
+			"actionMenuTitle": "작업",
+			"actionMenuTooltip": "작업",
 			"languageMenuTitle": "언어 선택",
 			"languageMenuTooltip": "내 언어 선택",
 			"myLanguagesItem": "내 언어",
