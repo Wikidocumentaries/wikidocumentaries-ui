@@ -13,6 +13,8 @@
                 <a class="main-button" v-on:click="goToLandingPage">{{ landingPageName }}</a>
                 <TopicSearchBox class="topic-search-box"></TopicSearchBox>
                 <UILanguageMenu class="language-menu"></UILanguageMenu>
+                <LoginButton v-if="notLogIn"></LoginButton>
+                <UserProfile v-else></UserProfile>
             </div>
           <component
               v-bind:is="currentTabComponentName"
@@ -37,6 +39,8 @@ import TopicPage from '@/components/topic_page/HomePage'
 import WaitPage from '@/components/WaitPage'
 import TopicSearchBox from '@/components/TopicSearchBox'
 import UILanguageMenu from '@/components/menu/UILanguageMenu'
+import LoginButton from '@/components/authentication/Login';
+import UserProfile from '@/components/authentication/UserProfile.vue';
 
 export default {
     name: 'MainPage',
@@ -52,6 +56,7 @@ export default {
             ],
             WIKI: WIKI,
             landingPageName: "Wikidocumentaries",
+            notLogIn: localStorage.getItem("username") === null,
         }
     },
     computed: {
@@ -63,7 +68,9 @@ export default {
         TopicPage,
         WaitPage,
         UILanguageMenu,
-        TopicSearchBox
+        TopicSearchBox,
+        LoginButton,
+        UserProfile
     },
     beforeRouteEnter (to, from, next) {
         //console.log(to);
@@ -152,7 +159,7 @@ a.main-button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding-left: 20px;
 }
 
 /*. main-toolbar-buttons {

@@ -2,11 +2,12 @@
   <div class="images-action-menu">
     <IconMenu
       icon="wikiglyph-ellipses"
-      :items="iconActionMenuItems"
+      :items="this.iconActionMenuItems"
       @doMenuItemAction="onDoMenuItemAction"
     >
       <div slot="menu-title">{{ $t('topic_page.TopicImages.imagesActionMenu.menuTitle') }}</div>
     </IconMenu>
+    <PopUp ref="popup"></PopUp>
     <ImageViewer ref="imageviewer"></ImageViewer>
   </div>
 </template>
@@ -14,11 +15,14 @@
 <script>
 import IconMenu from "@/components/menu/IconMenu";
 import ImageViewer from "@/components/image_viewer/ImageViewer";
+import PopUp from "@/components/upload/Popup";
 
 const MENU_ACTIONS = {
   // GEOLOCATE: 0,
   // SELECT_HEADER: 0,
   // SHOW_IMAGE: 0,
+  SHOW_IMAGE:0,
+  UPLOAD:1,
 };
 
 export default {
@@ -29,10 +33,14 @@ export default {
   data() {
     return {
       iconActionMenuItems: [
+        // {
+        //   id: MENU_ACTIONS.SHOW_IMAGE,
+        //   text: "topic_page.TopicImages.imagesActionMenu.showImageText"
+        // },
         {
-          id: MENU_ACTIONS.SHOW_IMAGE,
-          text: "topic_page.TopicImages.imagesActionMenu.showImageText"
-        }
+          id: MENU_ACTIONS.UPLOAD,
+          text: "topic_page.TopicImages.imagesActionMenu.upload"
+        },
         // {
         //     id: MENU_ACTIONS.SELECT_HEADER,
         //     text: 'topic_page.TopicImages.imagesActionMenu.selectFeatured'
@@ -41,21 +49,29 @@ export default {
         //     id: MENU_ACTIONS.GEOLOCATE,
         //     text: 'topic_page.TopicImages.imagesActionMenu.doGeolocatingText'
         // },
-      ]
+      ],
+      clickPopUp: false,
     };
   },
   components: {
     IconMenu,
-    ImageViewer
+    ImageViewer,
+    PopUp,
   },
   methods: {
-    onDoMenuItemAction(menuItem) {
-      switch (menuItem.id) {
+    onDoMenuItemAction(iconActionMenuItems) {
+      switch (iconActionMenuItems.id) {
         case MENU_ACTIONS.SHOW_IMAGE:
-          this.$refs.imageviewer.show(this.$props.element);
+          this.$refs.imageviewer.show(this.$props.element, 0);
+          break;
+        case MENU_ACTIONS.UPLOAD:
+          this.showPopUp(this.$props.element);
           break;
       }
-    }
+    },
+    showPopUp(element) {
+      this.$refs.popup.show(element);
+    },
   }
 };
 </script>
