@@ -507,10 +507,10 @@ export default {
   components: {
     HeaderLink,
     Dataselect,
-    ToolbarMenu,
+    ToolbarMenu
   },
   props: {
-    shouldShowDialog: Boolean
+    shouldShowDialog: Boolean,
   },
   mounted() {
     // this.$el.addEventListener("mousemove", () => {
