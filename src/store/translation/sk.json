@@ -3,6 +3,7 @@
 		"authors": [
 			"McDutchie",
 			"Oujon",
+			"Wizzard",
 			"Yardom78"
 		]
 	},
@@ -537,7 +538,7 @@
 			"languageMenuTitle": "Vybrať jazyk",
 			"languageMenuTooltip": "Zvoľte si jazyk",
 			"myLanguagesItem": "Moje jazyky",
-			"languageMenuTranslate": "Preložiť tento článok do angličtiny"
+			"languageMenuTranslate": "Preložiť tento článok do slovenčiny"
 		},
 		"languageMenu": {
 			"TranslateUI": "Preložiť do Vášho jazyka"
