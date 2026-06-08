@@ -3,7 +3,7 @@
 	<div class="familytree-component">
 		<div class="toolbar">
             <div class="header-title">{{ $t('topic_page.Tree.headerTitle') }}</div>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Tree.actionMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-sort" :tooltip="$t('topic_page.Tree.actionMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Tree.actionMenu.title') }}</div>
             </ToolbarMenu>
         </div>
@@ -146,20 +146,6 @@ LIMIT 50
             var newTitle = title;
             return newTitle;
         },
-        // getCredits (item) {
-        //     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-        //     var newYear = (item.year != "" ? (item.year) + ". " : '');
-        //     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-        //     var newLicense = (item.license != "" ? (item.license + ', ') : '');
-
-        //     var credits = newAuthors + newYear + newInstitutions + newLicense;
-
-        //     if (credits.length > 0 && credits.slice(-2) == ", ") {
-        //         credits = credits.substr(0, credits.length - 2);
-        //     }
-
-        //     return credits;
-        // },
         navigate(target) {
             this.$router.push({ target });
         },

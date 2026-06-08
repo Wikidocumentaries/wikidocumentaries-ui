@@ -1,52 +1,267 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abbe98",
+			"Sabelöga",
+			"Stefan2255",
 			"Susannaanas",
-			"Abijeet Patro",
 			"WikiPhoenix"
 		]
 	},
 	"LandingPage": {
 		"search": "Sök",
-		"searchInputPlaceHolder": "Sök ämnen eller skap ett nytt ämne"
+		"searchInputPlaceHolder": "Sök ämnen eller skapa ett nytt ämne",
+		"searchInputSearchOnly": "Hitta ett ämne",
+		"showMore": "Visa fler objekt",
+		"createNew": "Skapa nytt objekt",
+		"intro": "Wikidomentaries är en wiki för liten historia - en plats för att samla spår från historien och stöpa om dem till berättelser. Börja genom att söka efter ämne som intresserar dig!",
+		"titleDescription": "Vad är Wikidocumentaries?",
+		"description": "Wikidocumentaries är en skaparplats för medborgarhistoriker. Den kombinerar information angående ämnena - folk, platser, byggnader, händelser och mer. Du kan navigera mellan ämnena genom att följa någon anknytande koppling såsom familjerelationer, orter, skapare, och skapelser eller anslutning. Ett ämne illustreras med bilder och kartor från kopplade museer, arkiv och bibliotek. I Wikidokumentärer kommer det att vara möjligt att rätta befintlig information och lägga till nya ämnen, lägga till sina egna bilder och minnen, och använda allt  material för dina egna syften.",
+		"titleStatus": "Status",
+		"status": "Webbplatsen är ett demo. Flera viktiga funktioner finns ännu inte och webbplatsen kanske inte presterar så bra som man kan vänta sig.",
+		"moreBelow": "Läs mer nedan",
+		"more": "Läs mer",
+		"moreLink": "Läs mer i",
+		"titleTopics": "Ämnen",
+		"statusTopics": "Ämnen läses från Wikidata. Nya ämnen kan senare skapas i Wikidokumentärer istället, om innehållet ligger utanför Wikidatas räckvidd. Det kommer fortfarande att vara lika möjligt att beskriva ämnet med Wikidatas rika möjligheter. Nuvarande artiklar är från Wikipedia, medan artiklar senare kan skapas lokalt för ämnen som endast finns i Wikidokumentärer.",
+		"titleMedia": "Media",
+		"statusMedia": "Media läses från ett växande antal mediedatabaser som tillhandahåller öppet licensierade mediefiler. Vi arbetar med att hitta bilder mer exakt och visa mer och bättre metadata från varje källa. Nya mediekällor är välkomna!",
+		"titleTools": "Verktyg",
+		"statusTools": "Wikidokumentärer har uppgifter och verktyg för att arbeta med innehållet. Artiklar kan redan översättas mellan språk med verktyget Innehållsöversättning. Vi förbereder nyckelordshantering med Wikidata och ett geotaggningsverktyg för bildplaceringar. Nya roliga och användbara verktyg kan skapas eller integreras.",
+		"titleLanguages": "Språk",
+		"statusLanguages": "Wikidokumentärer kan navigeras på alla språk som finns tillgängliga på Wikidata. Detta är en utmärkt möjlighet för mindre språk. Översättningar görs i TranslateWiki.",
+		"titleTechnology": "Teknik",
+		"statusTechnology": "Wikidocumentaries läser kärndata från Wikidata. Dessutom kommer Wikidocumentaries att ha sin egen Wikibase för ämnen som inte omfattas av Wikidata. Wikidata och Wikidocumentaries förväntas synkroniseras som federerade Wikibaser. För det andra länkas bildmetadata till Wikidata-objekt, och dessa data kan synkroniseras med strukturerad data på Wikimedia Commons. Webbplatsen är byggd med Vue.js och den finns på Wikimedia Cloud Services.",
+		"titleCreators": "Skapare",
+		"titleTeam": "Team",
+		"titleThanks": "Särskilt tack till",
+		"titlePartners": "Partners",
+		"titleFunding": "Med tacksamt stöd från",
+		"titleBy": "Projekt av",
+		"getInvolved": "Engagera dig!",
+		"titleTranslate": "Översätt",
+		"joinTranslate": "Kom och ta med ditt språk till Wikidokumentärerna. Gå med i det frivilliga översättningsteamet och se det sammankopplade kulturarvet komma till liv på ditt språk.",
+		"titleContent": "Lägg till ditt innehåll",
+		"joinContent": "Om du har ett foto, media, dokument, karta eller datasamling som du skulle vilja se här, låt oss tillsammans titta på om det redan kan kopplas samman via någon av de befintliga kanalerna eller om vi kan skapa nya kopplingsmetoder. Vi ser också fram emot att arrangera workshops för att dokumentera historisk kunskap med intressegrupper.",
+		"titleDevelop": "Skapa verktyg och crowdsourcing-uppgifter.",
+		"joinDevelop": "Vi gillar att lägga till fler verktyg och skapa nya crowdsourcing-uppgifter i samarbete med organisationer och verktygsbyggare. Låt oss gå samman för nästa coola crowdsourcing-app!",
+		"titleContact": "Ta kontakt!",
+		"facebook": "Facebookgrupp",
+		"wiki": "Wikidocumentaries wiki",
+		"blog": "Blogg",
+		"email": "E-post",
+		"github": "Github-förvaret"
 	},
 	"MainPage": {
 		"topicPageName": "Ämnesida",
 		"mapPlaceMatchPageName": "Koppla platsnamn",
 		"mapSearchPageName": "Sök kartor",
-		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia artikel om ämnet i valt språk eller en annan oförutsett fel.",
+		"wikiTopicErrorMessage": "Det fanns ingen Wikipedia-artikel om ämnet i valt språk eller en annat oförutsett fel.",
 		"returnToHomeMessage": "Tillbaka till hemsidan"
 	},
 	"WaitPage": {
 		"waitMessage": "Ett ögonblick... Söker information i Wikipedia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Anknytning",
+			"intro": "Organisationer som denna person eller organisation har anknytning till."
+		},
+		"Awards": {
+			"headerTitle": "Utmärkelser",
+			"intro": "Nomineringar och utmärkelser för ämnet på denna sida."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Välj historisk baskarta eller baskartor",
 			"chooseMapHelpNote": "Tips: ctrl + klicka tillåter att du väljer många kartor",
 			"yearAbbreviation": "år"
 		},
+		"Collection": {
+			"headerTitle": "Verk i samlingen",
+			"intro": "Dessa verk finns i den här personens eller institutionens samling. Du kan välja att visa dem som en lista, vilket även visar verk utan bilder. De kan sorteras efter datum eller namn. Observera att endast de som har den informationen kommer att visas."
+		},
+		"Cups": {
+			"headerTitle": "Spel, serier och turneringar",
+			"intro": "Denna klubb har spelat i följande matcher, serier och turneringar."
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Dessa är professionella händelser av ämnets person."
+		},
+		"Depicted": {
+			"headerTitle": "Skildras i",
+			"intro": "Detta ämne skildras i dessa verk. Sortera verken efter olika kriterier, visa som lista för att se de verk som saknar bild.",
+			"sortMenu": {
+				"title": "Sortera verk",
+				"tooltip": "Sortera verk",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"title": "Fasett verk enligt",
+				"tooltip": "Fasett verk enligt olika kriterier",
+				"optionType": "Typ",
+				"optionColl": "Skapare"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"tooltip": "Välj visning",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
+		"Depicts": {
+			"headerTitle": "Skildrar",
+			"intro": "Detta verk skildrar dessa ämnen. Du kan sortera dem efter tid och namn. Observera att för att se alla ämnen, inklusive de utan bild, måste du visa ämnena som en lista."
+		},
+		"Events": {
+			"headerTitle": "Händelser",
+			"displayMenu": {
+				"menuTitle": "Visningsalternativ",
+				"menuTooltip": "Visningsalternativ",
+				"optionShowTimeline": "Visa händelser på en tidslinje",
+				"optionShowList": "Visa händelser som en lista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Inställningar",
+				"menuTooltip": "Välj fakta som ska visas",
+				"optionWorks": "Visa verk",
+				"optionRelatedPeople": "Visa händelser av relaterade personer",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Konfigurera"
+				},
+				"optionRelatedTopics": "Visa händelser av relaterade ämnen"
+			}
+		},
 		"Header": {
-			"titleEditText": "Rediger titeln",
+			"titleEditText": "Redigera titeln",
 			"titleApproveText": "Godkänn denna titel",
 			"subtitleEditText": "Redigera beskrivningen",
 			"subtitleApproveText": "Godkänn denna beskrivning"
 		},
+		"Heritage": {
+			"headerTitle": "Element av kulturarv"
+		},
+		"Locations": {
+			"headerTitle": "På denna plats",
+			"intro": "Här ser du allt som finns i ämnest för den här sidan. Visa som lista för att se alla platser som har lagrats.",
+			"sortMenu": {
+				"title": "Sortera platser",
+				"tooltip": "Sortera platser",
+				"optionTime": "Efter tid",
+				"optionAlpha": "Alfabetiskt",
+				"optionDist": "Efter avstånd",
+				"optionClear": "Rensa sortering"
+			},
+			"facetMenu": {
+				"title": "Fasett platser enligt",
+				"tooltip": "Fasett platser enligt olika kriterier",
+				"optionType": "Typ",
+				"optionColl": "Skapare",
+				"optionCity": "Plats"
+			},
+			"displayMenu": {
+				"title": "Visa som",
+				"tooltip": "Välj visning",
+				"optionGallery": "Galleri",
+				"optionList": "Lista"
+			},
+			"showAll": "Alla"
+		},
+		"Map": {
+			"headerTitle": "Plats på kartan"
+		},
+		"Parts": {
+			"headerTitle": "Delar",
+			"intro": "Dessa delar tillhör detta ämne. Du kan sortera dem efter tid och namn. För att se alla ämnen, inklusive de utan bild, måste du visa ämnena som en lista."
+		},
+		"Partof": {
+			"headerTitle": "Del av",
+			"intro": "Det här ämnet är en del av dessa andra ämnen. Du kan sortera dem efter tid och namn. För att se alla ämnen, inklusive de utan bild, måste du visa ämnena som en lista."
+		},
+		"Similar": {
+			"headerTitle": "Liknande ämnen",
+			"intro": "Hitta ämnen som har några gemensamma viktiga egenskaper med detta ämne."
+		},
+		"Effects": {
+			"headerTitle": "Effekter",
+			"intro": "Det här är effekterna av ämnet."
+		},
+		"Familytree": {
+			"headerTitle": "Släktträd"
+		},
+		"Instances": {
+			"headerTitle": "Exempel på detta ämne",
+			"intro": "Se exempel på detta ämne. Visa som lista för att se även objekt utan bild."
+		},
+		"Links": {
+			"headerTitle": "Länkar från den här artikeln"
+		},
+		"Location": {
+			"headerTitle": "Plats",
+			"intro": "Detta ämne är beläget i eller i samband med dessa ämnen."
+		},
+		"Names": {
+			"headerTitle": "Namn",
+			"intro": "Se namnen på detta ämne och alla tillgängliga alternativ."
+		},
+		"People": {
+			"headerTitle": "Människor relaterade till ämnet",
+			"intro": "Dessa personer är kopplade till ämnet för den här sidan. Du kan välja att visa dem som en lista, vilket även visar personer utan bilder. De kan sorteras efter datum eller namn. Observera att endast de som har den informationen kommer att visas.",
+			"sortMenuTitle": "Sortera",
+			"sortMenuTooltip": "Ändra sorteringsordningen",
+			"sortMenuOptionBirth": "Efter födelsedatum",
+			"sortMenuOptionDeath": "Efter dödsdatum",
+			"sortMenuOptionName": "Efter namn",
+			"sortMenuOptionFirst": "Efter förnamn",
+			"sortMenuOptionLast": "Efter efternamn",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuTitle": "Fasett enligt",
+			"facetMenuTooltip": "Facettera människor utifrån olika aspekter",
+			"facetMenuOptionProfession": "Yrke",
+			"facetMenuOptionCountry": "Land",
+			"facetMenuOptionCity": "Kön"
+		},
+		"Seasons": {
+			"headerTitle": "Sessioner",
+			"intro": "Se sessioner för denna aktivitet."
+		},
+		"Subclasses": {
+			"headerTitle": "Underklasser av detta ämne",
+			"intro": "Se underklasser i detta ämne. Visa som lista för att även se objekt utan bild."
+		},
+		"Teams": {
+			"headerTitle": "Deltagande lag",
+			"intro": "Lag som deltar i denna match, serie eller turnering."
+		},
+		"Things": {
+			"headerTitle": "Fokuslistans ämnen",
+			"intro": "Dessa ämnena finns på fokuslistan för detta Wikiprojekt."
+		},
+		"Twins": {
+			"headerTitle": "Tvillingstäder",
+			"intro": "Vänorter, systerstäder, vänkommuner och andra orter som har ett partnerskaps- eller samarbetsavtal, antingen juridiskt eller informellt erkänt av sina regeringar. Du kan sortera dem efter tid och namn. För att se alla ämnen, inklusive de utan bild, måste du visa ämnena som en lista."
+		},
 		"TopicImages": {
 			"headerTitle": "Bilder från arkiven",
-			"intro": "Dessa bilder samlas från flera källor och de kanske inte alltid representerar ämnet korrekt. Du kan favorera en bild eller ta bort den från sidan om den inte hör till.",
+			"intro": "Dessa bilder är samlde från flera källor och de kanske inte alltid representerar ämnet korrekt. Du kan se originalbilden och du kan placera bilden på en karta om den har en platsnål.",
 			"actionsMenu": {
 				"menuTitle": "Visa eller arrangera bilder",
 				"tooltip": "Visa eller arrangera bilder",
 				"showImagesOnMapMenuText": "Visa alla bilder på kartan",
 				"showImagesOnTimelineMenuText": "Visa alla bilder på tidslinjen",
-				"selectPortraits": "Välj god kvalitet porträtt av den här personen",
+				"selectPortraits": "Välj högkvalitativa porträtt av den här personen",
 				"arrangeByTime": "Arrangera bilder efter tid",
 				"selectWorks": "Välj bilder av verk"
 			},
 			"facetMenu": {
+				"menuTitle": "Fasettbilder av",
+				"menuTooltip": "Fasettbilder enligt olika kriterier",
 				"time": "tid",
 				"map": "karta",
+				"people": "personer",
 				"places": "platser",
 				"topics": "ämnen",
 				"form": "formulär",
@@ -93,16 +308,21 @@
 					"copyvio": "Den bryter mot upphovsrätten",
 					"explain": "Lämna en anteckning för att förklara"
 				}
-			}
+			},
+			"imagesViewExternal": "Visa originalbilden",
+			"imagesViewOnMap": "Visa bilden på en karta"
 		},
 		"TopicMap": {
 			"headerTitle": "Plats på kartan",
-			"intro": "Temaets plats visas på kartan. Du kan också visa bilderna och andra data på kartan eller välja en historisk karta som ett baslager.",
+			"intro": "Temats plats visas på kartan. Du kan också visa bilderna och annan data på kartan eller välja en historisk karta som ett baslager.",
 			"chooseHistoricalBasemapMenuText": "Välj historisk baskarta eller baskartor...",
 			"hideImagesMenuText": "Dölj bilder",
 			"chooseTimelineMapsMenuText": "Välj tidslinjekartor ...",
 			"showNearbyPlacesMenuText": "Visa närliggande platser",
-			"hideNearbyPlacesMenuText": "Dölj platser i närheten"
+			"hideNearbyPlacesMenuText": "Dölj platser i närheten",
+			"extLink": {
+				"menuTooltip": "Visa eller redigera i OpenStreetMap"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Tidningar",
@@ -112,22 +332,45 @@
 		"TopicTimeline": {
 			"headerTitle": "Tidslinje",
 			"showEventsOnTimelineMenuText": "Visa händelser i tidslinjen",
-			"centuryText": "s"
+			"centuryText": "h"
+		},
+		"Works": {
+			"headerTitle": "Verk",
+			"intro": "Dessa är verk av den person, det kollektiv eller den organisation som är ämnet för den här sidan. Du kan öppna en sida som samlar all information om verket genom att klicka på det. Endast verk med bilder visas. Visa som lista för att se alla relaterade verk som har lagrats.",
+			"sortMenuTitle": "Sortera",
+			"sortMenuTooltip": "Sortera objekt",
+			"sortMenuOptionTime": "Efter tid",
+			"sortMenuOptionAlpha": "Alfabetiskt",
+			"sortMenuOptionDist": "Efter avstånd",
+			"sortMenuOptionClear": "Rensa sortering",
+			"facetMenuTitle": "Facett av",
+			"facetMenuTooltip": "Facet fungerar enligt olika kriterier",
+			"facetMenuOptionType": "Typ",
+			"facetMenuOptionColl": "Samling",
+			"facetMenuOptionCity": "Plats",
+			"displayMenuTitle": "Visa som",
+			"displayMenuTooltip": "Välj visning",
+			"displayMenuOptionGallery": "Galleri",
+			"displayMenuOptionList": "Lista",
+			"displayMenuOptionMap": "Karta",
+			"showAll": "Alla"
 		},
 		"Wikidata": {
 			"headerTitle": "Fakta",
 			"extLink": {
 				"linkTitleWD": "Visa eller redigera i Wikidata"
 			},
-			"noTopicFoundText": "Ämne inte hittat"
+			"noTopicFoundText": "Ämnet hittades inte"
 		},
 		"Wikipedia": {
 			"headerTitle": "Artikel",
-			"missingArticle": "Det finns ingen artikel om detta ämne på svenska. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
-			"missingArticleMissing": "Det finns ingen artikel om detta ämne på svenska.",
-			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja på språkmenyn ovan eller du kan skapa artikeln på svenska genom att klicka på plusikonen.",
+			"missingArticle": "Det finns ingen artikel om detta ämne på ditt språk. Se om det finns artiklar på andra språk på språkmenyn ovan, eller skapa artikeln genom att klicka på plus-ikonen.",
+			"missingArticleMissing": "Det finns ingen artikel om detta ämne på ditt språk.",
+			"missingArticleChoose": "Du kan läsa artikeln på ett annat tillgängligt språk genom att välja i språkmenyn ovan eller så kan du skapa artikeln på svenska genom att klicka på plusikonen.",
 			"missingArticleCreate": "Du kan skapa den här artikeln på svenska genom att klicka på plusikonen.",
-			"missingArticleTranslate": "Du kan översätta denna artikel till ditt språk genom att välja den i språkmenyn.",
+			"missingArticleFallback": "Den här artikeln visas på ett annat språk baserat på dina språkinställningar.",
+			"missingArticleTranslate": "Du kan översätta denna artikel till svenska genom att välja det i språkmenyn.",
+			"missingArticleAuto": "Denna korta text har skapats automatiskt från de inspelade faktauppgifterna. Du kan spara utkastet och börja redigera artikeln.",
 			"extLink": {
 				"linkTitleWP": "Läs eller redigera i Wikipedia"
 			},
@@ -139,92 +382,93 @@
 				"translateArticleText": "Översätt denna artikel till ditt språk",
 				"otherLanguagestext": "Andra språk"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Människor relaterade till ämnet",
-			"menuTitle": "Visa",
-			"showBorn": "Född här",
-			"showDied": "Död här",
-			"showBuried": "Begravd här",
-			"showRelated": "Relaterat annars",
-			"showAll": "Alla"
-		},
-		"Locations": {
-			"headerTitle": "Platser",
-			"sortMenu": {
-				"title": "Sortera platser",
-				"tooltip": "Sortera platser",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetiskt",
-				"optionDist": "Efter avstånd",
-				"optionRev": "Omvänd sortering",
-				"optionClear": "Rensa sortering"
-			},
-			"facetMenu": {
-				"optionType": "Typ",
-				"optionColl": "Skapare",
-				"optionCity": "Plats"
-			},
-			"displayMenu": {
-				"title": "Visa som",
-				"optionGallery": "Galleri",
-				"optionList": "Lista"
-			},
-			"showAll": "Alla"
-		},
-		"Depicted": {
-			"headerTitle": "Skildras i",
-			"sortMenu": {
-				"title": "Sortera verk",
-				"tooltip": "Sortera verk",
-				"optionTime": "Efter tid",
-				"optionAlpha": "Alfabetiskt",
-				"optionRev": "Omvänd sortering",
-				"optionClear": "Rensa sortering"
-			},
-			"facetMenu": {
-				"optionType": "Typ",
-				"optionColl": "Skapare"
-			},
-			"displayMenu": {
-				"title": "Visa som",
-				"optionGallery": "Galleri",
-				"optionList": "Lista"
-			},
-			"showAll": "Alla"
-		},
-		"Works": {
-			"headerTitle": "Verk",
-			"sortMenuTitle": "Sortera",
-			"sortMenuTooltip": "Sortera objekt",
-			"sortMenuOptionTime": "Efter tid",
-			"sortMenuOptionAlpha": "Alfabetiskt",
-			"sortMenuOptionDist": "Efter avstånd",
-			"sortMenuOptionRev": "Omvänd sortering",
-			"sortMenuOptionClear": "Rensa sortering",
-			"facetMenuOptionType": "Typ",
-			"facetMenuOptionColl": "Samling",
-			"facetMenuOptionCity": "Plats",
-			"displayMenuTitle": "Visa som",
-			"displayMenuOptionGallery": "Galleri",
-			"displayMenuOptionList": "Lista",
-			"showAll": "Alla"
-		},
-		"People": {
-			"headerTitle": "Människor relaterade till ämnet",
-			"sortMenuTitle": "Sortera",
-			"sortMenuTooltip": "Ändra sorteringsordningen",
-			"sortMenuOptionBirth": "Efter födelsedatum",
-			"sortMenuOptionDeath": "Efter dödsdatum",
-			"sortMenuOptionName": "Efter namn",
-			"sortMenuOptionFirst": "Efter förnamn",
-			"sortMenuOptionLast": "Efter efternamn",
-			"sortMenuOptionRev": "Omvänd sorteringsordning",
-			"sortMenuOptionClear": "Rensa sortering",
-			"facetMenuOptionProfession": "Yrke",
-			"facetMenuOptionCountry": "Land",
-			"facetMenuOptionCity": "Kön"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Bildtext",
+			"addCaption": "Lägg till en bildtext",
+			"description": "Beskrivning",
+			"addDescription": "Lägg till beskrivning",
+			"creator": "Skapare",
+			"creatorUnknown": "Okänd",
+			"addCreator": "Lägg till en skapare",
+			"removeCreator": "Ta bort skaparen",
+			"dateDepicted": "Avbildat datum",
+			"addDateDepicted": "Lägg till avbildat datum",
+			"removeDateDepicted": "Ta bort avbildat datum",
+			"dateCreated": "Skapningsdatum",
+			"addDateCreated": "Lägg till skapningsdatum",
+			"removeDateCreated": "Ta bort skapningsdatum",
+			"publisher": "Utgivare",
+			"addPublisher": "Lägg till en utgivare",
+			"removePublisher": "Ta bort utgivaren",
+			"format": "Format",
+			"addFormat": "Lägg till ett format",
+			"removeFormat": "Ta bort formatet",
+			"technique": "Teknik",
+			"addTechnique": "Lägg till en teknik",
+			"removeTechnique": "Ta bort tekniken",
+			"depicted": "Bilden avbildar",
+			"genre": "Genre",
+			"addGenre": "Lägg till genre",
+			"removeGenre": "Ta bort genre",
+			"depicts": "Bilden avbildar",
+			"addTopic": "Lägg till ett ämne",
+			"removeTopic": "Ta bort ämnet",
+			"location": "Plats",
+			"locationMap": "Plats på kartan",
+			"addLocation": "Lägg till en plats",
+			"removeLocation": "Ta bort platsen",
+			"address": "Gatuadress",
+			"addAddress": "Lägg till gatuadress",
+			"removeAddress": "Ta bort gatuadressen",
+			"depictedPeople": "Avbildade personer",
+			"addPerson": "Lägg till en avbildad person",
+			"removePerson": "Ta bort avbildade personen",
+			"event": "Händelse",
+			"addEvent": "Lägg till en händelse",
+			"removeEvent": "Ta bort händelsen",
+			"institution": "Institution",
+			"collection": "Samling",
+			"addCollection": "Lägg till samling",
+			"inventoryNumber": "Inventarnummer",
+			"inscriptions": "Inskriptioner",
+			"measurements": "Mätningar",
+			"copyright": "Upphovsrätt",
+			"license": "Upphovsrättslicens",
+			"work": "Verk representerat i bilden",
+			"photograph": "Fotografi",
+			"image": "Bild",
+			"photographer": "Fotograf",
+			"addPhotographData": "Lägg till information om fotografiet",
+			"copyrightNotePD": "Bilden är licensierad med $1 , men baserat på metadata är bilden i allmän egendom.",
+			"copyrightNoteSame": "Samma bild är licensierad mer öppet med $1 , därför gäller den även för denna bild.",
+			"creditline": "Krediteringslinje",
+			"attribution": "Erkännande",
+			"digitalCopy": "Digital kopia",
+			"publishingPlatform": "Plattformen",
+			"platformId": "ID",
+			"provider": "Innehållsleverantör",
+			"imageInfoPage": "Informationssida",
+			"imageDimensions": "Bilddimensioner",
+			"fileSize": "Filstorlek",
+			"fileFormat": "Filformat",
+			"remove": "Ta bort",
+			"moveTo": "Flytta till ett annat fält",
+			"addData": "Lägg till data",
+			"uploader": "Uppladdare",
+			"rotate": "Rotera"
+		},
+		"imageActions": {
+			"rotateImage": "Rotera bilden",
+			"clockwise": "medurs",
+			"counterclockwise": "moturs",
+			"flip": "Vänd",
+			"horizontal": "horisontellt",
+			"vertical": "vertikalt"
+		},
+		"closeViewer": "Stäng bilden"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -250,22 +494,66 @@
 			"transparencyLabel": "Transparens av den historiska baskartan:"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "Sortera ämnen",
+			"tooltip": "Sortera ämnen",
+			"optionTime": "Efter tid",
+			"optionStart": "Efter starttid",
+			"optionEnd": "Efter sluttid",
+			"optionTitle": "Efter titel",
+			"optionCause": "Efter orsak",
+			"optionPartof": "Efter objekt den här är en  del av",
+			"optionSuperclass": "Efter klasser den här är en del av",
+			"optionAlpha": "Alfabetiskt",
+			"optionTitleAlpha": "Alfabetiskt efter titel",
+			"optionCreatorAlpha": "Alfabetiskt efter skapare",
+			"optionDist": "Efter avstånd",
+			"optionRev": "Omvänd sortering",
+			"optionClear": "Rensa sortering"
+		},
+		"facetMenu": {
+			"title": "Fasett enligt",
+			"tooltip": "Fasett ämnen enligt olika kriterier",
+			"optionType": "Typ",
+			"optionColl": "Skapare",
+			"optionCity": "Plats"
+		},
+		"displayMenu": {
+			"title": "Visa som",
+			"tooltip": "Välj visning",
+			"optionGallery": "Galleri",
+			"optionList": "Lista"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "OK",
 		"cancel": "Avbryt",
 		"helpText": "Hjälp",
+		"expand": "Expandera avsnittet",
+		"collapse": "Stäng detta avsnitt",
 		"menus": {
 			"actionMenuTitle": "Åtgärder",
 			"actionMenuTooltip": "Åtgärder",
 			"languageMenuTitle": "Välj språk",
+			"languageMenuTooltip": "Välj ditt språk",
 			"myLanguagesItem": "Mina språk",
-			"languageMenuTranslate": "Översätt denna artikel"
+			"languageMenuTranslate": "Översätt denna artikel till svenska"
+		},
+		"languageMenu": {
+			"TranslateUI": "Översätt till ditt språk"
 		},
 		"languages": {
 			"fi": "finska",
-			"en": "engelsk",
+			"en": "engelska",
 			"sv": "svenska",
-			"es": "spansk"
+			"es": "spanska"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografera denna kulturarvsplats och delta i fototävlingen i $2!",
+		"WLMButton": "Ladda upp bild"
 	}
 }

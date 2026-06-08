@@ -1,22 +1,143 @@
 {
 	"@metadata": {
 		"authors": [
+			"Bisang",
+			"Gongsoonyee",
+			"McDutchie",
+			"Songhee",
+			"Suleiman the Magnificent Television",
+			"Tensama0415",
+			"YeBoy371",
 			"Ykhwong",
-			"Abijeet Patro"
+			"解浪"
 		]
 	},
 	"LandingPage": {
 		"search": "검색",
-		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기"
+		"searchInputPlaceHolder": "주제를 찾거나 새 주제 만들기",
+		"searchInputSearchOnly": "주제 찾기",
+		"showMore": "항목 더 보기",
+		"createNew": "새 항목 만들기",
+		"intro": "위키다큐멘터리는 작은 역사들을 모아 이야기로 만들어내는 위키입니다. 관심 있는 주제를 검색해 보세요!",
+		"titleDescription": "위키다큐멘터리는 무엇입니까?",
+		"description": "위키다큐멘터리는 시민 역사가들을 위한 창작 공간입니다. 인물, 장소, 건물, 사건 등 다양한 주제에 대한 정보를 한곳에 모아놓았습니다. 가족 관계, 위치, 창작자와 창작물, 소속 등 기록된 연결 고리를 따라 주제 간을 탐색할 수 있습니다. 각 주제는 연결된 박물관, 기록 보관소, 도서관의 이미지와 지도로 설명됩니다. 위키다큐멘터리에서는 기존 정보를 수정하고 새로운 주제를 추가하며, 자신의 이미지와 추억을 공유하고 모든 자료를 자유롭게 활용할 수 있습니다.",
+		"titleStatus": "상태",
+		"status": "사이트가 데모 단계입니다. 수많은 중요 기능들은 아직 사용할 수 없으며 사이트는 예상대로 동작하지 않을 수 있습니다.",
+		"moreBelow": "아래에서 더 읽어보세요",
+		"more": "더 읽어보기",
+		"moreLink": "더 읽어보기",
+		"titleTopics": "주제",
+		"statusTopics": "주제는 위키데이터에서 읽어옵니다. 내용이 위키데이터의 범위를 벗어나는 경우, 나중에 위키다큐멘터리에 새로운 주제를 생성할 수 있습니다. 위키데이터의 풍부한 옵션을 활용하여 주제를 설명하는 것도 여전히 가능합니다. 현재 문서는 위키백과에서 가져오지만, 위키다큐멘터리에만 존재하는 주제에 대해서는 나중에 로컬에서 문서를 생성할 수 있습니다.",
+		"titleMedia": "미디어",
+		"statusMedia": "미디어는 공개 라이선스가 적용된 미디어 파일을 제공하는 점점 더 많은 미디어 저장소에서 읽어옵니다. 우리는 이미지를 더 정확하게 찾고 각 출처에서 더 많고 더 나은 메타데이터를 표시하기 위해 노력하고 있습니다. 새로운 미디어 출처를 환영합니다!",
+		"titleTools": "도구",
+		"statusTools": "위키다큐멘터리에는 콘텐츠 작업을 위한 작업과 도구가 있습니다. 문서는 이미 내용 번역 도구로 언어 간 번역할 수 있습니다. 위키데이터를 활용한 키워드 지정과 이미지 위치에 대한 지오태깅 도구를 준비하고 있습니다. 새롭고 재미있고 유용한 도구를 만들거나 통합할 수 있습니다.",
+		"titleLanguages": "언어",
+		"statusLanguages": "위키다큐멘터리는 위키데이터에서 제공되는 모든 언어로 탐색할 수 있습니다. 이는 소수 언어권에 좋은 기회입니다. 번역은 TranslateWiki를 사용하여 진행됩니다.",
+		"titleTechnology": "기술",
+		"statusTechnology": "위키다큐멘터리는 핵심 데이터를 위키데이터에서 읽어옵니다. 또한 위키다큐멘터리는 위키데이터 범위 밖의 주제를 위한 자체 위키베이스를 갖게 됩니다. 위키데이터와 위키다큐멘터리는 연합 위키베이스로 동기화될 것으로 예상됩니다. 둘째, 이미지 메타데이터는 위키데이터 항목에 연결되며, 이 데이터는 위키미디어 공용의 구조화된 데이터와 동기화될 수 있습니다. 이 사이트는 Vue.js로 구축되었으며 위키미디어 클라우드 서비스에서 호스팅됩니다.",
+		"titleCreators": "만든이",
+		"titleTeam": "팀",
+		"titleThanks": "특별 감사:",
+		"titlePartners": "파트너",
+		"titleFunding": "친절한 지원을 받음:",
+		"titleBy": "프로젝트 제공:",
+		"getInvolved": "참여하기!",
+		"titleTranslate": "번역하기",
+		"joinTranslate": "위키다큐멘터리에 여러분의 언어를 더해 보세요. 자원봉사 번역팀에 참여하여 연결된 문화유산이 여러분의 언어로 생생하게 살아나는 모습을 직접 확인해 보세요.",
+		"titleContent": "콘텐츠를 추가",
+		"joinContent": "여기에 표시하고 싶은 사진, 미디어, 문서, 지도 또는 데이터 모음이 있다면, 기존 채널 중 하나를 통해 이미 연결할 수 있는지 또는 새 연결 방법을 만들 수 있는지 함께 살펴보겠습니다. 또한 관심 있는 공동체와 함께 역사 지식 기록 워크숍을 마련하기를 기대합니다.",
+		"titleDevelop": "도구와 크라우드소싱 작업을 만드세요.",
+		"joinDevelop": "우리는 조직 및 도구 제작자와 협력하여 더 많은 도구를 추가하고 새로운 크라우드소싱 작업을 만들고자 합니다. 다음 멋진 크라우드소싱 앱을 위해 힘을 합칩시다!",
+		"titleContact": "연락하기!",
+		"facebook": "페이스북 그룹",
+		"wiki": "위키다큐멘터리 위키",
+		"blog": "블로그",
+		"email": "이메일",
+		"github": "GitHub 저장소"
 	},
 	"MainPage": {
 		"topicPageName": "주제 문서",
-		"mapSearchPageName": "지도 검색"
+		"mapPlaceMatchPageName": "장소 이름 합치기",
+		"mapSearchPageName": "지도 검색",
+		"wikiTopicErrorMessage": "해당 주제에 대한 위키백과 문서를 현재 언어로 찾을 수 없거나 예기치 않은 오류가 발생했습니다.",
+		"returnToHomeMessage": "랜딩 페이지로 돌아가기"
+	},
+	"WaitPage": {
+		"waitMessage": "잠시만 기다려 주세요... 위키미디어, 위키데이터, 위키미디어 공용, MapWarper, Finna, Flickr에서 데이터를 가져오는 중입니다 ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "소속",
+			"intro": "이 개인 또는 조직이 소속된 조직들입니다."
+		},
+		"Awards": {
+			"headerTitle": "수상",
+			"intro": "이 문서 주제의 후보 선정 및 수상 내역입니다."
+		},
 		"BaseMapDialog": {
+			"chooseMapTitle": "기본 역사적 지도 선택",
 			"chooseMapHelpNote": "팁: Ctrl+클릭을 통해 다수의 지도를 선택할 수 있습니다",
 			"yearAbbreviation": "y."
+		},
+		"Collection": {
+			"headerTitle": "모음집의 작품",
+			"intro": "이 작품들은 이 사람 또는 기관의 모음집에 있습니다. 목록 형식으로 보면 이미지가 없는 작품도 볼 수 있습니다. 날짜 또는 이름순으로 정렬할 수 있습니다. 해당 정보가 있는 항목만 표시됩니다."
+		},
+		"Cups": {
+			"headerTitle": "게임, 시리즈 및 토너먼트",
+			"intro": "이 클럽은 다음 게임, 시리즈 및 토너먼트에 참가했습니다."
+		},
+		"CV": {
+			"headerTitle": "약력",
+			"intro": "이것들은 이 주제 인물의 전문 행사입니다."
+		},
+		"Depicted": {
+			"headerTitle": "다음에 묘사됨",
+			"intro": "이 주제는 이 작품들에 묘사되어 있습니다. 목록 형식으로 보면 다양한 기준으로 작품을 정렬하고, 이미지가 없는 항목도 볼 수 있습니다.",
+			"sortMenu": {
+				"title": "작품 정렬",
+				"tooltip": "작품 정렬",
+				"optionTime": "시간순",
+				"optionAlpha": "알파벳순",
+				"optionClear": "정렬 지우기"
+			},
+			"facetMenu": {
+				"title": "작품 패싯 기준",
+				"tooltip": "다양한 기준으로 작품 패싯 지정",
+				"optionType": "유형",
+				"optionColl": "만든이"
+			},
+			"displayMenu": {
+				"title": "표시 형식",
+				"tooltip": "디스플레이 선택",
+				"optionGallery": "갤러리",
+				"optionList": "목록"
+			},
+			"showAll": "모두"
+		},
+		"Depicts": {
+			"headerTitle": "묘사 대상",
+			"intro": "이 작품은 이 주제들을 묘사합니다. 시간과 이름순으로 정렬할 수 있습니다. 목록 형식으로 보면 이미지가 없는 항목을 포함한 모든 주제를 볼 수 있습니다."
+		},
+		"Events": {
+			"headerTitle": "이벤트",
+			"displayMenu": {
+				"menuTitle": "표시 옵션",
+				"menuTooltip": "표시 옵션",
+				"optionShowTimeline": "타임라인의 이벤트 표시",
+				"optionShowList": "이벤트를 목록 형식으로 표시"
+			},
+			"optionsMenu": {
+				"menuTitle": "옵션",
+				"menuTooltip": "표시할 사실 선택",
+				"optionWorks": "작품 표시",
+				"optionRelatedPeople": "관련 인물의 이벤트 표시",
+				"subRelatedPeopleConf": {
+					"menuTitle": "설정"
+				},
+				"optionRelatedTopics": "관련 주제의 이벤트 표시"
+			}
 		},
 		"Header": {
 			"titleEditText": "제목 편집",
@@ -24,87 +145,24 @@
 			"subtitleEditText": "설명 편집",
 			"subtitleApproveText": "이 설명을 승인합니다"
 		},
-		"TopicImages": {
-			"actionsMenu": {
-				"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
-				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
-				"arrangeByTime": "시간순으로 이미지 정렬"
-			},
-			"facetMenu": {
-				"type": "미디어 유형",
-				"creator": "만든이",
-				"platform": "플랫폼"
-			},
-			"imagesActionMenu": {
-				"menuTitle": "동작",
-				"menuTooltip": "동작",
-				"doGeolocatingText": "위치 설정...",
-				"showImageText": "이미지 표시"
-			},
-			"imagesRemoveMenu": {
-				"menuTitle": "이미지 제거 이유",
-				"shortMenuTitle": "이미지 제거",
-				"menuTooltip": "이미지 제거",
-				"remDepicted": {
-					"search": "주제 검색",
-					"browse": "관련 주제 찾아보기"
-				},
-				"remCreator": {
-					"search": "만든이 검색"
-				},
-				"remInappropriate": {
-					"menuTitle": "부적절한 이유:",
-					"shortMenuTitle": "부적절합니다"
-				}
-			}
-		},
-		"TopicMap": {
-			"hideImagesMenuText": "이미지 숨기기",
-			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
-			"showNearbyPlacesMenuText": "주변 장소 표시",
-			"hideNearbyPlacesMenuText": "주변 장소 숨기기"
-		},
-		"TopicTimeline": {
-			"headerTitle": "타임라인",
-			"centuryText": "C"
-		},
-		"Wikidata": {
-			"extLink": {
-				"linkTitleWD": "위키데이터에서 보기 또는 편집"
-			},
-			"noTopicFoundText": "주제가 없습니다"
-		},
-		"Wikipedia": {
-			"headerTitle": "문서",
-			"extLink": {
-				"linkTitleWP": "위키백과에서 읽기 또는 편집"
-			},
-			"addLink": {
-				"linkTitleWP": "위키백과에 문서 만들기"
-			},
-			"languageMenu": {
-				"menuTitle": "다른 언어로 문서 읽기",
-				"translateArticleText": "이 문서를 내 언어로 번역하기",
-				"otherLanguagestext": "다른 언어"
-			}
-		},
-		"Gallery": {
-			"headerTitle": "주제와 관련된 인물",
-			"menuTitle": "보기",
-			"showBorn": "여기서 태어남",
-			"showDied": "여기서 죽음",
-			"showBuried": "여기에 묻힘",
-			"showAll": "모두"
+		"Heritage": {
+			"headerTitle": "문화유산 요소"
 		},
 		"Locations": {
-			"headerTitle": "위치",
+			"headerTitle": "이 위치에서",
+			"intro": "여기에는 이 문서의 주제 안에 위치한 모든 것이 표시됩니다. 목록 형식으로 보면 저장된 모든 위치를 볼 수 있습니다.",
 			"sortMenu": {
+				"title": "위치 정렬",
+				"tooltip": "위치 정렬",
 				"optionTime": "시간순",
 				"optionAlpha": "알파벳순",
 				"optionDist": "거리순",
 				"optionClear": "정렬 지우기"
 			},
 			"facetMenu": {
+				"title": "위치 패싯 기준",
+				"tooltip": "다양한 기준으로 위치 패싯 지정",
+				"optionType": "유형",
 				"optionColl": "만든이",
 				"optionCity": "위치"
 			},
@@ -116,59 +174,379 @@
 			},
 			"showAll": "모두"
 		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "시간순",
-				"optionAlpha": "알파벳순",
-				"optionClear": "정렬 지우기"
+		"Map": {
+			"headerTitle": "지도 상의 위치"
+		},
+		"Parts": {
+			"headerTitle": "부분",
+			"intro": "이 부분들은 이 주제에 속합니다. 시간과 이름순으로 정렬할 수 있습니다. 목록 형식으로 보면 이미지가 없는 항목을 포함한 모든 주제를 볼 수 있습니다."
+		},
+		"Partof": {
+			"headerTitle": "다음의 일부:",
+			"intro": "이 주제는 이러한 다른 주제의 일부입니다. 시간과 이름순으로 정렬할 수 있습니다. 목록 형식으로 보면 이미지가 없는 항목을 포함한 모든 주제를 볼 수 있습니다."
+		},
+		"Similar": {
+			"headerTitle": "비슷한 주제",
+			"intro": "이 주제와 공통된 핵심 특징을 가진 주제를 찾습니다."
+		},
+		"Effects": {
+			"headerTitle": "효과",
+			"intro": "이것들은 해당 주제의 영향입니다."
+		},
+		"Familytree": {
+			"headerTitle": "가계도"
+		},
+		"Instances": {
+			"headerTitle": "이 주제의 인스턴스",
+			"intro": "이 주제의 인스턴스를 봅니다. 목록 형식으로 보면 이미지가 없는 항목도 볼 수 있습니다."
+		},
+		"Links": {
+			"headerTitle": "이 문서에서 연결된 링크"
+		},
+		"Location": {
+			"headerTitle": "위치",
+			"intro": "이 주제는 이러한 주제 안에 있거나 그 맥락에 있습니다."
+		},
+		"Names": {
+			"headerTitle": "이름",
+			"intro": "이 주제의 이름과 사용 가능한 모든 대체 이름을 봅니다."
+		},
+		"People": {
+			"headerTitle": "주제와 관련된 인물",
+			"intro": "이 사람들은 이 문서의 주제와 관련되어 있습니다. 목록 형식으로 보면 이미지가 없는 사람도 볼 수 있습니다. 날짜 또는 이름순으로 정렬할 수 있습니다. 해당 정보가 있는 사람만 표시됩니다.",
+			"sortMenuTitle": "정렬",
+			"sortMenuTooltip": "정렬 순서 변경",
+			"sortMenuOptionBirth": "출생일별",
+			"sortMenuOptionDeath": "사망일별",
+			"sortMenuOptionName": "이름순",
+			"sortMenuOptionFirst": "이름순",
+			"sortMenuOptionLast": "성(이름)순",
+			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuTitle": "다음 기준으로 패싯",
+			"facetMenuTooltip": "다양한 측면으로 사람 패싯 지정",
+			"facetMenuOptionProfession": "직업",
+			"facetMenuOptionCountry": "국가",
+			"facetMenuOptionCity": "성별"
+		},
+		"Seasons": {
+			"headerTitle": "계절",
+			"intro": "이 활동의 계절별 특징을 살펴보세요."
+		},
+		"Subclasses": {
+			"headerTitle": "이 주제의 하위 클래스",
+			"intro": "이 주제의 하위 클래스를 봅니다. 목록 형식으로 보면 이미지가 없는 항목을 볼 수 있습니다."
+		},
+		"Teams": {
+			"headerTitle": "참가팀",
+			"intro": "이 게임, 시리즈 또는 토너먼트에 참가하는 팀들입니다."
+		},
+		"Things": {
+			"headerTitle": "중점 분야 주제",
+			"intro": "이 주제들은 이 위키프로젝트의 집중 목록에 있습니다."
+		},
+		"Twins": {
+			"headerTitle": "자매 도시",
+			"intro": "법적 또는 비공식적으로 정부가 인정한 파트너십 또는 협력 협정을 맺은 쌍둥이 도시, 자매 도시, 자매 지방자치단체 및 기타 지역입니다. 목록 형식으로 보면 이미지가 없는 항목을 포함하여 모든 주제를 볼 수 있습니다."
+		},
+		"TopicImages": {
+			"headerTitle": "아카이브 이미지",
+			"intro": "이 이미지들은 여러 출처에서 수집되었으며, 항상 주제를 정확하게 나타내지는 않을 수 있습니다. 원본 이미지를 볼 수 있고, 위치 핀이 있는 경우 이미지를 지도에 배치할 수 있습니다.",
+			"actionsMenu": {
+				"menuTitle": "이미지 표시 또는 정렬",
+				"tooltip": "이미지 표시 또는 정렬",
+				"showImagesOnMapMenuText": "지도에 모든 이미지 표시",
+				"showImagesOnTimelineMenuText": "타임라인에 모든 이미지 표시",
+				"selectPortraits": "이 사람의 양질의 초상화 선택",
+				"arrangeByTime": "시간순으로 이미지 정렬",
+				"selectWorks": "작품 이미지 선택"
 			},
 			"facetMenu": {
-				"optionColl": "만든이"
+				"menuTitle": "이미지 패싯 기준",
+				"menuTooltip": "다양한 기준으로 이미지 패싯 지정",
+				"time": "시간",
+				"map": "지도",
+				"people": "사람",
+				"places": "장소",
+				"topics": "주제",
+				"form": "형식",
+				"imageSize": "이미지 크기",
+				"large": "큼",
+				"medium": "보통",
+				"small": "작음",
+				"type": "미디어 유형",
+				"creator": "만든이",
+				"platform": "플랫폼",
+				"source": "출처",
+				"saveSelection": "선택한 항목을 모음집으로 저장",
+				"clear": "선택 항목 지우기"
 			},
-			"displayMenu": {
-				"tooltip": "디스플레이 선택",
-				"optionGallery": "갤러리",
-				"optionList": "목록"
+			"imagesActionMenu": {
+				"menuTitle": "작업",
+				"menuTooltip": "작업",
+				"doGeolocatingText": "위치 설정...",
+				"showImageText": "이미지 표시",
+				"selectFeatured": "헤더 이미지를 선택합니다"
 			},
-			"showAll": "모두"
+			"imagesRemoveMenu": {
+				"menuTitle": "이미지 제거 이유",
+				"shortMenuTitle": "이미지 제거",
+				"menuTooltip": "이미지 제거",
+				"remDepicted": {
+					"menuTitle": "대신 이 주제를 묘사합니다",
+					"shortMenuTitle": "다른 주제를 설명합니다",
+					"search": "주제 검색",
+					"browse": "관련 주제 찾아보기"
+				},
+				"remCreator": {
+					"menuTitle": "대신 이 제작자에 의해 제적되었습니다",
+					"shortMenuTitle": "다른 제작자에 의해 제적되었습니다",
+					"search": "만든이 검색",
+					"browse": "관련 행위자 찾아보기"
+				},
+				"remInappropriate": {
+					"menuTitle": "부적절한 이유:",
+					"shortMenuTitle": "부적절합니다",
+					"privacy": "묘사된 대상의 사생활을 침해합니다",
+					"violence": "극심한 폭력을 묘사합니다",
+					"sex": "노골적인 성행위를 묘사합니다",
+					"copyvio": "저작권을 침해합니다",
+					"explain": "설명을 위한 메모 남기기"
+				}
+			},
+			"imagesViewExternal": "원래 이미지 보기",
+			"imagesViewOnMap": "맵에서 이미지 보기"
+		},
+		"TopicMap": {
+			"headerTitle": "지도 상의 주제",
+			"intro": "주제의 위치가 지도에 표시됩니다. 이미지와 기타 데이터를 지도에 표시하거나 역사 지도를 기본 레이어로 선택할 수도 있습니다.",
+			"chooseHistoricalBasemapMenuText": "기본 역사적 지도 선택...",
+			"hideImagesMenuText": "이미지 숨기기",
+			"chooseTimelineMapsMenuText": "타임라인 지도 선택...",
+			"showNearbyPlacesMenuText": "주변 장소 표시",
+			"hideNearbyPlacesMenuText": "주변 장소 숨기기",
+			"extLink": {
+				"menuTooltip": "오픈스트립트맵에서 보기 또는 편집"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "신문 스크랩",
+			"searhTopicFromArchivesMenuText": "핀란드 국립도서관의 신문에서 검색",
+			"addClipFromArchivesMenuText": "스크랩 추가..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "타임라인",
+			"showEventsOnTimelineMenuText": "타임라인에 주제 이벤트 표시",
+			"centuryText": "C"
 		},
 		"Works": {
+			"headerTitle": "작품",
+			"intro": "이것들은 이 문서의 주제인 사람, 집단 또는 조직의 작품입니다. 작품을 클릭하면 해당 작품에 대한 모든 정보를 모은 문서로 들어갈 수 있습니다. 이미지가 있는 작품만 표시됩니다. 목록 형식으로 보면 저장된 모든 관련 작품을 볼 수 있습니다.",
 			"sortMenuTitle": "정렬",
+			"sortMenuTooltip": "항목 정렬",
 			"sortMenuOptionTime": "시간순",
 			"sortMenuOptionAlpha": "알파벳순",
 			"sortMenuOptionDist": "거리순",
 			"sortMenuOptionClear": "정렬 지우기",
+			"facetMenuTitle": "패싯 기준",
+			"facetMenuTooltip": "다양한 기준으로 작품 패싯 지정",
+			"facetMenuOptionType": "유형",
+			"facetMenuOptionColl": "모음집",
 			"facetMenuOptionCity": "위치",
+			"displayMenuTitle": "표시 형식",
 			"displayMenuTooltip": "디스플레이 선택",
 			"displayMenuOptionGallery": "갤러리",
 			"displayMenuOptionList": "목록",
+			"displayMenuOptionMap": "지도",
 			"showAll": "모두"
 		},
-		"People": {
-			"headerTitle": "주제와 관련된 인물",
-			"sortMenuTitle": "정렬",
-			"sortMenuOptionName": "이름순",
-			"sortMenuOptionFirst": "이름순",
-			"sortMenuOptionLast": "성(이름)순",
-			"facetMenuOptionCountry": "국가"
+		"Wikidata": {
+			"headerTitle": "사실",
+			"extLink": {
+				"linkTitleWD": "위키데이터에서 보기 또는 편집"
+			},
+			"noTopicFoundText": "주제가 없습니다"
+		},
+		"Wikipedia": {
+			"headerTitle": "문서",
+			"missingArticle": "당신의 언어로 이 주제에 관한 문서가 없습니다. 위 언어 메뉴를 선택하여 사용 가능한 다른 언어로 문서를 읽을 수 있습니다. 플러스 아이콘을 클릭하여 당신의 언어로 문서를 만들 수 있습니다.",
+			"missingArticleMissing": "당신의 언어로 이 주제에 관한 문서가 없습니다.",
+			"missingArticleChoose": "위의 언어 메뉴에서 다른 사용 가능한 언어를 선택하여 문서를 읽거나, 더하기 아이콘을 클릭하여 자신의 언어로 문서를 만들 수 있습니다.",
+			"missingArticleCreate": "더하기 아이콘을 클릭하여 자신의 언어로 이 문서를 만들 수 있습니다.",
+			"missingArticleFallback": "다른 언어의 이 문서가 언어 폴백 환경설정에 따라 표시됩니다.",
+			"missingArticleTranslate": "언어 메뉴에서 자신의 언어를 선택하여 이 문서를 번역할 수 있습니다.",
+			"missingArticleAuto": "이 짧은 텍스트는 기록된 사실에서 자동으로 생성되었습니다. 이 초안을 저장하고 문서 편집을 시작할 수 있습니다.",
+			"extLink": {
+				"linkTitleWP": "위키백과에서 읽기 또는 편집"
+			},
+			"addLink": {
+				"linkTitleWP": "위키백과에 문서 만들기"
+			},
+			"languageMenu": {
+				"menuTitle": "다른 언어로 문서 읽기",
+				"translateArticleText": "이 문서를 내 언어로 번역하기",
+				"otherLanguagestext": "다른 언어"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "설명",
+			"addCaption": "설명 추가",
+			"description": "설명",
+			"addDescription": "설명 추가",
+			"creator": "만든이",
+			"creatorUnknown": "알 수 없음",
+			"addCreator": "만든이 추가",
+			"removeCreator": "만든이 제거",
+			"dateDepicted": "묘사된 날짜",
+			"addDateDepicted": "묘사된 날짜 추가",
+			"removeDateDepicted": "묘사된 날짜 제거",
+			"dateCreated": "만든 날짜",
+			"addDateCreated": "생성일 추가",
+			"removeDateCreated": "생성일 제거",
+			"publisher": "게시자",
+			"addPublisher": "게시자 추가",
+			"removePublisher": "게시자 제거",
+			"format": "포맷",
+			"addFormat": "포맷 추가",
+			"removeFormat": "포맷 제거",
+			"technique": "기법",
+			"addTechnique": "기법 추가",
+			"removeTechnique": "기법 제거",
+			"depicted": "이미지 묘사",
+			"genre": "장르",
+			"addGenre": "장르 추가",
+			"removeGenre": "장르 제거",
+			"depicts": "이미지 묘사",
+			"addTopic": "주제 추가",
+			"removeTopic": "주제 제거",
+			"location": "위치",
+			"locationMap": "지도 상의 위치",
+			"addLocation": "위치 추가",
+			"removeLocation": "위치 제거",
+			"address": "도로 주소",
+			"addAddress": "도로 주소 추가",
+			"removeAddress": "도로 주소 제거",
+			"depictedPeople": "묘사된 사람들",
+			"addPerson": "사람 추가",
+			"removePerson": "사람 제거",
+			"event": "이벤트",
+			"addEvent": "이벤트 추가",
+			"removeEvent": "이벤트 제거",
+			"institution": "기관",
+			"collection": "모음집",
+			"addCollection": "모음집 추가",
+			"inventoryNumber": "인벤토리 번호",
+			"inscriptions": "새겨진 글",
+			"measurements": "측정",
+			"copyright": "저작권",
+			"license": "저작권 라이선스",
+			"work": "이미지에 표현된 작품",
+			"photograph": "사진",
+			"image": "이미지",
+			"photographer": "촬영자",
+			"addPhotographData": "사진에 관한 정보 추가",
+			"copyrightNotePD": "이미지는 $1 라이선스로 제공되지만, 메타데이터에 따르면 이미지는 퍼블릭 도메인입니다.",
+			"copyrightNoteSame": "동일한 이미지가 더 개방적인 $1 라이선스로 제공되므로 이 이미지에도 적용됩니다.",
+			"creditline": "크레디트 라인",
+			"attribution": "저작자표시",
+			"digitalCopy": "디지털 사본",
+			"publishingPlatform": "출판 플랫폼",
+			"platformId": "ID",
+			"provider": "콘텐츠 제공자",
+			"imageInfoPage": "이미지 정보 페이지",
+			"imageDimensions": "이미지 크기",
+			"fileSize": "파일 크기",
+			"fileFormat": "파일 형식",
+			"remove": "제거",
+			"moveTo": "다른 필드로 이동",
+			"addData": "데이터 추가",
+			"uploader": "올린이",
+			"rotate": "회전"
+		},
+		"imageActions": {
+			"rotateImage": "이미지 회전",
+			"clockwise": "시계 방향",
+			"counterclockwise": "시계 반대방향",
+			"flip": "뒤집기",
+			"horizontal": "수평",
+			"vertical": "수직"
+		},
+		"closeViewer": "뷰어 닫기"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "장소 이름 합치기"
 		}
 	},
 	"map_search_page": {
 		"HistoricalMapsSearch": {
 			"headerTitle": "역사적 지도 검색",
+			"filterBySourceMenuText": "출처로 필터링...",
+			"filterByTimeMenuText": "시간 기준으로 필터링...",
 			"filterByMapMenuText": "맵을 통해 필터..."
 		}
 	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "역사 기본 지도의 크레딧 및 저작권은 다음에서 확인하세요:",
+			"attribution2PrefixText": "보정된 지도 출처:"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "기본 역사적 지도의 투명도:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "주제 정렬",
+			"tooltip": "주제 정렬",
+			"optionTime": "시간순",
+			"optionStart": "시작 시간별",
+			"optionEnd": "종료 시간별",
+			"optionTitle": "제목별",
+			"optionCause": "원인별",
+			"optionPartof": "항목별 (다음의 일부)",
+			"optionSuperclass": "클래스별 (다음의 하위 클래스)",
+			"optionAlpha": "알파벳순",
+			"optionTitleAlpha": "제목 알파벳순",
+			"optionCreatorAlpha": "만든이 알파벳순",
+			"optionDist": "거리순",
+			"optionRev": "역순 정렬",
+			"optionClear": "정렬 지우기"
+		},
+		"facetMenu": {
+			"title": "다음 기준으로 패싯",
+			"tooltip": "다양한 기준으로 주제 패싯 지정",
+			"optionType": "유형",
+			"optionColl": "만든이",
+			"optionCity": "위치"
+		},
+		"displayMenu": {
+			"title": "표시 이름",
+			"tooltip": "디스플레이 선택",
+			"optionGallery": "갤러리",
+			"optionList": "목록"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "위키다큐멘터리",
 		"ok": "확인",
 		"cancel": "취소",
 		"helpText": "도움말",
+		"expand": "이 문단 펼치기",
+		"collapse": "이 문단 접기",
 		"menus": {
-			"actionMenuTitle": "동작",
-			"actionMenuTooltip": "동작",
+			"actionMenuTitle": "작업",
+			"actionMenuTooltip": "작업",
 			"languageMenuTitle": "언어 선택",
+			"languageMenuTooltip": "내 언어 선택",
 			"myLanguagesItem": "내 언어",
-			"languageMenuTranslate": "이 문서 번역"
+			"languageMenuTranslate": "이 문서를 한국어로 번역"
+		},
+		"languageMenu": {
+			"TranslateUI": "내 언어로 번역하기"
 		},
 		"languages": {
 			"fi": "핀란드어",
@@ -176,5 +554,10 @@
 			"sv": "스웨덴어",
 			"es": "스페인어"
 		}
+	},
+	"Banner": {
+		"WLM": "위키 기념물을 사랑하다 $1",
+		"WLMText": "이 문화유산을 촬영하고 $2 사진 공모전에 참여하세요!",
+		"WLMButton": "이미지 업로드"
 	}
 }
