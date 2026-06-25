@@ -3,6 +3,7 @@
 		"authors": [
 			"Chicocvenancio",
 			"Duke of Wikipädia",
+			"EGobi",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Fitoschido",
@@ -374,10 +375,10 @@
 			"missingArticleTranslate": "Você pode traduzir este artigo para o seu idioma, escolhendo-o no menu de idiomas.",
 			"missingArticleAuto": "Este texto curto foi criado automaticamente a partir dos fatos registrados. Você pode salvar este rascunho e começar a editar o artigo.",
 			"extLink": {
-				"linkTitleWP": "Leia ou edite na Wikipedia"
+				"linkTitleWP": "Leia ou edite na Wikipédia"
 			},
 			"addLink": {
-				"linkTitleWP": "Crie um artigo na Wikipedia"
+				"linkTitleWP": "Crie um artigo na Wikipédia"
 			},
 			"languageMenu": {
 				"menuTitle": "Leia o artigo em outro idioma",
