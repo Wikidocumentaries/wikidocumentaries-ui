@@ -2,17 +2,19 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.Depicted.headerTitle') }}</div>
+            <h1 class="header-title">{{ $t('topic_page.Depicted.headerTitle') }}</h1>
 						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.Depicted.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+            <ToolbarMenu icon="wikiglyph-sort" :tooltip="$t('topic_page.Depicted.sortMenu.tooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('topic_page.Depicted.sortMenu.title') }}</div>
             </ToolbarMenu>
         </div>
+        <div class="intro">{{ $t('topic_page.Depicted.intro') }}</div>
         <div v-if="gallery" class="gallery">
             <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.depicted.value)" class="gallery-item">
                 <img :src="getImageLink(item.image)" class="gallery-image"/>
                 <div class="thumb-image-info">
-                    <div class="thumb-title">{{ item.depicted.label }}</div>
+                    <div class="thumb-credit over">{{ item.typeLabel }}</div>
+                    <div class="gallery-title">{{ item.depicted.label }}</div>
                     <div class="thumb-credit">{{ item.creatorLabel }} {{ item.time }} </div>
                 </div>
             </router-link>
@@ -20,7 +22,7 @@
         <div v-else class="list">
             <div v-for="item in results" :key="item.id" class="listrow">
             <a :href="getItemURL(item.depicted.value)" >
-            <b>{{ item.depicted.label }} {{ item.time }}</b>
+            <b>{{ item.depicted.label }}</b> {{ item.typeLabel }} {{ item.time}}
             </a>
             </div>
         </div>
@@ -66,19 +68,19 @@ export default {
             toolbarActionMenuItems: [
 						{
 	              id: SORT_ACTIONS.BY_LABEL,
-	              text: 'topic_page.Depicted.sortMenuOptionAlpha'
+	              text: 'menus.sortMenu.optionAlpha'
 	          },
             {
                 id: SORT_ACTIONS.BY_TIME,
-                text: 'topic_page.Depicted.sortMenuOptionTime'
+                text: 'menus.sortMenu.optionTime'
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.Depicted.sortMenuOptionRev'
+                text: 'menus.sortMenu.optionRev'
             },
             {
                 id: SORT_ACTIONS.SORT_CLEAR,
-                text: 'topic_page.Depicted.sortMenuOptionClear'
+                text: 'menus.sortMenu.optionClear'
             },
             ],
         };
@@ -90,22 +92,34 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements
         let sparql;
         sparql = `
-SELECT ?depicted ?depictedLabel ?creatorLabel ?image ?time ?desc_url ?type ?typeLabel ?collection ?copyrightLabel ?publisherLabel WHERE {
-    ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q1757 .
-    OPTIONAL { ?depicted wdt:P170 ?creator . }
+SELECT ?depicted ?depictedLabel (GROUP_CONCAT(DISTINCT ?creatorLabel_; separator=", ") as ?creatorLabel) (sample(?image) as ?image) (GROUP_CONCAT(DISTINCT ?time_; separator="/") AS ?time) (GROUP_CONCAT(DISTINCT ?typeLabel_; separator=", ") as ?typeLabel) WHERE {
+  {
+      {
+        ?depicted wdt:P180|wdt:P921|wdt:P1740|wdt:P915|wdt:P840 wd:Q72 .
+      }
+      UNION
+      {
+        wd:Q72 wdt:P1343|wdt:P1441 ?depicted .
+      }
+    }
+    OPTIONAL { ?pi wdt:P1647* wd:P170 .
+              ?pi wikibase:directClaim ?p .
+              ?depicted ?p ?creator. 
+              ?creator rdfs:label ?creatorLabel_ .
+              FILTER(LANG(?creatorLabel_)="fi") }
     OPTIONAL { ?depicted wdt:P18 ?image. }
-    OPTIONAL { ?depicted wdt:P973 ?desc_url. }
-    OPTIONAL { ?depicted wdt:P31 ?type. }
-    OPTIONAL { ?depicted wdt:P195 ?collection. }
+    OPTIONAL { ?depicted wdt:P31 ?type.  
+             ?type rdfs:label ?typeLabel_ .
+              FILTER(LANG(?typeLabel_)="fi") }
     OPTIONAL { ?depicted wdt:P571 ?creation_date. }
     OPTIONAL { ?depicted wdt:P577 ?publishing_date. }
-    OPTIONAL { ?depicted wdt:P6216 ?copyright. }
-    OPTIONAL { ?depicted wdt:P123 ?publisher. }
-		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time)
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,it,es,no,et,nl,ru,ca,se,sms". }
+		BIND(STR(YEAR(COALESCE(?creation_date, ?publishing_date))) AS ?time_)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 }
+GROUP BY ?depicted ?depictedLabel
 LIMIT 1000
-        `.replace(/Q1757/g, this.$store.state.wikidocumentaries.wikidataId);
+        `.replace(/Q72/g, this.$store.state.wikidocumentaries.wikidataId)
+        .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
         axios
             .post(url, body)
@@ -140,7 +154,7 @@ LIMIT 1000
 								currentSort = DEFAULT_SORT.slice();
                 break;
             }
-						this.results = fullResults.sort(sortResults(currentSort)).slice(0,MAX_ITEMS_TO_VIEW);
+						this.results = selectResults(this.$i18n.locale);
         },
 				onDisplayChange (menuItem) {
 					switch (menuItem.id) {
@@ -158,20 +172,6 @@ LIMIT 1000
             var newTitle = title;
             return newTitle;
         },
-        // getCredits (item) {
-        //     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-        //     var newYear = (item.year != "" ? (item.year) + ". " : '');
-        //     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-        //     var newLicense = (item.license != "" ? (item.license + ', ') : '');
-
-        //     var credits = newAuthors + newYear + newInstitutions + newLicense;
-
-        //     if (credits.length > 0 && credits.slice(-2) == ", ") {
-        //         credits = credits.substr(0, credits.length - 2);
-        //     }
-
-        //     return credits;
-        // },
         navigate(target) {
             this.$router.push({ target });
         },
@@ -200,54 +200,5 @@ const selectResults = (lcl) => {
 </script>
 
 <style scoped>
-
-.gallery {
-    height: 35vh;
-    display: flex;
-    padding-left: 10px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
-
-.gallery-item {
-    height: 100%;
-    margin-right: 10px;
-    box-sizing: border-box;
-    position: relative;
-    cursor: pointer;
-}
-
-.gallery-item *{
-    opacity:1;
-}
-
-.gallery-item > img {
-    height: 100%;
-}
-
-.gallery-item:hover * {
-    transition: opacity 80ms ease-in;
-}
-
-.thumb-title {
-    font-family: barlow condensed;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    padding-bottom: 2px;
-}
-
-.noimage {
-    background: var(--main-modal-color);
-    height: 35vh;
-    width: 150px;
-}
-
-.list {
-    columns: 300px 3;
-}
-
-.listrow {
-    margin-left:20px;
-}
 
 </style>

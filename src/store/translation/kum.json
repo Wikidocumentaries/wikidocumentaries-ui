@@ -8,33 +8,18 @@
 		"search": "Излемек"
 	},
 	"topic_page": {
-		"TopicImages": {
-			"imagesRemoveMenu": {
-				"menuTooltip": "Суратны тайдырмакъ",
-				"remInappropriate": {
-					"shortMenuTitle": "Бу къыйышсыз"
-				}
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Заманына гёре",
+				"optionAlpha": "Алифбалы"
 			},
 			"facetMenu": {
-				"time": "заман",
-				"map": "харита",
-				"people": "адамлар",
-				"places": "ерлер",
-				"topics": "темалар",
-				"large": "уллу",
-				"medium": "орта",
-				"small": "гиччи",
-				"creator": "ясавчу",
-				"source": "эник"
-			}
-		},
-		"TopicTimeline": {
-			"headerTitle": "Заман гьыз"
-		},
-		"Gallery": {
-			"menuTitle": "Гёрсетмек",
-			"showDied": "Мунда гечинген",
-			"showBuried": "Мунда гёмюлген",
+				"optionType": "Тайпа",
+				"optionColl": "Ясавчу"
+			},
+			"displayMenu": {
+				"optionList": "Тизме"
+			},
 			"showAll": "Тюм"
 		},
 		"Locations": {
@@ -54,19 +39,36 @@
 			},
 			"showAll": "Тюм"
 		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "Заманына гёре",
-				"optionAlpha": "Алифбалы"
-			},
+		"People": {
+			"sortMenuOptionBirth": "Тувув тархына гёре",
+			"sortMenuOptionDeath": "Оьлюм тархына гёре",
+			"sortMenuOptionName": "Атына гёре",
+			"sortMenuOptionFirst": "Атына гёре",
+			"facetMenuOptionProfession": "Касбу",
+			"facetMenuOptionCity": "Жынс"
+		},
+		"TopicImages": {
 			"facetMenu": {
-				"optionType": "Тайпа",
-				"optionColl": "Ясавчу"
+				"time": "заман",
+				"map": "харита",
+				"people": "адамлар",
+				"places": "ерлер",
+				"topics": "темалар",
+				"large": "уллу",
+				"medium": "орта",
+				"small": "гиччи",
+				"creator": "ясавчу",
+				"source": "эник"
 			},
-			"displayMenu": {
-				"optionList": "Тизме"
-			},
-			"showAll": "Тюм"
+			"imagesRemoveMenu": {
+				"menuTooltip": "Суратны тайдырмакъ",
+				"remInappropriate": {
+					"shortMenuTitle": "Бу къыйышсыз"
+				}
+			}
+		},
+		"TopicTimeline": {
+			"headerTitle": "Заман гьыз"
 		},
 		"Works": {
 			"headerTitle": "Ишлер",
@@ -75,14 +77,6 @@
 			"facetMenuOptionCity": "Макан",
 			"displayMenuOptionList": "Тизме",
 			"showAll": "Тюм"
-		},
-		"People": {
-			"sortMenuOptionBirth": "Тувув тархына гёре",
-			"sortMenuOptionDeath": "Оьлюм тархына гёре",
-			"sortMenuOptionName": "Атына гёре",
-			"sortMenuOptionFirst": "Атына гёре",
-			"facetMenuOptionProfession": "Касбу",
-			"facetMenuOptionCity": "Жынс"
 		}
 	},
 	"general": {

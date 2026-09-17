@@ -1,7 +1,7 @@
 <template>
     <div v-if="(topicLocation && topicLocation.length) || (shownImages && shownImages.length)" class="map-component">
         <div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</div>
+            <h1 class="header-title">{{ $t('topic_page.TopicMap.headerTitle') }}</h1>
             <ToolbarMenu icon="wikiglyph-ellipses" :tooltip="$t('general.menus.actionMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
                 <div slot="menu-title">{{ $t('general.menus.actionMenuTitle') }}</div>
                 <TransparencySliderMenuItem slot="custom-menu-item"></TransparencySliderMenuItem>
@@ -220,7 +220,9 @@ export default {
                 ],
                 view: view
             });
-
+            this.map.getInteractions().forEach(function(interaction) {
+              interaction.setActive(false);
+            }, this);
             this.setTopicOnMap();
             if (this.topicLocation != null) {
                 this.$store.commit('setShouldFitMapToBasemap', true);
@@ -340,14 +342,17 @@ export default {
             this.map.addLayer(this.imageFeaturesLayer);
         },
         handleMapClick (event) {
-            var me = this;
-            this.map.forEachFeatureAtPixel(event.pixel,
-                function(feature) {
-                    if (feature == me.topicFeature) {
-                        me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
-                    }
-                }
-            );
+          this.map.getInteractions().forEach(function(interaction) {
+            interaction.setActive(true);
+          }, this);
+          var me = this;
+          this.map.forEachFeatureAtPixel(event.pixel,
+              function(feature) {
+                  if (feature == me.topicFeature) {
+                      me.shouldShowTopicPopup = !me.shouldShowTopicPopup;
+                  }
+              }
+          );
         },
         topicPointCoordinates () {
             var coords = null;
@@ -431,13 +436,19 @@ export default {
             //console.log(bottomLeftLonLat, topLeftLonLat, bottomRightLonLat);
             var heightLength = turf_distance(bottomLeftLonLat, topLeftLonLat);
             var widthLength = turf_distance(bottomLeftLonLat, bottomRightLonLat);
-            var lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
-            var lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
-            //console.log("lon: ", lon);
-            //console.log("lat: ", lat);
             var distance = heightLength > widthLength ? heightLength : widthLength * 1000 / 2;
-            //console.log(distance);
+            // console.log(distance);
             distance = distance < 10000 ? distance: 10000;
+            var lon, lat
+            if (this.topicLocation) {
+              lon = this.topicLocation.split('(')[1].split(' ')[0];
+              lat = this.topicLocation.split(' ')[1].split(')')[0];
+            } else {
+              lon = bottomLeftLonLat[0] + (bottomRightLonLat[0] - bottomLeftLonLat[0]) / 2;
+              lat = bottomLeftLonLat[1] + (topLeftLonLat[1] - bottomLeftLonLat[1]) / 2;
+            }
+            // console.log("lon: ", lon);
+            // console.log("lat: ", lat);
             var params = {
                 topic: this.wikidocumentaries.title,
                 language: this.$i18n.locale,
@@ -637,7 +648,7 @@ export default {
 .map-popup-nearby-place-container a {
     color: #333;
     box-shadow: none;
-    text-shadow: -1px 0 #ffffff80, 0 1px #ffffff80, 1px 0 #ffffff80, 0 -1px #ffffff80;
+    text-shadow: -1px 1px 0px #ffffffdb, 1px 1px 0px #ffffffdb, -1px -1px 0px #ffffffdb, 1px -1px 0px #ffffffdb, 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
 }
 
 .map-popup-nearby-place-container:hover {
@@ -645,7 +656,7 @@ export default {
 }
 
 .map-popup-nearby-place-container a:hover {
-    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    text-shadow: -1px 1px 0px #ffffffdb, 1px 1px 0px #ffffffdb, -1px -1px 0px #ffffffdb, 1px -1px 0px #ffffffdb, 0px 0px 10px #FFFFFF, 0px 0px 10px #FFFFFF;
     color: var(--main-link-color);
 }
 

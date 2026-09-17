@@ -10,7 +10,8 @@ import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
 import * as messages from './store/messages.js'
 const i18n = new VueI18n({
-  locale: 'fi', // set locale
+  locale: navigator.language.split('-')[0], // set locale
+  fallbackLocale: 'en',
   messages // set locale messages
 })
 
@@ -23,5 +24,10 @@ new Vue({
   store,
   i18n,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  watch: {
+    '$store.state.wikidocumentaries.title': (newValue) => {
+      document.title = newValue || "Wikidocumentaries";
+    }
+  },
 })

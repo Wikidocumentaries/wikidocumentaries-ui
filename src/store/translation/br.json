@@ -1,0 +1,289 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fulup",
+			"Gwenn-Ael",
+			"Susannaanas"
+		]
+	},
+	"LandingPage": {
+		"search": "Klask",
+		"createNew": "Krouiñ un elfenn nevez",
+		"titleStatus": "Statud",
+		"moreBelow": "Lenn muioc'h amañ dindan",
+		"more": "Lenn muioc'h",
+		"moreLink": "Lenn muioc'h",
+		"titleMedia": "Media",
+		"titleTools": "Ostilhoù",
+		"titleLanguages": "Yezhoù",
+		"titleTechnology": "Teknologiezh",
+		"titleCreators": "Krouerien",
+		"titleTeam": "Skipailh",
+		"titleBy": "Raktres gant",
+		"titleTranslate": "Treiñ",
+		"titleContent": "Ouzhpennañ hoc'h evezhiadenn",
+		"titleContact": "Deuit e darempred !",
+		"facebook": "Strollad Facebook",
+		"blog": "Blog",
+		"email": "Postel"
+	},
+	"MainPage": {
+		"mapSearchPageName": "Klask kartennoù"
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "Prizioù"
+		},
+		"BaseMapDialog": {
+			"yearAbbreviation": "b."
+		},
+		"Collection": {
+			"headerTitle": "Labourioù en dastumad"
+		},
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "Hervez an eur",
+				"optionAlpha": "Lizherennek",
+				"optionClear": "Chom hep rummañ"
+			},
+			"facetMenu": {
+				"title": "Labourioù Facet gant",
+				"tooltip": "Labourioù Facet hervez dezverkoù a bep seurt",
+				"optionType": "Seurt",
+				"optionColl": "Krouer"
+			},
+			"displayMenu": {
+				"title": "Diskwel evel",
+				"optionGallery": "Skeudennaoueg",
+				"optionList": "Roll"
+			},
+			"showAll": "An holl"
+		},
+		"Events": {
+			"headerTitle": "Darvoudoù",
+			"displayMenu": {
+				"menuTitle": "Dibarzhioù diskwel",
+				"menuTooltip": "Dibarzhioù diskwel",
+				"optionShowTimeline": "Diskouez an darvoudoù war ur frizenn gronologel"
+			},
+			"optionsMenu": {
+				"menuTitle": "Dibaboù",
+				"menuTooltip": "Diskwel ar fedoù da ziskwel",
+				"optionWorks": "Diskouez al labourioù",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Kefluniañ"
+				}
+			}
+		},
+		"Header": {
+			"titleEditText": "Kemmañ an titl",
+			"titleApproveText": "Aprouiñ an titl-mañ",
+			"subtitleEditText": "Kemmañ an deskrivadur",
+			"subtitleApproveText": "Aprouiñ an deskrivadur-mañ"
+		},
+		"Locations": {
+			"headerTitle": "El lec'h-mañ",
+			"sortMenu": {
+				"title": "Rummañ al lec'hiadurioù",
+				"tooltip": "Rummañ al lec'hiadurioù",
+				"optionTime": "Hervez an eur",
+				"optionAlpha": "Lizherennek",
+				"optionDist": "Hervez ar c'heit",
+				"optionClear": "Chom hep rummañ"
+			},
+			"facetMenu": {
+				"title": "Lec'hiadurioù Facet dre",
+				"tooltip": "Lec'hiadurioù Facet hervez dezverkoù a bep seurt",
+				"optionType": "Seurt",
+				"optionColl": "Krouer",
+				"optionCity": "Lec'hiadur"
+			},
+			"displayMenu": {
+				"title": "Diskwel evel",
+				"optionGallery": "Skeudennaoueg",
+				"optionList": "Roll"
+			},
+			"showAll": "An holl"
+		},
+		"Parts": {
+			"headerTitle": "Lodennoù"
+		},
+		"Partof": {
+			"headerTitle": "Kendestenn"
+		},
+		"Similar": {
+			"headerTitle": "Danvezioù kar"
+		},
+		"Effects": {
+			"headerTitle": "Efedoù",
+			"intro": "Setu aze efedoù an danvez."
+		},
+		"Instances": {
+			"intro": "Gwelet instañsoù an danvez-mañ. Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Links": {
+			"headerTitle": "Liammoù adalek ar pennad-mañ"
+		},
+		"People": {
+			"sortMenuOptionBirth": "Dre zeiziad ganedigezh",
+			"sortMenuOptionDeath": "Dre zeiziad mervel",
+			"sortMenuOptionName": "Dre anv",
+			"sortMenuOptionFirst": "Dre anv-bihan",
+			"sortMenuOptionLast": "Dre anv-familh",
+			"sortMenuOptionClear": "Chom hep rummañ",
+			"facetMenuOptionProfession": "Micher",
+			"facetMenuOptionCountry": "Bro",
+			"facetMenuOptionCity": "Reizh"
+		},
+		"Subclasses": {
+			"headerTitle": "Iskevrennad an danvez-mañ",
+			"intro": "Gwelet iskevrennadoù an danvez-mañ.  Diskwel e stumm ur roll evit gwelet an elfennoù diskeudenn ivez."
+		},
+		"Things": {
+			"headerTitle": "Danvezioù ar roll pennañ",
+			"intro": "Emañ an danvezioù-se war roll pennañ ar Wikiproject-mañ."
+		},
+		"Twins": {
+			"headerTitle": "Kêrioù gevellet"
+		},
+		"TopicImages": {
+			"headerTitle": "Skeudennoù diell",
+			"actionsMenu": {
+				"showImagesOnMapMenuText": "Diskwel an holl skeudennoù war ar gartenn",
+				"selectWorks": "Dibab ar skeudennoù labourioù"
+			},
+			"facetMenu": {
+				"menuTitle": "Skeudennoù Facet gant",
+				"menuTooltip": "Skeudennoù Facet hervez dezverkoù a bep seurt",
+				"time": "eur",
+				"map": "kartenn",
+				"people": "tud",
+				"places": "lec'hioù",
+				"topics": "danvezioù",
+				"form": "furmskrid",
+				"imageSize": "ment ar skeudenn",
+				"large": "bras",
+				"medium": "etre",
+				"small": "bihan",
+				"type": "doare media",
+				"creator": "krouer",
+				"platform": "Leurenn",
+				"source": "mammenn",
+				"saveSelection": "Enrollañ an dibab e stumm un dastumad",
+				"clear": "Diverkañ an dibaboù"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Oberoù",
+				"menuTooltip": "Oberoù",
+				"doGeolocatingText": "Spisaat al lec'h",
+				"showImageText": "Diskouez ar bajenn",
+				"selectFeatured": "Dibab ur skeudenn reollin"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Dilemel ar skeudenn pa...",
+				"shortMenuTitle": "Dilemel ar skeudenn",
+				"menuTooltip": "Dilemel ar skeudenn",
+				"remDepicted": {
+					"search": "Klask an danvez"
+				},
+				"remInappropriate": {
+					"explain": "Lezel un notenn evit displegañ"
+				}
+			},
+			"imagesViewExternal": "Diskwel ar skeudenn orin",
+			"imagesViewOnMap": "Diskwel ar skeudenn war ur gartenn"
+		},
+		"TopicMap": {
+			"headerTitle": "Danvez war ar gartenn",
+			"chooseHistoricalBasemapMenuText": "Dibab ar c'hartennoù diazez istorel...",
+			"hideImagesMenuText": "Kuzhat ar skeudennoù",
+			"chooseTimelineMapsMenuText": "Dibab kartennoù ar frizenn gronologel...",
+			"showNearbyPlacesMenuText": "Diskwel al lec'hioù nes",
+			"hideNearbyPlacesMenuText": "Kuzhat al lec'hioù nes"
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Pennadoù-kazetennoù didroc'het",
+			"searhTopicFromArchivesMenuText": "Klask e kazetennoù Levraoueg vroadel Finland",
+			"addClipFromArchivesMenuText": "Ouzhpenn ur pennad didroc'het..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Frizenn gronologel",
+			"showEventsOnTimelineMenuText": "Diskwel darvoudoù an danvez war ar frizenn gronogel",
+			"centuryText": "K"
+		},
+		"Works": {
+			"headerTitle": "Labourioù",
+			"sortMenuOptionTime": "Dre an amzer",
+			"sortMenuOptionAlpha": "En urzh al lizherenneg",
+			"sortMenuOptionDist": "Dre an hed",
+			"facetMenuOptionType": "Seurt",
+			"facetMenuOptionColl": "Dastumad",
+			"facetMenuOptionCity": "Lec'hiadur",
+			"displayMenuOptionList": "Roll",
+			"showAll": "An holl"
+		},
+		"Wikidata": {
+			"headerTitle": "Fedoù",
+			"extLink": {
+				"linkTitleWD": "Diskwel pe kemmañ e Wikida"
+			},
+			"noTopicFoundText": "N'eo ket bet kavet an danvez"
+		},
+		"Wikipedia": {
+			"headerTitle": "Pennad",
+			"extLink": {
+				"linkTitleWP": "Lenn pe kemmañ e Wikipedia"
+			},
+			"addLink": {
+				"linkTitleWP": "Krouiñ ur pennad e Wikipedia"
+			},
+			"languageMenu": {
+				"menuTitle": "Lenn ar pennad en ur yezh all",
+				"translateArticleText": "Treiñ ar pennad-mañ en ho yezh",
+				"otherLanguagestext": "Yezhoù all"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"publisher": "Embanner",
+			"addPublisher": "Ouzhpennañ un embanner",
+			"format": "Furmad",
+			"genre": "Rumm",
+			"addGenre": "Ouzhpennañ ur rumm",
+			"removeGenre": "Dilemel ar rumm",
+			"image": "Skeudenn"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"filterByMapMenuText": "Sil dre gartenn..."
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTitle": "Dre ditl",
+			"optionCause": "Dre abeg",
+			"optionPartof": "Dre elfennoù m'eo ar re-mañ lodek anezho",
+			"optionSuperclass": "Dre gevrennad m'eo hemañ un iskevrennad anezhañ",
+			"optionRev": "Eilpennañ ar rummañ"
+		}
+	},
+	"general": {
+		"ok": "Mat eo",
+		"cancel": "Nullañ",
+		"helpText": "Skoazell",
+		"menus": {
+			"actionMenuTitle": "Oberoù",
+			"actionMenuTooltip": "Oberoù",
+			"languageMenuTitle": "Cheñch yezh",
+			"myLanguagesItem": "Ma yezhoù"
+		},
+		"languages": {
+			"fi": "Finneg",
+			"en": "Saozneg",
+			"sv": "Svedeg",
+			"es": "Spagnoleg"
+		}
+	}
+}

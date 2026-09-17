@@ -1,0 +1,407 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shem.iz"
+		]
+	},
+	"LandingPage": {
+		"search": "തിരയുക",
+		"searchInputPlaceHolder": "ഒരു വിഷയം കണ്ടെത്തുകയോ പുതിയ വിഷയം സൃഷ്ടിക്കുകയോ ചെയ്യുക",
+		"searchInputSearchOnly": "ഒരു വിഷയം കണ്ടെത്തുക",
+		"showMore": "കൂടുതൽ ഇനങ്ങൾ കാണിക്കുക",
+		"createNew": "പുതിയൊരു ഇനം സൃഷ്ടിക്കുക",
+		"titleDescription": "എന്താണ് വിക്കി ഡോക്യുമെന്ററികൾ?",
+		"titleStatus": "സ്ഥിതി",
+		"status": "സൈറ്റ് ഡെമോ ഘട്ടത്തിലാണ്. നിരവധി പ്രധാന സവിശേഷതകൾ ഇതുവരെ ലഭ്യമല്ലാത്തതിനാൽ സൈറ്റ് പ്രതീക്ഷിച്ചതുപോലെ പ്രവർത്തിച്ചേക്കില്ല.",
+		"more": "കൂടുതൽ വായിക്കുക",
+		"titleTopics": "വിഷയങ്ങൾ",
+		"titleMedia": "മീഡിയ",
+		"titleTools": "ഉപകരണങ്ങൾ",
+		"titleLanguages": "ഭാഷകൾ",
+		"titleTechnology": "സാങ്കേതികവിദ്യ",
+		"titleCreators": "സ്രഷ്ടാക്കൾ",
+		"titleTeam": "ടീം",
+		"titleThanks": "പ്രത്യേക നന്ദി",
+		"titlePartners": "പങ്കാളികൾ",
+		"getInvolved": "പങ്കെടുക്കുക!",
+		"titleTranslate": "പരിഭാഷപ്പെടുത്തുക",
+		"titleContent": "നിങ്ങളുടെ ഉള്ളടക്കം ചേർക്കുക",
+		"titleDevelop": "ഉപകരണങ്ങളും ക്രൌഡ്സോഴ്സിംഗ് ജോലികളും സൃഷ്ടിക്കുക.",
+		"facebook": "ഫേസ്ബുക്ക് ഗ്രൂപ്പ്",
+		"wiki": "വിക്കി ഡോക്യുമെന്ററികൾ",
+		"blog": "ബ്ലോഗ്",
+		"email": "ഇമെയിൽ"
+	},
+	"MainPage": {
+		"mapPlaceMatchPageName": "സ്ഥലനാമങ്ങൾ സംയോജിപ്പിക്കുക",
+		"mapSearchPageName": "മാപ്പുകൾ തിരയുക",
+		"returnToHomeMessage": "ലാൻഡിംഗ് പേജിലേക്ക് മടങ്ങുക"
+	},
+	"topic_page": {
+		"Awards": {
+			"headerTitle": "പുരസ്കാരങ്ങൾ"
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "ചരിത്രപരമായ അടിസ്ഥാന ഭൂപടം തിരഞ്ഞെടുക്കുക"
+		},
+		"CV": {
+			"headerTitle": "സി. വി."
+		},
+		"Depicted": {
+			"sortMenu": {
+				"title": "പ്രവർത്തനങ്ങൾ തരംതിരിക്കുക",
+				"tooltip": "പ്രവർത്തനങ്ങൾ തരംതിരിക്കുക",
+				"optionTime": "സമയത്തിനനുസരിച്ച്",
+				"optionAlpha": "അക്ഷരമാലാക്രമത്തിൽ"
+			},
+			"facetMenu": {
+				"optionType": "തരം",
+				"optionColl": "സ്രഷ്ടാവ്"
+			},
+			"displayMenu": {
+				"title": "പ്രദർശിപ്പിക്കേണ്ടത്",
+				"tooltip": "പ്രദർശനം തിരഞ്ഞെടുക്കുക",
+				"optionGallery": "ചിത്രശാല",
+				"optionList": "പട്ടിക"
+			},
+			"showAll": "എല്ലാം"
+		},
+		"Events": {
+			"headerTitle": "പരിപാടികൾ",
+			"displayMenu": {
+				"optionShowTimeline": "ഒരു ടൈംലൈനിൽ ഇവന്റുകൾ കാണിക്കുക",
+				"optionShowList": "ഇവന്റുകൾ ഒരു പട്ടികയായി കാണിക്കുക"
+			},
+			"optionsMenu": {
+				"menuTooltip": "പ്രദർശിപ്പിക്കേണ്ട വസ്തുതകൾ തിരഞ്ഞെടുക്കുക",
+				"optionWorks": "പ്രവൃത്തികൾ കാണിക്കുക",
+				"optionRelatedPeople": "ബന്ധപ്പെട്ട ആളുകളുടെ പരിപാടികൾ കാണിക്കുക"
+			}
+		},
+		"Header": {
+			"titleEditText": "തലക്കെട്ട് എഡിറ്റ് ചെയ്യുക",
+			"titleApproveText": "ഈ തലക്കെട്ട് അംഗീകരിക്കുക",
+			"subtitleEditText": "വിവരണം എഡിറ്റ് ചെയ്യുക",
+			"subtitleApproveText": "ഈ വിവരണം അംഗീകരിക്കുക"
+		},
+		"Heritage": {
+			"headerTitle": "പൈതൃക ഘടകങ്ങൾ"
+		},
+		"Locations": {
+			"headerTitle": "ഈ സ്ഥലത്ത്",
+			"sortMenu": {
+				"title": "സ്ഥലങ്ങൾ ക്രമീകരിക്കുക",
+				"tooltip": "സ്ഥലങ്ങൾ ക്രമീകരിക്കുക",
+				"optionTime": "സമയത്തിനനുസരിച്ച്",
+				"optionAlpha": "അക്ഷരമാലാക്രമത്തിൽ",
+				"optionDist": "അകലം കൊണ്ട്"
+			},
+			"facetMenu": {
+				"optionType": "തരം",
+				"optionColl": "സ്രഷ്ടാവ്",
+				"optionCity": "സ്ഥലം"
+			},
+			"displayMenu": {
+				"title": "പ്രദർശിപ്പിക്കേണ്ടത്",
+				"tooltip": "പ്രദർശനം തിരഞ്ഞെടുക്കുക",
+				"optionGallery": "ഗാലറി",
+				"optionList": "പട്ടിക"
+			},
+			"showAll": "എല്ലാം"
+		},
+		"Map": {
+			"headerTitle": "ഭൂപടത്തിൽ സ്ഥാനം"
+		},
+		"Parts": {
+			"headerTitle": "ഭാഗങ്ങൾ"
+		},
+		"Partof": {
+			"headerTitle": "ഭാഗമാണ്"
+		},
+		"Similar": {
+			"headerTitle": "സമാന വിഷയങ്ങൾ"
+		},
+		"Effects": {
+			"headerTitle": "ഫലങ്ങൾ",
+			"intro": "ഇവയാണ് വിഷയത്തിന്റെ ഫലങ്ങൾ."
+		},
+		"Familytree": {
+			"headerTitle": "കുടുംബ വൃക്ഷം"
+		},
+		"Links": {
+			"headerTitle": "ഈ ലേഖനത്തിൽ നിന്നുള്ള ലിങ്കുകൾ"
+		},
+		"Names": {
+			"headerTitle": "പേരുകൾ"
+		},
+		"People": {
+			"headerTitle": "വിഷയവുമായി ബന്ധപ്പെട്ട ആളുകൾ",
+			"sortMenuTitle": "ക്രമീകരിക്കുക",
+			"sortMenuOptionBirth": "ജനന തീയതി പ്രകാരം",
+			"sortMenuOptionDeath": "മരണ തീയതി പ്രകാരം",
+			"facetMenuOptionProfession": "തൊഴിൽ",
+			"facetMenuOptionCountry": "രാജ്യം",
+			"facetMenuOptionCity": "ലിംഗം"
+		},
+		"Subclasses": {
+			"headerTitle": "ഈ വിഷയത്തിന്റെ ഉപവിഭാഗങ്ങൾ"
+		},
+		"Teams": {
+			"headerTitle": "പങ്കെടുക്കുന്ന ടീമുകൾ",
+			"intro": "ഈ ഗെയിം, സീരീസ് അല്ലെങ്കിൽ ടൂർണമെന്റ് എന്നിവയിൽ പങ്കെടുക്കുന്ന ടീമുകൾ."
+		},
+		"Twins": {
+			"headerTitle": "ഇരട്ട നഗരങ്ങൾ"
+		},
+		"TopicImages": {
+			"headerTitle": "ആർക്കൈവുകളിൽ നിന്നുള്ള ചിത്രങ്ങൾ",
+			"actionsMenu": {
+				"menuTitle": "ചിത്രങ്ങൾ പ്രദർശിപ്പിക്കുകയോ ക്രമീകരിക്കുകയോ ചെയ്യുക",
+				"tooltip": "ചിത്രങ്ങൾ പ്രദർശിപ്പിക്കുകയോ ക്രമീകരിക്കുകയോ ചെയ്യുക",
+				"showImagesOnMapMenuText": "ഭൂപടത്തിലെ എല്ലാ ചിത്രങ്ങളും കാണിക്കുക",
+				"showImagesOnTimelineMenuText": "ടൈംലൈനിൽ എല്ലാ ചിത്രങ്ങളും കാണിക്കുക",
+				"selectPortraits": "ഈ വ്യക്തിയുടെ നല്ല നിലവാരമുള്ള ഛായാചിത്രങ്ങൾ തിരഞ്ഞെടുക്കുക",
+				"arrangeByTime": "ചിത്രങ്ങൾ സമയത്തിനനുസരിച്ച് ക്രമീകരിക്കുക",
+				"selectWorks": "സൃഷ്ടികളുടെ ചിത്രങ്ങൾ തിരഞ്ഞെടുക്കുക"
+			},
+			"facetMenu": {
+				"time": "സമയം",
+				"map": "ഭൂപടം",
+				"people": "ജനങ്ങൾ",
+				"places": "സ്ഥലങ്ങൾ",
+				"topics": "വിഷയങ്ങൾ",
+				"form": "രൂപം",
+				"imageSize": "ചിത്രത്തിന്റെ വലിപ്പം",
+				"large": "വലുത്",
+				"medium": "ഇടത്തരം",
+				"small": "ചെറുത്",
+				"type": "മീഡിയ തരം",
+				"creator": "സ്രഷ്ടാവ്",
+				"platform": "വേദി",
+				"source": "സ്രോതസ്സ്",
+				"saveSelection": "സെലക്ഷൻ ഒരു ശേഖരമായി സൂക്ഷിക്കുക"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "പ്രവൃത്തികൾ",
+				"menuTooltip": "പ്രവൃത്തികൾ",
+				"doGeolocatingText": "സ്ഥലം ക്രമീകരിക്കുക...",
+				"showImageText": "ചിത്രങ്ങൾ പ്രദർശിപ്പിക്കുക",
+				"selectFeatured": "തലക്കെട്ട് ചിത്രമായി തിരഞ്ഞെടുക്കുക"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "ചിത്രം നീക്കം ചെയ്യുക കാരണം...",
+				"shortMenuTitle": "ചിത്രം നീക്കം ചെയ്യുക",
+				"menuTooltip": "ചിത്രം നീക്കം ചെയ്യുക",
+				"remDepicted": {
+					"search": "വിഷയത്തിനായി തിരയുക"
+				},
+				"remCreator": {
+					"search": "സ്രഷ്ടാവിനെ തിരയുക",
+					"browse": "ബന്ധപ്പെട്ട അഭിനേതാക്കളെ പരിശോധിക്കുക"
+				},
+				"remInappropriate": {
+					"menuTitle": "ഇത് അനുചിതമാണ് കാരണം",
+					"shortMenuTitle": "ഇത് അനുചിതമാണ്",
+					"privacy": "ഇത് ചിത്രീകരിച്ചിരിക്കുന്നവരുടെ സ്വകാര്യത ലംഘിക്കുന്നു",
+					"violence": "അത് അങ്ങേയറ്റത്തെ അക്രമം കാണിക്കുന്നു.",
+					"sex": "ഇത് വ്യക്തമായ ലൈംഗികത പ്രദർശിപ്പിക്കുന്നു.",
+					"copyvio": "ഇത് പകർപ്പവകാശം ലംഘിക്കുന്നു.",
+					"explain": "വിശദീകരിക്കാൻ ഒരു കുറിപ്പ് ഇടുക"
+				}
+			},
+			"imagesViewExternal": "യഥാർത്ഥ ചിത്രം കാണുക",
+			"imagesViewOnMap": "ഭൂപടത്തിൽ ചിത്രം കാണുക"
+		},
+		"TopicMap": {
+			"headerTitle": "ഭൂപടത്തിലെ വിഷയം",
+			"hideImagesMenuText": "ചിത്രങ്ങൾ മറയ്ക്കുക",
+			"chooseTimelineMapsMenuText": "ടൈംലൈൻ മാപ്പുകൾ തിരഞ്ഞെടുക്കുക...",
+			"showNearbyPlacesMenuText": "അടുത്തുള്ള സ്ഥലങ്ങൾ കാണിക്കുക",
+			"hideNearbyPlacesMenuText": "അടുത്തുള്ള സ്ഥലങ്ങൾ മറയ്ക്കുക",
+			"extLink": {
+				"menuTooltip": "ഓപ്പൺസ്ട്രീറ്റ്മാപ്പിൽ കാണുക അല്ലെങ്കിൽ എഡിറ്റ് ചെയ്യുക"
+			}
+		},
+		"TopicNewspapers": {
+			"searhTopicFromArchivesMenuText": "ഫിൻലൻഡിലെ ദേശീയ ലൈബ്രറിയിലെ പത്രങ്ങളിൽ നിന്ന് തിരയുക",
+			"addClipFromArchivesMenuText": "ക്ലിപ്പിംഗ് ചേർക്കുക..."
+		},
+		"Works": {
+			"headerTitle": "പ്രവൃത്തികൾ",
+			"sortMenuTitle": "ക്രമീകരിക്കുക",
+			"sortMenuTooltip": "ഇനങ്ങൾ തരംതിരിക്കുക",
+			"sortMenuOptionTime": "സമയത്തിനനുസരിച്ച്",
+			"sortMenuOptionAlpha": "അക്ഷരമാലാക്രമത്തിൽ",
+			"sortMenuOptionDist": "അകലം കൊണ്ട്",
+			"facetMenuOptionType": "തരം",
+			"facetMenuOptionColl": "ശേഖരം",
+			"displayMenuTitle": "പ്രദർശിപ്പിക്കേണ്ടത്",
+			"displayMenuTooltip": "പ്രദർശനം തിരഞ്ഞെടുക്കുക",
+			"displayMenuOptionGallery": "ചിത്രശാല",
+			"displayMenuOptionList": "പട്ടിക",
+			"displayMenuOptionMap": "ഭൂപടം",
+			"showAll": "എല്ലാം"
+		},
+		"Wikidata": {
+			"headerTitle": "വസ്തുതകൾ",
+			"extLink": {
+				"linkTitleWD": "വിക്കിഡാറ്റയിൽ കാണുകയോ എഡിറ്റ് ചെയ്യുകയോ ചെയ്യുക"
+			},
+			"noTopicFoundText": "വിഷയം കണ്ടെത്തിയില്ല"
+		},
+		"Wikipedia": {
+			"headerTitle": "ലേഖനം",
+			"missingArticleMissing": "നിങ്ങളുടെ ഭാഷയിൽ ഈ വിഷയത്തെക്കുറിച്ചുള്ള ഒരു ലേഖനവുമില്ല.",
+			"missingArticleCreate": "പ്ലസ് ഐക്കണിൽ ക്ലിക്ക് ചെയ്തുകൊണ്ട് നിങ്ങൾക്ക് നിങ്ങളുടെ ഭാഷയിൽ ഈ ലേഖനം സൃഷ്ടിക്കാൻ കഴിയും.",
+			"missingArticleTranslate": "ഭാഷാ മെനുവിൽ നിന്ന് തിരഞ്ഞെടുത്ത് നിങ്ങൾക്ക് ഈ ലേഖനം നിങ്ങളുടെ ഭാഷയിലേക്ക് വിവർത്തനം ചെയ്യാൻ കഴിയും.",
+			"extLink": {
+				"linkTitleWP": "വിക്കിപീഡിയയിൽ വായിക്കുകയോ എഡിറ്റ് ചെയ്യുകയോ ചെയ്യുക"
+			},
+			"addLink": {
+				"linkTitleWP": "വിക്കിപീഡിയയിൽ ഒരു ലേഖനം സൃഷ്ടിക്കുക"
+			},
+			"languageMenu": {
+				"menuTitle": "ലേഖനം മറ്റൊരു ഭാഷയിൽ വായിക്കുക",
+				"translateArticleText": "ഈ ലേഖനം നിങ്ങളുടെ ഭാഷയിലേക്ക് വിവർത്തനം ചെയ്യുക",
+				"otherLanguagestext": "മറ്റു ഭാഷകൾ"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "അടിക്കുറിപ്പ്",
+			"addCaption": "അടിക്കുറിപ്പ് ചേർക്കുക",
+			"addDescription": "വിവരണം ചേർക്കുക",
+			"creator": "സ്രഷ്ടാവ്",
+			"creatorUnknown": "അജ്ഞാത",
+			"addCreator": "സ്രഷ്ടാവിനെ ചേർക്കുക",
+			"removeCreator": "സ്രഷ്ടാവിനെ നീക്കം ചെയ്യുക",
+			"dateCreated": "സൃഷ്ടിച്ച തീയതി",
+			"addDateCreated": "സൃഷ്ടിച്ച തീയതി ചേർക്കുക",
+			"removeDateCreated": "സൃഷ്ടിക്കുന്ന തീയതി നീക്കം ചെയ്യുക",
+			"publisher": "പ്രസാധകൻ",
+			"addPublisher": "പ്രസാധകനെ ചേർക്കുക",
+			"removePublisher": "പ്രസാധകനെ നീക്കം ചെയ്യുക",
+			"addFormat": "ഫോർമാറ്റ് ചേർക്കുക",
+			"removeFormat": "ഫോർമാറ്റ് നീക്കം ചെയ്യുക",
+			"genre": "തരം",
+			"addGenre": "തരം ചേർക്കുക",
+			"removeGenre": "തരം നീക്കം ചെയ്യുക",
+			"addTopic": "വിഷയം ചേർക്കുക",
+			"removeTopic": "വിഷയം നീക്കം ചെയ്യുക",
+			"location": "സ്ഥലം",
+			"locationMap": "ഭൂപടത്തിൽ സ്ഥാനം",
+			"addLocation": "സ്ഥാനം ചേർക്കുക",
+			"removeLocation": "സ്ഥാനം നീക്കം ചെയ്യുക",
+			"address": "തെരുവ് വിലാസം",
+			"addAddress": "തെരുവ് വിലാസം ചേർക്കുക",
+			"removeAddress": "തെരുവ് വിലാസം നീക്കം ചെയ്യുക",
+			"addPerson": "വ്യക്തിയെ ചേർക്കുക",
+			"removePerson": "വ്യക്തിയെ നീക്കം ചെയ്യുക",
+			"event": "പരിപാടി",
+			"addEvent": "പരിപാടി ചേർക്കുക",
+			"removeEvent": "പരിപാടി നീക്കം ചെയ്യുക",
+			"institution": "സ്ഥാപനം",
+			"collection": "ശേഖരം",
+			"addCollection": "ശേഖരം ചേർക്കുക",
+			"measurements": "അളവുകൾ",
+			"copyright": "പകർപ്പവകാശം",
+			"license": "പകർപ്പവകാശ ലൈസൻസ്",
+			"image": "ചിത്രം",
+			"photographer": "ഛായാഗ്രാഹകൻ",
+			"addPhotographData": "ഫോട്ടോയെക്കുറിച്ചുള്ള വിവരങ്ങൾ ചേർക്കുക",
+			"digitalCopy": "ഡിജിറ്റൽ പകർപ്പ്",
+			"publishingPlatform": "പ്രസിദ്ധീകരണ പ്ലാറ്റ്ഫോം",
+			"platformId": "ഐ.ഡി.",
+			"provider": "ഉള്ളടക്ക ദാതാവ്",
+			"imageDimensions": "ചിത്രങ്ങളുടെ അളവുകൾ",
+			"fileSize": "ഫയലിന്റെ വലിപ്പം",
+			"fileFormat": "ഫയൽ ഫോർമാറ്റ്",
+			"remove": "നീക്കം ചെയ്യുക",
+			"moveTo": "മറ്റൊരു മേഖലയിലേക്ക് മാറുക",
+			"addData": "ഡാറ്റ ചേർക്കുക",
+			"uploader": "അപ്ലോഡ് ചെയ്യുന്നയാൾ",
+			"rotate": "തിരിക്കുക"
+		},
+		"imageActions": {
+			"rotateImage": "ചിത്രം തിരിക്കുക",
+			"clockwise": "ഘടികാരദിശയിൽ",
+			"counterclockwise": "എതിർ ഘടികാരദിശയിൽ",
+			"flip": "ഫ്ലിപ്പ് ചെയ്യുക",
+			"vertical": "ലംബമായി"
+		}
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "സ്ഥലനാമങ്ങൾ സംയോജിപ്പിക്കുക"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "ചരിത്രപരമായ ഭൂപടങ്ങൾ തിരയുക",
+			"filterBySourceMenuText": "ഉറവിടം അനുസരിച്ച് ഫിൽറ്റർ ചെയ്യുക...",
+			"filterByTimeMenuText": "സമയത്തെ അടിസ്ഥാനമാക്കി ഫിൽറ്റർ ചെയ്യുക...",
+			"filterByMapMenuText": "ഭൂപടം വഴി ഫിൽറ്റർ ചെയ്യുക..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "ചരിത്രപരമായ അടിസ്ഥാന ഭൂപടത്തിനായി, ഇതിൽ നിന്നുള്ള ക്രെഡിറ്റുകളും പകർപ്പവകാശവും കാണുക"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "ചരിത്രപരമായ അടിസ്ഥാന ഭൂപടത്തിൻറെ സുതാര്യത"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "വിഷയങ്ങൾ ക്രമീകരിക്കുക",
+			"tooltip": "വിഷയങ്ങൾ ക്രമീകരിക്കുക",
+			"optionTime": "സമയത്തിനനുസരിച്ച്",
+			"optionStart": "ആരംഭ സമയമനുസരിച്ച്",
+			"optionEnd": "അവസാന സമയമനുസരിച്ച്",
+			"optionTitle": "തലക്കെട്ട് അനുസരിച്ച്",
+			"optionCause": "കാരണം അനുസരിച്ച്",
+			"optionAlpha": "അക്ഷരമാലാക്രമത്തിൽ",
+			"optionDist": "അകലം കൊണ്ട്"
+		},
+		"facetMenu": {
+			"optionType": "തരം",
+			"optionColl": "സ്രഷ്ടാവ്",
+			"optionCity": "സ്ഥലം"
+		},
+		"displayMenu": {
+			"title": "പ്രദർശിപ്പിക്കേണ്ടത്",
+			"tooltip": "പ്രദർശനം തിരഞ്ഞെടുക്കുക",
+			"optionGallery": "ചിത്രശാല",
+			"optionList": "പട്ടിക"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "വിക്കി ഡോക്യുമെന്ററികൾ",
+		"ok": "ശരി",
+		"cancel": "റദ്ദാക്കുക",
+		"helpText": "സഹായം",
+		"expand": "ഈ വിഭാഗം വിപുലീകരിക്കുക",
+		"collapse": "വിഭാഗം ചുരുക്കുക",
+		"menus": {
+			"actionMenuTitle": "പ്രവൃത്തികൾ",
+			"actionMenuTooltip": "പ്രവൃത്തികൾ",
+			"languageMenuTitle": "ഭാഷ തിരഞ്ഞെടുക്കുക",
+			"languageMenuTooltip": "നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",
+			"myLanguagesItem": "എന്റെ ഭാഷകൾ",
+			"languageMenuTranslate": "ഈ ലേഖനം മലയാളത്തിലേക്ക് വിവർത്തനം ചെയ്യുക"
+		},
+		"languages": {
+			"fi": "ഫിന്നിഷ്",
+			"en": "ഇംഗ്ലീഷ്",
+			"sv": "സ്വീഡിഷ്",
+			"es": "സ്പാനിഷ്"
+		}
+	},
+	"Banner": {
+		"WLM": "വിക്കി സ്മാരകങ്ങളെ സ്നേഹിക്കുന്നു $1",
+		"WLMButton": "ചിത്രം അപ്‌ലോഡ് ചെയ്യുക"
+	}
+}

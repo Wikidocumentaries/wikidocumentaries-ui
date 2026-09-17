@@ -2,41 +2,40 @@
 <div v-if="results.length">
 	<div class="gallery-component">
 		<div class="toolbar">
-            <div class="header-title">{{ $t('topic_page.People.headerTitle') }}</div>
-						<DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
-            <ToolbarMenu icon="wikiglyph-funnel" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
-                <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
-            </ToolbarMenu>
+      <h1 class="header-title">{{ $t('topic_page.People.headerTitle') }}</h1>
+      <DisplayMenu @doDisplayChange="onDisplayChange"></DisplayMenu>
+      <ToolbarMenu icon="wikiglyph-sort" :tooltip="$t('topic_page.People.sortMenuTitle')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+          <div slot="menu-title">{{ $t('topic_page.People.sortMenuTitle') }}</div>
+      </ToolbarMenu>
+    </div>
+    <div class="intro">{{ $t('topic_page.People.intro') }}</div>
+    <div v-if="gallery" class="gallery">
+      <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
+        <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
+        <div v-else class="noimage"></div>
+        <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
+          <div v-if="item.inLabel" class="thumb-credit disappearing over">{{ item.inLabel }}</div>
+          <div v-else class="thumb-credit disappearing over">{{ item.outLabel }}</div>
+          <div class="gallery-title">{{ item.person.label }}</div>
+          <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} <span v-if="item.playpositionLabel"> ({{ item.playpositionLabel }})</span> {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
         </div>
-        <div v-if="gallery" class="gallery">
-            <!--img :src="wikidocumentaries.galleryImageURL" class="gallery-image"/-->
-            <router-link tag="div" v-for="item in results" :key="item.id" :to="getItemURL(item.person.value)" class="gallery-item">
-                <img v-if="item.image" :src="getImageLink(item.image)" class="gallery-image"/>
-                <div v-else class="noimage"></div>
-                <div :class="(item.image ? 'thumb-image-info' : 'thumb-image-info-plain')">
-                    <div v-if="item.inLabel" class="thumb-credit disappearing">{{ item.inLabel }}</div>
-                    <div v-else class="thumb-credit disappearing">{{ item.outLabel }}</div>
-                    <div class="thumb-title">{{ item.person.label }}</div>
-                    <div class="thumb-credit appearing">{{ item.nationality }} {{ item.professionLabel }} {{ item.p }} {{ item.birth_year }}–{{ item.death_year }}</div>
-                </div>
-                <!--div class="thumb-image-header"-->
-                <div>
-                    <div class="left-align">
-                        <!--ImagesActionMenu></ImagesActionMenu-->
-                    </div>
-                    <div class="right-align">
-                        <!--ImagesRemoveMenu></ImagesRemoveMenu-->
-                    </div>
-                </div>
-            </router-link>
-        </div>
-				<div v-else class="list">
-            <div v-for="item in results" :key="item.id" class="listrow">
-            <a :href="getItemURL(item.person.value)" >
-            	<b>{{ item.person.label }}</b> {{ item.professionLabel }} {{ item.birth_year }}–{{ item.death_year }}
-            </a>
-            </div>
-        </div>
+      </router-link>
+    </div>
+    <div v-else class="list">
+      <div v-for="item in results" :key="item.id" class="listrow">
+        <a :href="getItemURL(item.person.value)" >
+          <span v-if="item.inLabel">{{ item.inLabel }} </span><b>{{ item.person.label }}</b><span v-if="item.outLabel && !item.inLabel"><i> {{ item.outLabel }}</i></span><span v-if="item.professionLabel">, {{ item.professionLabel }}</span> <span v-if="item.playpositionLabel"> ({{ item.playpositionLabel }})</span> <span v-if="item.birth_year || item.death_year">({{ item.birth_year }}–{{ item.death_year }})</span>
+        </a>
+      </div>
+    </div>
+    <div v-if="wikidocumentaries.wikidata.instance_of.id == 'Q5'">
+    <div class="toolbar">
+      <h1 class="header-title">{{ $t('topic_page.Familytree.headerTitle') }}</h1>
+    </div>
+    <div>
+      <iframe :src="entitreeLink" width="100%" height="500" style="border:none;"></iframe>
+    </div>
+    </div>
 	</div>
 </div>
 </template>
@@ -51,10 +50,11 @@ import DisplayMenu from '@/components/menu/DisplayMenu'
 
 const SORT_ACTIONS = {
 		BY_LABEL: 0,
-    BY_BIRTH: 1,
-    BY_DEATH: 2,
-    SORT_REVERSE: 3,
-    SORT_CLEAR: 4
+    BY_LASTNAME: 1,
+    BY_BIRTH: 2,
+    BY_DEATH: 3,
+    SORT_REVERSE: 4,
+    SORT_CLEAR: 5
 }
 
 const DISPLAY_ACTIONS = {
@@ -62,7 +62,7 @@ const DISPLAY_ACTIONS = {
 	LIST: 1,
 }
 
-const MAX_ITEMS_TO_VIEW = 50;
+const MAX_ITEMS_TO_VIEW = 1000;
 const DEFAULT_SORT = ["person.label"];
 
 let fullResults, currentSort, currentDisplay;
@@ -83,6 +83,10 @@ export default {
 	              text: 'topic_page.People.sortMenuOptionName'
 	          },
             {
+                id: SORT_ACTIONS.BY_LASTNAME,
+                text: 'topic_page.People.sortMenuOptionLast'
+            },
+            {
                 id: SORT_ACTIONS.BY_BIRTH,
                 text: 'topic_page.People.sortMenuOptionBirth'
             },
@@ -92,7 +96,7 @@ export default {
             },
             {
                 id: SORT_ACTIONS.SORT_REVERSE,
-                text: 'topic_page.People.sortMenuOptionRev'
+                text: "menus.sortMenu.optionRev"
             },
             {
                 id: SORT_ACTIONS.SORT_CLEAR,
@@ -108,40 +112,48 @@ export default {
         const statements = this.$store.state.wikidocumentaries.wikidata.statements;
         let sparql;
         sparql = `
-SELECT ?person ?personLabel (GROUP_CONCAT(DISTINCT ?inLabel) as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel) as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) WHERE {
+SELECT ?person ?personLabel ?sexLabel (SAMPLE(?lastnameLabel) AS ?lastnameLabel) (GROUP_CONCAT(DISTINCT ?inLabel_; separator = ", ") as ?inLabel) (GROUP_CONCAT(DISTINCT ?outLabel_; separator = ", ") as ?outLabel) (SAMPLE(?image) as ?image) (SAMPLE(?birth_year) AS ?birth_year) (SAMPLE(?death_year) AS ?death_year) (GROUP_CONCAT(DISTINCT ?professionLabel_; separator=", ") as ?professionLabel) (SAMPLE(?nationality) AS ?nationality) (GROUP_CONCAT(DISTINCT ?playpositionLabel_; separator = ", ") as ?playpositionLabel) WHERE {
 
     ?person wdt:P31 wd:Q5.
     {
       { 
         ?out wikibase:directClaim ?rel_out .
         ?person ?rel_out wd:Q314595 .
-        ?out rdfs:label ?outLabel .
-        FILTER(LANG(?outLabel)="fi")
+        ?out rdfs:label ?outLabel_ .
+        FILTER(LANG(?outLabel_)="fi")
       }
       UNION
       { 
         ?in wikibase:directClaim ?rel_in .
         wd:Q314595 ?rel_in ?person .
-        ?in rdfs:label ?inLabel .
-        FILTER(LANG(?inLabel)="fi")
+        ?in rdfs:label ?inLabel_ .
+        FILTER(LANG(?inLabel_)="fi")
       }
     }
+    OPTIONAL { ?person wdt:P21 ?sex. 
+              ?sex rdfs:label ?sexLabel .
+              FILTER(LANG(?sexLabel)="fi") }
     OPTIONAL { ?person wdt:P18 ?image. }
+    OPTIONAL { ?person wdt:P734 ?lastname. 
+              ?lastname rdfs:label ?lastnameLabel .
+              FILTER(LANG(?lastnameLabel)="fi") }
     OPTIONAL { ?person wdt:P569 ?birth.
               BIND(STR(YEAR(?birth)) AS ?birth_year)}
     OPTIONAL { ?person wdt:P570 ?death.
               BIND(STR(YEAR(?death)) AS ?death_year)}
     OPTIONAL { ?person wdt:P106 ?profession.
-              ?profession rdfs:label ?professionLabel .
-              FILTER(LANG(?professionLabel)="fi") }
+              ?profession rdfs:label ?professionLabel_ .
+              FILTER(LANG(?professionLabel_)="fi") }
     OPTIONAL { ?person wdt:P27 ?country.
               ?country wdt:P1549 ?nationality .
               FILTER(LANG(?nationality)="fi") }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "fi,sv,en,fr,no,se,et,nl,de,ru,es,it,ca". }
+    OPTIONAL { ?person wdt:P413 ?playposition.
+              ?playposition rdfs:label ?playpositionLabel_ 
+              FILTER(LANG(?playpositionLabel_)="fi") }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],fi,sv,en,de,fr,it,es,no,nb,et,nl,pl,ca,se,sms,is,da,ru,et". }
 
 }
-GROUP BY ?person ?personLabel
-LIMIT 1000
+GROUP BY ?person ?personLabel ?sexLabel
         `.replace(/Q314595/g, this.$store.state.wikidocumentaries.wikidataId)
          .replace(/fi/g, this.$i18n.locale);
         const [url, body] = wdk.sparqlQuery(sparql).split('?');
@@ -157,6 +169,14 @@ LIMIT 1000
     computed: {
         wikidocumentaries () {
             return this.$store.state.wikidocumentaries;
+        },
+        entitreeLink () {
+          let entitreeLink = 
+          "https://www.entitree.com/" +
+          this.$i18n.locale +
+          "/family_tree/" +
+          this.$store.state.wikidocumentaries.wikidataId;
+          return entitreeLink;
         }
     },
     watch: {
@@ -166,6 +186,9 @@ LIMIT 1000
             switch (menuItem.id) {
 						case SORT_ACTIONS.BY_LABEL:
 								currentSort = ["person.label"];
+	              break;
+						case SORT_ACTIONS.BY_LASTNAME:
+								currentSort = ["lastnameLabel"];
 	              break;
             case SORT_ACTIONS.BY_BIRTH:
 								currentSort = ["birth_year", "person.label"];
@@ -201,20 +224,6 @@ LIMIT 1000
             var newTitle = title;
             return newTitle;
         },
-        // getCredits (item) {
-        //     var newAuthors = (item.authors != "" ? (item.authors + ', ') : '');
-        //     var newYear = (item.year != "" ? (item.year) + ". " : '');
-        //     var newInstitutions = (item.institutions != "" ? (item.institutions + ', ') : '');
-        //     var newLicense = (item.license != "" ? (item.license + ', ') : '');
-
-        //     var credits = newAuthors + newYear + newInstitutions + newLicense;
-
-        //     if (credits.length > 0 && credits.slice(-2) == ", ") {
-        //         credits = credits.substr(0, credits.length - 2);
-        //     }
-
-        //     return credits;
-        // },
         navigate(target) {
             this.$router.push({ target });
         },
@@ -231,6 +240,7 @@ const selectResults = (lcl) => {
 	let filteredResults = fullResults;
 	if (currentSort[0].includes("birth_year")) filteredResults = filteredResults.filter(x => x.birth_year);
 	if (currentSort[0].includes("death_year")) filteredResults = filteredResults.filter(x => x.death_year);
+	if (currentSort[0].includes("lastnameLabel")) filteredResults = filteredResults.filter(x => x.lastnameLabel);
 	if (currentDisplay === DISPLAY_ACTIONS.GALLERY) {
 		if (filteredResults.find(x => x.image)) { // If GALLERY and at least one image
 			filteredResults = filteredResults.filter(x => x.image); // select only results with an image
@@ -244,37 +254,4 @@ const selectResults = (lcl) => {
 </script>
 
 <style scoped>
-
-.thumb-title {
-    font-family: barlow condensed;
-    text-transform: uppercase;
-    font-size: 1.2em;
-	padding-bottom: 2px;
-}
-
-.appearing {
-    height: 0;
-    opacity: 0;
-    transition: height 80ms ease-in;
-}
-
-.gallery-item:hover .appearing {
-    height:unset;
-    opacity: 1;
-}
-
-.noimage {
-    background: var(--main-blue);
-    height: 35vh;
-    width: 150px;
-}
-
-.list {
-    columns: 300px 3;
-}
-
-.listrow {
-    margin-left:20px;
-}
-
 </style>

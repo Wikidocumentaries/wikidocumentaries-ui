@@ -1,5 +1,5 @@
 <template>
-    <ToolbarMenu icon="wikiglyph-view-details" :tooltip="$t('topic_page.Works.displayMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
+    <ToolbarMenu icon="wikiglyph-display" :tooltip="$t('topic_page.Works.displayMenuTooltip')" :items="toolbarActionMenuItems" @doMenuItemAction="onDoMenuItemAction">
         <div slot="menu-title">{{ $t('topic_page.Works.displayMenuTitle') }}</div>
     </ToolbarMenu>
 </template>
@@ -10,7 +10,7 @@ import ToolbarMenu from '@/components/menu/ToolbarMenu'
 
 const MENU_ACTIONS = {
     GALLERY: 0,
-    LIST: 1,
+    LIST: 1
 }
 
 export default {
@@ -28,7 +28,7 @@ export default {
                 {
                     id: MENU_ACTIONS.LIST,
                     text: 'topic_page.Works.displayMenuOptionList'
-                },
+                }
             ],
         };
     },
