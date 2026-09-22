@@ -1,4 +1,5 @@
 'use strict'
+const log = require('why-is-node-running')
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
@@ -39,3 +40,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
     ))
   })
 })
+
+setInterval(function () {
+  log() // logs out active handles that are keeping node running
+}, 15*1000)
