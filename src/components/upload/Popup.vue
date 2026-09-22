@@ -1,0 +1,646 @@
+<!-- 
+ This component defines the behavior and structure of the popup for image upload.
+ The popup presents various sections and information to the user about current image informaition.
+ The upload button is for user to upload image.
+  -->
+<template>
+  <div v-if="showModal" class="popup">
+    <!-- While uploading -->
+    <div v-if="inUpload" key="inUpload" class="popup-inner">
+      <div class="toolbar">
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
+        <div class="toolbar-item">
+          <a href="#" class="toolbar-item-a">
+            <i class="wikiglyph wikiglyph-cross"></i>
+          </a>
+          <span class="tooltip">{{ $t("upload.popup.uploadInProgress") }}</span>
+        </div>
+      </div>
+      <InUpload></InUpload>
+      <div class="messages">
+        <div class="status">{{ currentProcess }}</div>
+        <div class="message break">{{ filenameNoUnderscore }}</div>
+      </div>
+      <div class="actions">
+        <div>
+          <button class="button cancel" @click.prevent="hide">
+            {{ $t("upload.popup.cancel") }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Error: Upload response -->
+    <div v-else-if="showResult" key="showResult" class="popup-inner">
+      <div class="toolbar">
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
+        <div class="toolbar-item" @click.prevent="hide">
+          <a href="#" class="toolbar-item-a">
+            <i class="wikiglyph wikiglyph-cross"></i>
+          </a>
+          <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
+        </div>
+      </div>
+      <div class="actions alert">
+        <div class="message">{{ resultMessage }}</div>
+      </div>
+    </div>
+    <!-- Upload successfully completed -->
+    <div v-else-if="uploadFinish" key="uploadFinish" class="popup-inner">
+      <div class="toolbar">
+        <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
+        <div class="toolbar-item" @click.prevent="hide">
+          <a href="#" class="toolbar-item-a">
+            <i class="wikiglyph wikiglyph-cross"></i>
+          </a>
+          <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
+        </div>
+      </div>
+      <div class="messages">
+        <div class="message">{{ $t("upload.popup.uploadSuccess") }}</div>
+        <div class="message break">
+          {{ $t("upload.popup.view") }}
+          <a :href="commonsUrl" target="_blank">{{ filenameNoUnderscore }}</a>
+          {{ $t("upload.popup.inWikimediaCommons") }}
+        </div>
+      </div>
+      <div class="actions">
+        <button class="button upload" @click.prevent="hide">
+          {{ $t("upload.popup.ok") }}
+        </button>
+      </div>
+    </div>
+    <!-- Normal flow -->
+    <div v-else class="popup-inner">
+      <div>
+        <div class="toolbar">
+          <h1 class="header-title">{{ $t("upload.popup.popupTitle") }}</h1>
+          <div class="toolbar-item" @click.prevent="hide">
+            <a href="#" class="toolbar-item-a">
+              <i class="wikiglyph wikiglyph-cross"></i>
+            </a>
+            <span class="tooltip">{{ $t("upload.popup.closePopup") }}</span>
+          </div>
+        </div>
+
+        <!-- Introductory text -->
+        <div class="intro">{{ $t("upload.popup.intro") }}</div>
+
+        <!-- Metadata section -->
+        <div class="columns">
+          <!-- Depicts: Add also other keywords from source. Upload original text as a qualifier. Remove false match from this and other related sections (category). Add all keywords in a separate section. Choose property for this section: depicts / creator / location. -->
+          <div class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-depicted metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.depicted") }}
+              </div>
+              <div class="data">
+                <div class="grid-body unedited">
+                  <a :href="imgDepictUrl" target="_blank">{{ imgDepict }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Filename -->
+          <div class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-view-details metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">{{ $t("upload.popup.filename") }}</div>
+              <div class="data">
+                <div class="grid-body unedited break">{{ filename }}</div>
+              </div>
+            </div>
+          </div>
+          <!-- Caption: Edit option needed, upload missing -->
+          <div class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-stripe-summary metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.caption") }}
+              </div>
+              <div class="data break">
+                <div class="grid-body unedited">{{ title }}</div>
+              </div>
+            </div>
+          </div>
+          <!-- Description: Edit option needed, upload missing -->
+          <div v-if="element.description" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-description metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.description") }}
+              </div>
+              <div
+                v-if="element.description && element.description.length > 0"
+                class="grid-body unedited"
+                v-html="element.description[0]"
+              ></div>
+              <div v-else class="grid-body action">
+                {{ $t("imageViewer.imageMetadata.addDescription") }}
+              </div>
+            </div>
+          </div>
+          <!-- Creator: Upload missing, change style after reconciling, adding to crosswalk table-->
+          <div v-if="element.creators" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-user-avatar metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.creator") }}
+              </div>
+              <div class="grid-body unedited">
+                <ItemPullDown
+                  @clicked="onClickChild"
+                  class="grid-select"
+                  v-bind:term="this.author"
+                >
+                </ItemPullDown>
+              </div>
+            </div>
+          </div>
+          <!-- Date created: Normalized, based on year. No editing-->
+          <div class="grid-row" v-if="element.datecreated">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-production-date metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.dateCreated") }}
+              </div>
+              <div class="data">
+                <div class="grid-body unedited">{{ date }}</div>
+              </div>
+            </div>
+          </div>
+          <!-- License: No editing-->
+          <div v-if="element.license" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-public-domain metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.license") }}
+              </div>
+              <div class="data">
+                <a :href="element.license_link" target="_blank">{{
+                  license
+                }}</a>
+              </div>
+            </div>
+          </div>
+          <!-- Category: Based on Wikidata. No editing, maybe a good idea?-->
+          <div v-if="this.category" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-message metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">{{ $t("upload.popup.category") }}</div>
+              <div class="data">
+                <a :href="this.categoryLink" target="_blank">{{ category }}</a>
+              </div>
+            </div>
+          </div>
+          <!-- Source: Source url, no editing-->
+          <div class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-article metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.imageInfoPage") }}
+              </div>
+              <div class="data break">
+                <a :href="element.infoURL" target="_blank">{{ source }}</a>
+              </div>
+            </div>
+          </div>
+          <!-- Institution: Reconcile possible, upload missing, style change after reconciling. Possible to add to Information as well as SDC, adding to crosswalk table-->
+          <div v-if="element.institutions" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-institution metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.institution") }}
+              </div>
+              <ItemPullDown
+                v-for="institution in element.institutions"
+                :key="institution.id"
+                class="grid-select"
+                v-bind:term="institution"
+              ></ItemPullDown>
+            </div>
+          </div>
+          <!-- Collection: Upload missing, style change after reconciling, adding to crosswalk table-->
+          <div v-if="element.collection" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-collection metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.collection") }}
+              </div>
+              <ItemPullDown
+                class="grid-select"
+                v-if="element.collection"
+                v-bind:term="element.collection"
+              ></ItemPullDown>
+            </div>
+          </div>
+          <!-- Inventory number, upload missing, add to both Information and SDC -->
+          <div v-if="element.inventoryNumber" class="grid-row">
+            <div class="grid-icons">
+              <i class="wikiglyph wikiglyph-id metadata-glyph"></i>
+            </div>
+            <div class="grid-text">
+              <div class="grid-item">
+                {{ $t("imageViewer.imageMetadata.inventoryNumber") }}
+              </div>
+              <div class="data-text">{{ element.inventoryNumber }}</div>
+            </div>
+          </div>
+        </div>
+        <!-- Show upload button(s) -->
+        <div v-if="licenseTemplate">
+          <div class="actions">
+            <button class="button cancel" @click.prevent="hide">
+              {{ $t("upload.popup.cancel") }}
+            </button>
+            <button class="button upload" @click="getCsrfToken">
+              {{ $t("upload.popup.upload") }}
+            </button>
+          </div>
+        </div>
+        <!-- Error: Incompatible licence -->
+        <div v-else>
+          <div class="actions alert">
+            <div class="message">
+              {{ $t("upload.popup.cannotUpload") }}
+              <a
+                href="https://github.com/Wikidocumentaries/wikidocumentaries-ui/issues/new/choose"
+                target="_blank"
+                >{{ $t("upload.popup.Github") }}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import ItemPullDown from "@/components/upload/ItemPullDown";
+import InUpload from "@/components/upload/InUpload";
+import axios from "axios";
+
+export default {
+  name: "PopUp",
+  data() {
+    return {
+      element: {},
+      showModal: false,
+      inUpload: false,
+      showResult: false,
+      uploadFinish: false,
+      currentProcess: "",
+      resultMessage: "",
+      date: "",
+      title: "",
+      author: "",
+      license: "",
+      source: "",
+      filename: "",
+      filenameNoUnderscore: "",
+      category: "",
+      categoryLink: "",
+      licenseTemplate: "",
+      imgDepict: "",
+      imgDepictUrl: "",
+      response: "",
+      commonsUrl: "",
+      finnaId: "",
+    };
+  },
+  components: {
+    ItemPullDown,
+    InUpload,
+  },
+  methods: {
+    show(element) {
+      this.showResult = false;
+      this.showModal = true;
+      this.element = element;
+      if (element.title) {
+        // not remove, encode
+        this.title = element.title[0].replace(/[\.\-\s\<\>]/gi, " ");
+        this.title = this.title.replace(/[\s]{2,}/gi, " ");
+        this.title = this.title.replace(/[\s]$/, "");
+        this.filename =
+          this.title.charAt(0).toUpperCase() + this.title.slice(1);
+      } else {
+        this.title = "";
+      }
+      //further work: multiple creators and their roles
+      if (element.creators[0]) {
+        this.author = element.creators[0].name
+          .split(", ")
+          .reverse()
+          .join(" ")
+          .replace(/[\.\-\s\<\>]/gi, " ");
+        this.filename += "_by_" + this.author;
+      } else {
+        this.author = "";
+      }
+      if (element.year) {
+        this.date =
+          element.year != "" && element.year != null ? element.year : "";
+        this.filename += "_" + this.date;
+      } else {
+        this.date = "";
+      }
+      if (element.license) {
+        this.license = element.license;
+      } else {
+        this.license = "";
+      }
+      if (element.infoURL) {
+        this.source = element.infoURL;
+      } else {
+        this.source = "";
+      }
+      this.filenameNoUnderscore = this.filename.replace(/[_]/g, " ");
+      // this.filename = encodeURIComponent(this.filename.replace(/\s/g, "_"));
+      this.filename = this.filename.replace(/\s/g, "_");
+      this.licenseTemplate = element.licenseTemplate;
+      for (var statement of this.$store.state.wikidocumentaries.wikidata
+        .statements) {
+        if (statement.id === "P373") {
+          this.category = statement.values[0].value;
+          this.categoryLink = statement.values[0].url;
+          console.log(statement);
+        }
+      }
+      this.imgDepict = this.$store.state.wikidocumentaries.title;
+      this.imgDepictUrl =
+        "https://www.wikidata.org/wiki/" +
+        this.$store.state.wikidocumentaries.wikidataId;
+      this.finnaId = element.id;
+      console.log(element.id);
+    },
+    hide() {
+      this.showModal = false;
+    },
+    async getCsrfToken() {
+      this.inUpload = true;
+      this.currentProcess = "Getting token";
+      let requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/csrfToken",
+        method: "get",
+        params: {
+          token: localStorage.getItem("access_token"),
+        },
+      };
+      let response = await axios.request(requestConfig);
+      console.log(response.data.csrf_token);
+      console.log(this.currentProcess);
+      console.log(this.filenameNoUnderscore);
+
+      this.downloadImage(response.data.csrf_token);
+    },
+    async downloadImage(csrf_token) {
+      this.currentProcess = "Downloading";
+      let downloadURL = this.element.downloadURL;
+      let requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/download",
+        method: "get",
+        params: {
+          finnaId: this.finnaId,
+        },
+      };
+      let response = await axios.request(requestConfig);
+      console.log(response.data);
+      if (this.showModal) {
+        this.callupload(csrf_token);
+      } else {
+        this.inUpload = false;
+        console.log("user cancel upload");
+        this.deleteCancledFile();
+      }
+    },
+    deleteCancledFile() {
+      let requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/deleteFile",
+        method: "get",
+        params: {
+          finnaId: this.finnaId,
+        },
+      };
+      let response = axios.request(requestConfig);
+    },
+    async callupload(csrf_token) {
+      this.currentProcess = "Uploading";
+      let infoTemplate = `
+{{Information
+|description=${this.title}
+|date=${this.date}
+|source=${this.source}
+|author=${this.author}
+}}`;
+      let category = `
+[[Category:Images uploaded from Wikidocumentaries]]
+[[Category:${this.category}]]`;
+      let text = `
+${infoTemplate}
+${this.licenseTemplate}
+{{FinnaReview}}
+${category}`;
+      let downloadURL = this.element.downloadURL;
+      let requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/upload",
+        method: "get",
+        params: {
+          token: localStorage.getItem("access_token"),
+          csrf_token: csrf_token,
+          finnaId: this.finnaId,
+          text: text,
+        },
+      };
+      let response = await axios.request(requestConfig);
+      console.log(response.data.uploadResponse);
+      if (response.data.uploadResponse.upload) {
+        console.log("depict start");
+        let title = `File:${response.data.uploadResponse.upload.filename}`;
+        this.inUpload = false;
+        this.uploadFinish = true;
+        this.commonsUrl = "https://commons.wikimedia.org/wiki/" + title;
+        this.depict(title);
+      } else {
+        this.inUpload = false;
+        this.showResult = true;
+        this.resultMessage = response.data.uploadResponse.error.info;
+      }
+    },
+    async depict(title) {
+      this.currentProcess = "Depicting";
+      let requestConfig = {
+        baseURL: this.$store.state.BASE_URL,
+        url: "/depict",
+        method: "get",
+        params: {
+          token: localStorage.getItem("access_token"),
+          title: title,
+          depictId: this.$store.state.wikidocumentaries.wikidataId,
+        },
+      };
+      let response = await axios.request(requestConfig);
+      this.inUpload = false;
+    },
+    onClickChild(value) {
+      this.author = value;
+    },
+  },
+};
+</script>
+<style scoped>
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-inner {
+  background: #fff;
+  max-width: calc(100% - 40px);
+}
+
+.grid-icons {
+  display: inline-block;
+  margin: 0.05em 0.8em 0 0;
+}
+
+.grid-item {
+  font-weight: bold;
+  display: inline-block;
+  color: var(--main-txt-color);
+}
+
+.grid-text {
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.data {
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.columns {
+  column-width: 400px;
+  column-gap: 1.5em;
+  padding: 10px 20px;
+}
+
+.break {
+  word-break: break-all;
+}
+
+.metadata-glyph {
+  color: var(--main-txt-color);
+  font-size: 20px;
+}
+
+.header-title {
+  text-align: left;
+}
+
+.actions {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: flex-end;
+}
+
+.alert {
+  background-color: var(--main-yellow);
+}
+
+.alert a {
+  color: var(--main-red);
+}
+
+.status {
+  font-weight: 600;
+  color: var(--main-red);
+}
+
+.messages {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.message {
+}
+
+.button {
+  border: none;
+  border-radius: 3px;
+  white-space: nowrap;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
+}
+.upload,
+.cancel:hover {
+  background-color: var(--main-link-color);
+  color: white;
+}
+
+.upload:hover {
+  background-color: var(--main-blue);
+}
+
+.disabled {
+  border: 2px;
+  color: var(--main-blue);
+}
+
+.cancel {
+  border: 2px solid var(--main-link-color);
+  color: var(--main-link-color);
+  background-color: white;
+}
+</style>

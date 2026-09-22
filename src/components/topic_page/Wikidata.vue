@@ -22,7 +22,7 @@
                 v-for="(value, index) in statement.values"
                 :key="getID(value) + index"
               >
-                <div class="statement-value">
+                <div class="statement-value break">
                   <div v-if="value.url != null">
                     <a
                       v-if="getTarget(value) != '_self'"
