@@ -6,7 +6,9 @@
                 <slot name="menu-title"></slot>
             </div>
             <div class="options">
-            <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">{{  $t(item.text) }}</a>
+                <a v-for="item in items" :key="item.id" href="#" @click.prevent="doMenuItemAction(item)">
+                    {{ translateItems ? $t(item.text) : item.text }}
+                </a>
             </div>
             <slot name="menu-link"></slot>
             <slot name="custom-menu-item"></slot>
@@ -20,7 +22,10 @@ export default {
     props: {
         icon: String,
         items: Array,
-        tooltip: String
+        tooltip: String,
+        translateItems: {
+            default: true
+        },
     },
     data () {
         return {
@@ -55,6 +60,7 @@ export default {
 .menu-title {
     padding: 6px 10px;
     font-size: 1.3em;
+    font-weight: 600;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -97,7 +103,7 @@ export default {
 }
 
 .options {
-    max-height: 198px;
+    max-height: 205px;
     overflow-y: scroll;
 }
 

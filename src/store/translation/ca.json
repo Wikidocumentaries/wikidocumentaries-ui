@@ -1,0 +1,559 @@
+{
+	"@metadata": {
+		"authors": [
+			"Delta123",
+			"Fitoschido",
+			"Mguix",
+			"Qllach",
+			"SMP",
+			"Skurz0"
+		]
+	},
+	"LandingPage": {
+		"search": "Cerca",
+		"searchInputPlaceHolder": "Trobeu un tema o creeu-ne un de nou",
+		"searchInputSearchOnly": "Trobeu un tema",
+		"showMore": "Mostra més elements",
+		"createNew": "Crea un element nou",
+		"intro": "Wikidocumentals és una wiki per deixar constància: un lloc per recopilar traces històriques i convertir-les en històries. Comenceu a buscar un tema d’interès!",
+		"titleDescription": "Quin és Wikidocumentaries?",
+		"description": "Wikidocumentals és un espai de creació per als historiadors ciutadans.  Combina informació sobre temes: persones, llocs, edificis, esdeveniments i més.  Podeu navegar entre els temes seguint qualsevol connexió registrada com ara relacions familiars, ubicacions, creadors i creacions o afiliació.  Un tema s'il·lustra amb imatges i mapes de museus connectats, arxius i biblioteques.  En Wikidocumentals, serà possible corregir la informació existent i afegir nous temes, portar les vostres pròpies imatges i records, i utilitzar tot el material per als vostres propis propòsits.",
+		"titleStatus": "Estat",
+		"status": "El lloc està en fase de demostració.  Encara no hi ha moltes característiques importants i és possible que el lloc no funcioni tan bé com s'esperava.",
+		"moreBelow": "Llegiu-ne més a sota",
+		"more": "Llegir més",
+		"moreLink": "Llegir més en",
+		"titleTopics": "Temes",
+		"statusTopics": "Els temes es llegeixen des de Wikidata.  Més tard es poden crear nous temes en Wikidocumentaris, si el contingut està fora de l'abast de Wikidata.  Encara serà igualment possible descriure el tema amb les opcions riques de Wikidata.  Els articles actuals són de la Viquipèdia, mentre que els articles es poden crear posteriorment localment per a temes que només existeixen als Wikidocumentals.",
+		"titleMedia": "Multimèdia",
+		"statusMedia": "El suport es llegeix des d'un nombre creixent de repositoris multimèdia que serveixen fitxers de suports amb llicència oberta.  Estem treballant per trobar imatges amb més precisió i mostrar més i millors metadades de cadascuna de les fonts.  Els nous mitjans de comunicació són benvinguts!",
+		"titleTools": "Eines",
+		"statusTools": "Wikidocumentals té tasques i eines per treballar amb el contingut.  Els articles ja es poden traduir entre llengües amb l'eina de traducció del contingut.  Estem preparant paraules clau amb Wikidata i una eina de geoetiquetatge per a les ubicacions de les imatges.  Es poden crear o integrar noves eines divertides i útils.",
+		"titleLanguages": "Llengües",
+		"statusLanguages": "Els wikidocumentals es poden navegar en qualsevol idioma disponible a Wikidata.  Aquesta és una gran oportunitat per a les llengües petites.  Les traduccions es fan a TranslateWiki.",
+		"titleTechnology": "Tecnologia",
+		"statusTechnology": "Wikidocumentaris llegeix les dades del nucli de Wikidata.  A més, els Wikidocumentaris tindran la seva pròpia base Wiki per a temes que estan fora de l'abast de Wikidata.  S'espera que el Wikidata i el Wikidocumentaris es sincronitzin com a bases wiki federades.  En segon lloc, les metadades d'imatge estan enllaçades amb elements Wikidata, i aquestes dades es poden sincronitzar amb les dades estructurades a Wikimedia Commons.  El lloc està construït amb Vue.js i està organitzat a Wikimedia Cloud Services.",
+		"titleCreators": "Creadors",
+		"titleTeam": "Equip",
+		"titleThanks": "Amb agraïment especial per",
+		"titlePartners": "Socis",
+		"titleFunding": "Amb el suport amable de",
+		"titleBy": "Projecte de",
+		"getInvolved": "Impliqueu-vos-hi",
+		"titleTranslate": "Tradueix",
+		"joinTranslate": "Vine i porta el teu idioma als Wikidocumentaris.  Uniu-vos a l'equip de traducció de voluntaris i mireu com el patrimoni cultural connectat es fa realitat en la vostra llengua.",
+		"titleContent": "Afegeix el teu contingut",
+		"joinContent": "Si teniu una foto, un mitjà, un document, un mapa o una recopilació de dades que voleu veure aquí, mirem junts si ja es poden connectar a través d'un dels canals existents o si podem crear nous mètodes de connexió.  També esperem organitzar tallers per a registrar el coneixement històric amb comunitats d'interès.",
+		"titleDevelop": "Crear eines i tasques de producció participativa.",
+		"joinDevelop": "Ens agrada afegir més eines i crear noves tasques de col·laboració col·laborativa amb organitzacions i creadors d'eines. Unim forces per a la propera aplicació de crowdfunding.",
+		"titleContact": "Poseu-vos en contacte!",
+		"facebook": "Grup al Facebook",
+		"wiki": "Wiki de Wikidocumentaris",
+		"blog": "Blog",
+		"email": "Correu electrònic",
+		"github": "Repositori al GitHub"
+	},
+	"MainPage": {
+		"topicPageName": "Pàgina del tema",
+		"mapPlaceMatchPageName": "Combina els noms dels llocs",
+		"mapSearchPageName": "Cercar mapes",
+		"wikiTopicErrorMessage": "No s'ha pogut trobar una pàgina de la Viquipèdia en l'idioma actual o ha succeït un altre error inesperat.",
+		"returnToHomeMessage": "Tornar a la pàgina de benvinguda"
+	},
+	"WaitPage": {
+		"waitMessage": "Un moment, si us plau... Recuperant dades de Viquipèdia, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr ..."
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Afiliacions",
+			"intro": "Organitzacions amb les quals aquesta persona o organització té una afiliació."
+		},
+		"Awards": {
+			"headerTitle": "Premis",
+			"intro": "Nomenacions i premis del tema d'aquesta pàgina."
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "Trieu un o més mapes de base històrics",
+			"chooseMapHelpNote": "Consell: ctrl+clic permet seleccionar molts mapes",
+			"yearAbbreviation": "a."
+		},
+		"Collection": {
+			"headerTitle": "Feines en la col·lecció",
+			"intro": "Aquestes obres són a la col·lecció d'aquesta persona o institució.  Podeu triar mostrar-los com a llista, que també mostra obres sense imatges.  Es poden ordenar per dates o noms.  Tingueu en compte que només es mostraran aquells que tinguin aquesta informació."
+		},
+		"Cups": {
+			"headerTitle": "Jocs, sèries i tornejos",
+			"intro": "Aquest club ha participat en els següents jocs, sèries i tornejos"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Aquests són esdeveniments professionals de la persona del tema."
+		},
+		"Depicted": {
+			"headerTitle": "Representat a",
+			"intro": "Aquest tema es representa en aquests treballs. Ordeneu els treballs segons diferents criteris, mostreu-les com a llista per veure les que no tenen imatge.",
+			"sortMenu": {
+				"title": "Ordena els treballs",
+				"tooltip": "Ordena els treballs",
+				"optionTime": "Per data",
+				"optionAlpha": "Alfabèticament",
+				"optionClear": "Neteja l'ordenació"
+			},
+			"facetMenu": {
+				"title": "Retocat per",
+				"tooltip": "Retocat per criteris diferents.",
+				"optionType": "Tipus",
+				"optionColl": "Autor"
+			},
+			"displayMenu": {
+				"title": "Mostra com a",
+				"tooltip": "Trieu la visualització",
+				"optionGallery": "Galeria",
+				"optionList": "Llista"
+			},
+			"showAll": "Tot"
+		},
+		"Depicts": {
+			"headerTitle": "Representacions",
+			"intro": "Aquesta obra descriu aquests temes.  Els podeu ordenar per temps i nom.  Tingueu en compte que per veure tots els temes, inclosos els que no tenen imatge, heu de veure els temes com una llista."
+		},
+		"Events": {
+			"headerTitle": "Esdeveniments",
+			"displayMenu": {
+				"menuTitle": "Opcions de visualització",
+				"menuTooltip": "Opcions de visualització",
+				"optionShowTimeline": "Mostra els esdeveniments en una línia de temps",
+				"optionShowList": "Mostra els esdeveniments com a llista"
+			},
+			"optionsMenu": {
+				"menuTitle": "Opcions",
+				"menuTooltip": "Seleccioneu els objectes a mostrar",
+				"optionWorks": "Mostra les obres",
+				"optionRelatedPeople": "Mostra els esdeveniments de les persones relacionades",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Configura"
+				},
+				"optionRelatedTopics": "Mostra els esdeveniments de temes relacionats"
+			}
+		},
+		"Header": {
+			"titleEditText": "Editar el títol",
+			"titleApproveText": "Aprovar aquest títol",
+			"subtitleEditText": "Modifica la descripció",
+			"subtitleApproveText": "Aprovar aquesta descripció"
+		},
+		"Heritage": {
+			"headerTitle": "Elements de patrimoni"
+		},
+		"Locations": {
+			"headerTitle": "En aquesta ubicació",
+			"intro": "Aquí veieu tot allò que es troba al tema d'aquesta pàgina. Mostra com a llista per veure totes les ubicacions que s'han emmagatzemat.",
+			"sortMenu": {
+				"title": "Ordena les ubicacions",
+				"tooltip": "Ordena les ubicacions",
+				"optionTime": "Per data",
+				"optionAlpha": "Alfabèticament",
+				"optionDist": "Per distància",
+				"optionClear": "Neteja l'ordenació"
+			},
+			"facetMenu": {
+				"title": "Aspecte de les ubicacions d'acord amb",
+				"tooltip": "Aspecte de les ubicacions segons diferents criteris.",
+				"optionType": "Tipus",
+				"optionColl": "Autor",
+				"optionCity": "Ubicació"
+			},
+			"displayMenu": {
+				"title": "Mostra com a",
+				"tooltip": "Trieu la visualització",
+				"optionGallery": "Galeria",
+				"optionList": "Llista"
+			},
+			"showAll": "Tot"
+		},
+		"Map": {
+			"headerTitle": "Ubicació al mapa"
+		},
+		"Parts": {
+			"headerTitle": "Parts",
+			"intro": "Aquestes parts pertanyen a aquest tema.  Els podeu ordenar per temps i nom.  Per veure tots els temes, inclosos els que no tenen imatge, cal veure els temes com una llista."
+		},
+		"Partof": {
+			"headerTitle": "Part de",
+			"intro": "Aquest tema es part d'aquests altres. Podeu ordenar-los per marca de temps o per nom. Per veure tots els temes, inclosos els que no tenen imatges, cal que els vegeu com una llista."
+		},
+		"Similar": {
+			"headerTitle": "Temes similars",
+			"intro": "Cerca temes que tenen algunes característiques clau comunes amb aquest tema."
+		},
+		"Effects": {
+			"headerTitle": "Efectes",
+			"intro": "Aquests són els efectes del tema."
+		},
+		"Familytree": {
+			"headerTitle": "Arbre familiar"
+		},
+		"Instances": {
+			"headerTitle": "Instàncies d'aquest tema",
+			"intro": "Vegeu instàncies d'aquest tema.  Visualitza com a llista per veure també elements sense una imatge."
+		},
+		"Links": {
+			"headerTitle": "Enllaços d’aquest article"
+		},
+		"Location": {
+			"headerTitle": "Ubicació",
+			"intro": "Aquest tema és situat dins o en el context d'aquests temes."
+		},
+		"Names": {
+			"headerTitle": "Noms",
+			"intro": "Veure els noms d'aquest tema i totes les alternatives disponibles."
+		},
+		"People": {
+			"headerTitle": "Persones relacionades amb el tema",
+			"intro": "Aquestes persones estan associades al tema d'aquesta pàgina.  Podeu triar mostrar-los com a llista, la qual cosa també mostra persones sense imatges.  Es poden ordenar per dates o noms.  Tingueu en compte que només es mostraran aquells que tinguin aquesta informació.",
+			"sortMenuTitle": "Ordena",
+			"sortMenuTooltip": "Canvieu l'ordre de classificació",
+			"sortMenuOptionBirth": "Per data de naixement",
+			"sortMenuOptionDeath": "Per data de defunció",
+			"sortMenuOptionName": "Per nom",
+			"sortMenuOptionFirst": "Per nom",
+			"sortMenuOptionLast": "Per cognom",
+			"sortMenuOptionClear": "Neteja l'ordenació",
+			"facetMenuTitle": "Retocat per",
+			"facetMenuTooltip": "Dividiu les persones per diferents aspectes",
+			"facetMenuOptionProfession": "Professió",
+			"facetMenuOptionCountry": "País",
+			"facetMenuOptionCity": "Gènere"
+		},
+		"Seasons": {
+			"headerTitle": "Temporades",
+			"intro": "Vegeu les temporades d'aquesta activitat."
+		},
+		"Subclasses": {
+			"headerTitle": "Subclasses d'aquest tema",
+			"intro": "Vegeu subclasses d'aquest tema.  Visualitza com a llista per veure també elements sense una imatge."
+		},
+		"Teams": {
+			"headerTitle": "Equips participants",
+			"intro": "Equips que participen en aquest joc, sèrie o torneig."
+		},
+		"Things": {
+			"headerTitle": "Temes de la llista de focus",
+			"intro": "Aquests temes estan a la llista de focus d'aquest projecte Wiki."
+		},
+		"Twins": {
+			"headerTitle": "Ciutats agermanades",
+			"intro": "Ciutats bessones, ciutats agermanades, municipis bessons i altres localitats que tinguin un acord de col·laboració o cooperació, legalment o informalment reconegut pels seus governs. Podeu ordenar-los per data i nom. Per veure tots els temes, inclosos els que no tenen imatges, cal que els vegeu com una llista."
+		},
+		"TopicImages": {
+			"headerTitle": "Imatges dels arxius",
+			"intro": "Aquestes imatges es recullen des de diverses fonts i poden no representar sempre amb precisió el tema.  Podeu visualitzar la imatge original i col·locar la imatge en un mapa si té un pin d'ubicació.",
+			"actionsMenu": {
+				"menuTitle": "Mostra o organitza imatges",
+				"tooltip": "Mostra o organitza imatges",
+				"showImagesOnMapMenuText": "Mostra totes les  imatges en el mapa",
+				"showImagesOnTimelineMenuText": "Mostra totes les imatges a la línia de temps",
+				"selectPortraits": "Seleccioneu els retrats de bona qualitat d'aquesta persona",
+				"arrangeByTime": "Organitza les imatges per data",
+				"selectWorks": "Seleccioneu imatges de treballs"
+			},
+			"facetMenu": {
+				"menuTitle": "Les imatges retocades per",
+				"menuTooltip": "Imatges retocades segons diferents criteris",
+				"time": "data",
+				"map": "mapa",
+				"people": "persones",
+				"places": "llocs",
+				"topics": "temes",
+				"form": "formulari",
+				"imageSize": "mida de la imatge",
+				"large": "gran",
+				"medium": "mitjà",
+				"small": "petit",
+				"type": "tipus de fitxer multimèdia",
+				"creator": "autor",
+				"platform": "plataforma",
+				"source": "font",
+				"saveSelection": "Salva la selecció com a col·lecció",
+				"clear": "Esborra les opcions"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Accions",
+				"menuTooltip": "Accions",
+				"doGeolocatingText": "Estableix la ubicació...",
+				"showImageText": "Mostra la imatge",
+				"selectFeatured": "Tria com imatge de capçalera"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Elimina la imatge perquè...",
+				"shortMenuTitle": "Treure la imatge",
+				"menuTooltip": "Treure la imatge",
+				"remDepicted": {
+					"menuTitle": "En cambio, representa este tema",
+					"shortMenuTitle": "Mostra un altre tema",
+					"search": "Cerca el tema",
+					"browse": "Navegueu pels temes relacionats"
+				},
+				"remCreator": {
+					"menuTitle": "És per aquest autor",
+					"shortMenuTitle": "Per aquest altre autor",
+					"search": "Cerca per autor",
+					"browse": "Navegueu pels actors relacionats"
+				},
+				"remInappropriate": {
+					"menuTitle": "És inadequat perquè",
+					"shortMenuTitle": "És inadequat",
+					"privacy": "Viola la privacitat del representat",
+					"violence": "Mostra violència extrema",
+					"sex": "Mostra sexe explícit",
+					"copyvio": "Viola els drets d'autor",
+					"explain": "Deixar una nota per explicar"
+				}
+			},
+			"imagesViewExternal": "Mostra la imatge original",
+			"imagesViewOnMap": "Visualitza la imatge en un mapa"
+		},
+		"TopicMap": {
+			"headerTitle": "Tema al mapa",
+			"intro": "La ubicació del subjecte es mostra al mapa. També podeu mostrar imatges i altres dades al mapa o triar un mapa històric com a capa base.",
+			"chooseHistoricalBasemapMenuText": "Trieu el(s) mapa(s) base històric(s)...",
+			"hideImagesMenuText": "Ocultar imatges",
+			"chooseTimelineMapsMenuText": "Trieu els mapes per a la línia de temps...",
+			"showNearbyPlacesMenuText": "Mostra llocs propers",
+			"hideNearbyPlacesMenuText": "Amagar els llocs propers",
+			"extLink": {
+				"menuTooltip": "Veure o editar a OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Retalls de diari",
+			"searhTopicFromArchivesMenuText": "Cerca als diaris de la Biblioteca Nacional de Finlàndia",
+			"addClipFromArchivesMenuText": "Afegeix retall..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Línia temporal",
+			"showEventsOnTimelineMenuText": "Mostra els esdeveniments del tema a la línia de temps",
+			"centuryText": "S"
+		},
+		"Works": {
+			"headerTitle": "Treballs",
+			"intro": "Són obres de la persona, col·lectiu o organització, que és el tema d'aquesta pàgina.  Podeu introduir una pàgina recollint tota la informació sobre el treball fent-hi clic.  Només es mostren obres amb imatges.  Mostra com a llista per veure totes les obres relacionades, que han estat emmagatzemades.",
+			"sortMenuTitle": "Ordena",
+			"sortMenuTooltip": "Ordena els elements",
+			"sortMenuOptionTime": "Per data",
+			"sortMenuOptionAlpha": "Per ordre alfabètic",
+			"sortMenuOptionDist": "Per distància",
+			"sortMenuOptionClear": "Neteja l'ordenació",
+			"facetMenuTitle": "Retocat per",
+			"facetMenuTooltip": "Retocs per diferents criteris",
+			"facetMenuOptionType": "Tipus",
+			"facetMenuOptionColl": "Col·lecció",
+			"facetMenuOptionCity": "Ubicació",
+			"displayMenuTitle": "Mostra com a",
+			"displayMenuTooltip": "Escollir la pantalla",
+			"displayMenuOptionGallery": "Galeria",
+			"displayMenuOptionList": "Llista",
+			"displayMenuOptionMap": "Mapa",
+			"showAll": "Tot"
+		},
+		"Wikidata": {
+			"headerTitle": "Dades",
+			"extLink": {
+				"linkTitleWD": "Visualitza o edita a Wikidata"
+			},
+			"noTopicFoundText": "No s’ha trobat el tema"
+		},
+		"Wikipedia": {
+			"headerTitle": "Article",
+			"missingArticle": "No hi ha cap article sobre aquest tema en el vostre idioma.  Podeu llegir l'article en un altre idioma disponible triant des del menú d'idioma anterior.  Podeu crear l'article en el vostre idioma fent clic a la icona més (+).",
+			"missingArticleMissing": "No hi ha cap article sobre aquest tema en la vostra llengua.",
+			"missingArticleChoose": "Podeu llegir l'article en un altre idioma disponible seleccionant des del menú d'idioma de dalt o podeu crear l'article en el vostre idioma fent clic a la icona més (+).",
+			"missingArticleCreate": "Podeu crear aquest article en el vostre idioma fent clic a la icona més (+).",
+			"missingArticleFallback": "Aquest article escrit en un altre idioma es mostra segons les vostres preferències d'idioma alternatiu.",
+			"missingArticleTranslate": "Podeu traduir aquest article a la vostra llengua triant-lo al menú d'idioma.",
+			"missingArticleAuto": "Aquest text curt s'ha creat automàticament a partir dels fets registrats.  Podeu desar aquest esborrany i començar a editar l'article.",
+			"extLink": {
+				"linkTitleWP": "Llegir o editar a la Viquipèdia"
+			},
+			"addLink": {
+				"linkTitleWP": "Crear un article dins Viquipèdia"
+			},
+			"languageMenu": {
+				"menuTitle": "Llegir l'article en una altra llengua",
+				"translateArticleText": "Traduir aquest article a la vostra llengua",
+				"otherLanguagestext": "Altres idiomes"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Llegenda",
+			"addCaption": "Afegeix una llegenda",
+			"description": "Descripció",
+			"addDescription": "Afegeix una descripció",
+			"creator": "Autor",
+			"creatorUnknown": "Desconegut",
+			"addCreator": "Afegeix autor",
+			"removeCreator": "Elimina autor",
+			"dateDepicted": "Data representada",
+			"addDateDepicted": "Afegeix data de la il·lustració",
+			"removeDateDepicted": "Treu la data representada",
+			"dateCreated": "Data de creació",
+			"addDateCreated": "Afegeix la data de creació",
+			"removeDateCreated": "Treu data de creació",
+			"publisher": "Editor",
+			"addPublisher": "Afegeix editor",
+			"removePublisher": "Treu editor",
+			"format": "Format",
+			"addFormat": "Afegeix un format",
+			"removeFormat": "Suprimeix el format",
+			"technique": "Tècnica",
+			"addTechnique": "Afegeix una tècnica",
+			"removeTechnique": "Treu tècnica",
+			"depicted": "Imatge mostra",
+			"genre": "Gènere",
+			"addGenre": "Afegeix un gènere",
+			"removeGenre": "Treu gènere",
+			"depicts": "Imatge mostra",
+			"addTopic": "Afegeix un tema",
+			"removeTopic": "Eliminar tema",
+			"location": "Ubicació",
+			"locationMap": "Ubicació al mapa",
+			"addLocation": "Afegeix la ubicació",
+			"removeLocation": "Suprimeix la ubicació",
+			"address": "Carrer",
+			"addAddress": "Afegir carrer",
+			"removeAddress": "Eliminar el carrer",
+			"depictedPeople": "Persones descrites",
+			"addPerson": "Afegeix una persona",
+			"removePerson": "Elimina la persona",
+			"event": "Esdeveniment",
+			"addEvent": "Afegeix un esdeveniment",
+			"removeEvent": "Elimina l'esdeveniment",
+			"institution": "Institució",
+			"collection": "Col·lecció",
+			"addCollection": "Afegeix col·lecció",
+			"inventoryNumber": "Número d’inventari",
+			"inscriptions": "Inscripcions",
+			"measurements": "Mesures",
+			"copyright": "Drets d’autor",
+			"license": "Llicència de copyright",
+			"work": "Obra representada en la imatge",
+			"photograph": "Fotografia",
+			"image": "Imatge",
+			"photographer": "Fotògraf",
+			"addPhotographData": "Afegir informació sobre la fotografia",
+			"copyrightNotePD": "La imatge té una llicència de $1, però en funció de les metadades, la imatge es troba en domini públic.",
+			"copyrightNoteSame": "La mateixa imatge té una llicència més oberta amb $1, per tant també s'aplica a aquesta imatge.",
+			"attribution": "Reconeixement",
+			"digitalCopy": "Còpia digital",
+			"publishingPlatform": "Plataforma de publicació",
+			"platformId": "Identificador",
+			"provider": "Proveïdor de continguts",
+			"imageInfoPage": "Pàgina d'informació de la imatge",
+			"imageDimensions": "Dimensions de la imatge",
+			"fileSize": "Mida del fitxer",
+			"fileFormat": "Format de fitxer",
+			"remove": "Elimina",
+			"moveTo": "Moure a un altre camp",
+			"addData": "Afegeix dades",
+			"uploader": "Carregador",
+			"rotate": "Girar"
+		},
+		"imageActions": {
+			"rotateImage": "Girar imatge",
+			"clockwise": "sentit horari",
+			"counterclockwise": "en sentit antihorari",
+			"flip": "Tornar",
+			"horizontal": "horitzontal",
+			"vertical": "vertical"
+		},
+		"closeViewer": "Tanca el visualitzador"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Combina els noms dels llocs"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Cercar mapes històrics",
+			"filterBySourceMenuText": "Filtrar per font...",
+			"filterByTimeMenuText": "Filtre basat en la data...",
+			"filterByMapMenuText": "Filtra per mapa..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Per al mapa de base històric, vegeu crèdits i drets d'autor a",
+			"attribution2PrefixText": "Mapa rectificat de"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Transparència del mapa de base històric:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Ordena els temes",
+			"tooltip": "Ordena els temes",
+			"optionTime": "Per data",
+			"optionStart": "Per temps d'inici",
+			"optionEnd": "Per temps de final",
+			"optionTitle": "Per títol",
+			"optionCause": "Per causa",
+			"optionPartof": "Per element això forma part de",
+			"optionSuperclass": "Per classe aquesta és la subclasse de",
+			"optionAlpha": "Alfabèticament",
+			"optionTitleAlpha": "Per títol alfabèticament",
+			"optionCreatorAlpha": "Per autor alfabèticament",
+			"optionDist": "Per distància",
+			"optionRev": "Invertir l'ordenació",
+			"optionClear": "Netejar l'ordenació"
+		},
+		"facetMenu": {
+			"title": "Retocat per",
+			"tooltip": "Temes d'aspecte segons diferents criteris",
+			"optionType": "Tipus",
+			"optionColl": "Autor",
+			"optionCity": "Ubicació"
+		},
+		"displayMenu": {
+			"title": "Mostra com a",
+			"tooltip": "Escollir la pantalla",
+			"optionGallery": "Galeria",
+			"optionList": "Llista"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "Wikidocumentaris",
+		"ok": "D’acord",
+		"cancel": "Cancel·la",
+		"helpText": "Ajuda",
+		"expand": "Expandir aquesta secció",
+		"collapse": "Replega la secció",
+		"menus": {
+			"actionMenuTitle": "Accions",
+			"actionMenuTooltip": "Accions",
+			"languageMenuTitle": "Trieu un idioma",
+			"languageMenuTooltip": "Escolliu la vostra llengua",
+			"myLanguagesItem": "Les meves llengües",
+			"languageMenuTranslate": "Tradueix aquest article al català"
+		},
+		"languageMenu": {
+			"TranslateUI": "Tradueix a la vostra llengua"
+		},
+		"languages": {
+			"fi": "Finès",
+			"en": "Anglès",
+			"sv": "Suec",
+			"es": "Castellà"
+		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Fotografia aquest lloc de patrimoni cultural i participa en la $2 competició de fotografia!",
+		"WLMButton": "Puja la imatge"
+	}
+}

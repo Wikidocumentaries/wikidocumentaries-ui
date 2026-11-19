@@ -1,0 +1,556 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aindriu80",
+			"Smirkybec"
+		]
+	},
+	"LandingPage": {
+		"search": "Cuardaigh",
+		"searchInputPlaceHolder": "Aimsigh topaic nó cruthaigh topaic nua",
+		"searchInputSearchOnly": "Aimsigh topaic",
+		"showMore": "Taispeáin níos mó míreanna",
+		"createNew": "Cruthaigh mír nua",
+		"intro": "Is vicí do stair bheag é Wikidocumentaries - áit chun rianta staire a bhailiú le chéile agus scéalta a dhéanamh astu. Tosaigh trí chuardach a dhéanamh ar ábhar spéise!",
+		"titleDescription": "Cad is cláir faisnéise Vicí ann?",
+		"description": "Is spás cruthaitheora é Wikidocumentaries do staraithe saoránach. Comhcheanglaíonn sé faisnéis faoi thopaicí – daoine, áiteanna, foirgnimh, imeachtaí agus tuilleadh. Is féidir leat nascleanúint a dhéanamh idir na topaicí trí aon nasc taifeadta a leanúint amhail gaolta teaghlaigh, suíomhanna, cruthaitheoirí agus cruthuithe nó cleamhnas. Léirítear topaic le híomhánna agus léarscáileanna ó mhúsaeim, cartlanna agus leabharlanna nasctha. I Wikidocumentaries, beidh sé indéanta faisnéis atá ann cheana a cheartú agus topaicí nua a chur leis, do chuid íomhánna agus cuimhní cinn féin a thabhairt isteach, agus an t-ábhar go léir a úsáid chun do chuspóirí féin.",
+		"titleStatus": "Stádas",
+		"status": "Tá an suíomh i gcéim taispeána. Níl go leor gnéithe tábhachtacha ar fáil fós agus b'fhéidir nach bhfeidhmeoidh an suíomh chomh maith agus a bhíothas ag súil leis.",
+		"moreBelow": "Léigh tuilleadh thíos",
+		"more": "Léigh tuilleadh",
+		"moreLink": "Léigh tuilleadh i",
+		"titleTopics": "Topaicí",
+		"statusTopics": "Léitear topaicí ó Wikidata. Féadfar topaicí nua a chruthú níos déanaí i Wikidocumentaries ina ionad, mura bhfuil an t-ábhar faoi raon feidhme Wikidata. Beidh sé chomh maith céanna indéanta cur síos a dhéanamh ar an topaic leis na roghanna saibhre atá ar fáil i Wikidata. Is as Vicipéid na hailt reatha, ach is féidir ailt a chruthú go háitiúil níos déanaí do thopaicí atá i Wikidocumentaries amháin.",
+		"titleMedia": "Meáin",
+		"statusMedia": "Léitear meáin ó líon méadaitheach stórtha meán a fhreastalaíonn ar chomhaid meán atá ceadúnaithe go hoscailte. Táimid ag obair ar íomhánna a aimsiú níos cruinne agus ar mheiteashonraí níos mó agus níos fearr a thaispeáint ó gach ceann de na foinsí. Fáiltítear roimh fhoinsí meán nua!",
+		"titleTools": "Uirlisí",
+		"statusTools": "Tá tascanna agus uirlisí ag Wikidocumentaries chun oibriú leis an ábhar. Is féidir ailt a aistriú idir teangacha cheana féin leis an uirlis Aistriúcháin Ábhair. Táimid ag ullmhú eochairfhocail le Wikidata agus uirlis gheo-chlibeála do shuíomhanna íomhánna. Is féidir uirlisí nua spraíúla agus úsáideacha a chruthú nó a chomhtháthú.",
+		"titleLanguages": "Teangacha",
+		"statusLanguages": "Is féidir nascleanúint a dhéanamh ar chláir faisnéise Vicí in aon teanga atá ar fáil i Wikidata. Is deis iontach í seo do theangacha beaga. Déantar aistriúcháin in TranslateWiki.",
+		"titleTechnology": "Teicneolaíocht",
+		"statusTechnology": "Léann Wikidocumentaries na sonraí lárnacha ó Wikidata. Ina theannta sin, beidh a Wikibase féin ag Wikidocumentaries le haghaidh topaicí nach bhfuil faoi raon feidhme Wikidata. Táthar ag súil go ndéanfaidh Wikidata agus Wikidocumentaries sioncrónú mar Wikibases cónaidhme. Ar an dara dul síos, tá meiteashonraí íomhá nasctha le míreanna Wikidata, agus is féidir na sonraí seo a shioncrónú leis na Sonraí Struchtúrtha ar Wikimedia Commons. Tá an suíomh tógtha le Vue.js agus tá sé á óstáil ag Wikimedia Cloud Services.",
+		"titleCreators": "Cruthaitheoirí",
+		"titleTeam": "Foireann",
+		"titleThanks": "Le buíochas speisialta le",
+		"titlePartners": "Comhpháirtithe",
+		"titleFunding": "Le tacaíocht chineálta ó",
+		"titleBy": "Tionscadal le",
+		"getInvolved": "Bígí páirteach!",
+		"titleTranslate": "Aistrigh",
+		"joinTranslate": "Tar agus tabhair do theanga leat chuig Wikidocumentaries. Bí linn san fhoireann aistriúcháin dheonach agus féach ar an oidhreacht chultúrtha nasctha ag teacht chun beatha i do theanga féin.",
+		"titleContent": "Cuir d’ábhar leis",
+		"joinContent": "Má tá grianghraf, meán, doiciméad, léarscáil nó bailiúchán sonraí agat ar mhaith leat a fheiceáil anseo, féachaimis le chéile an féidir é a nascadh cheana féin trí cheann de na bealaí atá ann cheana féin nó an féidir linn modhanna ceangail nua a chruthú. Táimid ag tnúth freisin le ceardlanna a eagrú chun eolas stairiúil a thaifeadadh le pobail spéise.",
+		"titleDevelop": "Cruthaigh uirlisí agus tascanna sluafhoinsithe.",
+		"joinDevelop": "Is maith linn níos mó uirlisí a chur leis agus tascanna nua sluafhoinsithe a chruthú i gcomhar le heagraíochtaí agus lucht tógála uirlisí. Déanaimis ár neart a chomhcheangal don chéad aip sluafhoinsithe eile atá iontach!",
+		"titleContact": "Téigh i dteagmháil!",
+		"facebook": "Grúpa Facebook",
+		"wiki": "Wikidocumentaries vicí",
+		"blog": "Blag",
+		"email": "Ríomhphost",
+		"github": "Stór Github"
+	},
+	"MainPage": {
+		"topicPageName": "Leathanach topaice",
+		"mapPlaceMatchPageName": "Comhcheangail ainmneacha áiteanna",
+		"mapSearchPageName": "Cuardaigh léarscáileanna",
+		"wikiTopicErrorMessage": "Ní raibh leathanach Vicipéid don ábhar le fáil sa teanga reatha nó tharla earráid eile gan choinne.",
+		"returnToHomeMessage": "Ar ais chuig an leathanach tuirlingthe"
+	},
+	"WaitPage": {
+		"waitMessage": "Nóiméad, le do thoil... Ag fáil sonraí ó Vicipéid, Wikidata, Wikimedia Commons, MapWarper, Finna, Flickr"
+	},
+	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Cleamhnaithe",
+			"intro": "Eagraíochtaí a bhfuil baint ag an duine nó an eagraíocht seo leo."
+		},
+		"Awards": {
+			"headerTitle": "Duaiseanna",
+			"intro": "Ainmniúcháin agus duaiseanna don ábhar ar an leathanach seo."
+		},
+		"BaseMapDialog": {
+			"chooseMapTitle": "Roghnaigh léarscáil(eanna) bonn stairiúla",
+			"chooseMapHelpNote": "Leid: is féidir go leor léarscáileanna a roghnú le ctrl+cliceáil",
+			"yearAbbreviation": "y."
+		},
+		"Collection": {
+			"headerTitle": "Saothair sa bhailiúchán",
+			"intro": "Tá na saothair seo i mbailiúchán an duine nó na hinstitiúide seo. Is féidir leat iad a thaispeáint mar liosta, a thaispeánann saothair gan íomhánna freisin. Is féidir iad a shórtáil de réir dátaí nó ainmneacha. Tabhair faoi deara nach dtaispeánfar ach iad siúd a bhfuil an fhaisnéis sin acu."
+		},
+		"Cups": {
+			"headerTitle": "Cluichí, sraitheanna agus comórtais",
+			"intro": "D’imir an club seo sna cluichí, sna sraitheanna agus sna comórtais seo a leanas"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Is imeachtaí gairmiúla iad seo de chuid phearsa an ábhair."
+		},
+		"Depicted": {
+			"headerTitle": "Léirithe i",
+			"intro": "Léirítear an topaic seo sna saothair seo. Sórtáil na saothair de réir critéir éagsúla, taispeáin mar liosta chun na cinn gan íomhá a fheiceáil.",
+			"sortMenu": {
+				"title": "Oibreacha sórtála",
+				"tooltip": "Oibreacha sórtála",
+				"optionTime": "De réir ama",
+				"optionAlpha": "De réir aibítre",
+				"optionClear": "Glan sórtáil"
+			},
+			"facetMenu": {
+				"title": "Oibríonn Facet le",
+				"tooltip": "Oibríonn Facet de réir critéir éagsúla",
+				"optionType": "Cineál",
+				"optionColl": "Cruthaitheoir"
+			},
+			"displayMenu": {
+				"title": "Taispeáin mar",
+				"tooltip": "Roghnaigh an taispeántas",
+				"optionGallery": "Gailearaí",
+				"optionList": "Liosta"
+			},
+			"showAll": "Gach"
+		},
+		"Depicts": {
+			"headerTitle": "Léiríonn",
+			"intro": "Léiríonn an saothar seo na topaicí seo. Is féidir leat iad a shórtáil de réir ama agus ainm. Tabhair faoi deara, chun na topaicí uile a fheiceáil, lena n-áirítear na cinn gan íomhá, go gcaithfidh tú na topaicí a fheiceáil mar liosta."
+		},
+		"Events": {
+			"headerTitle": "Imeachtaí",
+			"displayMenu": {
+				"menuTitle": "Roghanna taispeána",
+				"menuTooltip": "Roghanna taispeána",
+				"optionShowTimeline": "Taispeáin imeachtaí ar amlíne",
+				"optionShowList": "Taispeáin imeachtaí mar liosta"
+			},
+			"optionsMenu": {
+				"menuTitle": "Roghanna",
+				"menuTooltip": "Roghnaigh fíricí le taispeáint",
+				"optionWorks": "Taispeáin saothair",
+				"optionRelatedPeople": "Taispeáin imeachtaí daoine gaolmhara",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Cumraigh"
+				},
+				"optionRelatedTopics": "Taispeáin imeachtaí topaicí gaolmhara"
+			}
+		},
+		"Header": {
+			"titleEditText": "Cuir an teideal in eagar",
+			"titleApproveText": "Ceadaigh an teideal seo",
+			"subtitleEditText": "Cuir an cur síos in eagar",
+			"subtitleApproveText": "Ceadaigh an cur síos seo"
+		},
+		"Heritage": {
+			"headerTitle": "Eilimintí oidhreachta"
+		},
+		"Locations": {
+			"headerTitle": "Sa suíomh seo",
+			"intro": "Anseo feiceann tú aon rud atá suite i dtéama an leathanaigh seo. Taispeáin mar liosta chun na suíomhanna go léir atá stóráilte a fheiceáil.",
+			"sortMenu": {
+				"title": "Sórtáil suíomhanna",
+				"tooltip": "Sórtáil suíomhanna",
+				"optionTime": "De réir ama",
+				"optionAlpha": "De réir aibítre",
+				"optionDist": "De réir achair",
+				"optionClear": "Glan sórtáil"
+			},
+			"facetMenu": {
+				"title": "Suíomhanna gné de réir",
+				"tooltip": "Suíomhanna gné de réir critéir éagsúla",
+				"optionType": "Cineál",
+				"optionColl": "Cruthaitheoir",
+				"optionCity": "Suíomh"
+			},
+			"displayMenu": {
+				"title": "Taispeáin mar",
+				"tooltip": "Roghnaigh an taispeántas",
+				"optionGallery": "Gailearaí",
+				"optionList": "Liosta"
+			},
+			"showAll": "Gach"
+		},
+		"Map": {
+			"headerTitle": "Suíomh ar an léarscáil"
+		},
+		"Parts": {
+			"headerTitle": "Páirteanna",
+			"intro": "Baineann na codanna seo leis an ábhar seo. Is féidir leat iad a shórtáil de réir ama agus ainm. Chun na hábhair uile a fheiceáil, lena n-áirítear na cinn gan íomhá, ní mór duit na hábhair a fheiceáil mar liosta."
+		},
+		"Partof": {
+			"headerTitle": "Cuid de",
+			"intro": "Tá an topaic seo mar chuid de na topaicí eile seo. Is féidir leat iad a shórtáil de réir ama agus ainm. Chun na topaicí go léir a fheiceáil, lena n-áirítear na cinn gan íomhá, ní mór duit na topaicí a fheiceáil mar liosta."
+		},
+		"Similar": {
+			"headerTitle": "Topaicí comhchosúla",
+			"intro": "Aimsigh topaicí a bhfuil roinnt tréithe tábhachtacha comónta acu leis an topaic seo."
+		},
+		"Effects": {
+			"headerTitle": "Éifeachtaí",
+			"intro": "Seo iad éifeachtaí an ábhair."
+		},
+		"Familytree": {
+			"headerTitle": "Crann teaghlaigh"
+		},
+		"Instances": {
+			"headerTitle": "Eiseamláirí den ábhar seo",
+			"intro": "Féach samplaí den ábhar seo. Féach mar liosta chun míreanna gan íomhá a fheiceáil freisin."
+		},
+		"Links": {
+			"headerTitle": "Naisc ón alt seo"
+		},
+		"Location": {
+			"headerTitle": "Suíomh",
+			"intro": "Tá an topaic seo suite sna topaicí seo nó i gcomhthéacs na dtopaicí seo."
+		},
+		"Names": {
+			"headerTitle": "Ainmneacha",
+			"intro": "Féach ainmneacha an ábhair seo agus na roghanna malartacha uile atá ar fáil."
+		},
+		"People": {
+			"headerTitle": "Daoine a bhaineann leis an ábhar",
+			"intro": "Tá na daoine seo bainteach le topaic an leathanaigh seo. Is féidir leat iad a thaispeáint mar liosta, a thaispeánann daoine gan íomhánna freisin. Is féidir iad a shórtáil de réir dátaí nó ainmneacha. Tabhair faoi deara nach dtaispeánfar ach iad siúd a bhfuil an fhaisnéis sin acu.",
+			"sortMenuTitle": "Sórtáil",
+			"sortMenuTooltip": "Athraigh an t-ord sórtála",
+			"sortMenuOptionBirth": "De réir dáta breithe",
+			"sortMenuOptionDeath": "Faoi dháta an bháis",
+			"sortMenuOptionName": "De réir ainm",
+			"sortMenuOptionFirst": "De réir céadainm",
+			"sortMenuOptionLast": "De réir sloinne",
+			"sortMenuOptionClear": "Glan sórtáil",
+			"facetMenuTitle": "Gné de réir",
+			"facetMenuTooltip": "Daoine a chur i ngnéithe éagsúla",
+			"facetMenuOptionProfession": "Gairm",
+			"facetMenuOptionCountry": "Tír",
+			"facetMenuOptionCity": "Inscne"
+		},
+		"Seasons": {
+			"headerTitle": "Séasúir",
+			"intro": "Féach ar shéasúir na gníomhaíochta seo."
+		},
+		"Subclasses": {
+			"headerTitle": "Fo-aicmí den ábhar seo",
+			"intro": "Féach fo-aicmí an ábhair seo. Féach mar liosta chun míreanna gan íomhá a fheiceáil freisin."
+		},
+		"Teams": {
+			"headerTitle": "Foirne rannpháirteacha",
+			"intro": "Foirne atá páirteach sa chluiche, sa tsraith nó sa chomórtas seo."
+		},
+		"Things": {
+			"headerTitle": "Topaicí liosta fócais",
+			"intro": "Tá na topaicí seo ar liosta fócais an tionscadail Vicí seo."
+		},
+		"Twins": {
+			"headerTitle": "Cathracha cúpla",
+			"intro": "Bailte cúpla, cathracha deirfiúracha, bardais chúpla agus áiteanna eile a bhfuil comhaontú comhpháirtíochta nó comhair acu, atá aitheanta go dlíthiúil nó go neamhfhoirmiúil ag a rialtais. Is féidir leat iad a shórtáil de réir ama agus ainm. Chun na topaicí go léir a fheiceáil, lena n-áirítear na cinn gan íomhá, ní mór duit na topaicí a fheiceáil mar liosta."
+		},
+		"TopicImages": {
+			"headerTitle": "Íomhánna ó na cartlanna",
+			"intro": "Bailítear na híomhánna seo ó roinnt foinsí agus ní gá go léireoidh siad an topaic go cruinn i gcónaí. Is féidir leat an íomhá bhunaidh a fheiceáil agus is féidir leat an íomhá a chur ar léarscáil má tá biorán suímh uirthi.",
+			"actionsMenu": {
+				"menuTitle": "Taispeáin nó socraigh íomhánna",
+				"tooltip": "Taispeáin nó socraigh íomhánna",
+				"showImagesOnMapMenuText": "Taispeáin na híomhánna go léir ar an léarscáil",
+				"showImagesOnTimelineMenuText": "Taispeáin na híomhánna go léir ar an amlíne",
+				"selectPortraits": "Roghnaigh portráidí ardchaighdeáin den duine seo",
+				"arrangeByTime": "Socraigh íomhánna de réir ama",
+				"selectWorks": "Roghnaigh íomhánna de shaothair"
+			},
+			"facetMenu": {
+				"menuTitle": "Íomhánna gné le",
+				"menuTooltip": "Íomhánna gné de réir critéir éagsúla",
+				"time": "am",
+				"map": "léarscáil",
+				"people": "daoine",
+				"places": "áiteanna",
+				"topics": "topaicí",
+				"form": "foirm",
+				"imageSize": "méid íomhá",
+				"large": "mór",
+				"medium": "meánach",
+				"small": "beag",
+				"type": "cineál meán",
+				"creator": "cruthaitheoir",
+				"platform": "ardán",
+				"source": "foinse",
+				"saveSelection": "Sábháil an rogha mar bhailiúchán",
+				"clear": "Roghanna soiléire"
+			},
+			"imagesActionMenu": {
+				"menuTitle": "Gníomhartha",
+				"menuTooltip": "Gníomhartha",
+				"doGeolocatingText": "Socraigh an suíomh...",
+				"showImageText": "Taispeáin íomhá",
+				"selectFeatured": "Roghnaigh mar íomhá ceanntásca"
+			},
+			"imagesRemoveMenu": {
+				"menuTitle": "Bain an íomhá mar gheall ar...",
+				"shortMenuTitle": "Bain an íomhá",
+				"menuTooltip": "Bain an íomhá",
+				"remDepicted": {
+					"menuTitle": "Léiríonn sé an topaic seo ina ionad",
+					"shortMenuTitle": "Léiríonn sé topaic eile",
+					"search": "Cuardaigh an topaic",
+					"browse": "Brabhsáil na topaicí gaolmhara"
+				},
+				"remCreator": {
+					"menuTitle": "Is é an cruthaitheoir seo ina ionad sin",
+					"shortMenuTitle": "Is le cruthaitheoir eile é",
+					"search": "Cuardaigh an cruthaitheoir",
+					"browse": "Brabhsáil na haisteoirí gaolmhara"
+				},
+				"remInappropriate": {
+					"menuTitle": "Tá sé míchuí mar gheall ar",
+					"shortMenuTitle": "Tá sé míchuí",
+					"privacy": "Sáraíonn sé príobháideacht an duine a léirítear",
+					"violence": "Taispeánann sé foréigean foircneach",
+					"sex": "Taispeánann sé gnéas follasach",
+					"copyvio": "Sáraíonn sé cóipcheart",
+					"explain": "Fág nóta le míniú"
+				}
+			},
+			"imagesViewExternal": "Féach ar an íomhá bhunaidh",
+			"imagesViewOnMap": "Féach ar íomhá ar léarscáil"
+		},
+		"TopicMap": {
+			"headerTitle": "Topaic ar an léarscáil",
+			"intro": "Taispeántar áit an ábhair ar an léarscáil. Is féidir leat na híomhánna agus sonraí eile a thaispeáint ar an léarscáil freisin nó léarscáil stairiúil a roghnú mar bhunchiseal.",
+			"chooseHistoricalBasemapMenuText": "Roghnaigh léarscáil(eanna) bonn stairiúla...",
+			"hideImagesMenuText": "Folaigh íomhánna",
+			"chooseTimelineMapsMenuText": "Roghnaigh léarscáileanna amlíne...",
+			"showNearbyPlacesMenuText": "Taispeáin áiteanna in aice láimhe",
+			"hideNearbyPlacesMenuText": "Folaigh áiteanna in aice láimhe",
+			"extLink": {
+				"menuTooltip": "Féach nó cuir in eagar in OpenStreetMap"
+			}
+		},
+		"TopicNewspapers": {
+			"headerTitle": "Gearrthóga nuachtáin",
+			"searhTopicFromArchivesMenuText": "Cuardaigh ó na nuachtáin i Leabharlann Náisiúnta na Fionlainne",
+			"addClipFromArchivesMenuText": "Cuir gearrthóg leis..."
+		},
+		"TopicTimeline": {
+			"headerTitle": "Amlíne",
+			"showEventsOnTimelineMenuText": "Taispeáin imeachtaí topaice ar an amlíne",
+			"centuryText": "C"
+		},
+		"Works": {
+			"headerTitle": "Saothair",
+			"intro": "Is saothair iad seo ón duine, ón gcomhchoiteann nó ón eagraíocht arb é ábhar an leathanaigh seo é. Is féidir leat dul isteach i leathanach ina mbailítear an fhaisnéis uile faoin saothar trí chliceáil air. Ní thaispeántar ach saothair a bhfuil íomhánna leo. Taispeáin mar liosta chun na saothair ghaolmhara uile atá stóráilte a fheiceáil.",
+			"sortMenuTitle": "Sórtáil",
+			"sortMenuTooltip": "Sórtáil míreanna",
+			"sortMenuOptionTime": "De réir ama",
+			"sortMenuOptionAlpha": "De réir aibítre",
+			"sortMenuOptionDist": "De réir achair",
+			"sortMenuOptionClear": "Glan sórtáil",
+			"facetMenuTitle": "Gné de réir",
+			"facetMenuTooltip": "Oibríonn Facet de réir critéir éagsúla",
+			"facetMenuOptionType": "Cineál",
+			"facetMenuOptionColl": "Bailiúchán",
+			"facetMenuOptionCity": "Suíomh",
+			"displayMenuTitle": "Taispeáin mar",
+			"displayMenuTooltip": "Roghnaigh an taispeántas",
+			"displayMenuOptionGallery": "Gailearaí",
+			"displayMenuOptionList": "Liosta",
+			"displayMenuOptionMap": "Léarscáil",
+			"showAll": "Gach"
+		},
+		"Wikidata": {
+			"headerTitle": "Fíricí",
+			"extLink": {
+				"linkTitleWD": "Féach nó cuir in eagar i Wikidata"
+			},
+			"noTopicFoundText": "Níor aimsíodh an topaic"
+		},
+		"Wikipedia": {
+			"headerTitle": "Airteagal",
+			"missingArticle": "Níl aon alt faoin ábhar seo i do theanga féin. Is féidir leat an t-alt a léamh i dteanga eile atá ar fáil trí rogha a dhéanamh ón roghchlár teanga thuas. Is féidir leat an t-alt a chruthú i do theanga féin trí chliceáil ar an deilbhín móide.",
+			"missingArticleMissing": "Níl aon alt faoin ábhar seo i do theanga féin.",
+			"missingArticleChoose": "Is féidir leat an t-alt a léamh i dteanga eile atá ar fáil trí rogha a dhéanamh ón roghchlár teanga thuas nó is féidir leat an t-alt a chruthú i do theanga féin trí chliceáil ar an deilbhín móide.",
+			"missingArticleCreate": "Is féidir leat an t-alt seo a chruthú i do theanga féin trí chliceáil ar an deilbhín móide.",
+			"missingArticleFallback": "Taispeántar an t-alt seo i dteanga eile duit bunaithe ar do chuid sainroghanna teanga eile.",
+			"missingArticleTranslate": "Is féidir leat an t-alt seo a aistriú go do theanga féin trína roghnú sa roghchlár teanga.",
+			"missingArticleAuto": "Cruthaíodh an téacs gearr seo go huathoibríoch ó na fíricí taifeadta. Is féidir leat an dréacht seo a shábháil agus tosú ag eagarthóireacht an ailt.",
+			"extLink": {
+				"linkTitleWP": "Léigh nó cuir in eagar i Vicipéid"
+			},
+			"addLink": {
+				"linkTitleWP": "Cruthaigh alt i Vicipéid"
+			},
+			"languageMenu": {
+				"menuTitle": "Léigh an t-alt i dteanga eile",
+				"translateArticleText": "Aistrigh an t-alt seo go do theanga féin",
+				"otherLanguagestext": "Teangacha eile"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Fotheideal",
+			"addCaption": "Cuir fotheideal leis",
+			"description": "Cur síos",
+			"addDescription": "Cuir cur síos leis",
+			"creator": "Cruthaitheoir",
+			"creatorUnknown": "Anaithnid",
+			"addCreator": "Cuir cruthaitheoir leis",
+			"removeCreator": "Bain an cruthaitheoir",
+			"dateDepicted": "Dáta léirithe",
+			"addDateDepicted": "Cuir dáta léirithe leis",
+			"removeDateDepicted": "Bain an dáta atá léirithe",
+			"dateCreated": "Dáta cruthaithe",
+			"addDateCreated": "Cuir dáta cruthaithe leis",
+			"removeDateCreated": "Bain dáta cruthaithe",
+			"publisher": "Foilsitheoir",
+			"addPublisher": "Cuir foilsitheoir leis",
+			"removePublisher": "Bain an foilsitheoir",
+			"format": "Formáid",
+			"addFormat": "Cuir formáid leis",
+			"removeFormat": "Bain formáid",
+			"technique": "Teicníc",
+			"addTechnique": "Cuir teicníc leis",
+			"removeTechnique": "Bain an teicníc",
+			"depicted": "Léiríonn an íomhá",
+			"genre": "Seánra",
+			"addGenre": "Cuir seánra leis",
+			"removeGenre": "Bain an seánra",
+			"depicts": "Léiríonn an íomhá",
+			"addTopic": "Cuir topaic leis",
+			"removeTopic": "Bain an topaic",
+			"location": "Suíomh",
+			"locationMap": "Suíomh ar an léarscáil",
+			"addLocation": "Cuir suíomh leis",
+			"removeLocation": "Bain suíomh",
+			"address": "Seoladh sráide",
+			"addAddress": "Cuir seoladh sráide leis",
+			"removeAddress": "Bain seoladh sráide",
+			"depictedPeople": "Daoine léirithe",
+			"addPerson": "Cuir duine leis",
+			"removePerson": "Bain an duine",
+			"event": "Imeacht",
+			"addEvent": "Cuir imeacht leis",
+			"removeEvent": "Bain imeacht",
+			"institution": "Institiúid",
+			"collection": "Bailiúchán",
+			"addCollection": "Cuir bailiúchán leis",
+			"inventoryNumber": "Uimhir fardail",
+			"inscriptions": "Inscríbhinní",
+			"measurements": "Tomhais",
+			"copyright": "Cóipcheart",
+			"license": "Ceadúnas cóipchirt",
+			"work": "Obair atá léirithe san íomhá",
+			"photograph": "Grianghraf",
+			"image": "Íomhá",
+			"photographer": "Grianghrafadóir",
+			"addPhotographData": "Cuir eolas faoin ngrianghraf leis",
+			"copyrightNotePD": "Tá ceadúnas $1 ag an íomhá, ach bunaithe ar na meiteashonraí tá an íomhá i bhFearann ​​Poiblí.",
+			"copyrightNoteSame": "Tá ceadúnas níos oscailte ag an íomhá chéanna le $1, dá bhrí sin baineann sé leis an íomhá seo chomh maith.",
+			"creditline": "Líne creidmheasa",
+			"attribution": "Admháil",
+			"digitalCopy": "Cóip dhigiteach",
+			"publishingPlatform": "Ardán foilsitheoireachta",
+			"platformId": "Aitheantas",
+			"provider": "Soláthraí ábhair",
+			"imageInfoPage": "Leathanach eolais íomhá",
+			"imageDimensions": "Toisí íomhá",
+			"fileSize": "Méid comhaid",
+			"fileFormat": "Formáid comhaid",
+			"remove": "Bain",
+			"moveTo": "Bog go réimse eile",
+			"addData": "Cuir sonraí leis",
+			"uploader": "Uaslódálaí",
+			"rotate": "Rothlaigh"
+		},
+		"imageActions": {
+			"rotateImage": "Rothlaigh an íomhá",
+			"clockwise": "deiseal",
+			"counterclockwise": "tuathalach",
+			"flip": "Smeach",
+			"horizontal": "cothrománach",
+			"vertical": "ingearach"
+		},
+		"closeViewer": "Dún an breathnóir"
+	},
+	"map_place_match_page": {
+		"PlaceMatchSettings": {
+			"headerTitle": "Comhcheangail ainmneacha áiteanna"
+		}
+	},
+	"map_search_page": {
+		"HistoricalMapsSearch": {
+			"headerTitle": "Cuardaigh léarscáileanna stairiúla",
+			"filterBySourceMenuText": "Scag de réir foinse...",
+			"filterByTimeMenuText": "Scagaire bunaithe ar am...",
+			"filterByMapMenuText": "Scag trí léarscáil..."
+		}
+	},
+	"openlayersplugin": {
+		"WikimapsWarperLayer": {
+			"attribution1PrefixText": "Chun an bonnléarscáil stairiúil a fheiceáil, féach creidiúintí agus cóipcheart ó",
+			"attribution2PrefixText": "Léarscáil cheartaithe ó"
+		}
+	},
+	"menu": {
+		"TransparencySliderMenuItem": {
+			"transparencyLabel": "Trédhearcacht an léarscáil bhunúsaigh stairiúil:"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Sórtáil topaicí",
+			"tooltip": "Sórtáil topaicí",
+			"optionTime": "De réir ama",
+			"optionStart": "Faoin am tosaithe",
+			"optionEnd": "Faoin am deiridh",
+			"optionTitle": "De réir teidil",
+			"optionCause": "De réir cúise",
+			"optionPartof": "De réir míre is cuid de seo é",
+			"optionSuperclass": "De réir ranga is fo-rang de é seo",
+			"optionAlpha": "De réir aibítre",
+			"optionTitleAlpha": "De réir teidil in ord aibítre",
+			"optionCreatorAlpha": "De réir cruthaitheora in ord aibítre",
+			"optionDist": "De réir achair",
+			"optionRev": "Sórtáil droim ar ais",
+			"optionClear": "Glan sórtáil"
+		},
+		"facetMenu": {
+			"title": "Gné de réir",
+			"tooltip": "Topaicí gné de réir critéir éagsúla",
+			"optionType": "Cineál",
+			"optionColl": "Cruthaitheoir",
+			"optionCity": "Suíomh"
+		},
+		"displayMenu": {
+			"title": "Taispeáin mar",
+			"tooltip": "Roghnaigh an taispeántas",
+			"optionGallery": "Gailearaí",
+			"optionList": "Liosta"
+		}
+	},
+	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
+		"ok": "Ceart go leor",
+		"cancel": "Cealaigh",
+		"helpText": "Cabhair",
+		"expand": "Leathnaigh an chuid seo",
+		"collapse": "Laghdaigh an chuid seo",
+		"menus": {
+			"actionMenuTitle": "Gníomhartha",
+			"actionMenuTooltip": "Gníomhartha",
+			"languageMenuTitle": "Roghnaigh teanga",
+			"languageMenuTooltip": "Roghnaigh do theanga",
+			"myLanguagesItem": "Mo theangacha",
+			"languageMenuTranslate": "Aistrigh an t-alt seo go Gaeilge"
+		},
+		"languageMenu": {
+			"TranslateUI": "Aistrigh chuig do theanga féin"
+		},
+		"languages": {
+			"fi": "Fionlainnis",
+			"en": "Béarla",
+			"sv": "Sualainnis",
+			"es": "Spáinnis"
+		}
+	},
+	"Banner": {
+		"WLM": "Is breá le Wiki Séadchomharthaí $1",
+		"WLMText": "Tóg grianghraf den suíomh oidhreachta cultúrtha seo agus glac páirt sa chomórtas grianghrafadóireachta $2.",
+		"WLMButton": "Uaslódáil íomhá"
+	}
+}

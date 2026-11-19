@@ -1,6 +1,6 @@
 <template>
-    <div class="link">
-        <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', link ? 'wikiglyph-new-window' : 'wikiglyph-plus']"></i></a><span class="tooltip">{{ tooltip }}</span>
+    <div>
+        <a :href="target" target="_blank" class="toolbar-item-a"><i :class="['wikiglyph', icon ]"></i></a><span class="tooltip">{{ tooltip }}</span>
     </div>
 </template>
 
@@ -9,7 +9,8 @@ export default {
     name: 'HeaderLink',
     props: {
         link: String,
-        tooltip: String
+        tooltip: String,
+        icon:String
     },
     data () {
         return {
@@ -20,9 +21,9 @@ export default {
             if (this.link) {
                 return this.link;
             } else {
-                var language = this.$i18n.locale;
-                var title = this.$store.state.wikidocumentaries.title;
-                return "https://" + language + ".wikipedia.org/w/index.php?title=" + title + "&action=edit";
+/*                 var language = this.$i18n.locale;
+                var title = this.$store.state.wikidocumentaries.title; */
+                return "#";
             }
         }
     }

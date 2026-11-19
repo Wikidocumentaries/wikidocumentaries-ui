@@ -1,15 +1,17 @@
 <template>
     <div class="topic-search-box">
-        <div class="search-items">
-            <input id="findTopicInput" @input="debounceFindTopics" class="input-find" v-model="topicInputValue" type="text" :placeholder="$t('LandingPage.searchInputPlaceHolder')">
-            <a href="#" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass"></i></a>
-            <!--button @click="findTopics" class="button-find"><span>{{ $t('LandingPage.search') }}</span></button-->
-        </div>
-        <div class="search-results">
-            <div :class="[shouldShowMenu ? showClass : hideClass]">
-                <router-link v-for="topic in topics" :key="topic.wikidata" :to="getTopicURL(topic)"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></router-link>
+        <form class="search-items">
+            <input id="findTopicInput" autocomplete="off" @input="debounceFindTopics" @keydown.down="onArrowDown" @keydown.up="onArrowUp" @keydown.enter="pickResult" class="input-find" v-model="topicInputValue" type="search" :placeholder="$t('LandingPage.searchInputSearchOnly')">
+            <button title="Search" @click.prevent="focusInput" class="search-icon"><i class="wikiglyph wikiglyph-magnifying-glass" aria-hidden></i></button>
+
+            <div class="search-results">
+                <div :class="[shouldShowMenu ? 'dropdown-content' : 'dropdown-content-hide']">
+                    <router-link v-for="(topic, i) in topics" :key="topic.localId" :class="{ 'is-active': i === arrowCounter }" :to="topic.internalLink"><span class="topic-title">{{ topic.wikipage }}</span><br><span class="topic-summary">{{ getSummary(topic) }}</span></router-link>
+                    <!--a slot="menu-link" :href="showMoreLink" class="menu-link" target="_blank">{{ $t('LandingPage.showMore') }}</a-->
+                    <a slot="menu-link" :href="newLink" class="menu-link" target="_blank">{{ $t('LandingPage.createNew') }}</a>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </template>
 
@@ -27,25 +29,27 @@ export default {
         return {
             topicInputValue: "",
             shouldShowMenu: false,
-            showClass: 'dropdown-content',
-            hideClass: 'dropdown-content-hide',
-            //topicInputValue: "Vapaamu",
             topics: [],
             maxSummaryLengthInChars: 50,
+            arrowCounter: -1
         }
     },
     created: function () {
         this.debounceFindTopics = debounce(this.findTopics, 500);
     },
+    computed: {
+        newLink() {
+            let url="https://www.wikidata.org/w/index.php?title=Special:NewItem&label=" + this.topicInputValue + "&uselang=" + this.$i18n.locale;
+            return url;
+        }
+    },
     methods: {
-        showMenu() {
-            this.shouldShowMenu = true;
-        },
-        hideMenu() {
-            this.shouldShowMenu = false;
+        showMenu(boolean) {
+            this.shouldShowMenu = boolean;
+            this.arrowCounter = -1;
         },
         getSummary(topic) {
-            if (topic.summary == undefined) {
+            if (topic.summary === undefined) {
                 return "";
             }
             else if (topic.summary.length > this.maxSummaryLengthInChars) {
@@ -56,9 +60,6 @@ export default {
                 if (summary.indexOf(',') == 0) {
                     summary = summary.substr(1);
                 }
-                //if (summary.length > this.maxSummaryLengthInChars) {
-                //    summary = summary.substr(0, this.maxSummaryLengthInChars - 3) + "...";
-                //}
                 return summary;
             }
             else {
@@ -66,21 +67,33 @@ export default {
             }
         },
         findTopics: function () {
-            //console.log("findTopics");
             if (this.topicInputValue.length >= 3) {
                 this.searchFromWikipedia(this.topicInputValue);
+            } else {
+                this.showMenu(false);
             }
-            else {
-                this.hideMenu();
-            }
-            //this.$router.push('/Vapaamuurarin_hauta');
         },
-        getTopicURL: function(topic) {
-            return "/" + topic.wikidata + "?language=" + this.$i18n.locale;
+        focusInput: function() {
+            document.querySelector("#findTopicInput").focus();
+        },
+        onArrowDown: function() {
+            if (this.shouldShowMenu && this.arrowCounter < this.topics.length) {
+                this.arrowCounter++;
+            } else if (this.arrowCounter === this.topics.length -1) {
+                this.arrowCounter = 0;
+            }
+        },
+        onArrowUp: function() {
+            if (this.shouldShowMenu && this.arrowCounter > 0) {
+                this.arrowCounter--;
+            } else if (this.arrowCounter === 0) {
+                this.arrowCounter = this.topics.length -1;
+            }
+        },
+        pickResult: function() {
+            this.$router.push(this.topics[this.arrowCounter].internalLink);
         },
         searchFromWikipedia: function(topicInputValue) {
-            //console.log("searchFromWikipedia");
-
             var url = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=opensearch&search=" +
                 topicInputValue +
                 "&limit=20&namespace=0&redirects=resolve"
@@ -90,13 +103,12 @@ export default {
             var url = "https://www.wikidata.org/w/api.php?" +
                 "action=wbsearchentities" +
                 "&search=" + encodeURIComponent(topicInputValue) +
-                "&language=" + this.$i18n.locale + 
-                "&uselang=" + this.$i18n.locale + 
-                "&format=json" + 
+                "&language=" + this.$i18n.locale +
+                "&uselang=" + this.$i18n.locale +
+                "&format=json" +
                 "&type=item";
                 "&callback=callback";
 
-            var _this = this;
             var topics = [];
 
             jsonp(url, null, (error, data) => {
@@ -104,62 +116,25 @@ export default {
                         console.log(error);
                         reject(error);
                     } else {
-                        //console.log(data);
-
                         if (data.search.length > 0) {
-                            
-                            var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?" + 
-                                    "action=query&prop=pageprops&ppprop=wikibase_item&redirects=resolve&titles=";
-                                    
+
+                            var wikidataQueryURL = "https://" + this.$i18n.locale + ".wikipedia.org/w/api.php?action=query&prop=pageprops&ppprop=wikibase_item&redirects=resolve&titles=";
+
                             for (var i = 0; i < data.search.length; i++) {
                                 var item=data.search[i];
                                 var topic = {
                                     wikipage: item["label"],
-                                    wikilink: item["id"],
-                                    wikidocumentarieslink: "/" +
-                                        item["id"] + "/" + item["label"].split(' ').join('_'),
                                     summary: item["description"],
-                                    wikidata:item["id"],
-                                    wikidatalink: item["url"],
+                                    internalLink: "/" + item["id"] + "?language=" + this.$i18n.locale // assume that the user won't switch language after searching
                                 };
 
                                 topics.push(topic);
-
-                                _this.topics = topics;
-                                // wikidataQueryURL = wikidataQueryURL.slice(0, -1);
-
-                                // wikidataQueryURL +=
-                                //     "&format=json" +
-                                //     "&callback=callback2";
-
-                                // jsonp(wikidataQueryURL, null, (error, data) => {
-                                //     if (error) {
-                                //         console.log(error);
-                                //         reject(error);
-                                //     } else {
-                                //         //console.log(data);
-                                //         if (data.query != undefined) {
-                                //             var pages = Object.values(data.query.pages);
-                                //             //console.log(pages);
-                                //             for (var i = 0; i < pages.length; i++) {
-                                //                 for (var j = 0; j < topics.length; j++) {
-                                //                     if (topics[j].wikipage == pages[i].title && pages[i].pageprops != undefined) {
-                                //                         topics[j].wikidata = pages[i].pageprops.wikibase_item;
-                                //                         topics[j].wikidatalink = "https://www.wikidata.org/wiki/" + 
-                                //                     pages[i].pageprops.wikibase_item;
-                                //                     break;
-                                //                     }
-                                //                 }
-                                //             }
-                                //         }
-                                //     }
-                                // });
+                                this.topics = topics;
                             }
 
-                            this.showMenu();
-                        }
-                        else {
-                            // TODO let user know
+                            this.showMenu(true);
+                        } else {
+                            // TODO let user know that there was no results
                         }
 
                     }
@@ -191,35 +166,20 @@ export default {
     border: none;
     text-align: right;
     right: 35px;
-    min-width: 300px;
     height: 100%;
     box-sizing: border-box;
+    width: 60px;
+    flex-grow: 1;
 }
 
 .input-find:focus {
-    font-weight:bold;
+    font-weight: bold;
     color:#333;
     outline: none;
 }
 
 .input-find:focus::placeholder {
     visibility:hidden;
-}
-
-.button-find {
-    border: none;
-    cursor: pointer;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    padding: 1px 10px;
-    background-color: #a74e77;
-    color: white;
-    display: flex;
-    align-items: center;
 }
 
 .search-results {
@@ -231,6 +191,7 @@ export default {
 .dropdown-content {
     position: absolute;
     right: 0;
+    top: 22px;
     background-color: #fff;
     min-width: 350px;
     max-width: 35vw;
@@ -258,6 +219,7 @@ export default {
 }
 
 /* Links inside the dropdown */
+.dropdown-content a.is-active,
 .dropdown-content a:hover {
     box-shadow: none;
     outline: none;
@@ -273,7 +235,7 @@ span.topic-summary {
     font-weight: initial;
 }
 
-a.search-icon {
+button.search-icon {
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -290,9 +252,11 @@ a.search-icon {
     width: 45px;
     color: #333;
     box-shadow: none;
+    border: 0;
+    background: white;
 }
 
-a.search-icon:hover {
+button.search-icon:hover {
     background: var(--main-txt-color);
     color: white;
 }

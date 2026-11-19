@@ -1,0 +1,202 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ella Lachow",
+			"Malaalaa"
+		]
+	},
+	"LandingPage": {
+		"search": "Koyya",
+		"searchInputPlaceHolder": "Huuphe yohuwa demma woykko ooratta medhdha",
+		"searchInputSearchOnly": "Huuphe yohuwa demma"
+	},
+	"topic_page": {
+		"Depicted": {
+			"facetMenu": {
+				"optionType": "Qommuwa",
+				"optionColl": "Medhdhidaagaa"
+			},
+			"displayMenu": {
+				"title": "Bessiyoy",
+				"tooltip": "Besettaa doora",
+				"optionList": "Paatettaa"
+			},
+			"showAll": "Ubbaa"
+		},
+		"Depicts": {
+			"headerTitle": "Qonccissiyoy"
+		},
+		"Events": {
+			"headerTitle": "Hanotata",
+			"displayMenu": {
+				"menuTitle": "Besuwa doorota",
+				"menuTooltip": "Besuwa doorota",
+				"optionShowTimeline": "Hanotata wodiya maaran bessa",
+				"optionShowList": "Hanotata paatettan bessa"
+			},
+			"optionsMenu": {
+				"menuTitle": "Doorota",
+				"optionWorks": "Oosota bessa",
+				"optionRelatedPeople": "Gayttiya asatu hanotata bessa",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Giigissa"
+				},
+				"optionRelatedTopics": "Gayttiya huuphe yohotu hanotata bessa"
+			}
+		},
+		"Header": {
+			"titleEditText": "Huuphe yohuwa goyda",
+			"titleApproveText": "Ha huuphe yohuwa mintta",
+			"subtitleEditText": "Qonccissuwa goyda",
+			"subtitleApproveText": "Qonccissuwa mintta"
+		},
+		"Locations": {
+			"headerTitle": "Ha beettiyosan",
+			"sortMenu": {
+				"title": "Beettiyosata maaraya",
+				"tooltip": "Beettiyosata maaraya",
+				"optionTime": "Wodiyan",
+				"optionAlpha": "Machchallaa kasiya kaaluwan",
+				"optionDist": "Haahotettan",
+				"optionClear": "Maarayuwa qucca"
+			},
+			"facetMenu": {
+				"title": "Sintta beettiyosata",
+				"optionType": "Qommuwa",
+				"optionColl": "Medhdhidaagaa",
+				"optionCity": "Beettiyosaa"
+			},
+			"displayMenu": {
+				"title": "Bessiyoy",
+				"tooltip": "Besettaa doora",
+				"optionList": "Paatettaa"
+			},
+			"showAll": "Ubbaa"
+		},
+		"Map": {
+			"headerTitle": "Karttan beettiyosaa"
+		},
+		"Parts": {
+			"headerTitle": "Shaahota"
+		},
+		"Similar": {
+			"headerTitle": "Malatiya huuphe yohota"
+		},
+		"Location": {
+			"headerTitle": "Beettiyosaa"
+		},
+		"Names": {
+			"headerTitle": "Sunttata"
+		},
+		"People": {
+			"headerTitle": "Huuphe yohuwara gayttiya asata",
+			"sortMenuTitle": "Maaraya",
+			"sortMenuOptionBirth": "Yeleta gallassan",
+			"sortMenuOptionDeath": "Hayqqido gallassan",
+			"sortMenuOptionName": "Sunttan",
+			"sortMenuOptionFirst": "Xeessa sunttan",
+			"sortMenuOptionLast": "Wurssetta sunttan",
+			"sortMenuOptionClear": "Maarayuwa qucca",
+			"facetMenuOptionProfession": "Hiillaa",
+			"facetMenuOptionCountry": "Biittaa",
+			"facetMenuOptionCity": "Mattumaa"
+		},
+		"Twins": {
+			"headerTitle": "Michcho ambbata"
+		},
+		"TopicImages": {
+			"facetMenu": {
+				"time": "wodiya",
+				"map": "karttaa",
+				"people": "asaa",
+				"places": "sohota",
+				"topics": "huuphe yohota",
+				"imageSize": "misiliya yesuwaa",
+				"large": "gita",
+				"medium": "giddo",
+				"small": "guutta",
+				"type": "miidiya qommuwa",
+				"creator": "medhdhidaagaa"
+			}
+		},
+		"Works": {
+			"headerTitle": "Oosota",
+			"sortMenuTitle": "Maaraya",
+			"sortMenuOptionTime": "Wodiyan",
+			"sortMenuOptionAlpha": "Machchallaa kasiya kaaluwan",
+			"sortMenuOptionDist": "Haahotettan",
+			"sortMenuOptionClear": "Maarayuwa qucca",
+			"facetMenuOptionType": "Qommuwa",
+			"facetMenuOptionCity": "Beettiyosaa",
+			"displayMenuTitle": "Bessiyoy",
+			"displayMenuTooltip": "Besettaa doora",
+			"displayMenuOptionList": "Paatettaa",
+			"displayMenuOptionMap": "Karttaa",
+			"showAll": "Ubbaa"
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"rotate": "Yuushsha"
+		},
+		"imageActions": {
+			"rotateImage": "Misiliya yuushsha",
+			"clockwise": "ushachchawu",
+			"counterclockwise": "haddirssawu",
+			"horizontal": "gede",
+			"vertical": "duge"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"title": "Huuphe yohota maaraya",
+			"tooltip": "Huuphe yohota maaraya",
+			"optionTime": "Wodiyan",
+			"optionStart": "Doometto wodiyan",
+			"optionEnd": "Wurssetta wodiyan",
+			"optionTitle": "Huuphe yohuwan",
+			"optionCause": "Gaasuwan",
+			"optionAlpha": "Machchallaa kasiya kaaluwan",
+			"optionDist": "Haahotettan",
+			"optionRev": "Maarayuwa guyye zaara",
+			"optionClear": "Maarayuwa qucca"
+		},
+		"facetMenu": {
+			"optionType": "Qommuwa",
+			"optionColl": "Medhdhidaagaa",
+			"optionCity": "Beettiyosaa"
+		},
+		"displayMenu": {
+			"title": "Bessiyoy",
+			"tooltip": "Besettaa doora",
+			"optionList": "Paatettaa"
+		}
+	},
+	"general": {
+		"ok": "Likke",
+		"cancel": "Agga",
+		"helpText": "Maaduwa",
+		"expand": "Ha shaahuwa aassa",
+		"collapse": "Ha shaahuwa shiishsha",
+		"menus": {
+			"actionMenuTitle": "Tanggota",
+			"actionMenuTooltip": "Tanggota",
+			"languageMenuTitle": "Doonaa doora",
+			"languageMenuTooltip": "Ne doonaa doora",
+			"myLanguagesItem": "Ta doonata",
+			"languageMenuTranslate": "Ha xuufiya Wolayttattuwan birshsha"
+		},
+		"languageMenu": {
+			"TranslateUI": "Ne doonaassi birshsha"
+		},
+		"languages": {
+			"fi": "Fiinlanddettuwa",
+			"en": "Inggilizettuwa",
+			"sv": "Siwiidettuwa",
+			"es": "Isppeenettuwa"
+		}
+	},
+	"Banner": {
+		"WLMButton": "Misiliya gelissa"
+	}
+}

@@ -1,14 +1,55 @@
 {
 	"@metadata": {
 		"authors": [
-			"Susannaanas",
-			"Abijeet Patro",
-			"Pyscowicz"
+			"MITO",
+			"Nike",
+			"Pyscowicz",
+			"Susannaanas"
 		]
 	},
 	"LandingPage": {
 		"search": "Etsi",
-		"searchInputPlaceHolder": "Etsi aihetta tai luo uusi aihe"
+		"searchInputPlaceHolder": "Etsi aihetta tai luo uusi aihe",
+		"searchInputSearchOnly": "Etsi aihetta",
+		"showMore": "Näytä lisää kohteita",
+		"createNew": "Luo uusi kohde",
+		"intro": "Wikidocumentaries on wiki pienelle historialle – siellä voi koota historian jälkiä ja tehdä niistä tarinoita. Aloita etsimällä kiinnostavaa aihetta!",
+		"titleDescription": "Mitä Wikidocumentaries on?",
+		"description": "Wikidocumentaries on kansalaishistorioitsijan työpaja. Se kokoaa tietoa aiheista, kuten ihmisistä, paikoista, rakennuksista ja tapahtumista. Aiheiden välillä voi navigoida minkä tahansa tallennetun linkin, kuten sukulaissuhteen, sijainnin, tekijätiedon tai työsuhteen kautta. Aiheen kuvitukseksi haetaan kuvia ja karttoja linkitetyistä museoista, arkistoista ja kirjastoista. Wikidocumentariesissa voit korjata olemassaolevia tietoja ja lisätä uusia aiheita. Voit liittää omat kuvasi ja muistosi aiheisiin ja käyttää koko aineistoa hyödyksi itse.",
+		"titleStatus": "Tila",
+		"status": "Sivusto on demovaiheessa. Monet tärkeät ominaisuudet puuttuvat ja sivusto saattaa toimia odotettua heikommin.",
+		"moreBelow": "Lue lisää alla",
+		"more": "Lue lisää",
+		"moreLink": "Lue lisää sivulla",
+		"titleTopics": "Aiheet",
+		"statusTopics": "Aiheet luetaan Wikidatasta. Uusia aiheita voi myöhemmin luoda myös paikallisesti, jos aihe ei ole Wikidataan sopiva ja käyttää silti Wikidatan monipuolisia kuvailumahdollisuuksia. Tämänhetkiset artikkelit tulevat Wikipediasta, ja myöhemmin voi luoda Wikidocumentariesin aiheille artikkeleita paikallisesti.",
+		"titleMedia": "Media",
+		"statusMedia": "Kuvia luetaan yhä useammista palveluista, jotka tarjoavat avoimesti lisensoituja mediatiedostoja. Pyrimme parantamaan osumatarkkuutta ja näyttämään enemmän ja parempaa metatietoa kustakin lähteestä. Toivotamme uudet lähteet tervetulleiksi!",
+		"titleTools": "Työkalut",
+		"statusTools": "Wikidocumentariesissa on tehtäviä ja työkaluja sisällön parantamiseen. Nyt voi jo kääntää artikkeleita eri kielien välillä Content Translation -työkalun avulla. Wikidatan avulla asiasanoittaminen ja kuvien paikannus ovat työn alla. Uusia hauskoja ja hyödyllisiä työkaluja voidaan luoda tai liittää palveluun.",
+		"titleLanguages": "Kielet",
+		"statusLanguages": "Wikidocumentariesia voi selata millä tahansa Wikidatan kielellä, mikä on erityisen hyödyllistä pienten kielten kohdalla. Käännökset tehdään TranslateWikissä.",
+		"titleTechnology": "Teknologia",
+		"statusTechnology": "Wikidocumentaries lukee keskeisen tiedon Wikidatasta. Lisäksi Wikidocumentariesiin tulee oma Wikibase aiheille, jotka eivät kuulu Wikidataan. Wikidata ja Wikidocumentaries tullaan synkronoimaan nk. federoituina Wikibase-sivustoina. Kuvien metadata linkitetään Wikidatan kohteisiin ja tämän tiedon voi synkronoida Wikimedia Commonsin rakenteisen tiedon kanssa. Sivuston on rakennettu Vue.js:llä ja sijaitsee Wikimedia Cloud Services -palvelussa.",
+		"titleCreators": "Tekijät",
+		"titleTeam": "Tiimi",
+		"titleThanks": "Erityiskiitokset",
+		"titlePartners": "Kumppanit",
+		"titleFunding": "Projektia ovat ystävällisesti tukeneet",
+		"titleBy": "Projektia hallinnoi",
+		"getInvolved": "Tule mukaan!",
+		"titleTranslate": "Käännä",
+		"joinTranslate": "Tuo kielesi Wikidocumentariesiin! Liity vapaaehtoiseen kääntäjätiimiin ja näet kulttuuriperinnön heräävän henkiin omalla kielelläsi.",
+		"titleContent": "Lisää omaa aineistoa",
+		"joinContent": "Jos sinulla on valokuva, media, kartta tai datasetti, jonka haluat nähdä täällä, katsotaan yhdessä voiko se liittyä jonkin olemassaolevan kanavan kautta vai tekisimmekö sitä varten uuden liittymismekanismin. Haluamme myös järjestää työpajoja historiallisen tiedon tallentamiseksi yhdessä eri yhteisöjen kanssa.",
+		"titleDevelop": "Luo työkaluja tai joukkoistustehtäviä",
+		"joinDevelop": "Haluamme lisätä työkaluja ja luoda uusia joukkoistustehtäviä yhdessä organisaatioiden ja kehittäjien kanssa. Tehdään yhteisin voimin seuraava suosittu joukkoistusapp!",
+		"titleContact": "Ota yhteyttä!",
+		"facebook": "Facebook-ryhmä",
+		"wiki": "Wikidocumentaries-wiki",
+		"blog": "Blogi",
+		"email": "Sähköposti",
+		"github": "Github"
 	},
 	"MainPage": {
 		"topicPageName": "Aiheen yhteenveto",
@@ -18,13 +59,80 @@
 		"returnToHomeMessage": "Palaa etusivulle"
 	},
 	"WaitPage": {
-		"waitMessage": "Hetki... Haetaan sisältöä Wikipediasta, Wikidatasta, Wikimedia Commonsista, Map Warperista, Finnasta, Flickristä ..."
+		"waitMessage": "Hetki... Haetaan sisältöä Wikipediasta, Wikidatasta, Wikimedia Commonsista, MapWarperista, Finnasta, Flickristä ..."
 	},
 	"topic_page": {
+		"Affiliations": {
+			"headerTitle": "Yhteydet",
+			"intro": "Organisaatiot ja muut aiheet, joihin tällä taholla on yhteys."
+		},
+		"Awards": {
+			"headerTitle": "Palkinnot",
+			"intro": "Nimitykset ja palkinnot, joita sivun aiheelle on myönnetty."
+		},
 		"BaseMapDialog": {
 			"chooseMapTitle": "Valitse historiallinen taustakartta tai kartat",
 			"chooseMapHelpNote": "Vinkki: useita karttoja voi valita ctrl+napautus-yhdistelmällä",
 			"yearAbbreviation": "v."
+		},
+		"Collection": {
+			"headerTitle": "Teoksia kokoelmissa",
+			"intro": "Nämä teokset ovat tämän henkilön tai organisaation kokoelmissa. Voit näyttää ne listana, jolloin näet myös kohteet, joista ei ole kuvaa. Ne voi järjestää päivämäärän tai nimen perusteella. Kun tämä tieto puuttuu, aihe ei näe sillä perusteella järjestetyssä listassa."
+		},
+		"Cups": {
+			"headerTitle": "Pelit, sarjat ja turnaukset",
+			"intro": "Tämä seura on pelannut seuraavissa peleissä, sarjoissa ja turnauksissa"
+		},
+		"CV": {
+			"headerTitle": "CV",
+			"intro": "Nämä ovat aiheen henkilön ammatillisia tapahtumia."
+		},
+		"Depicted": {
+			"headerTitle": "Kuvattu teoksessa",
+			"intro": "Tätä aihetta kuvataan näissä teoksissa. Järjestä teokset eri perustein tai näytä luettelona nähdäksesi myös ne, joissa ei ole kuvaa.",
+			"sortMenu": {
+				"title": "Järjestä teokset",
+				"tooltip": "Järjestä teokset",
+				"optionTime": "Ajan perusteella",
+				"optionAlpha": "Aakkosjärjestykseen",
+				"optionClear": "Palauta alkuperäinen järjestys"
+			},
+			"facetMenu": {
+				"title": "Ryhmittele teokset",
+				"tooltip": "Ryhmittele teoksia eri tavoilla",
+				"optionType": "Tyypin mukaan",
+				"optionColl": "Tekijän mukaan"
+			},
+			"displayMenu": {
+				"title": "Näytä",
+				"tooltip": "Valitse esitysmuoto",
+				"optionGallery": "Kuvagalleriana",
+				"optionList": "Luettelona"
+			},
+			"showAll": "Kaikki"
+		},
+		"Depicts": {
+			"headerTitle": "Kuvaa",
+			"intro": "Tämä teos kuvaa seuraavia aiheita. Voit järjestää teokset ajan ja nimen perusteella. Katso teokset listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
+		"Events": {
+			"headerTitle": "Tapahtumat",
+			"displayMenu": {
+				"menuTitle": "Esitysvalinnat",
+				"menuTooltip": "Esitysvalinnat",
+				"optionShowTimeline": "Näytä tapahtumat aikajanalla",
+				"optionShowList": "Näytä tapahtumat listana"
+			},
+			"optionsMenu": {
+				"menuTitle": "Asetukset",
+				"menuTooltip": "Valitse näytettävät tiedot",
+				"optionWorks": "Näytä teokset",
+				"optionRelatedPeople": "Näytä liittyvien henkilöiden tapahtumat",
+				"subRelatedPeopleConf": {
+					"menuTitle": "Määritä"
+				},
+				"optionRelatedTopics": "Näytä liittyvien aiheiden tapahtumat"
+			}
 		},
 		"Header": {
 			"titleEditText": "Muokkaa otsikkoa",
@@ -32,9 +140,112 @@
 			"subtitleEditText": "Muokkaa kuvausta",
 			"subtitleApproveText": "Hyväksy tämä kuvaus"
 		},
+		"Heritage": {
+			"headerTitle": "Perintökohteet"
+		},
+		"Locations": {
+			"headerTitle": "Tässä paikassa",
+			"intro": "Tässä näytetään kohteita, jotka sijaitsevat tämän sivun aiheen alueella. Voit näyttää kohteet luettelona, jolloin listataan myös kuvattomat kohteet.",
+			"sortMenu": {
+				"title": "Järjestä paikat",
+				"tooltip": "Järjestä paikat",
+				"optionTime": "Ajan perusteella",
+				"optionAlpha": "Aakkosjärjestykseen",
+				"optionDist": "Etäisyyden mukaan",
+				"optionClear": "Palauta alkuperäinen järjestys"
+			},
+			"facetMenu": {
+				"title": "Ryhmittele paikat",
+				"tooltip": "Ryhmittele paikat eri perusteilla",
+				"optionType": "Paikan lajin mukaan",
+				"optionColl": "Tekijän mukaan",
+				"optionCity": "Sijainnin mukaan"
+			},
+			"displayMenu": {
+				"title": "Näytä",
+				"tooltip": "Valitse esitysmuoto",
+				"optionGallery": "Galleriana",
+				"optionList": "Luettelona"
+			},
+			"showAll": "Kaikki"
+		},
+		"Map": {
+			"headerTitle": "Sijainti kartalla"
+		},
+		"Parts": {
+			"headerTitle": "Osat",
+			"intro": "Tämä aihe jakautuu näihin osiin. Voit järjestää niitä ajan ja nimen perusteella. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
+		"Partof": {
+			"headerTitle": "Osa kohdetta",
+			"intro": "Tämän aihe on osa näitä muita aiheita. Voit järjestää niitä ajan tai nimen mukaan. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
+		"Similar": {
+			"headerTitle": "Samanlaisia aiheita",
+			"intro": "Etsi aiheita, joilla on joitain keskeisiä yhteisiä tekijöitä tämän sivun aiheen kanssa."
+		},
+		"Effects": {
+			"headerTitle": "Vaikutukset",
+			"intro": "Nämä ovat vaikutuksia, joita tämän sivun aiheella on."
+		},
+		"Familytree": {
+			"headerTitle": "Sukupuu"
+		},
+		"Instances": {
+			"headerTitle": "Tämän aiheen esiintymiä",
+			"intro": "Katso tämän aiheen esiintymät. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
+		"Links": {
+			"headerTitle": "Linkit tästä artikkelista"
+		},
+		"Location": {
+			"headerTitle": "Sijainti",
+			"intro": "Tämä aihe sijaitsee näiden paikkojen yhteydessä."
+		},
+		"Names": {
+			"headerTitle": "Nimet",
+			"intro": "Katso tämän aiheen nimet ja kaikki saatavilla olevat nimivaihtoehdot."
+		},
+		"People": {
+			"headerTitle": "Aiheeseen liittyvät ihmiset",
+			"intro": "Nämä henkilöt liittyvät tämän sivun aiheeseen. Voit esittää heidät listana, jolloin näet myös ne, joista ei ole kuvaa. Voit järjestää henkilöt ajan tai nimen perusteella. Huomaa, että vain ne näytetään, joilla tarvittava tieto on.",
+			"sortMenuTitle": "Järjestä",
+			"sortMenuTooltip": "Muuta järjestystä",
+			"sortMenuOptionBirth": "Syntymäajan mukaan",
+			"sortMenuOptionDeath": "Kuolinajan mukaan",
+			"sortMenuOptionName": "Nimen mukaan",
+			"sortMenuOptionFirst": "Etunimen mukaan",
+			"sortMenuOptionLast": "Sukunimen mukaan",
+			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
+			"facetMenuTitle": "Ryhmittele",
+			"facetMenuTooltip": "Ryhmittele henkilöitä eri tavoilla",
+			"facetMenuOptionProfession": "Ammatin mukaan",
+			"facetMenuOptionCountry": "Maan mukaan",
+			"facetMenuOptionCity": "Sukupuolen mukaan"
+		},
+		"Seasons": {
+			"headerTitle": "Kaudet",
+			"intro": "Tarkastele tämän aktiviteetin kausia."
+		},
+		"Subclasses": {
+			"headerTitle": "Tämän aiheen alaluokkia",
+			"intro": "Tarkastele tämän aiheen alaluokkia. Katso aiheet listana, niin näet myös kohteet, joista ei ole kuvaa."
+		},
+		"Teams": {
+			"headerTitle": "Osallistuvat joukkueet",
+			"intro": "Tähän peliin, sarjaan tai turnaukseen osallistuvat joukkueet."
+		},
+		"Things": {
+			"headerTitle": "Aiheita tähän liittyvässä projektissa",
+			"intro": "Nämä aiheet on linkitetty tähän aiheeseen liittyvään Wikiprojektiin."
+		},
+		"Twins": {
+			"headerTitle": "Ystävyyskaupungit",
+			"intro": "Ystävyyskaupungit tau -kunnat tai muut paikat, joilla on kumppanuus tai yhteistyösopimus muodollisesti tai epämuodollisesti. Voit järjestää niitä ajan tai nimen mukaan. Katso osat listana, jotta näet myös ne, joista ei ole kuvaa."
+		},
 		"TopicImages": {
 			"headerTitle": "Arkistojen kuvia",
-			"intro": "Nämä kuvat on koottu useista lähteistä eivätkä ne aina kuvaa aihetta täsmällisesti. Voit valita kuva suosikiksi tai poistaa sen sivulta, jos se ei liity aiheeseen.",
+			"intro": "Nämä kuvat on koottu useista lähteistä eivätkä ne aina kuvaa aihetta täsmällisesti. Voit katsoa alkuperäistä kuvaa tai näyttää sen kartalla, jos siinä on sijaintimerkintä.",
 			"actionsMenu": {
 				"menuTitle": "Näytä tai järjestele kuvia",
 				"tooltip": "Esitä tai järjestele kuvia",
@@ -96,7 +307,9 @@
 					"copyvio": "Se rikkoo tekijänoikeutta",
 					"explain": "Jätä selittävä viesti"
 				}
-			}
+			},
+			"imagesViewExternal": "Katso alkuperäistä kuvaa",
+			"imagesViewOnMap": "Katso kuvaa kartalla"
 		},
 		"TopicMap": {
 			"headerTitle": "Sijainti kartalla",
@@ -105,7 +318,10 @@
 			"hideImagesMenuText": "Piilota kuvat",
 			"chooseTimelineMapsMenuText": "Valitse aikajanan kartat...",
 			"showNearbyPlacesMenuText": "Näytä lähellä sijaitsevia kohteita",
-			"hideNearbyPlacesMenuText": "Piilota lähellä sijaitsevat kohteet"
+			"hideNearbyPlacesMenuText": "Piilota lähellä sijaitsevat kohteet",
+			"extLink": {
+				"menuTooltip": "Katso tai muokkaa OpenStreeMapissä"
+			}
 		},
 		"TopicNewspapers": {
 			"headerTitle": "Lehtileikkeitä",
@@ -116,6 +332,27 @@
 			"headerTitle": "Aikajana",
 			"showEventsOnTimelineMenuText": "Näytä tapahtumat aikajanalla",
 			"centuryText": "-luku"
+		},
+		"Works": {
+			"headerTitle": "Teoksia",
+			"intro": "Nämä ovat aiheena olevan henkilön, kollektiivin tai organisaation tekemiä teoksia. Klikkaamalla voit näyttää siihen liittyvän sivun. Vain kuvalliset kohteet ovat näkyvissä. Näet kaikki esittämällä teokset listana.",
+			"sortMenuTitle": "Järjestä",
+			"sortMenuTooltip": "Järjestä teokset",
+			"sortMenuOptionTime": "Ajan perusteella",
+			"sortMenuOptionAlpha": "Aakkosjärjestykseen",
+			"sortMenuOptionDist": "Etäisyyden mukaan",
+			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
+			"facetMenuTitle": "Ryhmittele",
+			"facetMenuTooltip": "Ryhmittele teoksia eri tavoilla",
+			"facetMenuOptionType": "Tyypin mukaan",
+			"facetMenuOptionColl": "Kokoelman mukaan",
+			"facetMenuOptionCity": "Sijainnin mukaan",
+			"displayMenuTitle": "Näytä",
+			"displayMenuTooltip": "Valitse näyttötapa",
+			"displayMenuOptionGallery": "Galleriana",
+			"displayMenuOptionList": "Luettelona",
+			"displayMenuOptionMap": "Kartalla",
+			"showAll": "Kaikki"
 		},
 		"Wikidata": {
 			"headerTitle": "Tietoja",
@@ -141,110 +378,96 @@
 			},
 			"languageMenu": {
 				"menuTitle": "Lue artikkeli toisella kielellä",
-				"translateArticleText": "Käännä artikkeli suomeksi",
+				"translateArticleText": "Käännä tämä artikkeli suomeksi",
 				"otherLanguagestext": "Muut kielet"
 			}
-		},
-		"Gallery": {
-			"headerTitle": "Aiheeseen liittyvät ihmiset",
-			"menuTitle": "Näytä",
-			"showBorn": "Täällä syntyneet",
-			"showDied": "Täällä kuolleet",
-			"showBuried": "Tänne haudatut",
-			"showRelated": "Aiheeseen liittyvät",
-			"showAll": "Kaikki"
-		},
-		"Locations": {
-			"headerTitle": "Paikat",
-			"intro": "Tässä näytetään kohteita, jotka sijaitsevat tämän sivun aiheen alueella. Voit näyttää kohteet luettelona, jolloin listataan myös kuvattomat kohteet.",
-			"sortMenu": {
-				"title": "Järjestä paikat",
-				"tooltip": "Järjestä paikat",
-				"optionTime": "Ajan perusteella",
-				"optionAlpha": "Aakkosjärjestykseen",
-				"optionDist": "Etäisyyden mukaan",
-				"optionRev": "Käänteiseen järjestykseen",
-				"optionClear": "Palauta alkuperäinen järjestys"
-			},
-			"facetMenu": {
-				"title": "Ryhmittele paikat",
-				"tooltip": "Ryhmittele paikat eri perusteilla",
-				"optionType": "Paikan lajin mukaan",
-				"optionColl": "Tekijän mukaan",
-				"optionCity": "Sijainnin mukaan"
-			},
-			"displayMenu": {
-				"title": "Näytä",
-				"tooltip": "Valitse esitysmuoto",
-				"optionGallery": "Galleriana",
-				"optionList": "Luettelona"
-			},
-			"showAll": "Kaikki"
-		},
-		"Depicted": {
-			"headerTitle": "Kuvattu teoksessa",
-			"intro": "Tätä aihetta kuvataan näissä teoksissa. Järjestä teokset eri perustein tai näytä luettelona nähdäksesi myös ne, joissa ei ole kuvaa.",
-			"sortMenu": {
-				"title": "Järjestä teokset",
-				"tooltip": "Järjestä teokset",
-				"optionTime": "Ajan perusteella",
-				"optionAlpha": "Aakkosjärjestykseen",
-				"optionRev": "Käänteiseen järjestykseen",
-				"optionClear": "Palauta alkuperäinen järjestys"
-			},
-			"facetMenu": {
-				"title": "Ryhmittele teokset",
-				"tooltip": "Ryhmittele teoksia eri tavoilla",
-				"optionType": "Tyypin mukaan",
-				"optionColl": "Tekijän mukaan"
-			},
-			"displayMenu": {
-				"title": "Näytä",
-				"tooltip": "Valitse esitysmuoto",
-				"optionGallery": "Galleriana",
-				"optionList": "Luettelona"
-			},
-			"showAll": "Kaikki"
-		},
-		"Works": {
-			"headerTitle": "Teoksia",
-			"intro": "Nämä ovat aiheena olevan henkilön, kollektiivin tai organisaation tekemiä teoksia. Klikkaamalla voit näyttää siihen liittyvän sivun. Vain kuvalliset kohteet ovat näkyvissä. Näet kaikki esittämällä teokset listana.",
-			"sortMenuTitle": "Järjestä",
-			"sortMenuTooltip": "Järjestä teokset",
-			"sortMenuOptionTime": "Ajan perusteella",
-			"sortMenuOptionAlpha": "Aakkosjärjestykseen",
-			"sortMenuOptionDist": "Etäisyyden mukaan",
-			"sortMenuOptionRev": "Käänteinen järjestys",
-			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
-			"facetMenuTitle": "Ryhmittele",
-			"facetMenuTooltip": "Ryhmittele teoksia eri tavoilla",
-			"facetMenuOptionType": "Tyypin mukaan",
-			"facetMenuOptionColl": "Kokoelman mukaan",
-			"facetMenuOptionCity": "Sijainnin mukaan",
-			"displayMenuTitle": "Näytä",
-			"displayMenuTooltip": "Valitse näyttötapa",
-			"displayMenuOptionGallery": "Galleriana",
-			"displayMenuOptionList": "Luettelona",
-			"showAll": "Kaikki"
-		},
-		"People": {
-			"headerTitle": "Aiheeseen liittyvät ihmiset",
-			"intro": "Nämä ovat henkilöitä, jotka liittyvät tämän sivun aiheeseen. Voit näyttää siihen liittyvän sivun klikkaamalla. Voit myös esittää henkilöt luettelona.",
-			"sortMenuTitle": "Järjestä",
-			"sortMenuTooltip": "Muuta järjestystä",
-			"sortMenuOptionBirth": "Syntymäajan mukaan",
-			"sortMenuOptionDeath": "Kuolinajan mukaan",
-			"sortMenuOptionName": "Nimen mukaan",
-			"sortMenuOptionFirst": "Etunimen mukaan",
-			"sortMenuOptionLast": "Sukunimen mukaan",
-			"sortMenuOptionRev": "Käänteinen järjestys",
-			"sortMenuOptionClear": "Palauta alkuperäinen järjestys",
-			"facetMenuTitle": "Ryhmittele",
-			"facetMenuTooltip": "Ryhmittele henkilöitä eri tavoilla",
-			"facetMenuOptionProfession": "Ammatin mukaan",
-			"facetMenuOptionCountry": "Maan mukaan",
-			"facetMenuOptionCity": "Sukupuolen mukaan"
 		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"caption": "Kuvateksti",
+			"addCaption": "Lisää kuvateksti",
+			"description": "Kuvaus",
+			"addDescription": "Lisää kuvaus",
+			"creator": "Tekijä",
+			"creatorUnknown": "Tuntematon",
+			"addCreator": "Lisää tekijä",
+			"removeCreator": "Poista tekijä",
+			"dateDepicted": "Kuvattu ajankohta",
+			"addDateDepicted": "Lisää kuvattu ajankohta",
+			"removeDateDepicted": "Poista kuvattu ajankohta",
+			"dateCreated": "Luontipäivämäärä",
+			"addDateCreated": "Lisää luontipäivämäärä",
+			"removeDateCreated": "Poista luontipäivämäärä",
+			"publisher": "Julkaisija",
+			"addPublisher": "Lisää julkaisija",
+			"removePublisher": "Poista julkaisija",
+			"format": "Muoto",
+			"addFormat": "Lisää muoto",
+			"removeFormat": "Poista muoto",
+			"technique": "Tekniikka",
+			"addTechnique": "Lisää tekniikka",
+			"removeTechnique": "Poista tekniikka",
+			"depicted": "Kuva esittää",
+			"genre": "Lajityyppi",
+			"addGenre": "Lisää lajityyppi",
+			"removeGenre": "Poista lajityyppi",
+			"depicts": "Kuva esittää",
+			"addTopic": "Lisää aihe",
+			"removeTopic": "Poista aihe",
+			"location": "Sijainti",
+			"locationMap": "Sijainti kartalla",
+			"addLocation": "Lisää sijainti",
+			"removeLocation": "Poista sijainti",
+			"address": "Katuosoite",
+			"addAddress": "Lisää katuosoite",
+			"removeAddress": "Poista katuosoite",
+			"depictedPeople": "Kuvatut henkilöt",
+			"addPerson": "Lisää henkilö",
+			"removePerson": "Poista henkilö",
+			"event": "Tapahtuma",
+			"addEvent": "Lisää tapahtuma",
+			"removeEvent": "Poista tapahtuma",
+			"institution": "Instituutio",
+			"collection": "Kokoelma",
+			"addCollection": "Lisää kokoelma",
+			"inventoryNumber": "Inventaarionumero",
+			"inscriptions": "Merkinnät",
+			"measurements": "Mitat",
+			"copyright": "Tekijänoikeus",
+			"license": "Tekijänoikeuslisenssi",
+			"work": "Kuvan esittämä teos",
+			"photograph": "Valokuva",
+			"image": "Kuva",
+			"photographer": "Valokuvaaja",
+			"addPhotographData": "Lisää tietoa valokuvasta",
+			"copyrightNotePD": "Tämän kuvan lisenssi on $1, mutta metatietojen perusteella sillä ei ole tekijänoikeussuojaa.",
+			"copyrightNoteSame": "Sama kuva on lisensoitu avoimemmalla $1-lisenssillä, joka koskee silloin myös tätä kuvaa.",
+			"creditline": "Kiitokset",
+			"attribution": "Nimeäminen",
+			"digitalCopy": "Digitaalinen kopio",
+			"publishingPlatform": "Julkaisualusta",
+			"platformId": "Tunniste",
+			"provider": "Sisällöntuottaja",
+			"imageInfoPage": "Kuvan tietosivu",
+			"imageDimensions": "Kuvan koko",
+			"fileSize": "Tiedostokoko",
+			"fileFormat": "Tiedostoformaatti",
+			"remove": "Poista",
+			"moveTo": "Siirrä tiedot toiseen kenttään",
+			"addData": "Lisää tieto",
+			"uploader": "Tallentaja",
+			"rotate": "Kierrä"
+		},
+		"imageActions": {
+			"rotateImage": "Pyöritä kuvaa",
+			"clockwise": "myötäpäivään",
+			"counterclockwise": "vastapäivään",
+			"flip": "Käännä kuva",
+			"horizontal": "vaakasuunnassa",
+			"vertical": "pystysuunnassa"
+		},
+		"closeViewer": "Sulje kuva"
 	},
 	"map_place_match_page": {
 		"PlaceMatchSettings": {
@@ -270,16 +493,55 @@
 			"transparencyLabel": "Historiallisen taustakartan läpinäkyvyys"
 		}
 	},
+	"menus": {
+		"sortMenu": {
+			"title": "Järjestä aiheet",
+			"tooltip": "Järjestä aiheet",
+			"optionTime": "Ajan perusteella",
+			"optionStart": "Alkamisajan mukaan",
+			"optionEnd": "Loppumisajan mukaan",
+			"optionTitle": "Otsikon mukaan",
+			"optionCause": "Syyn mukaan",
+			"optionPartof": "Sen aiheen mukaan, jonka osa tämä aihe on",
+			"optionSuperclass": "Sen luokan mukaan, jonka alaluokka tämä aihe on",
+			"optionAlpha": "Aakkosjärjestykseen",
+			"optionTitleAlpha": "Nimen mukaan aakkosjärjestykseen",
+			"optionCreatorAlpha": "Tekijän mukaan aakkosjärjestykseen",
+			"optionDist": "Etäisyyden mukaan",
+			"optionRev": "Käänteiseen järjestykseen",
+			"optionClear": "Palauta alkuperäinen järjestys"
+		},
+		"facetMenu": {
+			"title": "Ryhmittele",
+			"tooltip": "Ryhmittele aiheita eri tavoilla",
+			"optionType": "Tyyppi",
+			"optionColl": "Tekijä",
+			"optionCity": "Sijainti"
+		},
+		"displayMenu": {
+			"title": "Näytä",
+			"tooltip": "Valitse esitysmuoto",
+			"optionGallery": "Galleria",
+			"optionList": "Luettelo"
+		}
+	},
 	"general": {
+		"wikidocumentaries": "Wikidocumentaries",
 		"ok": "OK",
 		"cancel": "Peruuta",
 		"helpText": "Ohje",
+		"expand": "Laajenna osio",
+		"collapse": "Kutista osio",
 		"menus": {
 			"actionMenuTitle": "Toiminnot",
 			"actionMenuTooltip": "Toiminnot",
 			"languageMenuTitle": "Valitse kieli",
+			"languageMenuTooltip": "Valitse kielesi",
 			"myLanguagesItem": "Omat kielet",
-			"languageMenuTranslate": "Käännä tämä artikkeli"
+			"languageMenuTranslate": "Käännä tämä artikkeli suomeksi"
+		},
+		"languageMenu": {
+			"TranslateUI": "Käännä suomeksi"
 		},
 		"languages": {
 			"fi": "suomi",
@@ -287,5 +549,10 @@
 			"sv": "ruotsi",
 			"es": "espanja"
 		}
+	},
+	"Banner": {
+		"WLM": "Wiki Loves Monuments $1",
+		"WLMText": "Kuvaa tämä kulttuuriperintökohde ja osallistu $2 -valokuvauskilpailuun!",
+		"WLMButton": "Lataa kuva"
 	}
 }

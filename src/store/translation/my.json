@@ -1,51 +1,59 @@
 {
 	"@metadata": {
 		"authors": [
-			"Dr Lotus Black"
+			"Dr Lotus Black",
+			"McDutchie"
 		]
 	},
 	"LandingPage": {
-		"search": "ရှာဖွေရန်"
+		"search": "ရှာဖွေရန်",
+		"titleStatus": "အခြေအနေ",
+		"more": "ပိုမို ဖတ်ရန်",
+		"titleMedia": "မီဒီယာ",
+		"titleTools": "ကိရိယာများ",
+		"titleLanguages": "ဘာသာစကားများ",
+		"titleTechnology": "နည်းပညာ",
+		"titleCreators": "ဖန်တီးသူများ",
+		"titleTeam": "အသင်း",
+		"titleTranslate": "ဘာသာပြန်ပါ",
+		"facebook": "ဖေ့ဘုတ် အုပ်စု",
+		"blog": "ဘလော့",
+		"email": "အီးမေးလ်"
 	},
 	"MainPage": {
 		"mapSearchPageName": "မြေပုံများ ရှာဖွေရန်"
 	},
 	"topic_page": {
+		"Depicted": {
+			"sortMenu": {
+				"optionTime": "အချိန်အလိုက်",
+				"optionAlpha": "အက္ခရာစဉ်အတိုင်း"
+			},
+			"facetMenu": {
+				"optionType": "အမျိုးအစား",
+				"optionColl": "ဖန်တီးသူ"
+			},
+			"displayMenu": {
+				"optionGallery": "ပြခန်း",
+				"optionList": "စာရင်း"
+			},
+			"showAll": "အားလုံး"
+		},
+		"Events": {
+			"headerTitle": "ဖြစ်ရပ်များ",
+			"optionsMenu": {
+				"menuTitle": "ရွေးပိုင်ခွင့်",
+				"subRelatedPeopleConf": {
+					"menuTitle": "ချိန်ညှိရန်"
+				}
+			}
+		},
 		"Header": {
 			"titleEditText": "ခေါင်းစဉ် ပြင်ဆင်ရန်",
 			"subtitleEditText": "ဖော်ပြချက် တည်းဖြတ်ရန်"
 		},
-		"TopicImages": {
-			"imagesActionMenu": {
-				"menuTitle": "ဆောင်ရွက်ချက်များ",
-				"menuTooltip": "ဆောင်ရွက်ချက်များ",
-				"showImageText": "ပုံပြသရန်"
-			},
-			"imagesRemoveMenu": {
-				"remInappropriate": {
-					"shortMenuTitle": "မသင့်လျော်ပါ"
-				}
-			}
-		},
-		"TopicTimeline": {
-			"headerTitle": "အချိန်လိုင်း"
-		},
-		"Wikidata": {
-			"extLink": {
-				"linkTitleWD": "ဝီကီဒေတာတွင် ကြည့်ရန် (သို့) ပြင်ဆင်ရန်"
-			}
-		},
-		"Wikipedia": {
-			"headerTitle": "ဆောင်းပါး",
-			"languageMenu": {
-				"otherLanguagestext": "အခြားဘာသာစကားများ"
-			}
-		},
-		"Gallery": {
-			"showAll": "အားလုံး"
-		},
 		"Locations": {
-			"headerTitle": "တည်နေရာများ",
+			"headerTitle": "ဤတည်နေရာထဲတွင်",
 			"sortMenu": {
 				"optionTime": "အချိန်အလိုက်",
 				"optionAlpha": "အက္ခရာစဉ်အတိုင်း",
@@ -61,19 +69,32 @@
 			},
 			"showAll": "အားလုံး"
 		},
-		"Depicted": {
-			"sortMenu": {
-				"optionTime": "အချိန်အလိုက်",
-				"optionAlpha": "အက္ခရာစဉ်အတိုင်း"
+		"People": {
+			"sortMenuTitle": "စီစဉ်ရန်",
+			"sortMenuOptionBirth": "မွေးရက်အလိုက်",
+			"sortMenuOptionDeath": "ကွယ်လွန်ရက်အလိုက်",
+			"sortMenuOptionName": "အမည်အလိုက်",
+			"sortMenuOptionFirst": "ပထမအမည်အလိုက်",
+			"sortMenuOptionLast": "နောက်ဆုံးအမည်အလိုက်",
+			"facetMenuOptionProfession": "အလုပ်အကိုင်",
+			"facetMenuOptionCountry": "နိုင်ငံ",
+			"facetMenuOptionCity": "ကျား/မ -"
+		},
+		"TopicImages": {
+			"imagesActionMenu": {
+				"menuTitle": "ဆောင်ရွက်ချက်များ",
+				"menuTooltip": "ဆောင်ရွက်ချက်များ",
+				"showImageText": "ပုံပြသရန်"
 			},
-			"facetMenu": {
-				"optionType": "အမျိုးအစား",
-				"optionColl": "ဖန်တီးသူ"
+			"imagesRemoveMenu": {
+				"remInappropriate": {
+					"shortMenuTitle": "မသင့်လျော်ပါ"
+				}
 			},
-			"displayMenu": {
-				"optionGallery": "ပြခန်း"
-			},
-			"showAll": "အားလုံး"
+			"imagesViewExternal": "မူရင်းပုံကို ကြည့်ရန်"
+		},
+		"TopicTimeline": {
+			"headerTitle": "အချိန်လိုင်း"
 		},
 		"Works": {
 			"sortMenuTitle": "စီစဉ်ရန်",
@@ -87,16 +108,57 @@
 			"displayMenuOptionList": "စာရင်း",
 			"showAll": "အားလုံး"
 		},
-		"People": {
-			"sortMenuTitle": "စီစဉ်ရန်",
-			"sortMenuOptionBirth": "မွေးရက်အလိုက်",
-			"sortMenuOptionDeath": "ကွယ်လွန်ရက်အလိုက်",
-			"sortMenuOptionName": "အမည်အလိုက်",
-			"sortMenuOptionFirst": "ပထမအမည်အလိုက်",
-			"sortMenuOptionLast": "နောက်ဆုံးအမည်အလိုက်",
-			"facetMenuOptionProfession": "အလုပ်အကိုင်",
-			"facetMenuOptionCountry": "နိုင်ငံ",
-			"facetMenuOptionCity": "ကျား/မ -"
+		"Wikidata": {
+			"extLink": {
+				"linkTitleWD": "ဝီကီဒေတာတွင် ကြည့်ရန် (သို့) ပြင်ဆင်ရန်"
+			}
+		},
+		"Wikipedia": {
+			"headerTitle": "ဆောင်းပါး",
+			"languageMenu": {
+				"otherLanguagestext": "အခြားဘာသာစကားများ"
+			}
+		}
+	},
+	"imageViewer": {
+		"imageMetadata": {
+			"description": "ဖော်ပြချက်",
+			"addDescription": "ဖော်ပြချက်ထည့်သွင်းပါ",
+			"creator": "ဖန်တီးသူ",
+			"creatorUnknown": "အမည်မသိ",
+			"publisher": "ထုတ်ဝေသူ",
+			"location": "တည်နေရာ",
+			"removeLocation": "တည်နေရာကို ဖယ်ရှားရန်",
+			"event": "ဖြစ်ရပ်",
+			"copyright": "မူပိုင်ခွင့်",
+			"license": "မူပိုင်ခွင့် လိုင်စင်",
+			"image": "ရုပ်ပုံ",
+			"photographer": "ဓါတ်ပုံဆရာ",
+			"digitalCopy": "ဒယ်ဂျစ်တယ် မိတ္တူ",
+			"platformId": "အိုင်ဒီ",
+			"fileSize": "ဖိုင် အရွယ်အစား",
+			"remove": "ဖယ်ရှားရန်",
+			"rotate": "လှည့်ရန်"
+		},
+		"imageActions": {
+			"horizontal": "အလျားလိုက်",
+			"vertical": "ဒေါင်လိုက်"
+		}
+	},
+	"menus": {
+		"sortMenu": {
+			"optionTime": "အချိန်အလိုက်",
+			"optionAlpha": "အက္ခရာစဉ်အတိုင်း",
+			"optionDist": "အကွာအဝေးအတိုင်း"
+		},
+		"facetMenu": {
+			"optionType": "အမျိုးအစား",
+			"optionColl": "ဖန်တီးသူ",
+			"optionCity": "တည်နေရာ"
+		},
+		"displayMenu": {
+			"optionGallery": "ပြခန်း",
+			"optionList": "စာရင်း"
 		}
 	},
 	"general": {
@@ -107,8 +169,12 @@
 			"actionMenuTitle": "ဆောင်ရွက်ချက်များ",
 			"actionMenuTooltip": "ဆောင်ရွက်ချက်များ",
 			"languageMenuTitle": "ဘာသာစကားရွေးချယ်ရန်",
+			"languageMenuTooltip": "သင်၏ ဘာသာစကားရွေးချယ်ရန်",
 			"myLanguagesItem": "ကျွန်ုပ်၏ ဘာသာစကားများ",
-			"languageMenuTranslate": "ဤဆောင်းပါးကို ဘာသာပြန်ရန်"
+			"languageMenuTranslate": "ဤဆောင်းပါးကို အင်္ဂလိပ်ဘာသာသို့ ဘာသာပြန်ရန်"
+		},
+		"languageMenu": {
+			"TranslateUI": "သင်၏ဘာသာစကားသို့ ဘာသာပြန်ပါ"
 		},
 		"languages": {
 			"fi": "ပြင်သစ်",
